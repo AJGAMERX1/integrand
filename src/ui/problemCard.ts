@@ -3,7 +3,7 @@
 // Used by the session, Daily Integral, placement and the node practice tab.
 import type { AttemptContext, Problem } from '../types';
 import { h, clear } from './dom';
-import { tex, richText, mathInput, type MathInput } from './math';
+import { tex, richText, mathInput, statement as renderStatement, type MathInput } from './math';
 import { grade, type GradeResult } from '../grader';
 import { recordAttempt } from '../db/state';
 
@@ -77,7 +77,7 @@ export function renderProblem(container: HTMLElement, problem: Problem, opts: Pr
   if (opts.heading) head.appendChild(h('span', { class: 'small muted' }, opts.heading));
   head.appendChild(attemptsChip);
 
-  const statement = h('div', { class: 'problem-statement' }, tex(problem.statement, true));
+  const statement = h('div', { class: 'problem-statement' }, renderStatement(problem.statement));
   const inputArea = h('div', { class: 'problem-input' });
   const feedback = h('div', { class: 'problem-feedback hidden' });
   const hintsArea = h('div', { class: 'problem-hints' });

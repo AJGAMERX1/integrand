@@ -5,7 +5,7 @@ import type { DailyRecord, Problem, Settings } from '../types';
 import type { Screen } from './screens';
 import { h, clear, toast } from './dom';
 import { navigate } from './router';
-import { tex } from './math';
+import { tex, statement } from './math';
 import { renderProblem, solutionBlock, type ProblemCardHandle } from './problemCard';
 import { curriculum, getProblem, problemsForTier } from '../data/load';
 import { getSettings } from '../db/db';
@@ -161,7 +161,7 @@ export async function renderDailyIntegral(container: HTMLElement, date: string, 
       h('div', { class: `result-banner ${solved ? 'good' : 'warn'}` },
         solved ? `Solved${rec.attemptsUsed === 1 && rec.hintsUsed === 0 ? ' on the first try' : ''}.` : 'Completed (solution revealed).'),
       h('p', { class: 'small muted' }, `${rec.attemptsUsed} ${rec.attemptsUsed === 1 ? 'attempt' : 'attempts'}, ${rec.hintsUsed} ${rec.hintsUsed === 1 ? 'hint' : 'hints'}${rec.isArchive ? ', archive replay' : ''}`),
-      h('div', { class: 'problem-statement' }, tex(p.statement, true)),
+      h('div', { class: 'problem-statement' }, statement(p.statement)),
       solutionBlock(p),
       h('div', { class: 'row' },
         h('a', { class: 'btn ghost small', href: `#/node/${encodeURIComponent(p.skill)}` }, 'Explain this concept'),

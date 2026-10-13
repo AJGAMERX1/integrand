@@ -76,3 +76,12 @@ export function mathInput(placeholder = 'Your answer'): MathInput {
     onEnter: (fn) => { enterFn = fn; },
   };
 }
+
+/**
+ * Render a problem statement. Banks write prose with $...$ / $$...$$ math; a bare LaTeX statement
+ * (no $ delimiters, e.g. from SPEC's example) is rendered as display math.
+ */
+export function statement(s: string): HTMLElement {
+  if (s.includes('$')) return richText(s);
+  return tex(s, true);
+}
