@@ -1,0 +1,89 @@
+{
+  "nodeId": "continuity",
+  "title": "Continuity",
+  "overview": "A function is continuous at a point if you can draw its graph through that point without lifting your pen. The precise version uses limits: $f$ is **continuous at $a$** if\n$$\\lim_{x \\to a}f(x) = f(a).$$\nThat single equation packs three requirements: $f(a)$ must exist, the limit must exist, and the two must be equal. Continuity is the condition under which the limit is just \"plug in.\" It is the normal state of affairs for the functions you know: polynomials, rational functions, roots, trig functions, exponentials, and logarithms are all continuous at every point of their domains, and sums, products, quotients (where the denominator is nonzero), and compositions of continuous functions are continuous. That one sentence justifies direct substitution for almost every limit you will meet.\n\nWhen continuity fails at $a$, the function has a **discontinuity** there, and it helps to name the type. A **removable** discontinuity is a hole: the limit exists but $f(a)$ is missing or wrong, as with $\\frac{x^2 - 1}{x - 1}$ at $x = 1$. It is called removable because redefining $f(1) = 2$ would fix it. A **jump** discontinuity has different one-sided limits, as with $\\frac{|x|}{x}$ at 0 or any step function; no single value can fix it. An **infinite** discontinuity has a vertical asymptote, as with $\\frac{1}{x}$ at 0. Piecewise functions are the usual place to check: at each breakpoint compute the left limit, the right limit, and the value, and see whether all three agree.\n\nOne-sided versions are natural. $f$ is continuous from the right at $a$ if $\\lim_{x \\to a^+}f(x) = f(a)$, and from the left if the left limit equals $f(a)$. A function is **continuous on an interval** if it is continuous at every interior point and has the appropriate one-sided continuity at any included endpoint. $\\sqrt{x}$ is continuous on $[0, \\infty)$: at 0 it is continuous from the right, and that is all the interval asks.\n\nThe payoff of continuity is the **Intermediate Value Theorem** (IVT): if $f$ is continuous on $[a, b]$ and $N$ is any number between $f(a)$ and $f(b)$, then there is some $c$ in $(a, b)$ with $f(c) = N$. A continuous graph cannot get from one height to another without passing through every height in between. The most common use is finding roots: if $f(a) < 0$ and $f(b) > 0$ and $f$ is continuous, then $f$ has a zero somewhere in $(a, b)$. You can then narrow down the location by checking the midpoint and keeping the half where the sign changes, which is the bisection method. The IVT does not tell you where the root is, only that it exists, and it needs continuity; a function that jumps over zero has no such guarantee.",
+  "keyIdeas": [
+    "$f$ is continuous at $a$ when $\\lim_{x \\to a}f(x) = f(a)$: the value exists, the limit exists, and they agree.",
+    "Polynomials, rational functions, roots, trig, exponential, and log functions are continuous on their domains, and so are their sums, products, quotients, and compositions; this justifies direct substitution.",
+    "Removable discontinuity: the limit exists but $f(a)$ is missing or different (a hole). Jump: one-sided limits differ. Infinite: a vertical asymptote.",
+    "At a breakpoint of a piecewise function, compare the left limit, the right limit, and the value.",
+    "Continuous on $[a, b]$ means continuous at every interior point and one-sided continuous at the endpoints.",
+    "Intermediate Value Theorem: if $f$ is continuous on $[a, b]$ and $N$ lies between $f(a)$ and $f(b)$, then $f(c) = N$ for some $c$ in $(a, b)$.",
+    "IVT for roots: a sign change on $[a, b]$ for a continuous $f$ guarantees a zero in between; bisection narrows it down."
+  ],
+  "workedExamples": [
+    {
+      "title": "Checking continuity at a breakpoint",
+      "problem": "Let $f(x) = x^2 + 1$ for $x < 2$ and $f(x) = 3x - 1$ for $x \\ge 2$. Is $f$ continuous at $x = 2$?",
+      "steps": [
+        "Value: $f(2)$ uses the second formula since $2 \\ge 2$: $f(2) = 6 - 1 = 5$.",
+        "Left limit: as $x \\to 2^-$, use $x^2 + 1 \\to 4 + 1 = 5$.",
+        "Right limit: as $x \\to 2^+$, use $3x - 1 \\to 5$.",
+        "All three equal 5, so $f$ is continuous at 2. The parabola and the line meet exactly at $(2, 5)$; the graph has a corner there but no break."
+      ]
+    },
+    {
+      "title": "Choosing a constant to make a function continuous",
+      "problem": "Find $c$ so that $g(x) = cx + 3$ for $x \\le 1$ and $g(x) = x^2 + c$ for $x > 1$ is continuous everywhere.",
+      "steps": [
+        "Away from $x = 1$ each piece is a polynomial, hence continuous. Only $x = 1$ needs checking.",
+        "Left limit and value (both from the first piece): $c(1) + 3 = c + 3$. Right limit (second piece): $1 + c$.",
+        "Continuity requires $c + 3 = 1 + c$, which simplifies to $3 = 1$, impossible. So no value of $c$ works: the pieces always differ by 2 at $x = 1$.",
+        "Lesson: the \"solve for the constant\" method only succeeds when the equation has a solution. Here the function has a jump of size 2 at $x = 1$ for every $c$. (If the second piece were $x^2 + 3c$, continuity would need $c + 3 = 1 + 3c$, so $c = 1$.)"
+      ]
+    },
+    {
+      "title": "Classifying discontinuities",
+      "problem": "Find and classify every discontinuity of $h(x) = \\dfrac{x^2 - x - 6}{x^2 - 4}$.",
+      "steps": [
+        "The function is rational, so it is continuous except where the denominator is 0: $x = 2$ and $x = -2$.",
+        "Factor: $\\frac{(x - 3)(x + 2)}{(x - 2)(x + 2)}$. The factor $(x + 2)$ cancels, so for $x \\ne -2$ the function equals $\\frac{x - 3}{x - 2}$.",
+        "At $x = -2$: the limit is $\\frac{-5}{-4} = \\frac{5}{4}$ but $h(-2)$ is undefined. Removable discontinuity (a hole at $(-2, \\frac{5}{4})$).",
+        "At $x = 2$: the simplified form has numerator $-1 \\ne 0$ and denominator $0$, so the one-sided limits are $\\pm\\infty$. Infinite discontinuity with a vertical asymptote at $x = 2$."
+      ]
+    },
+    {
+      "title": "Using the Intermediate Value Theorem to locate a root",
+      "problem": "Show that $x^3 - x - 1 = 0$ has a solution between 1 and 2, and narrow it to an interval of length $0.25$.",
+      "steps": [
+        "$f(x) = x^3 - x - 1$ is a polynomial, so it is continuous on $[1, 2]$. $f(1) = 1 - 1 - 1 = -1 < 0$ and $f(2) = 8 - 2 - 1 = 5 > 0$.",
+        "Since 0 lies between $-1$ and $5$, the IVT guarantees some $c$ in $(1, 2)$ with $f(c) = 0$.",
+        "Bisect: $f(1.5) = 3.375 - 1.5 - 1 = 0.875 > 0$. The sign change is now on $[1, 1.5]$.",
+        "Bisect again: $f(1.25) = 1.953 - 1.25 - 1 = -0.297 < 0$. The sign change is on $[1.25, 1.5]$, an interval of length $0.25$. (The root is about $1.3247$.)"
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Concluding continuity from the existence of $f(a)$ alone, or of the limit alone. Both must exist and be equal; $\\frac{|x|}{x}$ with $f(0)$ defined as 1 still jumps.",
+    "Checking only one side at a piecewise breakpoint. The left and right limits come from different formulas and must both be computed.",
+    "Calling a hole a jump or an asymptote a hole. Classify by the limit: exists but wrong value (removable), two different one-sided limits (jump), infinite (infinite).",
+    "Applying the IVT without continuity. $f(x) = \\frac{1}{x}$ has $f(-1) < 0 < f(1)$ but no zero, because it is not continuous on $[-1, 1]$.",
+    "Reading the IVT as locating the root. It only guarantees existence; bisection or other methods find where."
+  ],
+  "whyItMatters": "Continuity is the hypothesis of the Fundamental Theorem of Calculus: if $f$ is continuous on $[a, b]$, then $\\int_a^b f(x)\\,dx$ exists and $\\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)$. Every integrable-by-antiderivative function you meet is continuous, and when a function has a discontinuity inside the interval, you must split the integral there or treat it as improper. The IVT also underlies the Mean Value Theorem and the existence of absolute maxima and minima in Chapter 4.",
+  "checkYourself": [
+    {
+      "q": "Is $f(x) = \\frac{x^2 - 9}{x - 3}$ continuous at $x = 3$? What type of discontinuity?",
+      "a": "No; removable (a hole at height 6)."
+    },
+    {
+      "q": "Where is $\\frac{\\sqrt{x}}{x - 4}$ continuous?",
+      "a": "On $[0, 4)$ and $(4, \\infty)$."
+    },
+    {
+      "q": "Does $x^5 + x - 3 = 0$ have a root in $[1, 2]$?",
+      "a": "Yes: $f(1) = -1 < 0$ and $f(2) = 31 > 0$, and $f$ is continuous."
+    },
+    {
+      "q": "What three things must hold for $f$ to be continuous at $a$?",
+      "a": "$f(a)$ exists, $\\lim_{x \\to a}f(x)$ exists, and they are equal."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of continuity at a point and write the three conditions it contains as a checklist.",
+    "Locate the figures showing different kinds of discontinuity and label each as removable, jump, or infinite in your own words.",
+    "Find the theorem listing which familiar functions are continuous on their domains, and the theorem about compositions; note why together they justify substitution.",
+    "Before reading the solution of the first example with a piecewise function, check the left limit, right limit, and value at the breakpoint yourself.",
+    "Find the Intermediate Value Theorem, sketch why it is true, and redo the root-finding example with one more bisection step."
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "nodeId": "alternating-series",
+  "title": "Alternating Series",
+  "overview": "So far every test needed positive terms. An **alternating series** is one whose terms flip sign every time: $b_1 - b_2 + b_3 - b_4 + \\cdots$ with each $b_n > 0$. Written compactly, that is $\\sum (-1)^{n+1} b_n$ or $\\sum (-1)^n b_n$, depending on which sign comes first.\n\nAlternating series have a special, almost physical behavior. Picture the partial sums on a number line. You step right by $b_1$, then left by $b_2$, then right by $b_3$, and so on. If the step sizes are shrinking and heading to $0$, the partial sums zigzag inward, each one landing between the previous two, and they close in on a single point. That is the whole idea of the **Alternating Series Test**: if the $b_n$ are decreasing and $b_n \\to 0$, the series converges.\n\nBoth conditions are needed. If $b_n$ does not go to $0$, the steps never shrink and the Test for Divergence already says the series diverges. If $b_n \\to 0$ but not in a decreasing way, the zigzag can misbehave, so you should check that $b_{n+1} \\le b_n$ (at least from some point on), often by looking at the derivative of the matching function $f(x)$.\n\nThe zigzag picture gives a bonus: an **error estimate** with no integrals at all. Because each partial sum lands between the previous two, the true sum $s$ is always within one step of $s_N$:\n$$|s - s_N| \\le b_{N+1}.$$\nIn words, the error after $N$ terms is at most the size of the first term you left out. That is an unusually clean and useful bound.\n\nThe classic example is the alternating harmonic series $1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\cdots$. The plain harmonic series diverges, but the alternating version converges (its sum turns out to be $\\ln 2$). The signs do real work: they cancel most of the growth. Keep this contrast in mind, because the next node names it: this series converges, but not absolutely.",
+  "keyIdeas": [
+    "Alternating Series Test: if $b_n > 0$, $b_{n+1} \\le b_n$ for all large $n$, and $\\lim_{n \\to \\infty} b_n = 0$, then $\\sum (-1)^{n+1} b_n$ (or $\\sum (-1)^n b_n$) converges.",
+    "If $b_n$ does not go to $0$, the alternating series diverges by the Test for Divergence, no matter how the signs are arranged.",
+    "To check decreasing, compare $b_{n+1}$ with $b_n$ directly, or show $f'(x) \\le 0$ for the function $f$ with $f(n) = b_n$. Decreasing only from some point on is enough.",
+    "Alternating Series Estimation: if the test applies, then $|s - s_N| \\le b_{N+1}$. The error is at most the first omitted term, and the sum lies between any two consecutive partial sums.",
+    "The alternating harmonic series $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}$ converges (to $\\ln 2$) even though $\\sum \\frac{1}{n}$ diverges. Sign cancellation can rescue a series."
+  ],
+  "workedExamples": [
+    {
+      "title": "A basic alternating series",
+      "problem": "Does $\\sum_{n=1}^{\\infty} \\dfrac{(-1)^{n+1}}{\\sqrt{n}}$ converge?",
+      "steps": [
+        "Why this step: identify $b_n$ as the positive part, $b_n = \\dfrac{1}{\\sqrt{n}}$. Note that $\\sum \\frac{1}{\\sqrt{n}}$ is a divergent p-series, so without the signs this would diverge. The signs are the only hope.",
+        "Check decreasing: $\\sqrt{n+1} > \\sqrt{n}$, so $\\dfrac{1}{\\sqrt{n+1}} < \\dfrac{1}{\\sqrt{n}}$. Yes.",
+        "Check the limit: $\\lim_{n \\to \\infty} \\dfrac{1}{\\sqrt{n}} = 0$. Yes.",
+        "Both conditions hold, so the series converges by the Alternating Series Test. Partial sums: $1, 0.293, 0.870, 0.370, \\ldots$, zigzagging inward as expected."
+      ]
+    },
+    {
+      "title": "Where the test fails",
+      "problem": "Does $\\sum_{n=1}^{\\infty} (-1)^n \\dfrac{n}{n+1}$ converge?",
+      "steps": [
+        "Why this step: start with the cheapest check, the limit of $b_n = \\dfrac{n}{n+1}$. Dividing by $n$ gives $\\dfrac{1}{1 + 1/n} \\to 1$, not $0$.",
+        "Why this step: since the terms $(-1)^n \\frac{n}{n+1}$ do not approach $0$ (they bounce between roughly $-1$ and $1$), the Test for Divergence applies.",
+        "The series diverges. The alternating signs do not help here because the steps never shrink; the partial sums keep jumping by nearly $1$."
+      ]
+    },
+    {
+      "title": "Checking decreasing with a derivative",
+      "problem": "Does $\\sum_{n=1}^{\\infty} (-1)^n \\dfrac{n}{n^2 + 1}$ converge?",
+      "steps": [
+        "Why this step: let $b_n = \\dfrac{n}{n^2+1}$. The limit is easy: dividing by $n^2$ gives $\\dfrac{1/n}{1 + 1/n^2} \\to 0$. Good.",
+        "Why this step: decreasing is not obvious from the formula (numerator and denominator both grow), so look at $f(x) = \\dfrac{x}{x^2+1}$ and compute $f'(x) = \\dfrac{(x^2+1) - x \\cdot 2x}{(x^2+1)^2} = \\dfrac{1 - x^2}{(x^2+1)^2}$.",
+        "For $x \\ge 1$ the numerator $1 - x^2 \\le 0$, so $f' \\le 0$ and $f$ is decreasing from $x = 1$ on. Hence $b_{n+1} \\le b_n$ for all $n \\ge 1$.",
+        "Both conditions hold, so the series converges by the Alternating Series Test."
+      ]
+    },
+    {
+      "title": "Using the error estimate",
+      "problem": "Approximate $\\sum_{n=1}^{\\infty} \\dfrac{(-1)^{n+1}}{n^3}$ using four terms, and bound the error.",
+      "steps": [
+        "Why this step: first confirm the test applies, so the estimate is valid. $b_n = \\frac{1}{n^3}$ is decreasing and goes to $0$. Yes.",
+        "Add four terms: $s_4 = 1 - \\dfrac{1}{8} + \\dfrac{1}{27} - \\dfrac{1}{64} = \\dfrac{1549}{1728} \\approx 0.8964$.",
+        "Why this step: the error is at most the first omitted term, $b_5 = \\dfrac{1}{5^3} = \\dfrac{1}{125} = 0.008$. So the true sum lies in $[0.8884, 0.9044]$.",
+        "(The true sum is about $0.9015$, and $0.9015 - 0.8964 \\approx 0.0051$, comfortably under $0.008$.) To get error below $0.001$ you would need $b_{N+1} = \\frac{1}{(N+1)^3} < 0.001$, that is $N + 1 > 10$, so $N = 10$ terms."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Skipping the limit check because the signs alternate. $\\sum (-1)^n \\frac{n}{n+1}$ alternates, but $b_n \\to 1$, so it diverges. Alternating is not a magic word.",
+    "Using the error bound $b_{N+1}$ for a series that is not alternating, like $\\sum \\frac{1}{n^2}$. For positive series the tail can be far larger than the next term; use the integral remainder estimate instead.",
+    "Using the wrong omitted term. After $N = 4$ terms the first omitted term is $b_5$, not $b_4$. With $b_n = \\frac{1}{n^3}$ that is $\\frac{1}{125}$, not $\\frac{1}{64}$.",
+    "Concluding divergence when the terms fail to be decreasing. The test only gives convergence when its conditions hold; if they fail, it says nothing, and you need another argument."
+  ],
+  "whyItMatters": "Alternating series show up everywhere once you write functions as power series: $\\sin x$, $\\cos x$, $e^{-x}$, $\\arctan x$, and $\\ln(1+x)$ all have alternating coefficients. The error estimate here is what lets you say \"three terms of the series for $\\sin x$ are accurate to five decimal places\" and, better, lets you integrate $\\int_0^1 \\sin(x^2)\\,dx$ by series to any accuracy you like, which no antiderivative formula can do. The decreasing-and-to-zero test is the simplest convergence argument you own, and the cleanest error bound.",
+  "checkYourself": [
+    {
+      "q": "Does $\\sum_{n=1}^{\\infty} \\dfrac{(-1)^n}{n}$ converge?",
+      "a": "Yes, by the Alternating Series Test; $\\frac{1}{n}$ decreases to $0$."
+    },
+    {
+      "q": "Does $\\sum_{n=1}^{\\infty} (-1)^n \\cos\\left(\\frac{1}{n}\\right)$ converge?",
+      "a": "No. $\\cos(1/n) \\to 1 \\ne 0$, so it diverges by the Test for Divergence."
+    },
+    {
+      "q": "For $\\sum \\frac{(-1)^{n+1}}{n!}$, how big is the error after three terms?",
+      "a": "At most $b_4 = \\frac{1}{4!} = \\frac{1}{24} \\approx 0.042$."
+    },
+    {
+      "q": "The partial sums of a convergent alternating series are $s_5 = 0.62$ and $s_6 = 0.58$. Where is the sum?",
+      "a": "Between $0.58$ and $0.62$."
+    }
+  ],
+  "readingGuide": [
+    "Find the statement of the Alternating Series Test and list its conditions in your own words, noting which condition the Test for Divergence already covers.",
+    "Study the picture of partial sums zigzagging on a number line and explain to yourself why each partial sum lands between the previous two.",
+    "Before reading the example that checks the decreasing condition with a derivative, try to do that check yourself for $b_n = \\frac{n}{n^2+1}$.",
+    "Find the Alternating Series Estimation Theorem and explain, using the zigzag picture, why the error is at most the first omitted term.",
+    "Before reading the example that estimates a sum to a given number of decimal places, decide how you would choose $N$ from the error bound."
+  ]
+}

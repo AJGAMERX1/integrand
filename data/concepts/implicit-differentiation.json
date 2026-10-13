@@ -1,0 +1,87 @@
+{
+  "nodeId": "implicit-differentiation",
+  "title": "Implicit Differentiation",
+  "overview": "Not every curve comes as $y = f(x)$. The circle $x^2 + y^2 = 25$ defines $y$ only **implicitly**: for each $x$ there are two $y$ values, and solving for $y$ gives the awkward pair $y = \\pm\\sqrt{25 - x^2}$. Curves like $x^3 + y^3 = 6xy$ cannot be solved for $y$ at all. Yet these curves have tangent lines, and **implicit differentiation** finds their slopes without ever solving for $y$.\n\nThe idea: treat $y$ as an unknown function of $x$, differentiate both sides of the equation with respect to $x$, and remember that every time you differentiate something containing $y$, the chain rule produces a factor of $\\frac{dy}{dx}$. For the circle, $\\frac{d}{dx}(x^2) = 2x$ and $\\frac{d}{dx}(y^2) = 2y\\frac{dy}{dx}$ (outer derivative $2y$, times the inner derivative $y'$), while the right side 25 differentiates to 0. So $2x + 2yy' = 0$, and solving gives $y' = -\\frac{x}{y}$. At the point $(3, 4)$ the slope is $-\\frac{3}{4}$, and at $(3, -4)$ it is $\\frac{3}{4}$; the formula handles both branches at once, which is why the answer is allowed to contain $y$.\n\nThe routine is always the same. Differentiate every term with respect to $x$, using the product rule when $x$ and $y$ are multiplied together (so $\\frac{d}{dx}(xy) = y + xy'$) and the chain rule for any function of $y$ (so $\\frac{d}{dx}\\sin y = \\cos y\\cdot y'$). Then collect every term containing $y'$ on one side, factor out $y'$, and divide. The answer is an expression in both $x$ and $y$; to get a number, substitute the coordinates of the point you care about, and the point must actually lie on the curve.\n\nSecond derivatives work too: differentiate the expression for $y'$ with respect to $x$, again treating $y$ as a function of $x$, and substitute the known $y'$ back in. The algebra is heavier, and simplifying with the original equation at the end usually helps.\n\nThe same technique produces the derivatives of the **inverse trigonometric functions**. If $y = \\sin^{-1}x$, then $\\sin y = x$. Differentiate implicitly: $\\cos y\\cdot y' = 1$, so $y' = \\frac{1}{\\cos y}$. Since $y$ is in $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$, $\\cos y \\ge 0$, and the Pythagorean identity gives $\\cos y = \\sqrt{1 - \\sin^2 y} = \\sqrt{1 - x^2}$. Therefore\n$$\\frac{d}{dx}\\sin^{-1}x = \\frac{1}{\\sqrt{1 - x^2}}, \\qquad \\frac{d}{dx}\\tan^{-1}x = \\frac{1}{1 + x^2}, \\qquad \\frac{d}{dx}\\cos^{-1}x = -\\frac{1}{\\sqrt{1 - x^2}}.$$\nThe tangent one comes the same way from $\\tan y = x$: $\\sec^2 y\\cdot y' = 1$ and $\\sec^2 y = 1 + \\tan^2 y = 1 + x^2$. These derivatives are algebraic even though the functions are not, which makes them show up as answers to integrals of algebraic functions.",
+  "keyIdeas": [
+    "To differentiate an equation in $x$ and $y$ implicitly, treat $y$ as a function of $x$ and differentiate both sides with respect to $x$.",
+    "Every derivative of a term containing $y$ carries a factor $y'$ by the chain rule: $\\frac{d}{dx}y^n = ny^{n-1}y'$, $\\frac{d}{dx}\\sin y = \\cos y\\cdot y'$.",
+    "Products of $x$ and $y$ need the product rule: $\\frac{d}{dx}(xy) = y + xy'$.",
+    "After differentiating, collect the $y'$ terms, factor, and divide; the result may involve both $x$ and $y$.",
+    "To get a numerical slope, substitute a point that lies on the curve.",
+    "$\\frac{d}{dx}\\sin^{-1}x = \\frac{1}{\\sqrt{1 - x^2}}$, $\\frac{d}{dx}\\cos^{-1}x = -\\frac{1}{\\sqrt{1 - x^2}}$, $\\frac{d}{dx}\\tan^{-1}x = \\frac{1}{1 + x^2}$, all found by implicit differentiation."
+  ],
+  "workedExamples": [
+    {
+      "title": "Tangent line to a circle",
+      "problem": "Find the tangent line to $x^2 + y^2 = 25$ at $(3, -4)$.",
+      "steps": [
+        "Differentiate both sides: $2x + 2y\\,y' = 0$. The $2y\\,y'$ comes from the chain rule applied to $y^2$.",
+        "Solve: $y' = -\\frac{x}{y}$.",
+        "At $(3, -4)$ (check: $9 + 16 = 25$, on the circle): $y' = -\\frac{3}{-4} = \\frac{3}{4}$.",
+        "Tangent: $y + 4 = \\frac{3}{4}(x - 3)$. Geometric check: the radius to $(3, -4)$ has slope $-\\frac{4}{3}$, and the tangent is perpendicular to the radius: $\\frac{3}{4}\\cdot\\left(-\\frac{4}{3}\\right) = -1$. Correct."
+      ]
+    },
+    {
+      "title": "A curve with a product term",
+      "problem": "Find $y'$ for $x^2y + y^3 = 2x$, and the slope at $(1, 1)$.",
+      "steps": [
+        "Check the point: $1\\cdot 1 + 1 = 2$. On the curve.",
+        "Differentiate term by term. $\\frac{d}{dx}(x^2y)$ needs the product rule: $2xy + x^2y'$. $\\frac{d}{dx}(y^3) = 3y^2y'$. $\\frac{d}{dx}(2x) = 2$.",
+        "Equation: $2xy + x^2y' + 3y^2y' = 2$. Collect $y'$: $y'(x^2 + 3y^2) = 2 - 2xy$, so $y' = \\frac{2 - 2xy}{x^2 + 3y^2}$.",
+        "At $(1, 1)$: $y' = \\frac{2 - 2}{1 + 3} = 0$. The tangent is horizontal there."
+      ]
+    },
+    {
+      "title": "Second derivative implicitly",
+      "problem": "For $x^2 + y^2 = 25$, find $y''$ in terms of $x$ and $y$.",
+      "steps": [
+        "From before, $y' = -\\frac{x}{y}$. Differentiate with the quotient rule, remembering $y$ depends on $x$: $y'' = -\\frac{(1)(y) - x\\,y'}{y^2}$.",
+        "Substitute $y' = -\\frac{x}{y}$: $y'' = -\\frac{y - x\\left(-\\frac{x}{y}\\right)}{y^2} = -\\frac{y + \\frac{x^2}{y}}{y^2}$.",
+        "Multiply top and bottom by $y$: $y'' = -\\frac{y^2 + x^2}{y^3}$.",
+        "Use the original equation $x^2 + y^2 = 25$: $y'' = -\\frac{25}{y^3}$. On the upper half ($y > 0$) this is negative, matching the fact that the top of a circle bends downward."
+      ]
+    },
+    {
+      "title": "Derivatives of inverse trig functions with the chain rule",
+      "problem": "Differentiate $y = \\tan^{-1}(3x)$ and $y = \\sin^{-1}(x^2)$.",
+      "steps": [
+        "For $\\tan^{-1}(3x)$: outer derivative $\\frac{1}{1 + u^2}$ at $u = 3x$, times inner derivative 3: $y' = \\frac{3}{1 + 9x^2}$.",
+        "For $\\sin^{-1}(x^2)$: outer derivative $\\frac{1}{\\sqrt{1 - u^2}}$ at $u = x^2$, times inner derivative $2x$: $y' = \\frac{2x}{\\sqrt{1 - x^4}}$.",
+        "Check the first at $x = 0$: $y' = 3$. Secant from 0 to 0.01: $\\frac{\\tan^{-1}(0.03)}{0.01} \\approx \\frac{0.029991}{0.01} \\approx 3.00$. Good."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Forgetting the $y'$ factor: writing $\\frac{d}{dx}(y^2) = 2y$. Since $y$ depends on $x$, the chain rule gives $2y\\,y'$. Without it the circle's slope would come out as $-x$, which is wrong at $(3, 4)$.",
+    "Differentiating $xy$ as $y'$ or as $1\\cdot y'$. It is a product: $y + xy'$.",
+    "Substituting the point before solving for $y'$ in a way that loses terms, or substituting a point not on the curve. Check the point satisfies the equation.",
+    "Expecting the answer to be a function of $x$ alone. Implicit derivatives usually contain $y$; that is normal.",
+    "Writing $\\frac{d}{dx}\\sin^{-1}x = \\frac{1}{\\sin x}$ or $\\cos^{-1}x$. The inverse is not a reciprocal; the derivative is $\\frac{1}{\\sqrt{1 - x^2}}$."
+  ],
+  "whyItMatters": "The inverse trig derivatives are the source of two important integrals: $\\int\\frac{dx}{\\sqrt{1 - x^2}} = \\sin^{-1}x + C$ and $\\int\\frac{dx}{1 + x^2} = \\tan^{-1}x + C$, which appear whenever an integrand has a sum of squares, and which trig substitution in Chapter 7 generalizes. Related rates, the next big application, is implicit differentiation with respect to time. And in differential equations, solutions often come out as implicit relations between $x$ and $y$, which you verify by differentiating implicitly.",
+  "checkYourself": [
+    {
+      "q": "$\\frac{d}{dx}(y^4)$ when $y$ depends on $x$?",
+      "a": "$4y^3y'$."
+    },
+    {
+      "q": "For $xy = 6$, what is $y'$?",
+      "a": "$y + xy' = 0$, so $y' = -\\frac{y}{x}$."
+    },
+    {
+      "q": "$\\frac{d}{dx}\\tan^{-1}x$?",
+      "a": "$\\frac{1}{1 + x^2}$."
+    },
+    {
+      "q": "Slope of $x^2 + y^2 = 2$ at $(1, 1)$?",
+      "a": "$-\\frac{x}{y} = -1$."
+    }
+  ],
+  "readingGuide": [
+    "Find the explanation of what it means for an equation to define $y$ implicitly and note the example that cannot be solved for $y$.",
+    "Before reading the solution of the circle (or first) example, differentiate both sides yourself and find the slope at the given point.",
+    "Look for an example with a term like $xy$ or $x^2y$ and identify where the product rule is used.",
+    "Find the derivation of the derivative of $\\sin^{-1}x$ and note why $\\cos y$ is taken positive.",
+    "Copy the table of inverse trig derivatives and verify the $\\tan^{-1}$ one by implicit differentiation yourself."
+  ]
+}

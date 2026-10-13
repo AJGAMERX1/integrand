@@ -1,0 +1,88 @@
+{
+  "nodeId": "probability",
+  "title": "Probability",
+  "overview": "Some quantities take whole-number values: the roll of a die, the number of emails today. Others can be any real number in a range: a person's height, the time until the next bus. For the second kind, asking \"what is the probability of exactly $5.000$ minutes?\" makes no sense, because there are infinitely many possible values and each one alone has probability zero. Instead we ask for the probability of landing in an interval, and the answer is an area.\n\nA **probability density function** $f$ is a function with $f(x) \\ge 0$ everywhere and total area $\\int_{-\\infty}^{\\infty} f(x)\\,dx = 1$. The probability that the random quantity $X$ lands between $a$ and $b$ is\n$$P(a \\le X \\le b) = \\int_a^b f(x)\\,dx.$$\nSo $f$ is not a probability. It is a probability per unit length. Tall parts of the graph are where values are likely; the area under a piece of graph is the probability of that piece.\n\nThe **mean** (expected value) is the balance point of the density, exactly like the centroid of a plate:\n$$\\mu = \\int_{-\\infty}^{\\infty} x\\,f(x)\\,dx.$$\nThe **median** $m$ is the value that splits the area in half: $\\int_{-\\infty}^{m} f(x)\\,dx = \\frac{1}{2}$.\n\nTwo densities show up constantly. The **exponential** density $f(t) = c e^{-ct}$ for $t \\ge 0$ models waiting times; its mean is $\\frac{1}{c}$, and finding that mean is a lovely improper integral by parts. The **normal** density\n$$f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}\\,e^{-(x - \\mu)^2/(2\\sigma^2)}$$\nis the bell curve with mean $\\mu$ and standard deviation $\\sigma$. It has no elementary antiderivative, so its probabilities come from a table, a calculator, or a numerical rule. About $68$ percent of its area lies within one $\\sigma$ of the mean, $95$ percent within two.",
+  "keyIdeas": [
+    "A probability density function satisfies $f(x) \\ge 0$ and $\\int_{-\\infty}^{\\infty} f(x)\\,dx = 1$. Probabilities are areas: $P(a \\le X \\le b) = \\int_a^b f(x)\\,dx$.",
+    "The value $f(x)$ is a density (probability per unit length), not a probability. It can exceed $1$ as long as the total area is $1$.",
+    "The mean is $\\mu = \\int_{-\\infty}^{\\infty} x f(x)\\,dx$, the balance point of the region under the density, the same integral as a centroid's $\\bar{x}$.",
+    "The median $m$ satisfies $\\int_{-\\infty}^{m} f(x)\\,dx = \\frac{1}{2}$: half the area lies on each side.",
+    "Exponential density: $f(t) = c e^{-ct}$ for $t \\ge 0$ (and $0$ for $t < 0$), with mean $\\frac{1}{c}$ and $P(T > t) = e^{-ct}$.",
+    "Normal density: $f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} e^{-(x-\\mu)^2/(2\\sigma^2)}$. Its integrals are computed numerically; roughly $68$ percent of the area lies in $[\\mu - \\sigma, \\mu + \\sigma]$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Checking a density and using it",
+      "problem": "Let $f(x) = \\frac{3}{8}x^2$ for $0 \\le x \\le 2$ and $f(x) = 0$ otherwise. Verify that $f$ is a density, find $P(1 \\le X \\le 2)$, and find the mean.",
+      "steps": [
+        "Nonnegative: $\\frac{3}{8}x^2 \\ge 0$ always. Total area: $\\int_0^2 \\frac{3}{8}x^2\\,dx = \\frac{3}{8}\\cdot\\frac{8}{3} = 1$. Both conditions hold, so $f$ is a density.",
+        "Probability is area: $P(1 \\le X \\le 2) = \\int_1^2 \\frac{3}{8}x^2\\,dx = \\frac{3}{8}\\left[\\frac{x^3}{3}\\right]_1^2 = \\frac{1}{8}(8 - 1) = \\frac{7}{8}$. Most of the area sits near $x = 2$ because the density grows like $x^2$.",
+        "Mean: $\\mu = \\int_0^2 x \\cdot \\frac{3}{8}x^2\\,dx = \\frac{3}{8}\\int_0^2 x^3\\,dx = \\frac{3}{8} \\cdot \\frac{16}{4} = \\frac{3}{2}$.",
+        "Sanity check: the mean $1.5$ is right of the interval's midpoint $1$, consistent with the density being heavier on the right."
+      ]
+    },
+    {
+      "title": "Waiting for a bus: the exponential density",
+      "problem": "The wait for a bus is exponentially distributed with mean $5$ minutes. Find the probability of waiting more than $10$ minutes, and find the median wait.",
+      "steps": [
+        "Mean $\\frac{1}{c} = 5$ gives $c = \\frac{1}{5}$, so the density is $f(t) = \\frac{1}{5}e^{-t/5}$ for $t \\ge 0$.",
+        "Tail probability: $P(T > 10) = \\int_{10}^{\\infty} \\frac{1}{5}e^{-t/5}\\,dt = \\lim_{b \\to \\infty}\\left[-e^{-t/5}\\right]_{10}^{b} = 0 + e^{-2} \\approx 0.135$. An improper integral, but a tame one: the exponential dies fast.",
+        "Median: solve $\\int_0^m \\frac{1}{5}e^{-t/5}\\,dt = \\frac{1}{2}$. The integral is $1 - e^{-m/5}$, so $e^{-m/5} = \\frac{1}{2}$ and $m = 5\\ln 2 \\approx 3.47$ minutes.",
+        "Interpret: the median ($3.47$) is less than the mean ($5$). A few very long waits pull the mean up, while half of all waits are under $3.47$ minutes. Skewed densities always separate the two."
+      ]
+    },
+    {
+      "title": "Why the exponential mean is $1/c$",
+      "problem": "Show that the density $f(t) = c e^{-ct}$, $t \\ge 0$, has mean $\\frac{1}{c}$.",
+      "steps": [
+        "Set up the mean: $\\mu = \\int_0^{\\infty} t \\cdot c e^{-ct}\\,dt$. The product of a polynomial and an exponential calls for integration by parts.",
+        "Choose $u = t$ (it gets simpler when differentiated) and $dv = c e^{-ct}\\,dt$, so $du = dt$ and $v = -e^{-ct}$.",
+        "Apply parts on $[0, b]$: $\\left[-t e^{-ct}\\right]_0^b + \\int_0^b e^{-ct}\\,dt = -b e^{-cb} + \\left[-\\frac{1}{c}e^{-ct}\\right]_0^b = -b e^{-cb} - \\frac{1}{c}e^{-cb} + \\frac{1}{c}$.",
+        "Let $b \\to \\infty$. Both $b e^{-cb}$ and $e^{-cb}$ go to $0$ (exponential decay beats linear growth), leaving $\\mu = \\frac{1}{c}$.",
+        "Check with the bus: $c = \\frac{1}{5}$ gives mean $5$, which is how we chose $c$ in the first place. The formula and the setup are consistent."
+      ]
+    },
+    {
+      "title": "A normal probability",
+      "problem": "Exam scores are normally distributed with mean $70$ and standard deviation $5$. Find the probability that a score lies between $65$ and $75$.",
+      "steps": [
+        "Write the integral: $P(65 \\le X \\le 75) = \\int_{65}^{75} \\frac{1}{5\\sqrt{2\\pi}}\\,e^{-(x - 70)^2/50}\\,dx$.",
+        "Recognize that no elementary antiderivative exists. This is not a failure of technique; the integral must be evaluated numerically.",
+        "Notice the interval is exactly $\\mu - \\sigma$ to $\\mu + \\sigma$. The one-standard-deviation probability is the same for every normal curve, about $0.6827$.",
+        "Confirm numerically: Simpson's Rule with a few subintervals, or a calculator, gives $\\int_{65}^{75} f(x)\\,dx \\approx 0.683$. About $68$ percent of scores fall between $65$ and $75$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Treating $f(a)$ as the probability that $X = a$. The probability of any single exact value is $0$; only intervals have positive probability. Check: $f(x) = 2$ on $[0, \\frac{1}{2}]$ is a valid density even though $f$ exceeds $1$.",
+    "Forgetting the limit when integrating to infinity. Write $\\lim_{b \\to \\infty}\\int_a^b$ and make sure terms like $b e^{-cb}$ actually go to $0$ rather than assuming it.",
+    "Mixing up mean and median. The mean is $\\int x f(x)\\,dx$; the median is where the cumulative area reaches $\\frac{1}{2}$. For the exponential with $c = 1$ they are $1$ and $\\ln 2 \\approx 0.69$.",
+    "Using the exponential density without its restriction to $t \\ge 0$. The density is $0$ for negative $t$; integrating $c e^{-ct}$ over all real numbers diverges.",
+    "Trying to antidifferentiate $e^{-x^2}$. There is no elementary antiderivative; use a table, a calculator, or Simpson's Rule."
+  ],
+  "whyItMatters": "Probability is where improper integrals earn their keep: every tail probability and every mean of a distribution on $[0, \\infty)$ is one. The mean integral is the centroid formula from the physics section with density in place of mass, and the normal curve is the first important function whose integral has no closed form, which is exactly why approximate integration exists. Later, in the chapter on series, you will see the Taylor series that finally lets you compute $\\int e^{-x^2}\\,dx$ to any accuracy by hand.",
+  "checkYourself": [
+    {
+      "q": "What two conditions make $f$ a probability density function?",
+      "a": "$f(x) \\ge 0$ for all $x$, and $\\int_{-\\infty}^{\\infty} f(x)\\,dx = 1$."
+    },
+    {
+      "q": "For the uniform density $f(x) = \\frac{1}{4}$ on $[0, 4]$, find $P(1 \\le X \\le 3)$ and the mean.",
+      "a": "$P = \\frac{2}{4} = \\frac{1}{2}$; mean $= \\int_0^4 \\frac{x}{4}\\,dx = 2$."
+    },
+    {
+      "q": "If a waiting time is exponential with $c = 2$ per hour, what is $P(T > 1)$?",
+      "a": "$e^{-2} \\approx 0.135$."
+    },
+    {
+      "q": "Roughly what fraction of a normal distribution lies within two standard deviations of the mean?",
+      "a": "About $95$ percent."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of a probability density function and the two conditions it must satisfy. Write them in your own words, then explain why $f(x)$ itself is not a probability.",
+    "Before reading the solution of the exponential waiting-time example, set up the integral for the probability yourself and evaluate the improper integral.",
+    "Locate the definition of the mean and compare it with the centroid formula from the previous section. Note how the median is defined differently.",
+    "Find the formula for the normal density and the statement about how probabilities for it are computed. Note the role of $\\sigma$ in the shape of the curve."
+  ]
+}

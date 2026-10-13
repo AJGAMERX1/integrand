@@ -1,0 +1,87 @@
+{
+  "nodeId": "parametric-curves",
+  "title": "Curves Defined by Parametric Equations",
+  "overview": "A graph $y = f(x)$ can only draw curves that pass the vertical line test: one $y$ for each $x$. A circle fails. So does the path of a thrown ball drawn over time, or any curve that loops or crosses itself. **Parametric equations** fix this by giving both coordinates as functions of a third variable, the **parameter**, usually $t$:\n$$x = f(t), \\qquad y = g(t).$$\nThink of $t$ as time and $(f(t), g(t))$ as the position of a moving point. The curve is the trail the point leaves. The equations carry more information than a plain graph: not just where the point goes, but when, and in which direction.\n\nTo sketch a parametric curve, make a table. Pick several $t$ values, compute $x$ and $y$ for each, plot the points, and connect them in order of increasing $t$, adding arrows for direction. The direction matters; the same curve traced backward is a different parametric curve.\n\nSometimes you can **eliminate the parameter**: solve one equation for $t$ and substitute into the other, producing a relation between $x$ and $y$ alone. That identifies the shape (a parabola, a line, an ellipse), but you must then restore any restrictions the parametrization imposed. For example $x = e^t$, $y = e^{2t}$ gives $y = x^2$, but only the half with $x > 0$ is ever reached.\n\nThe most important parametrization is the circle: $x = r\\cos t$, $y = r\\sin t$ traces the circle of radius $r$ counterclockwise, starting at $(r, 0)$, once for $0 \\le t \\le 2\\pi$. Stretching gives the ellipse $x = a\\cos t$, $y = b\\sin t$. These work because $\\cos^2 t + \\sin^2 t = 1$; eliminating $t$ uses that identity.\n\nA single curve has infinitely many parametrizations. The line segment from $(1, 2)$ to $(4, 8)$ can be walked quickly or slowly, forward or backward. The curve is the same; the motion is not.",
+  "keyIdeas": [
+    "A parametric curve is given by $x = f(t)$, $y = g(t)$ for $t$ in some interval; each $t$ produces one point, and the curve is traced in the direction of increasing $t$.",
+    "Parametric curves need not pass the vertical line test; circles, loops, and self-crossings are all allowed.",
+    "Eliminating the parameter (solving one equation for $t$ and substituting) reveals the Cartesian shape, but may hide restrictions on which part of that shape is traced.",
+    "The circle of radius $r$: $x = r\\cos t$, $y = r\\sin t$, $0 \\le t \\le 2\\pi$, counterclockwise from $(r, 0)$. The ellipse $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$: $x = a\\cos t$, $y = b\\sin t$.",
+    "The segment from $(x_0, y_0)$ to $(x_1, y_1)$: $x = x_0 + (x_1 - x_0)t$, $y = y_0 + (y_1 - y_0)t$, $0 \\le t \\le 1$.",
+    "Different parametrizations can trace the same set of points at different speeds or in opposite directions; the parametrization is extra information, not just the shape."
+  ],
+  "workedExamples": [
+    {
+      "title": "Table, sketch, eliminate",
+      "problem": "Sketch the curve $x = t^2$, $y = t + 1$ for $-2 \\le t \\le 2$, and find its Cartesian equation.",
+      "steps": [
+        "Table: $t = -2$ gives $(4, -1)$; $t = -1$ gives $(1, 0)$; $t = 0$ gives $(0, 1)$; $t = 1$ gives $(1, 2)$; $t = 2$ gives $(4, 3)$.",
+        "Plot and connect in order of $t$. The point starts at $(4, -1)$, sweeps left to $(0, 1)$, then back right to $(4, 3)$. Arrows point upward throughout since $y = t + 1$ always increases.",
+        "Eliminate the parameter: from $y = t + 1$, $t = y - 1$, so $x = (y - 1)^2$. This is a parabola opening to the right with vertex $(0, 1)$, which fails the vertical line test; parametric form handled it with no trouble.",
+        "Restriction: $t$ runs from $-2$ to $2$, so $y = t + 1$ runs from $-1$ to $3$. Only the piece of the parabola with $-1 \\le y \\le 3$ is traced."
+      ]
+    },
+    {
+      "title": "An ellipse from sine and cosine",
+      "problem": "Identify the curve $x = 3\\cos t$, $y = 2\\sin t$, $0 \\le t \\le 2\\pi$, and describe how it is traced.",
+      "steps": [
+        "Isolate the trig functions: $\\cos t = \\frac{x}{3}$ and $\\sin t = \\frac{y}{2}$.",
+        "Use $\\cos^2 t + \\sin^2 t = 1$: $\\frac{x^2}{9} + \\frac{y^2}{4} = 1$. An ellipse centered at the origin, reaching $x = \\pm 3$ and $y = \\pm 2$.",
+        "Direction: at $t = 0$ the point is $(3, 0)$; at $t = \\frac{\\pi}{2}$ it is $(0, 2)$; at $t = \\pi$ it is $(-3, 0)$. It moves counterclockwise.",
+        "Coverage: as $t$ runs from $0$ to $2\\pi$ the point goes around exactly once and returns to $(3, 0)$. If the interval were $0 \\le t \\le 4\\pi$ the same ellipse would be traced twice; the set of points is the same, the curve as a motion is different."
+      ]
+    },
+    {
+      "title": "Parametrizing a line segment",
+      "problem": "Find parametric equations for the segment from $(1, 2)$ to $(4, 8)$, traced from the first point to the second.",
+      "steps": [
+        "Start at the first point when $t = 0$ and move by the displacement $(4 - 1, 8 - 2) = (3, 6)$ as $t$ goes from $0$ to $1$.",
+        "Equations: $x = 1 + 3t$, $y = 2 + 6t$, $0 \\le t \\le 1$. Check: $t = 0$ gives $(1, 2)$, $t = 1$ gives $(4, 8)$.",
+        "Eliminate $t$: $t = \\frac{x - 1}{3}$, so $y = 2 + 2(x - 1) = 2x$. The segment lies on the line $y = 2x$, restricted to $1 \\le x \\le 4$.",
+        "Alternative parametrizations: $x = 4 - 3t$, $y = 8 - 6t$ walks the same segment in reverse; $x = 1 + 3t^2$, $y = 2 + 6t^2$ walks it forward but speeds up. Same points, different motions."
+      ]
+    },
+    {
+      "title": "A hidden restriction",
+      "problem": "Describe the curve $x = e^t$, $y = e^{2t}$ for all real $t$.",
+      "steps": [
+        "Eliminate: $y = e^{2t} = \\left(e^t\\right)^2 = x^2$. So the points lie on the parabola $y = x^2$.",
+        "But $x = e^t$ is always positive. As $t \\to -\\infty$, $x \\to 0$ but never reaches it; as $t \\to \\infty$, $x \\to \\infty$. Only the right half of the parabola, $x > 0$, is traced.",
+        "Direction: $x$ increases with $t$, so the point moves up and to the right, away from the origin.",
+        "Lesson: eliminating the parameter gives the shape; reading the ranges of $f(t)$ and $g(t)$ tells you which part of the shape and in which direction. Always do both."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Plotting $(t, x)$ or $(t, y)$ instead of $(x, y)$. The parameter is not an axis; it labels the points. Check: for $x = \\cos t$, $y = \\sin t$ the picture should be a circle, not a wave.",
+    "Forgetting direction. After eliminating the parameter, go back and mark arrows using two or three $t$ values. For $x = \\cos t$, $y = -\\sin t$ the circle is traced clockwise, the opposite of the standard one.",
+    "Eliminating the parameter and then claiming the whole Cartesian curve. $x = e^t$, $y = e^{2t}$ gives only the $x > 0$ half of $y = x^2$. Check the range of each coordinate function.",
+    "Writing the ellipse as $x = 3\\cos t$, $y = 2\\sin t$ and then reading its equation as $\\frac{x^2}{3} + \\frac{y^2}{2} = 1$. The denominators are the squares: $9$ and $4$. Test the point $t = 0$, which is $(3, 0)$: $\\frac{9}{9} + 0 = 1$."
+  ],
+  "whyItMatters": "Parametric curves are how calculus describes motion: a position depending on time, with velocity and speed to follow in the next section. The arc length formula becomes especially natural here, $\\int \\sqrt{(dx/dt)^2 + (dy/dt)^2}\\,dt$, because $dx/dt$ and $dy/dt$ are the velocity components. Polar coordinates are a special parametrization with $\\theta$ as the parameter, and vector functions in multivariable calculus are parametric curves in three dimensions. Every curve you integrate along later will be given this way.",
+  "checkYourself": [
+    {
+      "q": "Where is the point $x = 2\\cos t$, $y = 2\\sin t$ when $t = \\pi$?",
+      "a": "$(-2, 0)$."
+    },
+    {
+      "q": "Eliminate the parameter from $x = t - 1$, $y = t^2$.",
+      "a": "$t = x + 1$, so $y = (x + 1)^2$, a parabola with vertex $(-1, 0)$, all of it traced."
+    },
+    {
+      "q": "Give parametric equations for the segment from $(0, 0)$ to $(5, -3)$.",
+      "a": "$x = 5t$, $y = -3t$, $0 \\le t \\le 1$."
+    },
+    {
+      "q": "What part of the line $y = x$ does $x = t^2$, $y = t^2$ trace?",
+      "a": "Only the ray with $x \\ge 0$, traced out and back as $t$ runs through negative and then positive values."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of parametric equations and the idea of the parameter as time. Write in your own words what extra information a parametrization carries beyond the shape.",
+    "Before reading the solution of the first sketching example, make your own table of $t$ values and plot the points with direction arrows.",
+    "Locate the circle parametrization and work out, for yourself, what changes if $t$ is replaced by $2t$ or by $-t$.",
+    "Look for the cycloid and follow how its equations come from the motion of a point on a rolling wheel; you do not need to memorize them, only to see how geometry produced them.",
+    "Find any example where eliminating the parameter loses part of the curve, and note how the author restores the restriction."
+  ]
+}

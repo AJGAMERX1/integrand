@@ -1,0 +1,85 @@
+{
+  "nodeId": "rates-in-sciences",
+  "title": "Rates of Change in the Natural and Social Sciences",
+  "overview": "Whenever one quantity depends on another, the derivative measures how fast the first changes with respect to the second, and every field of science has its own name for that rate. This section is a tour of those names, with the mathematics unchanged: if $y = f(x)$, the average rate of change over an interval is $\\frac{\\Delta y}{\\Delta x}$ and the instantaneous rate is $\\frac{dy}{dx}$. What changes is the interpretation, and the units, which are always \"units of $y$ per unit of $x$.\"\n\nIn **physics**, if $s(t)$ is position, then $v = s'(t)$ is velocity and $a = v'(t) = s''(t)$ is acceleration. Speed is $|v|$. The object is moving in the positive direction when $v > 0$, is momentarily at rest when $v = 0$, and is speeding up when $v$ and $a$ have the same sign. To find the total distance traveled (as opposed to displacement), find the times when $v = 0$, compute the distance on each piece separately, and add the absolute values. Other physics rates: if $m(x)$ is the mass of a rod from its left end to position $x$, then $m'(x)$ is the **linear density** at $x$; if $Q(t)$ is charge passing a point, $Q'(t)$ is the **current**.\n\nIn **chemistry**, if $[C](t)$ is the concentration of a product, $\\frac{d[C]}{dt}$ is the **rate of reaction**. In **biology**, if $n(t)$ is a population, $n'(t)$ is the growth rate, and the **relative growth rate** $\\frac{n'(t)}{n(t)}$ is the fraction by which the population grows per unit time, which is constant for exponential growth. Blood flow in a vessel follows a law where velocity depends on distance from the center, and the derivative gives the velocity gradient.\n\nIn **economics**, if $C(x)$ is the cost of producing $x$ units, then $C'(x)$ is the **marginal cost**, approximately the cost of producing one more unit: $C(x + 1) - C(x) \\approx C'(x)$. The same prefix \"marginal\" applies to revenue and profit. Because production levels are whole numbers, the derivative is an approximation to the true difference, but a very good one when $x$ is large.\n\nThe habit this section builds: when a problem gives a formula and asks for a rate, identify which variable is changing with respect to which, differentiate, substitute, and attach units. When it asks for an average rate, compute a difference quotient instead. When it asks what a derivative **means**, answer in a sentence with units: \"at $t = 3$ seconds the velocity is $-4$ m/s, so the object is moving backward at 4 m/s.\" Being able to translate between the formula and the sentence is the skill, more than any particular computation.",
+  "keyIdeas": [
+    "Every rate of change is a derivative; the units of $\\frac{dy}{dx}$ are units of $y$ per unit of $x$.",
+    "Position $s(t)$: velocity $v = s'$, acceleration $a = s''$; the object is at rest when $v = 0$ and speeding up when $v$ and $a$ have the same sign.",
+    "Total distance traveled is found by splitting the time interval at the moments when $v = 0$ and adding the absolute displacements.",
+    "Linear density is $m'(x)$ for mass $m(x)$; current is $Q'(t)$ for charge $Q(t)$; reaction rate is the derivative of concentration.",
+    "Relative growth rate is $\\frac{n'(t)}{n(t)}$; it is constant for exponential growth.",
+    "Marginal cost $C'(x)$ approximates the cost of the next unit: $C(x + 1) - C(x) \\approx C'(x)$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Motion along a line",
+      "problem": "A particle moves with position $s(t) = t^3 - 9t^2 + 24t$ meters for $t \\ge 0$ seconds. When is it at rest, when is it moving forward, and what total distance does it travel in the first 5 seconds?",
+      "steps": [
+        "Velocity: $v(t) = 3t^2 - 18t + 24 = 3(t^2 - 6t + 8) = 3(t - 2)(t - 4)$. At rest when $t = 2$ and $t = 4$.",
+        "Sign of $v$: for $0 \\le t < 2$, $v > 0$ (test $t = 0$: 24); for $2 < t < 4$, $v < 0$ (test $t = 3$: $-3$); for $t > 4$, $v > 0$. So it moves forward, then backward, then forward.",
+        "Positions: $s(0) = 0$, $s(2) = 8 - 36 + 48 = 20$, $s(4) = 64 - 144 + 96 = 16$, $s(5) = 125 - 225 + 120 = 20$.",
+        "Distances on each piece: $|20 - 0| + |16 - 20| + |20 - 16| = 20 + 4 + 4 = 28$ meters. (The displacement is only $s(5) - s(0) = 20$.)"
+      ]
+    },
+    {
+      "title": "Linear density",
+      "problem": "The mass of the part of a thin rod from its left end to position $x$ meters is $m(x) = 2x^2 + x$ kilograms. Find the average density on $[1, 2]$ and the density at $x = 1$.",
+      "steps": [
+        "Average density on $[1, 2]$: $\\frac{m(2) - m(1)}{2 - 1} = \\frac{10 - 3}{1} = 7$ kg/m.",
+        "Density at a point is the derivative: $\\rho(x) = m'(x) = 4x + 1$.",
+        "At $x = 1$: $\\rho(1) = 5$ kg/m. The rod is lighter near the left end and heavier farther right, which is why the average over $[1, 2]$ exceeds the density at 1."
+      ]
+    },
+    {
+      "title": "Marginal cost",
+      "problem": "A factory's cost function is $C(x) = 2000 + 5x + 0.01x^2$ for $x$ items. Find the marginal cost at $x = 100$ and compare it with the actual cost of the 101st item.",
+      "steps": [
+        "Marginal cost: $C'(x) = 5 + 0.02x$, so $C'(100) = 5 + 2 = 7$ per item.",
+        "Actual cost of the 101st item: $C(101) - C(100) = (2000 + 505 + 102.01) - (2000 + 500 + 100) = 2607.01 - 2600 = 7.01$.",
+        "The marginal cost 7 approximates the true increment 7.01 very closely; the difference is the $0.01$ curvature term."
+      ]
+    },
+    {
+      "title": "Relative growth rate",
+      "problem": "A bacteria population is $n(t) = 1000e^{0.3t}$ after $t$ hours. Find the growth rate and the relative growth rate at $t = 4$.",
+      "steps": [
+        "Growth rate: $n'(t) = 1000\\cdot 0.3e^{0.3t} = 300e^{0.3t}$. At $t = 4$: $300e^{1.2} \\approx 300\\cdot 3.3201 \\approx 996$ bacteria per hour.",
+        "Relative growth rate: $\\frac{n'(t)}{n(t)} = \\frac{300e^{0.3t}}{1000e^{0.3t}} = 0.3$ per hour, at every time.",
+        "Interpretation: the population grows by 30 percent of its current size each hour (in the instantaneous sense). The absolute rate 996 is large because the population at $t = 4$ is about 3320."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Reporting displacement when total distance is asked. If the object reverses direction, split at the times when $v = 0$ and add absolute values.",
+    "Saying an object is speeding up whenever $a > 0$. It speeds up when $v$ and $a$ have the same sign; with $v < 0$ and $a > 0$ it is slowing down.",
+    "Giving a rate without units, or with the units of the original quantity. Density from kg and m is kg/m; marginal cost is currency per item.",
+    "Confusing average rate (a difference quotient over an interval) with instantaneous rate (a derivative at a point).",
+    "Treating marginal cost as exactly the cost of the next item. It is the derivative, an approximation that is excellent for large $x$."
+  ],
+  "whyItMatters": "Every rate here can be integrated back: integrating velocity gives displacement, integrating density along the rod gives its total mass, integrating current gives total charge, integrating marginal cost from $a$ to $b$ gives the cost of increasing production from $a$ to $b$. That is the Net Change Theorem in Chapter 5, $\\int_a^b F'(x)\\,dx = F(b) - F(a)$, and the total-distance computation above is exactly $\\int|v(t)|\\,dt$. Understanding what each derivative measures is what lets you set up those integrals correctly.",
+  "checkYourself": [
+    {
+      "q": "If $s(t) = t^2 - 4t$, when is the particle at rest?",
+      "a": "$v = 2t - 4 = 0$ at $t = 2$."
+    },
+    {
+      "q": "Units of $\\frac{dQ}{dt}$ if $Q$ is in coulombs and $t$ in seconds?",
+      "a": "Coulombs per second (amperes)."
+    },
+    {
+      "q": "If $C(x) = 100 + 3x$, what is the marginal cost?",
+      "a": "3 per item, constant."
+    },
+    {
+      "q": "Relative growth rate of $n(t) = 50e^{0.08t}$?",
+      "a": "$0.08$ per unit time."
+    }
+  ],
+  "readingGuide": [
+    "Find the physics discussion of velocity, acceleration, and distance; before reading the solution of the motion example, find the rest times and sign changes yourself.",
+    "Locate the definitions of linear density and current and write each as a derivative with units.",
+    "Find the biology example on population growth and note how the relative growth rate is defined.",
+    "Find the economics discussion of marginal cost and the comparison between $C'(n)$ and $C(n + 1) - C(n)$.",
+    "Make a one-page list: for each science, the quantity, the variable it depends on, the name of the derivative, and its units."
+  ]
+}

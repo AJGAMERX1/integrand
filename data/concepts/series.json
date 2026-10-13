@@ -1,0 +1,86 @@
+{
+  "nodeId": "series",
+  "title": "Series",
+  "overview": "A **series** is what you get when you try to add up all the terms of a sequence: $a_1 + a_2 + a_3 + \\cdots$, written $\\sum_{n=1}^{\\infty} a_n$. Adding infinitely many numbers sounds impossible, so we define it with running totals. The $N$-th **partial sum** is $s_N = a_1 + a_2 + \\cdots + a_N$. If the sequence of partial sums $s_1, s_2, s_3, \\ldots$ converges to a number $S$, we say the series **converges** and its sum is $S$. If the partial sums do not settle, the series **diverges**. Nobody ever adds infinitely many numbers; we watch where the finite totals are heading. For example $\\sum_{n=1}^{\\infty} \\frac{1}{2^n}$ has partial sums $\\frac{1}{2}, \\frac{3}{4}, \\frac{7}{8}, \\ldots$, which clearly head to $1$.\n\nThe star example is the **geometric series** $\\sum_{n=0}^{\\infty} a r^n = a + ar + ar^2 + \\cdots$. Each term is the previous one times the ratio $r$. Its partial sums have a closed formula, and from it you can see that the series converges exactly when $|r| < 1$, with\n$$\\sum_{n=0}^{\\infty} a r^n = \\frac{a}{1-r}, \\qquad |r| < 1.$$\nThink \"first term over one minus the ratio.\" When $|r| \\ge 1$ the terms do not shrink and the series diverges.\n\nA second family you can sum exactly are **telescoping** series, where each term splits into two pieces that cancel with neighbors, so the partial sum collapses to a few leftover pieces.\n\nThe most important negative result is the **Test for Divergence**: if the terms $a_n$ do not go to $0$, the series cannot converge. The running total keeps changing by a noticeable amount, so it never settles. Be careful with the direction: terms going to $0$ is necessary but not enough. The harmonic series $\\sum \\frac{1}{n}$ has terms going to $0$ and still diverges.\n\nFinally, convergent series behave like finite sums: you can add two of them term by term, and pull out constant factors.",
+  "keyIdeas": [
+    "The sum of a series is the limit of its partial sums: $\\sum_{n=1}^{\\infty} a_n = \\lim_{N \\to \\infty} s_N$ where $s_N = a_1 + \\cdots + a_N$. If that limit does not exist, the series diverges.",
+    "Geometric series: $\\sum_{n=0}^{\\infty} a r^n = \\dfrac{a}{1-r}$ when $|r| < 1$, and diverges when $|r| \\ge 1$. In words: first term divided by one minus the ratio.",
+    "Test for Divergence: if $\\lim_{n \\to \\infty} a_n \\ne 0$ (or does not exist), then $\\sum a_n$ diverges. If $a_n \\to 0$ the test says nothing.",
+    "The harmonic series $\\sum_{n=1}^{\\infty} \\frac{1}{n}$ diverges even though its terms go to $0$. It is the standard warning example.",
+    "Telescoping series: if $a_n = b_n - b_{n+1}$, then $s_N = b_1 - b_{N+1}$, so the sum is $b_1 - \\lim_{N \\to \\infty} b_{N+1}$.",
+    "If $\\sum a_n$ and $\\sum b_n$ converge, then $\\sum (a_n + b_n) = \\sum a_n + \\sum b_n$ and $\\sum c\\,a_n = c \\sum a_n$. Changing or removing finitely many terms never changes whether a series converges."
+  ],
+  "workedExamples": [
+    {
+      "title": "A geometric series",
+      "problem": "Find the sum $\\sum_{n=1}^{\\infty} \\dfrac{5}{3^n}$.",
+      "steps": [
+        "Why this step: identify the shape. Each term is the previous one times $\\frac{1}{3}$, so this is geometric with ratio $r = \\frac{1}{3}$. Since $|r| < 1$ it converges.",
+        "Why this step: find the first term carefully. The sum starts at $n = 1$, so the first term is $\\frac{5}{3^1} = \\frac{5}{3}$, not $5$.",
+        "Apply the formula: first term over one minus the ratio gives $\\dfrac{5/3}{1 - 1/3} = \\dfrac{5/3}{2/3} = \\dfrac{5}{2}$.",
+        "Sanity check with partial sums: $\\frac{5}{3} + \\frac{5}{9} + \\frac{5}{27} \\approx 1.667 + 0.556 + 0.185 = 2.41$, already close to $2.5$ and rising toward it."
+      ]
+    },
+    {
+      "title": "A telescoping series",
+      "problem": "Find the sum $\\sum_{n=1}^{\\infty} \\dfrac{1}{n(n+2)}$.",
+      "steps": [
+        "Why this step: the terms are not geometric, but the denominator factors, which suggests partial fractions. Write $\\dfrac{1}{n(n+2)} = \\dfrac{1}{2}\\left( \\dfrac{1}{n} - \\dfrac{1}{n+2} \\right)$. Check at $n = 1$: $\\frac{1}{2}(1 - \\frac{1}{3}) = \\frac{1}{3}$, which matches $\\frac{1}{1 \\cdot 3}$.",
+        "Why this step: write out a partial sum so the cancellation is visible. $s_N = \\frac{1}{2}\\left[ \\left(1 - \\frac{1}{3}\\right) + \\left(\\frac{1}{2} - \\frac{1}{4}\\right) + \\left(\\frac{1}{3} - \\frac{1}{5}\\right) + \\cdots + \\left(\\frac{1}{N} - \\frac{1}{N+2}\\right) \\right]$.",
+        "Each negative piece $-\\frac{1}{k}$ cancels a later positive $\\frac{1}{k}$, except the first two positives and the last two negatives survive: $s_N = \\frac{1}{2}\\left( 1 + \\frac{1}{2} - \\frac{1}{N+1} - \\frac{1}{N+2} \\right)$.",
+        "Take the limit: the two leftover fractions go to $0$, so the sum is $\\frac{1}{2} \\cdot \\frac{3}{2} = \\dfrac{3}{4}$."
+      ]
+    },
+    {
+      "title": "Test for Divergence",
+      "problem": "Does $\\sum_{n=1}^{\\infty} \\dfrac{n}{2n+1}$ converge?",
+      "steps": [
+        "Why this step: before any fancy test, check whether the terms even shrink to $0$. Compute $\\lim_{n \\to \\infty} \\dfrac{n}{2n+1}$ by dividing by $n$: $\\dfrac{1}{2 + 1/n} \\to \\dfrac{1}{2}$.",
+        "The terms approach $\\frac{1}{2}$, not $0$. Every new term adds about $\\frac{1}{2}$ to the running total, so the partial sums grow without bound.",
+        "By the Test for Divergence, the series diverges. No further test is needed."
+      ]
+    },
+    {
+      "title": "A repeating decimal",
+      "problem": "Write $0.272727\\ldots$ as a fraction using a geometric series.",
+      "steps": [
+        "Why this step: split the decimal into repeating blocks. $0.272727\\ldots = \\dfrac{27}{100} + \\dfrac{27}{100^2} + \\dfrac{27}{100^3} + \\cdots$. Each block is the previous one times $\\frac{1}{100}$.",
+        "This is geometric with first term $a = \\frac{27}{100}$ and ratio $r = \\frac{1}{100}$, and $|r| < 1$ so it converges.",
+        "Apply the formula: $\\dfrac{27/100}{1 - 1/100} = \\dfrac{27/100}{99/100} = \\dfrac{27}{99} = \\dfrac{3}{11}$.",
+        "Check: $3 \\div 11 = 0.2727\\ldots$, as expected."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Using $\\frac{a}{1-r}$ with the wrong first term. For $\\sum_{n=1}^{\\infty} \\frac{5}{3^n}$ the first term is $\\frac{5}{3}$, not $5$. Using $5$ gives $\\frac{15}{2}$, three times too big.",
+    "Reading the Test for Divergence backwards: \"the terms go to $0$, so the series converges.\" Check with $\\sum \\frac{1}{n}$: terms go to $0$ and the sum still blows up.",
+    "Applying the geometric formula when $|r| \\ge 1$. For $\\sum 2^n$ the formula would give $\\frac{1}{1-2} = -1$, a nonsense negative \"sum\" of positive terms. The series diverges.",
+    "Confusing the limit of the terms with the sum of the series. For $\\sum \\frac{5}{3^n}$ the terms go to $0$ but the sum is $\\frac{5}{2}$. The sum is the limit of the partial sums, not of the terms."
+  ],
+  "whyItMatters": "Series are the bridge from finite sums to the infinite. The same partial-sum idea is how a definite integral is defined (Riemann sums with more and more rectangles), and the geometric series formula will reappear as the first power series: $\\frac{1}{1-x} = \\sum x^n$ for $|x| < 1$. From that one identity, integrating term by term produces series for $\\ln(1+x)$ and $\\arctan x$, and you can integrate functions like $e^{-x^2}$ that have no elementary antiderivative at all.",
+  "checkYourself": [
+    {
+      "q": "Find $\\sum_{n=0}^{\\infty} 2 \\left(\\frac{1}{3}\\right)^n$.",
+      "a": "$\\frac{2}{1 - 1/3} = 3$."
+    },
+    {
+      "q": "Does $\\sum_{n=1}^{\\infty} \\dfrac{n^2}{n^2 + 1}$ converge?",
+      "a": "No. The terms go to $1 \\ne 0$, so it diverges by the Test for Divergence."
+    },
+    {
+      "q": "If $a_n = \\frac{1}{n} - \\frac{1}{n+1}$, what is $s_N$ and what is the sum?",
+      "a": "$s_N = 1 - \\frac{1}{N+1}$, so the sum is $1$."
+    },
+    {
+      "q": "The terms of a series go to $0$. Can you conclude it converges?",
+      "a": "No. The harmonic series is the counterexample."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of a convergent series through partial sums and write it in your own words before reading any example.",
+    "Locate the derivation of the partial-sum formula for a geometric series. Try to reproduce the trick (multiply $s_N$ by $r$ and subtract) on your own first.",
+    "Before reading the proof that the harmonic series diverges, try grouping its terms yourself to see why the partial sums exceed any bound.",
+    "Find the Test for Divergence and note carefully what it does and does not say when the terms go to $0$.",
+    "Look for the rules about adding series and multiplying by constants, and note the condition that both series must converge."
+  ]
+}

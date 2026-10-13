@@ -1,0 +1,87 @@
+{
+  "nodeId": "taylor-series",
+  "title": "Taylor and Maclaurin Series",
+  "overview": "The last node built power series by tinkering with the geometric series. That works for a handful of functions. **Taylor series** give a recipe that works for every function with enough derivatives.\n\nHere is the idea. Suppose $f(x) = c_0 + c_1 (x - a) + c_2 (x-a)^2 + c_3 (x-a)^3 + \\cdots$ near $x = a$. Plug in $x = a$: all terms vanish except $c_0$, so $c_0 = f(a)$. Differentiate once and plug in $x = a$: $c_1 = f'(a)$. Differentiate twice: $f''(a) = 2 c_2$. Three times: $f'''(a) = 3 \\cdot 2 \\cdot c_3$. In general each differentiation knocks down a factor, and\n$$c_n = \\frac{f^{(n)}(a)}{n!}.$$\nSo the only possible power series for $f$ centered at $a$ is the **Taylor series**\n$$f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!} (x - a)^n.$$\nWhen the center is $a = 0$ it is called a **Maclaurin series**. The coefficients are \"derivatives at the center, divided by factorials.\"\n\nTwo questions remain. Does the series converge? Find its radius with the ratio test as before. And does it converge **to $f$**? For that, the remainder $R_n(x) = f(x) - T_n(x)$, where $T_n$ is the partial sum up through degree $n$, must go to $0$. **Taylor's Inequality** bounds it: if $|f^{(n+1)}| \\le M$ on an interval around $a$, then $|R_n(x)| \\le \\dfrac{M}{(n+1)!} |x - a|^{n+1}$ there. Because factorials grow faster than any power, this goes to $0$ for $e^x$, $\\sin x$, and $\\cos x$ at every $x$, so their Maclaurin series equal the functions everywhere.\n\nMemorize this short table, all centered at $0$:\n$$e^x = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!}, \\qquad \\sin x = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}, \\qquad \\cos x = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$$\nvalid for all $x$, together with $\\frac{1}{1-x}$, $\\ln(1+x)$, and $\\arctan x$ from the previous node, valid for $|x| < 1$. Most new series come from these by substitution, multiplication, differentiation, or integration rather than from the definition.",
+  "keyIdeas": [
+    "If $f$ has a power series centered at $a$, its coefficients are forced: $c_n = \\dfrac{f^{(n)}(a)}{n!}$. The series $\\sum_{n=0}^{\\infty} \\dfrac{f^{(n)}(a)}{n!} (x-a)^n$ is the Taylor series of $f$ at $a$; with $a = 0$ it is the Maclaurin series.",
+    "The $n$-th degree Taylor polynomial $T_n(x)$ is the partial sum through $(x-a)^n$. The remainder is $R_n(x) = f(x) - T_n(x)$, and $f$ equals its Taylor series exactly where $R_n(x) \\to 0$.",
+    "Taylor's Inequality: if $|f^{(n+1)}(x)| \\le M$ for $|x - a| \\le d$, then $|R_n(x)| \\le \\dfrac{M}{(n+1)!} |x-a|^{n+1}$ for $|x - a| \\le d$.",
+    "Because $\\dfrac{x^n}{n!} \\to 0$ for every $x$, the Maclaurin series of $e^x$, $\\sin x$, and $\\cos x$ converge to those functions for all real $x$.",
+    "Core table: $e^x = \\sum \\frac{x^n}{n!}$, $\\sin x = \\sum \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$, $\\cos x = \\sum \\frac{(-1)^n x^{2n}}{(2n)!}$ (all $x$); $\\frac{1}{1-x} = \\sum x^n$, $\\ln(1+x) = \\sum_{n \\ge 1} \\frac{(-1)^{n+1} x^n}{n}$, $\\arctan x = \\sum \\frac{(-1)^n x^{2n+1}}{2n+1}$ ($|x| < 1$).",
+    "Build new series from the table by substitution, multiplying by powers of $x$, differentiating, or integrating. Reach for the definition only when no shortcut applies."
+  ],
+  "workedExamples": [
+    {
+      "title": "A Maclaurin series from the definition",
+      "problem": "Find the Maclaurin series of $f(x) = e^x$ and its radius of convergence.",
+      "steps": [
+        "Why this step: the recipe needs all derivatives at $0$. Every derivative of $e^x$ is $e^x$, so $f^{(n)}(0) = e^0 = 1$ for every $n$.",
+        "Coefficients: $c_n = \\dfrac{f^{(n)}(0)}{n!} = \\dfrac{1}{n!}$. So the series is $\\sum_{n=0}^{\\infty} \\dfrac{x^n}{n!} = 1 + x + \\dfrac{x^2}{2} + \\dfrac{x^3}{6} + \\cdots$.",
+        "Radius: the ratio test gives $\\left| \\dfrac{x^{n+1}}{(n+1)!} \\cdot \\dfrac{n!}{x^n} \\right| = \\dfrac{|x|}{n+1} \\to 0 < 1$ for every $x$, so $R = \\infty$.",
+        "Does it converge to $e^x$? On $|x| \\le d$ we have $|f^{(n+1)}(x)| = e^x \\le e^d$, so Taylor's Inequality gives $|R_n(x)| \\le \\dfrac{e^d}{(n+1)!} d^{n+1} \\to 0$. Yes, for every $x$. Check: at $x = 1$, $1 + 1 + \\frac{1}{2} + \\frac{1}{6} + \\frac{1}{24} \\approx 2.708$, near $e \\approx 2.718$."
+      ]
+    },
+    {
+      "title": "A Taylor series centered away from zero",
+      "problem": "Find the Taylor series of $f(x) = \\ln x$ centered at $a = 1$.",
+      "steps": [
+        "Why this step: $\\ln x$ has no Maclaurin series (it is undefined at $0$), so center at $1$ where $\\ln 1 = 0$. Compute derivatives: $f'(x) = x^{-1}$, $f''(x) = -x^{-2}$, $f'''(x) = 2x^{-3}$, $f^{(4)}(x) = -6x^{-4}$. The pattern is $f^{(n)}(x) = (-1)^{n+1} (n-1)!\\,x^{-n}$ for $n \\ge 1$.",
+        "Evaluate at $a = 1$: $f(1) = 0$ and $f^{(n)}(1) = (-1)^{n+1} (n-1)!$. Divide by $n!$: $c_n = \\dfrac{(-1)^{n+1} (n-1)!}{n!} = \\dfrac{(-1)^{n+1}}{n}$. The first few are $1, -\\frac{1}{2}, \\frac{1}{3}, -\\frac{1}{4}$.",
+        "So $\\ln x = \\sum_{n=1}^{\\infty} \\dfrac{(-1)^{n+1}}{n} (x - 1)^n = (x-1) - \\dfrac{(x-1)^2}{2} + \\dfrac{(x-1)^3}{3} - \\cdots$.",
+        "Why this step: cross-check with a known series. Writing $x = 1 + u$ this is exactly the series for $\\ln(1 + u)$ from the previous node, as it must be. Radius $R = 1$, so it is valid for $0 < x \\le 2$."
+      ]
+    },
+    {
+      "title": "Building a series from the table",
+      "problem": "Find the Maclaurin series of $g(x) = x e^{2x}$.",
+      "steps": [
+        "Why this step: computing twenty derivatives of $x e^{2x}$ would be painful. Instead, substitute $2x$ into the known series for $e^x$: $e^{2x} = \\sum_{n=0}^{\\infty} \\dfrac{(2x)^n}{n!} = \\sum_{n=0}^{\\infty} \\dfrac{2^n x^n}{n!}$.",
+        "Multiply every term by $x$: $x e^{2x} = \\sum_{n=0}^{\\infty} \\dfrac{2^n x^{n+1}}{n!} = x + 2x^2 + 2x^3 + \\dfrac{4}{3} x^4 + \\cdots$.",
+        "Check the coefficient of $x^3$: $n = 2$ gives $\\frac{2^2}{2!} = 2$. Check $x^4$: $n = 3$ gives $\\frac{8}{6} = \\frac{4}{3}$. And the radius is still $\\infty$.",
+        "Bonus: the coefficient of $x^4$ equals $\\frac{g^{(4)}(0)}{4!}$, so $g^{(4)}(0) = 24 \\cdot \\frac{4}{3} = 32$, found without differentiating four times."
+      ]
+    },
+    {
+      "title": "Recognizing a series and finding a limit",
+      "problem": "(a) Find the exact sum of $\\sum_{n=0}^{\\infty} \\dfrac{(-1)^n \\pi^{2n}}{(2n)!}$. (b) Use series to find $\\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2}$.",
+      "steps": [
+        "Why this step for (a): match the pattern to the table. $\\sum \\dfrac{(-1)^n x^{2n}}{(2n)!}$ is $\\cos x$, and here $x = \\pi$. So the sum is $\\cos \\pi = -1$. No partial sums needed.",
+        "Why this step for (b): plugging in $x = 0$ gives $\\frac{0}{0}$. Replace $\\cos x$ by its series: $1 - \\cos x = 1 - \\left( 1 - \\dfrac{x^2}{2} + \\dfrac{x^4}{24} - \\cdots \\right) = \\dfrac{x^2}{2} - \\dfrac{x^4}{24} + \\cdots$.",
+        "Divide by $x^2$: $\\dfrac{1 - \\cos x}{x^2} = \\dfrac{1}{2} - \\dfrac{x^2}{24} + \\cdots$. As $x \\to 0$ every term after the first vanishes, so the limit is $\\dfrac{1}{2}$.",
+        "This matches what l'Hospital's Rule gives (twice), but the series shows more: it tells you the function is about $\\frac{1}{2} - \\frac{x^2}{24}$ near $0$, not just its limit."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Forgetting the factorial: writing $c_n = f^{(n)}(a)$ instead of $\\frac{f^{(n)}(a)}{n!}$. Check with $f(x) = x^2$ at $a = 0$: $f''(0) = 2$, but the coefficient of $x^2$ is $1 = \\frac{2}{2!}$.",
+    "Computing many derivatives when a table entry plus substitution would do. For $e^{-x^2}$, substitute $-x^2$ into the $e^x$ series: $\\sum \\frac{(-1)^n x^{2n}}{n!}$. The direct derivatives are a mess.",
+    "Assuming a Taylor series converges to $f$ just because it converges. The remainder must go to $0$; Taylor's Inequality is how you show it. For the standard functions it does, but it is a separate step.",
+    "Mixing up $\\sin$ and $\\cos$ series. $\\sin x$ has odd powers and starts with $x$; $\\cos x$ has even powers and starts with $1$. Check at $x = 0$: $\\sin 0 = 0$ and $\\cos 0 = 1$."
+  ],
+  "whyItMatters": "Taylor series are the universal converter from functions to polynomials. Every calculator, every physics approximation (\"for small angles, $\\sin \\theta \\approx \\theta$\"), and every numerical integrator leans on them. For you, the immediate reward is integrals: $\\int e^{-x^2}\\,dx$ has no elementary antiderivative, but $\\int \\sum \\frac{(-1)^n x^{2n}}{n!}\\,dx$ is a polynomial exercise with a controllable error. The next node makes the error control precise with Taylor polynomials.",
+  "checkYourself": [
+    {
+      "q": "Write the first three nonzero terms of the Maclaurin series of $\\sin x$.",
+      "a": "$x - \\frac{x^3}{6} + \\frac{x^5}{120}$."
+    },
+    {
+      "q": "What is the coefficient of $x^3$ in the Maclaurin series of $e^{2x}$?",
+      "a": "$\\frac{2^3}{3!} = \\frac{8}{6} = \\frac{4}{3}$."
+    },
+    {
+      "q": "If $f(x) = \\sum \\frac{f^{(n)}(2)}{n!}(x-2)^n$ has coefficient $c_3 = 5$, what is $f'''(2)$?",
+      "a": "$f'''(2) = 3! \\cdot 5 = 30$."
+    },
+    {
+      "q": "What is the exact sum of $\\sum_{n=0}^{\\infty} \\dfrac{1}{n!}$?",
+      "a": "$e$, from the series for $e^x$ at $x = 1$."
+    }
+  ],
+  "readingGuide": [
+    "Find the derivation that forces the coefficients $c_n = \\frac{f^{(n)}(a)}{n!}$. Reproduce it yourself for the first three coefficients before reading on.",
+    "Locate the definitions of the Taylor polynomial $T_n$ and the remainder $R_n$, and the statement of Taylor's Inequality. Note what $M$ stands for and on which interval.",
+    "Before reading the proof that the Maclaurin series of $\\sin x$ converges to $\\sin x$, think about why $|f^{(n+1)}(x)| \\le 1$ always holds for sine.",
+    "Find the table of important Maclaurin series and copy it by hand, marking the radius of convergence of each.",
+    "Look for the examples that find a series by multiplying or dividing two known series, and note how many terms are kept."
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "nodeId": "antiderivatives",
+  "title": "Antiderivatives",
+  "overview": "Until now the question has been \"given $f$, what is $f'$?\" Now reverse it: given a function $f$, find a function $F$ whose derivative is $f$. Such an $F$ is called an **antiderivative** of $f$. If $f(x) = 2x$, then $F(x) = x^2$ works, since $\\frac{d}{dx}x^2 = 2x$. But so does $x^2 + 5$, and $x^2 - 100$, and $x^2 + C$ for any constant $C$, because the constant disappears when you differentiate. The Mean Value Theorem showed that these are the **only** antiderivatives: any two functions with the same derivative differ by a constant. So the **general antiderivative** of $2x$ is $x^2 + C$, and the \"$+ C$\" is not decoration; it records an entire family of functions, one for each value of $C$, whose graphs are vertical shifts of each other.\n\nEvery differentiation rule, read backwards, is an antidifferentiation rule. The power rule $\\frac{d}{dx}x^{n+1} = (n + 1)x^n$ reverses to\n$$\\text{an antiderivative of } x^n \\text{ is } \\frac{x^{n+1}}{n + 1} \\quad (n \\ne -1),$$\n\"raise the power by one and divide by the new power.\" The excluded case $n = -1$ is covered by $\\ln|x|$, since $\\frac{d}{dx}\\ln|x| = \\frac{1}{x}$. The others: $e^x$ is its own antiderivative; $\\cos x$ has antiderivative $\\sin x$; $\\sin x$ has antiderivative $-\\cos x$ (watch the sign); $\\sec^2 x$ has antiderivative $\\tan x$; $\\sec x\\tan x$ has $\\sec x$; $\\frac{1}{1 + x^2}$ has $\\tan^{-1}x$; $\\frac{1}{\\sqrt{1 - x^2}}$ has $\\sin^{-1}x$. Sums and constant multiples pass through, so you antidifferentiate term by term, exactly as you differentiate. To antidifferentiate $3x^2 - 4\\sin x + \\frac{2}{x}$: $x^3 + 4\\cos x + 2\\ln|x| + C$.\n\nThe one habit that prevents nearly all errors: **differentiate your answer** and confirm you get back the original function. If you propose $\\frac{x^4}{4}$ for $x^3$, check $\\frac{d}{dx}\\frac{x^4}{4} = x^3$. If you propose $\\cos x$ for $\\sin x$, the check gives $-\\sin x$, and you fix the sign. Antidifferentiation has no fixed procedure for every function, but verification always has one.\n\nAn **initial condition** picks out one member of the family. If $F'(x) = 2x$ and $F(1) = 5$, then $F(x) = x^2 + C$ with $1 + C = 5$, so $C = 4$ and $F(x) = x^2 + 4$. This is how physics recovers motion from forces: acceleration $a(t)$ is given, velocity is an antiderivative of $a$ fixed by the initial velocity, and position is an antiderivative of $v$ fixed by the initial position. Two antiderivatives, two constants, two initial conditions. The constant-gravity case, $a = -9.8$ meters per second squared, gives $v = -9.8t + v_0$ and $s = -4.9t^2 + v_0t + s_0$, the formulas from physics class.\n\nGraphically, if you know the graph of $f$, you can sketch an antiderivative: $F$ rises where $f > 0$, falls where $f < 0$, and has horizontal tangents at the zeros of $f$; $F$ is concave up where $f$ is increasing. This is the derivative-sketching exercise from Chapter 2 run in reverse, and it is a good way to build intuition for what the integral sign will mean.",
+  "keyIdeas": [
+    "$F$ is an antiderivative of $f$ if $F' = f$; the general antiderivative is $F(x) + C$, a family of vertical shifts, and nothing else.",
+    "Power rule reversed: an antiderivative of $x^n$ is $\\frac{x^{n+1}}{n+1}$ for $n \\ne -1$; for $n = -1$ it is $\\ln|x|$.",
+    "Table: $e^x \\to e^x$, $\\cos x \\to \\sin x$, $\\sin x \\to -\\cos x$, $\\sec^2 x \\to \\tan x$, $\\sec x\\tan x \\to \\sec x$, $\\frac{1}{1 + x^2} \\to \\tan^{-1}x$, $\\frac{1}{\\sqrt{1 - x^2}} \\to \\sin^{-1}x$.",
+    "Antidifferentiate term by term; constants multiply through.",
+    "Always check an antiderivative by differentiating it.",
+    "An initial condition $F(a) = b$ determines $C$; motion problems use two antiderivatives and two initial conditions.",
+    "An antiderivative rises where $f > 0$, falls where $f < 0$, and has horizontal tangents at zeros of $f$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Term-by-term antidifferentiation",
+      "problem": "Find the general antiderivative of $f(x) = 6x^2 - \\dfrac{3}{x^4} + 2\\sqrt{x} + \\dfrac{5}{x}$.",
+      "steps": [
+        "Rewrite as powers: $6x^2 - 3x^{-4} + 2x^{1/2} + 5x^{-1}$.",
+        "Power rule on each (except the last): $6\\cdot\\frac{x^3}{3} = 2x^3$; $-3\\cdot\\frac{x^{-3}}{-3} = x^{-3}$; $2\\cdot\\frac{x^{3/2}}{3/2} = \\frac{4}{3}x^{3/2}$.",
+        "The $x^{-1}$ term gives $5\\ln|x|$.",
+        "$F(x) = 2x^3 + \\frac{1}{x^3} + \\frac{4}{3}x^{3/2} + 5\\ln|x| + C$. Check: $F'(x) = 6x^2 - 3x^{-4} + 2x^{1/2} + \\frac{5}{x}$. Correct."
+      ]
+    },
+    {
+      "title": "Trig and exponential terms with an initial condition",
+      "problem": "Find $F$ if $F'(x) = 3e^x + 2\\cos x - \\sin x$ and $F(0) = 4$.",
+      "steps": [
+        "Antiderivative of $3e^x$ is $3e^x$; of $2\\cos x$ is $2\\sin x$; of $-\\sin x$ is $\\cos x$ (since $\\frac{d}{dx}\\cos x = -\\sin x$).",
+        "General: $F(x) = 3e^x + 2\\sin x + \\cos x + C$.",
+        "Initial condition: $F(0) = 3 + 0 + 1 + C = 4$, so $C = 0$.",
+        "$F(x) = 3e^x + 2\\sin x + \\cos x$. Check: $F' = 3e^x + 2\\cos x - \\sin x$ and $F(0) = 4$. Both correct."
+      ]
+    },
+    {
+      "title": "Motion from acceleration",
+      "problem": "A ball is thrown upward from a 10 meter platform at 15 m/s. With $a(t) = -9.8$, find the velocity and position functions, and the maximum height.",
+      "steps": [
+        "Velocity is an antiderivative of acceleration: $v(t) = -9.8t + C_1$. Initial velocity $v(0) = 15$ gives $C_1 = 15$, so $v(t) = 15 - 9.8t$.",
+        "Position is an antiderivative of velocity: $s(t) = 15t - 4.9t^2 + C_2$. Initial position $s(0) = 10$ gives $C_2 = 10$, so $s(t) = 10 + 15t - 4.9t^2$.",
+        "Maximum height when $v = 0$: $t = \\frac{15}{9.8} \\approx 1.531$ s.",
+        "$s(1.531) = 10 + 22.959 - 11.480 \\approx 21.48$ meters. Check with the shortcut $\\frac{v_0^2}{2g} = \\frac{225}{19.6} \\approx 11.48$ meters above the platform. Consistent."
+      ]
+    },
+    {
+      "title": "Sketching an antiderivative from a graph",
+      "problem": "The graph of $f$ is positive on $(0, 2)$, zero at $x = 2$, negative on $(2, 5)$, and zero at $x = 5$, with $f$ decreasing on $(1, 4)$. Describe the antiderivative $F$ with $F(0) = 0$.",
+      "steps": [
+        "$F$ starts at $(0, 0)$ and rises on $(0, 2)$ because $f > 0$ there.",
+        "At $x = 2$, $f = 0$ and changes from positive to negative, so $F$ has a local maximum there.",
+        "$F$ falls on $(2, 5)$ because $f < 0$, and has a horizontal tangent at $x = 5$ where $f = 0$ again.",
+        "Since $f$ (which is $F'$) is decreasing on $(1, 4)$, $F$ is concave down there; the steepest descent of $F$ is where $f$ is most negative, near $x = 4$. The sketch of $F$ is a hill peaking at $x = 2$ and flattening out at $x = 5$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Forgetting $+ C$. Without it you have one antiderivative, not the general one, and initial-condition problems become impossible.",
+    "Dividing by the old power instead of the new: writing $\\frac{x^4}{3}$ for $x^3$. Differentiate to check: $\\frac{4x^3}{3} \\ne x^3$. The correct answer is $\\frac{x^4}{4}$.",
+    "Sign error on sine: writing $\\cos x$ as the antiderivative of $\\sin x$. Since $\\frac{d}{dx}\\cos x = -\\sin x$, the antiderivative of $\\sin x$ is $-\\cos x$.",
+    "Applying the power rule to $\\frac{1}{x}$: $\\frac{x^0}{0}$ is meaningless. The antiderivative is $\\ln|x|$.",
+    "Using one constant for two successive antiderivatives in a motion problem. Velocity and position each get their own constant, fixed by their own initial condition."
+  ],
+  "whyItMatters": "An antiderivative is what the indefinite integral sign $\\int f(x)\\,dx$ will mean, and the Fundamental Theorem of Calculus in Chapter 5 says that definite integrals, defined as limits of sums of areas, can be computed by evaluating an antiderivative at the endpoints: $\\int_a^b f(x)\\,dx = F(b) - F(a)$. That theorem is the reason this section matters so much; it turns the entire area problem into reverse differentiation. Your Daily Integral tier I3 is exactly the power-rule antiderivatives practiced here, and every later technique (substitution, parts, partial fractions) is a method for finding antiderivatives of harder functions.",
+  "checkYourself": [
+    {
+      "q": "General antiderivative of $x^5$?",
+      "a": "$\\frac{x^6}{6} + C$."
+    },
+    {
+      "q": "Antiderivative of $\\cos x$ with $F(0) = 2$?",
+      "a": "$\\sin x + 2$."
+    },
+    {
+      "q": "General antiderivative of $\\frac{1}{x} + e^x$?",
+      "a": "$\\ln|x| + e^x + C$."
+    },
+    {
+      "q": "If $a(t) = 6t$ and $v(0) = 1$, what is $v(t)$?",
+      "a": "$3t^2 + 1$."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of an antiderivative and the theorem that all antiderivatives differ by a constant; note that it comes from the Mean Value Theorem.",
+    "Copy the table of antidifferentiation formulas and verify each entry by differentiating the right-hand side.",
+    "Before reading the solution of the first example with several terms, antidifferentiate term by term yourself and differentiate to check.",
+    "Find the example that sketches an antiderivative from a graph of $f$ and do it yourself first.",
+    "Find the rectilinear motion example and note how two initial conditions fix two constants."
+  ]
+}

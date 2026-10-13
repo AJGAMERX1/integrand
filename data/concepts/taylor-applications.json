@@ -1,0 +1,77 @@
+{
+  "nodeId": "taylor-applications",
+  "title": "Applications of Taylor Polynomials",
+  "overview": "A full Taylor series has infinitely many terms. In practice you keep only a few. The **$n$-th degree Taylor polynomial** of $f$ at $a$ is\n$$T_n(x) = f(a) + f'(a)(x-a) + \\frac{f''(a)}{2!}(x-a)^2 + \\cdots + \\frac{f^{(n)}(a)}{n!}(x-a)^n.$$\nIt is the polynomial of degree $n$ that matches $f$ and its first $n$ derivatives at $a$. With $n = 1$ it is the tangent line, the linear approximation you met in Chapter 3. Each higher degree bends the polynomial to hug the curve a little longer. Near the center the fit is excellent; far from it, the polynomial eventually peels away, and the whole point of this node is to say precisely how far is too far.\n\nThe question that matters in real use is: **how far off is $T_n(x)$ from $f(x)$?** The error is the remainder $R_n(x) = f(x) - T_n(x)$, and there are two ways to bound it.\n\n**Taylor's Inequality.** If $|f^{(n+1)}(t)| \\le M$ for all $t$ between $a$ and $x$, then\n$$|R_n(x)| \\le \\frac{M}{(n+1)!} |x - a|^{n+1}.$$\nThe recipe: find the next derivative, bound its size on the interval, and plug in. The bound is small when $x$ is close to $a$, when $n$ is large, or when the derivatives are tame.\n\n**Alternating series bound.** If the Taylor series at $x$ happens to alternate with shrinking terms (as the series for $\\sin$, $\\cos$, and $e^{-x}$ do), the error is at most the first omitted term. This is usually easier and sharper when it applies.\n\nThree things come out of this. First, you can compute values like $\\sqrt{4.4}$ or $e^{0.5}$ by hand with a guaranteed accuracy. Second, you can decide how many terms a calculator or program needs to hit a target precision. Third, the famous \"small-angle\" shortcuts in physics, such as $\\sin x \\approx x$ and $\\sqrt{1+x} \\approx 1 + \\frac{x}{2}$, are just low-degree Taylor polynomials, and the remainder tells you exactly when they are safe to use.",
+  "keyIdeas": [
+    "$T_n(x) = \\sum_{k=0}^{n} \\dfrac{f^{(k)}(a)}{k!}(x-a)^k$ is the degree-$n$ Taylor polynomial at $a$. $T_1$ is the tangent line; $T_n$ matches $f$ and its first $n$ derivatives at $a$.",
+    "The remainder is $R_n(x) = f(x) - T_n(x)$. Taylor's Inequality: if $|f^{(n+1)}| \\le M$ between $a$ and $x$, then $|R_n(x)| \\le \\dfrac{M}{(n+1)!}|x-a|^{n+1}$.",
+    "If the series at $x$ is alternating with terms decreasing to $0$, the error after $T_n$ is at most the absolute value of the first omitted nonzero term.",
+    "The error shrinks when $x$ is near $a$, when $n$ grows, or when the higher derivatives are bounded by a small $M$. Choose the center $a$ where $f$ and its derivatives are easy to evaluate.",
+    "Physics-style approximations ($\\sin x \\approx x$, $\\cos x \\approx 1 - \\frac{x^2}{2}$, $\\sqrt{1+x} \\approx 1 + \\frac{x}{2}$, $e^x \\approx 1 + x$) are low-degree Taylor polynomials, valid when the remainder bound is small."
+  ],
+  "workedExamples": [
+    {
+      "title": "A square root by hand",
+      "problem": "Use $T_2$ for $f(x) = \\sqrt{x}$ centered at $a = 4$ to approximate $\\sqrt{4.4}$, and bound the error.",
+      "steps": [
+        "Why this step: center at $4$ because $\\sqrt{4} = 2$ is exact and $4.4$ is close. Derivatives: $f'(x) = \\dfrac{1}{2\\sqrt{x}}$, $f''(x) = -\\dfrac{1}{4 x^{3/2}}$, $f'''(x) = \\dfrac{3}{8 x^{5/2}}$. At $x = 4$: $f(4) = 2$, $f'(4) = \\dfrac{1}{4}$, $f''(4) = -\\dfrac{1}{32}$.",
+        "Build $T_2$: $T_2(x) = 2 + \\dfrac{1}{4}(x-4) + \\dfrac{-1/32}{2}(x-4)^2 = 2 + \\dfrac{x-4}{4} - \\dfrac{(x-4)^2}{64}$.",
+        "Evaluate at $x = 4.4$, so $x - 4 = 0.4$: $T_2(4.4) = 2 + 0.1 - \\dfrac{0.16}{64} = 2 + 0.1 - 0.0025 = 2.0975$.",
+        "Why this step: bound the error with Taylor's Inequality using $f'''$. On $[4, 4.4]$, $|f'''(t)| = \\dfrac{3}{8 t^{5/2}}$ is largest at $t = 4$, where it equals $\\dfrac{3}{8 \\cdot 32} = \\dfrac{3}{256}$. So $M = \\dfrac{3}{256}$.",
+        "$|R_2(4.4)| \\le \\dfrac{3/256}{3!} (0.4)^3 = \\dfrac{3}{256} \\cdot \\dfrac{0.064}{6} = 0.000125$. So $\\sqrt{4.4} = 2.0975 \\pm 0.000125$. (Actual: $2.09762$, an error of about $0.00012$.)"
+      ]
+    },
+    {
+      "title": "When is sine approximately a cubic?",
+      "problem": "For $|x| \\le 0.5$, how accurate is the approximation $\\sin x \\approx x - \\dfrac{x^3}{6}$?",
+      "steps": [
+        "Why this step: identify what polynomial this is. $x - \\frac{x^3}{6}$ is $T_3$ for $\\sin x$ at $0$, and since the $x^4$ coefficient of sine is $0$, it is also $T_4$. The next nonzero term of the series is $\\dfrac{x^5}{120}$.",
+        "Why this step: for $|x| \\le 0.5$ the Maclaurin series of $\\sin x$ alternates with decreasing terms, so the error is at most the first omitted term: $|R| \\le \\dfrac{|x|^5}{120} \\le \\dfrac{0.5^5}{120} = \\dfrac{0.03125}{120} \\approx 0.00026$.",
+        "Cross-check with Taylor's Inequality: $|f^{(5)}(t)| = |\\cos t| \\le 1$, so $M = 1$ and $|R_4(x)| \\le \\dfrac{1}{5!}|x|^5$, the same bound.",
+        "So the cubic is accurate to about three decimal places on $[-0.5, 0.5]$. At $x = 0.5$: $0.5 - \\dfrac{0.125}{6} \\approx 0.479167$ versus $\\sin 0.5 \\approx 0.479426$, an error of $0.00026$, right at the bound."
+      ]
+    },
+    {
+      "title": "Approximating e to the one half",
+      "problem": "Use $T_3$ for $e^x$ at $0$ to approximate $e^{0.5}$ and bound the error with Taylor's Inequality.",
+      "steps": [
+        "$T_3(x) = 1 + x + \\dfrac{x^2}{2} + \\dfrac{x^3}{6}$. At $x = 0.5$: $1 + 0.5 + 0.125 + 0.0208333 = 1.6458333$.",
+        "Why this step: the series for $e^x$ at positive $x$ has all positive terms, so the alternating bound does not apply. Use Taylor's Inequality with $f^{(4)}(t) = e^t$ on $[0, 0.5]$. The largest value is $e^{0.5}$, which we do not know exactly, but $e^{0.5} < 2$ because $e < 4$. Take $M = 2$.",
+        "$|R_3(0.5)| \\le \\dfrac{2}{4!} (0.5)^4 = \\dfrac{2}{24} \\cdot 0.0625 \\approx 0.0052$.",
+        "So $e^{0.5} \\approx 1.6458$ with error under $0.0052$. (Actual: $1.64872$, error about $0.0029$.) For error below $0.0001$ you would raise $n$ until $\\frac{2 \\cdot 0.5^{n+1}}{(n+1)!} < 0.0001$, which first happens at $n = 5$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Using the wrong derivative in Taylor's Inequality. For $T_2$ the bound uses $f'''$, the $(n+1)$-th derivative, not $f''$. The power of $|x - a|$ is also $n + 1 = 3$.",
+    "Bounding $M$ at the wrong point. For $f'''(t) = \\frac{3}{8 t^{5/2}}$ on $[4, 4.4]$ the maximum is at the left end $t = 4$ because the function decreases. Check: $\\frac{3}{256} \\approx 0.0117$ at $4$ versus about $0.0092$ at $4.4$.",
+    "Using the alternating series bound when the terms are not alternating, for example $e^{0.5}$. The series $1 + 0.5 + 0.125 + \\cdots$ has positive terms; its tail can exceed the next term, so use Taylor's Inequality.",
+    "Confusing the degree of $T_n$ with the number of terms. $T_3$ for $\\sin x$ is $x - \\frac{x^3}{6}$, which has only two nonzero terms. Count by degree, not by terms."
+  ],
+  "whyItMatters": "Every numeric answer you have ever read off a calculator came from an approximation with an error bound like these, and every integral you evaluate by series inherits its accuracy from them. The same ideas power numerical integration (Simpson's rule is built from quadratic approximations), differential equation solvers, and the small-angle and small-quantity shortcuts in physics. You now have the complete loop: write a function as a series, integrate it term by term, and say exactly how many terms give the accuracy you need.",
+  "checkYourself": [
+    {
+      "q": "What is $T_2(x)$ for $f(x) = \\cos x$ at $a = 0$?",
+      "a": "$1 - \\frac{x^2}{2}$."
+    },
+    {
+      "q": "Using the alternating bound, how large is the error in $\\cos x \\approx 1 - \\frac{x^2}{2}$ for $|x| \\le 0.1$?",
+      "a": "At most $\\frac{0.1^4}{24} \\approx 4.2 \\times 10^{-6}$."
+    },
+    {
+      "q": "For Taylor's Inequality with $n = 3$, which derivative do you bound and what power of $|x-a|$ appears?",
+      "a": "The fourth derivative, and $|x-a|^4$ with $4!$ in the denominator."
+    },
+    {
+      "q": "$T_1(x)$ for $\\sqrt{1+x}$ at $0$ is $1 + \\frac{x}{2}$. Estimate $\\sqrt{1.1}$.",
+      "a": "$1.05$ (true value $1.0488$)."
+    }
+  ],
+  "readingGuide": [
+    "Look at the graphs comparing a function with its Taylor polynomials of increasing degree, and describe in words how the fit improves and where it falls apart.",
+    "Find Taylor's Inequality and write down, for a specific $n$, exactly which derivative is bounded and over which interval.",
+    "Before reading the example that approximates a root or a trig value, try it yourself: choose the center, compute $T_2$, and bound the error.",
+    "Compare how the error is bounded in an example with alternating terms versus one with positive terms. Note which bound each example uses and why.",
+    "Read the physics application at the end for the idea only: which low-degree Taylor polynomial replaces the exact formula, and under what condition on the variable."
+  ]
+}

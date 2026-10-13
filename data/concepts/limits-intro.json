@@ -1,0 +1,89 @@
+{
+  "nodeId": "limits-intro",
+  "title": "The Limit of a Function",
+  "overview": "A limit describes where a function is **heading**, not where it is. We write\n$$\\lim_{x \\to a} f(x) = L$$\nand say \"the limit of $f(x)$ as $x$ approaches $a$ is $L$\" when the values $f(x)$ get as close to $L$ as you like by taking $x$ close enough to $a$, **without** letting $x$ equal $a$. The value $f(a)$ itself is irrelevant: it may be $L$, it may be something else, or $f$ may not be defined at $a$ at all. The limit only cares about the neighbors.\n\nThree examples show the possibilities. For $f(x) = x + 1$, $\\lim_{x \\to 2} f(x) = 3$, and also $f(2) = 3$; nothing surprising. For $g(x) = \\frac{x^2 - 4}{x - 2}$, $g(2)$ is undefined, but for every other $x$, $g(x) = x + 2$, so $\\lim_{x \\to 2} g(x) = 4$; the graph is a line with a hole at $(2, 4)$, and the limit is the height of the hole. For a function defined as $h(x) = x + 2$ for $x \\ne 2$ but $h(2) = 10$, the limit at 2 is still 4, because the single point at height 10 does not affect what the neighbors are doing.\n\nSometimes the neighbors on the two sides disagree. The function $\\frac{|x|}{x}$ equals $1$ for $x > 0$ and $-1$ for $x < 0$. Approaching 0 from the right, the values are all 1; from the left, all $-1$. We write $\\lim_{x \\to 0^+}\\frac{|x|}{x} = 1$ (the **right-hand limit**) and $\\lim_{x \\to 0^-}\\frac{|x|}{x} = -1$ (the **left-hand limit**). Because they differ, the two-sided limit $\\lim_{x \\to 0}\\frac{|x|}{x}$ **does not exist**. This is the rule: a two-sided limit exists exactly when both one-sided limits exist and are equal, and then all three are the same number.\n\nA limit can also fail to exist because the values blow up. As $x \\to 0$, $\\frac{1}{x^2}$ gets larger than any bound; we write $\\lim_{x \\to 0}\\frac{1}{x^2} = \\infty$. This is not saying the limit is a number called infinity; it is shorthand for \"grows without bound,\" and we still say the limit does not exist as a number. The graph has a **vertical asymptote** at $x = 0$. For $\\frac{1}{x}$ the sides disagree in sign: $\\lim_{x \\to 0^+}\\frac{1}{x} = \\infty$ and $\\lim_{x \\to 0^-}\\frac{1}{x} = -\\infty$. A vertical asymptote at $x = a$ means at least one of the one-sided limits there is $\\pm\\infty$; the usual cause is a denominator going to 0 while the numerator does not.\n\nFinally, a limit can fail because the function oscillates without settling. $\\sin\\frac{1}{x}$ near 0 swings between $-1$ and $1$ infinitely often in any tiny interval, so it approaches nothing. Numerical tables are good for guessing limits, but they can mislead when the function oscillates or when you stop too soon, so a guess from a table should always be confirmed by algebra or a graph.",
+  "keyIdeas": [
+    "$\\lim_{x \\to a} f(x) = L$ means $f(x)$ can be made as close to $L$ as desired by taking $x$ sufficiently close to $a$ with $x \\ne a$.",
+    "The value $f(a)$ does not affect the limit; $f$ may be undefined at $a$, or defined with a different value, and the limit is the same.",
+    "One-sided limits: $\\lim_{x \\to a^-}$ uses only $x < a$ and $\\lim_{x \\to a^+}$ uses only $x > a$.",
+    "$\\lim_{x \\to a} f(x)$ exists exactly when both one-sided limits exist and are equal; then all three agree.",
+    "$\\lim_{x \\to a} f(x) = \\infty$ means the values grow without bound; the limit does not exist as a number and $x = a$ is a vertical asymptote.",
+    "A limit fails to exist when the sides disagree, when the values blow up, or when the function oscillates without settling.",
+    "Tables and graphs suggest limits; algebra confirms them."
+  ],
+  "workedExamples": [
+    {
+      "title": "A hole in the graph",
+      "problem": "Find $\\lim_{x \\to 3}\\dfrac{x^2 - 9}{x - 3}$ and compare with the value at $x = 3$.",
+      "steps": [
+        "At $x = 3$ the expression is $\\frac{0}{0}$, undefined. So the function has no value there; the limit asks about the neighbors.",
+        "For $x \\ne 3$, factor and cancel: $\\frac{(x - 3)(x + 3)}{x - 3} = x + 3$.",
+        "The neighbors behave like $x + 3$, which approaches $6$ as $x \\to 3$. So the limit is 6.",
+        "Numerical check: $x = 2.99$ gives $5.99$; $x = 3.01$ gives $6.01$. The graph is the line $y = x + 3$ with a hole at $(3, 6)$."
+      ]
+    },
+    {
+      "title": "One-sided limits of a piecewise function",
+      "problem": "Let $f(x) = x^2$ for $x < 1$ and $f(x) = 3 - x$ for $x \\ge 1$. Find $\\lim_{x \\to 1^-}f(x)$, $\\lim_{x \\to 1^+}f(x)$, and decide whether $\\lim_{x \\to 1}f(x)$ exists.",
+      "steps": [
+        "From the left, $x < 1$, so use $x^2$: as $x \\to 1^-$, $x^2 \\to 1$. Left-hand limit is 1.",
+        "From the right, $x > 1$, so use $3 - x$: as $x \\to 1^+$, $3 - x \\to 2$. Right-hand limit is 2.",
+        "The one-sided limits differ ($1 \\ne 2$), so the two-sided limit does not exist. The graph jumps at $x = 1$.",
+        "Note that $f(1) = 3 - 1 = 2$ exists; the function has a value there, but still no limit. Value and limit are separate questions."
+      ]
+    },
+    {
+      "title": "An infinite limit and a vertical asymptote",
+      "problem": "Investigate $\\lim_{x \\to 2^+}\\dfrac{x + 1}{x - 2}$ and $\\lim_{x \\to 2^-}\\dfrac{x + 1}{x - 2}$.",
+      "steps": [
+        "At $x = 2$ the numerator is 3 (not zero) and the denominator is 0, so the values blow up. The sign depends on the side.",
+        "From the right, $x = 2.01$: $\\frac{3.01}{0.01} = 301$; $x = 2.001$: $3001$. Positive and growing: $\\lim_{x \\to 2^+} = \\infty$.",
+        "From the left, $x = 1.99$: $\\frac{2.99}{-0.01} = -299$. Negative and growing in size: $\\lim_{x \\to 2^-} = -\\infty$.",
+        "The line $x = 2$ is a vertical asymptote. The two-sided limit does not exist, and the graph goes up on the right of the asymptote and down on the left."
+      ]
+    },
+    {
+      "title": "Guessing from a table, then confirming",
+      "problem": "Estimate $\\lim_{x \\to 0}\\dfrac{\\sqrt{x + 4} - 2}{x}$ from a table, then confirm by algebra.",
+      "steps": [
+        "Table: $x = 0.1$ gives $\\frac{\\sqrt{4.1} - 2}{0.1} = \\frac{2.02485 - 2}{0.1} \\approx 0.2485$; $x = 0.01$ gives about $0.24984$; $x = -0.01$ gives about $0.25016$. The limit appears to be $0.25$.",
+        "Confirm: multiply top and bottom by $\\sqrt{x + 4} + 2$. The numerator becomes $(x + 4) - 4 = x$.",
+        "The expression is $\\frac{x}{x(\\sqrt{x + 4} + 2)} = \\frac{1}{\\sqrt{x + 4} + 2}$ for $x \\ne 0$.",
+        "As $x \\to 0$ this approaches $\\frac{1}{\\sqrt{4} + 2} = \\frac{1}{4}$. The table was right."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Thinking the limit must equal $f(a)$. For $g(x) = \\frac{x^2 - 4}{x - 2}$, $g(2)$ is undefined but the limit at 2 is 4. The limit is about neighbors.",
+    "Saying a limit does not exist because the function is undefined at the point. Being undefined at $a$ is irrelevant; only the behavior nearby matters.",
+    "Reporting a two-sided limit when the one-sided limits differ. For $\\frac{|x|}{x}$ at 0 the sides give $1$ and $-1$, so the answer is that the limit does not exist.",
+    "Treating $\\infty$ as a number: writing $\\lim \\frac{1}{x^2} = \\infty$ and then doing arithmetic with it. It is a description of unbounded growth.",
+    "Trusting a table that stops too early or that only uses one side. Always check both sides and confirm with algebra when you can."
+  ],
+  "whyItMatters": "Every derivative is a limit of the form $\\lim_{h \\to 0}\\frac{f(a + h) - f(a)}{h}$, and every one of them is $\\frac{0}{0}$ on direct substitution, so the hole-in-the-graph idea is used constantly. The definite integral is also a limit, of Riemann sums as the number of rectangles goes to infinity. Infinite limits and vertical asymptotes reappear in improper integrals, where you integrate up to an asymptote and ask whether the area stays finite.",
+  "checkYourself": [
+    {
+      "q": "If $f(x) = 5$ for all $x \\ne 1$ and $f(1) = 0$, what is $\\lim_{x \\to 1}f(x)$?",
+      "a": "5; the value at 1 does not matter."
+    },
+    {
+      "q": "$\\lim_{x \\to 0^-}\\frac{1}{x}$?",
+      "a": "$-\\infty$."
+    },
+    {
+      "q": "If the left limit is 3 and the right limit is 3, what is the two-sided limit?",
+      "a": "3."
+    },
+    {
+      "q": "$\\lim_{x \\to 5}\\frac{x^2 - 25}{x - 5}$?",
+      "a": "$\\lim (x + 5) = 10$."
+    }
+  ],
+  "readingGuide": [
+    "Find the intuitive definition of a limit and rewrite it in your own words, emphasizing the phrase about $x$ not equaling $a$.",
+    "Locate the definition of one-sided limits and the statement relating them to the two-sided limit; sketch a graph where they differ.",
+    "Before reading the solution of the first example that guesses a limit from a table, make the table yourself, with values on both sides.",
+    "Find the definition of an infinite limit and of a vertical asymptote, and note how the sign of each one-sided limit is determined.",
+    "Look for the example where a table of values is misleading, and write down why."
+  ]
+}

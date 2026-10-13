@@ -1,0 +1,93 @@
+{
+  "nodeId": "separable-equations",
+  "title": "Separable Equations",
+  "overview": "Here is the first method that actually solves differential equations, and it is pure integration. A first-order equation is **separable** if the right-hand side factors into a piece depending only on $x$ times a piece depending only on $y$:\n$$\\frac{dy}{dx} = g(x)\\,h(y).$$\nThe method has one move: put everything with $y$ on the left with $dy$, everything with $x$ on the right with $dx$, and integrate both sides.\n$$\\int \\frac{dy}{h(y)} = \\int g(x)\\,dx.$$\nTreating $dy$ and $dx$ as separate quantities feels like cheating, but it is justified by the chain rule: if $y$ is a function of $x$, then $\\int \\frac{1}{h(y)}\\frac{dy}{dx}\\,dx$ is exactly $\\int \\frac{dy}{h(y)}$ by substitution.\n\nAfter integrating you get an equation linking $y$ and $x$ with one constant $C$. Sometimes you can solve it for $y$ explicitly; sometimes you leave it as an implicit relation. An initial condition fixes $C$. Apply it as early as possible, right after integrating, when the equation is simplest.\n\nTwo details catch people. First, when $\\int \\frac{dy}{y}$ appears, the answer is $\\ln|y| + C$, and solving for $y$ gives $y = Ae^{\\ldots}$ where $A = \\pm e^C$ can be any nonzero constant. Second, dividing by $h(y)$ silently assumes $h(y) \\ne 0$; values where $h(y) = 0$ are equilibrium solutions that the division throws away. Check for them separately.\n\nMany word problems are separable: cooling, draining tanks, and the classic **mixing problem**, where a tank receives and loses brine. In mixing, the rate of change of salt is (rate in) minus (rate out), and the rate out depends on the current concentration, which is salt divided by volume. Writing that balance correctly is most of the work; the integration that follows is a single logarithm.",
+  "keyIdeas": [
+    "An equation is separable if it can be written $\\frac{dy}{dx} = g(x)h(y)$. Then $\\int \\frac{dy}{h(y)} = \\int g(x)\\,dx$.",
+    "Separation is justified by the chain rule and substitution; the differentials $dy$ and $dx$ behave like the ones in $u$-substitution.",
+    "After integrating, only one constant $C$ is needed; combine the constants from both sides into it, and use the initial condition to find it.",
+    "If $\\ln|y|$ appears, exponentiating gives $|y| = e^{C}e^{\\ldots}$, so $y = Ae^{\\ldots}$ with $A$ any nonzero constant (and often $A = 0$ works too as an equilibrium).",
+    "Dividing by $h(y)$ loses the constant solutions where $h(y) = 0$; list those equilibrium solutions separately.",
+    "Mixing problems: $\\frac{dy}{dt} = (\\text{rate in}) - (\\text{rate out})$, where rate out is (outflow rate) times (current concentration $y/V$)."
+  ],
+  "workedExamples": [
+    {
+      "title": "Separate, integrate, solve for $y$",
+      "problem": "Solve $\\frac{dy}{dx} = \\frac{x}{y}$ with $y(0) = 2$.",
+      "steps": [
+        "Separate: multiply both sides by $y\\,dx$ to get $y\\,dy = x\\,dx$. All the $y$ is on the left, all the $x$ on the right.",
+        "Integrate both sides: $\\frac{y^2}{2} = \\frac{x^2}{2} + C$. One constant is enough; a constant on the left would just merge into $C$.",
+        "Apply the initial condition now: $x = 0$, $y = 2$ gives $2 = 0 + C$, so $C = 2$. Then $y^2 = x^2 + 4$.",
+        "Solve for $y$: $y = \\pm\\sqrt{x^2 + 4}$. Since $y(0) = 2 > 0$, take the positive root: $y = \\sqrt{x^2 + 4}$.",
+        "Check: $y' = \\frac{x}{\\sqrt{x^2 + 4}} = \\frac{x}{y}$. The equation holds and $y(0) = 2$."
+      ]
+    },
+    {
+      "title": "The logarithm case",
+      "problem": "Solve $\\frac{dy}{dx} = 2xy$ with $y(0) = 3$.",
+      "steps": [
+        "Separate: $\\frac{dy}{y} = 2x\\,dx$. Note the equilibrium solution $y = 0$ that this division discards; it does not match $y(0) = 3$, so we proceed.",
+        "Integrate: $\\ln|y| = x^2 + C$.",
+        "Exponentiate: $|y| = e^{x^2 + C} = e^C e^{x^2}$, so $y = Ae^{x^2}$ with $A = \\pm e^C$. The sign is absorbed into $A$.",
+        "Initial condition: $y(0) = A = 3$, so $y = 3e^{x^2}$.",
+        "Check: $y' = 3e^{x^2} \\cdot 2x = 2x \\cdot y$. Correct. Notice the solution grows much faster than $e^x$, since the exponent is $x^2$."
+      ]
+    },
+    {
+      "title": "A solution with a finite lifespan",
+      "problem": "Solve $\\frac{dy}{dx} = y^2 e^x$ with $y(0) = 1$, and find where the solution stops existing.",
+      "steps": [
+        "Separate: $\\frac{dy}{y^2} = e^x\\,dx$ (discarding the equilibrium $y = 0$, which does not fit the initial condition).",
+        "Integrate: $-\\frac{1}{y} = e^x + C$.",
+        "Initial condition: $-1 = 1 + C$, so $C = -2$ and $-\\frac{1}{y} = e^x - 2$.",
+        "Solve for $y$: $y = \\frac{1}{2 - e^x}$. Check: $y(0) = \\frac{1}{2 - 1} = 1$.",
+        "Domain: the denominator is zero when $e^x = 2$, that is $x = \\ln 2 \\approx 0.69$. As $x \\to \\ln 2^{-}$, $y \\to +\\infty$. The solution starting at $(0, 1)$ lives only on $(-\\infty, \\ln 2)$. A perfectly smooth equation can produce a solution that blows up."
+      ]
+    },
+    {
+      "title": "A mixing tank",
+      "problem": "A tank holds $100$ liters of pure water. Brine with $0.1$ kilograms of salt per liter flows in at $5$ liters per minute, the tank is kept mixed, and the mixture drains at $5$ liters per minute. Find the salt $y(t)$ in the tank.",
+      "steps": [
+        "Rate in: concentration times flow, $0.1 \\cdot 5 = 0.5$ kilograms per minute. Constant, because the incoming brine does not change.",
+        "Rate out: the tank volume stays $100$ (in equals out), so the concentration is $\\frac{y}{100}$ and the outflow carries $5 \\cdot \\frac{y}{100} = \\frac{y}{20}$ kilograms per minute.",
+        "Equation: $\\frac{dy}{dt} = 0.5 - \\frac{y}{20} = \\frac{10 - y}{20}$, with $y(0) = 0$. Read it first: equilibrium at $y = 10$, which is the amount of salt in $100$ liters at the incoming concentration. Sensible.",
+        "Separate and integrate: $\\int \\frac{dy}{10 - y} = \\int \\frac{dt}{20}$ gives $-\\ln|10 - y| = \\frac{t}{20} + C$. With $y(0) = 0$: $-\\ln 10 = C$.",
+        "Solve: $\\ln|10 - y| = \\ln 10 - \\frac{t}{20}$, so $10 - y = 10e^{-t/20}$ (positive, since $y$ starts below $10$) and $y = 10 - 10e^{-t/20} = 10\\left(1 - e^{-t/20}\\right)$.",
+        "Check: $y(0) = 0$; $y \\to 10$ as $t \\to \\infty$; and $y' = \\frac{1}{2}e^{-t/20}$ equals $\\frac{10 - y}{20} = \\frac{10e^{-t/20}}{20}$. All consistent."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Integrating only one side. Both sides get integrated, and the constant appears once. Check with $y\\,dy = x\\,dx$: the answer $\\frac{y^2}{2} = \\frac{x^2}{2} + C$, not $\\frac{y^2}{2} = x$.",
+    "Writing $\\ln y = x^2 + C$ and then $y = e^{x^2} + C$. The constant is inside the exponent, so it becomes a multiplicative factor: $y = Ae^{x^2}$. Test at $x = 0$: the wrong form gives $y(0) = 1 + C$, which cannot be negative, yet $y(0) = -3$ is a legitimate initial value.",
+    "Dropping the $\\pm$ when solving $y^2 = x^2 + 4$ without checking the sign from the initial condition. $y(0) = -2$ would require $y = -\\sqrt{x^2 + 4}$.",
+    "Forgetting equilibrium solutions lost in the division. For $y' = 2xy$, $y = 0$ is a solution that $\\frac{dy}{y}$ hides; always ask what $h(y) = 0$ gives.",
+    "In mixing problems, using the incoming concentration for the outflow. The outflow carries the tank's current concentration $y/V$, which changes over time."
+  ],
+  "whyItMatters": "Separable equations turn differential equations into integrals, so every integration technique you own (substitution, parts, partial fractions) becomes a tool for solving them. The logistic equation in the next section is solved by exactly this method plus partial fractions, and the predator-prey section separates a ratio of two equations to find curves in the phase plane. Mixing and cooling problems are the templates for compartment models in pharmacology, chemistry, and ecology.",
+  "checkYourself": [
+    {
+      "q": "Is $\\frac{dy}{dx} = x + y$ separable?",
+      "a": "No. $x + y$ cannot be written as $g(x)h(y)$. (It is linear; see the section on linear equations.)"
+    },
+    {
+      "q": "Solve $\\frac{dy}{dx} = -y$ with $y(0) = 4$.",
+      "a": "$y = 4e^{-x}$."
+    },
+    {
+      "q": "Solve $\\frac{dy}{dx} = \\frac{\\cos x}{y}$, leaving the answer implicit.",
+      "a": "$\\frac{y^2}{2} = \\sin x + C$, or $y^2 = 2\\sin x + C$."
+    },
+    {
+      "q": "A tank with $50$ liters drains at $2$ liters per minute while pure water enters at $2$ liters per minute. If $y$ is the salt in the tank, what is the rate out?",
+      "a": "$2 \\cdot \\frac{y}{50} = \\frac{y}{25}$ kilograms per minute, so $\\frac{dy}{dt} = -\\frac{y}{25}$."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of a separable equation and the justification (via the chain rule) for moving $dy$ and $dx$ to opposite sides. Explain it in your own words.",
+    "Before reading the solution of the first worked example, separate and integrate it yourself, then compare where the constant appears.",
+    "Look for an example whose solution stays implicit, and decide why the author did not solve for $y$.",
+    "Find the mixing problem. Write the rate in and rate out yourself before reading the author's equation, and check the units of each term.",
+    "Look for any discussion of orthogonal trajectories and note which separable equation arises there."
+  ]
+}

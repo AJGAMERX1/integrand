@@ -1,0 +1,89 @@
+{
+  "nodeId": "lhospital",
+  "title": "Indeterminate Forms and l'Hospital's Rule",
+  "overview": "Some limits resist every algebraic trick. $\\lim_{x \\to 0}\\frac{\\sin x}{x}$ took a geometric argument; $\\lim_{x \\to \\infty}\\frac{\\ln x}{x}$ has no factoring to do; $\\lim_{x \\to 0}\\frac{e^x - 1 - x}{x^2}$ is hopeless by hand. All three are **indeterminate forms**: substituting gives $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$, which carry no information because the answer depends on how fast each piece approaches its value. **l'Hospital's Rule** resolves these by comparing rates, which is what derivatives measure. If $\\lim_{x \\to a}\\frac{f(x)}{g(x)}$ has the form $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$, and $f$ and $g$ are differentiable near $a$ with $g' \\ne 0$ there, then\n$$\\lim_{x \\to a}\\frac{f(x)}{g(x)} = \\lim_{x \\to a}\\frac{f'(x)}{g'(x)}$$\nprovided the limit on the right exists (or is $\\pm\\infty$). The rule also works for one-sided limits and for $x \\to \\pm\\infty$.\n\nThe idea behind it: near $a$, both $f$ and $g$ are approximately their tangent lines, $f(x) \\approx f'(a)(x - a)$ and $g(x) \\approx g'(a)(x - a)$ when $f(a) = g(a) = 0$, and the ratio of those is $\\frac{f'(a)}{g'(a)}$. You differentiate the top and bottom **separately**; this is not the quotient rule. So $\\lim_{x \\to 0}\\frac{\\sin x}{x} = \\lim_{x \\to 0}\\frac{\\cos x}{1} = 1$, and $\\lim_{x \\to \\infty}\\frac{\\ln x}{x} = \\lim_{x \\to \\infty}\\frac{1/x}{1} = 0$. If the new quotient is again indeterminate, apply the rule again: $\\lim_{x \\to 0}\\frac{e^x - 1 - x}{x^2} = \\lim\\frac{e^x - 1}{2x} = \\lim\\frac{e^x}{2} = \\frac{1}{2}$. Before each application, confirm that the form is still indeterminate; applying the rule to a limit that is not $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$ gives wrong answers.\n\nOther indeterminate forms are converted into quotients. A **product** $0\\cdot\\infty$ is rewritten as $\\frac{0}{1/\\infty}$ or $\\frac{\\infty}{1/0}$; for $\\lim_{x \\to 0^+}x\\ln x$, write $\\frac{\\ln x}{1/x}$, which is $\\frac{-\\infty}{\\infty}$, and the rule gives $\\lim\\frac{1/x}{-1/x^2} = \\lim(-x) = 0$. A **difference** $\\infty - \\infty$ is combined into a single fraction or rationalized. **Powers** $0^0$, $\\infty^0$, and $1^\\infty$ are handled by taking the logarithm: if $y = f(x)^{g(x)}$, then $\\ln y = g(x)\\ln f(x)$ is a product form, find its limit $L$, and the original limit is $e^L$. The famous example is $\\lim_{x \\to \\infty}\\left(1 + \\frac{1}{x}\\right)^x$: the log is $\\frac{\\ln(1 + 1/x)}{1/x}$, which goes to 1, so the limit is $e$.\n\nNot every limit with a zero or infinity in it is indeterminate. $\\frac{1}{0}$ is infinite, $\\frac{0}{\\infty}$ is 0, $0^\\infty$ is 0, $\\infty + \\infty$ is $\\infty$. The forms that genuinely need work are exactly $\\frac{0}{0}$, $\\frac{\\infty}{\\infty}$, $0\\cdot\\infty$, $\\infty - \\infty$, $0^0$, $\\infty^0$, $1^\\infty$. And the rule is a tool, not an obligation: when factoring or a known limit works, use that.",
+  "keyIdeas": [
+    "Indeterminate forms: $\\frac{0}{0}$, $\\frac{\\infty}{\\infty}$, $0\\cdot\\infty$, $\\infty - \\infty$, $0^0$, $\\infty^0$, $1^\\infty$. Forms like $\\frac{1}{0}$ and $\\frac{0}{\\infty}$ are not indeterminate.",
+    "l'Hospital's Rule: for a $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$ form, $\\lim\\frac{f}{g} = \\lim\\frac{f'}{g'}$ if the latter exists; differentiate top and bottom separately.",
+    "Check the form before every application; the rule may be applied repeatedly as long as the form stays indeterminate.",
+    "Products $0\\cdot\\infty$: rewrite as a quotient by moving one factor to the denominator as a reciprocal.",
+    "Differences $\\infty - \\infty$: combine into one fraction or rationalize first.",
+    "Powers $0^0$, $\\infty^0$, $1^\\infty$: take $\\ln$, find the limit $L$ of $g\\ln f$, and the answer is $e^L$.",
+    "Growth hierarchy from the rule: $\\ln x$ grows slower than any positive power of $x$, which grows slower than $e^x$."
+  ],
+  "workedExamples": [
+    {
+      "title": "A zero-over-zero form applied twice",
+      "problem": "Evaluate $\\lim_{x \\to 0}\\dfrac{1 - \\cos x}{x^2}$.",
+      "steps": [
+        "Substitute: $\\frac{1 - 1}{0} = \\frac{0}{0}$. Indeterminate, so apply the rule: $\\lim_{x \\to 0}\\frac{\\sin x}{2x}$.",
+        "Substitute again: $\\frac{0}{0}$. Apply the rule again: $\\lim_{x \\to 0}\\frac{\\cos x}{2} = \\frac{1}{2}$.",
+        "(Alternative after the first step: $\\frac{\\sin x}{2x} = \\frac{1}{2}\\cdot\\frac{\\sin x}{x} \\to \\frac{1}{2}$ using the known limit.)",
+        "Check: $x = 0.1$ gives $\\frac{1 - 0.995004}{0.01} = 0.4996$. Close to $0.5$."
+      ]
+    },
+    {
+      "title": "Infinity over infinity and the growth hierarchy",
+      "problem": "Evaluate $\\lim_{x \\to \\infty}\\dfrac{x^2}{e^x}$.",
+      "steps": [
+        "Both top and bottom go to $\\infty$. Apply the rule: $\\lim_{x \\to \\infty}\\frac{2x}{e^x}$, still $\\frac{\\infty}{\\infty}$.",
+        "Apply again: $\\lim_{x \\to \\infty}\\frac{2}{e^x} = 0$.",
+        "Conclusion: $e^x$ grows faster than $x^2$, and the same argument with $n$ applications shows $e^x$ beats $x^n$ for every $n$.",
+        "Check: at $x = 20$, $\\frac{400}{e^{20}} \\approx \\frac{400}{4.85\\times 10^8} \\approx 8\\times 10^{-7}$. Tiny, as expected."
+      ]
+    },
+    {
+      "title": "A product form",
+      "problem": "Evaluate $\\lim_{x \\to \\infty}x\\sin\\dfrac{1}{x}$.",
+      "steps": [
+        "As $x \\to \\infty$, $\\sin\\frac{1}{x} \\to \\sin 0 = 0$, so this is $\\infty\\cdot 0$. Rewrite as a quotient: $\\frac{\\sin(1/x)}{1/x}$, which is $\\frac{0}{0}$.",
+        "Apply the rule, with the chain rule on top: $\\frac{\\cos(1/x)\\cdot(-1/x^2)}{-1/x^2} = \\cos\\frac{1}{x}$.",
+        "As $x \\to \\infty$, $\\cos\\frac{1}{x} \\to \\cos 0 = 1$. The limit is 1.",
+        "Alternative: substitute $t = \\frac{1}{x}$; the limit becomes $\\lim_{t \\to 0^+}\\frac{\\sin t}{t} = 1$. Same answer."
+      ]
+    },
+    {
+      "title": "A power form via logarithms",
+      "problem": "Evaluate $\\lim_{x \\to 0^+}x^x$.",
+      "steps": [
+        "This is $0^0$. Let $y = x^x$, so $\\ln y = x\\ln x$, a $0\\cdot(-\\infty)$ form.",
+        "Rewrite: $\\ln y = \\frac{\\ln x}{1/x}$, which is $\\frac{-\\infty}{\\infty}$. Apply the rule: $\\lim_{x \\to 0^+}\\frac{1/x}{-1/x^2} = \\lim_{x \\to 0^+}(-x) = 0$.",
+        "So $\\ln y \\to 0$, and therefore $y = e^{\\ln y} \\to e^0 = 1$.",
+        "Check: $0.01^{0.01} = e^{0.01\\ln 0.01} = e^{-0.046} \\approx 0.955$, and $0.001^{0.001} \\approx 0.993$. Approaching 1."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Applying the rule to a form that is not indeterminate. $\\lim_{x \\to 0}\\frac{x}{1 + x} = 0$ by substitution; differentiating would give $\\frac{1}{1} = 1$, wrong.",
+    "Using the quotient rule instead of differentiating top and bottom separately. The rule is $\\frac{f'}{g'}$, not $\\left(\\frac{f}{g}\\right)'$.",
+    "Forgetting to convert the final answer back from the logarithm in power forms. If $\\ln y \\to 0$, then $y \\to e^0 = 1$, not 0.",
+    "Applying the rule to a product or difference directly. Rewrite $0\\cdot\\infty$ as a quotient and combine $\\infty - \\infty$ first.",
+    "Choosing the inconvenient reciprocal for a product. For $x\\ln x$, writing $\\frac{x}{1/\\ln x}$ makes things worse; put the simpler piece in the denominator as $\\frac{\\ln x}{1/x}$."
+  ],
+  "whyItMatters": "Improper integrals constantly produce these forms: $\\int_0^\\infty xe^{-x}\\,dx$ requires $\\lim_{t \\to \\infty}te^{-t} = 0$, and $\\int_0^1\\ln x\\,dx$ requires $\\lim_{x \\to 0^+}x\\ln x = 0$, both done above. The growth hierarchy (logs, then powers, then exponentials) decides which improper integrals and series converge. And the limit $\\left(1 + \\frac{1}{x}\\right)^x \\to e$ underlies continuous compounding and the exponential growth models you have already used.",
+  "checkYourself": [
+    {
+      "q": "$\\lim_{x \\to 0}\\frac{e^x - 1}{x}$?",
+      "a": "$\\lim\\frac{e^x}{1} = 1$."
+    },
+    {
+      "q": "$\\lim_{x \\to \\infty}\\frac{\\ln x}{\\sqrt{x}}$?",
+      "a": "$\\lim\\frac{1/x}{1/(2\\sqrt{x})} = \\lim\\frac{2}{\\sqrt{x}} = 0$."
+    },
+    {
+      "q": "Is $\\frac{5}{0}$ an indeterminate form?",
+      "a": "No; the limit is infinite (sign from the sides)."
+    },
+    {
+      "q": "How do you handle $\\lim (1 + 2x)^{1/x}$ as $x \\to 0$?",
+      "a": "Take $\\ln$: $\\frac{\\ln(1 + 2x)}{x} \\to 2$, so the limit is $e^2$."
+    }
+  ],
+  "readingGuide": [
+    "Find the statement of l'Hospital's Rule and list every hypothesis; note the remark that it also applies to one-sided limits and limits at infinity.",
+    "Look at the geometric explanation (tangent lines) for why the rule is plausible and write it in a sentence.",
+    "Before reading the solution of the first $\\frac{\\infty}{\\infty}$ example, apply the rule yourself and check the form before each step.",
+    "Find the examples of the product, difference, and power forms and note the rewriting step used in each.",
+    "Find the example showing a limit where the rule does not apply (or is applied wrongly) and explain what went wrong."
+  ]
+}

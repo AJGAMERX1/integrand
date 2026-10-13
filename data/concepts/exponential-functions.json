@@ -1,0 +1,88 @@
+{
+  "nodeId": "exponential-functions",
+  "title": "Exponential Functions",
+  "overview": "An exponential function has the form $f(x) = b^x$, where the base $b$ is a positive constant and the variable is the exponent. You already know what $b^x$ means for whole numbers (repeated multiplication), for negative integers (reciprocals), and for fractions (roots). For an irrational exponent like $2^{\\sqrt{2}}$, the value is defined by squeezing: $2^{1.4}, 2^{1.41}, 2^{1.414}, \\ldots$ approach a definite number, and that number is $2^{\\sqrt{2}}$. The result is a smooth function defined for every real $x$, always positive, obeying all the exponent rules: $b^{x + y} = b^x b^y$, $b^{x - y} = \\frac{b^x}{b^y}$, $(b^x)^y = b^{xy}$.\n\nThe graph of $y = b^x$ for $b > 1$ passes through $(0, 1)$ (since $b^0 = 1$), rises to the right faster and faster, and flattens toward the $x$-axis on the left without ever touching it; the $x$-axis is a horizontal asymptote. The bigger the base, the steeper the rise. For $0 < b < 1$ the graph is the mirror image, falling to the right, because $\\left(\\frac{1}{2}\\right)^x = 2^{-x}$ is $2^x$ reflected across the $y$-axis. The domain is all real numbers and the range is $(0, \\infty)$.\n\nWhat makes exponentials special is **how** they grow: each unit step in $x$ multiplies the output by the same factor $b$. A population that doubles every year is $P(t) = P_0\\cdot 2^t$; a drug that loses a quarter of its concentration every hour is $C(t) = C_0\\cdot(0.75)^t$. Compare this with a polynomial, where each step **adds** a changing amount. In the long run every exponential with $b > 1$ outgrows every polynomial, no matter how high the degree: $1.1^x$ eventually exceeds $x^{100}$.\n\nAmong all bases, one is singled out for calculus: the number $e \\approx 2.71828$. It is defined as the base for which the graph of $y = b^x$ has slope exactly 1 at the point $(0, 1)$. For $b = 2$ the slope there is about 0.69, for $b = 3$ it is about 1.10, so $e$ sits in between. That choice has a remarkable consequence, proved in Chapter 3: the derivative of $e^x$ is $e^x$ itself, the function is its own rate of change. This is why $e^x$ and its relatives $e^{kx}$ show up in every model where a quantity grows or decays at a rate proportional to its current size.\n\nWorking with $e^x$ uses exactly the same rules as any base. $e^{x}e^{2x} = e^{3x}$, $(e^x)^2 = e^{2x}$, $e^{-x} = \\frac{1}{e^x}$, and $e^{\\ln a} = a$ lets you write any exponential in base $e$: $2^x = e^{x\\ln 2}$. The graph of $e^{-x^2}$, the bell curve, and of $e^{-x}\\sin x$, a damped oscillation, are both built from $e^x$ by the transformations you already know.",
+  "keyIdeas": [
+    "$f(x) = b^x$ with $b > 0$ is defined for all real $x$, is always positive, and obeys $b^{x+y} = b^x b^y$ and $(b^x)^y = b^{xy}$.",
+    "For $b > 1$ the graph rises through $(0, 1)$ with the $x$-axis as a horizontal asymptote on the left; for $0 < b < 1$ it falls, and $b^{-x} = (1/b)^x$ reflects it across the $y$-axis.",
+    "Exponential growth multiplies by the same factor each unit step; an exponential with $b > 1$ eventually outgrows every polynomial.",
+    "Models: $P(t) = P_0 b^t$ grows if $b > 1$ and decays if $0 < b < 1$; doubling time and half-life are the time for the factor to reach 2 or $\\frac{1}{2}$.",
+    "$e \\approx 2.71828$ is the base whose graph has slope 1 at $(0, 1)$; consequently $\\frac{d}{dx}e^x = e^x$.",
+    "Any exponential can be written in base $e$: $b^x = e^{x\\ln b}$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Sketching with transformations",
+      "problem": "Sketch $y = 3 - 2^{-x}$ and give its domain, range, and asymptote.",
+      "steps": [
+        "Start with $y = 2^x$: through $(0, 1)$, rising to the right, asymptote $y = 0$ on the left.",
+        "Replace $x$ by $-x$: $y = 2^{-x}$ is the reflection across the $y$-axis, through $(0, 1)$, falling to the right, asymptote $y = 0$ on the right.",
+        "Multiply by $-1$: $y = -2^{-x}$ flips across the $x$-axis, through $(0, -1)$, rising toward the asymptote $y = 0$ from below.",
+        "Add 3: $y = 3 - 2^{-x}$ passes through $(0, 2)$ and rises toward the asymptote $y = 3$ from below. Domain: all reals. Range: $(-\\infty, 3)$. Check: $x = 2$ gives $3 - \\frac{1}{4} = 2.75$, and $x = -2$ gives $3 - 4 = -1$."
+      ]
+    },
+    {
+      "title": "A doubling population",
+      "problem": "A bacteria culture starts with 500 cells and doubles every 3 hours. Write a formula for the population after $t$ hours and find the population after 12 hours and after 7.5 hours.",
+      "steps": [
+        "Every 3 hours the count multiplies by 2, so after $t$ hours there have been $\\frac{t}{3}$ doublings: $P(t) = 500\\cdot 2^{t/3}$.",
+        "After 12 hours: $\\frac{12}{3} = 4$ doublings, $P(12) = 500\\cdot 2^4 = 500\\cdot 16 = 8000$.",
+        "After 7.5 hours: $P(7.5) = 500\\cdot 2^{2.5} = 500\\cdot 2^2\\cdot 2^{0.5} = 2000\\sqrt{2} \\approx 2828$.",
+        "Check the model at $t = 3$: $500\\cdot 2 = 1000$, one doubling. Correct."
+      ]
+    },
+    {
+      "title": "Exponential decay with a half-life",
+      "problem": "A medication has a half-life of 6 hours. If a dose of 200 mg is taken, how much remains after 15 hours? When will less than 25 mg remain?",
+      "steps": [
+        "Each 6 hours multiplies the amount by $\\frac{1}{2}$: $A(t) = 200\\cdot\\left(\\frac{1}{2}\\right)^{t/6}$.",
+        "At $t = 15$: $200\\cdot\\left(\\frac{1}{2}\\right)^{2.5} = \\frac{200}{2^{2.5}} = \\frac{200}{4\\sqrt{2}} \\approx \\frac{200}{5.657} \\approx 35.4$ mg.",
+        "For 25 mg: $200\\cdot\\left(\\frac{1}{2}\\right)^{t/6} = 25$ means $\\left(\\frac{1}{2}\\right)^{t/6} = \\frac{1}{8} = \\left(\\frac{1}{2}\\right)^3$, so $\\frac{t}{6} = 3$ and $t = 18$ hours.",
+        "Check: three half-lives take 200 to 100 to 50 to 25. After 18 hours it is exactly 25 mg, and less than 25 mg after that."
+      ]
+    },
+    {
+      "title": "Rewriting in base e and simplifying",
+      "problem": "Write $5^x$ in the form $e^{kx}$, and simplify $\\dfrac{e^{3x}\\cdot e^{-x}}{(e^x)^2}$.",
+      "steps": [
+        "Since $5 = e^{\\ln 5}$, raising to the $x$ gives $5^x = (e^{\\ln 5})^x = e^{x\\ln 5}$. So $k = \\ln 5 \\approx 1.609$.",
+        "For the quotient, combine the numerator: $e^{3x}e^{-x} = e^{3x - x} = e^{2x}$.",
+        "The denominator is $(e^x)^2 = e^{2x}$. The quotient is $\\frac{e^{2x}}{e^{2x}} = 1$.",
+        "Check with $x = 1$: $\\frac{e^3\\cdot e^{-1}}{e^2} = \\frac{e^2}{e^2} = 1$. Correct."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Confusing $x^2$ with $2^x$, or applying the power rule to $2^x$. Values at $x = 5$: $25$ versus $32$; they are different families with different derivatives.",
+    "Thinking $b^x$ can be zero or negative. $2^{-100}$ is tiny but positive; the range of $b^x$ is $(0, \\infty)$.",
+    "Writing $e^{x + 2} = e^x + e^2$. Exponents add when you multiply: $e^{x+2} = e^x\\cdot e^2$. Check $x = 0$: $e^2$ versus $1 + e^2$.",
+    "Using the wrong exponent for a doubling time. Doubling every 3 hours is $2^{t/3}$, not $2^{3t}$; check that $t = 3$ gives one doubling.",
+    "Treating $e$ as a variable or as exactly 2.7. It is a specific constant, $2.71828\\ldots$, like $\\pi$."
+  ],
+  "whyItMatters": "Because $\\frac{d}{dx}e^x = e^x$, the integral is just as clean: $\\int e^x\\,dx = e^x + C$, and with substitution $\\int e^{kx}\\,dx = \\frac{1}{k}e^{kx} + C$. Exponentials are the solutions of the growth and decay equation $y' = ky$, the heart of Chapter 9, and $e^{-x^2}$ is the integrand of the famous bell-curve integral in probability. Writing $b^x$ as $e^{x\\ln b}$ is how you differentiate and integrate any other base.",
+  "checkYourself": [
+    {
+      "q": "What are the domain and range of $y = e^x$?",
+      "a": "Domain all reals; range $(0, \\infty)$."
+    },
+    {
+      "q": "Simplify $e^{2x}\\cdot e^{-5x}$.",
+      "a": "$e^{-3x}$."
+    },
+    {
+      "q": "A quantity triples every 4 days. Formula?",
+      "a": "$Q(t) = Q_0\\cdot 3^{t/4}$."
+    },
+    {
+      "q": "What is special about the slope of $y = e^x$ at $(0, 1)$?",
+      "a": "It is exactly 1; that property defines $e$."
+    }
+  ],
+  "readingGuide": [
+    "Find how $b^x$ is defined for irrational $x$ and write the idea in one sentence of your own.",
+    "Locate the figures comparing $y = b^x$ for several bases; note which features all the graphs share and which depend on $b$.",
+    "Look for the laws of exponents restated for exponential functions and check one with $b = 2$, $x = 3$, $y = 2$.",
+    "Before reading the solution of the population or decay example, set up the model yourself from the doubling time or half-life.",
+    "Find the definition of the number $e$ in terms of the slope at $(0, 1)$ and the table or figure comparing it with bases 2 and 3."
+  ]
+}

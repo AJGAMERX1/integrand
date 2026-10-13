@@ -1,0 +1,90 @@
+{
+  "nodeId": "precise-limit",
+  "title": "The Precise Definition of a Limit",
+  "overview": "So far \"the limit is $L$\" has meant \"the values get close to $L$,\" and \"close\" was left vague. That vagueness is fine for computing, but it cannot settle arguments: close by how much? For how many $x$? The precise definition replaces \"close\" with a challenge-and-response game that uses absolute values and inequalities from the ramp.\n\nHere is the game. You claim $\\lim_{x \\to a}f(x) = L$. A skeptic names a tolerance, a small positive number $\\varepsilon$ (epsilon), and demands that $f(x)$ be within $\\varepsilon$ of $L$, meaning $|f(x) - L| < \\varepsilon$. You must respond with a distance $\\delta$ (delta) such that **every** $x$ within $\\delta$ of $a$, other than $a$ itself, meets the demand. If you can always respond, no matter how small $\\varepsilon$ is, the limit is $L$. Formally:\n$$\\lim_{x \\to a}f(x) = L \\quad\\text{means}\\quad \\text{for every } \\varepsilon > 0 \\text{ there is a } \\delta > 0 \\text{ such that } 0 < |x - a| < \\delta \\text{ implies } |f(x) - L| < \\varepsilon.$$\nThe condition $0 < |x - a|$ is how the definition says \"$x \\ne a$.\" Read the two inequalities as intervals: $0 < |x - a| < \\delta$ means $x$ is in $(a - \\delta, a + \\delta)$ with $a$ removed, and $|f(x) - L| < \\varepsilon$ means $f(x)$ is in $(L - \\varepsilon, L + \\varepsilon)$. Graphically, draw a horizontal band of half-width $\\varepsilon$ around $y = L$; you must find a vertical strip of half-width $\\delta$ around $x = a$ so narrow that the graph inside the strip stays inside the band.\n\nFor a linear function the game is easy to win. To show $\\lim_{x \\to 3}(2x - 1) = 5$: the demand is $|(2x - 1) - 5| < \\varepsilon$, which simplifies to $|2x - 6| < \\varepsilon$, or $2|x - 3| < \\varepsilon$, or $|x - 3| < \\frac{\\varepsilon}{2}$. So choose $\\delta = \\frac{\\varepsilon}{2}$. Whatever $\\varepsilon$ the skeptic picks, you hand back half of it, and the inequality chain shows it works. The pattern: start from $|f(x) - L| < \\varepsilon$, manipulate it into the form $|x - a| < \\text{something}$, and that something is your $\\delta$.\n\nFor nonlinear functions the manipulation leaves an extra factor, and the standard move is to first agree that $\\delta \\le 1$, use that to bound the extra factor by a constant $C$, and then take $\\delta$ to be the smaller of $1$ and $\\frac{\\varepsilon}{C}$. The proof only needs **some** $\\delta$ that works, not the best one, so generous bounds are fine.\n\nOne-sided and infinite limits have matching definitions. For $\\lim_{x \\to a^+}$, replace $0 < |x - a| < \\delta$ by $a < x < a + \\delta$. For $\\lim_{x \\to a}f(x) = \\infty$, the skeptic names a large number $M$ instead of a small $\\varepsilon$, and you must find $\\delta$ so that $f(x) > M$ whenever $0 < |x - a| < \\delta$. The game is the same; only the target changes.\n\nYou will not use this definition to compute limits, and the limit laws from the previous section are all proved from it once and then used forever. What it gives you is the ability to say exactly what a limit is, and a first taste of how calculus turns intuition into proof.",
+  "keyIdeas": [
+    "$\\lim_{x \\to a}f(x) = L$ means: for every $\\varepsilon > 0$ there is a $\\delta > 0$ such that $0 < |x - a| < \\delta$ implies $|f(x) - L| < \\varepsilon$.",
+    "$\\varepsilon$ is the output tolerance chosen by a skeptic; $\\delta$ is the input tolerance you must supply in response; $\\delta$ may depend on $\\varepsilon$.",
+    "The inequality $0 < |x - a|$ excludes $x = a$; the limit never looks at $f(a)$.",
+    "Graphically: a horizontal band of half-width $\\varepsilon$ around $L$ must contain the graph over a vertical strip of half-width $\\delta$ around $a$ (except possibly at $a$).",
+    "To find $\\delta$: rewrite $|f(x) - L| < \\varepsilon$ until it reads $|x - a| < (\\text{expression in } \\varepsilon)$; for linear $f$, $\\delta = \\frac{\\varepsilon}{|m|}$.",
+    "For nonlinear $f$, first restrict $\\delta \\le 1$ to bound the leftover factor by a constant $C$, then use $\\delta = \\min(1, \\frac{\\varepsilon}{C})$.",
+    "Infinite limit: for every $M$ there is a $\\delta$ with $f(x) > M$ whenever $0 < |x - a| < \\delta$."
+  ],
+  "workedExamples": [
+    {
+      "title": "A linear function",
+      "problem": "Prove that $\\lim_{x \\to 2}(5x - 3) = 7$ using the definition.",
+      "steps": [
+        "Scratch work: we need $|(5x - 3) - 7| < \\varepsilon$, that is $|5x - 10| < \\varepsilon$, that is $5|x - 2| < \\varepsilon$, that is $|x - 2| < \\frac{\\varepsilon}{5}$.",
+        "So choose $\\delta = \\frac{\\varepsilon}{5}$.",
+        "Proof: let $\\varepsilon > 0$ and set $\\delta = \\frac{\\varepsilon}{5}$. If $0 < |x - 2| < \\delta$, then $|(5x - 3) - 7| = 5|x - 2| < 5\\delta = \\varepsilon$. Done.",
+        "Concrete check: if the skeptic demands $\\varepsilon = 0.1$, you respond $\\delta = 0.02$. Test $x = 2.015$: $5(2.015) - 3 = 7.075$, within 0.1 of 7. Good."
+      ]
+    },
+    {
+      "title": "Finding a numerical delta from a graph or table",
+      "problem": "For $f(x) = x^2$ near $a = 3$ with $L = 9$, find a $\\delta$ that works for $\\varepsilon = 0.5$.",
+      "steps": [
+        "We need $|x^2 - 9| < 0.5$, so $8.5 < x^2 < 9.5$, so $\\sqrt{8.5} < x < \\sqrt{9.5}$, which is approximately $2.9155 < x < 3.0822$.",
+        "Distances from 3: on the left $3 - 2.9155 = 0.0845$; on the right $3.0822 - 3 = 0.0822$.",
+        "The strip must fit inside both, so take the smaller: $\\delta = 0.08$ (anything at most $0.0822$ works).",
+        "Check the worst case $x = 3.08$: $x^2 = 9.4864$, and $|9.4864 - 9| = 0.4864 < 0.5$. And $x = 2.92$: $8.5264$, within 0.5 of 9. Both fine."
+      ]
+    },
+    {
+      "title": "A quadratic with the min trick",
+      "problem": "Prove that $\\lim_{x \\to 1}(x^2 + 2x) = 3$.",
+      "steps": [
+        "Scratch: $|x^2 + 2x - 3| = |(x - 1)(x + 3)| = |x - 1|\\cdot|x + 3|$. The factor $|x - 1|$ is what $\\delta$ controls; $|x + 3|$ is the leftover.",
+        "Bound the leftover: if $|x - 1| < 1$, then $0 < x < 2$, so $3 < x + 3 < 5$ and $|x + 3| < 5$.",
+        "Then $|x - 1|\\cdot|x + 3| < 5|x - 1|$, and this is less than $\\varepsilon$ as long as $|x - 1| < \\frac{\\varepsilon}{5}$.",
+        "Choose $\\delta = \\min\\left(1, \\frac{\\varepsilon}{5}\\right)$. Proof: if $0 < |x - 1| < \\delta$, then $|x + 3| < 5$ (since $\\delta \\le 1$) and $|x - 1| < \\frac{\\varepsilon}{5}$, so $|x^2 + 2x - 3| < 5\\cdot\\frac{\\varepsilon}{5} = \\varepsilon$.",
+        "Check with $\\varepsilon = 0.5$: $\\delta = 0.1$. At $x = 1.1$: $1.21 + 2.2 = 3.41$, and $|3.41 - 3| = 0.41 < 0.5$. Works."
+      ]
+    },
+    {
+      "title": "An infinite limit",
+      "problem": "Prove that $\\lim_{x \\to 0}\\dfrac{1}{x^2} = \\infty$.",
+      "steps": [
+        "The skeptic names a large $M > 0$ and demands $\\frac{1}{x^2} > M$ for all $x$ near 0 (except 0).",
+        "Scratch: $\\frac{1}{x^2} > M$ is the same as $x^2 < \\frac{1}{M}$, which is $|x| < \\frac{1}{\\sqrt{M}}$.",
+        "Choose $\\delta = \\frac{1}{\\sqrt{M}}$. If $0 < |x - 0| < \\delta$, then $x^2 < \\delta^2 = \\frac{1}{M}$, so $\\frac{1}{x^2} > M$.",
+        "Concrete: for $M = 10000$, $\\delta = 0.01$. At $x = 0.005$: $\\frac{1}{0.000025} = 40000 > 10000$. Good."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Choosing $\\delta$ first and then looking for $\\varepsilon$. The skeptic picks $\\varepsilon$; your $\\delta$ must respond to it, so $\\delta$ is a function of $\\varepsilon$.",
+    "Dropping the condition $0 < |x - a|$. Without it the definition would require $f(a) = L$, which is not what a limit means.",
+    "Writing the proof as the scratch work backwards without the words. A proof starts \"let $\\varepsilon > 0$, choose $\\delta = \\ldots$, suppose $0 < |x - a| < \\delta$, then ...\" and ends at $|f(x) - L| < \\varepsilon$.",
+    "In the quadratic case, forgetting the $\\min$ with 1 and using $\\delta = \\frac{\\varepsilon}{5}$ alone. For large $\\varepsilon$ that $\\delta$ is too big to keep the leftover factor under 5.",
+    "Thinking a bigger $\\delta$ is better. Any $\\delta$ that works is a valid answer; smaller is always safe."
+  ],
+  "whyItMatters": "The definite integral is also defined by a limit, and its precise version has the same shape: for every $\\varepsilon$ there is an $N$ such that every Riemann sum with more than $N$ fine enough rectangles is within $\\varepsilon$ of the integral. Error bounds for numerical integration (the Trapezoidal and Simpson's rules in Chapter 7) are $\\varepsilon$-style guarantees. More broadly, this definition is the first place calculus shows you how an intuitive idea becomes an exact one, which is what lets you trust the theorems you will use later.",
+  "checkYourself": [
+    {
+      "q": "In the definition, which of $\\varepsilon$ and $\\delta$ is chosen first?",
+      "a": "$\\varepsilon$; then $\\delta$ is chosen in response."
+    },
+    {
+      "q": "To prove $\\lim_{x \\to 4}(3x + 1) = 13$, what $\\delta$ works?",
+      "a": "$\\delta = \\frac{\\varepsilon}{3}$."
+    },
+    {
+      "q": "What does $0 < |x - a| < \\delta$ say in words?",
+      "a": "$x$ is within $\\delta$ of $a$ but not equal to $a$."
+    },
+    {
+      "q": "If $\\delta = 0.01$ works for some $\\varepsilon$, does $\\delta = 0.005$ also work?",
+      "a": "Yes; a smaller $\\delta$ restricts $x$ to fewer points, all of which already satisfy the demand."
+    }
+  ],
+  "readingGuide": [
+    "Find the formal definition and rewrite it as a two-player game in your own words, naming who chooses $\\varepsilon$ and who chooses $\\delta$.",
+    "Study the figure with the horizontal band and vertical strip, and redraw it for a function of your choice.",
+    "Before reading the solution of the first linear example, do the scratch work yourself to find $\\delta$ in terms of $\\varepsilon$.",
+    "In the quadratic (or nonlinear) example, identify the step where $\\delta \\le 1$ is assumed and explain why it is needed.",
+    "Find the definitions of one-sided and infinite limits and note exactly which inequality changes in each."
+  ]
+}

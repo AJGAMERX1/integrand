@@ -1,1 +1,158 @@
-{ "version": 1, "questions": [] }
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "diag-01",
+      "nodeId": "numbers-and-inequalities",
+      "statement": "Solve $3x - 5 < 7$. Give the answer in interval notation.",
+      "checker": "interval",
+      "answer": "(-inf,4)"
+    },
+    {
+      "id": "diag-02",
+      "nodeId": "exponents-and-radicals",
+      "statement": "Evaluate $8^{2/3}$.",
+      "checker": "numeric",
+      "answer": "4"
+    },
+    {
+      "id": "diag-03",
+      "nodeId": "linear-equations",
+      "statement": "Find the slope of the line through $(1, 2)$ and $(4, 11)$.",
+      "checker": "numeric",
+      "answer": "3"
+    },
+    {
+      "id": "diag-04",
+      "nodeId": "systems-of-equations",
+      "statement": "If $x + y = 10$ and $x - y = 4$, what is $x$?",
+      "checker": "numeric",
+      "answer": "7"
+    },
+    {
+      "id": "diag-05",
+      "nodeId": "polynomials",
+      "statement": "Expand $(x + 3)(x - 2)$.",
+      "checker": "equiv",
+      "answer": "x^2+x-6",
+      "variable": "x",
+      "domain": [
+        -3,
+        3
+      ]
+    },
+    {
+      "id": "diag-06",
+      "nodeId": "factoring-and-quadratics",
+      "statement": "Which is the factored form of $x^2 - 5x + 6$?",
+      "checker": "choice",
+      "answer": "2",
+      "choices": [
+        "(x + 2)(x + 3)",
+        "(x - 1)(x - 6)",
+        "(x - 2)(x - 3)",
+        "(x - 6)(x + 1)"
+      ]
+    },
+    {
+      "id": "diag-07",
+      "nodeId": "rational-expressions",
+      "statement": "Simplify $\\dfrac{x^2 - 9}{x + 3}$ (for $x \\ne -3$).",
+      "checker": "equiv",
+      "answer": "x-3",
+      "variable": "x",
+      "domain": [
+        -2,
+        4
+      ]
+    },
+    {
+      "id": "diag-08",
+      "nodeId": "function-notation",
+      "statement": "If $f(x) = x^2 - 3x$, find $f(-2)$.",
+      "checker": "numeric",
+      "answer": "10"
+    },
+    {
+      "id": "diag-09",
+      "nodeId": "transformations",
+      "statement": "The graph of $y = (x - 4)^2 + 1$ is the graph of $y = x^2$ shifted which way?",
+      "checker": "choice",
+      "answer": "3",
+      "choices": [
+        "\\text{Left 4, up 1}",
+        "\\text{Right 4, down 1}",
+        "\\text{Left 4, down 1}",
+        "\\text{Right 4, up 1}"
+      ]
+    },
+    {
+      "id": "diag-10",
+      "nodeId": "exponentials-and-logs-ramp",
+      "statement": "Evaluate $\\log_2 32$.",
+      "checker": "numeric",
+      "answer": "5"
+    },
+    {
+      "id": "diag-11",
+      "nodeId": "sigma-notation",
+      "statement": "Evaluate $\\displaystyle\\sum_{i=1}^{4} (2i - 1)$.",
+      "checker": "numeric",
+      "answer": "16"
+    },
+    {
+      "id": "diag-12",
+      "nodeId": "area-by-geometry",
+      "statement": "Find the area of the region under the line $y = 2x$, above the $x$-axis, from $x = 0$ to $x = 3$.",
+      "checker": "numeric",
+      "answer": "9"
+    },
+    {
+      "id": "diag-13",
+      "nodeId": "right-triangle-trig",
+      "statement": "A right triangle has legs of length 3 and 4. If $\\theta$ is the angle opposite the side of length 3, find $\\sin\\theta$.",
+      "checker": "numeric",
+      "answer": "3/5"
+    },
+    {
+      "id": "diag-14",
+      "nodeId": "unit-circle",
+      "statement": "Evaluate $\\cos\\left(\\dfrac{2\\pi}{3}\\right)$.",
+      "checker": "numeric",
+      "answer": "-1/2"
+    },
+    {
+      "id": "diag-15",
+      "nodeId": "trig-identities",
+      "statement": "Write $1 - \\sin^2 x$ as a single trig function (squared).",
+      "checker": "equiv",
+      "answer": "cos(x)^2",
+      "variable": "x",
+      "domain": [
+        -3,
+        3
+      ]
+    },
+    {
+      "id": "diag-16",
+      "nodeId": "trig-graphs",
+      "statement": "What is the maximum value of $y = 3\\sin(2x) + 2$?",
+      "checker": "numeric",
+      "answer": "5"
+    },
+    {
+      "id": "diag-17",
+      "nodeId": "functions-basics",
+      "statement": "Find the domain of $f(x) = \\sqrt{x - 2}$. Give the answer in interval notation.",
+      "checker": "interval",
+      "answer": "[2,inf)"
+    },
+    {
+      "id": "diag-18",
+      "nodeId": "limits-intro",
+      "statement": "Evaluate $\\displaystyle\\lim_{x \\to 3}\\frac{x^2 - 9}{x - 3}$.",
+      "checker": "numeric",
+      "answer": "6"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "nodeId": "trig-graphs",
+  "title": "Graphs of Trig Functions",
+  "overview": "As the angle $\\theta$ grows, the unit-circle point goes around and around, and its $y$-coordinate rises to 1, falls to $-1$, and rises again, forever. Plotting that $y$-coordinate against $\\theta$ gives the graph of $y = \\sin x$: a smooth wave through the origin, reaching 1 at $x = \\frac{\\pi}{2}$, back to 0 at $\\pi$, down to $-1$ at $\\frac{3\\pi}{2}$, and back to 0 at $2\\pi$, after which the pattern repeats. The graph of $y = \\cos x$ is the same wave slid left by $\\frac{\\pi}{2}$: it starts at its peak, $\\cos 0 = 1$, crosses zero at $\\frac{\\pi}{2}$, bottoms out at $\\pi$, and returns to 1 at $2\\pi$. Both waves live entirely between $-1$ and $1$ and both repeat every $2\\pi$.\n\nFive points per cycle are enough to sketch either one: the start, the peak, the middle crossing, the trough, and the end. For sine on $[0, 2\\pi]$ those are $(0, 0)$, $(\\frac{\\pi}{2}, 1)$, $(\\pi, 0)$, $(\\frac{3\\pi}{2}, -1)$, $(2\\pi, 0)$. Mark them, connect with a smooth curve, and repeat in both directions.\n\nTransformations give the general wave $y = A\\sin(Bx - C) + D$. The **amplitude** $|A|$ is the height of the wave above its midline; multiplying by $A$ stretches the graph vertically, and a negative $A$ flips it. The **period** is $\\frac{2\\pi}{B}$: a bigger $B$ squeezes the wave so it completes a cycle faster, exactly as $f(2x)$ squeezes any graph. The **phase shift** is $\\frac{C}{B}$ to the right (write the inside as $B(x - \\frac{C}{B})$ to see it as a horizontal shift). The **vertical shift** $D$ moves the midline from $y = 0$ to $y = D$. To sketch, find the midline, the amplitude, the period, and the starting point of one cycle, then place the five key points across that one cycle.\n\nTangent looks completely different. Since $\\tan x = \\frac{\\sin x}{\\cos x}$, it blows up wherever $\\cos x = 0$, at $x = \\pm\\frac{\\pi}{2}, \\pm\\frac{3\\pi}{2}, \\ldots$, and the graph has **vertical asymptotes** there. Between consecutive asymptotes it rises from $-\\infty$ through 0 to $+\\infty$, passing through the origin with slope 1 in the central piece. Its period is $\\pi$, not $2\\pi$, because $\\tan(x + \\pi) = \\frac{-\\sin x}{-\\cos x} = \\tan x$. The graph of $y = \\tan x$ has no amplitude; it has no top or bottom.\n\nThese pictures answer questions that algebra answers slowly. Where is $\\sin x$ positive? Where the wave is above the axis, on $(0, \\pi)$ and every shift of it by $2\\pi$. How many solutions does $\\cos x = 0.3$ have on $[0, 2\\pi]$? Two, because a horizontal line cuts one cycle of the wave twice. What is $\\int_0^{2\\pi}\\sin x\\,dx$? Zero, because the hump above the axis and the hump below are mirror images. Keep the graphs in your head and reach for them first.",
+  "keyIdeas": [
+    "$y = \\sin x$ is a wave through the origin with values in $[-1, 1]$ and period $2\\pi$; $y = \\cos x$ is the same wave shifted left by $\\frac{\\pi}{2}$, starting at its peak.",
+    "Sketch one cycle with five points: start, peak, midpoint, trough, end; for sine on $[0, 2\\pi]$ these are at $0, \\frac{\\pi}{2}, \\pi, \\frac{3\\pi}{2}, 2\\pi$.",
+    "For $y = A\\sin(Bx - C) + D$: amplitude $|A|$, period $\\frac{2\\pi}{B}$, phase shift $\\frac{C}{B}$, midline $y = D$.",
+    "$y = \\tan x$ has period $\\pi$, vertical asymptotes where $\\cos x = 0$ (at $\\frac{\\pi}{2} + k\\pi$), and no maximum or minimum.",
+    "Sine is odd (symmetric through the origin); cosine is even (symmetric about the $y$-axis).",
+    "The graphs tell you where a trig function is positive or negative and how many solutions an equation has on an interval."
+  ],
+  "workedExamples": [
+    {
+      "title": "Amplitude, period, and a sketch",
+      "problem": "Describe and sketch $y = 3\\sin(2x)$.",
+      "steps": [
+        "Amplitude: $|A| = 3$, so the wave runs between $-3$ and $3$. Midline is $y = 0$.",
+        "Period: $\\frac{2\\pi}{B} = \\frac{2\\pi}{2} = \\pi$. One full wave fits in $[0, \\pi]$, twice as fast as plain sine.",
+        "Five key points, spaced a quarter period ($\\frac{\\pi}{4}$) apart: $(0, 0)$, $(\\frac{\\pi}{4}, 3)$, $(\\frac{\\pi}{2}, 0)$, $(\\frac{3\\pi}{4}, -3)$, $(\\pi, 0)$.",
+        "Check one: at $x = \\frac{\\pi}{4}$, $3\\sin\\frac{\\pi}{2} = 3$. Correct. Draw the smooth wave through the points and repeat."
+      ]
+    },
+    {
+      "title": "A shifted cosine",
+      "problem": "Find the amplitude, period, phase shift, and midline of $y = -2\\cos\\left(x - \\frac{\\pi}{3}\\right) + 1$, and give its maximum and minimum values.",
+      "steps": [
+        "Amplitude $|-2| = 2$; the negative sign flips the cosine so it starts at a trough instead of a peak.",
+        "$B = 1$, so the period is $2\\pi$. The inside is $x - \\frac{\\pi}{3}$, so the phase shift is $\\frac{\\pi}{3}$ to the right.",
+        "Midline $y = 1$. Maximum is $1 + 2 = 3$, minimum is $1 - 2 = -1$.",
+        "Check the starting point: at $x = \\frac{\\pi}{3}$, $y = -2\\cos 0 + 1 = -1$, the minimum, as expected from the flip. The maximum occurs half a period later, at $x = \\frac{\\pi}{3} + \\pi = \\frac{4\\pi}{3}$: $-2\\cos\\pi + 1 = 3$."
+      ]
+    },
+    {
+      "title": "Writing an equation from a description",
+      "problem": "A wave oscillates between 2 and 8, completes a cycle every 4 units, and is at its midline rising at $x = 0$. Write a sine equation for it.",
+      "steps": [
+        "Midline: the average of 2 and 8 is $D = 5$. Amplitude: half the distance between them, $A = 3$.",
+        "Period 4 means $\\frac{2\\pi}{B} = 4$, so $B = \\frac{\\pi}{2}$.",
+        "At the midline and rising at $x = 0$ is exactly how $\\sin$ starts, so no phase shift is needed: $y = 3\\sin\\left(\\frac{\\pi}{2}x\\right) + 5$.",
+        "Check: at $x = 1$ (a quarter period) the wave should peak: $3\\sin\\frac{\\pi}{2} + 5 = 8$. Correct."
+      ]
+    },
+    {
+      "title": "Reading solutions off the graph",
+      "problem": "How many solutions does $\\sin x = -\\frac{1}{2}$ have on $[0, 2\\pi]$, and what are they?",
+      "steps": [
+        "The line $y = -\\frac{1}{2}$ is below the axis, where the sine wave dips on $(\\pi, 2\\pi)$. It cuts that trough twice, so there are two solutions.",
+        "Reference angle: $\\sin\\frac{\\pi}{6} = \\frac{1}{2}$. Sine is negative in quadrants III and IV.",
+        "Quadrant III: $\\pi + \\frac{\\pi}{6} = \\frac{7\\pi}{6}$. Quadrant IV: $2\\pi - \\frac{\\pi}{6} = \\frac{11\\pi}{6}$.",
+        "On the graph, these are symmetric about the trough at $\\frac{3\\pi}{2}$: each is $\\frac{\\pi}{3}$ away from it. Consistent."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Taking the period of $\\sin(2x)$ to be $4\\pi$. A bigger $B$ makes the wave faster, so the period is $\\frac{2\\pi}{2} = \\pi$.",
+    "Reading the phase shift of $\\sin(2x - \\pi)$ as $\\pi$. Factor: $\\sin\\left(2\\left(x - \\frac{\\pi}{2}\\right)\\right)$, so the shift is $\\frac{\\pi}{2}$.",
+    "Drawing $\\cos x$ starting at the origin. Cosine starts at its maximum: $\\cos 0 = 1$.",
+    "Giving tangent an amplitude or drawing it as a wave. Tangent has vertical asymptotes and runs from $-\\infty$ to $\\infty$ on each piece.",
+    "Sketching the key points evenly in $x$ but forgetting to rescale when the period changes; the spacing is always a quarter of the period."
+  ],
+  "whyItMatters": "When you integrate $\\sin x$ or $\\cos x$ over an interval, the graph tells you the sign and size of the answer before you compute it, and it explains why integrals over a full period vanish. The derivative of $\\sin x$ is $\\cos x$, which you can see by noting that the slope of the sine wave is largest at $x = 0$ (where $\\cos 0 = 1$) and zero at the peak (where $\\cos\\frac{\\pi}{2} = 0$). Period and amplitude return in differential equations as the behavior of springs and circuits, and in Chapter 11 the sine wave is the first function you expand as an infinite polynomial.",
+  "checkYourself": [
+    {
+      "q": "Period of $y = \\cos(3x)$?",
+      "a": "$\\frac{2\\pi}{3}$."
+    },
+    {
+      "q": "Maximum value of $y = 4\\sin x - 1$?",
+      "a": "$4 - 1 = 3$."
+    },
+    {
+      "q": "Where does $\\tan x$ have asymptotes on $[0, 2\\pi]$?",
+      "a": "$x = \\frac{\\pi}{2}$ and $x = \\frac{3\\pi}{2}$."
+    },
+    {
+      "q": "On $[0, 2\\pi]$, where is $\\cos x$ negative?",
+      "a": "On $\\left(\\frac{\\pi}{2}, \\frac{3\\pi}{2}\\right)$."
+    }
+  ],
+  "readingGuide": [
+    "Find the graphs of all six trig functions; sketch sine, cosine, and tangent from memory first, then compare.",
+    "Note the domain and range of each function as given in the text and connect each restriction to a feature of the graph (asymptotes, bounded values).",
+    "Look for how the text describes periodicity and confirm the period of tangent is $\\pi$ from its graph.",
+    "Combine this with the transformations node: pick one graph from the appendix and sketch $2f(x)$, $f(2x)$, and $f(x - \\frac{\\pi}{4})$ yourself."
+  ]
+}

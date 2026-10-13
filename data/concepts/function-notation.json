@@ -1,0 +1,86 @@
+{
+  "nodeId": "function-notation",
+  "title": "Function Notation and Domain",
+  "overview": "A function is a rule that takes an input and returns exactly one output. Think of it as a machine: you drop a number in, the machine does something definite to it, and one number comes out. The notation $f(x) = x^2 + 1$ names the machine $f$ and describes what it does to any input $x$: square it and add 1. The symbol $f(3)$ means \"the output when the input is 3,\" which is $3^2 + 1 = 10$. It is not $f$ times 3. The parentheses are a slot for the input.\n\nEvaluating a function means substituting the input for every copy of $x$, with parentheses around it. If $g(x) = 2x^2 - x$, then $g(-1) = 2(-1)^2 - (-1) = 2 + 1 = 3$. The input does not have to be a number. $g(a)$ is $2a^2 - a$, and $g(x + h)$ means replace every $x$ by $(x + h)$: $g(x + h) = 2(x + h)^2 - (x + h)$. That last kind of substitution is the one calculus uses most, in the difference quotient $\\frac{f(x + h) - f(x)}{h}$, so practice it until replacing $x$ by a whole expression feels mechanical.\n\nThe **domain** of a function is the set of inputs it accepts. When a formula is given with no other restriction, the domain is every real number for which the formula makes sense. Two things can go wrong: dividing by zero and taking an even root of a negative number. So for $f(x) = \\frac{1}{x - 4}$ the domain is all $x$ except 4, written $(-\\infty, 4) \\cup (4, \\infty)$. For $f(x) = \\sqrt{x - 4}$ you need $x - 4 \\ge 0$, so the domain is $[4, \\infty)$. For $f(x) = \\frac{1}{\\sqrt{x - 4}}$ both rules apply and you need $x - 4 > 0$, which is $(4, \\infty)$. Later, logarithms add a third rule: $\\ln x$ needs $x > 0$.\n\nThe **range** is the set of outputs the function actually produces. For $f(x) = x^2 + 1$, the square is never negative, so the outputs are all numbers $\\ge 1$ and the range is $[1, \\infty)$. Range is often harder to find than domain, and a quick sketch helps.\n\nComposition means feeding one function's output into another. $(f \\circ g)(x) = f(g(x))$: apply $g$ first, then $f$. If $f(x) = \\sqrt{x}$ and $g(x) = x + 3$, then $f(g(x)) = \\sqrt{x + 3}$ while $g(f(x)) = \\sqrt{x} + 3$. Order matters. Seeing a complicated expression as a composition, an \"outer\" function wrapped around an \"inner\" one, is the skill behind the chain rule and $u$-substitution, which is why it is worth getting comfortable now.",
+  "keyIdeas": [
+    "$f(x)$ is the output of the rule $f$ at input $x$; $f(3)$ means substitute 3 for every $x$, and it is not multiplication.",
+    "To evaluate at an expression, replace every $x$ by that expression in parentheses: if $f(x) = x^2$, then $f(x + h) = (x + h)^2$.",
+    "The domain of a formula excludes inputs that divide by zero or take an even root of a negative number.",
+    "$\\sqrt{\\text{stuff}}$ needs stuff $\\ge 0$; $\\frac{1}{\\text{stuff}}$ needs stuff $\\ne 0$; $\\frac{1}{\\sqrt{\\text{stuff}}}$ needs stuff $> 0$.",
+    "The range is the set of outputs actually produced; a sketch or an inequality argument finds it.",
+    "Composition $(f \\circ g)(x) = f(g(x))$ applies $g$ first, then $f$; in general $f \\circ g \\ne g \\circ f$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Evaluating at numbers and expressions",
+      "problem": "Let $f(x) = x^2 - 3x$. Find $f(4)$, $f(-2)$, and $f(x + h)$.",
+      "steps": [
+        "$f(4) = 4^2 - 3(4) = 16 - 12 = 4$.",
+        "$f(-2) = (-2)^2 - 3(-2) = 4 + 6 = 10$. The parentheses around $-2$ keep the signs right.",
+        "$f(x + h) = (x + h)^2 - 3(x + h)$. Expand: $x^2 + 2xh + h^2 - 3x - 3h$.",
+        "Check the expansion with $x = 1$, $h = 1$: $f(2) = 4 - 6 = -2$, and the expanded form gives $1 + 2 + 1 - 3 - 3 = -2$. Correct."
+      ]
+    },
+    {
+      "title": "A difference quotient",
+      "problem": "For $f(x) = x^2 - 3x$, simplify $\\dfrac{f(x + h) - f(x)}{h}$.",
+      "steps": [
+        "From the previous example, $f(x + h) = x^2 + 2xh + h^2 - 3x - 3h$. Subtract $f(x) = x^2 - 3x$: the $x^2$ and $-3x$ cancel, leaving $2xh + h^2 - 3h$.",
+        "Every remaining term has a factor of $h$: $2xh + h^2 - 3h = h(2x + h - 3)$.",
+        "Divide by $h$: $\\frac{h(2x + h - 3)}{h} = 2x + h - 3$.",
+        "Preview: as $h$ shrinks to 0 this becomes $2x - 3$, the derivative of $f$. The algebra you just did is the heart of Chapter 2."
+      ]
+    },
+    {
+      "title": "Finding a domain with two restrictions",
+      "problem": "Find the domain of $g(x) = \\dfrac{\\sqrt{x + 2}}{x - 5}$.",
+      "steps": [
+        "The square root needs $x + 2 \\ge 0$, so $x \\ge -2$.",
+        "The denominator needs $x - 5 \\ne 0$, so $x \\ne 5$.",
+        "Both conditions must hold: $x \\ge -2$ and $x \\ne 5$. In interval notation, $[-2, 5) \\cup (5, \\infty)$.",
+        "Check an edge: $x = -2$ gives $\\frac{0}{-7} = 0$, fine, so $-2$ is included. $x = 5$ gives $\\frac{\\sqrt{7}}{0}$, undefined, so 5 is out."
+      ]
+    },
+    {
+      "title": "Composition in both orders",
+      "problem": "Let $f(x) = x^2 + 1$ and $g(x) = 2x - 3$. Find $f(g(x))$, $g(f(x))$, and $f(g(2))$.",
+      "steps": [
+        "$f(g(x))$: apply $g$ first to get $2x - 3$, then feed that into $f$: $(2x - 3)^2 + 1 = 4x^2 - 12x + 9 + 1 = 4x^2 - 12x + 10$.",
+        "$g(f(x))$: apply $f$ first to get $x^2 + 1$, then feed it into $g$: $2(x^2 + 1) - 3 = 2x^2 - 1$.",
+        "These differ, so order matters. $f(g(2))$: $g(2) = 1$, then $f(1) = 2$. Check with the formula: $4(4) - 24 + 10 = 2$. Correct."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Reading $f(x + h)$ as $f(x) + h$ or $f(x) + f(h)$. For $f(x) = x^2$ with $x = h = 1$: $f(2) = 4$, but $f(1) + 1 = 2$ and $f(1) + f(1) = 2$.",
+    "Dropping parentheses when substituting a negative: $f(-2) = -2^2 = -4$ for $f(x) = x^2$. Write $(-2)^2 = 4$.",
+    "Using $\\ge$ when the root is in a denominator: for $\\frac{1}{\\sqrt{x}}$ writing the domain as $[0, \\infty)$. At $x = 0$ you divide by zero; the domain is $(0, \\infty)$.",
+    "Applying the functions in the wrong order for $f \\circ g$. $f(g(x))$ means $g$ acts first, on the inside.",
+    "Assuming the range equals the domain. $f(x) = x^2$ accepts every real number but only outputs $[0, \\infty)$."
+  ],
+  "whyItMatters": "The derivative is defined as $\\lim_{h \\to 0}\\frac{f(x + h) - f(x)}{h}$, so being able to compute $f(x + h)$ cleanly is the gateway to calculus. Domain determines where an integral even makes sense: $\\int_{-1}^{1}\\frac{dx}{x}$ is not an ordinary integral because 0 is outside the domain. And every $u$-substitution starts by seeing an integrand as a composition $f(g(x))$ and naming the inner function $u$.",
+  "checkYourself": [
+    {
+      "q": "If $f(x) = 3x - 1$, what is $f(a + 1)$?",
+      "a": "$3(a + 1) - 1 = 3a + 2$."
+    },
+    {
+      "q": "Domain of $\\sqrt{6 - 2x}$?",
+      "a": "$6 - 2x \\ge 0$, so $x \\le 3$: $(-\\infty, 3]$."
+    },
+    {
+      "q": "If $f(x) = x^3$ and $g(x) = x - 1$, what is $f(g(x))$?",
+      "a": "$(x - 1)^3$."
+    },
+    {
+      "q": "Range of $f(x) = \\sqrt{x}$?",
+      "a": "$[0, \\infty)$."
+    }
+  ],
+  "readingGuide": [
+    "Practice: for $f(x) = x^2 + 2x$, compute $f(0)$, $f(-3)$, $f(a)$, $f(2a)$, $f(a + 1)$, $f(x + h)$, writing parentheses around each substitution.",
+    "Practice: find the domain of eight functions mixing square roots and denominators; write each in interval notation.",
+    "Practice: simplify $\\frac{f(x+h) - f(x)}{h}$ for $f(x) = 3x + 1$, $f(x) = x^2$, $f(x) = x^2 + 2x$ until the $h$ cancels every time.",
+    "Practice: write $\\sqrt{x^2 + 1}$, $(3x - 2)^5$, and $\\frac{1}{x + 4}$ each as $f(g(x))$, naming the inner and outer functions."
+  ]
+}

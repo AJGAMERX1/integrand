@@ -1,0 +1,90 @@
+{
+  "nodeId": "volumes",
+  "title": "Volumes",
+  "overview": "A loaf of bread is a stack of slices. If you know the area of each slice and how thick it is, the volume is (area) times (thickness), added up over every slice. That is exactly what an integral does. Place the solid along an axis, cut it perpendicular to the axis at position $x$, and call the area of that cross-section $A(x)$. Then\n$$V = \\int_a^b A(x)\\,dx.$$\nThis works for any solid, as long as you can write a formula for $A(x)$.\n\nThe most common solids in this section are **solids of revolution**: take a flat region and spin it around a line. Every cross-section perpendicular to the axis of rotation is then a circle, or a circle with a hole.\n\nIf the region touches the axis, each slice is a solid **disk** of radius $r(x)$, so $A(x) = \\pi\\,r(x)^2$ and\n$$V = \\int_a^b \\pi\\,r(x)^2\\,dx.$$\nIf the region does not touch the axis, each slice is a **washer**: a big disk of outer radius $R(x)$ with a smaller disk of inner radius $r(x)$ removed. Its area is $\\pi R^2 - \\pi r^2$, so\n$$V = \\int_a^b \\pi\\left( R(x)^2 - r(x)^2 \\right) dx.$$\nNote that this is $R^2 - r^2$, not $(R - r)^2$. The hole is subtracted as an area, not as a radius.\n\nThe radius is always measured **from the axis of rotation** to the curve. Rotating about the $x$-axis, the radius is the $y$-value of the curve, so $r(x) = f(x)$ and the slices have thickness $dx$. Rotating about the $y$-axis, you slice horizontally: solve the curve for $x$ in terms of $y$, use that as the radius, and integrate $dy$. Rotating about a line like $y = 3$, the radius is the distance from the curve to that line, which is $3 - f(x)$ or $f(x) - 3$, whichever is positive.\n\nThe habit to build: draw the region, draw the axis, draw one slice, and label its radius or radii before writing a single integral sign.",
+  "keyIdeas": [
+    "General slicing: if the cross-section at position $x$ has area $A(x)$, then $V = \\int_a^b A(x)\\,dx$.",
+    "Disk method (region touches the axis): $V = \\int_a^b \\pi\\,r(x)^2\\,dx$ where $r(x)$ is the distance from the axis to the curve.",
+    "Washer method (region has a gap from the axis): $V = \\int_a^b \\pi\\left(R(x)^2 - r(x)^2\\right) dx$ with $R$ the outer and $r$ the inner radius.",
+    "Slices are perpendicular to the axis of rotation: about the $x$-axis use $dx$ slices, about the $y$-axis use $dy$ slices with curves solved for $x$.",
+    "For an axis like $y = k$, the radius is the vertical distance $|f(x) - k|$, not $f(x)$ itself.",
+    "Always subtract squared radii, never square a difference: $\\pi(R^2 - r^2) \\ne \\pi(R - r)^2$."
+  ],
+  "workedExamples": [
+    {
+      "title": "A disk about the x-axis",
+      "problem": "The region under $y = \\sqrt{x}$ from $x = 0$ to $x = 4$ is rotated about the $x$-axis. Find the volume.",
+      "steps": [
+        "Draw one vertical slice at position $x$. When it spins about the $x$-axis it sweeps out a disk whose radius is the height of the curve: $r(x) = \\sqrt{x}$.",
+        "The region touches the axis (its bottom edge is $y = 0$), so there is no hole. Use disks: $A(x) = \\pi (\\sqrt{x})^2 = \\pi x$.",
+        "Integrate the slice areas: $V = \\int_0^4 \\pi x\\,dx = \\pi \\left[ \\frac{x^2}{2} \\right]_0^4 = 8\\pi$.",
+        "Check the size: the solid fits inside a cylinder of radius 2 and length 4, whose volume is $\\pi \\cdot 4 \\cdot 4 = 16\\pi$. Our answer is half of that, which is plausible for a shape that starts at a point and widens."
+      ]
+    },
+    {
+      "title": "A washer about the x-axis",
+      "problem": "The region between $y = x$ and $y = x^2$ for $0 \\le x \\le 1$ is rotated about the $x$-axis. Find the volume.",
+      "steps": [
+        "On $[0,1]$ the line $y = x$ is above the parabola $y = x^2$ (test $x = \\frac{1}{2}$: $0.5$ versus $0.25$). The region does not touch the axis except at the endpoints, so each slice is a washer.",
+        "Outer radius is the distance from the axis to the upper curve, $R(x) = x$. Inner radius is the distance to the lower curve, $r(x) = x^2$.",
+        "Slice area: $\\pi\\left( R^2 - r^2 \\right) = \\pi\\left( x^2 - x^4 \\right)$.",
+        "Integrate: $V = \\pi \\int_0^1 (x^2 - x^4)\\,dx = \\pi \\left[ \\frac{x^3}{3} - \\frac{x^5}{5} \\right]_0^1 = \\pi \\left( \\frac{1}{3} - \\frac{1}{5} \\right) = \\frac{2\\pi}{15}$.",
+        "Why not $\\pi (x - x^2)^2$? That would be the volume of a disk whose radius is the strip's height, a different and wrong shape. Expanding it gives $x^2 - 2x^3 + x^4$, which has the wrong middle term."
+      ]
+    },
+    {
+      "title": "Rotating about the y-axis",
+      "problem": "The region bounded by $y = x^2$, $y = 9$, and $x = 0$ (in the first quadrant) is rotated about the $y$-axis. Find the volume.",
+      "steps": [
+        "Rotating about the $y$-axis means the slices must be horizontal, each at a height $y$ and with thickness $dy$. The region runs from $y = 0$ to $y = 9$.",
+        "The radius of a slice is its horizontal distance from the $y$-axis to the parabola. Solve $y = x^2$ for $x$: $x = \\sqrt{y}$. So $r(y) = \\sqrt{y}$ and the slice is a solid disk, since the region touches the axis along $x = 0$.",
+        "Slice area: $A(y) = \\pi (\\sqrt{y})^2 = \\pi y$.",
+        "Integrate in $y$: $V = \\int_0^9 \\pi y\\,dy = \\pi \\left[ \\frac{y^2}{2} \\right]_0^9 = \\frac{81\\pi}{2}$.",
+        "Check: the solid is a bowl inside a cylinder of radius 3 and height 9 (volume $81\\pi$), and it fills exactly half of it. For this parabola the half is exact, a nice fact to remember."
+      ]
+    },
+    {
+      "title": "Slicing a solid that is not round",
+      "problem": "A solid has as its base the disk $x^2 + y^2 \\le 1$. Every cross-section perpendicular to the $x$-axis is a square. Find the volume.",
+      "steps": [
+        "No rotation here, so go back to the general formula $V = \\int A(x)\\,dx$. Fix a value of $x$ between $-1$ and $1$ and look at the slice.",
+        "The slice sits on a chord of the circle. At position $x$ the circle has $y = \\pm\\sqrt{1 - x^2}$, so the chord has length $2\\sqrt{1 - x^2}$. That is the side of the square.",
+        "Square area: $A(x) = \\left( 2\\sqrt{1 - x^2} \\right)^2 = 4(1 - x^2)$. Notice the square root disappears, which is why this problem is clean.",
+        "Integrate: $V = \\int_{-1}^{1} 4(1 - x^2)\\,dx = 4 \\left[ x - \\frac{x^3}{3} \\right]_{-1}^{1} = 4 \\left( \\frac{2}{3} + \\frac{2}{3} \\right) = \\frac{16}{3}$.",
+        "Compare: a cube of side 2 sitting on the same disk would have volume 8. The slices shrink toward the edges, so $\\frac{16}{3} \\approx 5.33$ is reasonable."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Squaring a difference instead of subtracting squares. For a washer with $R = 2$ and $r = 1$, the area is $\\pi(4 - 1) = 3\\pi$, but $\\pi(2 - 1)^2 = \\pi$. The second number is wrong.",
+    "Using $f(x)$ as the radius when rotating about $y = 1$ instead of the $x$-axis. The radius is the distance to the axis, $|f(x) - 1|$. For $f(x) = 3$ that distance is 2, not 3.",
+    "Slicing in the wrong direction. Rotating about the $y$-axis requires horizontal slices ($dy$) with the curve solved for $x$. If your integrand still has $x$ in it and you are integrating $dy$, stop and rewrite.",
+    "Forgetting the $\\pi$. Every disk and washer area carries a factor of $\\pi$; leaving it out gives a volume that is off by more than a factor of 3."
+  ],
+  "whyItMatters": "Slicing is the first place where the integral stops being about area and starts being about any quantity that accumulates. The exact same reasoning, \"write one slice as a simple product, then integrate\", gives arc length, surface area, work, fluid pressure, and the probability formulas later on. The disk and washer setups also build the habit of drawing a single representative slice and labelling it, which is the skill that makes cylindrical shells and triple integrals feel natural later.",
+  "checkYourself": [
+    {
+      "q": "The region under $y = 2$ from $x = 0$ to $x = 5$ is rotated about the $x$-axis. What solid is this, and what is its volume?",
+      "a": "A cylinder of radius 2 and length 5. $V = \\int_0^5 \\pi \\cdot 4\\,dx = 20\\pi$, matching $\\pi r^2 h$."
+    },
+    {
+      "q": "For the region between $y = x^2$ and $y = 4$ rotated about the $x$-axis, what are $R(x)$ and $r(x)$?",
+      "a": "$R(x) = 4$ (the line is farther from the axis) and $r(x) = x^2$. The slice area is $\\pi(16 - x^4)$."
+    },
+    {
+      "q": "Why does rotating about the $y$-axis change $dx$ to $dy$?",
+      "a": "Slices must be perpendicular to the axis of rotation. Perpendicular to the $y$-axis means horizontal slices, which have thickness $dy$."
+    },
+    {
+      "q": "A solid has square cross-sections of side $x$ for $0 \\le x \\le 3$. What is its volume?",
+      "a": "$V = \\int_0^3 x^2\\,dx = 9$."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of volume by cross-sectional area and write in your own words why multiplying $A(x)$ by a thickness gives a slice's volume.",
+    "Before reading the solution of the first example about a sphere, try to set it up yourself: what is the radius of a slice at position $x$?",
+    "Locate where the washer method first appears and notice exactly how the inner disk is removed (subtract areas, not radii).",
+    "Pay attention to any example that rotates about a line other than an axis. Write down how the radius expression changes.",
+    "Look for an example whose cross-sections are not circles and compare it with the square-slice example above."
+  ]
+}

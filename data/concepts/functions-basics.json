@@ -1,0 +1,89 @@
+{
+  "nodeId": "functions-basics",
+  "title": "Four Ways to Represent a Function",
+  "overview": "A function is a rule that assigns to each input exactly one output. That single sentence is the whole definition, and everything in this section is about recognizing it in different costumes. The same function can be given four ways: **verbally** (a description in words, \"the area of a circle of radius $r$\"), **numerically** (a table of input-output pairs), **visually** (a graph), and **algebraically** (a formula, $A(r) = \\pi r^2$). Calculus will ask you to move between these freely: to read a rate off a graph, to turn a table into an estimate, to translate a sentence into a formula you can differentiate.\n\nThe set of allowed inputs is the **domain**; the set of outputs that actually occur is the **range**. When only a formula is given, the domain is every real number for which the formula makes sense, which usually means avoiding division by zero and even roots of negatives. When a function models something real, the domain is also limited by the situation: a radius cannot be negative, a population cannot be fractional. Get in the habit of stating the domain before doing anything else.\n\nThe **graph** of $f$ is the set of all points $(x, f(x))$. The height of the graph above (or below) a point $x$ on the horizontal axis is the output $f(x)$. Because each input has only one output, no vertical line can cross the graph more than once; this **vertical line test** is how you tell at a glance whether a curve is the graph of a function. A circle fails it, which is why $x^2 + y^2 = 1$ is not a function of $x$ but its upper half $y = \\sqrt{1 - x^2}$ is.\n\nSome functions are defined by different formulas on different parts of the domain. These **piecewise** functions are written with a brace and a condition on each line, and to evaluate one you first decide which condition your input satisfies, then use that line's formula. The absolute value function is the simplest example: $|x|$ equals $x$ when $x \\ge 0$ and $-x$ when $x < 0$. Its graph is a V with a corner at the origin. Step functions, tax brackets, and shipping rates are all piecewise.\n\nTwo kinds of symmetry save work. A function is **even** if $f(-x) = f(x)$; its graph is symmetric about the $y$-axis, like $x^2$ and $\\cos x$. It is **odd** if $f(-x) = -f(x)$; its graph is symmetric through the origin, like $x^3$ and $\\sin x$. A function is **increasing** on an interval if its graph rises as you move right, that is $f(x_1) < f(x_2)$ whenever $x_1 < x_2$ there, and **decreasing** if it falls. Finding exactly where a function increases and decreases is one of the main jobs of the derivative, so notice now how these words match the picture.",
+  "keyIdeas": [
+    "A function assigns exactly one output $f(x)$ to each input $x$ in its domain; the range is the set of outputs that occur.",
+    "The same function can be represented by words, a table, a graph, or a formula, and calculus moves between all four.",
+    "The natural domain of a formula excludes inputs that divide by zero or take an even root of a negative; a model's domain is also limited by its meaning.",
+    "Vertical line test: a curve is the graph of a function exactly when every vertical line meets it at most once.",
+    "A piecewise function uses different formulas on different parts of the domain; pick the line whose condition the input satisfies.",
+    "Even: $f(-x) = f(x)$, symmetric about the $y$-axis. Odd: $f(-x) = -f(x)$, symmetric through the origin.",
+    "Increasing on an interval means $f(x_1) < f(x_2)$ whenever $x_1 < x_2$ in that interval; decreasing is the reverse."
+  ],
+  "workedExamples": [
+    {
+      "title": "From words to a formula with a domain",
+      "problem": "A rectangular garden has a perimeter of 40 meters. Express its area as a function of its width $w$ and state the domain.",
+      "steps": [
+        "Name the other dimension. With width $w$ and length $\\ell$, the perimeter is $2w + 2\\ell = 40$, so $\\ell = 20 - w$.",
+        "Area is width times length: $A(w) = w(20 - w) = 20w - w^2$.",
+        "Domain from the situation: both dimensions must be positive, so $w > 0$ and $20 - w > 0$, giving $0 < w < 20$.",
+        "Check a value: $w = 5$ gives $\\ell = 15$ and $A = 75$, and the formula gives $100 - 25 = 75$. Correct. (Later, calculus will show the maximum area is at $w = 10$.)"
+      ]
+    },
+    {
+      "title": "Evaluating and graphing a piecewise function",
+      "problem": "Let $f(x) = x + 2$ for $x < 1$ and $f(x) = 4 - x^2$ for $x \\ge 1$. Find $f(-3)$, $f(1)$, $f(2)$, and describe the graph near $x = 1$.",
+      "steps": [
+        "$f(-3)$: since $-3 < 1$, use the first line: $-3 + 2 = -1$.",
+        "$f(1)$: since $1 \\ge 1$, use the second line: $4 - 1 = 3$.",
+        "$f(2)$: $2 \\ge 1$, second line: $4 - 4 = 0$.",
+        "Near $x = 1$: the first piece approaches $1 + 2 = 3$ from the left, and the second piece starts at $f(1) = 3$. The two pieces meet, so the graph has no jump there; it changes from a line of slope 1 to a downward parabola."
+      ]
+    },
+    {
+      "title": "Domain of a formula",
+      "problem": "Find the domain of $g(t) = \\dfrac{\\sqrt{t + 3}}{t^2 - 4}$.",
+      "steps": [
+        "The square root requires $t + 3 \\ge 0$, so $t \\ge -3$.",
+        "The denominator requires $t^2 - 4 \\ne 0$, so $t \\ne 2$ and $t \\ne -2$.",
+        "Combine: $t \\ge -3$ with $t = -2$ and $t = 2$ removed. In interval notation: $[-3, -2) \\cup (-2, 2) \\cup (2, \\infty)$.",
+        "Check the endpoint: $t = -3$ gives $\\frac{0}{5} = 0$, fine, so $-3$ is included."
+      ]
+    },
+    {
+      "title": "Symmetry and the vertical line test",
+      "problem": "Is $f(x) = \\dfrac{x}{x^2 + 1}$ even, odd, or neither? And is the curve $x = y^2$ the graph of a function of $x$?",
+      "steps": [
+        "Compute $f(-x) = \\frac{-x}{(-x)^2 + 1} = \\frac{-x}{x^2 + 1} = -f(x)$. So $f$ is odd and its graph is symmetric through the origin.",
+        "Check with a number: $f(1) = \\frac{1}{2}$ and $f(-1) = -\\frac{1}{2}$. Consistent.",
+        "For $x = y^2$: the input $x = 4$ gives $y = 2$ and $y = -2$, two outputs. The vertical line $x = 4$ hits the curve twice, so it fails the test.",
+        "It is not the graph of a function of $x$. Its upper half, $y = \\sqrt{x}$, is."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Reading $f(x)$ as $f$ times $x$. It is the output of $f$ at $x$: if $f(x) = x^2$ then $f(3) = 9$, not $3f$.",
+    "Using the wrong piece of a piecewise function at the boundary. Check the inequality carefully: with \"$x \\ge 1$\" on the second line, $x = 1$ uses the second formula.",
+    "Ignoring the real-world domain. $A(w) = 20w - w^2$ makes sense algebraically for every $w$, but a garden needs $0 < w < 20$.",
+    "Declaring a function even because it has only even-looking terms, like $f(x) = x^2 + x$. Compute $f(-x) = x^2 - x$, which is neither $f(x)$ nor $-f(x)$.",
+    "Thinking the horizontal line test is the function test. Vertical lines test whether a curve is a function; horizontal lines test whether it is one-to-one (used later for inverses)."
+  ],
+  "whyItMatters": "Everything you integrate is a function, and the integral $\\int_a^b f(x)\\,dx$ only makes sense when $[a, b]$ lies inside the domain. Piecewise functions are integrated piece by piece, splitting the interval where the formula changes. Even and odd symmetry cut integrals over $[-a, a]$ in half or kill them outright. And the words \"increasing\" and \"decreasing\" are the first thing the derivative will tell you about a graph.",
+  "checkYourself": [
+    {
+      "q": "Domain of $f(x) = \\frac{1}{\\sqrt{x - 2}}$?",
+      "a": "$(2, \\infty)$; the root needs $x \\ge 2$ and the denominator forbids $x = 2$."
+    },
+    {
+      "q": "If $f(x) = 3$ for $x < 0$ and $f(x) = x^2$ for $x \\ge 0$, what is $f(0)$ and $f(-5)$?",
+      "a": "$f(0) = 0$, $f(-5) = 3$."
+    },
+    {
+      "q": "Is $f(x) = x^4 - x^2$ even, odd, or neither?",
+      "a": "Even: $f(-x) = f(x)$."
+    },
+    {
+      "q": "Does a vertical line crossing a curve twice mean it is not a function?",
+      "a": "Yes: that input would have two outputs."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of a function and of domain and range, and write each in your own words with one example of your own.",
+    "Locate the four representations and, for one example in the text, identify which representation it starts from and which it converts to.",
+    "Before reading the solution of the first example that builds a formula from a word description, set it up yourself and compare, including the domain.",
+    "Find the vertical line test and the discussion of piecewise functions; sketch the absolute value function from its two-line definition.",
+    "Look for the definitions of even, odd, increasing, and decreasing, and test each on $x^3$ and $x^2$."
+  ]
+}

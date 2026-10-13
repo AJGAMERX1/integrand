@@ -1,0 +1,86 @@
+{
+  "nodeId": "max-min-values",
+  "title": "Maximum and Minimum Values",
+  "overview": "Many of the most useful questions in science and business are \"what is the biggest?\" or \"what is the smallest?\": the highest point a projectile reaches, the least material for a can of given volume, the maximum profit. Calculus answers these with a simple observation: at a peak or a valley of a smooth graph, the tangent line is horizontal, so the derivative is zero. This section makes that observation precise and turns it into a procedure.\n\nSome vocabulary first. A function has an **absolute maximum** at $c$ if $f(c) \\ge f(x)$ for every $x$ in its domain, and an **absolute minimum** if $f(c) \\le f(x)$ for every $x$. It has a **local maximum** at $c$ if $f(c) \\ge f(x)$ for all $x$ near $c$, the top of some hill even if higher hills exist elsewhere; local minimum similarly. The absolute values are the overall best; the local ones are the best in a neighborhood. A function need not have any of these: $f(x) = x$ on all real numbers has no maximum or minimum, and $f(x) = x^2$ on the open interval $(0, 1)$ has neither, since the would-be extremes at the endpoints are excluded.\n\nThe **Extreme Value Theorem** guarantees existence under two conditions: if $f$ is **continuous** on a **closed** interval $[a, b]$, then it attains both an absolute maximum and an absolute minimum there. Both hypotheses matter; a jump or an open endpoint can let the extreme escape.\n\n**Fermat's Theorem** says where to look: if $f$ has a local maximum or minimum at $c$ and $f'(c)$ exists, then $f'(c) = 0$. The converse is false, since $f(x) = x^3$ has $f'(0) = 0$ but no extreme at 0, and extremes can also occur where $f'$ does not exist, as with $|x|$ at 0. So define a **critical number** of $f$ to be a number $c$ in the domain where $f'(c) = 0$ or $f'(c)$ does not exist. Every local extreme occurs at a critical number, though not every critical number gives an extreme.\n\nFor an absolute extreme on a closed interval, there are only two kinds of candidates: critical numbers inside the interval and the two endpoints. That gives the **closed interval method**: find the critical numbers of $f$ in $(a, b)$, evaluate $f$ at each of them and at $a$ and $b$, and the largest of those values is the absolute maximum, the smallest the absolute minimum. No further analysis is needed; you do not have to know which critical numbers are peaks and which are valleys, because you are comparing the actual function values.\n\nThis method is the first complete optimization tool in calculus. The next sections refine it: the Mean Value Theorem explains why the derivative controls the shape of the graph, the first and second derivative tests classify critical numbers without an interval, and optimization problems show how to build the function to be maximized from a word problem.",
+  "keyIdeas": [
+    "Absolute maximum/minimum: the largest/smallest value over the whole domain. Local maximum/minimum: the largest/smallest value in some neighborhood.",
+    "Extreme Value Theorem: a continuous function on a closed interval $[a, b]$ attains an absolute maximum and an absolute minimum.",
+    "Fermat's Theorem: if $f$ has a local extreme at $c$ and $f'(c)$ exists, then $f'(c) = 0$. The converse fails ($x^3$ at 0).",
+    "A critical number is a $c$ in the domain where $f'(c) = 0$ or $f'(c)$ does not exist; all local extremes occur at critical numbers.",
+    "Closed interval method: evaluate $f$ at the critical numbers in $(a, b)$ and at $a$ and $b$; the largest value is the absolute max, the smallest the absolute min.",
+    "Open intervals or discontinuities can prevent extremes from existing; always check the hypotheses."
+  ],
+  "workedExamples": [
+    {
+      "title": "Closed interval method with a polynomial",
+      "problem": "Find the absolute maximum and minimum of $f(x) = x^3 - 3x^2 + 1$ on $[-1, 4]$.",
+      "steps": [
+        "$f$ is a polynomial, continuous on the closed interval, so both extremes exist. Critical numbers: $f'(x) = 3x^2 - 6x = 3x(x - 2) = 0$ at $x = 0$ and $x = 2$, both inside $(-1, 4)$.",
+        "Evaluate at critical numbers: $f(0) = 1$, $f(2) = 8 - 12 + 1 = -3$.",
+        "Evaluate at endpoints: $f(-1) = -1 - 3 + 1 = -3$, $f(4) = 64 - 48 + 1 = 17$.",
+        "Compare $\\{1, -3, -3, 17\\}$: absolute maximum 17 at $x = 4$; absolute minimum $-3$, attained at both $x = 2$ and $x = -1$."
+      ]
+    },
+    {
+      "title": "A critical number where the derivative does not exist",
+      "problem": "Find the critical numbers of $f(x) = x^{2/3}(x - 5)$ and the absolute extremes on $[-1, 8]$.",
+      "steps": [
+        "Expand: $f(x) = x^{5/3} - 5x^{2/3}$. Then $f'(x) = \\frac{5}{3}x^{2/3} - \\frac{10}{3}x^{-1/3} = \\frac{5}{3}x^{-1/3}(x - 2) = \\frac{5(x - 2)}{3\\sqrt[3]{x}}$.",
+        "$f' = 0$ at $x = 2$; $f'$ does not exist at $x = 0$ (division by zero), and 0 is in the domain. Critical numbers: 0 and 2.",
+        "Evaluate: $f(0) = 0$; $f(2) = 2^{2/3}(-3) \\approx 1.587\\cdot(-3) \\approx -4.76$; $f(-1) = (1)(-6) = -6$; $f(8) = 4\\cdot 3 = 12$.",
+        "Absolute maximum 12 at $x = 8$; absolute minimum $-6$ at $x = -1$. The point $x = 0$ is a local maximum (a cusp) with value 0, but not the absolute maximum."
+      ]
+    },
+    {
+      "title": "A trig function on a closed interval",
+      "problem": "Find the absolute extremes of $f(x) = x - 2\\sin x$ on $[0, \\pi]$.",
+      "steps": [
+        "$f'(x) = 1 - 2\\cos x = 0$ when $\\cos x = \\frac{1}{2}$, so $x = \\frac{\\pi}{3}$ in $[0, \\pi]$.",
+        "Evaluate: $f\\left(\\frac{\\pi}{3}\\right) = \\frac{\\pi}{3} - 2\\cdot\\frac{\\sqrt{3}}{2} = \\frac{\\pi}{3} - \\sqrt{3} \\approx 1.047 - 1.732 = -0.685$.",
+        "Endpoints: $f(0) = 0$, $f(\\pi) = \\pi - 0 \\approx 3.142$.",
+        "Absolute maximum $\\pi$ at $x = \\pi$; absolute minimum $\\frac{\\pi}{3} - \\sqrt{3}$ at $x = \\frac{\\pi}{3}$."
+      ]
+    },
+    {
+      "title": "When the theorem does not apply",
+      "problem": "Does $f(x) = \\dfrac{1}{x}$ have an absolute maximum or minimum on $(0, 1]$? On $[1, 3]$?",
+      "steps": [
+        "On $(0, 1]$: the interval is not closed at 0, and as $x \\to 0^+$, $f(x) \\to \\infty$. There is no maximum. The minimum is $f(1) = 1$ (the function is decreasing, so the right endpoint is lowest).",
+        "On $[1, 3]$: closed interval, $f$ continuous there, so both exist. $f'(x) = -\\frac{1}{x^2}$ is never zero and exists throughout, so there are no critical numbers.",
+        "Only the endpoints are candidates: $f(1) = 1$ and $f(3) = \\frac{1}{3}$. Maximum 1 at $x = 1$, minimum $\\frac{1}{3}$ at $x = 3$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Assuming every critical number is a maximum or minimum. $f(x) = x^3$ has the critical number 0, where the graph just flattens and keeps rising.",
+    "Forgetting the endpoints in the closed interval method. The absolute maximum of $x^3 - 3x^2 + 1$ on $[-1, 4]$ is at the endpoint 4, not at a critical number.",
+    "Ignoring points where $f'$ does not exist. $|x|$ has its minimum at 0, where there is no derivative; cusps and corners are critical numbers too.",
+    "Listing a critical number outside the interval or outside the domain. $\\frac{1}{x}$ has no critical number at 0 because 0 is not in its domain.",
+    "Reporting the $x$-value when the question asks for the maximum value, or the reverse. The maximum value is $f(c)$; it occurs at $x = c$."
+  ],
+  "whyItMatters": "Finding where a derivative is zero is also how you locate where an integrand changes sign, which you need before computing areas between curves or total distance from a velocity. The Extreme Value Theorem is a step in proving that continuous functions are integrable, and the maximum of $|f''|$ or $|f^{(4)}|$ on an interval is exactly what the error bounds for the Trapezoidal and Simpson's rules require you to find in Chapter 7. The same critical-number idea recurs in optimizing integrals themselves.",
+  "checkYourself": [
+    {
+      "q": "Critical numbers of $f(x) = x^2 - 4x$?",
+      "a": "$f' = 2x - 4 = 0$ at $x = 2$."
+    },
+    {
+      "q": "Absolute max of $f(x) = x^2$ on $[-2, 1]$?",
+      "a": "4, at $x = -2$ (an endpoint)."
+    },
+    {
+      "q": "Is $x = 0$ a critical number of $f(x) = |x|$?",
+      "a": "Yes; $f'(0)$ does not exist."
+    },
+    {
+      "q": "Does $f(x) = x$ have an absolute maximum on $(0, 1)$?",
+      "a": "No; the interval is open."
+    }
+  ],
+  "readingGuide": [
+    "Find the definitions of absolute and local extremes and the figure illustrating them; identify each type on the sketch.",
+    "Locate the Extreme Value Theorem and the examples showing why continuity and a closed interval are both needed.",
+    "Find Fermat's Theorem and the examples showing that its converse is false and that extremes can occur where $f'$ fails to exist.",
+    "Write the definition of a critical number in your own words, then find the closed interval method and apply it to one example before reading the solution."
+  ]
+}

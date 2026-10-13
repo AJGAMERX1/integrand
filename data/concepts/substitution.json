@@ -1,0 +1,88 @@
+{
+  "nodeId": "substitution",
+  "title": "The Substitution Rule",
+  "overview": "The chain rule says $\\frac{d}{dx}F(g(x)) = F'(g(x))\\,g'(x)$. Read backwards, that is an integration rule: whenever an integrand has the form \"a function of an inner expression, times the derivative of that inner expression,\" the integral is the outer antiderivative evaluated at the inner expression. The **Substitution Rule** packages this as a change of variable. Let $u = g(x)$ and $du = g'(x)\\,dx$; then\n$$\\int f(g(x))\\,g'(x)\\,dx = \\int f(u)\\,du.$$\nFor $\\int 2x\\cos(x^2)\\,dx$, set $u = x^2$, so $du = 2x\\,dx$, and the integral becomes $\\int\\cos u\\,du = \\sin u + C = \\sin(x^2) + C$. Check: $\\frac{d}{dx}\\sin(x^2) = 2x\\cos(x^2)$.\n\nThe art is choosing $u$. Look for an inner function whose derivative (up to a constant factor) also appears in the integrand: the inside of a power, a root, an exponential, a trig function, or the denominator of a fraction. Then compute $du$ and rewrite **every** $x$, including $dx$, in terms of $u$. If the integrand has $du$ off by a constant, fix it with a constant: for $\\int x e^{x^2}\\,dx$, $u = x^2$ gives $du = 2x\\,dx$, so $x\\,dx = \\frac{1}{2}du$ and the integral is $\\frac{1}{2}\\int e^u\\,du = \\frac{1}{2}e^{x^2} + C$. You may move constants across the integral sign, but never a factor containing $x$. If after substituting there is still an $x$ left over that you cannot express in terms of $u$, the substitution does not work; try a different $u$.\n\nTwo patterns deserve names. The linear substitution $u = ax + b$ gives $\\int f(ax + b)\\,dx = \\frac{1}{a}F(ax + b) + C$, so $\\int\\cos(3x)\\,dx = \\frac{1}{3}\\sin(3x) + C$ and $\\int e^{-2x}\\,dx = -\\frac{1}{2}e^{-2x} + C$. And the log pattern: $\\int\\frac{g'(x)}{g(x)}\\,dx = \\ln|g(x)| + C$, so $\\int\\tan x\\,dx = \\int\\frac{\\sin x}{\\cos x}\\,dx$ with $u = \\cos x$ becomes $-\\ln|\\cos x| + C$.\n\nFor **definite** integrals there are two correct procedures. Either find the antiderivative in terms of $x$ (substitute back) and then use the original limits, or **change the limits** along with the variable: if $u = g(x)$, then $x = a$ becomes $u = g(a)$ and $x = b$ becomes $u = g(b)$, and\n$$\\int_a^b f(g(x))\\,g'(x)\\,dx = \\int_{g(a)}^{g(b)}f(u)\\,du.$$\nChanging the limits is cleaner and avoids substituting back; the one rule is that once you switch to $u$-limits you must never substitute $x$ back in. For $\\int_0^2 x e^{x^2}\\,dx$ with $u = x^2$: the limits become $0$ and $4$, and the integral is $\\frac{1}{2}\\int_0^4 e^u\\,du = \\frac{1}{2}(e^4 - 1)$.\n\nSymmetry can save work in definite integrals. If $f$ is even, $\\int_{-a}^{a}f(x)\\,dx = 2\\int_0^a f(x)\\,dx$; if $f$ is odd, $\\int_{-a}^{a}f(x)\\,dx = 0$. Both follow from the substitution $u = -x$ on the left half. Recognizing that $\\int_{-\\pi}^{\\pi}x^3\\cos x\\,dx = 0$ without computing anything is the kind of shortcut this section rewards.",
+  "keyIdeas": [
+    "Substitution reverses the chain rule: with $u = g(x)$ and $du = g'(x)\\,dx$, $\\int f(g(x))g'(x)\\,dx = \\int f(u)\\,du$.",
+    "Choose $u$ as an inner function whose derivative appears (up to a constant) elsewhere in the integrand; rewrite every $x$ and $dx$ in terms of $u$.",
+    "Fix a missing constant factor with a constant outside the integral; never move a factor containing $x$ outside.",
+    "Linear substitution: $\\int f(ax + b)\\,dx = \\frac{1}{a}F(ax + b) + C$. Log pattern: $\\int\\frac{g'(x)}{g(x)}\\,dx = \\ln|g(x)| + C$.",
+    "Definite integrals: change the limits to $u = g(a)$ and $u = g(b)$ and never substitute back, or substitute back and use the original limits.",
+    "Symmetry: for even $f$, $\\int_{-a}^{a}f = 2\\int_0^a f$; for odd $f$, $\\int_{-a}^{a}f = 0$.",
+    "Always check an indefinite integral by differentiating."
+  ],
+  "workedExamples": [
+    {
+      "title": "A power of an inner function",
+      "problem": "Find $\\displaystyle\\int x^2\\sqrt{x^3 + 1}\\,dx$.",
+      "steps": [
+        "The root is wrapped around $x^3 + 1$, whose derivative $3x^2$ matches the $x^2$ outside up to a constant. Let $u = x^3 + 1$, $du = 3x^2\\,dx$, so $x^2\\,dx = \\frac{1}{3}du$.",
+        "Rewrite: $\\int\\sqrt{u}\\cdot\\frac{1}{3}\\,du = \\frac{1}{3}\\int u^{1/2}\\,du$.",
+        "Integrate: $\\frac{1}{3}\\cdot\\frac{u^{3/2}}{3/2} = \\frac{2}{9}u^{3/2}$.",
+        "Substitute back: $\\frac{2}{9}(x^3 + 1)^{3/2} + C$. Check: derivative is $\\frac{2}{9}\\cdot\\frac{3}{2}(x^3 + 1)^{1/2}\\cdot 3x^2 = x^2\\sqrt{x^3 + 1}$. Correct."
+      ]
+    },
+    {
+      "title": "Definite integral with changed limits",
+      "problem": "Evaluate $\\displaystyle\\int_0^{\\pi/4}\\tan x\\sec^2 x\\,dx$.",
+      "steps": [
+        "Let $u = \\tan x$, so $du = \\sec^2 x\\,dx$, which is exactly the rest of the integrand.",
+        "Change the limits: $x = 0$ gives $u = \\tan 0 = 0$; $x = \\frac{\\pi}{4}$ gives $u = \\tan\\frac{\\pi}{4} = 1$.",
+        "The integral becomes $\\int_0^1 u\\,du = \\left[\\frac{u^2}{2}\\right]_0^1 = \\frac{1}{2}$.",
+        "(Alternative with $u = \\sec x$, $du = \\sec x\\tan x\\,dx$: the integral is $\\int_1^{\\sqrt{2}}u\\,du = \\frac{2 - 1}{2} = \\frac{1}{2}$. Same answer, as it must be.)"
+      ]
+    },
+    {
+      "title": "The log pattern",
+      "problem": "Find $\\displaystyle\\int\\frac{x}{x^2 + 4}\\,dx$ and $\\displaystyle\\int\\frac{e^x}{e^x + 1}\\,dx$.",
+      "steps": [
+        "First: the derivative of the denominator $x^2 + 4$ is $2x$, and the numerator is $x$. Let $u = x^2 + 4$, $du = 2x\\,dx$, $x\\,dx = \\frac{1}{2}du$: $\\frac{1}{2}\\int\\frac{du}{u} = \\frac{1}{2}\\ln|u| = \\frac{1}{2}\\ln(x^2 + 4) + C$ (no absolute value needed since $x^2 + 4 > 0$).",
+        "Second: the derivative of $e^x + 1$ is $e^x$, exactly the numerator. Let $u = e^x + 1$, $du = e^x\\,dx$: $\\int\\frac{du}{u} = \\ln(e^x + 1) + C$.",
+        "Check the first: $\\frac{d}{dx}\\frac{1}{2}\\ln(x^2 + 4) = \\frac{1}{2}\\cdot\\frac{2x}{x^2 + 4} = \\frac{x}{x^2 + 4}$. Correct."
+      ]
+    },
+    {
+      "title": "When a leftover x must be rewritten",
+      "problem": "Find $\\displaystyle\\int x\\sqrt{x + 2}\\,dx$.",
+      "steps": [
+        "Let $u = x + 2$, $du = dx$. The root becomes $\\sqrt{u}$, but an $x$ remains. Since $u = x + 2$, we have $x = u - 2$, so rewrite the leftover.",
+        "Integral: $\\int(u - 2)\\sqrt{u}\\,du = \\int\\left(u^{3/2} - 2u^{1/2}\\right)du$.",
+        "Integrate: $\\frac{u^{5/2}}{5/2} - 2\\cdot\\frac{u^{3/2}}{3/2} = \\frac{2}{5}u^{5/2} - \\frac{4}{3}u^{3/2}$.",
+        "Substitute back: $\\frac{2}{5}(x + 2)^{5/2} - \\frac{4}{3}(x + 2)^{3/2} + C$. Check at a point: the derivative is $(x + 2)^{3/2} - 2(x + 2)^{1/2} = (x + 2)^{1/2}\\left((x + 2) - 2\\right) = x\\sqrt{x + 2}$. Correct."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Forgetting to convert $dx$. In $\\int\\cos(3x)\\,dx$ with $u = 3x$, $dx = \\frac{1}{3}du$; omitting the $\\frac{1}{3}$ gives $\\sin(3x)$, whose derivative is $3\\cos(3x)$, three times too big.",
+    "Pulling an $x$ outside the integral sign: writing $\\int x e^{x^2}\\,dx = x\\int e^{x^2}\\,dx$. Only constants may be moved out.",
+    "Mixing $x$-limits with a $u$-integral, as in $\\int_0^2 e^u\\,du$ after $u = x^2$. Convert the limits to $u = 0$ and $u = 4$, or substitute back first.",
+    "Leaving the answer in terms of $u$ for an indefinite integral. The original variable was $x$; substitute back.",
+    "Choosing $u$ to be the whole integrand or the outer function. $u$ should be the inner expression whose derivative is present."
+  ],
+  "whyItMatters": "Substitution is your Daily Integral tier I4 and the most frequently used technique in all of integration; most integrals in Chapters 6 through 9 contain at least one substitution step, and integration by parts, trig substitution, and partial fractions all finish with one. The change-of-limits rule is the one-dimensional case of the change of variables used for areas and volumes in multivariable calculus. And recognizing $\\frac{g'}{g}$ as a log is the key to separable differential equations.",
+  "checkYourself": [
+    {
+      "q": "$\\int e^{5x}\\,dx$?",
+      "a": "$\\frac{1}{5}e^{5x} + C$."
+    },
+    {
+      "q": "$\\int 2x(x^2 + 1)^4\\,dx$?",
+      "a": "$u = x^2 + 1$: $\\frac{(x^2 + 1)^5}{5} + C$."
+    },
+    {
+      "q": "New limits for $\\int_1^3 2x\\,e^{x^2}\\,dx$ with $u = x^2$?",
+      "a": "From $u = 1$ to $u = 9$; value $e^9 - e$."
+    },
+    {
+      "q": "$\\int_{-2}^{2}x^5\\,dx$?",
+      "a": "0; odd integrand on a symmetric interval."
+    }
+  ],
+  "readingGuide": [
+    "Find the statement of the Substitution Rule and the explanation connecting it to the chain rule; write the connection in one sentence.",
+    "Before reading the solution of the first example, choose $u$, compute $du$, and carry out the substitution yourself.",
+    "Look for an example where the constant factor must be adjusted, and one where a leftover $x$ must be rewritten in terms of $u$.",
+    "Find the rule for definite integrals with changed limits and redo one example both ways (changing limits, and substituting back).",
+    "Find the discussion of integrals of even and odd functions on symmetric intervals and the figure that explains it."
+  ]
+}

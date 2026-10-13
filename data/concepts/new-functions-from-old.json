@@ -1,0 +1,87 @@
+{
+  "nodeId": "new-functions-from-old",
+  "title": "New Functions from Old Functions",
+  "overview": "Most functions you will integrate are built from a handful of basic ones by three kinds of construction: transforming (shift, stretch, reflect), combining with arithmetic (add, subtract, multiply, divide), and composing (feed one function's output into another). Learning to see a complicated formula as a construction from simple pieces is the skill that makes the chain rule and substitution possible, so this section is less about new facts and more about a way of looking.\n\n**Transformations** were covered in the ramp: $f(x) + c$ shifts up, $f(x - c)$ shifts right, $cf(x)$ stretches vertically, $f(cx)$ squeezes horizontally, and a minus sign reflects (outside across the $x$-axis, inside across the $y$-axis). A combined formula like $y = 2\\sqrt{x + 1} - 3$ is read from the inside out: start with $\\sqrt{x}$, shift left 1, stretch by 2, shift down 3. Track where the starting point $(0, 0)$ goes, to $(-1, -3)$, and the rest of the sketch follows.\n\n**Arithmetic combinations** are defined pointwise: $(f + g)(x) = f(x) + g(x)$, $(fg)(x) = f(x)g(x)$, and $\\left(\\frac{f}{g}\\right)(x) = \\frac{f(x)}{g(x)}$. The domain of a sum or product is the overlap of the two domains; a quotient also excludes the points where $g(x) = 0$. If $f(x) = \\sqrt{x}$ and $g(x) = \\sqrt{4 - x}$, then $f + g$ is defined only on $[0, 4]$ where both roots make sense.\n\n**Composition** is the important one. $(f \\circ g)(x) = f(g(x))$ means: apply $g$ to $x$ first, then apply $f$ to the result. The domain of $f \\circ g$ is the set of $x$ in the domain of $g$ for which $g(x)$ lands in the domain of $f$. Order matters: with $f(x) = x^2$ and $g(x) = x + 1$, $f(g(x)) = (x + 1)^2$ but $g(f(x)) = x^2 + 1$. Reading a formula as a composition is called **decomposing** it: $\\sqrt{x^2 + 9}$ is $f(g(x))$ with the inner function $g(x) = x^2 + 9$ and the outer function $f(u) = \\sqrt{u}$. There can be several layers, as in $\\sin^2(3x)$, which is \"square\" after \"sine\" after \"triple.\"\n\nA reliable way to find the inner function is to ask: if I were evaluating this at a number, what would I compute first? For $e^{-x^2}$ you would square $x$, then negate, then exponentiate, so the innermost piece is $x^2$, and the outer function is $e^{-u}$ (or you can go one layer deeper: $u = -x^2$ and $e^u$). Both decompositions are correct; what matters is that you can name an inside and an outside.\n\nFinally, a composition can also be undone from the inside. If you know a graph has the shape of $f(x) = x^2$ but has been squeezed and shifted, you can write it as $f(2x - 3)$ and recover each step. This back-and-forth between a formula and its construction history is what the next chapters build on.",
+  "keyIdeas": [
+    "Transformations: $f(x) + c$ (up), $f(x - c)$ (right), $cf(x)$ (vertical stretch), $f(cx)$ (horizontal squeeze), $-f(x)$ and $f(-x)$ (reflections); read combined formulas from the inside out.",
+    "$(f + g)(x) = f(x) + g(x)$, $(fg)(x) = f(x)g(x)$, $(f/g)(x) = f(x)/g(x)$; domains are the overlap, minus zeros of $g$ for a quotient.",
+    "$(f \\circ g)(x) = f(g(x))$: apply $g$ first, then $f$. In general $f \\circ g \\ne g \\circ f$.",
+    "The domain of $f \\circ g$ is the set of $x$ in the domain of $g$ with $g(x)$ in the domain of $f$.",
+    "To decompose, ask what you would compute first at a number; that is the inner function.",
+    "A formula can have several layers of composition, and naming the inside and outside is the setup for the chain rule and substitution."
+  ],
+  "workedExamples": [
+    {
+      "title": "Composing in both orders with domains",
+      "problem": "Let $f(x) = \\sqrt{x}$ and $g(x) = x - 4$. Find $f \\circ g$ and $g \\circ f$ with their domains.",
+      "steps": [
+        "$(f \\circ g)(x) = f(g(x)) = f(x - 4) = \\sqrt{x - 4}$. For this to make sense, $x - 4 \\ge 0$, so the domain is $[4, \\infty)$.",
+        "$(g \\circ f)(x) = g(f(x)) = g(\\sqrt{x}) = \\sqrt{x} - 4$. Here the only requirement is $x \\ge 0$, so the domain is $[0, \\infty)$.",
+        "The two compositions are different functions with different domains. Check at $x = 9$: $f(g(9)) = \\sqrt{5} \\approx 2.24$ while $g(f(9)) = 3 - 4 = -1$."
+      ]
+    },
+    {
+      "title": "Decomposing a formula",
+      "problem": "Write $h(x) = (x^3 + 2x)^5$ and $k(x) = \\cos(\\sqrt{x})$ each as a composition $f(g(x))$.",
+      "steps": [
+        "For $h$: evaluating at a number, you would first compute $x^3 + 2x$, then raise to the 5th power. So $g(x) = x^3 + 2x$ (inner) and $f(u) = u^5$ (outer).",
+        "Check: $f(g(x)) = (x^3 + 2x)^5 = h(x)$.",
+        "For $k$: first take the square root, then the cosine. So $g(x) = \\sqrt{x}$ and $f(u) = \\cos u$.",
+        "Preview: the chain rule will say $h'(x) = 5(x^3 + 2x)^4\\cdot(3x^2 + 2)$, outer derivative times inner derivative. Naming the pieces now is half the work."
+      ]
+    },
+    {
+      "title": "A three-layer composition",
+      "problem": "Express $F(x) = \\sin^2(3x + 1)$ as $f(g(h(x)))$ and evaluate $F(0)$ step by step.",
+      "steps": [
+        "Innermost: $h(x) = 3x + 1$. Next: $g(u) = \\sin u$. Outermost: $f(v) = v^2$. Then $f(g(h(x))) = (\\sin(3x + 1))^2 = F(x)$.",
+        "Evaluate at 0 layer by layer: $h(0) = 1$.",
+        "$g(1) = \\sin 1 \\approx 0.8415$ (radians).",
+        "$f(0.8415) = 0.8415^2 \\approx 0.708$. So $F(0) \\approx 0.708$."
+      ]
+    },
+    {
+      "title": "Combined transformations of a known graph",
+      "problem": "Describe how to obtain the graph of $y = -\\frac{1}{2}(x - 3)^2 + 4$ from $y = x^2$, and find its vertex and $y$-intercept.",
+      "steps": [
+        "Inside first: $(x - 3)$ shifts right 3. Vertex moves from $(0, 0)$ to $(3, 0)$.",
+        "Multiply by $\\frac{1}{2}$: vertical squash, the parabola gets wider. Multiply by $-1$: reflect across the $x$-axis, so it opens downward. Vertex still $(3, 0)$.",
+        "Add 4: shift up 4. Vertex is now $(3, 4)$, the maximum point.",
+        "$y$-intercept: $x = 0$ gives $-\\frac{1}{2}(9) + 4 = -0.5$. Check with another point: $x = 5$ gives $-\\frac{1}{2}(4) + 4 = 2$, which is 2 units below the vertex, consistent with the squash."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Computing $f \\circ g$ as $f$ times $g$. $(f \\circ g)(x) = f(g(x))$ is a composition, not a product. With $f(x) = x^2$, $g(x) = x + 1$: $f(g(2)) = 9$ but $f(2)g(2) = 12$.",
+    "Applying the outer function first. For $f(g(x))$, $g$ acts first. A quick check: evaluate at a number and see which operation you naturally do first.",
+    "Taking the domain of $f \\circ g$ from the final simplified formula only. $f(x) = x^2$, $g(x) = \\sqrt{x}$ gives $f(g(x)) = x$, but the domain is still $[0, \\infty)$ because $g$ needs $x \\ge 0$.",
+    "Shifting the wrong direction for an inside change: $f(x + 2)$ moves left, not right.",
+    "Decomposing $\\sqrt{x^2 + 9}$ as $\\sqrt{x^2} + 9$ or as $\\sqrt{x} \\circ (x^2 + 9)$ in the wrong order. The inside is $x^2 + 9$; the outside is the root."
+  ],
+  "whyItMatters": "The chain rule differentiates $f(g(x))$ by multiplying the outer derivative at $g(x)$ by the inner derivative, and $u$-substitution integrates by naming the inner function $u$. Both are impossible unless you can look at $\\int 2x\\cos(x^2)\\,dx$ and instantly see $\\cos$ wrapped around $x^2$. Transformations also matter for integrals: a shift $u = x - 3$ leaves $dx$ alone, but a squeeze $u = 2x$ introduces the factor $\\frac{1}{2}$ you must not forget.",
+  "checkYourself": [
+    {
+      "q": "If $f(x) = x + 1$ and $g(x) = x^2$, what are $f(g(x))$ and $g(f(x))$?",
+      "a": "$x^2 + 1$ and $(x + 1)^2$."
+    },
+    {
+      "q": "Decompose $e^{3x}$ as $f(g(x))$.",
+      "a": "$g(x) = 3x$, $f(u) = e^u$."
+    },
+    {
+      "q": "Domain of $(f/g)(x)$ with $f(x) = x$, $g(x) = x^2 - 1$?",
+      "a": "All $x$ except $\\pm 1$."
+    },
+    {
+      "q": "How is the graph of $y = f(x - 2) + 5$ related to $y = f(x)$?",
+      "a": "Shifted right 2 and up 5."
+    }
+  ],
+  "readingGuide": [
+    "Find the summary of vertical and horizontal shifts, stretches, and reflections; sketch each rule's effect on $y = \\sqrt{x}$ yourself.",
+    "Locate the definitions of the sum, product, and quotient of functions and note how the domain of each is determined.",
+    "Find the definition of composition and the discussion of its domain; write a one-line explanation of why $f \\circ g$ and $g \\circ f$ usually differ.",
+    "Before reading the solution of the first example that writes a function as a composition, decompose it yourself by asking what you would compute first.",
+    "Look for an example with three functions composed and trace one input through all three layers."
+  ]
+}

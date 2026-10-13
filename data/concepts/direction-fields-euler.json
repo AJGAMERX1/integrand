@@ -1,0 +1,78 @@
+{
+  "nodeId": "direction-fields-euler",
+  "title": "Direction Fields and Euler's Method",
+  "overview": "Most differential equations cannot be solved with a formula. This section gives two tools that work anyway: one for the eye, one for the calculator.\n\nA first-order equation $y' = F(x, y)$ tells you the slope of the solution at every point $(x, y)$, even before you know the solution. So draw it. At a grid of points, sketch a short segment with slope $F(x, y)$. The result is a **direction field** (or slope field). A solution curve must be tangent to the little segment at every point it passes through, so you can trace solution curves by following the segments, starting from any initial point. Equilibrium solutions appear as rows of horizontal segments, and the field shows at a glance whether other solutions move toward or away from them.\n\n**Euler's method** does the same thing numerically. Start at the known point $(x_0, y_0)$. The equation gives the slope there, $F(x_0, y_0)$. Pretend the solution is a straight line with that slope for a short step of width $h$:\n$$x_1 = x_0 + h, \\qquad y_1 = y_0 + h\\,F(x_0, y_0).$$\nNow you are at $(x_1, y_1)$. Compute the slope there and take another step. In general,\n$$y_{n+1} = y_n + h\\,F(x_n, y_n).$$\nEach step uses the tangent line, so each step drifts a little from the true curve, and the errors accumulate. Smaller steps mean less error but more arithmetic. The method is crude, but it is the ancestor of every numerical solver used in science and engineering.\n\nThere is a hidden connection to integrals. If $F$ depends only on $x$, the equation $y' = f(x)$ has solution $y = y_0 + \\int_{x_0}^x f(t)\\,dt$, and Euler's method becomes exactly the left-endpoint Riemann sum for that integral. Euler's method is Riemann sums generalized to equations where the slope depends on $y$ as well.",
+  "keyIdeas": [
+    "The equation $y' = F(x, y)$ assigns a slope to every point of the plane; a direction field draws a short segment with that slope at each grid point.",
+    "A solution curve is tangent to the field everywhere, so you can sketch solutions by following the segments from an initial point.",
+    "Points where $F(x, y) = 0$ have horizontal segments; a horizontal line of them is an equilibrium solution.",
+    "Euler's method with step $h$: $x_{n+1} = x_n + h$ and $y_{n+1} = y_n + h\\,F(x_n, y_n)$. Each step follows the tangent line at the current point.",
+    "Euler's error shrinks roughly in proportion to $h$: halving the step size roughly halves the error at a fixed $x$.",
+    "When $F$ depends only on $x$, Euler's method is the left-endpoint Riemann sum for $\\int f(x)\\,dx$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Reading a direction field",
+      "problem": "For $y' = x - y$, find the slopes at $(0, 0)$, $(1, 0)$, $(0, 1)$, and $(2, 1)$; find where the segments are horizontal; and verify that $y = x - 1$ is a solution.",
+      "steps": [
+        "Slopes are just $F(x, y) = x - y$: at $(0,0)$ slope $0$; at $(1,0)$ slope $1$; at $(0,1)$ slope $-1$; at $(2,1)$ slope $1$. Each point gets its own little tilt.",
+        "Horizontal segments occur where $x - y = 0$, that is along the line $y = x$. Above that line ($y > x$) slopes are negative; below it they are positive. Solutions above $y = x$ fall, solutions below it rise.",
+        "Verify $y = x - 1$: then $y' = 1$ and $x - y = x - (x - 1) = 1$. Equal, so this line is a solution. It is the curve the field seems to funnel toward.",
+        "Why the funnel: a solution above $y = x - 1$ has $x - y < 1$, so it rises more slowly than the line and the line catches up; one below has $x - y > 1$ and rises faster. Every solution approaches $y = x - 1$ as $x$ grows, which the field shows without any solving."
+      ]
+    },
+    {
+      "title": "Two Euler steps, then four",
+      "problem": "Use Euler's method with $h = 0.5$ to estimate $y(1)$ for $y' = x + y$, $y(0) = 1$. Then repeat with $h = 0.25$ and compare with the exact value.",
+      "steps": [
+        "Step 1 from $(0, 1)$: slope $F(0, 1) = 0 + 1 = 1$, so $y_1 = 1 + 0.5 \\cdot 1 = 1.5$ at $x_1 = 0.5$.",
+        "Step 2 from $(0.5, 1.5)$: slope $0.5 + 1.5 = 2$, so $y_2 = 1.5 + 0.5 \\cdot 2 = 2.5$ at $x_2 = 1$. Estimate: $y(1) \\approx 2.5$.",
+        "With $h = 0.25$: slopes and values go $(0, 1) \\to 1.25 \\to 1.625 \\to 2.15625 \\to 2.8828$, using slope $x_n + y_n$ at each stage. For instance the second step is $1.25 + 0.25(0.25 + 1.25) = 1.625$. Estimate: $y(1) \\approx 2.88$.",
+        "The exact solution (from the next sections) is $y = 2e^x - x - 1$, so $y(1) = 2e - 2 \\approx 3.437$. Errors: about $0.94$ with $h = 0.5$, about $0.55$ with $h = 0.25$. Halving $h$ cut the error roughly in half.",
+        "Why Euler undershoots here: the true curve is concave up (its slope keeps increasing), so every tangent line lies below the curve, and each step lands under the truth."
+      ]
+    },
+    {
+      "title": "Euler's method is a Riemann sum",
+      "problem": "Apply Euler's method with $h = 0.5$ to $y' = 2x$, $y(0) = 0$, to estimate $y(1)$. Compare with the left-endpoint Riemann sum for $\\int_0^1 2x\\,dx$.",
+      "steps": [
+        "Step 1 from $(0, 0)$: slope $2 \\cdot 0 = 0$, so $y_1 = 0 + 0.5 \\cdot 0 = 0$ at $x = 0.5$.",
+        "Step 2 from $(0.5, 0)$: slope $2 \\cdot 0.5 = 1$, so $y_2 = 0 + 0.5 \\cdot 1 = 0.5$ at $x = 1$.",
+        "Now the Riemann sum: $L_2 = 0.5 \\cdot f(0) + 0.5 \\cdot f(0.5) = 0.5 \\cdot 0 + 0.5 \\cdot 1 = 0.5$ with $f(x) = 2x$. Identical, term for term: each Euler step adds $h \\cdot f(x_n)$, exactly one left-endpoint rectangle.",
+        "The exact value is $\\int_0^1 2x\\,dx = 1$. Euler (and the left sum) undershoot because $2x$ is increasing. You already know how to fix a Riemann sum: more rectangles, or midpoints. Improved Euler methods do the same thing for differential equations."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Using the slope at the new point instead of the current one. Euler's slope is $F(x_n, y_n)$, evaluated where you are, not where you are going. Check the first step of $y' = x + y$, $y(0) = 1$: the slope is $F(0,1) = 1$, giving $y_1 = 1.5$ with $h = 0.5$.",
+    "Forgetting to multiply the slope by $h$. The update is $y_n + h\\,F$, not $y_n + F$. With $h = 0.5$ and slope $2$, the rise is $1$, not $2$.",
+    "Updating $y$ but not $x$. After each step, $x$ moves forward by $h$ too, and the next slope uses the new $x$.",
+    "Expecting Euler's answer to be exact. It is an estimate whose error grows with step size and with distance from the start. Report it as an approximation and, if possible, compare two step sizes.",
+    "Drawing a direction field with the slope at $(x, y)$ read from the wrong formula, for example using $y' = x - y$ but plotting $y - x$. Compute one or two slopes by hand and mark them before filling in the grid."
+  ],
+  "whyItMatters": "Direction fields train you to see a differential equation as a picture of flows, which is the mental model behind phase planes in predator-prey systems and stability analysis in every later course. Euler's method is the definite integral's Riemann sum reborn for equations where the slope depends on the unknown; it is the simplest member of the family of numerical solvers (Runge-Kutta and friends) that simulate planets, weather, and circuits. Seeing the Riemann sum inside Euler's method is a reminder that integration and solving differential equations are the same activity viewed from different sides.",
+  "checkYourself": [
+    {
+      "q": "In the direction field for $y' = y$, what do the segments look like along the $x$-axis?",
+      "a": "Horizontal, since $y = 0$ gives slope $0$; $y = 0$ is an equilibrium solution."
+    },
+    {
+      "q": "One Euler step for $y' = y$, $y(0) = 1$, $h = 0.1$. What is $y_1$?",
+      "a": "$y_1 = 1 + 0.1 \\cdot 1 = 1.1$ (exact value $e^{0.1} \\approx 1.105$)."
+    },
+    {
+      "q": "For $y' = f(x)$ with no $y$ on the right, which Riemann sum does Euler's method reproduce?",
+      "a": "The left-endpoint sum for $\\int f(x)\\,dx$."
+    },
+    {
+      "q": "If a solution curve is concave down, does Euler's method tend to overestimate or underestimate?",
+      "a": "Overestimate: tangent lines lie above a concave-down curve."
+    }
+  ],
+  "readingGuide": [
+    "Find the first direction field in the section and, before looking at the drawn solution curves, trace one yourself from a chosen starting point.",
+    "Locate the explanation of why solution curves must follow the segments, and restate it using the word \"tangent\".",
+    "Find Euler's update formula. Before reading the worked numerical example, carry out the first two steps by hand and compare.",
+    "Look for the table or figure comparing different step sizes and note how the error changes when $h$ is halved."
+  ]
+}

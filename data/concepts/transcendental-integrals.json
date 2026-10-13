@@ -1,0 +1,87 @@
+{
+  "nodeId": "transcendental-integrals",
+  "title": "Integrals of Exponential, Log, and Trig Functions",
+  "overview": "The transcendental functions, exponentials, logarithms, and the trig functions, have derivatives you know, and reading those derivatives backwards gives a core set of integrals that combine with substitution to handle a huge range of problems. This node collects them and shows the standard moves. It is your Daily Integral tier I5.\n\n**Exponentials.** $\\int e^x\\,dx = e^x + C$ and, with the linear substitution $u = kx$, $\\int e^{kx}\\,dx = \\frac{1}{k}e^{kx} + C$. Other bases: $\\int b^x\\,dx = \\frac{b^x}{\\ln b} + C$. Whenever the exponent is a function $g(x)$ and $g'(x)$ appears as a factor, substitute $u = g(x)$: $\\int 2xe^{x^2}\\,dx = e^{x^2} + C$. Definite integrals of exponentials often leave answers like $e^2 - 1$; that is a finished answer, not something to approximate unless asked.\n\n**Logarithms.** $\\int\\frac{dx}{x} = \\ln|x| + C$, and more generally $\\int\\frac{g'(x)}{g(x)}\\,dx = \\ln|g(x)| + C$. This single pattern integrates $\\tan x = \\frac{\\sin x}{\\cos x}$ (with $u = \\cos x$, giving $-\\ln|\\cos x| + C = \\ln|\\sec x| + C$), $\\cot x$ (giving $\\ln|\\sin x| + C$), and fractions like $\\frac{x}{x^2 + 1}$. Note the asymmetry: $\\int\\frac{dx}{x} = \\ln|x| + C$, but $\\int\\ln x\\,dx$ is **not** elementary by these methods; it requires integration by parts in Chapter 7, and the answer is $x\\ln x - x + C$. For now, logs appear in answers, not usually in integrands.\n\n**Trig.** The basic six, read from the derivative table: $\\int\\sin x\\,dx = -\\cos x + C$, $\\int\\cos x\\,dx = \\sin x + C$, $\\int\\sec^2 x\\,dx = \\tan x + C$, $\\int\\csc^2 x\\,dx = -\\cot x + C$, $\\int\\sec x\\tan x\\,dx = \\sec x + C$, $\\int\\csc x\\cot x\\,dx = -\\csc x + C$. With $u = kx$: $\\int\\sin(kx)\\,dx = -\\frac{1}{k}\\cos(kx) + C$. Products like $\\sin x\\cos x$ or $\\sin^3 x\\cos x$ yield to $u = \\sin x$ or $u = \\cos x$. Squares like $\\sin^2 x$ do not: they need the power-reduction identity $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$ from the ramp, after which the integral is $\\frac{x}{2} - \\frac{\\sin 2x}{4} + C$. The integrals of $\\sec x$ and $\\csc x$ themselves need a trick (multiply by $\\frac{\\sec x + \\tan x}{\\sec x + \\tan x}$) and are usually just memorized: $\\int\\sec x\\,dx = \\ln|\\sec x + \\tan x| + C$.\n\n**Inverse trig.** $\\int\\frac{dx}{1 + x^2} = \\tan^{-1}x + C$ and $\\int\\frac{dx}{\\sqrt{1 - x^2}} = \\sin^{-1}x + C$. With a constant $a$ in place of 1, a substitution $u = \\frac{x}{a}$ gives $\\int\\frac{dx}{a^2 + x^2} = \\frac{1}{a}\\tan^{-1}\\frac{x}{a} + C$ and $\\int\\frac{dx}{\\sqrt{a^2 - x^2}} = \\sin^{-1}\\frac{x}{a} + C$. These are the integrals whose integrands are algebraic but whose answers are transcendental; the giveaway is a sum or difference of squares with no matching $x$ in the numerator (if there were an $x$ on top, the log or power pattern would apply instead).\n\nWhen a definite integral of a trig function is evaluated, the special-angle values from the unit circle do the final arithmetic: $\\int_0^{\\pi/3}\\sec^2 x\\,dx = \\tan\\frac{\\pi}{3} = \\sqrt{3}$, $\\int_0^{\\pi}\\sin x\\,dx = 2$, $\\int_0^{1}\\frac{dx}{1 + x^2} = \\tan^{-1}1 = \\frac{\\pi}{4}$. A quick sketch of the integrand confirms the sign and rough size.",
+  "keyIdeas": [
+    "$\\int e^{kx}\\,dx = \\frac{1}{k}e^{kx} + C$ and $\\int b^x\\,dx = \\frac{b^x}{\\ln b} + C$; with $u = g(x)$, $\\int e^{g(x)}g'(x)\\,dx = e^{g(x)} + C$.",
+    "$\\int\\frac{g'(x)}{g(x)}\\,dx = \\ln|g(x)| + C$ gives $\\int\\tan x\\,dx = \\ln|\\sec x| + C$ and $\\int\\cot x\\,dx = \\ln|\\sin x| + C$.",
+    "$\\int\\sin(kx)\\,dx = -\\frac{1}{k}\\cos(kx) + C$ and $\\int\\cos(kx)\\,dx = \\frac{1}{k}\\sin(kx) + C$; plus $\\sec^2 \\to \\tan$, $\\csc^2 \\to -\\cot$, $\\sec\\tan \\to \\sec$, $\\csc\\cot \\to -\\csc$.",
+    "Products of sine and cosine with one odd power use $u = \\sin x$ or $u = \\cos x$; squares use $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$ and $\\cos^2 x = \\frac{1 + \\cos 2x}{2}$.",
+    "$\\int\\sec x\\,dx = \\ln|\\sec x + \\tan x| + C$ (memorize).",
+    "$\\int\\frac{dx}{a^2 + x^2} = \\frac{1}{a}\\tan^{-1}\\frac{x}{a} + C$ and $\\int\\frac{dx}{\\sqrt{a^2 - x^2}} = \\sin^{-1}\\frac{x}{a} + C$.",
+    "Evaluate definite trig integrals with the special-angle values; $\\int\\ln x\\,dx$ waits for integration by parts."
+  ],
+  "workedExamples": [
+    {
+      "title": "Exponential with substitution, definite",
+      "problem": "Evaluate $\\displaystyle\\int_0^1 x\\,e^{-x^2}\\,dx$.",
+      "steps": [
+        "Let $u = -x^2$, $du = -2x\\,dx$, so $x\\,dx = -\\frac{1}{2}du$. Limits: $x = 0 \\to u = 0$; $x = 1 \\to u = -1$.",
+        "Integral: $-\\frac{1}{2}\\int_0^{-1}e^u\\,du = \\frac{1}{2}\\int_{-1}^{0}e^u\\,du$ (flipping the limits removes the minus sign).",
+        "Evaluate: $\\frac{1}{2}\\left[e^u\\right]_{-1}^{0} = \\frac{1}{2}(1 - e^{-1}) \\approx \\frac{1}{2}(1 - 0.3679) \\approx 0.316$.",
+        "Sanity check: the integrand is between 0 and about $0.43$ (its maximum near $x = 0.7$) on an interval of width 1, so a value around $0.3$ is reasonable."
+      ]
+    },
+    {
+      "title": "A square of sine",
+      "problem": "Evaluate $\\displaystyle\\int_0^{\\pi}\\sin^2 x\\,dx$.",
+      "steps": [
+        "No substitution works ($u = \\sin x$ needs a $\\cos x$ factor). Use the power-reduction identity: $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$.",
+        "Integral: $\\frac{1}{2}\\int_0^{\\pi}(1 - \\cos 2x)\\,dx = \\frac{1}{2}\\left[x - \\frac{\\sin 2x}{2}\\right]_0^{\\pi}$.",
+        "Evaluate: $\\frac{1}{2}\\left[(\\pi - 0) - (0 - 0)\\right] = \\frac{\\pi}{2}$, since $\\sin 2\\pi = \\sin 0 = 0$.",
+        "Sanity check: $\\sin^2 x$ averages $\\frac{1}{2}$ over a full hump (it oscillates between 0 and 1 symmetrically), and $\\frac{1}{2}\\cdot\\pi = \\frac{\\pi}{2}$. Correct."
+      ]
+    },
+    {
+      "title": "The log pattern with a trig function",
+      "problem": "Evaluate $\\displaystyle\\int_0^{\\pi/4}\\tan x\\,dx$ and $\\displaystyle\\int\\frac{\\cos x}{1 + \\sin x}\\,dx$.",
+      "steps": [
+        "First: $\\tan x = \\frac{\\sin x}{\\cos x}$. Let $u = \\cos x$, $du = -\\sin x\\,dx$. Limits: $x = 0 \\to u = 1$; $x = \\frac{\\pi}{4} \\to u = \\frac{\\sqrt{2}}{2}$. Integral: $-\\int_1^{\\sqrt{2}/2}\\frac{du}{u} = -\\left[\\ln u\\right]_1^{\\sqrt{2}/2} = -\\ln\\frac{\\sqrt{2}}{2} = \\ln\\sqrt{2} = \\frac{1}{2}\\ln 2 \\approx 0.347$.",
+        "Second: the derivative of $1 + \\sin x$ is $\\cos x$, the numerator. Let $u = 1 + \\sin x$: $\\int\\frac{du}{u} = \\ln|1 + \\sin x| + C = \\ln(1 + \\sin x) + C$ since $1 + \\sin x \\ge 0$.",
+        "Check the second: $\\frac{d}{dx}\\ln(1 + \\sin x) = \\frac{\\cos x}{1 + \\sin x}$. Correct."
+      ]
+    },
+    {
+      "title": "Inverse trig with a constant",
+      "problem": "Evaluate $\\displaystyle\\int_0^{3}\\frac{dx}{9 + x^2}$ and find $\\displaystyle\\int\\frac{dx}{\\sqrt{4 - x^2}}$.",
+      "steps": [
+        "First: $9 + x^2 = a^2 + x^2$ with $a = 3$. Formula: $\\frac{1}{3}\\tan^{-1}\\frac{x}{3}$. Evaluate: $\\frac{1}{3}\\left(\\tan^{-1}1 - \\tan^{-1}0\\right) = \\frac{1}{3}\\cdot\\frac{\\pi}{4} = \\frac{\\pi}{12} \\approx 0.262$.",
+        "Derivation of the formula if you forget it: $u = \\frac{x}{3}$, $dx = 3\\,du$, and $\\frac{3\\,du}{9 + 9u^2} = \\frac{1}{3}\\cdot\\frac{du}{1 + u^2}$.",
+        "Second: $a = 2$, so $\\int\\frac{dx}{\\sqrt{4 - x^2}} = \\sin^{-1}\\frac{x}{2} + C$. Check: $\\frac{d}{dx}\\sin^{-1}\\frac{x}{2} = \\frac{1}{\\sqrt{1 - x^2/4}}\\cdot\\frac{1}{2} = \\frac{1}{\\sqrt{4 - x^2}}$. Correct."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Writing $\\int e^{x^2}\\,dx = \\frac{e^{x^2}}{2x} + C$. Differentiate it: the quotient rule gives extra terms. $e^{x^2}$ alone has no elementary antiderivative; it needs an $x$ factor for substitution.",
+    "Writing $\\int\\sin^2 x\\,dx = \\frac{\\sin^3 x}{3}$. That is the power rule misapplied; $\\frac{d}{dx}\\frac{\\sin^3 x}{3} = \\sin^2 x\\cos x$. Use power reduction.",
+    "Integrating $\\frac{1}{1 + x^2}$ as $\\ln(1 + x^2)$. The log pattern needs $2x$ on top; without it the answer is $\\tan^{-1}x$.",
+    "Dropping the $\\frac{1}{k}$: $\\int\\cos(5x)\\,dx = \\sin(5x)$. The derivative of $\\sin(5x)$ is $5\\cos(5x)$; the correct answer is $\\frac{1}{5}\\sin(5x) + C$.",
+    "Dropping the $\\frac{1}{a}$ in $\\int\\frac{dx}{a^2 + x^2}$. Check with $a = 3$ by differentiating $\\tan^{-1}\\frac{x}{3}$: you get $\\frac{3}{9 + x^2}$, so a factor $\\frac{1}{3}$ is needed."
+  ],
+  "whyItMatters": "These integrals are the alphabet of Chapter 7. Integration by parts turns $\\int x e^x\\,dx$ and $\\int\\ln x\\,dx$ into these; trig integrals extend the sine-and-cosine products to any powers; trig substitution converts $\\sqrt{a^2 - x^2}$ and $a^2 + x^2$ into the inverse-trig forms above; and partial fractions ends with sums of logs and arctangents. In Chapter 9, separable equations like $y' = ky$ are solved by $\\int\\frac{dy}{y}$, and in probability the exponential and normal distributions are integrals of $e^{-kx}$ and $e^{-x^2}$.",
+  "checkYourself": [
+    {
+      "q": "$\\int e^{-3x}\\,dx$?",
+      "a": "$-\\frac{1}{3}e^{-3x} + C$."
+    },
+    {
+      "q": "$\\int_0^{\\pi/2}\\cos x\\,dx$?",
+      "a": "$\\sin\\frac{\\pi}{2} - \\sin 0 = 1$."
+    },
+    {
+      "q": "$\\int\\cot x\\,dx$?",
+      "a": "$\\ln|\\sin x| + C$."
+    },
+    {
+      "q": "$\\int_0^1\\frac{dx}{1 + x^2}$?",
+      "a": "$\\frac{\\pi}{4}$."
+    }
+  ],
+  "readingGuide": [
+    "In 5.4, copy the table of indefinite integrals and mark the exponential, log, trig, and inverse trig entries; verify each by differentiating.",
+    "In 5.5, find the examples that integrate $\\tan x$ and $e^{kx}$ by substitution and redo each with your own choice of $u$ before reading the solution.",
+    "Look for any example with $\\sin^2 x$ or $\\cos^2 x$ and note which identity is used; if there is none, try $\\int\\cos^2 x\\,dx$ yourself with power reduction.",
+    "Find the integrals leading to $\\tan^{-1}$ and $\\sin^{-1}$ and practice the substitution $u = \\frac{x}{a}$ that produces the $\\frac{1}{a}$ factor.",
+    "Pick three definite integrals of trig functions from the exercises list (by their section) and evaluate them using the unit-circle values."
+  ]
+}

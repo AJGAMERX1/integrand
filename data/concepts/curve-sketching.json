@@ -1,0 +1,80 @@
+{
+  "nodeId": "curve-sketching",
+  "title": "Summary of Curve Sketching",
+  "overview": "You now have every tool needed to draw an accurate graph of a function by hand: domain, intercepts, symmetry, asymptotes from limits, intervals of increase and decrease from $f'$, concavity from $f''$. This section organizes them into a checklist. A calculator can plot points, but it cannot tell you that a tiny bump is a true local maximum or that two asymptotes exist off-screen; the checklist can. Working through it also forces you to see the function as a whole, which is the real goal.\n\nThe checklist, in order. **Domain**: where is $f$ defined? Denominators zero, even roots of negatives, logs of nonpositive numbers are excluded. **Intercepts**: $f(0)$ is the $y$-intercept; solve $f(x) = 0$ for $x$-intercepts if that is feasible. **Symmetry**: if $f(-x) = f(x)$ the graph is symmetric about the $y$-axis and you need only sketch $x \\ge 0$; if $f(-x) = -f(x)$ it is symmetric through the origin; if $f(x + p) = f(x)$ it is periodic. **Asymptotes**: horizontal ones from $\\lim_{x \\to \\pm\\infty}f(x)$; vertical ones where a one-sided limit is infinite, usually at zeros of a denominator that do not cancel; and **slant** asymptotes when $f(x) - (mx + b) \\to 0$, which for a rational function happens when the numerator's degree is exactly one more than the denominator's (do long division to find $mx + b$). **Increase and decrease**: sign chart of $f'$. **Local extremes**: First or Second Derivative Test at the critical numbers. **Concavity and inflection points**: sign chart of $f''$. Then **sketch**: draw the asymptotes as dashed lines, plot the intercepts, extremes, and inflection points, and connect them with a curve that respects every sign you found.\n\nThe derivative sign charts are the heart of the method, and the mistakes to watch for are familiar: a zero of $f'$ is only a candidate for an extreme until the sign change is confirmed, a zero of $f''$ is only a candidate for an inflection point, and points outside the domain appear on the sign charts as boundaries but never as extremes or inflection points.\n\nTwo kinds of functions deserve extra attention. **Rational functions** have vertical asymptotes at uncanceled zeros of the denominator, and you must determine the sign of $f$ on each side of every asymptote (test a point) to know whether the graph goes up or down there. Functions with **$e^{x}$ or $\\ln x$** often have one-sided asymptotes and one-sided domains; $x\\ln x$ lives only on $x > 0$ and tends to 0 at the left end, while $xe^{-x}$ has the horizontal asymptote $y = 0$ on the right only.\n\nWhen the full checklist is done, check that the sketch is consistent: a graph that is increasing cannot pass through a local maximum, a concave-up stretch cannot contain a local maximum, and a graph cannot cross a vertical asymptote. Inconsistencies mean an arithmetic error somewhere, and finding it is part of the work.",
+  "keyIdeas": [
+    "Checklist: domain, intercepts, symmetry, asymptotes, increase/decrease ($f'$), local extremes, concavity and inflection ($f''$), then sketch.",
+    "Horizontal asymptotes come from $\\lim_{x \\to \\pm\\infty}f(x)$; vertical asymptotes from infinite one-sided limits, typically at uncanceled zeros of a denominator.",
+    "A slant asymptote $y = mx + b$ exists when $f(x) - (mx + b) \\to 0$; for rational functions with numerator degree one higher, find it by long division.",
+    "Even symmetry ($f(-x) = f(x)$) or odd symmetry ($f(-x) = -f(x)$) halves the work; periodicity reduces it to one period.",
+    "Sign charts of $f'$ and $f''$ determine rise/fall and bending; confirm sign changes before declaring extremes or inflection points.",
+    "Test the sign of $f$ on each side of every vertical asymptote to know which direction the graph goes.",
+    "Check the finished sketch for consistency among the features."
+  ],
+  "workedExamples": [
+    {
+      "title": "A rational function with two asymptotes",
+      "problem": "Sketch $f(x) = \\dfrac{2x^2}{x^2 - 1}$.",
+      "steps": [
+        "Domain: $x \\ne \\pm 1$. Intercepts: $f(0) = 0$, and $f(x) = 0$ only at $x = 0$. Symmetry: $f(-x) = f(x)$, even, so sketch $x \\ge 0$ and reflect.",
+        "Asymptotes: $\\lim_{x \\to \\pm\\infty}\\frac{2x^2}{x^2 - 1} = 2$, so $y = 2$ is horizontal. Vertical at $x = 1$ (and $-1$): as $x \\to 1^+$, numerator $\\to 2$ and denominator $\\to 0^+$, so $f \\to +\\infty$; as $x \\to 1^-$, denominator $\\to 0^-$, so $f \\to -\\infty$.",
+        "$f'(x) = \\frac{4x(x^2 - 1) - 2x^2(2x)}{(x^2 - 1)^2} = \\frac{-4x}{(x^2 - 1)^2}$. Positive for $x < 0$, negative for $x > 0$ (away from $\\pm 1$). So $f$ increases on $(-\\infty, -1)$ and $(-1, 0)$, decreases on $(0, 1)$ and $(1, \\infty)$; local maximum $f(0) = 0$.",
+        "$f''(x) = \\frac{-4(x^2 - 1)^2 + 4x\\cdot 2(x^2 - 1)(2x)}{(x^2 - 1)^4} = \\frac{4(3x^2 + 1)}{(x^2 - 1)^3}$. The numerator is always positive, so the sign is that of $(x^2 - 1)^3$: concave up for $|x| > 1$, concave down for $|x| < 1$. No inflection points, since $\\pm 1$ are not in the domain.",
+        "Sketch: a downward hump through the origin between the asymptotes $x = \\pm 1$, dropping to $-\\infty$ at each; outside, the graph comes down from $+\\infty$ at the asymptotes and flattens toward $y = 2$ from above."
+      ]
+    },
+    {
+      "title": "A slant asymptote",
+      "problem": "Find the asymptotes of $g(x) = \\dfrac{x^2 + 1}{x}$ and sketch it.",
+      "steps": [
+        "Divide: $g(x) = x + \\frac{1}{x}$. Since $\\frac{1}{x} \\to 0$ as $x \\to \\pm\\infty$, the line $y = x$ is a slant asymptote. Vertical asymptote at $x = 0$, with $g \\to +\\infty$ as $x \\to 0^+$ and $-\\infty$ as $x \\to 0^-$. Odd symmetry.",
+        "$g'(x) = 1 - \\frac{1}{x^2} = 0$ at $x = \\pm 1$. Sign chart: $g' > 0$ for $|x| > 1$, $g' < 0$ for $0 < |x| < 1$. Local minimum $g(1) = 2$; local maximum $g(-1) = -2$.",
+        "$g''(x) = \\frac{2}{x^3}$: concave up for $x > 0$, concave down for $x < 0$. No inflection point (0 is not in the domain).",
+        "Sketch: for $x > 0$ a U-shaped branch above the line $y = x$ with its bottom at $(1, 2)$, approaching the line on the right and the $y$-axis upward on the left; the $x < 0$ branch is its reflection through the origin."
+      ]
+    },
+    {
+      "title": "A function with an exponential",
+      "problem": "Sketch $h(x) = xe^{-x}$.",
+      "steps": [
+        "Domain: all reals. Intercept: $(0, 0)$ only. No symmetry. As $x \\to \\infty$, $\\frac{x}{e^x} \\to 0$ (l'Hospital), so $y = 0$ is a horizontal asymptote on the right; as $x \\to -\\infty$, $h \\to -\\infty$ (both factors large in size, product negative).",
+        "$h'(x) = e^{-x} - xe^{-x} = (1 - x)e^{-x}$. Zero at $x = 1$; positive for $x < 1$, negative for $x > 1$. Local (and absolute) maximum $h(1) = \\frac{1}{e} \\approx 0.368$.",
+        "$h''(x) = -e^{-x} - (1 - x)e^{-x} = (x - 2)e^{-x}$. Negative for $x < 2$, positive for $x > 2$. Inflection point at $(2, 2e^{-2}) \\approx (2, 0.271)$.",
+        "Sketch: rising steeply from the lower left through the origin, peaking at $(1, 0.368)$, bending from concave down to concave up at $x = 2$, and decaying toward the $x$-axis from above."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Drawing a graph that crosses a vertical asymptote. The two sides are separate branches; determine each side's direction with a one-sided limit.",
+    "Marking a zero of $f'$ as an extreme without confirming the sign change, or a zero of $f''$ as an inflection point without one.",
+    "Missing a slant asymptote because only horizontal ones were checked. When the numerator's degree exceeds the denominator's by one, divide.",
+    "Treating a point outside the domain as an inflection point because $f''$ changes sign across it. Inflection points must be on the graph.",
+    "Sketching the far ends without computing the limits at $\\pm\\infty$; the end behavior of $xe^{-x}$ is not symmetric."
+  ],
+  "whyItMatters": "Setting up an integral starts with a picture: which curve is on top, where they cross, where the integrand changes sign, whether a region extends to an asymptote and makes the integral improper. The sketching checklist is how you draw that picture reliably. Horizontal asymptotes determine whether $\\int_1^\\infty f(x)\\,dx$ can converge, and vertical asymptotes mark where an integral must be split. Chapter 6 problems like \"find the area enclosed by $y = xe^{-x}$ and the $x$-axis\" are unanswerable until you can sketch the curve.",
+  "checkYourself": [
+    {
+      "q": "Vertical asymptotes of $\\frac{x + 1}{x^2 - 4}$?",
+      "a": "$x = 2$ and $x = -2$."
+    },
+    {
+      "q": "Slant asymptote of $\\frac{x^2 - 3}{x + 1}$?",
+      "a": "Divide: $x - 1 + \\frac{-2}{x + 1}$, so $y = x - 1$."
+    },
+    {
+      "q": "If $f(-x) = -f(x)$, what symmetry does the graph have?",
+      "a": "Symmetry through the origin (odd)."
+    },
+    {
+      "q": "Can a graph cross its horizontal asymptote?",
+      "a": "Yes; the asymptote only describes behavior as $x \\to \\pm\\infty$."
+    }
+  ],
+  "readingGuide": [
+    "Find the checklist of steps for sketching and copy it as a template to fill in for every curve.",
+    "Find the definition of a slant asymptote and the method for finding one; apply it to a rational function of your own.",
+    "Before reading the solution of the first rational-function example, work the full checklist yourself and compare your sketch.",
+    "Look at how the text determines the direction of the graph on each side of a vertical asymptote and note the test it uses.",
+    "For the example involving $e^x$ or $\\ln x$, note how l'Hospital's Rule or a known limit is used for the end behavior."
+  ]
+}

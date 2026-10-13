@@ -1,0 +1,88 @@
+{
+  "nodeId": "mean-value-theorem",
+  "title": "The Mean Value Theorem",
+  "overview": "If you drive 120 miles in 2 hours, your average speed was 60 miles per hour, and at some instant during the trip your speedometer must have read exactly 60. You might have been slower at times and faster at others, but you cannot average 60 without hitting 60 at least once. That is the **Mean Value Theorem** (MVT): if $f$ is continuous on $[a, b]$ and differentiable on $(a, b)$, then there is some $c$ in $(a, b)$ with\n$$f'(c) = \\frac{f(b) - f(a)}{b - a}.$$\nThe right side is the slope of the secant line from $(a, f(a))$ to $(b, f(b))$, the average rate of change. The left side is the slope of the tangent at $c$, the instantaneous rate. The theorem says some tangent line is parallel to the secant. Picture the secant line and slide a parallel copy up or down until it just touches the curve; the touching point is $c$.\n\nThe special case where $f(a) = f(b)$ is **Rolle's Theorem**: then the secant is horizontal, and the theorem says there is a $c$ with $f'(c) = 0$. If you leave a point and come back to the same height, somewhere in between you had to stop going up or down. Rolle's Theorem is proved first (from the Extreme Value Theorem and Fermat's Theorem), and the MVT follows by tilting.\n\nThe theorem does not tell you where $c$ is, only that it exists, and for most purposes that is all you need. Its real importance is as a bridge from information about $f'$ to information about $f$. Two consequences are used constantly. First: **if $f'(x) = 0$ for all $x$ in an interval, then $f$ is constant there.** (If $f$ took two different values, the MVT would produce a $c$ with $f'(c) \\ne 0$.) Second: **if $f'(x) = g'(x)$ on an interval, then $f$ and $g$ differ by a constant,** since $f - g$ has zero derivative. This second fact is the reason every antiderivative comes with \"$+ C$\": once you find one function with the right derivative, every other one is that function plus a constant, and nothing else.\n\nThe MVT also gives inequalities. If you know $|f'(x)| \\le M$ on an interval, then for any two points $|f(b) - f(a)| \\le M|b - a|$: a function whose slope is bounded cannot change too much. For instance, if $f(0) = 2$ and $f'(x) \\le 3$ for all $x$, then $f(5) \\le 2 + 3\\cdot 5 = 17$. And it can prove uniqueness of roots: if $f'$ is never zero on an interval, Rolle's Theorem forbids two roots there, because between two roots there would have to be a horizontal tangent.\n\nBoth hypotheses are needed. The function $|x|$ on $[-1, 1]$ has $f(-1) = f(1)$ but no point where $f' = 0$; the corner at 0 breaks differentiability. A function with a jump can likewise avoid the conclusion. When you apply the theorem, say why the hypotheses hold.",
+  "keyIdeas": [
+    "MVT: if $f$ is continuous on $[a, b]$ and differentiable on $(a, b)$, there is a $c$ in $(a, b)$ with $f'(c) = \\frac{f(b) - f(a)}{b - a}$.",
+    "Geometrically, some tangent line is parallel to the secant line through the endpoints; physically, the instantaneous rate equals the average rate at some moment.",
+    "Rolle's Theorem is the case $f(a) = f(b)$: then $f'(c) = 0$ for some $c$ in $(a, b)$.",
+    "If $f' = 0$ on an interval, $f$ is constant there; if $f' = g'$ on an interval, then $f = g + C$. This is why antiderivatives are unique up to a constant.",
+    "If $|f'| \\le M$ on an interval, then $|f(b) - f(a)| \\le M|b - a|$.",
+    "If $f'$ is never zero on an interval, $f$ has at most one root there.",
+    "The hypotheses matter: a corner or a jump can defeat the conclusion."
+  ],
+  "workedExamples": [
+    {
+      "title": "Finding the c in the Mean Value Theorem",
+      "problem": "Find all values of $c$ satisfying the conclusion of the MVT for $f(x) = x^3 - x$ on $[0, 2]$.",
+      "steps": [
+        "Hypotheses: $f$ is a polynomial, so continuous and differentiable everywhere.",
+        "Secant slope: $\\frac{f(2) - f(0)}{2 - 0} = \\frac{(8 - 2) - 0}{2} = 3$.",
+        "Set $f'(c) = 3c^2 - 1 = 3$: $c^2 = \\frac{4}{3}$, so $c = \\pm\\frac{2}{\\sqrt{3}}$.",
+        "Only $c = \\frac{2}{\\sqrt{3}} \\approx 1.155$ lies in $(0, 2)$. Check: $f'(1.155) = 3(1.333) - 1 = 3$. Correct."
+      ]
+    },
+    {
+      "title": "Rolle's Theorem and uniqueness of a root",
+      "problem": "Show that $x^3 + 2x - 5 = 0$ has exactly one real solution.",
+      "steps": [
+        "Existence: $f(x) = x^3 + 2x - 5$ is continuous, $f(1) = -2 < 0$ and $f(2) = 7 > 0$, so by the Intermediate Value Theorem there is a root in $(1, 2)$.",
+        "Uniqueness: suppose there were two roots $a < b$. Then $f(a) = f(b) = 0$, and Rolle's Theorem would give a $c$ between them with $f'(c) = 0$.",
+        "But $f'(x) = 3x^2 + 2 \\ge 2 > 0$ for every $x$; it is never zero. Contradiction.",
+        "So there is exactly one real root (it is about $1.328$)."
+      ]
+    },
+    {
+      "title": "Bounding a function with the MVT",
+      "problem": "Suppose $f(1) = 4$ and $f'(x) \\le 2$ for all $x$. How large can $f(6)$ be?",
+      "steps": [
+        "Apply the MVT on $[1, 6]$: there is a $c$ with $f(6) - f(1) = f'(c)(6 - 1) = 5f'(c)$.",
+        "Since $f'(c) \\le 2$, $f(6) - 4 \\le 10$, so $f(6) \\le 14$.",
+        "The bound is attained by $f(x) = 2x + 2$, which has $f(1) = 4$, $f' = 2$, and $f(6) = 14$. So 14 is the largest possible value."
+      ]
+    },
+    {
+      "title": "Functions with the same derivative",
+      "problem": "Show that $f(x) = \\sin^2 x$ and $g(x) = -\\cos^2 x$ differ by a constant, and find it.",
+      "steps": [
+        "$f'(x) = 2\\sin x\\cos x$ (chain rule) and $g'(x) = -2\\cos x\\cdot(-\\sin x) = 2\\sin x\\cos x$. The derivatives are equal everywhere.",
+        "By the MVT corollary, $f(x) = g(x) + C$ for some constant $C$.",
+        "Find $C$ at $x = 0$: $f(0) = 0$, $g(0) = -1$, so $C = 1$. Thus $\\sin^2 x = -\\cos^2 x + 1$.",
+        "That is the Pythagorean identity, recovered from calculus. Checking at $x = \\frac{\\pi}{2}$: $1 = 0 + 1$. Correct."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Applying the MVT to a function with a corner or discontinuity in the interval, such as $|x|$ or $\\frac{1}{x}$ on an interval containing 0. Check continuity and differentiability first.",
+    "Thinking the MVT tells you the value of $c$. It only guarantees existence; finding $c$ is a separate calculation that is only sometimes possible.",
+    "Reporting a $c$ outside $(a, b)$. The equation $f'(c) = $ secant slope may have solutions outside the interval; discard them.",
+    "Concluding $f = g$ from $f' = g'$. They differ by a constant, which may be nonzero; evaluate at a point to find it.",
+    "Confusing the MVT with the Intermediate Value Theorem. IVT is about values of $f$ (continuity); MVT is about values of $f'$ (differentiability)."
+  ],
+  "whyItMatters": "The MVT is the reason $\\int f(x)\\,dx$ is written with a single $+ C$: all antiderivatives of $f$ differ by constants and nothing else, so one antiderivative generates them all. It is also the key step in proving the Fundamental Theorem of Calculus, where the MVT applied to each subinterval of a Riemann sum turns $\\sum f(c_i)\\Delta x$ into $F(b) - F(a)$. And the Mean Value Theorem for Integrals in Chapter 6, which says a continuous function attains its average value, is the same idea with an integral in place of a difference.",
+  "checkYourself": [
+    {
+      "q": "Secant slope of $f(x) = x^2$ on $[1, 3]$, and the $c$ guaranteed by the MVT?",
+      "a": "Slope 4; $f'(c) = 2c = 4$ gives $c = 2$."
+    },
+    {
+      "q": "If $f(2) = f(5)$ and $f$ is smooth, what does Rolle's Theorem give?",
+      "a": "Some $c$ in $(2, 5)$ with $f'(c) = 0$."
+    },
+    {
+      "q": "If $f'(x) = 0$ for all $x$ in $(0, 1)$, what is $f$ there?",
+      "a": "Constant."
+    },
+    {
+      "q": "If $f(0) = 1$ and $|f'(x)| \\le 3$, what is the largest $f(2)$ can be?",
+      "a": "$1 + 3\\cdot 2 = 7$."
+    }
+  ],
+  "readingGuide": [
+    "Find Rolle's Theorem, its hypotheses, and the three cases in its proof; sketch a picture for each case.",
+    "Find the Mean Value Theorem and the figure showing the tangent parallel to the secant; redraw it for a curve of your own.",
+    "Before reading the solution of the example that finds $c$ explicitly, compute the secant slope and solve $f'(c) = $ slope yourself.",
+    "Find the example that proves an equation has only one root and identify where Rolle's Theorem is used.",
+    "Find the corollary that functions with equal derivatives differ by a constant, and note its connection to antiderivatives."
+  ]
+}

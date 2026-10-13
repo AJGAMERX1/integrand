@@ -1,0 +1,82 @@
+{
+  "nodeId": "trig-substitution",
+  "title": "Trigonometric Substitution",
+  "overview": "Square roots of quadratics, like $\\sqrt{4 - x^2}$ or $\\sqrt{x^2 + 9}$, are stubborn. Ordinary substitution rarely helps because nothing in the integrand matches the derivative of the inside. Trigonometric substitution fixes this with a clever choice: replace $x$ by a trig function picked so that the Pythagorean identity **removes the square root entirely**.\n\nThe three forms and their substitutions:\n$$\\sqrt{a^2 - x^2}: \\quad x = a \\sin\\theta, \\qquad \\sqrt{a^2 - x^2} = a \\cos\\theta$$\n$$\\sqrt{a^2 + x^2}: \\quad x = a \\tan\\theta, \\qquad \\sqrt{a^2 + x^2} = a \\sec\\theta$$\n$$\\sqrt{x^2 - a^2}: \\quad x = a \\sec\\theta, \\qquad \\sqrt{x^2 - a^2} = a \\tan\\theta$$\nEach works because of an identity. For the first, $a^2 - a^2 \\sin^2\\theta = a^2 (1 - \\sin^2\\theta) = a^2 \\cos^2\\theta$, and taking the square root gives $a \\cos\\theta$ (positive on the usual range $-\\frac{\\pi}{2} \\le \\theta \\le \\frac{\\pi}{2}$). The other two use $1 + \\tan^2\\theta = \\sec^2\\theta$.\n\nThe procedure has four steps. Substitute $x$ and $dx$ (so $dx = a \\cos\\theta\\,d\\theta$ for the sine case). Simplify the square root with the identity. Integrate the resulting trig integral using the methods from the previous section. Then **convert back to $x$**. The last step is where a right triangle helps: if $x = a \\sin\\theta$, draw a right triangle with opposite side $x$ and hypotenuse $a$, so the adjacent side is $\\sqrt{a^2 - x^2}$. Every trig function of $\\theta$ can then be read off the triangle.\n\nFor a definite integral you can skip converting back: change the limits to $\\theta$ values and finish in $\\theta$.\n\nIf the quadratic has a middle term, such as $x^2 + 2x + 5$, complete the square first to get $(x + 1)^2 + 4$, then substitute $u = x + 1$ and proceed with the $u^2 + a^2$ pattern.\n\nTrig substitution is not the only tool for these integrals; sometimes a plain substitution or a geometric argument is faster. But when the square root refuses to go away, this is the method that makes it go.",
+  "keyIdeas": [
+    "$\\sqrt{a^2 - x^2}$: substitute $x = a \\sin\\theta$, $dx = a \\cos\\theta\\,d\\theta$, and the root becomes $a \\cos\\theta$.",
+    "$\\sqrt{a^2 + x^2}$: substitute $x = a \\tan\\theta$, $dx = a \\sec^2\\theta\\,d\\theta$, and the root becomes $a \\sec\\theta$.",
+    "$\\sqrt{x^2 - a^2}$: substitute $x = a \\sec\\theta$, $dx = a \\sec\\theta \\tan\\theta\\,d\\theta$, and the root becomes $a \\tan\\theta$.",
+    "After integrating in $\\theta$, convert back with a right triangle built from the substitution, or change the limits if the integral is definite.",
+    "Complete the square first when the quadratic has a linear term, then substitute for the shifted variable.",
+    "Before reaching for trig substitution, check whether a simpler substitution works, as in $\\int \\frac{x\\,dx}{\\sqrt{1 - x^2}}$ with $u = 1 - x^2$."
+  ],
+  "workedExamples": [
+    {
+      "title": "A quarter circle, two ways",
+      "problem": "Evaluate $\\int_0^2 \\sqrt{4 - x^2}\\,dx$.",
+      "steps": [
+        "Geometry first: $y = \\sqrt{4 - x^2}$ for $0 \\le x \\le 2$ is a quarter of a circle of radius 2, so the answer must be $\\frac{1}{4} \\pi \\cdot 2^2 = \\pi$. Now confirm it by substitution.",
+        "The form is $\\sqrt{a^2 - x^2}$ with $a = 2$. Let $x = 2 \\sin\\theta$, so $dx = 2 \\cos\\theta\\,d\\theta$ and $\\sqrt{4 - x^2} = \\sqrt{4 - 4\\sin^2\\theta} = 2\\cos\\theta$.",
+        "Change the limits: $x = 0$ gives $\\sin\\theta = 0$, so $\\theta = 0$; $x = 2$ gives $\\sin\\theta = 1$, so $\\theta = \\frac{\\pi}{2}$.",
+        "The integral becomes $\\int_0^{\\pi/2} 2\\cos\\theta \\cdot 2\\cos\\theta\\,d\\theta = 4 \\int_0^{\\pi/2} \\cos^2\\theta\\,d\\theta$.",
+        "Use the half-angle identity: $4 \\int_0^{\\pi/2} \\frac{1 + \\cos 2\\theta}{2}\\,d\\theta = 2 \\left[ \\theta + \\frac{\\sin 2\\theta}{2} \\right]_0^{\\pi/2} = 2 \\cdot \\frac{\\pi}{2} = \\pi$. The two methods agree."
+      ]
+    },
+    {
+      "title": "The tangent substitution with a triangle",
+      "problem": "Evaluate $\\int \\frac{dx}{x^2 \\sqrt{x^2 + 9}}$.",
+      "steps": [
+        "The form is $\\sqrt{x^2 + a^2}$ with $a = 3$. Let $x = 3 \\tan\\theta$, so $dx = 3 \\sec^2\\theta\\,d\\theta$ and $\\sqrt{x^2 + 9} = \\sqrt{9 \\tan^2\\theta + 9} = 3 \\sec\\theta$.",
+        "Substitute everything: $\\int \\frac{3 \\sec^2\\theta\\,d\\theta}{9 \\tan^2\\theta \\cdot 3 \\sec\\theta} = \\frac{1}{9} \\int \\frac{\\sec\\theta}{\\tan^2\\theta}\\,d\\theta$.",
+        "Convert to sines and cosines to see the structure: $\\frac{\\sec\\theta}{\\tan^2\\theta} = \\frac{1}{\\cos\\theta} \\cdot \\frac{\\cos^2\\theta}{\\sin^2\\theta} = \\frac{\\cos\\theta}{\\sin^2\\theta}$.",
+        "Now $u = \\sin\\theta$, $du = \\cos\\theta\\,d\\theta$: $\\frac{1}{9} \\int \\frac{du}{u^2} = -\\frac{1}{9u} + C = -\\frac{1}{9 \\sin\\theta} + C$.",
+        "Convert back with a triangle. From $\\tan\\theta = \\frac{x}{3}$, draw opposite $= x$, adjacent $= 3$, hypotenuse $= \\sqrt{x^2 + 9}$. Then $\\sin\\theta = \\frac{x}{\\sqrt{x^2 + 9}}$.",
+        "Final answer: $-\\frac{\\sqrt{x^2 + 9}}{9x} + C$. You can check by differentiating, or by noting that for large $x$ it behaves like $-\\frac{1}{9}$ plus small terms, consistent with the integrand shrinking like $\\frac{1}{x^3}$."
+      ]
+    },
+    {
+      "title": "The secant substitution",
+      "problem": "Evaluate $\\int \\frac{dx}{\\sqrt{x^2 - 1}}$ for $x > 1$.",
+      "steps": [
+        "The form is $\\sqrt{x^2 - a^2}$ with $a = 1$. Let $x = \\sec\\theta$ with $0 \\le \\theta < \\frac{\\pi}{2}$, so $dx = \\sec\\theta \\tan\\theta\\,d\\theta$ and $\\sqrt{x^2 - 1} = \\sqrt{\\sec^2\\theta - 1} = \\tan\\theta$.",
+        "Substitute: $\\int \\frac{\\sec\\theta \\tan\\theta\\,d\\theta}{\\tan\\theta} = \\int \\sec\\theta\\,d\\theta$. The square root is gone and the tangent cancelled.",
+        "Use the memorized result: $\\int \\sec\\theta\\,d\\theta = \\ln|\\sec\\theta + \\tan\\theta| + C$.",
+        "Convert back: $\\sec\\theta = x$ directly, and $\\tan\\theta = \\sqrt{x^2 - 1}$ from the substitution itself (or from a triangle with hypotenuse $x$ and adjacent side 1).",
+        "Final answer: $\\ln\\left( x + \\sqrt{x^2 - 1} \\right) + C$. Differentiate to check: $\\frac{1 + \\frac{x}{\\sqrt{x^2 - 1}}}{x + \\sqrt{x^2 - 1}} = \\frac{\\frac{\\sqrt{x^2 - 1} + x}{\\sqrt{x^2 - 1}}}{x + \\sqrt{x^2 - 1}} = \\frac{1}{\\sqrt{x^2 - 1}}$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Forgetting to substitute $dx$. If $x = 2\\sin\\theta$ then $dx = 2\\cos\\theta\\,d\\theta$, not $d\\theta$. Leaving it out drops a whole factor from the integrand.",
+    "Using the wrong pairing, such as $x = a \\sin\\theta$ for $\\sqrt{x^2 + a^2}$. Then $x^2 + a^2 = a^2(\\sin^2\\theta + 1)$, and no identity simplifies $\\sin^2\\theta + 1$. Match the sign pattern to the identity.",
+    "Leaving the answer in terms of $\\theta$ for an indefinite integral. The question was asked in $x$, so draw the triangle and convert every trig function back.",
+    "Converting the integrand but not the limits in a definite integral. Either change the limits to $\\theta$ values, or convert back to $x$ before plugging in the original limits, never a mix.",
+    "Skipping the quick geometric check. For $\\int_0^2 \\sqrt{4 - x^2}\\,dx$, knowing the answer is a quarter circle ($\\pi$) catches arithmetic slips instantly."
+  ],
+  "whyItMatters": "Square roots of quadratics appear whenever distance is involved: arc length of curves, surface area of solids of revolution, the gravitational force of a rod, and the area of an ellipse. Trig substitution is the method that makes those integrals computable by hand. It also reinforces the idea that a substitution does not have to be \"something already in the integrand\"; you can impose a new variable whenever an identity will reward you for it.",
+  "checkYourself": [
+    {
+      "q": "Which substitution handles $\\sqrt{25 - x^2}$, and what does the root become?",
+      "a": "$x = 5 \\sin\\theta$; the root becomes $5 \\cos\\theta$."
+    },
+    {
+      "q": "After $x = 3\\tan\\theta$, how do you express $\\cos\\theta$ in terms of $x$?",
+      "a": "Triangle with opposite $x$, adjacent 3, hypotenuse $\\sqrt{x^2 + 9}$, so $\\cos\\theta = \\frac{3}{\\sqrt{x^2 + 9}}$."
+    },
+    {
+      "q": "What do you do with $\\int \\frac{dx}{\\sqrt{x^2 - 6x + 13}}$ before substituting?",
+      "a": "Complete the square: $x^2 - 6x + 13 = (x - 3)^2 + 4$. Then let $u = x - 3$ and use $u = 2\\tan\\theta$."
+    },
+    {
+      "q": "Does $\\int \\frac{x\\,dx}{\\sqrt{9 - x^2}}$ need trig substitution?",
+      "a": "No. The $x$ in the numerator is the derivative of $9 - x^2$ up to a constant, so $u = 9 - x^2$ gives $-\\sqrt{9 - x^2} + C$."
+    }
+  ],
+  "readingGuide": [
+    "Find the table of the three substitutions and, for each, write down the identity that eliminates the square root and the range of $\\theta$ that keeps the root positive.",
+    "Before reading the solution of the first example, decide which substitution fits and compute $dx$ yourself.",
+    "Look for how each example converts back to $x$, and sketch the reference triangle each time.",
+    "Find the example that completes the square first and note where the shifted variable enters.",
+    "Watch for any example where a definite integral changes its limits to $\\theta$ instead of converting back."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "nodeId": "derivative-function",
+  "title": "The Derivative as a Function",
+  "overview": "In the last section the derivative was a number attached to one point. But the point $a$ was arbitrary, so you can let it vary: define\n$$f'(x) = \\lim_{h \\to 0}\\frac{f(x + h) - f(x)}{h}$$\nfor every $x$ where the limit exists. This makes $f'$ a new **function**, whose value at each $x$ is the slope of the tangent to $f$ there. Computing it is the same routine as before, carried out with $x$ instead of a specific number. For $f(x) = x^2$: $\\frac{(x + h)^2 - x^2}{h} = \\frac{2xh + h^2}{h} = 2x + h \\to 2x$, so $f'(x) = 2x$. That one formula now gives the slope at every point: 6 at $x = 3$, $-4$ at $x = -2$, 0 at $x = 0$.\n\nYou can sketch $f'$ directly from the graph of $f$ without a formula. Wherever $f$ is rising, $f'$ is positive; wherever $f$ is falling, $f'$ is negative; wherever $f$ has a horizontal tangent (a peak, a valley, or a flat spot), $f'$ crosses or touches zero. Where $f$ is steepest, $f'$ is farthest from zero. Practicing this correspondence trains the intuition that Chapter 4 will formalize.\n\nSeveral notations mean the same thing. If $y = f(x)$, the derivative can be written $f'(x)$, $y'$, $\\frac{dy}{dx}$, $\\frac{df}{dx}$, or $\\frac{d}{dx}f(x)$. The fraction-like notation $\\frac{dy}{dx}$ is Leibniz's and reminds you that it came from $\\frac{\\Delta y}{\\Delta x}$; it is not a fraction, but it often behaves like one. To indicate the value at a specific point in Leibniz notation, write $\\left.\\frac{dy}{dx}\\right|_{x = a}$.\n\nA function is **differentiable at $a$** if $f'(a)$ exists, and differentiable on an interval if it is differentiable at every point there. Differentiability is a stronger condition than continuity: every differentiable function is continuous, but not the other way around. There are three typical ways a continuous function can fail to have a derivative. A **corner**, like $|x|$ at 0, where the slopes from the left ($-1$) and right ($+1$) disagree. A **vertical tangent**, like $\\sqrt[3]{x}$ at 0, where the secant slopes blow up to infinity. And of course a **discontinuity**, since a function that jumps cannot have a tangent at the jump.\n\nBecause $f'$ is itself a function, you can differentiate it again. The **second derivative** $f''(x) = (f')'(x)$ measures how fast the slope is changing; if $f$ is position, $f'$ is velocity and $f''$ is acceleration. For $f(x) = x^3$, $f'(x) = 3x^2$ and $f''(x) = 6x$. Third and higher derivatives, $f'''$, $f^{(4)}$, and so on, continue the pattern; in Leibniz notation, $\\frac{d^2y}{dx^2}$. Later, the sign of $f''$ will tell you which way the graph bends.",
+  "keyIdeas": [
+    "$f'(x) = \\lim_{h \\to 0}\\frac{f(x + h) - f(x)}{h}$ defines a new function whose value at each $x$ is the slope of the tangent there.",
+    "Sketching $f'$ from $f$: $f'$ is positive where $f$ rises, negative where $f$ falls, zero at horizontal tangents, and large where $f$ is steep.",
+    "Notations $f'(x)$, $y'$, $\\frac{dy}{dx}$, $\\frac{d}{dx}f(x)$ all mean the derivative; $\\left.\\frac{dy}{dx}\\right|_{x = a}$ means its value at $a$.",
+    "Differentiable at $a$ means $f'(a)$ exists; differentiable implies continuous, but continuous does not imply differentiable.",
+    "A continuous function fails to be differentiable at a corner (one-sided slopes differ), at a vertical tangent (slopes blow up), or at a discontinuity.",
+    "The second derivative $f'' = (f')'$ is the rate of change of the slope; for position, $f'$ is velocity and $f''$ is acceleration."
+  ],
+  "workedExamples": [
+    {
+      "title": "Finding f prime as a function",
+      "problem": "Find $f'(x)$ for $f(x) = \\sqrt{x}$ from the definition, and state the domains of $f$ and $f'$.",
+      "steps": [
+        "$\\frac{\\sqrt{x + h} - \\sqrt{x}}{h}$ is $\\frac{0}{0}$ at $h = 0$. Multiply top and bottom by the conjugate $\\sqrt{x + h} + \\sqrt{x}$.",
+        "Numerator becomes $(x + h) - x = h$. So the quotient is $\\frac{h}{h(\\sqrt{x + h} + \\sqrt{x})} = \\frac{1}{\\sqrt{x + h} + \\sqrt{x}}$.",
+        "Limit as $h \\to 0$: $f'(x) = \\frac{1}{2\\sqrt{x}}$.",
+        "Domain of $f$: $[0, \\infty)$. Domain of $f'$: $(0, \\infty)$, because at $x = 0$ the formula divides by zero (the tangent there is vertical). Check: $f'(4) = \\frac{1}{4}$, and the secant from 4 to 4.41 has slope $\\frac{2.1 - 2}{0.41} \\approx 0.244$. Close."
+      ]
+    },
+    {
+      "title": "Sketching the derivative from a graph",
+      "problem": "A graph of $f$ rises steeply from $x = -2$, levels off to a peak at $x = 0$, falls to a valley at $x = 2$, then rises gently. Describe the graph of $f'$.",
+      "steps": [
+        "On $(-2, 0)$, $f$ is rising, so $f' > 0$; it is steepest near $-2$, so $f'$ starts large and positive and decreases toward 0.",
+        "At $x = 0$, the peak has a horizontal tangent, so $f'(0) = 0$. The graph of $f'$ crosses the axis there, going from positive to negative.",
+        "On $(0, 2)$, $f$ falls, so $f' < 0$, with $f'$ most negative somewhere in the middle where $f$ falls fastest.",
+        "At $x = 2$, the valley gives $f'(2) = 0$, crossing from negative to positive. After that $f$ rises gently, so $f'$ is small and positive. The sketch of $f'$ is a wave crossing zero at 0 and 2."
+      ]
+    },
+    {
+      "title": "A corner where the derivative fails",
+      "problem": "Show that $f(x) = |x - 1|$ is not differentiable at $x = 1$.",
+      "steps": [
+        "Compute the one-sided limits of the difference quotient at $x = 1$. Note $f(1) = 0$.",
+        "From the right ($h > 0$): $f(1 + h) = |h| = h$, so $\\frac{h - 0}{h} = 1$. The right-hand limit is 1.",
+        "From the left ($h < 0$): $f(1 + h) = |h| = -h$, so $\\frac{-h}{h} = -1$. The left-hand limit is $-1$.",
+        "Since $1 \\ne -1$, the limit does not exist and $f'(1)$ is undefined. The graph has a corner at $(1, 0)$. Everywhere else $f'(x) = 1$ for $x > 1$ and $-1$ for $x < 1$."
+      ]
+    },
+    {
+      "title": "Second derivative as acceleration",
+      "problem": "A particle has position $s(t) = t^3 - 6t^2 + 9t$ (meters, seconds). Find the velocity and acceleration functions, and the acceleration when the velocity is zero.",
+      "steps": [
+        "From the definition (or the power rule once you know it), $v(t) = s'(t) = 3t^2 - 12t + 9$.",
+        "Differentiate again: $a(t) = v'(t) = 6t - 12$.",
+        "Velocity is zero when $3t^2 - 12t + 9 = 3(t^2 - 4t + 3) = 3(t - 1)(t - 3) = 0$, so at $t = 1$ and $t = 3$.",
+        "$a(1) = -6$ m/s$^2$ (the particle is stopping and about to reverse to negative velocity) and $a(3) = 6$ m/s$^2$ (stopping and about to move forward again)."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Treating $\\frac{dy}{dx}$ as $d$ times $y$ over $d$ times $x$ and canceling the $d$s. It is a single symbol for the derivative.",
+    "Assuming continuous means differentiable. $|x|$ is continuous everywhere but has no derivative at 0.",
+    "Giving $f'$ the same domain as $f$ automatically. $\\sqrt{x}$ is defined at 0 but $\\frac{1}{2\\sqrt{x}}$ is not.",
+    "Sketching $f'$ with the same shape as $f$. Where $f$ has a peak, $f'$ has a zero crossing, not a peak.",
+    "Confusing $f''$ with $(f')^2$. The second derivative is the derivative of the derivative, not its square."
+  ],
+  "whyItMatters": "Viewing the derivative as a function is what makes antiderivatives possible: an antiderivative of $f$ is a function $F$ with $F' = f$, so you must think of differentiation as an operation that turns one function into another. The Fundamental Theorem then says that $\\int_a^x f(t)\\,dt$ is exactly such an $F$. Differentiability on an interval is the hypothesis for the Mean Value Theorem, and the second derivative drives the error bounds for numerical integration rules in Chapter 7.",
+  "checkYourself": [
+    {
+      "q": "If $f(x) = 5x$, what is $f'(x)$?",
+      "a": "5, for every $x$."
+    },
+    {
+      "q": "Where is $f(x) = |x + 3|$ not differentiable?",
+      "a": "At $x = -3$, where there is a corner."
+    },
+    {
+      "q": "If $f'(x) = 2x$, what is $f''(x)$?",
+      "a": "2."
+    },
+    {
+      "q": "Does differentiable at $a$ imply continuous at $a$?",
+      "a": "Yes."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of $f'$ as a function and compare it with the definition of $f'(a)$ from the previous section; note what changed.",
+    "Study the example where the graph of $f'$ is sketched from the graph of $f$; cover the answer and sketch it yourself first.",
+    "Locate the list of notations for the derivative and the explanation of Leibniz notation.",
+    "Find the theorem that differentiable implies continuous and the three ways a function can fail to be differentiable, with their figures.",
+    "Find the definition of higher derivatives and the interpretation of the second derivative as acceleration."
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "nodeId": "product-quotient-rules",
+  "title": "The Product and Quotient Rules",
+  "overview": "The derivative of a sum is the sum of the derivatives, so it is tempting to guess that the derivative of a product is the product of the derivatives. It is not. Test it on $x\\cdot x = x^2$: the derivatives of the factors are $1$ and $1$, whose product is 1, but the derivative of $x^2$ is $2x$. The correct **product rule** is\n$$\\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x).$$\nIn words: differentiate the first factor and leave the second alone, plus leave the first alone and differentiate the second. For $x\\cdot x$: $1\\cdot x + x\\cdot 1 = 2x$. Correct.\n\nHere is why it has that shape. Picture a rectangle whose width is $f$ and height is $g$, so its area is $fg$. When $x$ changes a little, the width changes by about $f'\\,dx$ and the height by about $g'\\,dx$. The new area gains a strip along one side of area $f'\\,dx\\cdot g$, a strip along the other side of area $f\\cdot g'\\,dx$, and a tiny corner of area $f'g'\\,(dx)^2$ that is negligible. Dividing the gain by $dx$ gives $f'g + fg'$. Each factor contributes its own rate, scaled by the current size of the other.\n\nThe **quotient rule** handles $\\frac{f}{g}$:\n$$\\frac{d}{dx}\\left[\\frac{f(x)}{g(x)}\\right] = \\frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}.$$\nThe numerator looks like the product rule but with a minus sign, and the order matters: derivative of the top times the bottom, **minus** the top times the derivative of the bottom, all over the bottom squared. Many people remember \"low d-high minus high d-low, over low squared.\" Test it on $\\frac{1}{x}$ with $f = 1$, $g = x$: $\\frac{0\\cdot x - 1\\cdot 1}{x^2} = -\\frac{1}{x^2}$, which matches the power rule.\n\nWith these two rules and the exponential rule you can now differentiate things like $x^2 e^x$ (product: $2xe^x + x^2e^x$) and $\\frac{e^x}{x}$ (quotient: $\\frac{e^x\\cdot x - e^x\\cdot 1}{x^2}$). It is worth factoring the result when you can, as in $x^2e^x + 2xe^x = xe^x(x + 2)$, because later you will need to find where the derivative is zero, and a factored form makes that immediate.\n\nTwo pieces of practical advice. First, before using the quotient rule, check whether simplifying is easier: $\\frac{x^3 + x}{x} = x^2 + 1$ differentiates in one step, and $\\frac{3}{x^2}$ is just $3x^{-2}$. Second, when a product has a constant factor, the constant multiple rule is simpler than the product rule; $\\frac{d}{dx}[5e^x] = 5e^x$, no product rule needed. Reach for the product and quotient rules only when both pieces genuinely depend on $x$.",
+  "keyIdeas": [
+    "Product rule: $(fg)' = f'g + fg'$. The derivative of a product is not the product of the derivatives.",
+    "Quotient rule: $\\left(\\frac{f}{g}\\right)' = \\frac{f'g - fg'}{g^2}$; the order in the numerator matters because of the minus sign.",
+    "The product rule comes from a rectangle picture: each factor contributes its rate of change scaled by the other factor.",
+    "Factor the result of a product rule, e.g. $x^2e^x + 2xe^x = xe^x(x + 2)$, so zeros of the derivative are visible.",
+    "Simplify before differentiating when possible: a quotient with a monomial denominator can be split, and a constant factor needs only the constant multiple rule.",
+    "Both rules combine with the power and exponential rules to handle expressions like $x^n e^x$ and $\\frac{e^x}{x^n}$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Product rule with an exponential",
+      "problem": "Differentiate $y = (x^2 - 3x)e^x$ and find where the tangent is horizontal.",
+      "steps": [
+        "Let $f = x^2 - 3x$ with $f' = 2x - 3$, and $g = e^x$ with $g' = e^x$.",
+        "Product rule: $y' = (2x - 3)e^x + (x^2 - 3x)e^x$.",
+        "Factor out $e^x$: $y' = e^x(x^2 - 3x + 2x - 3) = e^x(x^2 - x - 3)$.",
+        "Horizontal tangent: $e^x$ is never zero, so solve $x^2 - x - 3 = 0$: $x = \\frac{1 \\pm\\sqrt{13}}{2}$, approximately $2.30$ and $-1.30$."
+      ]
+    },
+    {
+      "title": "Quotient rule",
+      "problem": "Differentiate $y = \\dfrac{x^2 + 1}{x - 2}$.",
+      "steps": [
+        "Top: $f = x^2 + 1$, $f' = 2x$. Bottom: $g = x - 2$, $g' = 1$.",
+        "Quotient rule: $y' = \\frac{(2x)(x - 2) - (x^2 + 1)(1)}{(x - 2)^2}$.",
+        "Simplify the numerator: $2x^2 - 4x - x^2 - 1 = x^2 - 4x - 1$. So $y' = \\frac{x^2 - 4x - 1}{(x - 2)^2}$.",
+        "Check at $x = 0$: formula gives $\\frac{-1}{4}$. Secant from 0 to 0.01: $y(0) = -0.5$, $y(0.01) = \\frac{1.0001}{-1.99} \\approx -0.50256$, slope $\\approx -0.256$. Close to $-0.25$."
+      ]
+    },
+    {
+      "title": "Tangent line via the quotient rule",
+      "problem": "Find the tangent line to $y = \\dfrac{e^x}{1 + x}$ at $x = 0$.",
+      "steps": [
+        "Point: $y(0) = \\frac{1}{1} = 1$, so $(0, 1)$.",
+        "Derivative: $y' = \\frac{e^x(1 + x) - e^x(1)}{(1 + x)^2} = \\frac{e^x\\cdot x}{(1 + x)^2}$ after canceling the $e^x$ terms in the numerator: $e^x + xe^x - e^x = xe^x$.",
+        "At $x = 0$: $y' = \\frac{0}{1} = 0$. The tangent is horizontal.",
+        "Tangent line: $y = 1$. Check: $y(0.1) = \\frac{1.10517}{1.1} \\approx 1.0047$ and $y(-0.1) = \\frac{0.90484}{0.9} \\approx 1.0054$, both slightly above 1, so $(0, 1)$ is a minimum with a flat tangent. Consistent."
+      ]
+    },
+    {
+      "title": "When not to use the quotient rule",
+      "problem": "Differentiate $y = \\dfrac{4x^5 - 2x^2 + 6}{2x^2}$.",
+      "steps": [
+        "The denominator is a single term, so split the fraction instead: $y = \\frac{4x^5}{2x^2} - \\frac{2x^2}{2x^2} + \\frac{6}{2x^2} = 2x^3 - 1 + 3x^{-2}$.",
+        "Now the power rule: $y' = 6x^2 - 6x^{-3} = 6x^2 - \\frac{6}{x^3}$.",
+        "The quotient rule would have produced a messy numerator that simplifies to the same thing, with many more chances for error. Simplify first whenever the denominator is a monomial."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Multiplying the derivatives: $(x\\cdot e^x)' = 1\\cdot e^x$. The product rule gives $e^x + xe^x$. Check at $x = 1$: the function's secant slope from 1 to 1.01 is about $5.48$, and $2e \\approx 5.44$, while $e \\approx 2.72$ is far off.",
+    "Reversing the subtraction in the quotient rule: writing $\\frac{fg' - f'g}{g^2}$. Test on $\\frac{1}{x}$: the wrong order gives $+\\frac{1}{x^2}$, but $\\frac{1}{x}$ is decreasing, so its derivative must be negative.",
+    "Forgetting to square the denominator in the quotient rule.",
+    "Using the product rule on $5e^x$ or $3x^4$. With a constant factor, just keep the constant: $5e^x$ and $12x^3$.",
+    "Leaving a product-rule result unfactored and then struggling to solve $y' = 0$. Factor out the common pieces ($e^x$, powers of $x$) first."
+  ],
+  "whyItMatters": "Integration by parts, the first big technique of Chapter 7, is the product rule run backwards: integrating $f'g + fg' = (fg)'$ gives $\\int f g'\\,dx = fg - \\int f' g\\,dx$, which is how you integrate $xe^x$ and $x\\sin x$. The quotient rule is what produces the derivatives of $\\tan x$ and $\\sec x$ from $\\sin$ and $\\cos$, and those in turn become the antiderivatives $\\int\\sec^2 x\\,dx = \\tan x + C$ and $\\int\\sec x\\tan x\\,dx = \\sec x + C$.",
+  "checkYourself": [
+    {
+      "q": "$\\frac{d}{dx}[x^3 e^x]$?",
+      "a": "$3x^2e^x + x^3e^x = x^2e^x(3 + x)$."
+    },
+    {
+      "q": "$\\frac{d}{dx}\\left[\\frac{x}{x + 1}\\right]$?",
+      "a": "$\\frac{(1)(x + 1) - x(1)}{(x + 1)^2} = \\frac{1}{(x + 1)^2}$."
+    },
+    {
+      "q": "Is $(fg)' = f'g'$ ever true?",
+      "a": "Only by coincidence at special points; it is not a rule."
+    },
+    {
+      "q": "Quickest way to differentiate $\\frac{x^4 + x}{x^2}$?",
+      "a": "Split into $x^2 + x^{-1}$, then $2x - x^{-2}$."
+    }
+  ],
+  "readingGuide": [
+    "Find the product rule and its proof; identify the step where $f(x + h)g(x)$ is added and subtracted, and explain why that trick works.",
+    "Study the figure or argument that interprets the product rule as the change in area of a rectangle.",
+    "Find the quotient rule and verify it yourself on $\\frac{1}{x}$ against the power rule.",
+    "Before reading the solution of the first example with $e^x$ times a polynomial, do it and factor your answer.",
+    "Look for the advice about when not to use the quotient rule, and note one example where simplifying first is easier."
+  ]
+}

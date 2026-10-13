@@ -1,0 +1,77 @@
+{
+  "nodeId": "sequences",
+  "title": "Sequences",
+  "overview": "A **sequence** is just an ordered list of numbers that goes on forever: $a_1, a_2, a_3, \\ldots$. Usually there is a rule for the $n$-th term. For example $a_n = \\frac{1}{n}$ gives $1, \\frac{1}{2}, \\frac{1}{3}, \\frac{1}{4}, \\ldots$. The position $n$ is always a positive whole number, so a sequence is really a function whose input is a counting number. Writing out the first several terms is always a good first move. It proves nothing, but it tells you what to expect.\n\nThe big question about a sequence is: **where are the terms heading?** If the terms settle closer and closer to one number $L$ as $n$ grows, we say the sequence **converges** to $L$ and write $\\lim_{n \\to \\infty} a_n = L$. If the terms do not settle (they grow without bound, or keep bouncing around), the sequence **diverges**. For $a_n = \\frac{1}{n}$ the terms shrink toward $0$, so it converges to $0$.\n\nHere is the useful shortcut. If you can write the rule as a formula in $x$, say $f(x)$, and you already know $\\lim_{x \\to \\infty} f(x) = L$, then the sequence $a_n = f(n)$ also converges to $L$. All the limit-at-infinity tools you learned (dividing by the highest power, l'Hospital's Rule) carry over directly. This is the main reason sequences feel familiar after Chapter 2. The one thing to watch is the sign flipper $(-1)^n$, which is not a nice function of $x$. For that, use the squeeze idea: if $|a_n| \\to 0$ then $a_n \\to 0$.\n\nTwo more facts save a lot of work. First, a sequence that only ever goes up (or only down) and never passes some ceiling (or floor) must converge; this is the **Monotonic Sequence Theorem**. Second, the geometric sequence $r^n$ converges exactly when $-1 < r \\le 1$: it goes to $0$ when $|r| < 1$, stays at $1$ when $r = 1$, and diverges otherwise.\n\nSequences are the warm-up for series. Every question about adding infinitely many numbers turns into a question about whether a certain sequence (the running totals) converges.",
+  "keyIdeas": [
+    "A sequence is a function on the positive integers: $a_n = f(n)$. Converges to $L$ means the terms get and stay as close to $L$ as you like: $\\lim_{n \\to \\infty} a_n = L$.",
+    "If $f(x) \\to L$ as $x \\to \\infty$ and $a_n = f(n)$, then $a_n \\to L$. So l'Hospital's Rule and highest-power tricks apply to sequences by passing to the function $f(x)$.",
+    "Squeeze: if $b_n \\le a_n \\le c_n$ and $b_n, c_n \\to L$, then $a_n \\to L$. In particular $|a_n| \\to 0$ forces $a_n \\to 0$, which handles $(-1)^n$ factors.",
+    "The geometric sequence $r^n$ converges to $0$ when $|r| < 1$, converges to $1$ when $r = 1$, and diverges for every other $r$.",
+    "Monotonic Sequence Theorem: a sequence that is increasing (or decreasing) and bounded must converge. You can know a limit exists without knowing its value.",
+    "Limit laws work for sequences: limits of sums, products, and quotients are the sums, products, and quotients of the limits (as long as the pieces converge and no denominator limit is $0$)."
+  ],
+  "workedExamples": [
+    {
+      "title": "A rational rule",
+      "problem": "Does the sequence $a_n = \\dfrac{3n+1}{n+2}$ converge? If so, to what?",
+      "steps": [
+        "Why this step: get a feel first. The first terms are $a_1 = \\frac{4}{3}$, $a_2 = \\frac{7}{4}$, $a_3 = 2$, $a_{10} = \\frac{31}{12} \\approx 2.58$. They are climbing but slowing down.",
+        "Why this step: treat it like a limit at infinity. Divide top and bottom by the highest power, $n$: $a_n = \\dfrac{3 + \\frac{1}{n}}{1 + \\frac{2}{n}}$.",
+        "Why this step: let $n \\to \\infty$. The fractions $\\frac{1}{n}$ and $\\frac{2}{n}$ go to $0$, so $\\lim_{n \\to \\infty} a_n = \\dfrac{3+0}{1+0} = 3$.",
+        "Conclusion: the sequence converges to $3$. Sanity check: $a_{100} = \\frac{301}{102} \\approx 2.95$, close to $3$ and still below it."
+      ]
+    },
+    {
+      "title": "Using l'Hospital's Rule",
+      "problem": "Find $\\lim_{n \\to \\infty} \\dfrac{\\ln n}{n}$, or show it does not exist.",
+      "steps": [
+        "Why this step: both top and bottom grow forever, so this is an $\\frac{\\infty}{\\infty}$ form. Numerically, $\\frac{\\ln 10}{10} \\approx 0.23$, $\\frac{\\ln 100}{100} \\approx 0.046$, $\\frac{\\ln 1000}{1000} \\approx 0.0069$. Looks like $0$.",
+        "Why this step: switch to the function $f(x) = \\dfrac{\\ln x}{x}$ so l'Hospital's Rule is allowed (it needs a differentiable variable, and $n$ only takes whole-number values).",
+        "Apply l'Hospital: $\\lim_{x \\to \\infty} \\dfrac{\\ln x}{x} = \\lim_{x \\to \\infty} \\dfrac{1/x}{1} = 0$.",
+        "Because $a_n = f(n)$ and $f(x) \\to 0$, the sequence also converges to $0$. Moral: $\\ln n$ grows, but far slower than $n$."
+      ]
+    },
+    {
+      "title": "A sign flipper",
+      "problem": "Decide whether $a_n = \\dfrac{(-1)^n}{n^2}$ converges, and whether $b_n = (-1)^n \\dfrac{n}{n+1}$ converges.",
+      "steps": [
+        "Why this step: write out terms to see the behavior. For $a_n$: $-1, \\frac{1}{4}, -\\frac{1}{9}, \\frac{1}{16}, \\ldots$. The signs alternate but the sizes shrink. For $b_n$: $-\\frac{1}{2}, \\frac{2}{3}, -\\frac{3}{4}, \\frac{4}{5}, \\ldots$. The sizes grow toward $1$ while the signs keep flipping.",
+        "Why this step: for $a_n$, use the absolute value. $|a_n| = \\frac{1}{n^2} \\to 0$, so by the squeeze fact, $a_n \\to 0$. It converges.",
+        "Why this step: for $b_n$, the absolute values $\\frac{n}{n+1} \\to 1$, not $0$, so the squeeze fact does not apply. The even terms approach $1$ and the odd terms approach $-1$.",
+        "A convergent sequence can have only one limit, so $b_n$ diverges. It is bounded (every term is between $-1$ and $1$), yet it still diverges; bounded alone is not enough."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Thinking that a sequence whose terms are all less than some number must converge. Check with $(-1)^n$: every term is between $-1$ and $1$, but it never settles. Bounded plus monotonic is what guarantees convergence.",
+    "Applying l'Hospital's Rule directly with $n$ and $(-1)^n$ in the formula. The fix: replace $n$ by $x$ only for expressions that make sense for all real $x$, and handle $(-1)^n$ separately with absolute values.",
+    "Believing $r^n \\to 0$ for every $r$ between $-1$ and $1$ including the endpoints. Check $r = -1$: the terms are $-1, 1, -1, 1, \\ldots$ and the sequence diverges. Only $|r| < 1$ gives $0$.",
+    "Confusing a sequence with the sum of its terms. The sequence $\\frac{1}{n}$ converges to $0$, but adding up $1 + \\frac{1}{2} + \\frac{1}{3} + \\cdots$ grows without bound. Convergence of a list and convergence of a running total are different questions."
+  ],
+  "whyItMatters": "Every integral you love is secretly a limit of a sequence: the Riemann sums $R_1, R_2, R_3, \\ldots$ with more and more rectangles form a sequence, and the definite integral is its limit. Next, series will add up infinitely many terms by looking at the sequence of partial sums, and power series will let you write functions like $e^x$ and $\\arctan x$ as infinite polynomials you can integrate term by term. The habit you build here, asking \"where are these numbers heading and how do I prove it,\" is the engine behind all of it.",
+  "checkYourself": [
+    {
+      "q": "What is $\\lim_{n \\to \\infty} \\dfrac{5n^2 - 1}{2n^2 + n}$?",
+      "a": "$\\frac{5}{2}$ (divide top and bottom by $n^2$)."
+    },
+    {
+      "q": "Does $a_n = \\left(-\\frac{2}{3}\\right)^n$ converge? To what?",
+      "a": "Yes, to $0$, because $|r| = \\frac{2}{3} < 1$."
+    },
+    {
+      "q": "The sequence $a_n = \\dfrac{n}{n+1}$ is increasing and every term is below $1$. What can you conclude without computing a limit?",
+      "a": "By the Monotonic Sequence Theorem it converges (and in fact the limit is $1$)."
+    },
+    {
+      "q": "True or false: if $|a_n| \\to 2$ then $a_n \\to 2$.",
+      "a": "False. $a_n = (-1)^n \\cdot 2$ has $|a_n| = 2$ but diverges. The absolute-value shortcut only works for limit $0$."
+    }
+  ],
+  "readingGuide": [
+    "Find the formal definition of the limit of a sequence and rewrite it in your own words, focusing on what \"eventually stays within any tolerance\" means.",
+    "Locate the theorem that links $\\lim_{x \\to \\infty} f(x)$ to $\\lim_{n \\to \\infty} f(n)$. Note which direction it works and why the reverse can fail.",
+    "Before reading the worked example about a sequence with a $(-1)^n$ factor, decide for yourself which tool handles it (squeeze with absolute values).",
+    "Find the statement about when $r^n$ converges and test each case ($r = 1$, $r = -1$, $|r| < 1$, $|r| > 1$) with a few terms by hand.",
+    "Read the Monotonic Sequence Theorem and write down one sequence it applies to and one bounded sequence it does not apply to."
+  ]
+}

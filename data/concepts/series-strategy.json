@@ -1,0 +1,84 @@
+{
+  "nodeId": "series-strategy",
+  "title": "Strategy for Testing Series",
+  "overview": "By now you own seven tools: the Test for Divergence, geometric and p-series facts, the Integral Test, the two comparison tests, the Alternating Series Test, and the Ratio and Root Tests. This node is about choosing fast. The choice is driven by the **shape of the term** $a_n$, the same way you choose an integration technique by the shape of the integrand.\n\nHere is a sensible order of questions.\n\n**Do the terms go to zero?** If $\\lim a_n \\ne 0$ the series diverges by the Test for Divergence, and you are done. Always try this first; it is the cheapest check.\n\n**Is it a known type?** Geometric, $\\sum a r^n$, converges when $|r| < 1$. A p-series, $\\sum \\frac{1}{n^p}$, converges when $p > 1$. A telescoping series can be summed directly.\n\n**Is $a_n$ a quotient of powers of $n$** (polynomials, roots, no exponentials or factorials)? Use comparison: keep the dominant powers to pick a p-series and apply the Limit Comparison Test.\n\n**Does $a_n$ contain factorials or $c^n$?** Use the Ratio Test. Consecutive terms cancel cleanly.\n\n**Is the whole term raised to the power $n$?** Use the Root Test.\n\n**Does the sign alternate** and nothing above applies? Check absolute convergence first (often by the ratio test or comparison). If that fails, use the Alternating Series Test with $b_n$ decreasing to $0$.\n\n**Is $a_n = f(n)$ for a function you can integrate**, especially with $\\ln n$ around? Use the Integral Test.\n\nTwo reminders. The ratio and root tests give $L = 1$ on anything that grows like a power of $n$, so they are wasted effort on rational terms. And every test except the Test for Divergence can be inconclusive; a test that fails to apply is not evidence of divergence. When a test says nothing, try another one.\n\nWith practice, you will see the right test within a few seconds. Until then, walk the list in order and write one line explaining why you picked the test you did.",
+  "keyIdeas": [
+    "Always check $\\lim_{n \\to \\infty} a_n$ first. If it is not $0$, the series diverges; if it is $0$, you have learned nothing yet.",
+    "Known types: $\\sum ar^n$ converges exactly when $|r| < 1$; $\\sum \\frac{1}{n^p}$ converges exactly when $p > 1$.",
+    "Powers of $n$ only (polynomials, roots): Limit Comparison with a p-series built from the dominant powers.",
+    "Factorials or $c^n$: Ratio Test. Whole term to the power $n$: Root Test. Both are inconclusive ($L = 1$) on rational terms.",
+    "Alternating signs: test absolute convergence first; if that fails, use the Alternating Series Test ($b_n$ decreasing to $0$).",
+    "Integrable $f(n)$, especially with $\\ln n$: Integral Test. A test that does not apply proves nothing; move to another test."
+  ],
+  "workedExamples": [
+    {
+      "title": "Rational terms",
+      "problem": "Decide whether $\\sum_{n=1}^{\\infty} \\dfrac{n^2 + 1}{n^3 + 2}$ converges, and say why you chose your test.",
+      "steps": [
+        "Why this step: terms go to $0$ (degree $2$ over degree $3$), so the Test for Divergence is silent. The term is a quotient of polynomials, so the shape says comparison, not ratio.",
+        "Keep dominant powers: $\\dfrac{n^2}{n^3} = \\dfrac{1}{n}$. Compare with the harmonic series, which diverges.",
+        "Limit comparison: $\\dfrac{a_n}{1/n} = \\dfrac{n^3 + n}{n^3 + 2} \\to 1$, positive and finite.",
+        "The given series diverges, like $\\sum \\frac{1}{n}$. (If you had tried the ratio test you would have found $L = 1$ and learned nothing.)"
+      ]
+    },
+    {
+      "title": "Exponential in the denominator",
+      "problem": "Decide whether $\\sum_{n=1}^{\\infty} \\dfrac{n^3}{e^n}$ converges.",
+      "steps": [
+        "Why this step: the $e^n$ is the signature of the ratio test. Form the ratio: $\\dfrac{a_{n+1}}{a_n} = \\dfrac{(n+1)^3}{e^{n+1}} \\cdot \\dfrac{e^n}{n^3} = \\dfrac{1}{e} \\left( \\dfrac{n+1}{n} \\right)^3$.",
+        "Take the limit: $\\left( 1 + \\frac{1}{n} \\right)^3 \\to 1$, so $L = \\frac{1}{e} \\approx 0.37$.",
+        "Since $L < 1$, the series converges. Any polynomial over any exponential with base greater than $1$ converges this way."
+      ]
+    },
+    {
+      "title": "A logarithm calls for the integral test",
+      "problem": "Decide whether $\\sum_{n=2}^{\\infty} \\dfrac{1}{n \\ln n}$ converges.",
+      "steps": [
+        "Why this step: terms go to $0$. There is no factorial or exponential, so ratio and root are out. Comparison is awkward: $\\frac{1}{n \\ln n}$ is smaller than $\\frac{1}{n}$ (divergent) and bigger than $\\frac{1}{n^p}$ for $p > 1$ (convergent), so neither direction helps. The $\\ln n$ hints at the Integral Test, since $\\int \\frac{dx}{x \\ln x}$ is a substitution problem.",
+        "$f(x) = \\dfrac{1}{x \\ln x}$ is positive, continuous, and decreasing for $x \\ge 2$. Substitute $u = \\ln x$, $du = \\frac{dx}{x}$: $\\int \\dfrac{dx}{x \\ln x} = \\ln(\\ln x) + C$.",
+        "Evaluate: $\\int_2^t \\dfrac{dx}{x \\ln x} = \\ln(\\ln t) - \\ln(\\ln 2) \\to \\infty$ as $t \\to \\infty$.",
+        "The integral diverges, so the series diverges, extremely slowly. This is a series that sits right at the edge, which is exactly why comparison could not decide it."
+      ]
+    },
+    {
+      "title": "Terms that do not vanish",
+      "problem": "Decide whether $\\sum_{n=1}^{\\infty} \\left( \\dfrac{n}{n+1} \\right)^n$ converges.",
+      "steps": [
+        "Why this step: the $n$-th power tempts you toward the root test, but the first question is always whether $a_n \\to 0$. Rewrite $\\left( \\dfrac{n}{n+1} \\right)^n = \\dfrac{1}{\\left( 1 + \\frac{1}{n} \\right)^n}$.",
+        "Recall the famous limit $\\left( 1 + \\frac{1}{n} \\right)^n \\to e$. So $a_n \\to \\frac{1}{e} \\approx 0.37 \\ne 0$.",
+        "The series diverges by the Test for Divergence. (The root test would give $L = \\lim \\frac{n}{n+1} = 1$ and be inconclusive, so the cheap first check saved real effort.)"
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Reaching for the ratio test on rational terms. For $\\sum \\frac{n^2+1}{n^3+2}$ it gives $L = 1$. Rational terms mean comparison with a p-series.",
+    "Treating an inconclusive test as a verdict. If the ratio test gives $L = 1$, the series might converge or diverge; try comparison or the integral test.",
+    "Skipping the Test for Divergence and doing a long computation on a series whose terms go to $\\frac{1}{e}$ or $1$. Check the limit of $a_n$ before anything else.",
+    "Using the Alternating Series Test on a series that is not alternating, or using comparison on one that is. Match the test to the sign pattern: comparison and the integral test need positive terms."
+  ],
+  "whyItMatters": "Choosing a test by the shape of the term is the same skill as choosing an integration technique by the shape of the integrand, and it is what makes the next nodes manageable. Power series put an $x$ inside the terms, and you will run the ratio test to find where the series converges, then use p-series, comparison, or the alternating series test at the two endpoints. A quick, correct choice of test turns a scary infinite sum into a two-line problem.",
+  "checkYourself": [
+    {
+      "q": "Which test for $\\sum \\dfrac{2^n}{n!}$, and what is the verdict?",
+      "a": "Ratio test; ratio $\\frac{2}{n+1} \\to 0$, converges."
+    },
+    {
+      "q": "Which test for $\\sum \\dfrac{\\sqrt{n}}{n^2 + 1}$, and what is the verdict?",
+      "a": "Limit comparison with $\\frac{1}{n^{3/2}}$; converges."
+    },
+    {
+      "q": "Which test for $\\sum \\dfrac{(-1)^n}{\\ln n}$ (from $n = 2$), and what is the verdict?",
+      "a": "Alternating Series Test; $\\frac{1}{\\ln n}$ decreases to $0$, converges (conditionally, since $\\frac{1}{\\ln n} > \\frac{1}{n}$)."
+    },
+    {
+      "q": "What is the very first thing to check for any series?",
+      "a": "Whether $a_n \\to 0$. If not, it diverges."
+    }
+  ],
+  "readingGuide": [
+    "Read the list of strategy questions and rewrite it as your own one-page flowchart, in the order you would actually ask them.",
+    "For each example in the section, cover the solution, name the test you would choose from the shape of the term, and only then compare.",
+    "Note which tests require positive terms and which allow mixed signs, and mark that on your flowchart.",
+    "Make a list of the series types for which the ratio test is inconclusive, and what you would do instead for each."
+  ]
+}

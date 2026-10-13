@@ -1,0 +1,76 @@
+{
+  "nodeId": "integral-test",
+  "title": "The Integral Test and Estimates of Sums",
+  "overview": "Most series cannot be summed exactly. The next best thing is to decide whether a series converges at all, and the **Integral Test** does that by comparing the series to an improper integral you already know how to handle. The integral is the easy object: integrals have antiderivatives and substitution rules, while sums have almost no tricks. So we trade the hard question for the easy one.\n\nPicture the terms $a_n = f(n)$ as the heights of rectangles of width $1$, where $f$ is positive, continuous, and decreasing. The total area of the rectangles is the sum of the series, and the area under the curve $y = f(x)$ is the integral $\\int_1^{\\infty} f(x)\\,dx$. These two areas are tied together: the rectangles never stick out more than the first term above the curve, and never fall more than the first term below it. So either both areas are finite or both are infinite. That is the test:\n$$\\sum_{n=1}^{\\infty} f(n) \\text{ and } \\int_1^{\\infty} f(x)\\,dx \\text{ either both converge or both diverge.}$$\nThe test says nothing about the value of the sum, only about convergence. The sum and the integral are usually different numbers.\n\nThe most used consequence is the **p-series** rule. Since $\\int_1^{\\infty} \\frac{dx}{x^p}$ converges exactly when $p > 1$,\n$$\\sum_{n=1}^{\\infty} \\frac{1}{n^p} \\text{ converges if } p > 1 \\text{ and diverges if } p \\le 1.$$\nFor example $\\sum \\frac{1}{n^2}$ converges while $\\sum \\frac{1}{\\sqrt{n}}$ diverges, and the borderline case $p = 1$ is the harmonic series, which diverges. This gives you a ready-made family of known series to compare against later.\n\nThe same picture also gives an **error estimate**. If you stop after $N$ terms, the leftover tail $R_N = s - s_N$ is squeezed between two integrals:\n$$\\int_{N+1}^{\\infty} f(x)\\,dx \\le R_N \\le \\int_{N}^{\\infty} f(x)\\,dx.$$\nSo you can say how many terms are needed to pin the sum down to a chosen accuracy, which is exactly what a calculator does behind the scenes.",
+  "keyIdeas": [
+    "Integral Test: if $f$ is positive, continuous, and decreasing for $x \\ge 1$ and $a_n = f(n)$, then $\\sum_{n=1}^{\\infty} a_n$ converges if and only if $\\int_1^{\\infty} f(x)\\,dx$ converges.",
+    "The test decides convergence only. In general $\\sum_{n=1}^{\\infty} f(n) \\ne \\int_1^{\\infty} f(x)\\,dx$; the sum lies between the integral and the integral plus $a_1$.",
+    "p-series: $\\sum_{n=1}^{\\infty} \\frac{1}{n^p}$ converges when $p > 1$ and diverges when $p \\le 1$. The harmonic series is the case $p = 1$.",
+    "Remainder estimate: with $R_N = s - s_N$, we have $\\int_{N+1}^{\\infty} f(x)\\,dx \\le R_N \\le \\int_N^{\\infty} f(x)\\,dx$. Use the right side to bound the error after $N$ terms.",
+    "The hypotheses matter: $f$ must be positive and (eventually) decreasing. The test may start at any index, not only $n = 1$, because finitely many terms never affect convergence."
+  ],
+  "workedExamples": [
+    {
+      "title": "A series that converges",
+      "problem": "Does $\\sum_{n=1}^{\\infty} \\dfrac{1}{n^2 + 1}$ converge?",
+      "steps": [
+        "Why this step: check the hypotheses. $f(x) = \\dfrac{1}{x^2 + 1}$ is positive and continuous for $x \\ge 1$, and it decreases because the denominator grows. The Integral Test applies.",
+        "Why this step: compute the matching improper integral. $\\int_1^{\\infty} \\dfrac{dx}{x^2+1} = \\lim_{t \\to \\infty} \\left[ \\arctan x \\right]_1^t = \\dfrac{\\pi}{2} - \\dfrac{\\pi}{4} = \\dfrac{\\pi}{4}$.",
+        "The integral converges (to $\\frac{\\pi}{4} \\approx 0.785$), so the series converges too.",
+        "Caution: the sum is not $\\frac{\\pi}{4}$. Adding terms numerically gives about $1.076$, which sits between the integral $0.785$ and the integral plus the first term, $0.785 + 0.5 = 1.285$, just as the picture predicts."
+      ]
+    },
+    {
+      "title": "A series that diverges slowly",
+      "problem": "Does $\\sum_{n=2}^{\\infty} \\dfrac{\\ln n}{n}$ converge?",
+      "steps": [
+        "Why this step: the terms go to $0$ (we saw $\\frac{\\ln n}{n} \\to 0$ in the sequences node), so the Test for Divergence cannot decide. Try the Integral Test with $f(x) = \\frac{\\ln x}{x}$, which is positive for $x > 1$ and decreasing for $x \\ge 3$ (that is enough; a few early terms never matter).",
+        "Why this step: substitute $u = \\ln x$, $du = \\frac{dx}{x}$. Then $\\int \\dfrac{\\ln x}{x}\\,dx = \\dfrac{(\\ln x)^2}{2} + C$.",
+        "Evaluate the improper integral: $\\int_2^{t} \\dfrac{\\ln x}{x}\\,dx = \\dfrac{(\\ln t)^2}{2} - \\dfrac{(\\ln 2)^2}{2} \\to \\infty$ as $t \\to \\infty$.",
+        "The integral diverges, so the series diverges. It grows very slowly (like $\\frac{(\\ln N)^2}{2}$), but it never settles."
+      ]
+    },
+    {
+      "title": "Estimating a sum to a chosen accuracy",
+      "problem": "Approximate $\\sum_{n=1}^{\\infty} \\dfrac{1}{n^3}$ by its first $10$ terms, and bound the error.",
+      "steps": [
+        "Why this step: first confirm convergence. This is a p-series with $p = 3 > 1$, so it converges and the remainder estimate is valid with $f(x) = \\frac{1}{x^3}$.",
+        "Add the first $10$ terms: $s_{10} = 1 + \\frac{1}{8} + \\frac{1}{27} + \\cdots + \\frac{1}{1000} \\approx 1.19753$.",
+        "Why this step: bound the tail with the integral. $R_{10} \\le \\int_{10}^{\\infty} \\dfrac{dx}{x^3} = \\lim_{t \\to \\infty} \\left[ -\\dfrac{1}{2x^2} \\right]_{10}^{t} = \\dfrac{1}{200} = 0.005$.",
+        "So the true sum is between $1.19753$ and $1.20253$. (It is in fact about $1.20206$, well inside that window.) For more accuracy, you can solve $\\frac{1}{2N^2} < \\varepsilon$ for $N$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Claiming the sum equals the integral. For $\\sum \\frac{1}{n^2+1}$ the integral is $\\frac{\\pi}{4} \\approx 0.785$ but the sum is about $1.076$. The test transfers convergence, not the value.",
+    "Forgetting to check that $f$ is decreasing and positive. For a function that oscillates, the rectangle picture breaks and the test does not apply; use a different test.",
+    "Mixing up the p-series rule with the improper integral rule near $0$. For $\\sum \\frac{1}{n^p}$ and $\\int_1^{\\infty} \\frac{dx}{x^p}$ the answer is the same: converge when $p > 1$. Check $p = 1$: $\\int_1^t \\frac{dx}{x} = \\ln t \\to \\infty$, so the harmonic series diverges.",
+    "Using the remainder bound $\\int_N^{\\infty} f$ with the wrong lower limit. After $N$ terms, the tail starts at term $N+1$; the safe upper bound uses the integral from $N$, the lower bound uses the integral from $N+1$."
+  ],
+  "whyItMatters": "This is where integrals and series shake hands. An improper integral, something you already know how to compute, decides the fate of an infinite sum, and the same rectangle picture is the one that defined the integral in the first place. The p-series family becomes your reference shelf for the comparison tests in the next node, and the remainder estimate is your first taste of numerical analysis: not just \"does it converge\" but \"how many terms do I need.\" Later, power series for functions like $e^x$ will be handled with the same mindset.",
+  "checkYourself": [
+    {
+      "q": "Does $\\sum_{n=1}^{\\infty} \\dfrac{1}{\\sqrt{n}}$ converge?",
+      "a": "No. It is a p-series with $p = \\frac{1}{2} \\le 1$."
+    },
+    {
+      "q": "Does $\\sum_{n=1}^{\\infty} \\dfrac{1}{n^{1.01}}$ converge?",
+      "a": "Yes. $p = 1.01 > 1$, even though it converges extremely slowly."
+    },
+    {
+      "q": "If $\\int_1^{\\infty} f(x)\\,dx = 5$ for a positive decreasing $f$, what do you know about $\\sum_{n=1}^{\\infty} f(n)$?",
+      "a": "It converges, and its sum is between $5$ and $5 + f(1)$."
+    },
+    {
+      "q": "Bound the error after $N = 100$ terms of $\\sum \\frac{1}{n^2}$.",
+      "a": "$R_{100} \\le \\int_{100}^{\\infty} \\frac{dx}{x^2} = \\frac{1}{100} = 0.01$."
+    }
+  ],
+  "readingGuide": [
+    "Study the picture of rectangles and a decreasing curve. Draw it yourself and explain why the rectangles are trapped between two integrals that differ by one term.",
+    "Find the hypotheses of the Integral Test (positive, continuous, decreasing) and think of one function that fails each of them.",
+    "Before reading the proof that $\\sum \\frac{1}{n^p}$ converges for $p > 1$, compute $\\int_1^{\\infty} \\frac{dx}{x^p}$ yourself and see where the condition $p > 1$ comes from.",
+    "Find the remainder estimate for the Integral Test and relate the two inequalities to the two ways of placing rectangles (left endpoints and right endpoints).",
+    "Before reading the example that estimates a sum, pick a target accuracy and figure out how many terms you would need for $\\sum \\frac{1}{n^2}$."
+  ]
+}

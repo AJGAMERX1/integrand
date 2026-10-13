@@ -1,0 +1,89 @@
+{
+  "nodeId": "numbers-and-inequalities",
+  "title": "Numbers, Inequalities, and Absolute Value",
+  "overview": "Calculus is built on the real number line: every number you will ever integrate over, every limit you will ever take, lives somewhere on that line. So the first skill is simply being comfortable with the line itself. Whole numbers, fractions like $\\frac{3}{4}$, decimals, and numbers like $\\sqrt{2}$ and $\\pi$ that never terminate are all points on it. Moving right makes a number bigger, moving left makes it smaller, and that is all that \"less than\" means: $a < b$ says that $a$ sits to the left of $b$.\n\nAn inequality is a statement about where a number can be. $x < 3$ describes every point to the left of 3; $-1 \\le x < 3$ describes a stretch of the line from $-1$ (included) up to 3 (not included). We write that stretch as the interval $[-1, 3)$: a square bracket means \"this endpoint belongs,\" a round parenthesis means \"it does not.\" The symbols $\\infty$ and $-\\infty$ are not numbers, only directions, so they always get a parenthesis: $x \\ge 2$ is $[2, \\infty)$.\n\nSolving an inequality works almost exactly like solving an equation. You may add or subtract the same thing on both sides, and you may multiply or divide both sides by a **positive** number. The one new rule: multiplying or dividing by a **negative** number flips the direction of the inequality. The reason is geometric. Multiplying by $-1$ reflects the whole line through 0, so what was on the left ends up on the right. For example $-2x < 6$ becomes $x > -3$ after dividing by $-2$.\n\nAbsolute value is distance from 0. $|5| = 5$ and $|-5| = 5$ because both numbers are 5 units from the origin. More generally $|a - b|$ is the distance between $a$ and $b$, which is why absolute value shows up constantly in calculus: \"$f(x)$ is within $0.01$ of $L$\" is written $|f(x) - L| < 0.01$. The two facts to memorize are\n$$|x| < c \\quad\\text{means}\\quad -c < x < c, \\qquad |x| > c \\quad\\text{means}\\quad x < -c \\text{ or } x > c.$$\nThe first is a single interval centered at 0; the second is everything outside that interval.\n\nWhen you solve an inequality with a product or quotient, such as $(x-1)(x+2) > 0$, do not try to divide. Instead find where each factor is zero (here $x = 1$ and $x = -2$), mark those points on the line, and test one number from each of the three pieces. The sign of the product can only change at those marked points, so a single test number tells you the sign of the whole piece.",
+  "keyIdeas": [
+    "$a < b$ means $a$ is to the left of $b$ on the number line; $a \\le b$ allows equality.",
+    "Interval notation: $[a, b]$ includes both endpoints, $(a, b)$ includes neither, and $\\infty$ always gets a parenthesis, as in $(-\\infty, 4]$.",
+    "You may add or subtract anything on both sides of an inequality, but multiplying or dividing by a negative number reverses the inequality sign.",
+    "$|x|$ is the distance from $x$ to 0, and $|a - b|$ is the distance between $a$ and $b$; it is never negative.",
+    "$|x| < c$ is the same as $-c < x < c$, and $|x| > c$ is the same as $x < -c$ or $x > c$.",
+    "For a product or quotient inequality, find where each factor is zero or undefined, then test one point in each resulting piece of the line."
+  ],
+  "workedExamples": [
+    {
+      "title": "A linear inequality with a negative coefficient",
+      "problem": "Solve $5 - 3x \\le 11$ and write the answer in interval notation.",
+      "steps": [
+        "Isolate the term with $x$ by subtracting 5 from both sides. Subtraction never changes the direction: $-3x \\le 6$.",
+        "Divide both sides by $-3$. Because $-3$ is negative, the inequality flips: $x \\ge -2$.",
+        "Check with a test value. Take $x = 0$ (which should work): $5 - 0 = 5 \\le 11$, true. Take $x = -5$ (which should fail): $5 + 15 = 20 \\le 11$, false. The flip was correct.",
+        "In interval notation the solution is $[-2, \\infty)$. The bracket at $-2$ is because the original inequality allows equality."
+      ]
+    },
+    {
+      "title": "An absolute value inequality",
+      "problem": "Solve $|2x - 1| < 7$.",
+      "steps": [
+        "Read the statement as a distance: $2x - 1$ is less than 7 units from 0, so it lies strictly between $-7$ and $7$: $-7 < 2x - 1 < 7$.",
+        "Add 1 to all three parts: $-6 < 2x < 8$.",
+        "Divide all three parts by 2 (positive, so no flip): $-3 < x < 4$.",
+        "Check an inside point, $x = 0$: $|{-1}| = 1 < 7$, true. Check an outside point, $x = 5$: $|9| = 9 < 7$, false. The solution is the interval $(-3, 4)$."
+      ]
+    },
+    {
+      "title": "A product inequality by testing pieces",
+      "problem": "Solve $(x - 3)(x + 1) \\le 0$.",
+      "steps": [
+        "Find where the product is zero: $x = 3$ or $x = -1$. These two points split the line into three pieces: $x < -1$, $-1 < x < 3$, and $x > 3$.",
+        "Test $x = -2$ in the left piece: $(-5)(-1) = 5$, positive. Not part of the solution.",
+        "Test $x = 0$ in the middle piece: $(-3)(1) = -3$, negative. This piece works.",
+        "Test $x = 4$ in the right piece: $(1)(5) = 5$, positive. Not part of the solution.",
+        "The inequality allows equality ($\\le$), so the endpoints where the product is 0 are included. Solution: $[-1, 3]$."
+      ]
+    },
+    {
+      "title": "Reading an interval from an absolute value",
+      "problem": "Write the interval $(2, 8)$ as a single absolute value inequality.",
+      "steps": [
+        "Find the center of the interval: the midpoint of 2 and 8 is $\\frac{2 + 8}{2} = 5$.",
+        "Find the radius: the distance from the center to either end is $8 - 5 = 3$.",
+        "\"Within 3 of 5\" is written $|x - 5| < 3$. Strict inequality because the endpoints are not included.",
+        "Check: $x = 7$ gives $|2| = 2 < 3$, inside; $x = 9$ gives $|4| = 4$, outside. Correct."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Dividing by a negative number without flipping the sign: from $-2x < 6$ writing $x < -3$. Check $x = 0$: $-2(0) = 0 < 6$ is true, so 0 must be a solution, and $0 < -3$ is false. The correct answer is $x > -3$.",
+    "Treating $|x| > 2$ as $-2 < x < 2$. Try $x = 0$: $|0| = 0 > 2$ is false, so 0 is not a solution. The correct solution is $x < -2$ or $x > 2$, two separate pieces.",
+    "Writing a bracket next to infinity, as in $[3, \\infty]$. Infinity is not a point you can include; write $[3, \\infty)$.",
+    "Assuming $|a + b| = |a| + |b|$. With $a = 3$ and $b = -3$ the left side is $0$ and the right side is $6$. In general $|a + b| \\le |a| + |b|$.",
+    "Solving $(x-3)(x+1) \\le 0$ by writing $x - 3 \\le 0$ and $x + 1 \\le 0$. A product is negative when the factors have opposite signs, so test the pieces instead."
+  ],
+  "whyItMatters": "Every definite integral is taken over an interval, so you will write $[a, b]$ thousands of times. The precise definition of a limit is built entirely out of absolute value inequalities: \"$|f(x) - L|$ can be made less than any $\\varepsilon$.\" And sign charts, the piece-testing idea above, are exactly how you will decide where a function is increasing or where a curve lies above the axis before you integrate it.",
+  "checkYourself": [
+    {
+      "q": "Solve $4 - x > 1$.",
+      "a": "$x < 3$, or $(-\\infty, 3)$."
+    },
+    {
+      "q": "What is $|3 - 10|$?",
+      "a": "$7$, the distance between 3 and 10."
+    },
+    {
+      "q": "Write $|x + 2| \\le 5$ without absolute value.",
+      "a": "$-7 \\le x \\le 3$, that is $[-7, 3]$."
+    },
+    {
+      "q": "Where is $(x+4)(x-2) > 0$?",
+      "a": "$x < -4$ or $x > 2$."
+    }
+  ],
+  "readingGuide": [
+    "Find the rules for manipulating inequalities and note which one involves reversing the sign. Write that rule in your own words with a one-line reason.",
+    "Make your own table of the interval notations (brackets vs parentheses, infinity) with a number-line sketch of each.",
+    "Locate the properties of absolute value and check each one with specific numbers, including a negative one.",
+    "Before reading the solution of the first example that solves a product or quadratic inequality, try it with the piece-testing method above and compare.",
+    "Look for the triangle inequality and test it with $a = 2$, $b = -5$."
+  ]
+}

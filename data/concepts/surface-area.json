@@ -1,0 +1,87 @@
+{
+  "nodeId": "surface-area",
+  "title": "Area of a Surface of Revolution",
+  "overview": "Spin a curve around an axis and it sweeps out a surface, like the skin of a vase or the shell of a bowl. This section measures that skin. Not the volume inside (that was the disk and shell methods), just the area of the surface itself.\n\nStart with the simplest piece. A short segment of curve of length $ds$, sitting at distance $y$ from the $x$-axis, sweeps out a thin band when rotated about the $x$-axis. Unroll the band: it is nearly a rectangle with width $ds$ and length equal to the circumference $2\\pi y$. So the band has area $2\\pi y\\,ds$.\n\nNow add the bands. With $ds = \\sqrt{1 + (f'(x))^2}\\,dx$ from the arc length section, rotating $y = f(x)$ on $[a, b]$ about the $x$-axis gives\n$$S = \\int_a^b 2\\pi f(x)\\sqrt{1 + \\left(f'(x)\\right)^2}\\,dx.$$\n\nThe pattern to memorize is short: **surface area is $\\int 2\\pi (\\text{radius})\\,ds$**. The radius is the distance from the curve to the axis of rotation. Rotating about the $x$-axis, the radius is $y$. Rotating about the $y$-axis, the radius is $x$. The $ds$ is the same arc length element either way, and you can write it in terms of $dx$ or $dy$, whichever makes the integral easier.\n\nTwo sanity checks keep you honest. A horizontal segment $y = r$ on $[0, h]$ spun about the $x$-axis is a cylinder, and the formula gives $2\\pi r h$, the familiar lateral area. A sloped segment gives a cone, and the formula reproduces $\\pi r \\ell$ with $\\ell$ the slant height. If a new formula gets the cylinder and cone right, you have probably set it up correctly.",
+  "keyIdeas": [
+    "A piece of curve of length $ds$ at distance $\\rho$ from the axis sweeps out a band of area $2\\pi \\rho\\,ds$ (circumference times width).",
+    "Rotating $y = f(x)$, $a \\le x \\le b$, about the $x$-axis: $S = \\int_a^b 2\\pi f(x)\\sqrt{1 + (f'(x))^2}\\,dx$. The radius is $y$.",
+    "Rotating the same curve about the $y$-axis: $S = \\int_a^b 2\\pi x\\sqrt{1 + (f'(x))^2}\\,dx$. The radius is $x$; only the radius changes.",
+    "Every version is $S = \\int 2\\pi(\\text{radius})\\,ds$ with $ds = \\sqrt{1 + (dy/dx)^2}\\,dx = \\sqrt{1 + (dx/dy)^2}\\,dy$.",
+    "Checks: a cylinder of radius $r$ and height $h$ has lateral area $2\\pi r h$; a cone with base radius $r$ and slant height $\\ell$ has lateral area $\\pi r \\ell$; a sphere of radius $r$ has area $4\\pi r^2$."
+  ],
+  "workedExamples": [
+    {
+      "title": "A cone, two ways",
+      "problem": "Rotate the segment $y = 2x$, $0 \\le x \\le 1$, about the $x$-axis. Find the surface area and confirm it with the cone formula.",
+      "steps": [
+        "Identify the radius: rotating about the $x$-axis, radius $= y = 2x$.",
+        "Find $ds$: $y' = 2$, so $ds = \\sqrt{1 + 4}\\,dx = \\sqrt{5}\\,dx$. For a line this factor is a constant.",
+        "Set up and integrate: $S = \\int_0^1 2\\pi (2x)\\sqrt{5}\\,dx = 4\\pi\\sqrt{5}\\int_0^1 x\\,dx = 4\\pi\\sqrt{5} \\cdot \\frac{1}{2} = 2\\pi\\sqrt{5}$.",
+        "Check with geometry: the cone has base radius $r = 2$ and slant height $\\ell = \\sqrt{1^2 + 2^2} = \\sqrt{5}$, so $\\pi r \\ell = 2\\pi\\sqrt{5}$. The integral agrees, which tells you the setup is right."
+      ]
+    },
+    {
+      "title": "A root that cancels",
+      "problem": "Find the area of the surface formed by rotating $y = \\sqrt{x}$, $0 \\le x \\le 2$, about the $x$-axis.",
+      "steps": [
+        "Radius is $y = \\sqrt{x}$. Derivative: $y' = \\frac{1}{2\\sqrt{x}}$, so $1 + (y')^2 = 1 + \\frac{1}{4x}$.",
+        "Set up: $S = \\int_0^2 2\\pi\\sqrt{x}\\sqrt{1 + \\frac{1}{4x}}\\,dx$. Before integrating, multiply the roots together: $\\sqrt{x}\\sqrt{1 + \\frac{1}{4x}} = \\sqrt{x + \\frac{1}{4}}$. The awkward $\\frac{1}{x}$ is gone.",
+        "Integrate: $S = 2\\pi\\int_0^2 \\left(x + \\tfrac{1}{4}\\right)^{1/2} dx = 2\\pi \\cdot \\frac{2}{3}\\left[\\left(x + \\tfrac{1}{4}\\right)^{3/2}\\right]_0^2$.",
+        "Evaluate: at $x = 2$, $\\left(\\frac{9}{4}\\right)^{3/2} = \\frac{27}{8}$; at $x = 0$, $\\left(\\frac{1}{4}\\right)^{3/2} = \\frac{1}{8}$. So $S = \\frac{4\\pi}{3}\\left(\\frac{27}{8} - \\frac{1}{8}\\right) = \\frac{4\\pi}{3} \\cdot \\frac{26}{8} = \\frac{13\\pi}{3}$.",
+        "Sanity: $\\frac{13\\pi}{3} \\approx 13.6$. A cylinder of radius $\\sqrt{2}$ and length $2$ would have lateral area $2\\pi\\sqrt{2}\\cdot 2 \\approx 17.8$, and our surface sits inside that cylinder, so a smaller number is reasonable."
+      ]
+    },
+    {
+      "title": "The sphere, from scratch",
+      "problem": "Rotate the upper half circle $y = \\sqrt{9 - x^2}$, $-3 \\le x \\le 3$, about the $x$-axis and find the surface area.",
+      "steps": [
+        "Differentiate: $y' = \\frac{-x}{\\sqrt{9 - x^2}}$, so $1 + (y')^2 = 1 + \\frac{x^2}{9 - x^2} = \\frac{9}{9 - x^2}$.",
+        "Multiply radius by $ds$ factor: $y\\sqrt{1 + (y')^2} = \\sqrt{9 - x^2} \\cdot \\frac{3}{\\sqrt{9 - x^2}} = 3$. The whole integrand collapses to a constant.",
+        "Integrate: $S = \\int_{-3}^{3} 2\\pi \\cdot 3\\,dx = 6\\pi \\cdot 6 = 36\\pi$.",
+        "Check: the sphere formula $4\\pi r^2$ with $r = 3$ gives $36\\pi$. Notice what the constant integrand means: every slab of the sphere of the same thickness has the same amount of surface, whether it comes from near the equator or near the pole."
+      ]
+    },
+    {
+      "title": "Rotating about the other axis",
+      "problem": "Rotate $y = x^2$, $0 \\le x \\le 1$, about the $y$-axis. Find the surface area.",
+      "steps": [
+        "The axis is now the $y$-axis, so the radius is the horizontal distance $x$, not $y$. This is the only thing that changes.",
+        "The arc length element is unchanged: $y' = 2x$ gives $ds = \\sqrt{1 + 4x^2}\\,dx$.",
+        "Set up: $S = \\int_0^1 2\\pi x\\sqrt{1 + 4x^2}\\,dx$. The factor $x$ outside the root is exactly what substitution needs: let $u = 1 + 4x^2$, $du = 8x\\,dx$.",
+        "Integrate: $S = 2\\pi \\cdot \\frac{1}{8}\\int_1^5 u^{1/2}\\,du = \\frac{\\pi}{4} \\cdot \\frac{2}{3}\\left[u^{3/2}\\right]_1^5 = \\frac{\\pi}{6}\\left(5\\sqrt{5} - 1\\right) \\approx 5.33$.",
+        "Compare: the same curve rotated about the $x$-axis would have integrand $2\\pi x^2\\sqrt{1 + 4x^2}$ with no clean substitution. Which axis you rotate about changes the difficulty, not just the answer."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Using the wrong radius. About the $x$-axis the radius is $y$; about the $y$-axis it is $x$. Check with the cylinder $y = 2$ on $[0, 3]$ rotated about the $x$-axis: radius $2$ gives $2\\pi \\cdot 2 \\cdot 3 = 12\\pi$, the right lateral area.",
+    "Leaving out $ds$ and integrating $2\\pi y\\,dx$. That ignores the slant of the surface. For the cone $y = 2x$ on $[0, 1]$ it gives $2\\pi$ instead of $2\\pi\\sqrt{5}$.",
+    "Confusing surface area with volume. Volume uses $\\pi y^2\\,dx$ (disks); surface area uses $2\\pi y\\,ds$ (bands). Different power of $y$, and only the surface has $ds$.",
+    "Trying to integrate the roots separately. Always multiply $\\text{radius} \\cdot \\sqrt{1 + (y')^2}$ into one expression first; it often simplifies, as in $\\sqrt{x}\\sqrt{1 + \\frac{1}{4x}} = \\sqrt{x + \\frac{1}{4}}$."
+  ],
+  "whyItMatters": "This is the second application built on the arc length element $ds$, and it cements the habit of writing an integral as (local quantity) times (local length). The same habit gives the mass of a curved wire, the area of a parametric surface in multivariable calculus, and the flux integrals of physics. It also previews a recurring theme: the choice of variable ($dx$ versus $dy$) and the choice of axis can turn an impossible integral into an easy substitution, so the setup deserves more thought than the algebra.",
+  "checkYourself": [
+    {
+      "q": "What is the radius in the surface area integral when $y = f(x)$ is rotated about the $y$-axis?",
+      "a": "$x$, the horizontal distance to the axis."
+    },
+    {
+      "q": "Write the integral for the area of the surface obtained by rotating $y = e^x$, $0 \\le x \\le 1$, about the $x$-axis.",
+      "a": "$\\int_0^1 2\\pi e^x\\sqrt{1 + e^{2x}}\\,dx$."
+    },
+    {
+      "q": "Rotate the segment $y = 4$, $0 \\le x \\le 3$, about the $x$-axis. What does the formula give?",
+      "a": "$\\int_0^3 2\\pi \\cdot 4 \\cdot \\sqrt{1 + 0}\\,dx = 24\\pi$, the lateral area of a cylinder with radius $4$ and height $3$."
+    },
+    {
+      "q": "Why does the sphere integrand come out constant?",
+      "a": "Because $y\\sqrt{1 + (y')^2}$ simplifies to the radius $r$: the shrinking circumference near the poles is exactly balanced by the steeper slope there."
+    }
+  ],
+  "readingGuide": [
+    "Find the picture of a band produced by rotating a short segment, and the formula for the area of that band. Explain to yourself why it is circumference times slant width.",
+    "Locate the general formula and its two variants (rotation about the $x$-axis and about the $y$-axis). Write both as $\\int 2\\pi(\\text{radius})\\,ds$ in your own notation.",
+    "Before reading the solution of the sphere example, try it yourself and watch for the integrand collapsing to a constant.",
+    "Look for an example that rotates about the $y$-axis and note which variable the author chose for $ds$ and why."
+  ]
+}

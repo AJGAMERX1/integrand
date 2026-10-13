@@ -1,0 +1,88 @@
+{
+  "nodeId": "inverse-functions-and-logs",
+  "title": "Inverse Functions and Logarithms",
+  "overview": "A function sends inputs to outputs. Its inverse, when it exists, sends each output back to the input it came from. If $f$ converts Celsius to Fahrenheit, $f^{-1}$ converts Fahrenheit back to Celsius. In symbols, $f^{-1}(y) = x$ exactly when $f(x) = y$, and the two cancel each other: $f^{-1}(f(x)) = x$ and $f(f^{-1}(y)) = y$. Note that $f^{-1}$ is a name, not a power; it does not mean $\\frac{1}{f}$.\n\nAn inverse exists only when the function never sends two different inputs to the same output, so that \"going back\" is unambiguous. Such a function is **one-to-one**, and the picture is the **horizontal line test**: no horizontal line crosses the graph twice. $f(x) = x^3$ passes and has an inverse, $\\sqrt[3]{x}$. $f(x) = x^2$ fails, because $2$ and $-2$ both map to 4; restricting it to $x \\ge 0$ makes it one-to-one, with inverse $\\sqrt{x}$. The domain of $f^{-1}$ is the range of $f$, and the range of $f^{-1}$ is the domain of $f$.\n\nTo find a formula for $f^{-1}$: write $y = f(x)$, solve for $x$ in terms of $y$, then swap the letters so the inverse is written as a function of $x$. Swapping the letters reflects the graph across the line $y = x$, so the graph of $f^{-1}$ is the mirror image of the graph of $f$ in that diagonal.\n\nThe **logarithm** is the inverse of the exponential. Since $b^x$ is one-to-one for $b \\ne 1$, it has an inverse, called $\\log_b$: $\\log_b x = y$ means $b^y = x$. The cancellation equations become $b^{\\log_b x} = x$ and $\\log_b(b^x) = x$. Because $b^x$ has range $(0, \\infty)$, the log is defined only for positive $x$, and its graph is the exponential's graph reflected across $y = x$: through $(1, 0)$, rising slowly, with the $y$-axis as a vertical asymptote. The log rules are the exponent rules in disguise: $\\log_b(xy) = \\log_b x + \\log_b y$, $\\log_b\\frac{x}{y} = \\log_b x - \\log_b y$, $\\log_b(x^r) = r\\log_b x$.\n\nThe **natural logarithm** $\\ln x = \\log_e x$ is the inverse of $e^x$, and it is the log calculus uses. Its special status comes from the derivative: since $e^x$ has slope 1 at $(0,1)$, $\\ln x$ has slope 1 at $(1, 0)$, and in fact $\\frac{d}{dx}\\ln x = \\frac{1}{x}$, which is why $\\int\\frac{dx}{x} = \\ln|x| + C$. Any other log converts to natural logs by $\\log_b x = \\frac{\\ln x}{\\ln b}$. Solving $e^{2x} = 7$ means taking $\\ln$ of both sides: $2x = \\ln 7$. Solving $\\ln(3x) = 2$ means exponentiating: $3x = e^2$.\n\nThe same inverse idea gives the **inverse trigonometric functions**. Sine is not one-to-one, but restricted to $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ it is, and its inverse $\\sin^{-1} x$ (also written $\\arcsin x$) returns the angle in that range whose sine is $x$. Similarly $\\cos^{-1}$ returns angles in $[0, \\pi]$ and $\\tan^{-1}$ returns angles in $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$. So $\\sin^{-1}\\frac{1}{2} = \\frac{\\pi}{6}$, and $\\tan^{-1} 1 = \\frac{\\pi}{4}$. These will appear as antiderivatives: $\\int\\frac{dx}{1 + x^2} = \\tan^{-1}x + C$.",
+  "keyIdeas": [
+    "$f^{-1}(y) = x$ exactly when $f(x) = y$; so $f^{-1}(f(x)) = x$ and $f(f^{-1}(y)) = y$. $f^{-1}$ is not $\\frac{1}{f}$.",
+    "A function has an inverse exactly when it is one-to-one (passes the horizontal line test); the domain and range swap.",
+    "To find $f^{-1}$: solve $y = f(x)$ for $x$, then swap $x$ and $y$. The graph of $f^{-1}$ is the reflection of $f$ across $y = x$.",
+    "$\\log_b x = y$ means $b^y = x$; the log is defined for $x > 0$, has a vertical asymptote at $x = 0$, and passes through $(1, 0)$.",
+    "$\\log_b(xy) = \\log_b x + \\log_b y$, $\\log_b(x^r) = r\\log_b x$, and $\\log_b x = \\frac{\\ln x}{\\ln b}$.",
+    "$\\ln x$ is the inverse of $e^x$: $e^{\\ln x} = x$ for $x > 0$ and $\\ln(e^x) = x$ for all $x$.",
+    "$\\sin^{-1}x$ gives the angle in $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ whose sine is $x$; $\\cos^{-1}$ uses $[0, \\pi]$ and $\\tan^{-1}$ uses $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Finding an inverse formula",
+      "problem": "Find the inverse of $f(x) = \\dfrac{2x + 1}{x - 3}$ and state its domain.",
+      "steps": [
+        "Write $y = \\frac{2x + 1}{x - 3}$ and solve for $x$. Multiply out: $y(x - 3) = 2x + 1$, so $xy - 3y = 2x + 1$.",
+        "Collect the $x$ terms: $xy - 2x = 3y + 1$, so $x(y - 2) = 3y + 1$ and $x = \\frac{3y + 1}{y - 2}$.",
+        "Swap letters: $f^{-1}(x) = \\frac{3x + 1}{x - 2}$. Its domain is $x \\ne 2$, which matches the fact that $f$ never outputs 2 (the horizontal asymptote of $f$).",
+        "Check: $f(4) = \\frac{9}{1} = 9$, and $f^{-1}(9) = \\frac{28}{7} = 4$. The inverse sends 9 back to 4."
+      ]
+    },
+    {
+      "title": "Solving exponential and log equations",
+      "problem": "Solve $e^{3x - 1} = 10$ and $\\ln(x + 2) - \\ln x = 1$.",
+      "steps": [
+        "First equation: take $\\ln$ of both sides, using $\\ln(e^u) = u$: $3x - 1 = \\ln 10$, so $x = \\frac{1 + \\ln 10}{3} \\approx \\frac{1 + 2.3026}{3} \\approx 1.101$.",
+        "Second equation: combine with the quotient rule: $\\ln\\frac{x + 2}{x} = 1$.",
+        "Exponentiate both sides: $\\frac{x + 2}{x} = e$, so $x + 2 = ex$, $2 = (e - 1)x$, $x = \\frac{2}{e - 1} \\approx 1.164$.",
+        "Domain check: $x > 0$ is required for $\\ln x$, and $1.164 > 0$. Verify: $\\ln(3.164) - \\ln(1.164) \\approx 1.152 - 0.152 = 1.000$. Correct."
+      ]
+    },
+    {
+      "title": "Evaluating inverse trig values",
+      "problem": "Find $\\sin^{-1}\\left(-\\frac{\\sqrt{2}}{2}\\right)$, $\\cos^{-1}\\left(-\\frac{1}{2}\\right)$, and $\\tan^{-1}(\\sqrt{3})$.",
+      "steps": [
+        "$\\sin^{-1}\\left(-\\frac{\\sqrt{2}}{2}\\right)$: which angle in $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ has sine $-\\frac{\\sqrt{2}}{2}$? Sine is negative in the fourth-quadrant part of that range, so $-\\frac{\\pi}{4}$.",
+        "$\\cos^{-1}\\left(-\\frac{1}{2}\\right)$: which angle in $[0, \\pi]$ has cosine $-\\frac{1}{2}$? Reference angle $\\frac{\\pi}{3}$, cosine negative in quadrant II: $\\frac{2\\pi}{3}$.",
+        "$\\tan^{-1}(\\sqrt{3})$: which angle in $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$ has tangent $\\sqrt{3}$? $\\tan\\frac{\\pi}{3} = \\sqrt{3}$, so $\\frac{\\pi}{3}$.",
+        "Note the ranges: although $\\sin\\frac{5\\pi}{4} = -\\frac{\\sqrt{2}}{2}$ too, $\\frac{5\\pi}{4}$ is outside $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$, so it is not the inverse sine."
+      ]
+    },
+    {
+      "title": "Using cancellation and the log rules",
+      "problem": "Simplify $e^{2\\ln 3}$, $\\ln\\dfrac{e^5}{\\sqrt{e}}$, and express $\\log_2 40 - \\log_2 5$ as a single number.",
+      "steps": [
+        "$e^{2\\ln 3} = e^{\\ln(3^2)} = e^{\\ln 9} = 9$, using the power rule to move the 2 inside before canceling.",
+        "$\\ln\\frac{e^5}{\\sqrt{e}} = \\ln e^5 - \\ln e^{1/2} = 5 - \\frac{1}{2} = \\frac{9}{2}$.",
+        "$\\log_2 40 - \\log_2 5 = \\log_2\\frac{40}{5} = \\log_2 8 = 3$, since $2^3 = 8$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Reading $f^{-1}(x)$ as $\\frac{1}{f(x)}$. For $f(x) = 2x$, $f^{-1}(x) = \\frac{x}{2}$, while $\\frac{1}{f(x)} = \\frac{1}{2x}$. At $x = 4$: $2$ versus $\\frac{1}{8}$.",
+    "Claiming $\\sin^{-1}(\\sin x) = x$ for every $x$. $\\sin^{-1}(\\sin\\pi) = \\sin^{-1}(0) = 0$, not $\\pi$, because the inverse returns angles in $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ only.",
+    "Splitting a log over a sum: $\\ln(x + 2) = \\ln x + \\ln 2$. With $x = 2$: $\\ln 4 \\approx 1.39$ but $\\ln 2 + \\ln 2 \\approx 1.39$, a coincidence; with $x = 1$: $\\ln 3 \\approx 1.10$ versus $0 + 0.69$. Only products split.",
+    "Forgetting to check the domain after solving a log equation; a solution that makes any log argument zero or negative must be discarded.",
+    "Finding an inverse but forgetting the function must be one-to-one; $x^2$ on all reals has no inverse until you restrict to $x \\ge 0$."
+  ],
+  "whyItMatters": "The derivative of $\\ln x$ is $\\frac{1}{x}$, which makes $\\int\\frac{dx}{x} = \\ln|x| + C$, the one antiderivative the power rule misses, and the reason logs appear in half the integrals of Chapter 7. The inverse trig functions are antiderivatives too: $\\int\\frac{dx}{\\sqrt{1 - x^2}} = \\sin^{-1}x + C$ and $\\int\\frac{dx}{1 + x^2} = \\tan^{-1}x + C$. Inverse functions also give the derivative rule $\\frac{d}{dx}f^{-1}(x) = \\frac{1}{f'(f^{-1}(x))}$, and the reflection across $y = x$ is why those formulas look the way they do.",
+  "checkYourself": [
+    {
+      "q": "Inverse of $f(x) = 3x - 5$?",
+      "a": "$f^{-1}(x) = \\frac{x + 5}{3}$."
+    },
+    {
+      "q": "Is $f(x) = x^2 + 1$ one-to-one on all reals?",
+      "a": "No: $f(1) = f(-1) = 2$."
+    },
+    {
+      "q": "Solve $\\ln x = 3$.",
+      "a": "$x = e^3$."
+    },
+    {
+      "q": "$\\cos^{-1}(0)$?",
+      "a": "$\\frac{\\pi}{2}$."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of a one-to-one function and the horizontal line test, and explain to yourself why an inverse requires it.",
+    "Locate the definition of the inverse function and the two cancellation equations; verify them with $f(x) = x^3$ and $f^{-1}(x) = \\sqrt[3]{x}$.",
+    "Look for the step-by-step procedure for finding $f^{-1}$ and apply it to $f(x) = 2x + 7$ before reading an example.",
+    "Find the definition of $\\log_b x$ as an inverse, the laws of logarithms, and the change-of-base formula; check one law with actual numbers.",
+    "Find the restricted domains used to define $\\sin^{-1}$, $\\cos^{-1}$, $\\tan^{-1}$ and sketch each inverse graph by reflecting the restricted piece across $y = x$."
+  ]
+}

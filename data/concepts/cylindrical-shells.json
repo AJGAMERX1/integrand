@@ -1,0 +1,90 @@
+{
+  "nodeId": "cylindrical-shells",
+  "title": "Volumes by Cylindrical Shells",
+  "overview": "Disks and washers slice a solid of revolution like a loaf of bread. Shells peel it like an onion. Instead of cutting perpendicular to the axis, you take a thin vertical strip of the region **parallel** to the axis and spin it. The strip sweeps out a thin hollow tube, a cylindrical shell.\n\nPicture one shell: it has radius $r$ (the distance from the axis to the strip), height $h$ (the length of the strip), and a tiny thickness $dx$. Cut the shell down one side and unroll it flat. You get a thin rectangular sheet of length $2\\pi r$ (the circumference), height $h$, and thickness $dx$. Its volume is therefore\n$$dV = 2\\pi r \\cdot h \\cdot dx.$$\nAdd up all the shells and you have the method. For a region under $y = f(x)$ on $[a,b]$ rotated about the $y$-axis,\n$$V = \\int_a^b 2\\pi x\\, f(x)\\,dx.$$\nHere the radius is $x$ because the strip at position $x$ is $x$ units from the $y$-axis, and the height is $f(x)$. When the region lies between two curves, the height is (top) minus (bottom).\n\nWhy bother with a second method? Because the direction of slicing is the whole game. Rotating $y = f(x)$ about the $y$-axis with washers would force you to solve for $x$ in terms of $y$, which is often ugly or impossible. Shells let you keep working with $x$. The rule of thumb: **washers slice perpendicular to the axis; shells slice parallel to it.** Pick whichever makes the height of a slice a single clean formula.\n\nShells work around any axis. About a vertical line $x = c$, the radius becomes the distance $|x - c|$. About the $x$-axis, use horizontal strips with thickness $dy$, radius $y$, and height written in terms of $y$.\n\nA good check is to compute one volume both ways. The two methods must agree, and getting the same number by two different integrals is a satisfying confirmation that the setup is right.",
+  "keyIdeas": [
+    "A shell of radius $r$, height $h$, and thickness $dx$ has volume $2\\pi r h\\,dx$: circumference times height times thickness.",
+    "Region under $y = f(x)$ on $[a,b]$ rotated about the $y$-axis: $V = \\int_a^b 2\\pi x\\,f(x)\\,dx$.",
+    "Region between $f$ (top) and $g$ (bottom): the shell height is $f(x) - g(x)$, so $V = \\int_a^b 2\\pi x\\,(f(x) - g(x))\\,dx$.",
+    "Shells slice parallel to the axis of rotation; washers slice perpendicular to it. Choose the one that gives a single formula for the slice.",
+    "About the line $x = c$ the radius is $|x - c|$; about the $x$-axis use horizontal strips: $V = \\int_c^d 2\\pi y\\,(\\text{width at } y)\\,dy$.",
+    "The limits of integration are the range of the variable you slice along, which is the variable of the strip's position, not the strip's height."
+  ],
+  "workedExamples": [
+    {
+      "title": "A dome about the y-axis",
+      "problem": "The region under $y = 4 - x^2$ for $0 \\le x \\le 2$ is rotated about the $y$-axis. Find the volume using shells.",
+      "steps": [
+        "Draw a vertical strip at position $x$. Spinning it about the $y$-axis gives a shell of radius $x$ and height $4 - x^2$, with thickness $dx$.",
+        "One shell has volume $2\\pi \\cdot x \\cdot (4 - x^2)\\,dx$. The strips run from $x = 0$ to $x = 2$, where the curve hits the axis.",
+        "Set up: $V = 2\\pi \\int_0^2 x(4 - x^2)\\,dx = 2\\pi \\int_0^2 (4x - x^3)\\,dx$. Multiplying the radius into the height first keeps the integrand simple.",
+        "Integrate: $2\\pi \\left[ 2x^2 - \\frac{x^4}{4} \\right]_0^2 = 2\\pi (8 - 4) = 8\\pi$.",
+        "Check with washers: horizontal slices have radius $x = \\sqrt{4 - y}$, so $V = \\int_0^4 \\pi (4 - y)\\,dy = \\pi \\left[ 4y - \\frac{y^2}{2} \\right]_0^4 = 8\\pi$. Same answer, and the shell version avoided the square root."
+      ]
+    },
+    {
+      "title": "Two curves about the y-axis",
+      "problem": "The region between $y = x$ and $y = x^2$ for $0 \\le x \\le 1$ is rotated about the $y$-axis. Find the volume.",
+      "steps": [
+        "A vertical strip at $x$ runs from the parabola up to the line, so its height is $x - x^2$. Its distance from the $y$-axis is $x$.",
+        "Shell volume: $2\\pi x (x - x^2)\\,dx = 2\\pi (x^2 - x^3)\\,dx$.",
+        "Integrate from $0$ to $1$: $V = 2\\pi \\int_0^1 (x^2 - x^3)\\,dx = 2\\pi \\left[ \\frac{x^3}{3} - \\frac{x^4}{4} \\right]_0^1 = 2\\pi \\cdot \\frac{1}{12} = \\frac{\\pi}{6}$.",
+        "Compare with the same region rotated about the $x$-axis (a washer example in the Volumes node), which gave $\\frac{2\\pi}{15}$. Different axis, different solid, different volume. The axis is part of the problem."
+      ]
+    },
+    {
+      "title": "Shells about the x-axis",
+      "problem": "The region bounded by $y = \\sqrt{x}$, $y = 0$, and $x = 4$ is rotated about the $x$-axis. Find the volume using shells, then confirm with disks.",
+      "steps": [
+        "Shells must be parallel to the axis, so use horizontal strips at height $y$, thickness $dy$. The radius is the distance to the $x$-axis, which is $y$.",
+        "A horizontal strip at height $y$ starts on the curve and ends at $x = 4$. On the curve, $y = \\sqrt{x}$ means $x = y^2$. So the strip's length (the shell's height) is $4 - y^2$.",
+        "The strips range from $y = 0$ to $y = 2$ (the curve's height at $x = 4$). Set up: $V = 2\\pi \\int_0^2 y(4 - y^2)\\,dy = 2\\pi \\int_0^2 (4y - y^3)\\,dy$.",
+        "Integrate: $2\\pi \\left[ 2y^2 - \\frac{y^4}{4} \\right]_0^2 = 2\\pi (8 - 4) = 8\\pi$.",
+        "Confirm with disks about the $x$-axis: $V = \\int_0^4 \\pi (\\sqrt{x})^2\\,dx = \\pi \\int_0^4 x\\,dx = 8\\pi$. Agreement by two independent routes."
+      ]
+    },
+    {
+      "title": "An axis off to the side",
+      "problem": "The region between $y = x$ and $y = x^2$ for $0 \\le x \\le 1$ is rotated about the line $x = -1$. Find the volume.",
+      "steps": [
+        "The axis is vertical, so vertical strips are parallel to it and shells work with no need to solve for $x$. The strip at position $x$ has height $x - x^2$ as before.",
+        "The radius is now the distance from the strip to the line $x = -1$, which is $x - (-1) = x + 1$. This is the only thing that changes.",
+        "Set up: $V = 2\\pi \\int_0^1 (x + 1)(x - x^2)\\,dx$. Expand: $(x + 1)(x - x^2) = x^2 - x^3 + x - x^2 = x - x^3$.",
+        "Integrate: $2\\pi \\int_0^1 (x - x^3)\\,dx = 2\\pi \\left[ \\frac{x^2}{2} - \\frac{x^4}{4} \\right]_0^1 = 2\\pi \\cdot \\frac{1}{4} = \\frac{\\pi}{2}$.",
+        "Sense check: moving the axis farther from the region makes every shell wider, so the volume should exceed the $\\frac{\\pi}{6}$ we got about $x = 0$. It does."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Using the strip's height as the radius. For $y = 4 - x^2$ about the $y$-axis, the radius is $x$ (distance to the axis), not $4 - x^2$. Mixing them up gives $2\\pi \\int (4 - x^2)^2\\,dx$, a different integral with no meaning here.",
+    "Forgetting the factor $2\\pi$. The shell's volume is circumference times height times thickness, and the circumference is $2\\pi r$, not $r$.",
+    "Using the wrong limits. The limits are the range of strip positions. For shells about the $y$-axis that is a range of $x$-values, even though the solid is \"stacked\" in the $y$ direction.",
+    "Keeping radius $x$ when the axis is $x = 3$. The radius is the distance to the axis, $3 - x$ for a region to the left of it. Check with the strip at $x = 1$: it is 2 units from the line $x = 3$, not 1.",
+    "Slicing perpendicular to the axis and calling it a shell. If your slice is perpendicular to the axis you are doing washers and should use $\\pi(R^2 - r^2)$, not $2\\pi r h$."
+  ],
+  "whyItMatters": "Shells are the first time you choose a slicing direction for convenience rather than by rule, and that judgment is what makes multivariable integrals manageable later: in double and triple integrals, choosing the order of integration is the same decision. The shell formula is also a preview of integrating in polar and cylindrical coordinates, where the factor $2\\pi r$ reappears as the circumference of a ring. Computing one volume two ways, as in the examples, is a habit that will save you on every exam.",
+  "checkYourself": [
+    {
+      "q": "A vertical strip at $x = 2$ with height 5 is spun about the $y$-axis. What is the volume of the resulting shell of thickness $dx$?",
+      "a": "$2\\pi \\cdot 2 \\cdot 5\\,dx = 20\\pi\\,dx$."
+    },
+    {
+      "q": "You rotate a region about the $x$-axis and want to use shells. Which way do the strips go, and what is the variable of integration?",
+      "a": "Horizontal strips, thickness $dy$, radius $y$. Everything in the integrand must be written in terms of $y$."
+    },
+    {
+      "q": "The region under $y = x^3$ on $[0,1]$ is rotated about the $y$-axis. Set up (do not evaluate) the shell integral.",
+      "a": "$V = 2\\pi \\int_0^1 x \\cdot x^3\\,dx = 2\\pi \\int_0^1 x^4\\,dx$, which equals $\\frac{2\\pi}{5}$."
+    },
+    {
+      "q": "Why can disks and shells give the same number from different-looking integrals?",
+      "a": "They measure the same solid, just cut in different directions. Any correct method must give the same volume."
+    }
+  ],
+  "readingGuide": [
+    "Find the derivation of the shell volume formula and follow the picture of cutting a shell and flattening it into a rectangular slab.",
+    "Look for the explanation of why the washer method is awkward for the first example, then see how shells avoid solving for $x$.",
+    "Before reading the solution of any example that rotates about a line other than an axis, write down the radius expression yourself.",
+    "Find an example done with both methods and compare the two integrals side by side."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "nodeId": "exponentials-and-logs-ramp",
+  "title": "Exponential and Log Rules",
+  "overview": "An exponential expression has the variable in the exponent: $2^x$, $10^t$, $e^{3x}$. A logarithm answers the question \"what exponent do I need?\" The statement $\\log_2 8 = 3$ says that the exponent you put on 2 to get 8 is 3. That is the whole definition:\n$$\\log_b y = x \\quad\\text{means exactly}\\quad b^x = y.$$\nEvery log problem can be translated into this exponential form, and when you are stuck, translating is the first move. $\\log_5 25 = 2$ because $5^2 = 25$; $\\log_{10} 0.001 = -3$ because $10^{-3} = 0.001$; $\\log_3 1 = 0$ because $3^0 = 1$. The base $b$ is always positive and not 1, and you can only take the log of a positive number, since $b^x$ is always positive.\n\nTwo bases matter in calculus. Base 10 is the common log, written $\\log x$ on most calculators. Base $e \\approx 2.71828$ is the natural log, written $\\ln x$; it is the one calculus prefers, for reasons that become clear when you differentiate $e^x$ and get $e^x$ back. Both obey the same rules.\n\nThe log rules are the exponent rules read backwards. Because $b^m b^n = b^{m+n}$, the log of a product is the sum of the logs:\n$$\\log_b(MN) = \\log_b M + \\log_b N, \\qquad \\log_b\\frac{M}{N} = \\log_b M - \\log_b N, \\qquad \\log_b(M^p) = p\\log_b M.$$\nThe third rule is the most useful: it lets you bring an exponent down to the ground floor where you can solve for it. There is no rule for $\\log(M + N)$; it does not split.\n\nTo solve an exponential equation like $3^x = 20$, take the log of both sides (any base, but $\\ln$ is standard) and use the power rule: $x\\ln 3 = \\ln 20$, so $x = \\frac{\\ln 20}{\\ln 3} \\approx 2.727$. This same computation is the change-of-base formula, $\\log_b y = \\frac{\\ln y}{\\ln b}$, which is how a calculator with only $\\ln$ computes any log. To solve a log equation like $\\log_2(x + 1) = 5$, translate to exponential form: $x + 1 = 2^5 = 32$, so $x = 31$. Always check that whatever is inside the log ends up positive.\n\nFinally, exponentials and logs undo each other, which is just the definition seen from both sides: $b^{\\log_b x} = x$ and $\\log_b(b^x) = x$. In particular $e^{\\ln x} = x$ and $\\ln(e^x) = x$. These cancellation rules are used constantly to peel a log off a variable or to rewrite any exponential $a^x$ as $e^{x\\ln a}$.",
+  "keyIdeas": [
+    "$\\log_b y = x$ means $b^x = y$: a logarithm is an exponent. Translate to this form whenever stuck.",
+    "$\\ln x = \\log_e x$ with $e \\approx 2.718$; it is the natural choice in calculus.",
+    "$\\log_b(MN) = \\log_b M + \\log_b N$ and $\\log_b\\frac{M}{N} = \\log_b M - \\log_b N$.",
+    "$\\log_b(M^p) = p\\log_b M$: exponents come down as multipliers.",
+    "$b^{\\log_b x} = x$ and $\\log_b(b^x) = x$; in particular $e^{\\ln x} = x$ and $\\ln e^x = x$.",
+    "Change of base: $\\log_b y = \\frac{\\ln y}{\\ln b}$; solve $b^x = y$ by taking $\\ln$ of both sides.",
+    "Logs are only defined for positive inputs; $\\log_b 1 = 0$ and $\\log_b b = 1$ for every base."
+  ],
+  "workedExamples": [
+    {
+      "title": "Evaluating logs by translating",
+      "problem": "Evaluate $\\log_4 64$, $\\log_2 \\frac{1}{8}$, and $\\ln \\sqrt{e}$.",
+      "steps": [
+        "$\\log_4 64$ asks: $4$ to what power is 64? Since $4^3 = 64$, the answer is 3.",
+        "$\\log_2 \\frac{1}{8}$ asks: 2 to what power is $\\frac{1}{8}$? Since $2^{-3} = \\frac{1}{8}$, the answer is $-3$.",
+        "$\\ln\\sqrt{e}$ asks: $e$ to what power is $\\sqrt{e} = e^{1/2}$? The answer is $\\frac{1}{2}$.",
+        "Check the middle one with the power rule: $\\log_2 8^{-1} = -\\log_2 8 = -3$. Same answer."
+      ]
+    },
+    {
+      "title": "Solving an exponential equation",
+      "problem": "Solve $5 \\cdot 2^{x} = 80$.",
+      "steps": [
+        "Isolate the exponential first: divide by 5 to get $2^x = 16$.",
+        "Here you can spot the answer: $2^4 = 16$, so $x = 4$. For a case like $2^x = 20$ you would instead take $\\ln$ of both sides.",
+        "Do it the general way too: $x\\ln 2 = \\ln 16$, so $x = \\frac{\\ln 16}{\\ln 2}$. Since $16 = 2^4$, $\\ln 16 = 4\\ln 2$ and $x = 4$.",
+        "Check: $5 \\cdot 2^4 = 5 \\cdot 16 = 80$. Correct."
+      ]
+    },
+    {
+      "title": "Using the rules to expand and condense",
+      "problem": "Expand $\\ln\\dfrac{x^3\\sqrt{y}}{z}$ into separate logs, then condense $2\\ln a - \\ln b$ into one log.",
+      "steps": [
+        "Quotient rule first: $\\ln(x^3\\sqrt{y}) - \\ln z$.",
+        "Product rule on the first part: $\\ln x^3 + \\ln\\sqrt{y} - \\ln z$.",
+        "Power rule, writing $\\sqrt{y} = y^{1/2}$: $3\\ln x + \\frac{1}{2}\\ln y - \\ln z$.",
+        "Condensing: $2\\ln a = \\ln a^2$, then the difference becomes a quotient: $2\\ln a - \\ln b = \\ln\\frac{a^2}{b}$. Check with $a = b = e$: $2 - 1 = 1$ and $\\ln\\frac{e^2}{e} = \\ln e = 1$."
+      ]
+    },
+    {
+      "title": "Solving a log equation and checking the domain",
+      "problem": "Solve $\\log_3(x - 2) + \\log_3 x = 1$.",
+      "steps": [
+        "Condense with the product rule: $\\log_3\\left(x(x - 2)\\right) = 1$.",
+        "Translate to exponential form: $x(x - 2) = 3^1 = 3$, so $x^2 - 2x - 3 = 0$.",
+        "Factor: $(x - 3)(x + 1) = 0$, giving $x = 3$ or $x = -1$.",
+        "Check the domain: $x = -1$ makes $\\log_3(x - 2) = \\log_3(-3)$, undefined, so reject it. $x = 3$: $\\log_3 1 + \\log_3 3 = 0 + 1 = 1$. The only solution is $x = 3$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Splitting a log over a sum: $\\ln(x + y) = \\ln x + \\ln y$. With $x = y = 1$: $\\ln 2 \\approx 0.69$ but $0 + 0 = 0$. Only products split.",
+    "Writing $\\frac{\\ln a}{\\ln b} = \\ln a - \\ln b$ or $= \\ln\\frac{a}{b}$. With $a = e^2$, $b = e$: the quotient is $\\frac{2}{1} = 2$, while $\\ln\\frac{e^2}{e} = 1$.",
+    "Taking $\\ln$ of both sides before isolating: from $5 \\cdot 2^x = 80$ writing $x\\ln 2 = \\ln 80 - 5$. Divide by 5 first, or use $\\ln 5 + x\\ln 2 = \\ln 80$.",
+    "Accepting a solution that makes a log argument negative or zero. Always substitute back into the original logs.",
+    "Treating $\\ln$ as a number that multiplies: $\\ln x = 2$ does not mean $x = \\frac{2}{\\ln}$. Translate: $x = e^2$."
+  ],
+  "whyItMatters": "The integral $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$ is the one case the power rule cannot handle, and the natural log is the answer. The derivative of $e^x$ is itself, which makes $e^{kx}$ the solution to every \"rate proportional to amount\" model, from population growth to radioactive decay. Log rules also power logarithmic differentiation and simplify answers like $\\ln 8 - \\ln 2$ to $\\ln 4$. Fluency here means the transcendental integrals of Chapter 5 feel like algebra rather than magic.",
+  "checkYourself": [
+    {
+      "q": "Evaluate $\\log_2 32$.",
+      "a": "5, since $2^5 = 32$."
+    },
+    {
+      "q": "Solve $e^{2x} = 7$ for $x$.",
+      "a": "$x = \\frac{\\ln 7}{2}$."
+    },
+    {
+      "q": "Write $\\ln 5 + 3\\ln 2$ as a single log.",
+      "a": "$\\ln(5 \\cdot 8) = \\ln 40$."
+    },
+    {
+      "q": "Simplify $e^{\\ln 6}$ and $\\ln(e^{-2})$.",
+      "a": "6 and $-2$."
+    }
+  ],
+  "readingGuide": [
+    "Practice: translate twenty statements between log form and exponential form, including negative and fractional exponents, until it is automatic.",
+    "Practice: evaluate logs like $\\log_3 81$, $\\log_{10} 0.01$, $\\ln e^5$, $\\log_8 2$ without a calculator.",
+    "Practice: expand and condense expressions with the three log rules, and verify one with actual numbers.",
+    "Practice: solve five exponential equations with $\\ln$ and five log equations by translating, checking every answer against the domain."
+  ]
+}

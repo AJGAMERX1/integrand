@@ -1,0 +1,88 @@
+{
+  "nodeId": "indefinite-integrals",
+  "title": "Indefinite Integrals and the Net Change Theorem",
+  "overview": "Because antiderivatives are what the Fundamental Theorem needs, they get their own notation. The **indefinite integral** $\\int f(x)\\,dx$ means the general antiderivative of $f$:\n$$\\int f(x)\\,dx = F(x) + C \\quad\\text{means}\\quad F'(x) = f(x).$$\nSo $\\int x^2\\,dx = \\frac{x^3}{3} + C$. Note the contrast with the definite integral: $\\int_a^b f(x)\\,dx$ is a **number** (a signed area), while $\\int f(x)\\,dx$ is a **family of functions**. The two are connected by the Fundamental Theorem, $\\int_a^b f(x)\\,dx = \\left[\\int f(x)\\,dx\\right]_a^b$, where the $C$ cancels. Keep the \"$+ C$\" in every indefinite integral and drop it in every definite one.\n\nThe table of indefinite integrals is the derivative table read backwards, and it is worth knowing cold:\n$$\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C\\ (n \\ne -1), \\quad \\int\\frac{dx}{x} = \\ln|x| + C, \\quad \\int e^x\\,dx = e^x + C, \\quad \\int b^x\\,dx = \\frac{b^x}{\\ln b} + C,$$\n$$\\int\\sin x\\,dx = -\\cos x + C, \\quad \\int\\cos x\\,dx = \\sin x + C, \\quad \\int\\sec^2 x\\,dx = \\tan x + C, \\quad \\int\\sec x\\tan x\\,dx = \\sec x + C,$$\n$$\\int\\frac{dx}{1 + x^2} = \\tan^{-1}x + C, \\quad \\int\\frac{dx}{\\sqrt{1 - x^2}} = \\sin^{-1}x + C.$$\nSums split and constants factor out. There is no product rule for integrals; to integrate $x(x + 1)^2$, expand it first. To integrate a quotient with a single-term denominator, divide term by term. Differentiating your result remains the universal check.\n\nThe **Net Change Theorem** is Part 2 of the Fundamental Theorem read as a statement about rates: if $F'$ is the rate of change of $F$, then\n$$\\int_a^b F'(x)\\,dx = F(b) - F(a),$$\nthe integral of the rate is the net change. Every rate from the \"rates in the sciences\" section becomes an integral here. If $v(t)$ is velocity, $\\int_{t_1}^{t_2}v(t)\\,dt$ is the **displacement** (net change in position), while $\\int_{t_1}^{t_2}|v(t)|\\,dt$ is the **total distance**; to compute the latter, split the interval where $v$ changes sign. If water flows into a tank at rate $r(t)$ liters per minute, $\\int_0^{10}r(t)\\,dt$ is the number of liters added in the first 10 minutes. If $C'(x)$ is marginal cost, $\\int_{100}^{200}C'(x)\\,dx$ is the cost of raising production from 100 to 200 units. If $\\rho(x)$ is linear density, $\\int_a^b\\rho(x)\\,dx$ is the mass of the rod from $a$ to $b$.\n\nA unit check makes these interpretations automatic: the integral has the units of the integrand times the units of $dx$. Liters per minute times minutes gives liters; meters per second times seconds gives meters. If the units do not describe the quantity you want, you have set up the wrong integral.",
+  "keyIdeas": [
+    "$\\int f(x)\\,dx = F(x) + C$ is the general antiderivative (a family of functions); $\\int_a^b f(x)\\,dx$ is a number. Keep $+ C$ in the first and drop it in the second.",
+    "Table: $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ ($n \\ne -1$), $\\int\\frac{dx}{x} = \\ln|x| + C$, $\\int e^x\\,dx = e^x + C$, $\\int b^x\\,dx = \\frac{b^x}{\\ln b} + C$.",
+    "$\\int\\sin x\\,dx = -\\cos x + C$, $\\int\\cos x\\,dx = \\sin x + C$, $\\int\\sec^2 x\\,dx = \\tan x + C$, $\\int\\sec x\\tan x\\,dx = \\sec x + C$.",
+    "$\\int\\frac{dx}{1 + x^2} = \\tan^{-1}x + C$ and $\\int\\frac{dx}{\\sqrt{1 - x^2}} = \\sin^{-1}x + C$.",
+    "No product or quotient rule for integrals: expand products and split quotients with single-term denominators first.",
+    "Net Change Theorem: $\\int_a^b F'(x)\\,dx = F(b) - F(a)$; the integral of a rate is the net change.",
+    "Displacement is $\\int v\\,dt$; total distance is $\\int|v|\\,dt$ (split where $v$ changes sign). Units of an integral are integrand units times $dx$ units."
+  ],
+  "workedExamples": [
+    {
+      "title": "An indefinite integral with several terms",
+      "problem": "Find $\\displaystyle\\int\\left(4x^3 - \\frac{2}{x} + 3\\cos x - e^x\\right)dx$.",
+      "steps": [
+        "Term by term: $\\int 4x^3\\,dx = x^4$; $\\int\\frac{-2}{x}\\,dx = -2\\ln|x|$; $\\int 3\\cos x\\,dx = 3\\sin x$; $\\int -e^x\\,dx = -e^x$.",
+        "Combine with one constant: $x^4 - 2\\ln|x| + 3\\sin x - e^x + C$.",
+        "Check by differentiating: $4x^3 - \\frac{2}{x} + 3\\cos x - e^x$. Matches the integrand."
+      ]
+    },
+    {
+      "title": "Expand or divide before integrating",
+      "problem": "Evaluate $\\displaystyle\\int_1^2\\frac{x^3 + 2x - 1}{x^2}\\,dx$.",
+      "steps": [
+        "Divide each term by $x^2$: the integrand is $x + \\frac{2}{x} - x^{-2}$.",
+        "Antiderivative: $\\frac{x^2}{2} + 2\\ln|x| + \\frac{1}{x}$ (since $\\int -x^{-2}\\,dx = x^{-1}$).",
+        "Evaluate: $\\left[\\frac{x^2}{2} + 2\\ln x + \\frac{1}{x}\\right]_1^2 = \\left(2 + 2\\ln 2 + \\frac{1}{2}\\right) - \\left(\\frac{1}{2} + 0 + 1\\right) = 1 + 2\\ln 2 \\approx 2.386$.",
+        "Sanity check: the integrand at $x = 1$ is 2 and at $x = 2$ is $2 + 1 - 0.25 = 2.75$; over an interval of width 1 the integral should be between 2 and 2.75. It is."
+      ]
+    },
+    {
+      "title": "Displacement versus distance",
+      "problem": "A particle has velocity $v(t) = 6t - t^2 - 5$ (m/s) for $0 \\le t \\le 4$. Find the displacement and the total distance traveled.",
+      "steps": [
+        "Displacement: $\\int_0^4(6t - t^2 - 5)\\,dt = \\left[3t^2 - \\frac{t^3}{3} - 5t\\right]_0^4 = 48 - \\frac{64}{3} - 20 = 28 - 21.333 = \\frac{20}{3} \\approx 6.67$ m.",
+        "Sign of $v$: $v = -(t^2 - 6t + 5) = -(t - 1)(t - 5)$, so $v < 0$ on $[0, 1)$ and $v > 0$ on $(1, 4]$ (5 is outside the interval).",
+        "Piece on $[0, 1]$: $\\left[3t^2 - \\frac{t^3}{3} - 5t\\right]_0^1 = 3 - \\frac{1}{3} - 5 = -\\frac{7}{3}$. Piece on $[1, 4]$: $\\frac{20}{3} - \\left(-\\frac{7}{3}\\right) = 9$.",
+        "Total distance $= \\frac{7}{3} + 9 = \\frac{34}{3} \\approx 11.33$ m. Check: $-\\frac{7}{3} + 9 = \\frac{20}{3}$, the displacement. Consistent."
+      ]
+    },
+    {
+      "title": "Net change from a rate",
+      "problem": "Water flows into a tank at $r(t) = 20 + 4t$ liters per minute. The tank holds 50 liters at $t = 0$. How much water is in the tank after 6 minutes?",
+      "steps": [
+        "By the Net Change Theorem, the amount added in $[0, 6]$ is $\\int_0^6(20 + 4t)\\,dt = \\left[20t + 2t^2\\right]_0^6 = 120 + 72 = 192$ liters.",
+        "Units: liters per minute times minutes gives liters. Good.",
+        "Total in the tank: $50 + 192 = 242$ liters.",
+        "Check by geometry: the rate graph is a line from 20 to 44 over 6 minutes, a trapezoid of area $\\frac{20 + 44}{2}\\cdot 6 = 192$. Same."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Omitting $+ C$ in an indefinite integral, or including it in a definite one. The definite integral is a number; the indefinite one is a family.",
+    "Integrating a product factor by factor: $\\int x\\cos x\\,dx \\ne \\frac{x^2}{2}\\sin x$. Differentiate the proposed answer to see it fails; this integral needs integration by parts (Chapter 7).",
+    "Writing $\\int\\frac{1}{x^2}\\,dx = \\ln|x^2|$. Only $\\frac{1}{x}$ gives a log; $x^{-2}$ follows the power rule to $-x^{-1}$.",
+    "Reporting displacement as distance. Split at the zeros of $v$ and add the absolute values of the pieces.",
+    "Forgetting the initial amount in a net change problem. The integral gives the **change**; add the starting value to get the final amount."
+  ],
+  "whyItMatters": "This is where the integral table you will use for the rest of the course is assembled, and your Daily Integral tier I3 is exactly these integrals. The Net Change Theorem is the template for every application in Chapters 6 and 8: identify a rate, integrate it over an interval, get a total. Work is the integral of force over distance, fluid flow is the integral of a rate, and probability is the integral of a density, all instances of the same theorem.",
+  "checkYourself": [
+    {
+      "q": "$\\int (3x^2 + 2)\\,dx$?",
+      "a": "$x^3 + 2x + C$."
+    },
+    {
+      "q": "$\\int_0^1 e^x\\,dx$?",
+      "a": "$e - 1$."
+    },
+    {
+      "q": "If $v(t) = 2t - 4$, what is the displacement on $[0, 4]$?",
+      "a": "$\\left[t^2 - 4t\\right]_0^4 = 0$."
+    },
+    {
+      "q": "Units of $\\int_0^5 r(t)\\,dt$ if $r$ is in gallons per hour and $t$ in hours?",
+      "a": "Gallons."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of the indefinite integral and the sentence contrasting it with the definite integral; note where $+ C$ belongs.",
+    "Copy the table of indefinite integrals and verify three entries by differentiation.",
+    "Before reading the solution of the first example with several terms, integrate it yourself and differentiate to check.",
+    "Find the Net Change Theorem and the list of interpretations (velocity, flow, density, cost); for each, write the units of the integral.",
+    "Find the example that distinguishes displacement from distance and redo the split at the zeros of $v$ yourself."
+  ]
+}

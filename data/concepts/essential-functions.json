@@ -1,0 +1,89 @@
+{
+  "nodeId": "essential-functions",
+  "title": "Mathematical Models: A Catalog of Essential Functions",
+  "overview": "A mathematical model is a function chosen to describe something real: the height of a thrown ball, the cost of producing $x$ items, the temperature of cooling coffee. Modeling means picking a function whose shape matches the data, fitting its constants, using it to predict, and then checking the prediction against reality. To do that you need a mental catalog of basic shapes, so that when you see data rising in a straight line, or bending upward faster and faster, or oscillating, you know which family to reach for. This section is that catalog.\n\n**Linear functions** $f(x) = mx + b$ change at a constant rate $m$. If something grows by the same amount every unit of time, it is linear. **Polynomials** $a_n x^n + \\cdots + a_1 x + a_0$ are sums of power terms; their degree controls their long-run shape, and a degree-$n$ polynomial can have up to $n$ roots and $n - 1$ turning points. Quadratics ($n = 2$) model projectile heights; cubics ($n = 3$) have an S-shaped wiggle. **Power functions** $f(x) = x^a$ include the familiar $x^2$ and $x^3$, the root functions $x^{1/2} = \\sqrt{x}$ and $x^{1/3}$, and the reciprocal $x^{-1} = \\frac{1}{x}$, whose graph has two branches and never touches either axis.\n\n**Rational functions** are ratios of polynomials, such as $\\frac{x^2 + 1}{x - 3}$. They are defined wherever the denominator is nonzero and often have vertical asymptotes where it is zero. **Algebraic functions** are built from polynomials with the algebraic operations including roots, like $\\sqrt{x^2 + 1}$. Everything else is **transcendental**: the **trigonometric functions** $\\sin x$, $\\cos x$, $\\tan x$, which model anything that repeats; the **exponential functions** $b^x$, which model growth or decay at a rate proportional to the current amount; and the **logarithmic functions** $\\log_b x$, their inverses, which grow very slowly and turn multiplication into addition.\n\nFor telling these families apart quickly: a polynomial has whole-number exponents on $x$ and no $x$ in a denominator or under a root; a power function is a single term $x^a$ with any real $a$; an exponential has $x$ **in the exponent**, not as the base, so $2^x$ is exponential while $x^2$ is a power function. This distinction matters enormously later, because $x^2$ and $2^x$ have completely different derivatives and integrals.\n\nTwo more habits from this section. First, a model is usually chosen from data by looking at a scatter plot and asking which shape fits, then adjusting constants (for a line, the slope and intercept) to match. Second, every model has a domain of validity: a linear temperature model that works from 0 to 100 meters of altitude says nothing reliable at 10 kilometers. Knowing the catalog is the first step; knowing the limits of each model is the second.",
+  "keyIdeas": [
+    "A linear function $f(x) = mx + b$ has a constant rate of change $m$; equal steps in $x$ produce equal steps in $y$.",
+    "A polynomial $a_n x^n + \\cdots + a_0$ of degree $n$ has at most $n$ roots and at most $n - 1$ turning points; the leading term controls the far-left and far-right behavior.",
+    "Power functions $x^a$ include squares, cubes, roots ($a = \\frac{1}{2}, \\frac{1}{3}$), and reciprocals ($a = -1$).",
+    "Rational functions are quotients of polynomials and are undefined where the denominator is zero, often producing vertical asymptotes.",
+    "Exponential functions $b^x$ have the variable in the exponent; $x^2$ is a power function and $2^x$ is exponential, and they behave completely differently.",
+    "Trig functions model repeating behavior; logarithms are the inverses of exponentials and grow slowly.",
+    "A model is chosen by matching the shape of data to a family, fitting the constants, and respecting the domain where it was validated."
+  ],
+  "workedExamples": [
+    {
+      "title": "Building and using a linear model",
+      "problem": "A spring is 12 cm long with no weight and 15 cm long with 2 kg attached. Assuming length is a linear function of mass, find the model and predict the length with 5 kg.",
+      "steps": [
+        "Two data points: $(0, 12)$ and $(2, 15)$, with mass $m$ on the horizontal axis and length $L$ vertical.",
+        "Slope: $\\frac{15 - 12}{2 - 0} = 1.5$ cm per kg. The intercept is $L(0) = 12$. Model: $L(m) = 1.5m + 12$.",
+        "Predict: $L(5) = 7.5 + 12 = 19.5$ cm.",
+        "Check the domain of validity: a real spring stops being linear if stretched too far, so trust the prediction only for masses near the measured range."
+      ]
+    },
+    {
+      "title": "Classifying functions",
+      "problem": "Classify each as polynomial, power, rational, algebraic, exponential, trigonometric, or logarithmic: $f(x) = 3^x$, $g(x) = x^3$, $h(x) = \\frac{x + 1}{x^2 - 4}$, $k(x) = \\sqrt{x} + x$, $p(x) = \\ln(2x)$.",
+      "steps": [
+        "$f(x) = 3^x$: the variable is in the exponent, so it is exponential.",
+        "$g(x) = x^3$: a single power of $x$, so a power function (and also a polynomial of degree 3).",
+        "$h(x)$: a polynomial over a polynomial, so rational; it is undefined at $x = \\pm 2$.",
+        "$k(x) = \\sqrt{x} + x$: involves a root of $x$, so algebraic but not a polynomial (the exponent $\\frac{1}{2}$ is not a whole number). $p(x) = \\ln(2x)$ is logarithmic."
+      ]
+    },
+    {
+      "title": "Reading the shape of a polynomial",
+      "problem": "Without plotting many points, describe the graph of $P(x) = -x^3 + 4x$: its roots, its far-left and far-right behavior, and roughly where it turns.",
+      "steps": [
+        "Factor to find roots: $-x^3 + 4x = -x(x^2 - 4) = -x(x - 2)(x + 2)$, so the graph crosses the axis at $x = -2, 0, 2$.",
+        "Far behavior comes from the leading term $-x^3$: for large positive $x$ it is very negative (graph goes down on the right), and for large negative $x$ it is very positive (graph goes up on the left).",
+        "Degree 3 allows at most 2 turning points. Between the roots $-2$ and $0$ the graph dips below the axis (check $x = -1$: $1 - 4 = -3$), and between $0$ and $2$ it rises above (check $x = 1$: $-1 + 4 = 3$).",
+        "Sketch: up on the far left, down through $-2$, trough near $x \\approx -1.2$, up through 0, peak near $x \\approx 1.2$, down through 2, down on the far right. Calculus will locate the peaks exactly at $x = \\pm\\frac{2}{\\sqrt{3}}$."
+      ]
+    },
+    {
+      "title": "Power versus exponential growth",
+      "problem": "Compare $x^2$ and $2^x$ at $x = 1, 2, 3, 4, 5, 10$. Which family models something that doubles every unit of time?",
+      "steps": [
+        "$x^2$: $1, 4, 9, 16, 25, 100$. The differences between consecutive values are $3, 5, 7, 9$: growing, but slowly.",
+        "$2^x$: $2, 4, 8, 16, 32, 1024$. Each value is twice the previous one.",
+        "They tie at $x = 2$ and $x = 4$, but by $x = 10$ the exponential is ten times larger, and the gap keeps widening.",
+        "Doubling every unit of time is the signature of exponential growth, $2^x$; a power function cannot do it. This is why populations and compound interest are modeled with exponentials."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Calling $x^2$ an exponential function. The variable is the base, so it is a power function; $2^x$ is the exponential. Compare the values at $x = 10$: 100 versus 1024.",
+    "Treating $\\sqrt{x}$ or $\\frac{1}{x}$ as polynomials. Polynomials have whole-number exponents; $x^{1/2}$ and $x^{-1}$ do not qualify.",
+    "Assuming a degree-$n$ polynomial always has $n$ real roots. $x^2 + 1$ has degree 2 and no real roots; $n$ is only the maximum.",
+    "Extrapolating a model far outside the data that produced it. A line fitted to five years of growth may be badly wrong fifty years out.",
+    "Reading the far-right behavior from the constant term instead of the leading term. For $-x^3 + 100$, the $-x^3$ wins for large $x$."
+  ],
+  "whyItMatters": "Each family in the catalog comes with its own derivative and integral rule: the power rule for $x^a$, $e^x$ for exponentials, $\\ln|x|$ for $\\frac{1}{x}$, and the trig antiderivatives. Recognizing which family an integrand belongs to is the first step of every integration, and it is the whole idea behind the \"Strategy for Integration\" section later. The modeling habit, pick a shape and fit it, is also how differential equations are set up in Chapter 9.",
+  "checkYourself": [
+    {
+      "q": "Is $f(x) = 5x^4 - \\sqrt{2}\\,x + 7$ a polynomial? What is its degree?",
+      "a": "Yes; the coefficients can be any numbers. Degree 4."
+    },
+    {
+      "q": "Which grows faster eventually, $x^{10}$ or $1.5^x$?",
+      "a": "$1.5^x$; any exponential with base greater than 1 eventually beats any power."
+    },
+    {
+      "q": "Where is $\\frac{x}{x^2 - 9}$ undefined?",
+      "a": "At $x = 3$ and $x = -3$."
+    },
+    {
+      "q": "A quantity increases by 7 units every hour. Which family?",
+      "a": "Linear, with slope 7."
+    }
+  ],
+  "readingGuide": [
+    "Find the description of what a mathematical model is and the cycle of formulate, solve, interpret, test; write it as four short steps in your own words.",
+    "For each family (linear, polynomial, power, rational, algebraic, trigonometric, exponential, logarithmic) note one defining feature and sketch its typical shape.",
+    "Look for the figures comparing power functions $x^n$ for several $n$ and note how the graphs change between $0 < x < 1$ and $x > 1$.",
+    "Before reading the solution of the first example that fits a linear model to data, compute the slope and intercept yourself.",
+    "Make a one-line test for telling a power function from an exponential one, and apply it to five examples from the section."
+  ]
+}

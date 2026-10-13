@@ -1,0 +1,81 @@
+{
+  "nodeId": "population-growth",
+  "title": "Models for Population Growth",
+  "overview": "Two models, and the second fixes the flaw in the first.\n\n**Natural growth.** If each individual reproduces at a steady rate, the population grows in proportion to its size: $\\frac{dP}{dt} = kP$. Separating gives $\\int \\frac{dP}{P} = \\int k\\,dt$, so $\\ln P = kt + C$ and\n$$P(t) = P_0 e^{kt}.$$\nThe relative growth rate $k$ is the fraction added per unit time. Doubling time is $\\frac{\\ln 2}{k}$, independent of the current size. This model fits bacteria in fresh broth and money in a bank. It cannot last, because exponential growth outruns any finite supply of food or space.\n\n**Logistic growth.** Add a ceiling. Let $M$ be the carrying capacity, the largest population the environment supports. Replace the constant rate $k$ by a rate that shrinks as $P$ approaches $M$:\n$$\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{M}\\right).$$\nWhen $P$ is tiny, the factor $1 - \\frac{P}{M}$ is nearly $1$ and growth is nearly exponential. As $P$ nears $M$ the factor goes to $0$ and growth stalls. Above $M$ the factor is negative and the population falls back. So $P = M$ is a stable equilibrium and $P = 0$ is an unstable one.\n\nThe logistic equation is separable, and partial fractions do the integration. The solution is\n$$P(t) = \\frac{M}{1 + Ae^{-kt}}, \\qquad A = \\frac{M - P_0}{P_0}.$$\nIts graph is an S-curve: slow start, fast middle, flat finish. The steepest point is at $P = \\frac{M}{2}$, where the growth rate reaches its maximum of $\\frac{kM}{4}$.\n\nFitting a model to data means estimating $k$ (from early, nearly exponential growth) and $M$ (from where the data level off), then comparing predictions with observations. The model is a simplification; checking it against data is part of the mathematics, not an afterthought.",
+  "keyIdeas": [
+    "Natural growth $\\frac{dP}{dt} = kP$ has solution $P = P_0 e^{kt}$; the doubling time is $\\frac{\\ln 2}{k}$ regardless of $P_0$.",
+    "Logistic growth $\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{M}\\right)$ has equilibria $P = 0$ (unstable) and $P = M$ (stable, the carrying capacity).",
+    "The logistic solution is $P(t) = \\dfrac{M}{1 + Ae^{-kt}}$ with $A = \\dfrac{M - P_0}{P_0}$; as $t \\to \\infty$, $P \\to M$.",
+    "The logistic curve is steepest at $P = \\frac{M}{2}$, where $\\frac{dP}{dt} = \\frac{kM}{4}$; it is concave up before that point and concave down after.",
+    "Solving the logistic equation uses separation plus the partial fraction identity $\\dfrac{1}{P(1 - P/M)} = \\dfrac{1}{P} + \\dfrac{1/M}{1 - P/M}$.",
+    "For small $P$ the logistic model is nearly exponential with the same $k$; that is how $k$ can be estimated from early data."
+  ],
+  "workedExamples": [
+    {
+      "title": "Exponential growth and doubling time",
+      "problem": "A colony of $1000$ bacteria grows at a relative rate of $2$ percent per hour. Find $P(t)$ and the doubling time.",
+      "steps": [
+        "Translate: $\\frac{dP}{dt} = 0.02P$ with $P(0) = 1000$. The $2$ percent is the relative rate $k = 0.02$ per hour.",
+        "Separate: $\\frac{dP}{P} = 0.02\\,dt$, so $\\ln P = 0.02t + C$ and $P = Ae^{0.02t}$. The initial condition gives $A = 1000$: $P(t) = 1000e^{0.02t}$.",
+        "Doubling time: solve $1000e^{0.02t} = 2000$, so $e^{0.02t} = 2$ and $t = \\frac{\\ln 2}{0.02} \\approx 34.7$ hours.",
+        "Notice the $1000$ cancelled. Doubling from $5000$ to $10000$ takes the same $34.7$ hours. That is the fingerprint of exponential growth and the reason it cannot continue forever."
+      ]
+    },
+    {
+      "title": "Solving the logistic equation with partial fractions",
+      "problem": "Solve $\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{M}\\right)$ to obtain $P(t) = \\dfrac{M}{1 + Ae^{-kt}}$.",
+      "steps": [
+        "Separate: $\\int \\frac{dP}{P\\left(1 - \\frac{P}{M}\\right)} = \\int k\\,dt$. The left side is a rational function of $P$, so use partial fractions.",
+        "Decompose: $\\frac{1}{P(1 - P/M)} = \\frac{1}{P} + \\frac{1/M}{1 - P/M}$. Check by combining: $\\frac{(1 - P/M) + P/M}{P(1 - P/M)} = \\frac{1}{P(1 - P/M)}$. Good.",
+        "Integrate (for $0 < P < M$): $\\ln P - \\ln\\left(1 - \\frac{P}{M}\\right) = kt + C$. The second term's integral has the minus sign because the derivative of $1 - P/M$ is $-1/M$.",
+        "Combine logs and exponentiate: $\\frac{P}{1 - P/M} = Be^{kt}$. Invert both sides: $\\frac{1 - P/M}{P} = \\frac{1}{P} - \\frac{1}{M} = \\frac{1}{B}e^{-kt}$.",
+        "Solve for $P$: $\\frac{1}{P} = \\frac{1}{M} + \\frac{1}{B}e^{-kt}$. Multiply the right side's top and bottom by $M$ to combine: $\\frac{1}{P} = \\frac{1 + (M/B)e^{-kt}}{M}$, so $P = \\frac{M}{1 + Ae^{-kt}}$ with $A = \\frac{M}{B}$.",
+        "Fit $A$: at $t = 0$, $P_0 = \\frac{M}{1 + A}$, so $A = \\frac{M - P_0}{P_0}$. As $t \\to \\infty$ the exponential dies and $P \\to M$, as the equation predicted."
+      ]
+    },
+    {
+      "title": "Using the logistic solution",
+      "problem": "A lake can support $M = 1000$ fish. It starts with $100$ fish and $k = 0.5$ per year. Find $P(t)$ and the time when the population reaches $500$.",
+      "steps": [
+        "Compute $A = \\frac{M - P_0}{P_0} = \\frac{1000 - 100}{100} = 9$. So $P(t) = \\frac{1000}{1 + 9e^{-0.5t}}$.",
+        "Check $t = 0$: $\\frac{1000}{1 + 9} = 100$. Correct.",
+        "Set $P = 500$: $\\frac{1000}{1 + 9e^{-0.5t}} = 500$ gives $1 + 9e^{-0.5t} = 2$, so $e^{-0.5t} = \\frac{1}{9}$ and $t = 2\\ln 9 \\approx 4.39$ years.",
+        "Interpret: $500$ is half the carrying capacity, so this is the moment of fastest growth, with $\\frac{dP}{dt} = \\frac{kM}{4} = \\frac{0.5 \\cdot 1000}{4} = 125$ fish per year. After this the curve bends over and growth slows.",
+        "Compare with pure exponential growth from $100$ at rate $0.5$: that would reach $500$ at $t = 2\\ln 5 \\approx 3.2$ years. The logistic model is slower because the crowding factor is already noticeable by then."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Mixing up the growth rate $k$ with the growth amount. In $\\frac{dP}{dt} = kP$, $k$ is a fraction per unit time (like $0.02$), not a number of individuals. Check: with $P = 1000$ and $k = 0.02$ the rate is $20$ per hour.",
+    "Writing the logistic solution as $P = \\frac{M}{1 + e^{-kt}}$ without $A$. Then $P(0) = \\frac{M}{2}$ always. The constant $A = \\frac{M - P_0}{P_0}$ is what lets $P_0$ be anything.",
+    "Getting a wrong sign in the partial fraction integral. $\\int \\frac{1/M}{1 - P/M}\\,dP = -\\ln\\left|1 - \\frac{P}{M}\\right|$; the inner derivative $-1/M$ supplies the minus sign. Check by differentiating.",
+    "Assuming the population reaches $M$ in finite time. It approaches $M$ but never arrives; $P = M$ is a separate equilibrium solution.",
+    "Thinking growth is fastest at the start. For logistic growth the rate $kP(1 - P/M)$ is a parabola in $P$, maximal at $P = M/2$, not at the smallest or largest $P$."
+  ],
+  "whyItMatters": "This is partial fractions and separable equations working together on a model that actually describes real populations, tumors, and the spread of news. The logistic function is also the building block of logistic regression in statistics and the activation functions of neural networks. The idea of a stable versus unstable equilibrium, read straight from the sign of $\\frac{dP}{dt}$, is the beginning of dynamical systems and returns immediately in the predator-prey section.",
+  "checkYourself": [
+    {
+      "q": "A population obeys $\\frac{dP}{dt} = 0.1P$ with $P(0) = 50$. What is $P(10)$?",
+      "a": "$50e^{1} \\approx 136$."
+    },
+    {
+      "q": "For $\\frac{dP}{dt} = 0.3P\\left(1 - \\frac{P}{800}\\right)$, what is the carrying capacity and at what $P$ is growth fastest?",
+      "a": "$M = 800$; fastest at $P = 400$, where the rate is $0.3 \\cdot 800/4 = 60$."
+    },
+    {
+      "q": "If $M = 600$ and $P_0 = 200$, what is $A$ in the logistic solution?",
+      "a": "$A = \\frac{600 - 200}{200} = 2$."
+    },
+    {
+      "q": "What happens to a logistic population that starts above $M$?",
+      "a": "It decreases toward $M$, since $1 - P/M < 0$ makes $\\frac{dP}{dt}$ negative."
+    }
+  ],
+  "readingGuide": [
+    "Find the derivation of the natural growth law and note the assumption it rests on. Write the solution and the doubling time formula in your own words.",
+    "Locate the reasoning that leads from the natural growth model to the logistic equation: what feature of real populations does the new factor capture?",
+    "Before reading the solution of the logistic equation, separate it and try the partial fraction decomposition yourself.",
+    "Find the figure of logistic solution curves for several starting values and identify which equilibrium is stable and why.",
+    "Look for the comparison of logistic predictions with real data, and note how the author estimated $k$ and $M$."
+  ]
+}

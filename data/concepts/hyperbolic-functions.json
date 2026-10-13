@@ -1,0 +1,87 @@
+{
+  "nodeId": "hyperbolic-functions",
+  "title": "Hyperbolic Functions",
+  "overview": "The **hyperbolic functions** are two simple combinations of $e^x$ and $e^{-x}$ that turn out to be so useful they get their own names:\n$$\\sinh x = \\frac{e^x - e^{-x}}{2}, \\qquad \\cosh x = \\frac{e^x + e^{-x}}{2}.$$\nRead them as \"sinch\" and \"cosh.\" Nothing new is being defined under the hood: $\\sinh x$ is the odd half of $e^x$ and $\\cosh x$ is the even half, and the two add back up to $e^x$. Four more are built from them just like the trig family: $\\tanh x = \\dfrac{\\sinh x}{\\cosh x}$, plus $\\coth x$, $\\operatorname{sech} x = \\dfrac{1}{\\cosh x}$, and $\\operatorname{csch} x = \\dfrac{1}{\\sinh x}$.\n\nWhy the trig-like names? Because the algebra mirrors trigonometry. The most important identity is\n$$\\cosh^2 x - \\sinh^2 x = 1,$$\nwhich you can check by expanding the exponentials: the cross terms cancel and what remains is $\\frac{4}{4}$. Compare with $\\cos^2 x + \\sin^2 x = 1$. The plus became a minus. The point $(\\cos t, \\sin t)$ moves on the unit circle $x^2 + y^2 = 1$; the point $(\\cosh t, \\sinh t)$ moves on the right branch of the **hyperbola** $x^2 - y^2 = 1$. That is where \"hyperbolic\" comes from.\n\nA few values anchor the picture. $\\sinh 0 = 0$ and $\\cosh 0 = 1$. $\\sinh$ is odd, increasing, and runs through all real values. $\\cosh$ is even, is always at least $1$, and looks like a U. In fact $y = \\cosh x$ is the exact shape of a chain hanging from two points (a **catenary**). $\\tanh$ is odd, increasing, and squeezed between $-1$ and $1$, flattening out toward $\\pm 1$ at the ends.\n\nThe derivatives are the reason this section sits in Chapter 3. Differentiate the definitions directly:\n$$\\frac{d}{dx} \\sinh x = \\cosh x, \\qquad \\frac{d}{dx} \\cosh x = \\sinh x, \\qquad \\frac{d}{dx} \\tanh x = \\operatorname{sech}^2 x.$$\nNotice there is **no minus sign** on the derivative of $\\cosh$, unlike $\\cos$. Each one comes from $\\frac{d}{dx} e^x = e^x$ and $\\frac{d}{dx} e^{-x} = -e^{-x}$ with a little bookkeeping; the $\\tanh$ formula uses the quotient rule and the identity. Read backwards, the same lines are integral formulas: $\\int \\sinh x\\,dx = \\cosh x + C$ and $\\int \\cosh x\\,dx = \\sinh x + C$.\n\nBecause $\\sinh$ is one-to-one, it has an inverse, and since it is made of exponentials the inverse is made of logarithms:\n$$\\sinh^{-1} x = \\ln\\left( x + \\sqrt{x^2 + 1} \\right), \\qquad \\frac{d}{dx} \\sinh^{-1} x = \\frac{1}{\\sqrt{1 + x^2}}.$$\nSimilarly $\\cosh^{-1} x = \\ln\\left( x + \\sqrt{x^2 - 1} \\right)$ for $x \\ge 1$ with derivative $\\dfrac{1}{\\sqrt{x^2 - 1}}$, and $\\dfrac{d}{dx} \\tanh^{-1} x = \\dfrac{1}{1 - x^2}$ for $|x| < 1$. These derivative formulas matter most as **antiderivatives**: $\\int \\dfrac{dx}{\\sqrt{1 + x^2}} = \\sinh^{-1} x + C$, an integral that otherwise needs a substitution.",
+  "keyIdeas": [
+    "Definitions: $\\sinh x = \\dfrac{e^x - e^{-x}}{2}$, $\\cosh x = \\dfrac{e^x + e^{-x}}{2}$, $\\tanh x = \\dfrac{\\sinh x}{\\cosh x}$. Also $\\sinh x + \\cosh x = e^x$.",
+    "Main identity: $\\cosh^2 x - \\sinh^2 x = 1$. The point $(\\cosh t, \\sinh t)$ lies on the hyperbola $x^2 - y^2 = 1$, the way $(\\cos t, \\sin t)$ lies on the unit circle.",
+    "Shapes: $\\sinh$ is odd and increasing with $\\sinh 0 = 0$; $\\cosh$ is even with minimum value $\\cosh 0 = 1$; $\\tanh$ is odd, increasing, with horizontal asymptotes $y = \\pm 1$.",
+    "Derivatives: $\\dfrac{d}{dx}\\sinh x = \\cosh x$, $\\dfrac{d}{dx}\\cosh x = \\sinh x$ (no minus sign), $\\dfrac{d}{dx}\\tanh x = \\operatorname{sech}^2 x$. Chain rule applies as usual.",
+    "Integrals: $\\int \\sinh x\\,dx = \\cosh x + C$, $\\int \\cosh x\\,dx = \\sinh x + C$, $\\int \\tanh x\\,dx = \\ln(\\cosh x) + C$.",
+    "Inverses are logarithms: $\\sinh^{-1} x = \\ln(x + \\sqrt{x^2+1})$ with derivative $\\dfrac{1}{\\sqrt{1+x^2}}$; $\\cosh^{-1} x = \\ln(x + \\sqrt{x^2-1})$ for $x \\ge 1$ with derivative $\\dfrac{1}{\\sqrt{x^2-1}}$; $\\dfrac{d}{dx}\\tanh^{-1} x = \\dfrac{1}{1-x^2}$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Exact values and the main identity",
+      "problem": "Compute $\\cosh(\\ln 2)$, $\\sinh(\\ln 2)$, and $\\tanh(\\ln 2)$ exactly, and verify $\\cosh^2 x - \\sinh^2 x = 1$ at $x = \\ln 2$.",
+      "steps": [
+        "Why this step: the definitions are built from $e^x$ and $e^{-x}$, and logarithms are what make those easy. $e^{\\ln 2} = 2$ and $e^{-\\ln 2} = \\dfrac{1}{2}$.",
+        "$\\cosh(\\ln 2) = \\dfrac{2 + 1/2}{2} = \\dfrac{5/2}{2} = \\dfrac{5}{4}$ and $\\sinh(\\ln 2) = \\dfrac{2 - 1/2}{2} = \\dfrac{3/2}{2} = \\dfrac{3}{4}$.",
+        "$\\tanh(\\ln 2) = \\dfrac{\\sinh(\\ln 2)}{\\cosh(\\ln 2)} = \\dfrac{3/4}{5/4} = \\dfrac{3}{5}$.",
+        "Verify the identity: $\\left( \\dfrac{5}{4} \\right)^2 - \\left( \\dfrac{3}{4} \\right)^2 = \\dfrac{25}{16} - \\dfrac{9}{16} = \\dfrac{16}{16} = 1$. The point $\\left( \\frac{5}{4}, \\frac{3}{4} \\right)$ really is on the hyperbola $x^2 - y^2 = 1$."
+      ]
+    },
+    {
+      "title": "Derivatives with the chain rule",
+      "problem": "Find $\\dfrac{d}{dx} \\cosh(3x)$, $\\dfrac{d}{dx} \\sinh(x^2)$, and prove that $\\dfrac{d}{dx} \\tanh x = \\operatorname{sech}^2 x$.",
+      "steps": [
+        "Why this step: the outer derivative of $\\cosh$ is $\\sinh$ (no sign change), then multiply by the inner derivative. $\\dfrac{d}{dx} \\cosh(3x) = \\sinh(3x) \\cdot 3 = 3 \\sinh(3x)$.",
+        "Same pattern: $\\dfrac{d}{dx} \\sinh(x^2) = \\cosh(x^2) \\cdot 2x = 2x \\cosh(x^2)$.",
+        "Why this step: for $\\tanh x = \\dfrac{\\sinh x}{\\cosh x}$ use the quotient rule. $\\dfrac{d}{dx} \\tanh x = \\dfrac{\\cosh x \\cdot \\cosh x - \\sinh x \\cdot \\sinh x}{\\cosh^2 x} = \\dfrac{\\cosh^2 x - \\sinh^2 x}{\\cosh^2 x}$.",
+        "The numerator is $1$ by the main identity, so the derivative is $\\dfrac{1}{\\cosh^2 x} = \\operatorname{sech}^2 x$. Since this is always positive, $\\tanh$ is increasing everywhere, matching its graph."
+      ]
+    },
+    {
+      "title": "Two integrals",
+      "problem": "Evaluate $\\int_0^1 \\sinh x\\,dx$ and find $\\int \\tanh x\\,dx$.",
+      "steps": [
+        "Why this step: an antiderivative of $\\sinh x$ is $\\cosh x$ because $\\frac{d}{dx} \\cosh x = \\sinh x$. So $\\int_0^1 \\sinh x\\,dx = \\cosh 1 - \\cosh 0 = \\cosh 1 - 1$.",
+        "Numerically, $\\cosh 1 = \\dfrac{e + e^{-1}}{2} \\approx \\dfrac{2.71828 + 0.36788}{2} \\approx 1.54308$, so the integral is about $0.5431$. Sanity check: $\\sinh x$ rises from $0$ to $\\sinh 1 \\approx 1.175$ on $[0, 1]$, so an area of about $0.54$ is plausible.",
+        "Why this step: for $\\int \\tanh x\\,dx = \\int \\dfrac{\\sinh x}{\\cosh x}\\,dx$, the numerator is the derivative of the denominator. Substitute $u = \\cosh x$, $du = \\sinh x\\,dx$: the integral becomes $\\int \\dfrac{du}{u} = \\ln|u| + C$.",
+        "So $\\int \\tanh x\\,dx = \\ln(\\cosh x) + C$ (no absolute value needed since $\\cosh x \\ge 1$). Check by differentiating: $\\dfrac{d}{dx} \\ln(\\cosh x) = \\dfrac{\\sinh x}{\\cosh x} = \\tanh x$."
+      ]
+    },
+    {
+      "title": "An inverse hyperbolic integral",
+      "problem": "Show that $\\dfrac{d}{dx} \\ln\\left( x + \\sqrt{x^2+1} \\right) = \\dfrac{1}{\\sqrt{x^2+1}}$, then evaluate $\\int_0^1 \\dfrac{dx}{\\sqrt{x^2+1}}$.",
+      "steps": [
+        "Why this step: differentiate the log with the chain rule. The inside is $x + \\sqrt{x^2+1}$, with derivative $1 + \\dfrac{x}{\\sqrt{x^2+1}} = \\dfrac{\\sqrt{x^2+1} + x}{\\sqrt{x^2+1}}$.",
+        "Divide by the inside: $\\dfrac{d}{dx} \\ln\\left( x + \\sqrt{x^2+1} \\right) = \\dfrac{\\sqrt{x^2+1} + x}{\\sqrt{x^2+1}} \\cdot \\dfrac{1}{x + \\sqrt{x^2+1}} = \\dfrac{1}{\\sqrt{x^2+1}}$. The messy factor cancels exactly.",
+        "Why this step: that log is $\\sinh^{-1} x$, so we have found an antiderivative of $\\dfrac{1}{\\sqrt{x^2+1}}$ with no trigonometric substitution. $\\int_0^1 \\dfrac{dx}{\\sqrt{x^2+1}} = \\sinh^{-1} 1 - \\sinh^{-1} 0 = \\ln(1 + \\sqrt{2}) - \\ln 1$.",
+        "So the integral equals $\\ln(1 + \\sqrt{2}) \\approx \\ln(2.4142) \\approx 0.8814$. Sanity check: the integrand drops from $1$ to $\\frac{1}{\\sqrt 2} \\approx 0.707$ on $[0,1]$, so an area between $0.707$ and $1$ is expected."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Putting a minus sign on the derivative of $\\cosh$ by analogy with $\\cos$. Check at $x = 0$: $\\cosh$ has its minimum there, so its derivative must be $0$, and $\\sinh 0 = 0$ fits, while the sign is positive just to the right since $\\cosh$ is increasing there.",
+    "Writing the identity as $\\cosh^2 x + \\sinh^2 x = 1$. Check at $x = \\ln 2$: $\\frac{25}{16} + \\frac{9}{16} = \\frac{34}{16} \\ne 1$, while $\\frac{25}{16} - \\frac{9}{16} = 1$.",
+    "Treating $\\sinh^{-1} x$ as $\\dfrac{1}{\\sinh x}$. The $-1$ means inverse function; the reciprocal is $\\operatorname{csch} x$. Check: $\\sinh^{-1} 0 = 0$, but $\\frac{1}{\\sinh 0}$ is undefined.",
+    "Mixing up the domains of the inverses. $\\sinh^{-1}$ accepts every real $x$, but $\\cosh^{-1}$ needs $x \\ge 1$ (since $\\cosh \\ge 1$) and $\\tanh^{-1}$ needs $|x| < 1$. Trying $\\cosh^{-1}(0.5)$ gives $\\ln(0.5 + \\sqrt{-0.75})$, not a real number."
+  ],
+  "whyItMatters": "Hyperbolic functions are the exponential family wearing trigonometric clothes, and they show up whenever something hangs, drags, or spreads: a hanging cable is a $\\cosh$ curve, a falling object with air resistance approaches terminal velocity along a $\\tanh$ curve, and $\\sinh$ and $\\cosh$ solve the differential equation $y'' = y$. For integration they are a gift. $\\int \\frac{dx}{\\sqrt{x^2+1}}$ and $\\int \\sqrt{x^2+1}\\,dx$ become clean once you know $\\sinh^{-1}$, and the substitution $x = \\sinh t$ handles $\\sqrt{x^2+1}$ the way $x = \\sin t$ handles $\\sqrt{1 - x^2}$, with the identity $\\cosh^2 t - \\sinh^2 t = 1$ doing the simplifying.",
+  "checkYourself": [
+    {
+      "q": "What are $\\sinh 0$, $\\cosh 0$, and $\\tanh 0$?",
+      "a": "$0$, $1$, and $0$."
+    },
+    {
+      "q": "Find $\\dfrac{d}{dx} \\cosh(x^3)$.",
+      "a": "$3x^2 \\sinh(x^3)$."
+    },
+    {
+      "q": "Find $\\int_0^{\\ln 2} \\cosh x\\,dx$.",
+      "a": "$\\sinh(\\ln 2) - \\sinh 0 = \\frac{3}{4}$."
+    },
+    {
+      "q": "What is $\\sinh^{-1} 0$, and what is the derivative of $\\sinh^{-1} x$ at $x = 0$?",
+      "a": "$\\sinh^{-1} 0 = \\ln(0 + 1) = 0$, and the derivative is $\\frac{1}{\\sqrt{1 + 0}} = 1$."
+    }
+  ],
+  "readingGuide": [
+    "Find the definitions of $\\sinh$ and $\\cosh$ and, before reading further, expand $\\cosh^2 x - \\sinh^2 x$ by hand to see the cross terms cancel.",
+    "Study the graphs of $\\sinh$, $\\cosh$, and $\\tanh$. For each, note the value at $0$, whether it is even or odd, and any horizontal asymptotes.",
+    "Before reading the derivative formulas, differentiate $\\frac{e^x - e^{-x}}{2}$ and $\\frac{e^x + e^{-x}}{2}$ yourself and compare with the trig versions, watching the sign.",
+    "Look for the derivation that writes $\\sinh^{-1} x$ as a logarithm; try to solve $y = \\frac{e^x - e^{-x}}{2}$ for $x$ on your own first (hint: multiply by $2e^x$ and use the quadratic formula).",
+    "Find the derivatives of the inverse hyperbolic functions and read each one backwards as an integral formula; note which square roots and denominators each one handles."
+  ]
+}

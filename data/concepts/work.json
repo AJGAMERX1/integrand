@@ -1,0 +1,86 @@
+{
+  "nodeId": "work",
+  "title": "Work",
+  "overview": "In physics, **work** measures the effort of pushing something through a distance. If a constant force $F$ moves an object a distance $d$ in the direction of the force, the work is simply $W = F \\cdot d$. Lift a 10 newton bag one meter straight up and you do 10 joules of work. (A joule is a newton-meter.)\n\nThe interesting case is when the force is not constant. A spring pulls back harder the farther you stretch it. A rope gets lighter as you haul it up, because less of it is still hanging. Water deep in a tank must be lifted farther than water near the top. In each case, force times distance no longer works as one multiplication. But it does work for a tiny step: over a very short distance $dx$ the force is essentially constant, so the little bit of work is $F(x)\\,dx$. Add up the little bits and you get an integral:\n$$W = \\int_a^b F(x)\\,dx.$$\n\nSo work is the area under the force-versus-position graph. That is the first way these problems appear: you are given a force function and you integrate it.\n\nThe second way is more physical and more fun. You are given an object (a hanging cable, a tank of water) and you must **build the integrand yourself** by slicing the object into pieces. For each piece you ask two questions: how much does this piece weigh, and how far does it have to move? The product of those two is that piece's share of the work. Then you integrate over all the pieces.\n\nFor a spring, Hooke's law says the force needed to hold it stretched $x$ units past its natural length is $F(x) = kx$, where $k$ is the spring constant. One measurement (a known force at a known stretch) lets you find $k$, and then $W = \\int kx\\,dx$ over whatever stretch is asked.\n\nKeep units straight. In the metric system, force is in newtons, distance in meters, work in joules. If a problem gives mass in kilograms, multiply by $g \\approx 9.8$ to get weight in newtons. Water has a weight density of about 9800 newtons per cubic meter.",
+  "keyIdeas": [
+    "Constant force: $W = F \\cdot d$. Variable force along a line: $W = \\int_a^b F(x)\\,dx$, the area under the force graph.",
+    "Hooke's law: the force to hold a spring stretched $x$ past natural length is $F(x) = kx$. Find $k$ from one known force-and-stretch pair.",
+    "For hanging cables and tanks, slice the object. Each slice contributes (weight of slice) times (distance that slice moves).",
+    "The distance a slice moves depends on where it starts. Set up a coordinate, decide which direction is positive, and write the lift distance in that coordinate.",
+    "Units: newtons times meters gives joules. Mass in kilograms must be multiplied by $g \\approx 9.8$ to become a force. Water weighs about 9800 newtons per cubic meter."
+  ],
+  "workedExamples": [
+    {
+      "title": "Integrating a given force",
+      "problem": "A force of $F(x) = 3x^2$ newtons acts on an object as it moves along the $x$-axis from $x = 1$ to $x = 2$ meters. How much work is done?",
+      "steps": [
+        "The force changes with position, so you cannot multiply force by distance once. Instead, over a tiny step $dx$ the work is $F(x)\\,dx = 3x^2\\,dx$.",
+        "Add up those tiny pieces: $W = \\int_1^2 3x^2\\,dx$.",
+        "Integrate: $\\left[ x^3 \\right]_1^2 = 8 - 1 = 7$. The work is 7 joules.",
+        "Reasonableness check: the force ranges from 3 N to 12 N over a distance of 1 m, so the work must be between 3 J and 12 J. It is."
+      ]
+    },
+    {
+      "title": "Stretching a spring",
+      "problem": "A force of 20 newtons holds a spring stretched 0.1 meters beyond its natural length. How much work is needed to stretch it from its natural length to 0.3 meters beyond?",
+      "steps": [
+        "First find the spring constant from Hooke's law $F = kx$. With $F = 20$ at $x = 0.1$: $k = \\frac{20}{0.1} = 200$ newtons per meter.",
+        "Now the force at any stretch $x$ is $F(x) = 200x$. The work from $x = 0$ to $x = 0.3$ is $W = \\int_0^{0.3} 200x\\,dx$.",
+        "Integrate: $200 \\cdot \\left[ \\frac{x^2}{2} \\right]_0^{0.3} = 100 \\cdot (0.09) = 9$. The work is 9 joules.",
+        "Why it is not $20 \\times 0.3 = 6$: the force is not 20 N the whole way. It starts at 0 and grows to 60 N at the end. The integral averages that growth correctly."
+      ]
+    },
+    {
+      "title": "Hauling up a cable",
+      "problem": "A 20 meter cable weighing 3 newtons per meter hangs straight down from the top of a building. How much work is needed to pull the whole cable up to the top?",
+      "steps": [
+        "Slice the cable. Let $x$ be the distance (in meters) below the top, from $x = 0$ to $x = 20$. A small piece of length $dx$ at depth $x$ weighs $3\\,dx$ newtons.",
+        "That piece must be lifted all the way to the top, a distance of $x$ meters. Its share of the work is (weight)(distance) $= 3x\\,dx$.",
+        "Add up all the pieces: $W = \\int_0^{20} 3x\\,dx = 3 \\left[ \\frac{x^2}{2} \\right]_0^{20} = 3 \\cdot 200 = 600$ joules.",
+        "Interpretation: the cable weighs 60 N in total, and 600 J is what you would get by lifting all 60 N through 10 m, the height of the cable's midpoint. The integral found that average automatically."
+      ]
+    },
+    {
+      "title": "Pumping water out of a tank",
+      "problem": "A cylindrical tank of radius 1 meter and height 2 meters is full of water. How much work is needed to pump all the water out over the top? Use 9800 newtons per cubic meter for the weight of water.",
+      "steps": [
+        "Slice the water horizontally. Let $y$ be the height (in meters) above the bottom, from $y = 0$ to $y = 2$. A thin layer at height $y$ with thickness $dy$ is a disk of radius 1, so its volume is $\\pi \\cdot 1^2 \\cdot dy = \\pi\\,dy$ cubic meters.",
+        "Its weight is $9800 \\pi\\,dy$ newtons.",
+        "The layer at height $y$ must rise to the top at height 2, a distance of $2 - y$. So its share of the work is $9800\\pi (2 - y)\\,dy$.",
+        "Add up all the layers: $W = 9800\\pi \\int_0^2 (2 - y)\\,dy = 9800\\pi \\left[ 2y - \\frac{y^2}{2} \\right]_0^2 = 9800\\pi \\cdot 2 = 19600\\pi$ joules, about 61,600 J.",
+        "Check: the tank holds $2\\pi$ cubic meters, weighing $19600\\pi$ N. Lifting all of it 1 meter (the average depth) gives the same $19600\\pi$ J. For a tank with straight sides the average works; for a cone or sphere the layers differ in size, and only the integral gets it right."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Multiplying the final force by the total distance. For the spring above, $60 \\times 0.3 = 18$ J is double the true 9 J, because the force was smaller for most of the stretch.",
+    "Mixing up the lift distance with the position. In the tank example a layer at height $y$ moves $2 - y$, not $y$. Check the top layer: at $y = 2$ it should move 0, and $2 - y$ gives 0.",
+    "Treating mass as force. A 5 kg object weighs about $5 \\times 9.8 = 49$ newtons. Forgetting the 9.8 makes every answer about ten times too small.",
+    "Using the total weight as the integrand for a cable problem. The piece at depth $x$ weighs (density)$\\,dx$, a tiny amount; the total weight only appears after integrating."
+  ],
+  "whyItMatters": "Work is the clearest case of \"integrate a rate to get a total\": force is the rate at which energy is spent per meter, and the integral turns that rate into total energy. The same setup recurs for hydrostatic force on a dam, for centers of mass, and in physics for electric potential and gravity. Learning to slice a physical object and write one slice's contribution is also the heart of double and triple integrals later.",
+  "checkYourself": [
+    {
+      "q": "A constant force of 15 N pushes a box 4 m. How much work?",
+      "a": "$W = 15 \\cdot 4 = 60$ J. No integral needed when the force is constant."
+    },
+    {
+      "q": "A spring has $k = 50$ N/m. How much work stretches it from 0 to 0.2 m?",
+      "a": "$\\int_0^{0.2} 50x\\,dx = 25 \\cdot 0.04 = 1$ J."
+    },
+    {
+      "q": "In a cable problem, why is the integrand $3x$ rather than $60$?",
+      "a": "Each small piece weighs $3\\,dx$ and moves a distance $x$ that depends on where it is. The total weight 60 N does not move a single common distance."
+    },
+    {
+      "q": "Water in a tank must be pumped out through a spout 1 m above the top of a 2 m tall tank. How does the lift distance change?",
+      "a": "A layer at height $y$ now rises to height 3, so the distance is $3 - y$ instead of $2 - y$."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of work for a variable force and notice how it comes from approximating the force as constant on each small subinterval.",
+    "Locate Hooke's law and write in your own words what the spring constant measures and how one measurement determines it.",
+    "Before reading the solution of the cable or chain example, set it up yourself: choose a coordinate, write the weight of a small piece, and write how far it moves.",
+    "In the tank example, pay attention to how the volume of a thin layer is computed and how the lift distance is written. Compare it to the cylindrical tank above."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "nodeId": "ftc",
+  "title": "The Fundamental Theorem of Calculus",
+  "overview": "Derivatives measure rates; integrals accumulate totals. The Fundamental Theorem of Calculus (FTC) says these two operations undo each other, and in doing so it turns the hard problem of computing limits of Riemann sums into the much easier problem of finding antiderivatives. It comes in two parts.\n\n**Part 1.** Fix $a$ and define a new function by integrating from $a$ to a variable upper limit: $g(x) = \\int_a^x f(t)\\,dt$. This \"area so far\" function accumulates the signed area under $f$ from $a$ up to $x$. The theorem says that if $f$ is continuous, then $g$ is differentiable and\n$$g'(x) = \\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x).$$\nThe rate at which area accumulates is the height of the curve. Why: moving the right edge from $x$ to $x + h$ adds a thin strip of width $h$ and height about $f(x)$, so $g(x + h) - g(x) \\approx f(x)\\,h$, and dividing by $h$ gives $f(x)$. Part 1 also guarantees that every continuous function has an antiderivative, namely $g$, even when no formula for it exists; $\\int_0^x e^{-t^2}\\,dt$ is a perfectly good function whose derivative is $e^{-x^2}$. If the upper limit is a function of $x$, the chain rule applies: $\\frac{d}{dx}\\int_a^{u(x)}f(t)\\,dt = f(u(x))\\,u'(x)$.\n\n**Part 2.** If $F$ is any antiderivative of a continuous $f$ on $[a, b]$, then\n$$\\int_a^b f(x)\\,dx = F(b) - F(a).$$\nThis is the computational workhorse. To evaluate a definite integral, find an antiderivative, plug in the top limit, plug in the bottom limit, subtract. The notation $\\left[F(x)\\right]_a^b$ or $F(x)\\big|_a^b$ means $F(b) - F(a)$. The constant $C$ cancels in the subtraction, so you may omit it. For example $\\int_0^1 x^2\\,dx = \\left[\\frac{x^3}{3}\\right]_0^1 = \\frac{1}{3} - 0 = \\frac{1}{3}$, which took a page of sigma algebra in the previous section and takes one line now.\n\nPart 2 follows from Part 1: $g(x) = \\int_a^x f$ is an antiderivative, so $F = g + C$, and $F(b) - F(a) = g(b) - g(a) = \\int_a^b f - 0$. Read as a statement about rates, Part 2 says that integrating a rate of change over an interval gives the net change: $\\int_a^b F'(x)\\,dx = F(b) - F(a)$. If $F$ is position, $\\int v\\,dt$ is displacement, which is what the distance problem suggested.\n\nThe theorem requires continuity on $[a, b]$. Applying it across a discontinuity gives nonsense: $\\int_{-1}^{1}\\frac{1}{x^2}\\,dx$ is not $\\left[-\\frac{1}{x}\\right]_{-1}^{1} = -2$, which is absurd for a positive integrand; the function blows up at 0 and the integral is improper. Always check that the integrand is continuous on the whole interval before using Part 2.",
+  "keyIdeas": [
+    "FTC Part 1: if $f$ is continuous, then $g(x) = \\int_a^x f(t)\\,dt$ is an antiderivative of $f$: $g'(x) = f(x)$.",
+    "With a variable upper limit $u(x)$: $\\frac{d}{dx}\\int_a^{u(x)}f(t)\\,dt = f(u(x))\\,u'(x)$ by the chain rule.",
+    "FTC Part 2: if $F' = f$ and $f$ is continuous on $[a, b]$, then $\\int_a^b f(x)\\,dx = F(b) - F(a)$, written $\\left[F(x)\\right]_a^b$.",
+    "The constant of integration cancels in $F(b) - F(a)$, so any antiderivative works.",
+    "Part 2 as net change: $\\int_a^b F'(x)\\,dx = F(b) - F(a)$; integrating velocity gives displacement.",
+    "Differentiation and integration are inverse processes: $\\frac{d}{dx}\\int_a^x f = f$ and $\\int_a^b F' = F(b) - F(a)$.",
+    "Part 2 requires continuity on the whole interval; a discontinuity inside makes the integral improper."
+  ],
+  "workedExamples": [
+    {
+      "title": "Evaluating definite integrals with Part 2",
+      "problem": "Evaluate $\\int_1^4 \\left(3\\sqrt{x} - \\dfrac{2}{x^2}\\right)dx$ and $\\int_0^{\\pi/3}\\sec^2 x\\,dx$.",
+      "steps": [
+        "First integrand as powers: $3x^{1/2} - 2x^{-2}$. Antiderivative: $3\\cdot\\frac{x^{3/2}}{3/2} - 2\\cdot\\frac{x^{-1}}{-1} = 2x^{3/2} + \\frac{2}{x}$.",
+        "Evaluate: $\\left[2x^{3/2} + \\frac{2}{x}\\right]_1^4 = \\left(2\\cdot 8 + \\frac{2}{4}\\right) - \\left(2 + 2\\right) = 16.5 - 4 = 12.5$.",
+        "Second: an antiderivative of $\\sec^2 x$ is $\\tan x$. $\\left[\\tan x\\right]_0^{\\pi/3} = \\tan\\frac{\\pi}{3} - \\tan 0 = \\sqrt{3}$. The integrand is continuous on $[0, \\frac{\\pi}{3}]$ (no asymptote until $\\frac{\\pi}{2}$), so Part 2 applies.",
+        "Sanity check on the first: the integrand at $x = 1$ is 1 and at $x = 4$ is $6 - 0.125 = 5.875$; a width-3 interval with heights from 1 to about 6 should give an area in the teens. $12.5$ is plausible."
+      ]
+    },
+    {
+      "title": "Differentiating an integral with Part 1",
+      "problem": "Find $\\dfrac{d}{dx}\\int_2^x \\sqrt{1 + t^3}\\,dt$ and $\\dfrac{d}{dx}\\int_0^{x^2}\\cos t\\,dt$.",
+      "steps": [
+        "First: by Part 1 with $f(t) = \\sqrt{1 + t^3}$, the derivative is simply $\\sqrt{1 + x^3}$. No integration is needed; the integrand is continuous, so the theorem applies directly.",
+        "Second: the upper limit is $u = x^2$. Chain rule: $\\cos(x^2)\\cdot\\frac{d}{dx}(x^2) = 2x\\cos(x^2)$.",
+        "Check the second by evaluating first: $\\int_0^{x^2}\\cos t\\,dt = \\sin(x^2) - \\sin 0 = \\sin(x^2)$, whose derivative is $2x\\cos(x^2)$. Same answer."
+      ]
+    },
+    {
+      "title": "Net change and signed area",
+      "problem": "A particle has velocity $v(t) = t^2 - 4$ m/s. Find its displacement on $[0, 3]$ and the total distance traveled.",
+      "steps": [
+        "Displacement $= \\int_0^3 (t^2 - 4)\\,dt = \\left[\\frac{t^3}{3} - 4t\\right]_0^3 = (9 - 12) - 0 = -3$ meters. Net movement is 3 meters in the negative direction.",
+        "For distance, find where $v = 0$: $t = 2$. On $[0, 2]$, $v < 0$; on $[2, 3]$, $v > 0$.",
+        "$\\int_0^2 (t^2 - 4)\\,dt = \\left[\\frac{t^3}{3} - 4t\\right]_0^2 = \\frac{8}{3} - 8 = -\\frac{16}{3}$. $\\int_2^3 (t^2 - 4)\\,dt = (9 - 12) - \\left(\\frac{8}{3} - 8\\right) = -3 + \\frac{16}{3} = \\frac{7}{3}$.",
+        "Total distance $= \\frac{16}{3} + \\frac{7}{3} = \\frac{23}{3} \\approx 7.67$ meters. Check: $-\\frac{16}{3} + \\frac{7}{3} = -3$, the displacement. Consistent."
+      ]
+    },
+    {
+      "title": "When Part 2 must not be used",
+      "problem": "Explain why $\\int_{-1}^{2}\\dfrac{1}{x}\\,dx$ cannot be evaluated as $\\left[\\ln|x|\\right]_{-1}^{2}$, and evaluate $\\int_1^e \\dfrac{1}{x}\\,dx$ correctly.",
+      "steps": [
+        "The integrand $\\frac{1}{x}$ is not continuous on $[-1, 2]$: it has a vertical asymptote at $x = 0$, inside the interval. The hypothesis of Part 2 fails.",
+        "The formula would give $\\ln 2 - \\ln 1 = \\ln 2$, but the regions near $x = 0$ have infinite area on both sides; this is an improper integral (Chapter 7), and it diverges.",
+        "On $[1, e]$ there is no problem: $\\frac{1}{x}$ is continuous and positive. $\\int_1^e\\frac{1}{x}\\,dx = \\left[\\ln x\\right]_1^e = \\ln e - \\ln 1 = 1 - 0 = 1$.",
+        "Sanity check: the integrand runs from 1 down to $\\frac{1}{e} \\approx 0.37$ over an interval of width $e - 1 \\approx 1.72$, so the area should be between $0.63$ and $1.72$. It is 1."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Evaluating $F(a) - F(b)$ instead of $F(b) - F(a)$. Top limit first; for a positive integrand the answer must be positive.",
+    "Trying to integrate in Part 1 when the question only asks for a derivative. $\\frac{d}{dx}\\int_a^x f(t)\\,dt$ is just $f(x)$.",
+    "Forgetting the chain-rule factor when the upper limit is $u(x)$: $\\frac{d}{dx}\\int_0^{x^2}\\cos t\\,dt = 2x\\cos(x^2)$, not $\\cos(x^2)$.",
+    "Applying Part 2 across a discontinuity, as with $\\int_{-1}^{1}\\frac{dx}{x^2}$. Check continuity on the whole interval.",
+    "Reporting displacement when total distance is asked. Split at the zeros of $v$ and add absolute values."
+  ],
+  "whyItMatters": "This is the theorem that makes integrals computable. From here on, every definite integral is \"find an antiderivative and subtract,\" and every integration technique in Chapter 7 is a method for the first step. Part 1 also provides functions defined by integrals, which appear in probability (the cumulative distribution function) and in differential equations. The net change interpretation is the bridge to every application in Chapters 6 and 8: integrate a rate to get a total.",
+  "checkYourself": [
+    {
+      "q": "$\\int_0^2 3x^2\\,dx$?",
+      "a": "$\\left[x^3\\right]_0^2 = 8$."
+    },
+    {
+      "q": "$\\frac{d}{dx}\\int_1^x \\sin(t^2)\\,dt$?",
+      "a": "$\\sin(x^2)$."
+    },
+    {
+      "q": "$\\int_0^\\pi \\sin x\\,dx$?",
+      "a": "$\\left[-\\cos x\\right]_0^\\pi = 1 + 1 = 2$."
+    },
+    {
+      "q": "Why is $\\left[-\\frac{1}{x}\\right]_{-1}^{1}$ not the value of $\\int_{-1}^{1}\\frac{dx}{x^2}$?",
+      "a": "The integrand is discontinuous at 0; the FTC does not apply."
+    }
+  ],
+  "readingGuide": [
+    "Find Part 1 of the theorem and the figure explaining it with a thin strip of area; rewrite the argument in your own words.",
+    "Find the example of a function defined by an integral (one with no elementary antiderivative) and note why Part 1 still gives its derivative.",
+    "Find Part 2, note the hypothesis of continuity, and follow the short proof from Part 1.",
+    "Before reading the solution of the first evaluation example, compute it yourself with an antiderivative and compare.",
+    "Find the example where Part 2 is misapplied across a discontinuity and explain what goes wrong."
+  ]
+}

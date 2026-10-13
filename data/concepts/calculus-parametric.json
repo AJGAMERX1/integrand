@@ -1,0 +1,89 @@
+{
+  "nodeId": "calculus-parametric",
+  "title": "Calculus with Parametric Curves",
+  "overview": "Everything calculus does with $y = f(x)$ it can do with $x = f(t)$, $y = g(t)$. The only new idea is that the parameter sits between you and the curve, so every formula goes through $t$.\n\n**Tangents.** The slope of the curve is $\\frac{dy}{dx}$, but we only know $\\frac{dx}{dt}$ and $\\frac{dy}{dt}$. The chain rule says $\\frac{dy}{dt} = \\frac{dy}{dx}\\cdot\\frac{dx}{dt}$, so\n$$\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt} \\qquad \\text{when } \\frac{dx}{dt} \\ne 0.$$\nRise over run, with both measured per unit of $t$. The tangent is horizontal where $\\frac{dy}{dt} = 0$ (and $\\frac{dx}{dt} \\ne 0$), vertical where $\\frac{dx}{dt} = 0$ (and $\\frac{dy}{dt} \\ne 0$). The second derivative follows the same pattern: $\\frac{d^2y}{dx^2} = \\dfrac{\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right)}{dx/dt}$. Note that it is not $\\frac{d^2y/dt^2}{d^2x/dt^2}$.\n\n**Areas.** The area under a curve is $\\int y\\,dx$. Substituting $y = g(t)$ and $dx = f'(t)\\,dt$ turns it into $\\int_{\\alpha}^{\\beta} g(t)\\,f'(t)\\,dt$, with $\\alpha$ and $\\beta$ the parameter values at the left and right ends. This is ordinary $u$-substitution in reverse. If the curve is traced right to left, the limits come out in the reverse order and the integral picks up a sign; take the absolute value or swap the limits.\n\n**Arc length.** Here parametric form is the natural home. A tiny step takes time $dt$ and moves $dx = \\frac{dx}{dt}\\,dt$ horizontally and $dy = \\frac{dy}{dt}\\,dt$ vertically, so by the distance formula\n$$L = \\int_{\\alpha}^{\\beta} \\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}\\,dt.$$\nIf $t$ is time, the integrand is the speed, and the formula says distance equals the integral of speed. The old formula $\\int \\sqrt{1 + (dy/dx)^2}\\,dx$ is the special case $x = t$. The surface area formula follows too: $S = \\int 2\\pi y\\,ds$ with $ds$ the parametric arc length element.\n\nOne caution for both area and arc length: the curve should be traced exactly once over the $t$-interval, or you will count parts of it twice. Check the endpoints and look for repeated points before you integrate.",
+  "keyIdeas": [
+    "Slope of a parametric curve: $\\frac{dy}{dx} = \\dfrac{dy/dt}{dx/dt}$ where $\\frac{dx}{dt} \\ne 0$; this is the chain rule rearranged.",
+    "Horizontal tangents where $\\frac{dy}{dt} = 0$ and $\\frac{dx}{dt} \\ne 0$; vertical tangents where $\\frac{dx}{dt} = 0$ and $\\frac{dy}{dt} \\ne 0$.",
+    "Second derivative: $\\frac{d^2y}{dx^2} = \\dfrac{\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right)}{dx/dt}$. Differentiate the slope with respect to $t$, then divide by $\\frac{dx}{dt}$ again.",
+    "Area under the curve traced from $t = \\alpha$ to $t = \\beta$: $A = \\int_{\\alpha}^{\\beta} g(t)\\,f'(t)\\,dt$, which is $\\int y\\,dx$ after substitution.",
+    "Arc length: $L = \\int_{\\alpha}^{\\beta} \\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}\\,dt$, the integral of speed, provided the curve is traced once.",
+    "Surface area of revolution about the $x$-axis: $S = \\int_{\\alpha}^{\\beta} 2\\pi y\\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}\\,dt$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Slope and special tangents",
+      "problem": "For $x = t^2$, $y = t^3 - 3t$, find the slope at $t = 2$ and all points with horizontal or vertical tangents.",
+      "steps": [
+        "Differentiate each coordinate with respect to $t$: $\\frac{dx}{dt} = 2t$, $\\frac{dy}{dt} = 3t^2 - 3$.",
+        "Slope: $\\frac{dy}{dx} = \\frac{3t^2 - 3}{2t}$. At $t = 2$: $\\frac{12 - 3}{4} = \\frac{9}{4}$, at the point $(4, 8 - 6) = (4, 2)$.",
+        "Horizontal tangents: $\\frac{dy}{dt} = 0$ gives $3t^2 = 3$, so $t = \\pm 1$; there $\\frac{dx}{dt} = \\pm 2 \\ne 0$. Points: $t = 1$ gives $(1, -2)$ and $t = -1$ gives $(1, 2)$.",
+        "Vertical tangent: $\\frac{dx}{dt} = 0$ gives $t = 0$, where $\\frac{dy}{dt} = -3 \\ne 0$. Point: $(0, 0)$.",
+        "Picture: the curve comes in from the upper right, passes $(1, 2)$ flat, turns vertically at the origin, passes $(1, -2)$ flat, and exits to the lower right. Both horizontal tangents sit at $x = 1$ because $x = t^2$ is the same for $t = \\pm 1$."
+      ]
+    },
+    {
+      "title": "Area of an ellipse",
+      "problem": "Find the area enclosed by $x = 3\\cos t$, $y = 2\\sin t$, $0 \\le t \\le 2\\pi$.",
+      "steps": [
+        "Use $A = \\int y\\,dx$ around the whole curve. With $dx = -3\\sin t\\,dt$: $A = \\int y\\,dx = \\int 2\\sin t\\,(-3\\sin t)\\,dt = -6\\int \\sin^2 t\\,dt$.",
+        "Limits and sign: the top half ($0 \\le t \\le \\pi$) is traced right to left, so $\\int_0^{\\pi} y\\,dx$ comes out negative. Going once around counterclockwise, $\\int y\\,dx$ over $0$ to $2\\pi$ gives the negative of the enclosed area. So $A = 6\\int_0^{2\\pi} \\sin^2 t\\,dt$.",
+        "Integrate with the half-angle identity $\\sin^2 t = \\frac{1 - \\cos 2t}{2}$: $\\int_0^{2\\pi} \\sin^2 t\\,dt = \\frac{1}{2}\\left[t - \\frac{\\sin 2t}{2}\\right]_0^{2\\pi} = \\pi$.",
+        "So $A = 6\\pi$. Check with the ellipse formula $\\pi ab = \\pi \\cdot 3 \\cdot 2 = 6\\pi$. With $a = b = r$ this same calculation gives $\\pi r^2$ for a circle."
+      ]
+    },
+    {
+      "title": "Arc length with a substitution",
+      "problem": "Find the length of $x = t^2$, $y = t^3$ for $0 \\le t \\le 1$.",
+      "steps": [
+        "Derivatives: $\\frac{dx}{dt} = 2t$, $\\frac{dy}{dt} = 3t^2$. The speed is $\\sqrt{4t^2 + 9t^4}$.",
+        "Factor inside the root: $4t^2 + 9t^4 = t^2(4 + 9t^2)$, so for $t \\ge 0$ the speed is $t\\sqrt{4 + 9t^2}$. Pulling out $t$ is what makes the integral doable.",
+        "Set up: $L = \\int_0^1 t\\sqrt{4 + 9t^2}\\,dt$. Substitute $u = 4 + 9t^2$, $du = 18t\\,dt$, limits $u = 4$ to $u = 13$.",
+        "Integrate: $L = \\frac{1}{18}\\int_4^{13} u^{1/2}\\,du = \\frac{1}{18} \\cdot \\frac{2}{3}\\left[u^{3/2}\\right]_4^{13} = \\frac{1}{27}\\left(13\\sqrt{13} - 8\\right) \\approx 1.44$.",
+        "Sanity: the curve runs from $(0, 0)$ to $(1, 1)$, so it must be longer than the chord $\\sqrt{2} \\approx 1.41$. It is, barely, because the curve is nearly straight."
+      ]
+    },
+    {
+      "title": "Arc length as distance traveled",
+      "problem": "Find the length of $x = 3\\cos t$, $y = 3\\sin t$ for $0 \\le t \\le 2\\pi$, and explain what happens if the interval is $0 \\le t \\le 4\\pi$.",
+      "steps": [
+        "Speed: $\\sqrt{(-3\\sin t)^2 + (3\\cos t)^2} = \\sqrt{9(\\sin^2 t + \\cos^2 t)} = 3$. Constant speed, which makes sense for uniform circular motion.",
+        "Length: $L = \\int_0^{2\\pi} 3\\,dt = 6\\pi$, the circumference of a circle of radius $3$.",
+        "Over $0 \\le t \\le 4\\pi$ the integral gives $12\\pi$. The circle is traced twice, and the formula measures distance traveled by the moving point, not the length of the set of points. Always confirm the curve is traced once if you want the geometric length."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Writing $\\frac{dy}{dx} = \\frac{dx/dt}{dy/dt}$ upside down. Slope is rise over run: $dy$ on top. Check on the line $x = t$, $y = 2t$: correct formula gives $2$, the inverted one gives $\\frac{1}{2}$.",
+    "Computing the second derivative as $\\frac{d^2y/dt^2}{d^2x/dt^2}$. The correct form differentiates $\\frac{dy}{dx}$ with respect to $t$ and divides by $\\frac{dx}{dt}$. For $x = t^2$, $y = t^3$ the right answer is $\\frac{3}{4t}$; the wrong formula gives $3t$.",
+    "Forgetting to convert $dx$ in the area integral. Under $y = g(t)$ the element is $dx = f'(t)\\,dt$, not $dt$. The ellipse area needs the factor $-3\\sin t$.",
+    "Integrating arc length over an interval that traces the curve more than once. The circle over $0 \\le t \\le 4\\pi$ gives $12\\pi$, double the circumference.",
+    "Dropping the absolute value when simplifying $\\sqrt{t^2(4 + 9t^2)}$ to $t\\sqrt{4 + 9t^2}$. That is valid for $t \\ge 0$; for negative $t$ use $|t|$."
+  ],
+  "whyItMatters": "The parametric arc length formula is the one that survives into every later course: in three dimensions it becomes $\\int |\\mathbf{r}'(t)|\\,dt$, and line integrals in vector calculus are built on exactly this $ds$. The slope formula is your first taste of velocity as a vector, with components $\\frac{dx}{dt}$ and $\\frac{dy}{dt}$. Polar curves in the next sections are parametric curves with $\\theta$ as parameter, and their tangent and length formulas are these same formulas after a substitution.",
+  "checkYourself": [
+    {
+      "q": "For $x = t^2 + 1$, $y = t^3$, what is $\\frac{dy}{dx}$ at $t = 1$?",
+      "a": "$\\frac{3t^2}{2t} = \\frac{3t}{2}$, which is $\\frac{3}{2}$ at $t = 1$."
+    },
+    {
+      "q": "Write the arc length integral for $x = e^t$, $y = e^{-t}$, $0 \\le t \\le 1$ (do not evaluate).",
+      "a": "$\\int_0^1 \\sqrt{e^{2t} + e^{-2t}}\\,dt$."
+    },
+    {
+      "q": "Where does $x = \\cos t$, $y = \\sin 2t$ have a vertical tangent on $0 < t < \\pi$?",
+      "a": "Where $\\frac{dx}{dt} = -\\sin t = 0$, which does not happen for $0 < t < \\pi$; so nowhere in that open interval."
+    },
+    {
+      "q": "A point moves with $\\frac{dx}{dt} = 3$ and $\\frac{dy}{dt} = 4$ for $0 \\le t \\le 2$. How far does it travel?",
+      "a": "Speed is $5$, so distance $= 5 \\cdot 2 = 10$."
+    }
+  ],
+  "readingGuide": [
+    "Find the derivation of $\\frac{dy}{dx}$ for parametric curves and identify the chain rule step. Write the condition under which the formula is valid.",
+    "Locate the formula for the second derivative and compare it with the wrong version $\\frac{d^2y/dt^2}{d^2x/dt^2}$; explain to yourself why they differ.",
+    "Before reading the solution of the tangent-line example, find the horizontal and vertical tangents yourself.",
+    "Find the derivation of the arc length formula and connect it to the earlier formula for $y = f(x)$ by taking $x = t$.",
+    "Look for the warning about tracing a curve only once and find the example where it matters."
+  ]
+}

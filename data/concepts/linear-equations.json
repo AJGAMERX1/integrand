@@ -1,0 +1,87 @@
+{
+  "nodeId": "linear-equations",
+  "title": "Linear Equations and Lines",
+  "overview": "A linear equation in one variable, like $3x - 7 = 11$, has a single unknown that appears only to the first power. Solving it is a matter of undoing operations in reverse order: the 7 was subtracted last, so add it back first ($3x = 18$), then undo the multiplication by 3 ($x = 6$). Whatever you do to one side you do to the other, and you always finish by substituting the answer back into the original equation to confirm it works. When $x$ appears on both sides, collect the $x$ terms on one side and the plain numbers on the other before dividing.\n\nA line in the plane is the graph of a linear equation in two variables. The most important number attached to a line is its **slope**, the ratio of vertical change to horizontal change between any two of its points:\n$$m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{\\text{rise}}{\\text{run}}.$$\nSlope is a rate. If $y$ is distance in miles and $x$ is time in hours, the slope is a speed in miles per hour. A positive slope rises to the right, a negative slope falls, slope 0 is horizontal, and a vertical line has no slope at all (its run is 0 and you cannot divide by 0).\n\nThere are two forms you need to be able to write instantly. **Slope-intercept form**, $y = mx + b$, shows the slope $m$ and the point $(0, b)$ where the line crosses the $y$-axis. **Point-slope form**, $y - y_1 = m(x - x_1)$, is what you write when you know the slope and any one point $(x_1, y_1)$. Point-slope form is the one calculus uses constantly, because a tangent line is exactly \"a line through a known point with a known slope.\" Start with point-slope and rearrange into slope-intercept only if the problem asks for it.\n\nTwo lines are parallel when they have the same slope. Two lines are perpendicular when their slopes multiply to $-1$, so the slope of a perpendicular line is the negative reciprocal: a line of slope $\\frac{2}{3}$ is perpendicular to a line of slope $-\\frac{3}{2}$. Horizontal lines are $y = c$, vertical lines are $x = c$.\n\nTo graph a line quickly, plot the $y$-intercept, then use the slope as directions: from the intercept, go right by the run and up (or down) by the rise to get a second point, and draw the line through them. To find where a line crosses the $x$-axis, set $y = 0$ and solve.",
+  "keyIdeas": [
+    "To solve a linear equation, undo the operations in reverse order, doing the same thing to both sides, and check the answer in the original equation.",
+    "Slope is $m = \\frac{y_2 - y_1}{x_2 - x_1}$, the change in $y$ per unit change in $x$; it is the same between any two points of a line.",
+    "Slope-intercept form $y = mx + b$ displays the slope $m$ and the $y$-intercept $(0, b)$.",
+    "Point-slope form $y - y_1 = m(x - x_1)$ is the fastest way to write a line from a slope and one point; tangent lines use it.",
+    "Parallel lines have equal slopes; perpendicular lines have slopes whose product is $-1$.",
+    "Horizontal lines are $y = c$ with slope 0; vertical lines are $x = c$ with undefined slope."
+  ],
+  "workedExamples": [
+    {
+      "title": "Solving with x on both sides",
+      "problem": "Solve $5x - 4 = 2x + 11$.",
+      "steps": [
+        "Collect the $x$ terms on the left by subtracting $2x$ from both sides: $3x - 4 = 11$.",
+        "Collect the numbers on the right by adding 4 to both sides: $3x = 15$.",
+        "Divide both sides by 3: $x = 5$.",
+        "Check in the original: left side $5(5) - 4 = 21$, right side $2(5) + 11 = 21$. They match."
+      ]
+    },
+    {
+      "title": "A line through two points",
+      "problem": "Find the equation of the line through $(1, 4)$ and $(3, -2)$.",
+      "steps": [
+        "Compute the slope: $m = \\frac{-2 - 4}{3 - 1} = \\frac{-6}{2} = -3$. The line falls 3 units for every 1 unit to the right.",
+        "Use point-slope form with either point; take $(1, 4)$: $y - 4 = -3(x - 1)$.",
+        "Rearrange to slope-intercept form: $y - 4 = -3x + 3$, so $y = -3x + 7$.",
+        "Check with the other point: $x = 3$ gives $y = -9 + 7 = -2$. Correct, so both points are on the line."
+      ]
+    },
+    {
+      "title": "A perpendicular line",
+      "problem": "Find the line through $(2, 1)$ perpendicular to $y = \\frac{1}{2}x - 3$.",
+      "steps": [
+        "Read off the given slope: $\\frac{1}{2}$.",
+        "The perpendicular slope is the negative reciprocal: $-2$. Check: $\\frac{1}{2} \\cdot (-2) = -1$.",
+        "Point-slope form through $(2, 1)$: $y - 1 = -2(x - 2)$.",
+        "Simplify: $y = -2x + 5$. Check the point: $x = 2$ gives $y = -4 + 5 = 1$. Correct."
+      ]
+    },
+    {
+      "title": "Slope as a rate",
+      "problem": "A tank holds 50 liters at time 0 and 38 liters after 4 minutes, draining at a constant rate. Write the volume $V$ as a function of time $t$ and find when the tank is empty.",
+      "steps": [
+        "Two points on the line are $(0, 50)$ and $(4, 38)$. Slope: $m = \\frac{38 - 50}{4 - 0} = \\frac{-12}{4} = -3$ liters per minute. Negative because the volume is decreasing.",
+        "The $V$-intercept is 50 (the value at $t = 0$), so $V = -3t + 50$.",
+        "Empty means $V = 0$: $-3t + 50 = 0$, so $t = \\frac{50}{3} \\approx 16.7$ minutes.",
+        "Check: at $t = 4$, $V = -12 + 50 = 38$, matching the given data."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Computing slope as run over rise, $\\frac{x_2 - x_1}{y_2 - y_1}$. Slope is change in $y$ divided by change in $x$. For $(0,0)$ and $(1, 2)$ the slope is 2, not $\\frac{1}{2}$.",
+    "Mixing the order of subtraction: $\\frac{y_2 - y_1}{x_1 - x_2}$. Subtract in the same order top and bottom, or the sign comes out wrong.",
+    "Distributing incorrectly in point-slope: from $y - 4 = -3(x - 1)$ writing $y = -3x - 1 + 4$. Multiply $-3$ by both terms: $-3x + 3$, so $y = -3x + 7$.",
+    "Taking the reciprocal but forgetting the sign for a perpendicular slope: perpendicular to slope 2 is $-\\frac{1}{2}$, not $\\frac{1}{2}$.",
+    "Dividing only one term when solving: from $3x = 15 + 6$ writing $x = 5 + 6$. Combine first ($3x = 21$) or divide every term ($x = 5 + 2 = 7$)."
+  ],
+  "whyItMatters": "The derivative is a slope: the slope of the tangent line at a point. Every \"find the tangent line\" problem ends by writing point-slope form with the derivative as $m$. Linear approximation, Newton's method, and Euler's method all follow a tangent line for a short distance. And integrating a linear function, which is your first Daily Integral tier, is just the area of a trapezoid under a line.",
+  "checkYourself": [
+    {
+      "q": "Solve $2(x - 3) = 10$.",
+      "a": "$x = 8$."
+    },
+    {
+      "q": "Slope of the line through $(2, 5)$ and $(6, 13)$?",
+      "a": "$\\frac{8}{4} = 2$."
+    },
+    {
+      "q": "Line with slope $-1$ through $(3, 2)$, in slope-intercept form?",
+      "a": "$y = -x + 5$."
+    },
+    {
+      "q": "Slope perpendicular to $y = 4x + 1$?",
+      "a": "$-\\frac{1}{4}$."
+    }
+  ],
+  "readingGuide": [
+    "Find the slope formula and the explanation of why it gives the same number for any two points on the line.",
+    "Locate the point-slope form and the slope-intercept form; write a one-line note on when you would use each.",
+    "Look for the conditions for parallel and perpendicular lines and verify the perpendicular rule by sketching slopes $2$ and $-\\frac{1}{2}$.",
+    "Before reading the solution of the first example that finds a line through two points, do it yourself and compare."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "nodeId": "linear-approximation",
+  "title": "Linear Approximations and Differentials",
+  "overview": "Zoom in on any smooth curve near a point and it looks like a straight line, the tangent line. That observation is a computational tool. Near $x = a$, the function $f$ is well approximated by its tangent line there:\n$$f(x) \\approx L(x) = f(a) + f'(a)(x - a).$$\n$L$ is called the **linearization** of $f$ at $a$, and using it in place of $f$ is a **linear approximation**. It is exact at $x = a$, very accurate for $x$ close to $a$, and drifts off as $x$ moves away, more quickly the more the curve bends.\n\nThe classic use is estimating a value you cannot compute by hand from a nearby value you can. To estimate $\\sqrt{4.1}$, take $f(x) = \\sqrt{x}$ and $a = 4$: $f(4) = 2$ and $f'(4) = \\frac{1}{2\\sqrt{4}} = \\frac{1}{4}$, so $L(x) = 2 + \\frac{1}{4}(x - 4)$ and $\\sqrt{4.1} \\approx 2 + \\frac{0.1}{4} = 2.025$. The true value is $2.02485$. The approximation is slightly high because $\\sqrt{x}$ bends downward (it is concave down), so the tangent line lies above the curve. The sign of the error is predictable from the concavity, which Chapter 4 makes precise.\n\nThe same idea in different notation is the **differential**. If $y = f(x)$, define $dx$ to be any small change in $x$ and define $dy = f'(x)\\,dx$. Then $dy$ is the change in the tangent line's height, while the true change in the function is $\\Delta y = f(x + dx) - f(x)$. For small $dx$, $\\Delta y \\approx dy$, and $dy$ is easy to compute. The notation makes $\\frac{dy}{dx}$ literally a ratio of differentials, which is why Leibniz notation behaves like a fraction.\n\nDifferentials shine in **error estimation**. If a measured quantity $x$ has a possible error $dx$, then a computed quantity $y = f(x)$ has an approximate error $dy = f'(x)\\,dx$. For example, if the radius of a sphere is measured as 10 cm with error up to 0.1 cm, then $V = \\frac{4}{3}\\pi r^3$ has $dV = 4\\pi r^2\\,dr = 4\\pi(100)(0.1) \\approx 125.7$ cubic centimeters of possible error. The **relative error** $\\frac{dV}{V}$ is often more meaningful: here $\\frac{dV}{V} = \\frac{4\\pi r^2\\,dr}{\\frac{4}{3}\\pi r^3} = 3\\frac{dr}{r}$, so a 1 percent error in the radius produces about a 3 percent error in the volume. That factor of 3 is the exponent in $r^3$, which is a useful rule of thumb.\n\nThe idea that a function is locally linear is the beginning of a long story. Newton's method follows tangent lines to find roots; Euler's method follows them to solve differential equations; and Taylor polynomials in Chapter 11 improve the tangent line by adding a quadratic term, then a cubic, until the approximation is as good as you like.",
+  "keyIdeas": [
+    "Linearization at $a$: $L(x) = f(a) + f'(a)(x - a)$, the tangent line used as a function; $f(x) \\approx L(x)$ for $x$ near $a$.",
+    "To estimate a value, pick a nearby $a$ where $f(a)$ and $f'(a)$ are easy, then evaluate $L$.",
+    "The error grows with distance from $a$ and with how much the curve bends; the tangent lies above a concave-down curve and below a concave-up one.",
+    "Differentials: $dy = f'(x)\\,dx$ is the tangent-line change; the true change is $\\Delta y = f(x + dx) - f(x) \\approx dy$.",
+    "Error estimation: a measurement error $dx$ produces an error of about $dy = f'(x)\\,dx$ in $y = f(x)$; relative error is $\\frac{dy}{y}$.",
+    "For $y = x^n$, the relative error multiplies by $n$: $\\frac{dy}{y} = n\\frac{dx}{x}$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Estimating a cube root",
+      "problem": "Use a linear approximation to estimate $\\sqrt[3]{26}$.",
+      "steps": [
+        "Choose $f(x) = x^{1/3}$ and the nearby point $a = 27$, where $f(27) = 3$ exactly.",
+        "$f'(x) = \\frac{1}{3}x^{-2/3}$, so $f'(27) = \\frac{1}{3\\cdot 27^{2/3}} = \\frac{1}{3\\cdot 9} = \\frac{1}{27}$.",
+        "$L(x) = 3 + \\frac{1}{27}(x - 27)$. At $x = 26$: $L(26) = 3 - \\frac{1}{27} \\approx 3 - 0.0370 = 2.9630$.",
+        "The true value is $2.9625$. The estimate is slightly high because $x^{1/3}$ is concave down, so the tangent lies above the curve."
+      ]
+    },
+    {
+      "title": "Linearization of a trig function",
+      "problem": "Find the linearization of $f(x) = \\sin x$ at $a = 0$ and use it to estimate $\\sin 0.1$. Then explain why $\\sin x \\approx x$ for small $x$.",
+      "steps": [
+        "$f(0) = 0$ and $f'(x) = \\cos x$, so $f'(0) = 1$.",
+        "$L(x) = 0 + 1\\cdot(x - 0) = x$. So the linearization of sine at 0 is just $x$.",
+        "$\\sin 0.1 \\approx 0.1$. The true value is $0.09983$, so the error is about $0.00017$.",
+        "This is the precise meaning of \"$\\sin x \\approx x$ for small $x$\" (in radians), and it is the same fact as $\\lim_{x \\to 0}\\frac{\\sin x}{x} = 1$ seen from the tangent-line side."
+      ]
+    },
+    {
+      "title": "Differential versus actual change",
+      "problem": "For $y = x^3$, compare $dy$ and $\\Delta y$ when $x$ changes from 2 to 2.05.",
+      "steps": [
+        "$dy = 3x^2\\,dx$ with $x = 2$ and $dx = 0.05$: $dy = 3(4)(0.05) = 0.6$.",
+        "$\\Delta y = 2.05^3 - 2^3 = 8.615125 - 8 = 0.615125$.",
+        "The differential underestimates by about $0.015$, which is small relative to $0.6$. The discrepancy comes from the curve bending upward (concave up), so the true change exceeds the tangent-line change.",
+        "For a smaller $dx = 0.01$: $dy = 0.12$ and $\\Delta y = 2.01^3 - 8 = 0.120601$. The approximation improves as $dx$ shrinks."
+      ]
+    },
+    {
+      "title": "Error in a computed area",
+      "problem": "The side of a square is measured as 12 cm with a possible error of 0.05 cm. Estimate the maximum error and the relative error in the computed area.",
+      "steps": [
+        "$A = s^2$, so $dA = 2s\\,ds$. With $s = 12$ and $ds = 0.05$: $dA = 2(12)(0.05) = 1.2$ cm$^2$.",
+        "The computed area is $144$ cm$^2$, so the relative error is $\\frac{dA}{A} = \\frac{1.2}{144} \\approx 0.0083$, about $0.83$ percent.",
+        "Check the rule of thumb: $\\frac{dA}{A} = 2\\frac{ds}{s} = 2\\cdot\\frac{0.05}{12} \\approx 0.0083$. The exponent 2 doubles the relative error.",
+        "Exact check: $12.05^2 - 144 = 145.2025 - 144 = 1.2025$, very close to $dA = 1.2$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Choosing $a$ to be the point you want instead of a nearby convenient point. To estimate $\\sqrt{4.1}$, $a = 4$ is the choice, because $f(4)$ and $f'(4)$ are known exactly.",
+    "Using $L(x) = f'(a)(x - a)$ without the $f(a)$ term. The tangent line passes through $(a, f(a))$; the height must be included.",
+    "Evaluating $f'$ at $x$ instead of at $a$. The slope of the tangent at $a$ is $f'(a)$, a number, not a function.",
+    "Confusing $dy$ and $\\Delta y$. $dy$ is the tangent-line change (easy to compute); $\\Delta y$ is the actual change. They agree only approximately.",
+    "Using a linear approximation far from $a$ and trusting the answer. Estimating $\\sqrt{9}$ from the tangent at $a = 4$ gives $3.25$, a poor result."
+  ],
+  "whyItMatters": "Differentials are the notation of integration: in $\\int f(x)\\,dx$ the $dx$ is a differential, and substitution works by computing $du = g'(x)\\,dx$ exactly as in this section. The approximation $\\Delta y \\approx f'(x)\\,dx$ is the reason Riemann sums converge: each thin strip under a curve is approximately a rectangle. Later, error bounds for the Trapezoidal and Simpson's rules, Newton's method, and Taylor polynomials all build on the tangent line as the first approximation.",
+  "checkYourself": [
+    {
+      "q": "Linearization of $f(x) = x^2$ at $a = 3$?",
+      "a": "$L(x) = 9 + 6(x - 3)$."
+    },
+    {
+      "q": "Estimate $\\sqrt{16.2}$ with a linear approximation.",
+      "a": "$4 + \\frac{0.2}{8} = 4.025$."
+    },
+    {
+      "q": "If $y = x^4$, what is $dy$?",
+      "a": "$4x^3\\,dx$."
+    },
+    {
+      "q": "A 2 percent error in a radius gives roughly what percent error in a sphere's volume?",
+      "a": "About 6 percent (three times)."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of the linearization and the linear approximation formula, and sketch the tangent line picture that justifies it.",
+    "Before reading the solution of the first estimation example, choose a nearby $a$ and compute $L(x)$ yourself.",
+    "Look for the table or figure comparing the approximation with true values at several distances from $a$ and note how the error grows.",
+    "Find the definition of differentials $dx$ and $dy$ and the figure comparing $dy$ with $\\Delta y$.",
+    "Find the error-estimation example and write out the relative error formula for a volume or area in terms of the measurement's relative error."
+  ]
+}

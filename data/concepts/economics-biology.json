@@ -1,0 +1,78 @@
+{
+  "nodeId": "economics-biology",
+  "title": "Applications to Economics and Biology",
+  "overview": "Three short applications, one lesson: whenever a quantity accumulates across many small contributors, an integral adds them up.\n\n**Consumer surplus.** A demand curve $p(x)$ tells the price at which exactly $x$ units will sell. It slopes down: the first few buyers would pay a lot, later buyers less. Suppose the market settles at quantity $X$ and price $P = p(X)$. Everyone pays $P$, but the buyer of unit number $x$ was willing to pay $p(x)$, so that buyer saves $p(x) - P$. Adding the savings of all buyers gives the **consumer surplus**:\n$$\\text{CS} = \\int_0^X \\left(p(x) - P\\right) dx.$$\nGeometrically it is the area between the demand curve and the horizontal price line.\n\n**Blood flow.** Blood in a vessel of radius $R$ does not move at one speed. It is fastest at the center and nearly stopped at the wall. Poiseuille's law says the speed at distance $r$ from the center is $v(r) = \\frac{P}{4\\eta l}\\left(R^2 - r^2\\right)$, with $P$ the pressure difference, $\\eta$ the viscosity, $l$ the length. To get the total flow (volume per second), slice the cross-section into thin rings. A ring at radius $r$ has area $2\\pi r\\,dr$ and carries fluid at speed $v(r)$, so the flow through it is $v(r) \\cdot 2\\pi r\\,dr$. Integrate from the center to the wall.\n\n**Cardiac output.** Inject a known amount $A$ of dye into the heart and measure its concentration $c(t)$ downstream over time. The total dye that passes is (flow rate) $\\times \\int_0^T c(t)\\,dt$, so the flow rate is\n$$F = \\frac{A}{\\int_0^T c(t)\\,dt}.$$\nUsually $c(t)$ is given as data, and the integral is estimated with Simpson's Rule.\n\nNone of the integrals here is hard. The skill is recognizing the slice: a buyer, a ring, a moment of time.",
+  "keyIdeas": [
+    "Consumer surplus at sales level $X$ with market price $P = p(X)$ is $\\int_0^X (p(x) - P)\\,dx$, the area between the demand curve and the line $y = P$.",
+    "Poiseuille's law for laminar flow: speed at radius $r$ is $v(r) = \\frac{P}{4\\eta l}(R^2 - r^2)$, maximal at the center and zero at the wall.",
+    "Total flux through a vessel: $F = \\int_0^R v(r)\\,2\\pi r\\,dr = \\frac{\\pi P R^4}{8\\eta l}$. Flow grows with the fourth power of the radius.",
+    "A thin ring of radius $r$ and thickness $dr$ has area $2\\pi r\\,dr$; this is the same ring slice used in the shell method.",
+    "Dye dilution: cardiac output is $F = \\dfrac{A}{\\int_0^T c(t)\\,dt}$ where $A$ is the injected dye and $c(t)$ its measured concentration."
+  ],
+  "workedExamples": [
+    {
+      "title": "Consumer surplus for a straight-line demand curve",
+      "problem": "The demand function is $p(x) = 100 - 0.2x$ (price in dollars when $x$ units are sold). Find the consumer surplus when $200$ units are sold.",
+      "steps": [
+        "Find the market price at $X = 200$: $P = p(200) = 100 - 40 = 60$ dollars.",
+        "Write each buyer's saving: unit $x$ was worth $p(x)$ to its buyer, who paid $60$, so the saving is $p(x) - 60 = 40 - 0.2x$.",
+        "Add the savings over all units: $\\text{CS} = \\int_0^{200} (40 - 0.2x)\\,dx$.",
+        "Integrate: $\\left[40x - 0.1x^2\\right]_0^{200} = 8000 - 4000 = 4000$ dollars.",
+        "Check with geometry: the region is a triangle with base $200$ (units) and height $40$ (from price $60$ up to $100$). Area $\\frac{1}{2} \\cdot 200 \\cdot 40 = 4000$. For a linear demand curve the integral is always a triangle, which is a good quick check."
+      ]
+    },
+    {
+      "title": "Deriving the flow through a vessel",
+      "problem": "Using Poiseuille's speed profile $v(r) = \\frac{P}{4\\eta l}(R^2 - r^2)$, find the total flow $F$ through a vessel of radius $R$.",
+      "steps": [
+        "Pick the slice. All the blood at radius $r$ moves at the same speed, so slice the cross-section into rings. A ring of radius $r$ and thickness $dr$ has area $2\\pi r\\,dr$.",
+        "Flow through one ring is speed times area: $v(r) \\cdot 2\\pi r\\,dr$. Add the rings from the center ($r = 0$) to the wall ($r = R$): $F = \\int_0^R \\frac{P}{4\\eta l}(R^2 - r^2)\\,2\\pi r\\,dr$.",
+        "Pull constants out: $F = \\frac{2\\pi P}{4\\eta l}\\int_0^R (R^2 r - r^3)\\,dr = \\frac{\\pi P}{2\\eta l}\\left[\\frac{R^2 r^2}{2} - \\frac{r^4}{4}\\right]_0^R$.",
+        "Evaluate: $\\frac{R^4}{2} - \\frac{R^4}{4} = \\frac{R^4}{4}$, so $F = \\frac{\\pi P}{2\\eta l} \\cdot \\frac{R^4}{4} = \\frac{\\pi P R^4}{8\\eta l}$.",
+        "Interpret: $F$ depends on $R^4$. Doubling the radius multiplies flow by $16$; a vessel narrowed by $10$ percent carries only $0.9^4 \\approx 0.66$ of its former flow. This is why small changes in artery radius matter so much."
+      ]
+    },
+    {
+      "title": "Cardiac output from a concentration curve",
+      "problem": "Six milligrams of dye are injected, and the concentration downstream is modeled by $c(t) = \\frac{1}{4}t(12 - t)$ milligrams per liter for $0 \\le t \\le 12$ seconds. Find the cardiac output.",
+      "steps": [
+        "The formula is $F = \\dfrac{A}{\\int_0^{12} c(t)\\,dt}$ with $A = 6$. First compute the integral of the concentration.",
+        "Expand: $c(t) = \\frac{1}{4}(12t - t^2)$, so $\\int_0^{12} c(t)\\,dt = \\frac{1}{4}\\left[6t^2 - \\frac{t^3}{3}\\right]_0^{12} = \\frac{1}{4}(864 - 576) = \\frac{288}{4} = 72$ milligram-seconds per liter.",
+        "Divide: $F = \\frac{6}{72} = \\frac{1}{12}$ liters per second.",
+        "Convert to the usual units: $\\frac{1}{12} \\cdot 60 = 5$ liters per minute, a typical resting cardiac output. If the numbers had come out as $50$ or $0.5$, that would signal an error.",
+        "Reasonableness of the model: $c(0) = 0$ and $c(12) = 0$, with a peak of $c(6) = 9$ in the middle, which is the shape a real dye curve has as the dye arrives, passes, and washes out."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Integrating $p(x)$ alone for consumer surplus and forgetting to subtract the price actually paid. With $p(x) = 100 - 0.2x$ and $X = 200$, $\\int_0^{200} p(x)\\,dx = 16000$ is total willingness to pay, not the surplus of $4000$.",
+    "Using the wrong slice area for the vessel. The ring at radius $r$ has area $2\\pi r\\,dr$, not $\\pi r^2\\,dr$. Test: integrating $2\\pi r$ from $0$ to $R$ gives $\\pi R^2$, the full cross-section, as it should.",
+    "Putting the concentration integral in the numerator of the cardiac output formula. More dye measured for the same injection means slower flow, so the integral belongs in the denominator.",
+    "Dropping units. Consumer surplus is money; flow is volume per time. Writing units on the final answer catches many setup errors."
+  ],
+  "whyItMatters": "These examples show the integral as an accounting device: total savings, total flow, total dye. The ring slice $2\\pi r\\,dr$ is the same one used in the shell method and later in polar double integrals, and the dye-dilution formula is the first time an integral appears in the denominator of a measurement. Both ideas return in probability, where densities are integrated to get totals and the integral of a density must equal $1$.",
+  "checkYourself": [
+    {
+      "q": "If demand is $p(x) = 50 - x$ and $20$ units sell, what is the market price and the consumer surplus?",
+      "a": "$P = 30$; $\\text{CS} = \\int_0^{20} (20 - x)\\,dx = 200$."
+    },
+    {
+      "q": "In Poiseuille's law, where is blood fastest, and what is its speed at the wall?",
+      "a": "Fastest at the center ($r = 0$), where $v = \\frac{PR^2}{4\\eta l}$; zero at the wall ($r = R$)."
+    },
+    {
+      "q": "If the radius of a vessel is halved and everything else is fixed, by what factor does the flow change?",
+      "a": "It drops to $\\left(\\frac{1}{2}\\right)^4 = \\frac{1}{16}$ of its original value."
+    },
+    {
+      "q": "Why is $\\int_0^T c(t)\\,dt$ in the denominator of the cardiac output formula?",
+      "a": "Because total dye $A$ equals flow rate times the accumulated concentration; solving for the flow rate divides by that integral."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of a demand function and the picture of consumer surplus as an area. Explain in your own words whose savings each vertical strip represents.",
+    "Locate the law of laminar flow and identify what each symbol means before reading how the flux integral is built from rings.",
+    "Before reading the derivation of the flux formula, set up the ring integral yourself and compare.",
+    "Find the dye dilution method and note how the author estimates the concentration integral from a table of readings (which numerical rule is used)."
+  ]
+}

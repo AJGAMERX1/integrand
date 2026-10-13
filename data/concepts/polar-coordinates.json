@@ -1,0 +1,89 @@
+{
+  "nodeId": "polar-coordinates",
+  "title": "Polar Coordinates",
+  "overview": "Cartesian coordinates locate a point by two distances: how far right, how far up. **Polar coordinates** locate it by a distance and a direction: how far from the origin (the **pole**), and at what angle from the positive $x$-axis (the **polar axis**). The point is written $(r, \\theta)$, with $\\theta$ measured counterclockwise in radians.\n\nConverting is just the definition of sine and cosine on a circle of radius $r$:\n$$x = r\\cos\\theta, \\qquad y = r\\sin\\theta,$$\nand in the other direction $r^2 = x^2 + y^2$ and $\\tan\\theta = \\frac{y}{x}$. When finding $\\theta$ from $x$ and $y$, look at which quadrant the point is in; $\\tan\\theta$ alone cannot tell $(1, 1)$ from $(-1, -1)$.\n\nPolar coordinates are not unique. Adding $2\\pi$ to $\\theta$ gives the same point. So does negating $r$ and adding $\\pi$: the convention is that $(-r, \\theta)$ means \"go distance $r$ in the direction opposite to $\\theta$.\" So $(2, \\frac{\\pi}{3})$, $(2, \\frac{7\\pi}{3})$, and $(-2, \\frac{4\\pi}{3})$ are all one point. Negative $r$ feels odd at first, but it is what lets a single smooth equation like $r = \\cos 2\\theta$ draw all four petals of a rose.\n\nA **polar curve** is the graph of $r = f(\\theta)$. To sketch it, compute $r$ at a handful of angles and trace how the distance from the origin grows and shrinks as the angle sweeps around. Circles, spirals, cardioids (heart shapes like $r = 1 + \\cos\\theta$), and roses (like $r = 2\\sin 3\\theta$) all have short polar equations and ugly Cartesian ones. Symmetry helps: if the equation is unchanged when $\\theta$ becomes $-\\theta$, the curve is symmetric about the $x$-axis.\n\nFor tangent lines, treat the curve as parametric with parameter $\\theta$: $x = f(\\theta)\\cos\\theta$, $y = f(\\theta)\\sin\\theta$. Then $\\frac{dy}{dx} = \\frac{dy/d\\theta}{dx/d\\theta}$ exactly as before. At the pole, where $r = 0$, the tangent line is simply the ray at that angle.",
+  "keyIdeas": [
+    "Polar to Cartesian: $x = r\\cos\\theta$, $y = r\\sin\\theta$. Cartesian to polar: $r^2 = x^2 + y^2$ and $\\tan\\theta = \\frac{y}{x}$, with $\\theta$ chosen in the correct quadrant.",
+    "A point has many polar representations: $(r, \\theta)$, $(r, \\theta + 2\\pi)$, and $(-r, \\theta + \\pi)$ all name the same point.",
+    "Negative $r$ means the point lies at distance $|r|$ in the direction opposite to $\\theta$.",
+    "The graph of $r = f(\\theta)$ is traced by letting $\\theta$ sweep and plotting the distance $r$ at each angle; a table of values plus symmetry is usually enough to sketch it.",
+    "$r = a$ is a circle centered at the pole; $\\theta = \\alpha$ is a line through the pole; $r = 2a\\cos\\theta$ is a circle of radius $a$ through the pole centered at $(a, 0)$.",
+    "Slope of a polar curve: with $x = r\\cos\\theta$, $y = r\\sin\\theta$ and $r = f(\\theta)$, $\\frac{dy}{dx} = \\dfrac{\\frac{dr}{d\\theta}\\sin\\theta + r\\cos\\theta}{\\frac{dr}{d\\theta}\\cos\\theta - r\\sin\\theta}$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Converting both ways",
+      "problem": "Convert $(r, \\theta) = \\left(2, \\frac{\\pi}{3}\\right)$ to Cartesian coordinates, and convert the Cartesian point $(-3, 3)$ to polar coordinates with $r > 0$ and $0 \\le \\theta < 2\\pi$.",
+      "steps": [
+        "Polar to Cartesian: $x = 2\\cos\\frac{\\pi}{3} = 2 \\cdot \\frac{1}{2} = 1$ and $y = 2\\sin\\frac{\\pi}{3} = 2 \\cdot \\frac{\\sqrt{3}}{2} = \\sqrt{3}$. The point is $(1, \\sqrt{3})$.",
+        "Check: $1^2 + (\\sqrt{3})^2 = 4 = r^2$. Good.",
+        "Cartesian to polar: $r = \\sqrt{(-3)^2 + 3^2} = \\sqrt{18} = 3\\sqrt{2}$.",
+        "Angle: $\\tan\\theta = \\frac{3}{-3} = -1$. The calculator says $-\\frac{\\pi}{4}$, but $(-3, 3)$ is in the second quadrant ($x < 0$, $y > 0$), so add $\\pi$: $\\theta = \\frac{3\\pi}{4}$.",
+        "Verify: $3\\sqrt{2}\\cos\\frac{3\\pi}{4} = 3\\sqrt{2}\\cdot\\left(-\\frac{\\sqrt{2}}{2}\\right) = -3$ and $3\\sqrt{2}\\sin\\frac{3\\pi}{4} = 3$. So the point is $\\left(3\\sqrt{2}, \\frac{3\\pi}{4}\\right)$."
+      ]
+    },
+    {
+      "title": "A polar equation in disguise",
+      "problem": "Identify the curve $r = 4\\cos\\theta$ by converting to Cartesian form.",
+      "steps": [
+        "The equation has a lone $\\cos\\theta$, and $x = r\\cos\\theta$ needs an $r$ in front of it. So multiply both sides by $r$: $r^2 = 4r\\cos\\theta$.",
+        "Substitute: $r^2 = x^2 + y^2$ and $r\\cos\\theta = x$, giving $x^2 + y^2 = 4x$.",
+        "Complete the square: $x^2 - 4x + 4 + y^2 = 4$, that is $(x - 2)^2 + y^2 = 4$. A circle of radius $2$ centered at $(2, 0)$. It passes through the origin, which is where $r = 0$ (at $\\theta = \\frac{\\pi}{2}$).",
+        "Tracing: as $\\theta$ goes from $0$ to $\\pi$, $r$ goes from $4$ down to $0$ and then negative. For $\\theta$ between $\\frac{\\pi}{2}$ and $\\pi$ the negative $r$ places the point back in the fourth quadrant, so the whole circle is drawn once by $0 \\le \\theta \\le \\pi$. The interval $0$ to $2\\pi$ draws it twice."
+      ]
+    },
+    {
+      "title": "Sketching a cardioid",
+      "problem": "Sketch $r = 1 + \\cos\\theta$.",
+      "steps": [
+        "Table: $\\theta = 0$ gives $r = 2$; $\\theta = \\frac{\\pi}{2}$ gives $r = 1$; $\\theta = \\pi$ gives $r = 0$; $\\theta = \\frac{3\\pi}{2}$ gives $r = 1$; $\\theta = 2\\pi$ gives $r = 2$. Also $\\theta = \\frac{\\pi}{3}$ gives $r = \\frac{3}{2}$ and $\\theta = \\frac{2\\pi}{3}$ gives $r = \\frac{1}{2}$.",
+        "Symmetry: replacing $\\theta$ by $-\\theta$ leaves $\\cos\\theta$ unchanged, so the curve is symmetric about the $x$-axis. Draw the top half and reflect.",
+        "Trace the top half: start at $(2, 0)$ on the polar axis, sweep counterclockwise with $r$ shrinking from $2$ to $1$ (straight above the pole) to $0$ at $\\theta = \\pi$, arriving at the origin from the left. The curve comes into the pole tangent to the negative $x$-axis.",
+        "Reflect to get the bottom half. The result is heart-shaped with a dimple (a cusp) at the origin and its widest point at $(2, 0)$. Never does $r$ go negative, since $1 + \\cos\\theta \\ge 0$."
+      ]
+    },
+    {
+      "title": "Slope of a polar curve",
+      "problem": "Find the slope of the tangent to $r = 1 + \\cos\\theta$ at $\\theta = \\frac{\\pi}{2}$.",
+      "steps": [
+        "Write the curve parametrically: $x = (1 + \\cos\\theta)\\cos\\theta$, $y = (1 + \\cos\\theta)\\sin\\theta$.",
+        "Differentiate with the product rule. $\\frac{dx}{d\\theta} = -\\sin\\theta\\cos\\theta - (1 + \\cos\\theta)\\sin\\theta$ and $\\frac{dy}{d\\theta} = -\\sin\\theta\\sin\\theta + (1 + \\cos\\theta)\\cos\\theta$.",
+        "Evaluate at $\\theta = \\frac{\\pi}{2}$, where $\\cos\\theta = 0$ and $\\sin\\theta = 1$: $\\frac{dx}{d\\theta} = 0 - 1 = -1$ and $\\frac{dy}{d\\theta} = -1 + 0 = -1$.",
+        "Slope: $\\frac{dy}{dx} = \\frac{-1}{-1} = 1$. At the point $(x, y) = (0, 1)$, the top of the cardioid, the tangent rises at $45$ degrees. Reasonable: the curve is heading up-left into its dimple from there, and the symmetric point $(0, -1)$ has slope $-1$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Taking $\\theta = \\arctan\\frac{y}{x}$ without checking the quadrant. For $(-3, 3)$ the arctangent gives $-\\frac{\\pi}{4}$, but the point is at $\\frac{3\\pi}{4}$. Confirm by converting back.",
+    "Thinking $(-2, \\theta)$ is an error. It is the point at distance $2$ in the direction $\\theta + \\pi$. Check: $(-2, 0)$ is the Cartesian point $(-2, 0)$, and so is $(2, \\pi)$.",
+    "Converting $r = 4\\cos\\theta$ by writing $r = 4\\frac{x}{r}$ and stopping. Multiply through by $r$ to get $x^2 + y^2 = 4x$, then complete the square to see the circle.",
+    "Drawing a polar graph as if $r$ versus $\\theta$ were Cartesian axes. The graph of $r = 1 + \\cos\\theta$ is a cardioid, not a cosine wave; plot $(r\\cos\\theta, r\\sin\\theta)$.",
+    "Assuming $0 \\le \\theta \\le 2\\pi$ always traces a curve once. $r = 4\\cos\\theta$ is covered twice in that interval and $r = \\cos 2\\theta$ needs the full interval; check where the curve repeats."
+  ],
+  "whyItMatters": "Polar coordinates are the natural language for anything that rotates or radiates: orbits, antennas, spirals, and the circular symmetry of a sphere or a drum. The next section integrates in polar coordinates, where the area element is a thin wedge instead of a thin rectangle, and the arc length formula is the parametric one with $\\theta$ as parameter. In multivariable calculus, converting double integrals to polar coordinates is what finally evaluates $\\int_{-\\infty}^{\\infty} e^{-x^2}\\,dx$, the integral behind the normal distribution.",
+  "checkYourself": [
+    {
+      "q": "Convert $(r, \\theta) = (4, \\pi)$ to Cartesian coordinates.",
+      "a": "$(-4, 0)$."
+    },
+    {
+      "q": "Give two other polar representations of the point $\\left(1, \\frac{\\pi}{6}\\right)$.",
+      "a": "$\\left(1, \\frac{13\\pi}{6}\\right)$ and $\\left(-1, \\frac{7\\pi}{6}\\right)$, among others."
+    },
+    {
+      "q": "What curve is $r = 3$? What curve is $\\theta = \\frac{\\pi}{4}$?",
+      "a": "A circle of radius $3$ centered at the pole; the line $y = x$ through the pole."
+    },
+    {
+      "q": "Convert $r = 2\\sin\\theta$ to Cartesian form.",
+      "a": "$x^2 + y^2 = 2y$, or $x^2 + (y - 1)^2 = 1$: a circle of radius $1$ centered at $(0, 1)$."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of polar coordinates and the conversion formulas. Draw the right triangle that produces them and label it yourself.",
+    "Locate the convention for negative $r$ and plot two or three points with negative $r$ by hand before reading the examples.",
+    "Before reading the solution of the circle example, convert the given polar equation to Cartesian form yourself and identify the curve.",
+    "Find the cardioid and rose examples and, for each, note what symmetry the author uses to shorten the sketch.",
+    "Look for the formula for $\\frac{dy}{dx}$ on a polar curve and see where it comes from the parametric slope formula."
+  ]
+}

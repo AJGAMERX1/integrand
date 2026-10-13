@@ -1,0 +1,86 @@
+{
+  "nodeId": "exponential-growth-decay",
+  "title": "Exponential Growth and Decay",
+  "overview": "Many quantities change at a rate proportional to their current size. A population with plenty of food grows faster the bigger it is; a radioactive sample loses atoms faster the more atoms it has; a hot object cools faster the hotter it is relative to the room. All of these are described by the same differential equation,\n$$\\frac{dy}{dt} = ky,$$\nwhere $k$ is a constant: positive for growth, negative for decay. The equation says the rate of change of $y$ is $k$ times $y$ itself.\n\nThe solution is an exponential. You can check that $y(t) = Ce^{kt}$ works: its derivative is $Cke^{kt} = k\\cdot y$. And it is the **only** family of solutions; the constant $C$ is fixed by the initial value, since $y(0) = Ce^0 = C$. So\n$$y(t) = y(0)\\,e^{kt}.$$\nFrom here every problem is the same two steps. Use the given data to find $k$ (and $y(0)$ if it is not given). Then answer the question by substituting into the formula or solving it for $t$ with a logarithm.\n\nFor **population growth**, $k$ is the relative growth rate. If a population goes from 1000 to 3000 in 10 years, then $3000 = 1000e^{10k}$, so $e^{10k} = 3$ and $k = \\frac{\\ln 3}{10} \\approx 0.1099$ per year. The doubling time, the time for $y$ to multiply by 2, is $\\frac{\\ln 2}{k}$, independent of the starting size.\n\nFor **radioactive decay**, $k < 0$ and the standard data is the **half-life**, the time for half the sample to decay. If the half-life is $h$, then $\\frac{1}{2} = e^{kh}$, so $k = -\\frac{\\ln 2}{h}$. Equivalently you can write the solution as $y(t) = y(0)\\cdot\\left(\\frac{1}{2}\\right)^{t/h}$, which is often quicker when the question is phrased in half-lives.\n\n**Newton's law of cooling** says an object's temperature $T$ changes at a rate proportional to the difference between it and the surrounding temperature $T_s$: $\\frac{dT}{dt} = k(T - T_s)$. Let $y = T - T_s$; since $T_s$ is constant, $\\frac{dy}{dt} = \\frac{dT}{dt} = ky$, the same equation. So $T(t) = T_s + (T(0) - T_s)e^{kt}$ with $k < 0$: the temperature difference decays exponentially toward zero.\n\n**Continuously compounded interest** is the same equation again: a balance earning rate $r$ compounded continuously satisfies $\\frac{dA}{dt} = rA$, so $A(t) = A_0e^{rt}$. This is the limit of compounding $n$ times per year as $n \\to \\infty$, which is where the formula $\\lim(1 + \\frac{r}{n})^{nt} = e^{rt}$ comes from. In every version of the problem, the exponential is not a modeling choice; it is forced by the statement that the rate is proportional to the amount.",
+  "keyIdeas": [
+    "$\\frac{dy}{dt} = ky$ has the solutions $y(t) = y(0)e^{kt}$ and no others; $k > 0$ is growth, $k < 0$ is decay.",
+    "Find $k$ from one data point: if $y(t_1) = y_1$, then $k = \\frac{1}{t_1}\\ln\\frac{y_1}{y(0)}$.",
+    "Doubling time is $\\frac{\\ln 2}{k}$; half-life $h$ gives $k = -\\frac{\\ln 2}{h}$, or equivalently $y = y(0)\\left(\\frac{1}{2}\\right)^{t/h}$.",
+    "Newton's law of cooling: $\\frac{dT}{dt} = k(T - T_s)$, so $T(t) = T_s + (T(0) - T_s)e^{kt}$.",
+    "Continuous compounding: $A(t) = A_0e^{rt}$.",
+    "To find when $y$ reaches a value, divide by $y(0)$, take $\\ln$, and divide by $k$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Population growth from two data points",
+      "problem": "A bacteria culture has 400 cells at $t = 0$ and 1000 cells after 2 hours. Find the formula for the population, the population after 5 hours, and the doubling time.",
+      "steps": [
+        "Model: $P(t) = 400e^{kt}$. Use $P(2) = 1000$: $1000 = 400e^{2k}$, so $e^{2k} = 2.5$ and $k = \\frac{\\ln 2.5}{2} \\approx 0.4581$ per hour.",
+        "After 5 hours: $P(5) = 400e^{5k} = 400\\cdot(e^{2k})^{2.5} = 400\\cdot 2.5^{2.5} \\approx 400\\cdot 9.882 \\approx 3953$ cells.",
+        "Doubling time: $\\frac{\\ln 2}{k} = \\frac{0.6931}{0.4581} \\approx 1.51$ hours.",
+        "Check: $P(1.51) \\approx 400e^{0.4581\\cdot 1.51} \\approx 400e^{0.6917} \\approx 400\\cdot 1.997 \\approx 799$. Doubled, as expected."
+      ]
+    },
+    {
+      "title": "Radioactive decay with a half-life",
+      "problem": "A substance has a half-life of 30 years. How long until a sample decays to 10 percent of its original amount?",
+      "steps": [
+        "Model: $y(t) = y_0e^{kt}$ with $k = -\\frac{\\ln 2}{30} \\approx -0.02310$ per year.",
+        "Set $y(t) = 0.1y_0$: $e^{kt} = 0.1$, so $kt = \\ln 0.1 = -2.3026$ and $t = \\frac{-2.3026}{-0.02310} \\approx 99.7$ years.",
+        "Check with half-lives: in 3 half-lives (90 years) the amount is $\\frac{1}{8} = 12.5$ percent; in 4 (120 years) it is $6.25$ percent. So 10 percent should fall between 90 and 120, closer to 90. It does."
+      ]
+    },
+    {
+      "title": "Newton's law of cooling",
+      "problem": "Coffee at 90 degrees is left in a 20 degree room. After 10 minutes it is 60 degrees. When will it be 30 degrees?",
+      "steps": [
+        "Model: $T(t) = 20 + (90 - 20)e^{kt} = 20 + 70e^{kt}$.",
+        "Use $T(10) = 60$: $40 = 70e^{10k}$, so $e^{10k} = \\frac{4}{7}$ and $k = \\frac{\\ln(4/7)}{10} \\approx \\frac{-0.5596}{10} = -0.05596$ per minute.",
+        "Set $T(t) = 30$: $10 = 70e^{kt}$, so $e^{kt} = \\frac{1}{7}$ and $t = \\frac{\\ln(1/7)}{k} = \\frac{-1.9459}{-0.05596} \\approx 34.8$ minutes.",
+        "Check: the difference from room temperature went 70 to 40 in 10 minutes (factor $\\frac{4}{7}$); after 34.8 minutes it should be $70\\cdot(4/7)^{3.48} \\approx 70\\cdot 0.1428 \\approx 10$. Correct."
+      ]
+    },
+    {
+      "title": "Continuous compounding",
+      "problem": "An account earns 4 percent per year compounded continuously. How long does it take for the balance to triple?",
+      "steps": [
+        "Model: $A(t) = A_0e^{0.04t}$.",
+        "Tripling means $e^{0.04t} = 3$, so $0.04t = \\ln 3 \\approx 1.0986$ and $t \\approx 27.5$ years.",
+        "Rule-of-thumb check: doubling time is $\\frac{\\ln 2}{0.04} \\approx 17.3$ years, and tripling should take $\\frac{\\ln 3}{\\ln 2} \\approx 1.58$ times as long, $17.3\\cdot 1.58 \\approx 27.4$. Consistent."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Using $y = y_0 + kt$ (linear) for a rate proportional to the amount. Linear growth adds a fixed amount per unit time; proportional growth multiplies.",
+    "Taking $k$ to be the percent given in a cooling or half-life problem. $k$ must be computed from the data with a logarithm; a half-life of 30 gives $k = -\\frac{\\ln 2}{30}$, not $-\\frac{1}{30}$.",
+    "Forgetting to subtract the surrounding temperature in Newton's law. The exponential decays the **difference** $T - T_s$, not $T$ itself.",
+    "Solving $e^{kt} = 3$ by dividing by $e$ or by $k$. Take $\\ln$ of both sides: $kt = \\ln 3$.",
+    "Rounding $k$ too early. Keep extra digits (or keep $k$ as $\\frac{\\ln 2.5}{2}$) until the final answer."
+  ],
+  "whyItMatters": "This is your first differential equation, and solving it is really an integration: $\\frac{dy}{y} = k\\,dt$ integrates to $\\ln|y| = kt + C$. Chapter 9 generalizes this into separable equations, where the whole method is \"separate, integrate both sides, solve.\" The same exponential models reappear in probability (exponential distributions), in improper integrals like $\\int_0^\\infty e^{-kt}\\,dt = \\frac{1}{k}$, and in the logistic model that adds a carrying capacity.",
+  "checkYourself": [
+    {
+      "q": "If $y' = 0.2y$ and $y(0) = 50$, what is $y(t)$?",
+      "a": "$50e^{0.2t}$."
+    },
+    {
+      "q": "Doubling time for $k = 0.1$?",
+      "a": "$\\frac{\\ln 2}{0.1} \\approx 6.93$."
+    },
+    {
+      "q": "Half-life 5 days; what fraction remains after 15 days?",
+      "a": "$\\left(\\frac{1}{2}\\right)^3 = \\frac{1}{8}$."
+    },
+    {
+      "q": "In Newton's law of cooling, what does $T$ approach as $t \\to \\infty$?",
+      "a": "The surrounding temperature $T_s$."
+    }
+  ],
+  "readingGuide": [
+    "Find the theorem stating that $y = Ce^{kt}$ are the only solutions of $y' = ky$ and follow the short argument for why.",
+    "Before reading the solution of the population example, set up $P(t) = P_0e^{kt}$ and find $k$ from the given data yourself.",
+    "Find the radioactive decay discussion and write the relationship between half-life and $k$ in your own words.",
+    "Locate Newton's law of cooling and note the substitution that turns it into the basic equation.",
+    "Find the compound interest derivation and the limit that produces $e^{rt}$."
+  ]
+}

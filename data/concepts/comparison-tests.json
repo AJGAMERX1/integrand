@@ -1,0 +1,88 @@
+{
+  "nodeId": "comparison-tests",
+  "title": "The Comparison Tests",
+  "overview": "The Integral Test gave you a shelf of known series: geometric series $\\sum ar^n$ (converge when $|r| < 1$) and p-series $\\sum \\frac{1}{n^p}$ (converge when $p > 1$). The **comparison tests** let you settle a new series of positive terms by lining it up next to one of those.\n\nThe **Direct Comparison Test** is the intuitive one. Suppose every term satisfies $0 \\le a_n \\le b_n$. If the bigger series $\\sum b_n$ converges, the smaller $\\sum a_n$ is trapped below a finite total, so it converges too. Think of spending: if what you spend each day is at most what a friend spends, and your friend's lifetime total is finite, so is yours. If the smaller series $\\sum a_n$ diverges (its partial sums grow without bound), the bigger $\\sum b_n$ must also diverge. Be careful: the comparison only works in those two directions. A series that is smaller than a divergent one, or bigger than a convergent one, tells you nothing.\n\nFinding a clean inequality can be fiddly. The **Limit Comparison Test** removes the fiddling. For positive terms, if\n$$\\lim_{n \\to \\infty} \\frac{a_n}{b_n} = c \\quad \\text{with } 0 < c < \\infty,$$\nthen the two series behave the same way: both converge or both diverge. The idea is that for large $n$, $a_n$ is roughly $c$ times $b_n$, and a constant factor never changes convergence. In practice this is the test to reach for first, because you only need a limit, not an inequality.\n\nHow do you choose $b_n$? Keep only the dominant part of the numerator and the dominant part of the denominator. For a quotient of polynomials, that means the highest powers: $\\frac{3n^2 + 2}{n^4 + n + 1}$ behaves like $\\frac{3n^2}{n^4} = \\frac{3}{n^2}$, so compare with $\\frac{1}{n^2}$. For terms with exponentials, the exponential dominates every power of $n$.\n\nBoth tests need **positive terms** (at least eventually). For series with mixed signs you will use the alternating series test or absolute convergence instead.",
+  "keyIdeas": [
+    "Direct Comparison Test (terms $\\ge 0$): if $a_n \\le b_n$ and $\\sum b_n$ converges, then $\\sum a_n$ converges. If $a_n \\ge b_n$ and $\\sum b_n$ diverges, then $\\sum a_n$ diverges.",
+    "Limit Comparison Test (terms $> 0$): if $\\lim_{n \\to \\infty} \\frac{a_n}{b_n} = c$ with $0 < c < \\infty$, then $\\sum a_n$ and $\\sum b_n$ either both converge or both diverge.",
+    "Choose $b_n$ by keeping the dominant growth in numerator and denominator. Powers of $n$ compare to p-series; exponentials $r^n$ compare to geometric series.",
+    "Your reference shelf: $\\sum \\frac{1}{n^p}$ converges exactly when $p > 1$; $\\sum r^n$ converges exactly when $|r| < 1$.",
+    "Comparisons go one way only: smaller than convergent means convergent; bigger than divergent means divergent. The other two combinations prove nothing.",
+    "Both tests require nonnegative terms. Finitely many early terms can be ignored, so \"eventually positive\" and \"eventually $a_n \\le b_n$\" are enough."
+  ],
+  "workedExamples": [
+    {
+      "title": "Direct comparison, convergent",
+      "problem": "Does $\\sum_{n=1}^{\\infty} \\dfrac{1}{n^3 + 5}$ converge?",
+      "steps": [
+        "Why this step: look at the dominant part. For large $n$ the $+5$ hardly matters, so the terms look like $\\frac{1}{n^3}$, a convergent p-series ($p = 3$). Expect convergence.",
+        "Why this step: set up an inequality in the helpful direction. Since $n^3 + 5 > n^3$, we get $\\dfrac{1}{n^3+5} < \\dfrac{1}{n^3}$ for every $n \\ge 1$. All terms are positive.",
+        "The bigger series $\\sum \\frac{1}{n^3}$ converges, so the smaller series $\\sum \\frac{1}{n^3+5}$ converges by Direct Comparison.",
+        "Quick check at $n = 2$: $\\frac{1}{13} \\approx 0.077 < \\frac{1}{8} = 0.125$. The inequality points the right way."
+      ]
+    },
+    {
+      "title": "Direct comparison, divergent",
+      "problem": "Does $\\sum_{n=1}^{\\infty} \\dfrac{1}{2n - 1}$ converge?",
+      "steps": [
+        "Why this step: dominant part is $\\frac{1}{2n}$, half the harmonic series, which diverges. Expect divergence, so we need our series to be bigger than a divergent one.",
+        "Since $2n - 1 < 2n$, taking reciprocals flips the inequality: $\\dfrac{1}{2n-1} > \\dfrac{1}{2n}$ for all $n \\ge 1$.",
+        "The series $\\sum \\frac{1}{2n} = \\frac{1}{2} \\sum \\frac{1}{n}$ diverges (a constant times the harmonic series).",
+        "Our series is term-by-term bigger than a divergent positive series, so it diverges by Direct Comparison."
+      ]
+    },
+    {
+      "title": "Limit comparison with a p-series",
+      "problem": "Does $\\sum_{n=1}^{\\infty} \\dfrac{3n^2 + 2}{n^4 + n + 1}$ converge?",
+      "steps": [
+        "Why this step: keep the dominant parts: $\\dfrac{3n^2}{n^4} = \\dfrac{3}{n^2}$. Pick the comparison $b_n = \\dfrac{1}{n^2}$ (the constant $3$ does not matter). This is a convergent p-series.",
+        "Why this step: a direct inequality is awkward here because the numerator also has a $+2$. Use the Limit Comparison Test instead. Form the ratio: $\\dfrac{a_n}{b_n} = \\dfrac{3n^2 + 2}{n^4 + n + 1} \\cdot n^2 = \\dfrac{3n^4 + 2n^2}{n^4 + n + 1}$.",
+        "Divide top and bottom by $n^4$: $\\dfrac{3 + 2/n^2}{1 + 1/n^3 + 1/n^4} \\to 3$ as $n \\to \\infty$.",
+        "The limit $c = 3$ is positive and finite, so the two series share a fate. Since $\\sum \\frac{1}{n^2}$ converges, so does the given series."
+      ]
+    },
+    {
+      "title": "Limit comparison with a geometric series",
+      "problem": "Does $\\sum_{n=1}^{\\infty} \\dfrac{1}{2^n - n}$ converge?",
+      "steps": [
+        "Why this step: $2^n$ dominates $n$, so the terms behave like $\\frac{1}{2^n}$. Compare with $b_n = \\frac{1}{2^n}$, a geometric series with ratio $\\frac{1}{2}$, which converges. (Note $2^n - n > 0$ for all $n \\ge 1$, so the terms are positive.)",
+        "Form the ratio: $\\dfrac{a_n}{b_n} = \\dfrac{2^n}{2^n - n} = \\dfrac{1}{1 - n/2^n}$.",
+        "Why this step: we need $\\frac{n}{2^n} \\to 0$. This is the sequence fact that exponentials beat powers (l'Hospital on $\\frac{x}{2^x}$ gives $\\frac{1}{2^x \\ln 2} \\to 0$). So the ratio tends to $\\frac{1}{1 - 0} = 1$.",
+        "The limit is $1$, positive and finite, so the series converges along with $\\sum \\frac{1}{2^n}$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Comparing in the useless direction: \"$\\frac{1}{n^2+1} < \\frac{1}{n}$ and $\\sum \\frac{1}{n}$ diverges, so this diverges.\" Being smaller than a divergent series proves nothing. Compare instead with $\\frac{1}{n^2}$, which shows convergence.",
+    "Flipping an inequality wrong when taking reciprocals. If $2n - 1 < 2n$ then $\\frac{1}{2n-1} > \\frac{1}{2n}$. Check at $n = 1$: $1 > \\frac{1}{2}$.",
+    "Concluding something from a limit comparison when $c = 0$ or $c = \\infty$. If $\\frac{a_n}{b_n} \\to 0$ the series are not \"the same size,\" and the plain limit comparison test does not apply. Choose a $b_n$ that matches the true growth rate.",
+    "Using these tests on series with negative terms. For $\\sum \\frac{(-1)^n}{n}$ the inequality logic collapses; that series needs the alternating series test.",
+    "Picking $b_n$ from the biggest-looking piece instead of the dominant growth rate. In $\\frac{n + 100}{n^3}$ the $100$ looks large but the behavior is $\\frac{n}{n^3} = \\frac{1}{n^2}$; compare with $\\frac{1}{n^2}$."
+  ],
+  "whyItMatters": "Comparison is the everyday workhorse of convergence: most series you meet are messy, and the fastest route is to spot the simple series they resemble. The same instinct, \"what does this behave like for large $n$,\" is what you used for limits at infinity and for improper integrals (where comparison with $\\int \\frac{dx}{x^p}$ decides convergence the same way). When you reach power series, the ratio test will take over much of this work, but at the endpoints of the interval of convergence you will be right back to p-series and comparison.",
+  "checkYourself": [
+    {
+      "q": "Pick a comparison series for $\\sum \\dfrac{n}{n^3 + 2}$ and state the conclusion.",
+      "a": "Compare with $\\frac{1}{n^2}$ (limit of ratio is $1$). Converges."
+    },
+    {
+      "q": "Pick a comparison series for $\\sum \\dfrac{\\sqrt{n}}{n + 4}$ and state the conclusion.",
+      "a": "Behaves like $\\frac{\\sqrt{n}}{n} = \\frac{1}{\\sqrt{n}}$, a p-series with $p = \\frac{1}{2}$. Diverges."
+    },
+    {
+      "q": "If $0 \\le a_n \\le b_n$ and $\\sum a_n$ converges, what do you know about $\\sum b_n$?",
+      "a": "Nothing. The bigger series could converge or diverge."
+    },
+    {
+      "q": "Does $\\sum \\dfrac{5}{3^n + 1}$ converge?",
+      "a": "Yes. $\\frac{5}{3^n+1} < \\frac{5}{3^n}$, a convergent geometric series."
+    }
+  ],
+  "readingGuide": [
+    "Find the Direct Comparison Test and write both of its halves in your own words, then write the two combinations that prove nothing.",
+    "Before reading the first worked example about comparing with a p-series, cover the solution and decide which comparison series you would pick and why.",
+    "Find the Limit Comparison Test and note exactly what range of values for the limit $c$ is allowed.",
+    "Look for the suggested strategy of keeping only the dominant terms when choosing a comparison series, and apply it to three series of your own invention.",
+    "Look for any remark on estimating sums by comparison, and relate it to the remainder estimate from the Integral Test."
+  ]
+}

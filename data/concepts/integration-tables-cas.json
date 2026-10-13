@@ -1,0 +1,76 @@
+{
+  "nodeId": "integration-tables-cas",
+  "title": "Integration Using Tables and Computer Algebra Systems",
+  "overview": "Nobody integrates everything from scratch. Engineers and scientists use **tables of integrals**, long lists of antiderivatives organized by the form of the integrand, and **computer algebra systems** (CAS) such as SymPy, Mathematica, or the integrator inside a graphing tool. Both are legitimate tools. The skill this section teaches is using them well, which means two things: making your integral match a table entry, and knowing when to doubt the output.\n\nA table entry is written with a general letter, usually $u$, and constants like $a$. For example, a typical entry says\n$$\\int \\frac{du}{u^2 + a^2} = \\frac{1}{a}\\arctan\\frac{u}{a} + C.$$\nTo use it, your integral must have exactly that shape. Often it does not, and you need a **substitution** to make it fit: factor out a constant, let $u$ be some expression like $e^x$ or $2x$, or complete the square. Once it matches, read off the answer, substitute back, and check by differentiating.\n\nA CAS will give you an antiderivative directly, but the output can look nothing like the one you would find by hand. Three things cause this. **Different constants**: $\\frac{\\sin^2 x}{2}$, $-\\frac{\\cos^2 x}{2}$, and $-\\frac{\\cos 2x}{4}$ are all correct antiderivatives of $\\sin x \\cos x$; they differ by constants, which the $+ C$ absorbs. **Different algebraic form**: the CAS may expand, factor, or use identities you would not. **Missing absolute values or domain conditions**: a CAS often writes $\\ln x$ where $\\ln|x|$ is the complete answer, or returns an expression valid only for $x > 0$.\n\nSo the habit is: get the answer from the table or the CAS, then **verify it** by differentiating (a CAS can do that too), and compare it with your expectations. If two answers differ, subtract them and simplify; if the difference is a constant, both are right.\n\nTables and CAS do not replace the techniques you have learned. They extend them. You still need the techniques to set up a substitution that matches an entry, to read a CAS answer critically, and to handle the integrals that no table covers.",
+  "keyIdeas": [
+    "A table entry is a pattern in a general variable $u$ with constants $a, b$; your integral must match the pattern exactly before you can use it.",
+    "Use substitution (including completing the square) to make an integral fit an entry, then substitute back.",
+    "Two antiderivatives of the same function can look different and both be right; their difference must simplify to a constant.",
+    "A CAS may omit absolute values or domain restrictions; add them back when the problem needs them (for example $\\ln|x|$).",
+    "Always verify a table or CAS answer by differentiating it, or by evaluating a definite integral numerically."
+  ],
+  "workedExamples": [
+    {
+      "title": "Matching a table entry directly",
+      "problem": "Use the table entry $\\int \\frac{du}{u^2 \\sqrt{u^2 + a^2}} = -\\frac{\\sqrt{u^2 + a^2}}{a^2 u} + C$ to evaluate $\\int \\frac{dx}{x^2 \\sqrt{x^2 + 4}}$.",
+      "steps": [
+        "Compare shapes. The entry has $u^2$ outside a root of $u^2 + a^2$. Our integral has $x^2$ outside a root of $x^2 + 4$. With $u = x$ and $a^2 = 4$, so $a = 2$, it matches exactly.",
+        "Read off the answer with those values: $-\\frac{\\sqrt{x^2 + 4}}{4x} + C$.",
+        "Verify by differentiating. Write the answer as $-\\frac{1}{4} (x^2 + 4)^{1/2} x^{-1}$ and use the product rule: $-\\frac{1}{4}\\left[ \\frac{x}{\\sqrt{x^2 + 4}} \\cdot \\frac{1}{x} - \\frac{\\sqrt{x^2 + 4}}{x^2} \\right] = -\\frac{1}{4} \\cdot \\frac{x^2 - (x^2 + 4)}{x^2 \\sqrt{x^2 + 4}} = \\frac{1}{x^2 \\sqrt{x^2 + 4}}$. Correct.",
+        "Context: this is the same integral that trig substitution ($x = 2\\tan\\theta$) solves in the previous section. The table entry is that work, done once and recorded."
+      ]
+    },
+    {
+      "title": "Substituting to fit an entry",
+      "problem": "Use the entry $\\int \\frac{du}{u^2 + a^2} = \\frac{1}{a}\\arctan\\frac{u}{a} + C$ to evaluate $\\int \\frac{e^x}{e^{2x} + 4}\\,dx$.",
+      "steps": [
+        "The integral does not match yet; the variable appears inside exponentials. Notice $e^{2x} = (e^x)^2$ and the numerator $e^x\\,dx$ is the derivative of $e^x$.",
+        "Let $u = e^x$, so $du = e^x\\,dx$. The integral becomes $\\int \\frac{du}{u^2 + 4}$, which is the entry with $a = 2$.",
+        "Read off: $\\frac{1}{2}\\arctan\\frac{u}{2} + C$, then substitute back: $\\frac{1}{2}\\arctan\\frac{e^x}{2} + C$.",
+        "Verify: $\\frac{d}{dx}\\left[ \\frac{1}{2}\\arctan\\frac{e^x}{2} \\right] = \\frac{1}{2} \\cdot \\frac{1}{1 + \\frac{e^{2x}}{4}} \\cdot \\frac{e^x}{2} = \\frac{e^x}{4 + e^{2x}}$. Correct."
+      ]
+    },
+    {
+      "title": "Two correct answers that look different",
+      "problem": "By hand, $\\int \\sin x \\cos x\\,dx = \\frac{\\sin^2 x}{2} + C$ (substituting $u = \\sin x$). A CAS returns $-\\frac{\\cos 2x}{4}$. Which is right?",
+      "steps": [
+        "Both might be. Antiderivatives are only determined up to a constant, so check whether the two expressions differ by a constant.",
+        "Use the identity $\\cos 2x = 1 - 2\\sin^2 x$: $-\\frac{\\cos 2x}{4} = -\\frac{1 - 2\\sin^2 x}{4} = \\frac{\\sin^2 x}{2} - \\frac{1}{4}$.",
+        "The difference between the two answers is exactly $\\frac{1}{4}$, a constant. Both are correct; the $+ C$ absorbs the $\\frac{1}{4}$.",
+        "A third form, $-\\frac{\\cos^2 x}{2}$ (from $u = \\cos x$), differs from $\\frac{\\sin^2 x}{2}$ by $\\frac{1}{2}$, again a constant. Any of the three is a full-credit answer.",
+        "Practical check without identities: differentiate the CAS output. $\\frac{d}{dx}\\left[ -\\frac{\\cos 2x}{4} \\right] = \\frac{2 \\sin 2x}{4} = \\frac{\\sin 2x}{2} = \\sin x \\cos x$. Confirmed."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Using a table entry that almost matches. If the entry has $u^2 + a^2$ but your integrand has $u^2 - a^2$, the answers are completely different (an arctangent versus a logarithm). Match every sign.",
+    "Forgetting to substitute back after using $u = e^x$ or similar. The answer $\\frac{1}{2}\\arctan\\frac{u}{2}$ is not finished until $u$ becomes $e^x$.",
+    "Declaring a CAS answer wrong because it looks different from yours. Subtract the two and simplify; if you get a constant, both are right.",
+    "Trusting a CAS output like $\\ln x$ for $\\int \\frac{dx}{x}$ on a negative interval. The correct antiderivative there is $\\ln|x|$, and $\\ln(-3)$ is not a real number. Add the absolute value yourself."
+  ],
+  "whyItMatters": "In real work you will use a table or a CAS far more often than you will do trig substitution by hand, so learning to use them critically is a professional skill, not a shortcut. The same discipline, verify the output and understand why two forms can both be right, applies to every computational tool you will ever use. And this app's own problems are checked by a CAS (SymPy), which is exactly the kind of verification described here.",
+  "checkYourself": [
+    {
+      "q": "Which substitution makes $\\int \\frac{dx}{\\sqrt{9 - 4x^2}}$ fit the entry $\\int \\frac{du}{\\sqrt{a^2 - u^2}} = \\arcsin\\frac{u}{a} + C$?",
+      "a": "$u = 2x$, $du = 2\\,dx$, with $a = 3$. The integral becomes $\\frac{1}{2}\\int \\frac{du}{\\sqrt{9 - u^2}} = \\frac{1}{2}\\arcsin\\frac{2x}{3} + C$."
+    },
+    {
+      "q": "A CAS gives $\\ln(x^2 + 1)$ and you got $\\ln(x^2 + 1) + 7$. Is there a problem?",
+      "a": "No. They differ by the constant 7, which the $+ C$ absorbs."
+    },
+    {
+      "q": "How do you verify an antiderivative from a table in one step?",
+      "a": "Differentiate it and check that you recover the original integrand."
+    },
+    {
+      "q": "Why does a CAS sometimes return $\\ln x$ instead of $\\ln|x|$?",
+      "a": "It often assumes $x > 0$ or works with complex numbers. You must add the absolute value for intervals where $x < 0$."
+    }
+  ],
+  "readingGuide": [
+    "Find an example where a substitution is needed before a table entry applies, and write down exactly what substitution makes the forms match.",
+    "Look for an example where the book's hand answer and a CAS answer differ, and work out for yourself why both are correct.",
+    "Note any warnings about what a CAS leaves out, such as constants of integration or absolute values.",
+    "Before reading the solution of the first example, locate a matching entry in the table at the back of the book and try to apply it yourself."
+  ]
+}

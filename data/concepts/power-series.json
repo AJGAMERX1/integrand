@@ -1,0 +1,88 @@
+{
+  "nodeId": "power-series",
+  "title": "Power Series",
+  "overview": "A **power series** is a polynomial that never ends:\n$$\\sum_{n=0}^{\\infty} c_n (x - a)^n = c_0 + c_1 (x-a) + c_2 (x-a)^2 + \\cdots$$\nThe numbers $c_n$ are the **coefficients** and $a$ is the **center**. For each value of $x$ you plug in, this becomes an ordinary series of numbers, which may converge or diverge. So a power series defines a function whose domain is the set of $x$ where it converges. At the center $x = a$ every term after the first is $0$, so the series always converges there.\n\nThe remarkable fact is that the set of convergence is always an **interval centered at $a$**. There are exactly three possibilities: the series converges only at $x = a$; it converges for every real $x$; or there is a number $R > 0$, the **radius of convergence**, such that the series converges when $|x - a| < R$ and diverges when $|x - a| > R$. In the first case we say $R = 0$, in the second $R = \\infty$.\n\nThe ratio test finds $R$. Apply it to the terms with $x$ left in:\n$$\\lim_{n \\to \\infty} \\left| \\frac{c_{n+1} (x-a)^{n+1}}{c_n (x-a)^n} \\right| = |x - a| \\cdot \\lim_{n \\to \\infty} \\left| \\frac{c_{n+1}}{c_n} \\right|.$$\nThe series converges absolutely wherever this is less than $1$, and solving that inequality for $|x - a|$ gives $R$.\n\nThe ratio test says nothing at the two endpoints $x = a \\pm R$, where the limit equals $1$. You must plug each endpoint in separately and test the resulting numerical series with the earlier tools (p-series, alternating series, divergence test). The result is the **interval of convergence**, which can include neither, one, or both endpoints.\n\nThe simplest power series is the geometric series $\\sum x^n = \\frac{1}{1 - x}$ for $|x| < 1$, center $0$, radius $1$, endpoints excluded. Keep it as your model: every other power series is a generalization of it.",
+  "keyIdeas": [
+    "A power series centered at $a$ is $\\sum_{n=0}^{\\infty} c_n (x-a)^n$. It always converges at $x = a$, and its set of convergence is an interval centered at $a$.",
+    "Radius of convergence $R$: the series converges absolutely for $|x - a| < R$ and diverges for $|x - a| > R$. $R$ can be $0$, a positive number, or $\\infty$.",
+    "Find $R$ with the ratio test: compute $\\lim_{n \\to \\infty} \\left| \\frac{a_{n+1}}{a_n} \\right|$ with $x$ inside, set it less than $1$, and solve for $|x - a|$.",
+    "Endpoints $x = a - R$ and $x = a + R$ must be checked one at a time by substituting and testing the numerical series. The interval of convergence may include none, one, or both.",
+    "Model example: $\\sum_{n=0}^{\\infty} x^n = \\frac{1}{1-x}$ for $-1 < x < 1$; $R = 1$ and both endpoints are excluded.",
+    "Factorials in the denominator (like $\\frac{x^n}{n!}$) give $R = \\infty$; factorials in the numerator (like $n!\\,x^n$) give $R = 0$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Radius and interval with endpoint checks",
+      "problem": "Find the radius and interval of convergence of $\\sum_{n=1}^{\\infty} \\dfrac{(x-2)^n}{n \\cdot 3^n}$.",
+      "steps": [
+        "Why this step: the center is $a = 2$. Run the ratio test with $x$ inside: $\\left| \\dfrac{(x-2)^{n+1}}{(n+1) 3^{n+1}} \\cdot \\dfrac{n \\cdot 3^n}{(x-2)^n} \\right| = \\dfrac{|x-2|}{3} \\cdot \\dfrac{n}{n+1}$.",
+        "Take the limit: $\\frac{n}{n+1} \\to 1$, so the limit is $\\dfrac{|x-2|}{3}$. Convergence needs $\\dfrac{|x-2|}{3} < 1$, that is $|x - 2| < 3$. The radius is $R = 3$, and the open interval is $-1 < x < 5$.",
+        "Why this step: the ratio test is silent at the endpoints, so plug them in. At $x = 5$: $\\sum \\dfrac{3^n}{n \\cdot 3^n} = \\sum \\dfrac{1}{n}$, the harmonic series, which diverges.",
+        "At $x = -1$: $\\sum \\dfrac{(-3)^n}{n \\cdot 3^n} = \\sum \\dfrac{(-1)^n}{n}$, the alternating harmonic series, which converges by the Alternating Series Test.",
+        "Interval of convergence: $[-1, 5)$. Left endpoint in, right endpoint out."
+      ]
+    },
+    {
+      "title": "The two extreme cases",
+      "problem": "Find the radius of convergence of $\\sum_{n=0}^{\\infty} n!\\,x^n$ and of $\\sum_{n=0}^{\\infty} \\dfrac{x^n}{n!}$.",
+      "steps": [
+        "Why this step: factorials mean ratio test. For the first series, $\\left| \\dfrac{(n+1)!\\,x^{n+1}}{n!\\,x^n} \\right| = (n+1)|x|$.",
+        "For any $x \\ne 0$ this grows without bound, so the limit is $\\infty > 1$ and the series diverges. It converges only at the center. $R = 0$.",
+        "For the second series, $\\left| \\dfrac{x^{n+1}}{(n+1)!} \\cdot \\dfrac{n!}{x^n} \\right| = \\dfrac{|x|}{n+1} \\to 0$ for every $x$.",
+        "Since $0 < 1$ no matter what $x$ is, the series converges for all real $x$. $R = \\infty$ and the interval of convergence is $(-\\infty, \\infty)$. (This is the series for $e^x$, as you will see later.)"
+      ]
+    },
+    {
+      "title": "Only even powers",
+      "problem": "Find the interval of convergence of $\\sum_{n=0}^{\\infty} \\dfrac{(-1)^n x^{2n}}{4^n}$ and, where it converges, find its sum.",
+      "steps": [
+        "Why this step: notice the series is geometric in disguise. Rewrite the term as $\\left( -\\dfrac{x^2}{4} \\right)^n$. A geometric series converges exactly when the ratio has absolute value less than $1$.",
+        "So we need $\\dfrac{x^2}{4} < 1$, that is $x^2 < 4$, that is $|x| < 2$. The radius is $R = 2$.",
+        "Endpoints: at $x = \\pm 2$ the ratio is $-1$ and the terms are $(-1)^n$, which do not go to $0$. Both endpoints diverge. Interval: $(-2, 2)$.",
+        "Sum: first term over one minus the ratio gives $\\dfrac{1}{1 + x^2/4} = \\dfrac{4}{4 + x^2}$ for $|x| < 2$. Check at $x = 0$: both sides equal $1$."
+      ]
+    },
+    {
+      "title": "Endpoints that both fail",
+      "problem": "Find the interval of convergence of $\\sum_{n=1}^{\\infty} \\dfrac{n x^n}{5^n}$.",
+      "steps": [
+        "Ratio test: $\\left| \\dfrac{(n+1) x^{n+1}}{5^{n+1}} \\cdot \\dfrac{5^n}{n x^n} \\right| = \\dfrac{|x|}{5} \\cdot \\dfrac{n+1}{n} \\to \\dfrac{|x|}{5}$.",
+        "Convergence for $\\frac{|x|}{5} < 1$, so $|x| < 5$ and $R = 5$.",
+        "Why this step: check both endpoints. At $x = 5$ the terms are $n$, and at $x = -5$ they are $(-1)^n n$. In both cases the terms do not go to $0$, so both series diverge by the Test for Divergence.",
+        "Interval of convergence: $(-5, 5)$, open on both sides."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Forgetting the endpoints. The ratio test gives the open interval only; the endpoints need their own test. In the first example, skipping this would miss that $x = -1$ belongs to the interval.",
+    "Solving $|x - 2| < 3$ as $x < 5$ only. The inequality means $-3 < x - 2 < 3$, so $-1 < x < 5$. Check $x = -2$: $|{-2} - 2| = 4$, not less than $3$, so $x = -2$ is outside.",
+    "Mixing up radius and interval. For a series centered at $a = 2$ with $R = 3$ the interval is around $2$, not around $0$. The radius is a distance from the center.",
+    "Mishandling the sign at the left endpoint. At $x = -1$ in $\\sum \\frac{(x-2)^n}{n 3^n}$ the term is $\\frac{(-3)^n}{n 3^n} = \\frac{(-1)^n}{n}$, alternating, not $\\frac{1}{n}$. The sign changes the verdict."
+  ],
+  "whyItMatters": "Power series are how calculus handles functions it cannot otherwise touch. In the next two nodes you will write $\\frac{1}{1-x}$, $\\ln(1+x)$, $\\arctan x$, $e^x$, $\\sin x$ and $\\cos x$ as power series, differentiate and integrate them term by term like polynomials, and use the result to evaluate integrals such as $\\int_0^1 e^{-x^2}\\,dx$ to any accuracy. The radius of convergence tells you exactly where those manipulations are legal, which is why finding $R$ carefully matters.",
+  "checkYourself": [
+    {
+      "q": "What is the center and radius of $\\sum \\dfrac{(x+1)^n}{2^n}$?",
+      "a": "Center $-1$, radius $2$ (ratio $\\frac{|x+1|}{2} < 1$)."
+    },
+    {
+      "q": "A power series centered at $3$ converges at $x = 7$. Must it converge at $x = 0$?",
+      "a": "Yes. Convergence at $7$ means $R \\ge 4$, and $|0 - 3| = 3 < 4$."
+    },
+    {
+      "q": "What is the radius of convergence of $\\sum \\dfrac{x^n}{n^2}$, and are the endpoints included?",
+      "a": "$R = 1$; both endpoints give absolutely convergent p-series ($p = 2$), so the interval is $[-1, 1]$."
+    },
+    {
+      "q": "For $\\sum n!\\,(x-4)^n$, where does the series converge?",
+      "a": "Only at $x = 4$; $R = 0$."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of a power series centered at $a$ and the three-case theorem about where it converges. Draw the three cases on a number line.",
+    "Before reading the first worked example that finds an interval of convergence, try it yourself with the ratio test, including both endpoints.",
+    "Look for the examples with $R = 0$ and $R = \\infty$ and note what feature of the coefficients (factorials) produces each.",
+    "Pay attention to how the endpoint checks use the earlier tests (p-series, alternating series, test for divergence). Note which combination of included and excluded endpoints each example produces.",
+    "Look for any example where the series has only even or only odd powers, and note how the ratio test is adapted there."
+  ]
+}

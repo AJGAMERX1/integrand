@@ -1,0 +1,88 @@
+{
+  "nodeId": "polar-areas-lengths",
+  "title": "Areas and Lengths in Polar Coordinates",
+  "overview": "In Cartesian coordinates, area is built from thin vertical rectangles of height $y$ and width $dx$. In polar coordinates the natural slice is a thin **wedge**: a sector of a circle with radius $r$ and tiny angle $d\\theta$. A full circle of radius $r$ has area $\\pi r^2$ and angle $2\\pi$, so a sector with angle $d\\theta$ has area\n$$\\frac{d\\theta}{2\\pi}\\cdot\\pi r^2 = \\frac{1}{2}r^2\\,d\\theta.$$\nAdd the wedges between the rays $\\theta = a$ and $\\theta = b$ for the curve $r = f(\\theta)$:\n$$A = \\int_a^b \\frac{1}{2}\\left(f(\\theta)\\right)^2 d\\theta.$$\nNotice the square. The area of a wedge grows with the square of its radius, so a curve twice as far from the pole encloses four times the area. The $\\frac{1}{2}$ is the sector formula, not a typo.\n\nThe two things that go wrong are limits and overlap. Choose $a$ and $b$ so that the region is swept exactly once; a petal of a rose or a loop of a limacon has its own natural angle range, found by asking where $r = 0$. For the area between two polar curves, subtract the areas of the wedges: $A = \\int_a^b \\frac{1}{2}\\left(r_{\\text{outer}}^2 - r_{\\text{inner}}^2\\right) d\\theta$, with the limits at the angles where the curves cross.\n\nArc length comes from treating the curve as parametric in $\\theta$. With $x = r\\cos\\theta$ and $y = r\\sin\\theta$, a short computation using $\\sin^2\\theta + \\cos^2\\theta = 1$ gives $\\left(\\frac{dx}{d\\theta}\\right)^2 + \\left(\\frac{dy}{d\\theta}\\right)^2 = r^2 + \\left(\\frac{dr}{d\\theta}\\right)^2$, so\n$$L = \\int_a^b \\sqrt{r^2 + \\left(\\frac{dr}{d\\theta}\\right)^2}\\,d\\theta.$$\nThe two terms are the two ways a tiny step can move: sideways along a circle (length $r\\,d\\theta$) and outward along a ray (length $dr$). The arc is the hypotenuse.\n\nBoth integrals turn into trigonometric integrals, so $\\cos^2\\theta = \\frac{1 + \\cos 2\\theta}{2}$ and $\\sin^2\\theta = \\frac{1 - \\cos 2\\theta}{2}$ will do most of the work. Sketch the region first, every time; the sketch is what tells you the limits.",
+  "keyIdeas": [
+    "A thin sector of radius $r$ and angle $d\\theta$ has area $\\frac{1}{2}r^2\\,d\\theta$; this is the polar area element.",
+    "Area swept by $r = f(\\theta)$ from $\\theta = a$ to $\\theta = b$: $A = \\int_a^b \\frac{1}{2}(f(\\theta))^2\\,d\\theta$, provided the region is covered exactly once.",
+    "Area between two polar curves: $A = \\int_a^b \\frac{1}{2}\\left(r_{\\text{outer}}^2 - r_{\\text{inner}}^2\\right) d\\theta$, with limits at the intersection angles.",
+    "Find natural limits by solving $r = 0$: a petal or loop starts and ends where the curve passes through the pole.",
+    "Arc length: $L = \\int_a^b \\sqrt{r^2 + \\left(\\frac{dr}{d\\theta}\\right)^2}\\,d\\theta$, because a tiny step has circular part $r\\,d\\theta$ and radial part $dr$.",
+    "Expect $\\cos^2$ and $\\sin^2$ integrals; the half-angle identities $\\cos^2\\theta = \\frac{1 + \\cos 2\\theta}{2}$ and $\\sin^2\\theta = \\frac{1 - \\cos 2\\theta}{2}$ are the standard tools."
+  ],
+  "workedExamples": [
+    {
+      "title": "Area of a circle, done in polar form",
+      "problem": "Find the area enclosed by $r = 4\\cos\\theta$.",
+      "steps": [
+        "Limits: this circle is traced once as $\\theta$ runs from $-\\frac{\\pi}{2}$ to $\\frac{\\pi}{2}$ (where $r = 0$ at both ends). Using $0$ to $2\\pi$ would count it twice.",
+        "Set up: $A = \\int_{-\\pi/2}^{\\pi/2} \\frac{1}{2}(4\\cos\\theta)^2\\,d\\theta = 8\\int_{-\\pi/2}^{\\pi/2} \\cos^2\\theta\\,d\\theta$.",
+        "Half-angle identity: $8\\int_{-\\pi/2}^{\\pi/2} \\frac{1 + \\cos 2\\theta}{2}\\,d\\theta = 4\\left[\\theta + \\frac{\\sin 2\\theta}{2}\\right]_{-\\pi/2}^{\\pi/2} = 4\\left(\\frac{\\pi}{2} + \\frac{\\pi}{2}\\right) = 4\\pi$. The sine terms vanish at both ends.",
+        "Check: the curve is a circle of radius $2$ (centered at $(2, 0)$), so its area is $\\pi \\cdot 2^2 = 4\\pi$. The polar integral agrees."
+      ]
+    },
+    {
+      "title": "Area inside a cardioid",
+      "problem": "Find the area enclosed by $r = 1 + \\cos\\theta$.",
+      "steps": [
+        "Limits: the cardioid is traced once for $0 \\le \\theta \\le 2\\pi$, and $r \\ge 0$ throughout.",
+        "Set up and expand: $A = \\frac{1}{2}\\int_0^{2\\pi}(1 + \\cos\\theta)^2\\,d\\theta = \\frac{1}{2}\\int_0^{2\\pi}\\left(1 + 2\\cos\\theta + \\cos^2\\theta\\right) d\\theta$.",
+        "Integrate term by term over a full period: $\\int_0^{2\\pi} 1\\,d\\theta = 2\\pi$; $\\int_0^{2\\pi} 2\\cos\\theta\\,d\\theta = 0$; $\\int_0^{2\\pi} \\cos^2\\theta\\,d\\theta = \\pi$ (the average of $\\cos^2$ over a period is $\\frac{1}{2}$).",
+        "Total: $A = \\frac{1}{2}(2\\pi + 0 + \\pi) = \\frac{3\\pi}{2} \\approx 4.71$.",
+        "Check the size: the cardioid fits inside the circle $r = 2$ (area $4\\pi \\approx 12.6$) and contains the circle $r = 1$ only partly; an answer between $\\pi$ and $4\\pi$ is plausible."
+      ]
+    },
+    {
+      "title": "One petal of a rose",
+      "problem": "Find the area of one petal of $r = 2\\sin 3\\theta$.",
+      "steps": [
+        "Find the petal's limits by asking where $r = 0$: $\\sin 3\\theta = 0$ at $3\\theta = 0, \\pi, 2\\pi, \\ldots$, so $\\theta = 0, \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\ldots$. The first petal is swept for $0 \\le \\theta \\le \\frac{\\pi}{3}$, with $r$ peaking at $2$ when $\\theta = \\frac{\\pi}{6}$.",
+        "Set up: $A = \\int_0^{\\pi/3} \\frac{1}{2}(2\\sin 3\\theta)^2\\,d\\theta = 2\\int_0^{\\pi/3} \\sin^2 3\\theta\\,d\\theta$.",
+        "Half-angle: $\\sin^2 3\\theta = \\frac{1 - \\cos 6\\theta}{2}$, so $A = \\int_0^{\\pi/3}(1 - \\cos 6\\theta)\\,d\\theta = \\left[\\theta - \\frac{\\sin 6\\theta}{6}\\right]_0^{\\pi/3} = \\frac{\\pi}{3} - 0 = \\frac{\\pi}{3}$.",
+        "Check: the petal fits inside a sector of radius $2$ and angle $\\frac{\\pi}{3}$, whose area is $\\frac{1}{2} \\cdot 4 \\cdot \\frac{\\pi}{3} = \\frac{2\\pi}{3}$. The petal is exactly half of that sector, which is reasonable for a shape that tapers to a point at both ends. The whole rose has three petals, total area $\\pi$."
+      ]
+    },
+    {
+      "title": "Arc length of a polar circle",
+      "problem": "Find the length of the curve $r = 4\\cos\\theta$, $0 \\le \\theta \\le \\pi$, using the polar arc length formula.",
+      "steps": [
+        "Compute $\\frac{dr}{d\\theta} = -4\\sin\\theta$. Then $r^2 + \\left(\\frac{dr}{d\\theta}\\right)^2 = 16\\cos^2\\theta + 16\\sin^2\\theta = 16$.",
+        "The integrand is constant: $L = \\int_0^{\\pi}\\sqrt{16}\\,d\\theta = 4\\pi$.",
+        "Check: the curve is a circle of radius $2$, circumference $2\\pi \\cdot 2 = 4\\pi$. Note the interval $0$ to $\\pi$ traces it exactly once; $0$ to $2\\pi$ would give $8\\pi$.",
+        "For comparison, the cardioid $r = 1 + \\cos\\theta$ gives $r^2 + (r')^2 = 2 + 2\\cos\\theta$, which the identity $1 + \\cos\\theta = 2\\cos^2\\frac{\\theta}{2}$ turns into $4\\cos^2\\frac{\\theta}{2}$; integrating $2\\left|\\cos\\frac{\\theta}{2}\\right|$ over $0$ to $2\\pi$ gives length $8$. Same formula, one more identity."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Forgetting the $\\frac{1}{2}$ or the square: writing $\\int r\\,d\\theta$ or $\\int r^2\\,d\\theta$. Check on the circle $r = 2$, $0 \\le \\theta \\le 2\\pi$: the correct $\\int \\frac{1}{2} \\cdot 4\\,d\\theta = 4\\pi$ matches $\\pi r^2$; the others give $4\\pi$ by luck or $8\\pi$.",
+    "Using $0$ to $2\\pi$ for every curve. $r = 4\\cos\\theta$ is traced twice on that interval, doubling the area to $8\\pi$. Find where $r = 0$ and where the curve starts repeating.",
+    "Subtracting the curves before squaring: $\\frac{1}{2}(r_{\\text{outer}} - r_{\\text{inner}})^2$ is wrong. The area between curves is $\\frac{1}{2}(r_{\\text{outer}}^2 - r_{\\text{inner}}^2)$. Test with $r = 2$ outside $r = 1$ over a full turn: correct gives $3\\pi$, wrong gives $\\pi$.",
+    "Finding intersections of two polar curves only by solving $f(\\theta) = g(\\theta)$. Curves can also meet at the pole at different $\\theta$ values, or at points with different representations; sketch to catch these.",
+    "Writing the arc length integrand as $\\sqrt{1 + (dr/d\\theta)^2}$ by analogy with $y = f(x)$. The polar version is $\\sqrt{r^2 + (dr/d\\theta)^2}$; the circular step is $r\\,d\\theta$, not $d\\theta$."
+  ],
+  "whyItMatters": "The sector element $\\frac{1}{2}r^2\\,d\\theta$ is the one-dimensional shadow of the polar area element $r\\,dr\\,d\\theta$ in double integrals, where it makes circular regions easy and evaluates the Gaussian integral $\\int_{-\\infty}^{\\infty} e^{-x^2}\\,dx = \\sqrt{\\pi}$. The polar arc length formula is the parametric one in disguise, which reinforces the lesson that there is one arc length idea with several coordinate costumes. Both integrals are exercises in the trigonometric integration techniques from Chapter 7, now with a geometric payoff.",
+  "checkYourself": [
+    {
+      "q": "What is the area of the sector of $r = 3$ between $\\theta = 0$ and $\\theta = \\frac{\\pi}{2}$?",
+      "a": "$\\int_0^{\\pi/2} \\frac{1}{2} \\cdot 9\\,d\\theta = \\frac{9\\pi}{4}$, a quarter of the circle's area $9\\pi$."
+    },
+    {
+      "q": "Over what $\\theta$-interval is one petal of $r = \\cos 2\\theta$ traced?",
+      "a": "From $-\\frac{\\pi}{4}$ to $\\frac{\\pi}{4}$, where $\\cos 2\\theta$ goes from $0$ to $1$ and back to $0$."
+    },
+    {
+      "q": "Set up the area inside $r = 2$ and outside $r = 1$ for $0 \\le \\theta \\le 2\\pi$.",
+      "a": "$\\int_0^{2\\pi} \\frac{1}{2}(4 - 1)\\,d\\theta = 3\\pi$."
+    },
+    {
+      "q": "Write the arc length integral for $r = \\theta$, $0 \\le \\theta \\le 2\\pi$ (do not evaluate).",
+      "a": "$\\int_0^{2\\pi} \\sqrt{\\theta^2 + 1}\\,d\\theta$."
+    }
+  ],
+  "readingGuide": [
+    "Find the picture of the region divided into thin sectors and the formula for one sector's area; explain in your own words where the $\\frac{1}{2}$ comes from.",
+    "Before reading the solution of the first area example, decide the limits of integration yourself by finding where $r = 0$ or where the curve repeats.",
+    "Locate the discussion of the area between two polar curves and note the warning about finding all intersection points.",
+    "Find the derivation of the polar arc length formula and check the algebra step where $\\sin^2\\theta + \\cos^2\\theta = 1$ collapses the cross terms."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "nodeId": "shape-of-graph",
+  "title": "How Derivatives Affect the Shape of a Graph",
+  "overview": "The derivative is the slope, so it is natural that the sign of $f'$ tells you whether the graph is going up or down. The Mean Value Theorem makes this rigorous: the **increasing/decreasing test** says that if $f'(x) > 0$ on an interval, then $f$ is increasing there, and if $f'(x) < 0$, then $f$ is decreasing. (If $f$ failed to increase, two points would have a nonpositive secant slope, and the MVT would produce a $c$ with $f'(c) \\le 0$.) In practice you find the critical numbers, mark them on a number line, test the sign of $f'$ in each piece, and read off where $f$ rises and falls. That is a **sign chart**, the same piece-testing idea used for inequalities in the ramp.\n\nThe sign chart also classifies critical numbers. The **First Derivative Test**: if $f'$ changes from positive to negative at $c$, the graph rises then falls, so $f$ has a local maximum at $c$. If $f'$ changes from negative to positive, a local minimum. If $f'$ does not change sign, there is no local extreme at $c$, even though the tangent may be horizontal (think of $x^3$ at 0). The test works at any critical number, including corners and cusps where $f'$ fails to exist, because it only asks about the sign of $f'$ on either side.\n\nThe second derivative describes bending. A graph is **concave upward** on an interval if it lies above its tangent lines there, bending like a cup; it is **concave downward** if it lies below them, bending like a frown. Since $f''$ is the rate of change of the slope, $f'' > 0$ means the slopes are increasing, which is concave up, and $f'' < 0$ means concave down. This is the **concavity test**. A point where the concavity changes, from cup to frown or back, is an **inflection point**; at an inflection point $f''$ is zero or undefined, though, as with critical numbers, $f'' = 0$ alone is not enough ($x^4$ has $f''(0) = 0$ but no inflection there). Find candidates by solving $f'' = 0$, then check that $f''$ actually changes sign.\n\nConcavity gives a second way to classify critical numbers. The **Second Derivative Test**: if $f'(c) = 0$ and $f''(c) > 0$, then the graph has a horizontal tangent and bends upward, so $c$ is a local minimum; if $f'(c) = 0$ and $f''(c) < 0$, a local maximum. If $f''(c) = 0$ the test says nothing, and you fall back on the First Derivative Test. The Second Derivative Test is faster when $f''$ is easy, but the First Derivative Test always works.\n\nPutting it together: $f'$ tells you up and down, $f''$ tells you cup and frown, and together with intercepts and asymptotes they determine a graph's shape without plotting many points. A sketch built this way shows exactly where the peaks, valleys, and bends are, which a plotted curve can hide.",
+  "keyIdeas": [
+    "Increasing/decreasing test: $f' > 0$ on an interval means $f$ is increasing there; $f' < 0$ means decreasing. Use a sign chart of $f'$ with the critical numbers as boundaries.",
+    "First Derivative Test: at a critical number $c$, $f'$ changing from $+$ to $-$ gives a local max, from $-$ to $+$ a local min, and no sign change gives no extreme.",
+    "Concavity test: $f'' > 0$ means concave upward (above its tangents), $f'' < 0$ concave downward.",
+    "An inflection point is where concavity changes; candidates are where $f'' = 0$ or is undefined, confirmed by a sign change of $f''$.",
+    "Second Derivative Test: if $f'(c) = 0$, then $f''(c) > 0$ gives a local min and $f''(c) < 0$ a local max; $f''(c) = 0$ is inconclusive.",
+    "$f'$ governs rise and fall, $f''$ governs bending; together they determine the shape."
+  ],
+  "workedExamples": [
+    {
+      "title": "Sign chart and the First Derivative Test",
+      "problem": "Find where $f(x) = x^4 - 4x^3$ is increasing and decreasing, and classify its critical numbers.",
+      "steps": [
+        "$f'(x) = 4x^3 - 12x^2 = 4x^2(x - 3)$. Critical numbers: $x = 0$ and $x = 3$.",
+        "Sign chart for $f'$: test $x = -1$: $4(1)(-4) < 0$. Test $x = 1$: $4(1)(-2) < 0$. Test $x = 4$: $4(16)(1) > 0$.",
+        "So $f$ is decreasing on $(-\\infty, 3)$ and increasing on $(3, \\infty)$.",
+        "At $x = 3$, $f'$ changes from $-$ to $+$: local minimum, $f(3) = 81 - 108 = -27$. At $x = 0$, $f'$ is negative on both sides: no extreme, just a horizontal tangent (the factor $x^2$ does not change sign)."
+      ]
+    },
+    {
+      "title": "Concavity and inflection points",
+      "problem": "For the same $f(x) = x^4 - 4x^3$, find the intervals of concavity and the inflection points.",
+      "steps": [
+        "$f''(x) = 12x^2 - 24x = 12x(x - 2)$. Zero at $x = 0$ and $x = 2$.",
+        "Sign chart for $f''$: test $x = -1$: $12(-1)(-3) > 0$. Test $x = 1$: $12(1)(-1) < 0$. Test $x = 3$: $12(3)(1) > 0$.",
+        "Concave up on $(-\\infty, 0)$ and $(2, \\infty)$; concave down on $(0, 2)$.",
+        "Concavity changes at both $x = 0$ and $x = 2$, so both are inflection points: $(0, 0)$ and $(2, 16 - 32) = (2, -16)$. Note $x = 0$ is an inflection point with a horizontal tangent, which is why it was not an extreme."
+      ]
+    },
+    {
+      "title": "Second Derivative Test",
+      "problem": "Classify the critical numbers of $g(x) = x + \\dfrac{4}{x}$ using the Second Derivative Test.",
+      "steps": [
+        "$g'(x) = 1 - \\frac{4}{x^2} = 0$ when $x^2 = 4$, so $x = \\pm 2$. (Also $x = 0$ is not in the domain, so it is not a critical number.)",
+        "$g''(x) = \\frac{8}{x^3}$.",
+        "$g''(2) = 1 > 0$: local minimum at $x = 2$, value $g(2) = 4$. $g''(-2) = -1 < 0$: local maximum at $x = -2$, value $g(-2) = -4$.",
+        "Sanity check: a local max of $-4$ below a local min of $4$ is possible because the vertical asymptote at $x = 0$ separates the two branches."
+      ]
+    },
+    {
+      "title": "When the Second Derivative Test fails",
+      "problem": "Classify the critical number $x = 0$ for $f(x) = x^4$ and for $h(x) = x^3$.",
+      "steps": [
+        "For $x^4$: $f'(x) = 4x^3 = 0$ at 0, and $f''(x) = 12x^2$ gives $f''(0) = 0$. Inconclusive.",
+        "First Derivative Test: $f'(-1) = -4 < 0$ and $f'(1) = 4 > 0$, a change from $-$ to $+$. Local minimum at 0.",
+        "For $x^3$: $h'(x) = 3x^2 = 0$ at 0, and $h''(0) = 0$. Also inconclusive.",
+        "First Derivative Test: $h'(-1) = 3 > 0$ and $h'(1) = 3 > 0$, no sign change. No extreme; $(0, 0)$ is an inflection point with a horizontal tangent."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Concluding an extreme from $f'(c) = 0$ alone. Check the sign change of $f'$ or the sign of $f''$; $x^3$ at 0 is the standard counterexample.",
+    "Concluding an inflection point from $f''(c) = 0$ alone. $x^4$ has $f''(0) = 0$ but is concave up everywhere; $f''$ must change sign.",
+    "Reading the Second Derivative Test backwards. $f'' > 0$ means concave up, a cup, which holds a minimum.",
+    "Testing the sign of $f'$ at the critical number itself, where it is zero, instead of in the intervals on either side.",
+    "Including a point outside the domain, like $x = 0$ for $x + \\frac{4}{x}$, as a critical number or inflection point. It can still be a boundary on the sign chart."
+  ],
+  "whyItMatters": "An integral accumulates signed area, so knowing where an integrand is positive or negative (a sign chart) is the first step of any area problem. Concavity controls the error in numerical integration: the Trapezoidal Rule overestimates on concave-up stretches and underestimates on concave-down ones, and the Midpoint Rule does the opposite, which is exactly why Simpson's Rule blends them. The sign-chart technique is also how you decide where a solution to a differential equation is increasing or decreasing in Chapter 9.",
+  "checkYourself": [
+    {
+      "q": "If $f'(x) = (x - 1)(x - 4)$, where is $f$ decreasing?",
+      "a": "On $(1, 4)$, where $f' < 0$."
+    },
+    {
+      "q": "$f'(c) = 0$ and $f''(c) = -5$. What is at $c$?",
+      "a": "A local maximum."
+    },
+    {
+      "q": "Where is $f(x) = x^3 - 6x^2$ concave down?",
+      "a": "$f'' = 6x - 12 < 0$ for $x < 2$."
+    },
+    {
+      "q": "Does $f'' = 0$ at a point guarantee an inflection point?",
+      "a": "No; $f''$ must change sign there."
+    }
+  ],
+  "readingGuide": [
+    "Find the increasing/decreasing test and note that its proof uses the Mean Value Theorem.",
+    "Find the First Derivative Test and its figures; for each case sketch the sign of $f'$ on both sides of $c$.",
+    "Find the definition of concavity (above or below the tangent lines) and the concavity test, then the definition of an inflection point.",
+    "Find the Second Derivative Test and the example where it is inconclusive; note what you do instead.",
+    "Before reading the solution of the main sketching example, build your own sign charts for $f'$ and $f''$ and sketch, then compare."
+  ]
+}

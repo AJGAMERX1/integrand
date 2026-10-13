@@ -1,0 +1,87 @@
+{
+  "nodeId": "power-exp-derivatives",
+  "title": "Derivatives of Polynomials and Exponential Functions",
+  "overview": "Computing every derivative from the limit definition would be exhausting. The good news is that a handful of rules, each proved once from the definition, handle all polynomials and exponentials from now on. The first is for constants: a horizontal line has slope 0, so $\\frac{d}{dx}c = 0$. The second is the **power rule**:\n$$\\frac{d}{dx}x^n = nx^{n - 1}.$$\nFor $x^2$ this gives $2x$, matching the definition; for $x^3$, $3x^2$; for $x$ itself ($n = 1$), $1$. The rule holds for **every** real exponent $n$, not just whole numbers, which is why the ramp insisted on rewriting roots and reciprocals as powers: $\\frac{d}{dx}\\sqrt{x} = \\frac{d}{dx}x^{1/2} = \\frac{1}{2}x^{-1/2} = \\frac{1}{2\\sqrt{x}}$, and $\\frac{d}{dx}\\frac{1}{x} = \\frac{d}{dx}x^{-1} = -x^{-2} = -\\frac{1}{x^2}$. Both match what the definition gave earlier.\n\nDerivatives respect addition and constant multiples. The **constant multiple rule** says $\\frac{d}{dx}[cf(x)] = cf'(x)$, and the **sum and difference rules** say $\\frac{d}{dx}[f(x) \\pm g(x)] = f'(x) \\pm g'(x)$. Together with the power rule, these let you differentiate any polynomial term by term: $\\frac{d}{dx}(4x^3 - 7x^2 + 2x - 9) = 12x^2 - 14x + 2$. The constant $-9$ vanishes. The degree drops by one.\n\nExponential functions need their own rule. From the definition, $\\frac{d}{dx}b^x = \\lim_{h \\to 0}\\frac{b^{x + h} - b^x}{h} = b^x\\cdot\\lim_{h \\to 0}\\frac{b^h - 1}{h}$. The limit on the right is a constant that depends only on $b$: it is the slope of $y = b^x$ at $x = 0$. For $b = 2$ it is about $0.693$ and for $b = 3$ about $1.099$. The number $e$ was **defined** as the base for which this slope is exactly 1, so\n$$\\frac{d}{dx}e^x = e^x.$$\nThe exponential function is its own derivative, which is the cleanest statement in all of calculus and the reason $e$ is everywhere. For other bases, the derivative is $b^x$ times that constant, and in the log section you will see the constant is $\\ln b$.\n\nWith these rules the tangent-line and rate problems of the last two sections become quick. To find where $y = x^3 - 3x$ has a horizontal tangent, set $y' = 3x^2 - 3 = 0$, giving $x = \\pm 1$. To find the velocity of $s(t) = t^4 - 2t^2$, differentiate: $v = 4t^3 - 4t$. The rules also apply repeatedly for higher derivatives: $\\frac{d^2}{dx^2}x^5 = \\frac{d}{dx}5x^4 = 20x^3$.\n\nA final caution: the power rule needs a constant exponent and a variable base. It does **not** apply to $2^x$ (variable exponent, use the exponential rule) or to $x^x$ (both variable, handled later). When you see $x^n$, check which role the variable plays before reaching for a rule.",
+  "keyIdeas": [
+    "$\\frac{d}{dx}c = 0$ and $\\frac{d}{dx}x^n = nx^{n-1}$ for any real $n$; rewrite roots and reciprocals as powers first.",
+    "$\\frac{d}{dx}[cf] = cf'$ and $\\frac{d}{dx}[f \\pm g] = f' \\pm g'$; differentiate polynomials term by term.",
+    "$\\frac{d}{dx}e^x = e^x$: $e$ is defined so that the slope of $b^x$ at $x = 0$ is exactly 1.",
+    "$\\frac{d}{dx}b^x = b^x\\cdot\\lim_{h \\to 0}\\frac{b^h - 1}{h}$; the constant is the slope at 0 (and equals $\\ln b$).",
+    "The power rule needs a constant exponent; $2^x$ is not a power function.",
+    "Horizontal tangents occur where $f'(x) = 0$; solve that equation to find them."
+  ],
+  "workedExamples": [
+    {
+      "title": "Differentiating a polynomial with roots and reciprocals",
+      "problem": "Find $f'(x)$ for $f(x) = 2x^4 - \\dfrac{5}{x^2} + 3\\sqrt{x} - 7$.",
+      "steps": [
+        "Rewrite each term as a power: $f(x) = 2x^4 - 5x^{-2} + 3x^{1/2} - 7$.",
+        "Apply the power rule term by term: $\\frac{d}{dx}2x^4 = 8x^3$; $\\frac{d}{dx}(-5x^{-2}) = -5(-2)x^{-3} = 10x^{-3}$; $\\frac{d}{dx}3x^{1/2} = \\frac{3}{2}x^{-1/2}$; $\\frac{d}{dx}(-7) = 0$.",
+        "Combine: $f'(x) = 8x^3 + \\frac{10}{x^3} + \\frac{3}{2\\sqrt{x}}$.",
+        "Check the middle term with $x = 1$: the secant of $-\\frac{5}{x^2}$ from 1 to 1.01 is $\\frac{-4.9015 + 5}{0.01} \\approx 9.85$, close to $10$. Good."
+      ]
+    },
+    {
+      "title": "Tangent line to an exponential",
+      "problem": "Find the equation of the tangent line to $y = e^x + x^2$ at $x = 0$.",
+      "steps": [
+        "Point: at $x = 0$, $y = e^0 + 0 = 1$. The point is $(0, 1)$.",
+        "Slope: $y' = e^x + 2x$, so at $x = 0$, $y' = 1 + 0 = 1$.",
+        "Point-slope: $y - 1 = 1(x - 0)$, so $y = x + 1$.",
+        "Check: at $x = 0.1$, the curve is $e^{0.1} + 0.01 \\approx 1.1052 + 0.01 = 1.1152$ and the line is $1.1$. Close, and the curve is above, since it bends upward."
+      ]
+    },
+    {
+      "title": "Horizontal tangents",
+      "problem": "Find all points on $y = x^3 - 12x + 1$ where the tangent line is horizontal.",
+      "steps": [
+        "Differentiate: $y' = 3x^2 - 12$.",
+        "Horizontal tangent means $y' = 0$: $3x^2 - 12 = 0$, so $x^2 = 4$, $x = \\pm 2$.",
+        "Find the $y$-values: at $x = 2$, $y = 8 - 24 + 1 = -15$; at $x = -2$, $y = -8 + 24 + 1 = 17$.",
+        "Points: $(2, -15)$ and $(-2, 17)$. These are the valley and peak of the cubic; $y'$ is negative between them ($y'(0) = -12$) and positive outside."
+      ]
+    },
+    {
+      "title": "Expand first, then differentiate",
+      "problem": "Find $\\dfrac{dy}{dx}$ for $y = (x^2 + 1)(x - 3)$ and $y = \\dfrac{x^3 + 4x}{x}$.",
+      "steps": [
+        "There is no product or quotient rule yet, so expand. First: $(x^2 + 1)(x - 3) = x^3 - 3x^2 + x - 3$, so $y' = 3x^2 - 6x + 1$.",
+        "Second: divide each term by $x$ (for $x \\ne 0$): $\\frac{x^3}{x} + \\frac{4x}{x} = x^2 + 4$, so $y' = 2x$.",
+        "Check the first at $x = 0$: $y' = 1$. Secant from 0 to 0.01: $y(0.01) = (1.0001)(-2.99) = -2.9903$ and $y(0) = -3$, slope $\\approx 0.97$. Close to 1."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Applying the power rule to $2^x$: writing $x\\cdot 2^{x-1}$. The exponent is the variable, so use $\\frac{d}{dx}2^x = 2^x\\ln 2 \\approx 0.693\\cdot 2^x$.",
+    "Forgetting to subtract 1 from the exponent: $\\frac{d}{dx}x^3 = 3x^3$. The degree must drop: $3x^2$.",
+    "Differentiating $\\frac{1}{x^2}$ as $\\frac{1}{2x}$. Rewrite as $x^{-2}$ first: the derivative is $-2x^{-3} = -\\frac{2}{x^3}$.",
+    "Keeping the constant: $\\frac{d}{dx}(x^2 + 7) = 2x + 7$. A constant term has derivative 0.",
+    "Differentiating a product by multiplying the derivatives: $\\frac{d}{dx}[(x^2 + 1)(x - 3)] = (2x)(1)$. Expand first (or wait for the product rule)."
+  ],
+  "whyItMatters": "Every rule here runs backwards as an integration rule: since $\\frac{d}{dx}\\frac{x^{n+1}}{n+1} = x^n$, you get $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ for $n \\ne -1$, and since $\\frac{d}{dx}e^x = e^x$, you get $\\int e^x\\,dx = e^x + C$. The sum and constant-multiple rules become the linearity of the integral. Your Daily Integral tier I3 is exactly this: power-rule antiderivatives, which you can now check by differentiating.",
+  "checkYourself": [
+    {
+      "q": "$\\frac{d}{dx}(x^6 - 4x^2 + 10)$?",
+      "a": "$6x^5 - 8x$."
+    },
+    {
+      "q": "$\\frac{d}{dx}\\sqrt[3]{x}$?",
+      "a": "$\\frac{1}{3}x^{-2/3}$."
+    },
+    {
+      "q": "$\\frac{d}{dx}(3e^x)$?",
+      "a": "$3e^x$."
+    },
+    {
+      "q": "Where does $y = x^2 - 6x$ have a horizontal tangent?",
+      "a": "$y' = 2x - 6 = 0$ at $x = 3$."
+    }
+  ],
+  "readingGuide": [
+    "Find the power rule and its proof for positive integers; follow the proof for $n = 3$ by hand.",
+    "Locate the constant multiple, sum, and difference rules and note that they are proved from the limit laws.",
+    "Find the derivation of $\\frac{d}{dx}b^x$ and the definition of $e$ in terms of the limit $\\lim_{h \\to 0}\\frac{e^h - 1}{h} = 1$.",
+    "Before reading the solution of the first example with a horizontal tangent, set the derivative to zero and solve yourself.",
+    "Check the table or figure estimating the slopes of $2^x$ and $3^x$ at 0, and note where $e$ sits between them."
+  ]
+}

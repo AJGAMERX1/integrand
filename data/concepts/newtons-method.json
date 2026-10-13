@@ -1,0 +1,88 @@
+{
+  "nodeId": "newtons-method",
+  "title": "Newton's Method",
+  "overview": "Most equations cannot be solved exactly. $x^5 - x - 1 = 0$, $\\cos x = x$, $e^x = 3x$: there is no formula for their solutions. The Intermediate Value Theorem tells you a root exists and bisection narrows it down slowly, gaining about one decimal digit every three steps. **Newton's method** uses the tangent line to do far better, typically doubling the number of correct digits with every step.\n\nThe idea is to approximate the curve by its tangent line and solve the easy linear equation instead. Start with a guess $x_1$ near the root of $f(x) = 0$. The tangent line at $(x_1, f(x_1))$ is $y = f(x_1) + f'(x_1)(x - x_1)$. It crosses the $x$-axis where $0 = f(x_1) + f'(x_1)(x - x_1)$, that is at\n$$x_2 = x_1 - \\frac{f(x_1)}{f'(x_1)}.$$\nIf the curve is nearly straight between $x_1$ and the root, $x_2$ is much closer to the root than $x_1$ was. Now repeat from $x_2$ to get $x_3$, and so on:\n$$x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}.$$\nStop when two successive approximations agree to the number of decimal places you want.\n\nFor example, to find $\\sqrt{2}$, solve $f(x) = x^2 - 2 = 0$ with $f'(x) = 2x$. The iteration is $x_{n+1} = x_n - \\frac{x_n^2 - 2}{2x_n}$. Starting from $x_1 = 1$: $x_2 = 1 - \\frac{-1}{2} = 1.5$, $x_3 = 1.5 - \\frac{0.25}{3} = 1.41667$, $x_4 = 1.41667 - \\frac{0.00695}{2.83333} = 1.41422$, and $x_5 = 1.414214$, correct to six decimals. Four steps from a crude guess. This particular iteration simplifies to $x_{n+1} = \\frac{1}{2}\\left(x_n + \\frac{2}{x_n}\\right)$, the ancient method for square roots.\n\nThe method is not foolproof. If $f'(x_n)$ is zero or very small, the tangent is nearly horizontal and shoots $x_{n+1}$ far away. If the initial guess is on the wrong side of an inflection point or a local extreme, the iterates can wander to a different root, oscillate, or diverge. A sketch of the function, or a sign check with the IVT, is the usual way to pick a safe starting point: choose $x_1$ close to the root and on a stretch where the graph is steep and does not bend much. When the method does converge, it usually does so spectacularly, and when it misbehaves you can tell quickly, because the iterates fail to settle.\n\nTo solve an equation that is not already in the form $f(x) = 0$, move everything to one side: $\\cos x = x$ becomes $f(x) = \\cos x - x = 0$ with $f'(x) = -\\sin x - 1$. Then iterate as usual. The method extends to finding where two curves intersect, which you need for setting up areas between curves, and it is what calculators actually run when you press the \"solve\" or \"intersect\" button.",
+  "keyIdeas": [
+    "Newton's method solves $f(x) = 0$ by repeatedly replacing the curve with its tangent line: $x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}$.",
+    "Each step is where the tangent line at $x_n$ crosses the $x$-axis.",
+    "Stop when successive approximations agree to the desired number of decimals.",
+    "Convergence is usually very fast (roughly doubling the correct digits each step) when the starting point is close to the root.",
+    "The method can fail if $f'(x_n) \\approx 0$, if the guess is poor, or near inflection points; use a sketch or the IVT to choose $x_1$.",
+    "To solve $g(x) = h(x)$, apply the method to $f(x) = g(x) - h(x)$."
+  ],
+  "workedExamples": [
+    {
+      "title": "A cube root",
+      "problem": "Use Newton's method to approximate $\\sqrt[3]{10}$ to four decimal places.",
+      "steps": [
+        "Solve $f(x) = x^3 - 10 = 0$ with $f'(x) = 3x^2$. Iteration: $x_{n+1} = x_n - \\frac{x_n^3 - 10}{3x_n^2}$. Since $2^3 = 8$ is close to 10, start with $x_1 = 2$.",
+        "$x_2 = 2 - \\frac{8 - 10}{12} = 2 + 0.16667 = 2.16667$.",
+        "$x_3 = 2.16667 - \\frac{10.1713 - 10}{14.0833} = 2.16667 - 0.01216 = 2.15450$.",
+        "$x_4 = 2.15450 - \\frac{10.00006 - 10}{13.9256} \\approx 2.15450 - 0.0000043 \\approx 2.15443$. Then $x_5$ agrees to many more places. $\\sqrt[3]{10} \\approx 2.1544$."
+      ]
+    },
+    {
+      "title": "Solving cos x = x",
+      "problem": "Find the solution of $\\cos x = x$ to five decimal places.",
+      "steps": [
+        "Rewrite as $f(x) = \\cos x - x = 0$, with $f'(x) = -\\sin x - 1$. Since $f(0) = 1 > 0$ and $f(1) = \\cos 1 - 1 < 0$, the root is in $(0, 1)$; start with $x_1 = 1$.",
+        "$x_2 = 1 - \\frac{\\cos 1 - 1}{-\\sin 1 - 1} = 1 - \\frac{-0.45970}{-1.84147} = 1 - 0.24963 = 0.75036$.",
+        "$x_3 = 0.75036 - \\frac{\\cos(0.75036) - 0.75036}{-\\sin(0.75036) - 1} = 0.75036 - \\frac{-0.01889}{-1.68190} = 0.75036 - 0.01123 = 0.73913$.",
+        "$x_4 = 0.73913 - \\frac{\\cos(0.73913) - 0.73913}{-\\sin(0.73913) - 1} \\approx 0.73913 - \\frac{-0.0000751}{-1.67362} \\approx 0.73913 - 0.0000449 \\approx 0.73909$. Then $x_5$ agrees to every displayed digit: the root is $0.73909$ (more precisely $0.7390851$)."
+      ]
+    },
+    {
+      "title": "A bad starting point",
+      "problem": "Apply Newton's method to $f(x) = x^3 - 2x + 2$ starting from $x_1 = 0$, and explain what happens.",
+      "steps": [
+        "$f'(x) = 3x^2 - 2$. From $x_1 = 0$: $x_2 = 0 - \\frac{2}{-2} = 1$.",
+        "From $x_2 = 1$: $f(1) = 1 - 2 + 2 = 1$ and $f'(1) = 1$, so $x_3 = 1 - 1 = 0$.",
+        "The iterates bounce between 0 and 1 forever and never approach the actual root, which is near $x \\approx -1.769$.",
+        "Lesson: the starting point was on the wrong side of the local extremes near $x = \\pm 0.816$. Starting at $x_1 = -2$ (where $f(-2) = -2$ and $f(-1) = 3$ bracket the root) converges quickly: $x_2 = -2 - \\frac{-2}{10} = -1.8$, $x_3 \\approx -1.7699$."
+      ]
+    },
+    {
+      "title": "Intersection of two curves",
+      "problem": "Find where $y = e^{-x}$ and $y = x^2$ intersect for $x > 0$, to four decimals.",
+      "steps": [
+        "Set $f(x) = e^{-x} - x^2 = 0$, $f'(x) = -e^{-x} - 2x$. Since $f(0) = 1 > 0$ and $f(1) = 0.368 - 1 < 0$, the root is in $(0, 1)$. Start with $x_1 = 0.7$.",
+        "$x_2 = 0.7 - \\frac{e^{-0.7} - 0.49}{-e^{-0.7} - 1.4} = 0.7 - \\frac{0.49659 - 0.49}{-1.89659} = 0.7 + 0.00347 = 0.70347$.",
+        "$x_3 = 0.70347 - \\frac{e^{-0.70347} - 0.49487}{-e^{-0.70347} - 1.40694} \\approx 0.70347 - \\frac{0.49487 - 0.49487}{\\cdots} \\approx 0.70347$. Already stable to five decimals.",
+        "Intersection at $x \\approx 0.7035$, $y \\approx 0.4949$. This is the kind of limit of integration you would need for the area between these curves."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Mixing up the formula as $x_n + \\frac{f}{f'}$ or $x_n - \\frac{f'}{f}$. It is $x_n - \\frac{f(x_n)}{f'(x_n)}$; check that a step moves toward the root on a sketch.",
+    "Rounding intermediate iterates too aggressively, which stalls convergence. Carry at least two more decimals than you want in the answer.",
+    "Starting at a point where $f'$ is zero or tiny, such as a local extreme. The first step flies off to a huge value.",
+    "Stopping after one step because the number looks reasonable. Stop only when two successive iterates agree to the required precision.",
+    "Forgetting to move everything to one side: applying the method to $\\cos x$ alone instead of to $\\cos x - x$."
+  ],
+  "whyItMatters": "Areas between curves, volumes, and arc lengths all need the crossing points of curves as limits of integration, and those crossings are often found only numerically; Newton's method is the tool. It is also a first example of an iterative algorithm built from the linear approximation, the same idea behind Euler's method for differential equations in Chapter 9 and behind the way numerical integration refines its estimates. And it shows how calculus and computation support each other: the derivative provides the direction, the iteration provides the digits.",
+  "checkYourself": [
+    {
+      "q": "Newton step for $f(x) = x^2 - 5$ from $x_1 = 2$?",
+      "a": "$x_2 = 2 - \\frac{4 - 5}{4} = 2.25$."
+    },
+    {
+      "q": "What is the geometric meaning of one Newton step?",
+      "a": "Follow the tangent line at $x_n$ to where it meets the $x$-axis."
+    },
+    {
+      "q": "Why is $x_1$ at a local extreme a bad choice?",
+      "a": "$f'(x_1) = 0$, so the formula divides by zero."
+    },
+    {
+      "q": "How do you apply the method to $e^x = 3x$?",
+      "a": "Use $f(x) = e^x - 3x$ and $f'(x) = e^x - 3$."
+    }
+  ],
+  "readingGuide": [
+    "Find the derivation of the Newton iteration formula from the tangent line and redo it yourself from point-slope form.",
+    "Study the figure showing successive tangent lines approaching the root, then the figure showing a case where the method fails.",
+    "Before reading the solution of the first numerical example, run two iterations yourself with a calculator.",
+    "Note how the text decides when to stop iterating, and what precision it keeps in intermediate steps.",
+    "Look for the example that solves an equation not initially in the form $f(x) = 0$ and note the rearrangement."
+  ]
+}

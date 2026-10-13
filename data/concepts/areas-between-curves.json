@@ -1,0 +1,80 @@
+{
+  "nodeId": "areas-between-curves",
+  "title": "Areas Between Curves",
+  "overview": "You already know that $\\int_a^b f(x)\\,dx$ measures the area under a graph. Now put two graphs on the same picture. The region trapped between them is a stack of thin vertical strips. Each strip runs from the lower curve up to the upper curve, so its height is (top) minus (bottom) and its width is a tiny $dx$. Add up all the strips and you get the area.\n\nThat is the whole formula. If $f(x) \\ge g(x)$ on $[a,b]$, the area between the curves is\n$$A = \\int_a^b \\left( f(x) - g(x) \\right) dx.$$\nThe order matters: it is always the higher curve minus the lower curve. If you subtract the wrong way, the integral comes out negative, which is a signal that you swapped them.\n\nTwo things take most of the work in practice. First, you often need to **find where the curves cross** by solving $f(x) = g(x)$; those crossing points become the limits of integration. Second, you must **check which curve is on top**. Pick a test value of $x$ inside the interval and plug it into both formulas. If the curves cross in the middle of the interval, split the integral at the crossing point and subtract in the correct order on each piece.\n\nSometimes a region is easier to slice horizontally. Then the strips have width $dy$, and the integrand is (right curve) minus (left curve), with both curves written as $x$ in terms of $y$:\n$$A = \\int_c^d \\left( x_{\\text{right}}(y) - x_{\\text{left}}(y) \\right) dy.$$\nUse this when the boundaries are given as $x = $ something, or when a vertical strip would need two different formulas for its bottom edge.\n\nEvery later application in this chapter, volumes, work, averages, follows the same recipe: slice, write one slice as a simple product, then integrate.",
+  "keyIdeas": [
+    "Area between $y = f(x)$ and $y = g(x)$ on $[a,b]$, with $f$ on top: $A = \\int_a^b (f(x) - g(x))\\,dx$.",
+    "Find the limits of integration by solving $f(x) = g(x)$ when they are not given.",
+    "Decide which curve is on top by testing a point inside the interval, not by guessing from the formulas.",
+    "If the curves cross inside the interval, split at the crossing and keep (top minus bottom) positive on each piece. Equivalently, $A = \\int_a^b |f(x) - g(x)|\\,dx$.",
+    "Horizontal slices: $A = \\int_c^d (x_{\\text{right}} - x_{\\text{left}})\\,dy$, with both boundaries solved for $x$ in terms of $y$.",
+    "The area is always positive. A negative result means the subtraction order or the limits are wrong."
+  ],
+  "workedExamples": [
+    {
+      "title": "A parabola under a line",
+      "problem": "Find the area of the region enclosed by $y = 2x$ and $y = x^2$.",
+      "steps": [
+        "Find where the curves meet: $2x = x^2$ gives $x^2 - 2x = 0$, so $x(x - 2) = 0$ and $x = 0$ or $x = 2$. These are the limits.",
+        "Decide which is on top. Test $x = 1$: the line gives $2$, the parabola gives $1$. The line is on top on $[0, 2]$.",
+        "Set up the integral with top minus bottom: $A = \\int_0^2 (2x - x^2)\\,dx$.",
+        "Integrate: $\\left[ x^2 - \\frac{x^3}{3} \\right]_0^2 = 4 - \\frac{8}{3} = \\frac{4}{3}$.",
+        "Sanity check: the region sits inside the rectangle $0 \\le x \\le 2$, $0 \\le y \\le 4$ of area 8, and $\\frac{4}{3}$ is a reasonable slice of that."
+      ]
+    },
+    {
+      "title": "Curves that cross in the middle",
+      "problem": "Find the area between $y = x$ and $y = x^3$ for $0 \\le x \\le 2$.",
+      "steps": [
+        "Find crossings inside the interval: $x = x^3$ gives $x(1 - x^2) = 0$, so $x = 0$ or $x = 1$ (the root $x = -1$ is outside). The curves cross at $x = 1$, so split there.",
+        "On $[0, 1]$ test $x = \\frac{1}{2}$: the line gives $0.5$, the cubic gives $0.125$. The line is on top. On $[1, 2]$ test $x = 2$: the cubic gives $8$, the line gives $2$. The cubic is on top.",
+        "First piece: $\\int_0^1 (x - x^3)\\,dx = \\left[ \\frac{x^2}{2} - \\frac{x^4}{4} \\right]_0^1 = \\frac{1}{2} - \\frac{1}{4} = \\frac{1}{4}$.",
+        "Second piece: $\\int_1^2 (x^3 - x)\\,dx = \\left[ \\frac{x^4}{4} - \\frac{x^2}{2} \\right]_1^2 = (4 - 2) - \\left( \\frac{1}{4} - \\frac{1}{2} \\right) = 2 + \\frac{1}{4} = \\frac{9}{4}$.",
+        "Add the pieces: $A = \\frac{1}{4} + \\frac{9}{4} = \\frac{5}{2}$. If you had integrated $x - x^3$ straight across $[0, 2]$ you would get $\\frac{1}{4} - \\frac{9}{4} = -2$, a sign that the pieces cancelled instead of adding."
+      ]
+    },
+    {
+      "title": "Slicing horizontally",
+      "problem": "Find the area of the region bounded by $x = y^2$ and $x = y + 2$.",
+      "steps": [
+        "Both boundaries are already written as $x$ in terms of $y$, so horizontal strips are natural. Each strip runs from the left curve to the right curve and has thickness $dy$.",
+        "Find where they meet: $y^2 = y + 2$ gives $y^2 - y - 2 = 0$, so $(y - 2)(y + 1) = 0$ and $y = -1$ or $y = 2$.",
+        "Which is on the right? Test $y = 0$: the line gives $x = 2$, the parabola gives $x = 0$. The line $x = y + 2$ is on the right.",
+        "Set up right minus left: $A = \\int_{-1}^{2} \\left( (y + 2) - y^2 \\right) dy$.",
+        "Integrate: $\\left[ \\frac{y^2}{2} + 2y - \\frac{y^3}{3} \\right]_{-1}^{2} = \\left( 2 + 4 - \\frac{8}{3} \\right) - \\left( \\frac{1}{2} - 2 + \\frac{1}{3} \\right) = \\frac{10}{3} + \\frac{7}{6} = \\frac{27}{6} = \\frac{9}{2}$.",
+        "Why not vertical strips? A vertical strip for $0 \\le x \\le 1$ has the parabola on both its top and bottom, while for $1 \\le x \\le 4$ the bottom is the line. That needs two integrals; the horizontal version needs one."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Subtracting bottom minus top. Check with $y = 2x$ over $y = x^2$ on $[0,2]$: $\\int_0^2 (x^2 - 2x)\\,dx = -\\frac{4}{3}$. Area cannot be negative, so flip the order.",
+    "Integrating straight across a crossing point. For $y = x$ and $y = x^3$ on $[0,2]$, the single integral $\\int_0^2 (x - x^3)\\,dx = -2$, but the true area is $\\frac{5}{2}$. Split at $x = 1$.",
+    "Using the given interval as the limits when the problem says \"enclosed by\". Enclosed regions start and end where the curves cross, so solve $f(x) = g(x)$ first.",
+    "Mixing variables in a horizontal slice, such as writing $\\int (y + 2 - y^2)\\,dx$. If the strips have thickness $dy$, everything in the integrand must be in terms of $y$."
+  ],
+  "whyItMatters": "The \"slice, write one slice, integrate\" pattern is the engine behind every application of integration. Volumes are stacks of thin disks, work is a sum of tiny force-times-distance pieces, and probability is area under a density curve. If you can set up an area between curves with confidence, including choosing the slice direction and finding the limits, the rest of Chapter 6 is the same move with a different integrand.",
+  "checkYourself": [
+    {
+      "q": "What is the integrand for the area between $y = 4$ and $y = x^2$ on $[-2, 2]$?",
+      "a": "$4 - x^2$, since the line $y = 4$ is on top. The area is $\\int_{-2}^{2} (4 - x^2)\\,dx = \\frac{32}{3}$."
+    },
+    {
+      "q": "You compute an area and get $-6$. What went wrong?",
+      "a": "Either the subtraction order is reversed (the area is $6$) or the curves cross inside the interval and the pieces cancelled. Test a point and check for crossings."
+    },
+    {
+      "q": "When would you choose horizontal slices?",
+      "a": "When the boundaries are naturally $x$ in terms of $y$, or when a vertical strip's top or bottom edge would switch formulas partway across."
+    },
+    {
+      "q": "Where do $y = x^2$ and $y = x + 2$ cross?",
+      "a": "Solve $x^2 = x + 2$: $x^2 - x - 2 = (x-2)(x+1) = 0$, so $x = -1$ and $x = 2$."
+    }
+  ],
+  "readingGuide": [
+    "Find the general area formula and notice how the picture of a thin strip of height (top minus bottom) turns into the integrand.",
+    "Look for the discussion of what to do when the curves cross inside the interval, and relate it to the absolute value form of the formula.",
+    "Before reading the solution of the first example that uses horizontal slices, sketch the region and decide for yourself why vertical slices would be awkward.",
+    "Watch how each example finds the limits of integration. Note whether they come from solving $f(x) = g(x)$ or are given directly."
+  ]
+}

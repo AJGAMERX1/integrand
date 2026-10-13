@@ -1,0 +1,85 @@
+{
+  "nodeId": "ratio-root-tests",
+  "title": "Absolute Convergence and the Ratio and Root Tests",
+  "overview": "When a series has mixed signs, there is a strong way and a weak way for it to converge. The strong way: take absolute values of all the terms and the result still converges. Then $\\sum a_n$ is **absolutely convergent**. The key fact is that absolute convergence implies convergence: if $\\sum |a_n|$ converges, so does $\\sum a_n$. This is handy because $\\sum |a_n|$ has positive terms, so every test from the earlier nodes applies to it.\n\nThe weak way: $\\sum a_n$ converges but $\\sum |a_n|$ diverges. That is **conditional convergence**. The alternating harmonic series $\\sum \\frac{(-1)^{n+1}}{n}$ is the standard example: it converges, but its absolute version is the harmonic series, which diverges. Conditionally convergent series are delicate (rearranging their terms can change the sum), while absolutely convergent series behave like ordinary finite sums.\n\nThe **Ratio Test** is the most used tool for absolute convergence. Compute\n$$L = \\lim_{n \\to \\infty} \\left| \\frac{a_{n+1}}{a_n} \\right|.$$\nIf $L < 1$, the series converges absolutely. If $L > 1$ (or $L = \\infty$), it diverges. If $L = 1$, the test is inconclusive and you must try something else. Think of $L$ as the long-run shrink factor from one term to the next, and compare it with the ratio $r$ of a geometric series. The reason it works: when $L < 1$, the terms eventually shrink by a factor close to $L$ each step, so far out the series looks like a geometric series with ratio less than $1$. The ratio test is ideal when terms contain factorials or powers like $3^n$, because consecutive terms cancel neatly.\n\nThe **Root Test** is the same idea with $n$-th roots: $L = \\lim_{n \\to \\infty} \\sqrt[n]{|a_n|}$, with the same three conclusions. Use it when the whole term is raised to the power $n$, such as $\\left(\\frac{2n}{3n+1}\\right)^n$.\n\nBoth tests give $L = 1$ for every p-series, so they are useless on rational terms. For those, fall back on comparison or the integral test.",
+  "keyIdeas": [
+    "$\\sum a_n$ is absolutely convergent if $\\sum |a_n|$ converges. Absolute convergence implies convergence.",
+    "$\\sum a_n$ is conditionally convergent if it converges but $\\sum |a_n|$ diverges. Example: $\\sum \\frac{(-1)^{n+1}}{n}$.",
+    "Ratio Test: let $L = \\lim_{n \\to \\infty} \\left| \\frac{a_{n+1}}{a_n} \\right|$. If $L < 1$ the series converges absolutely; if $L > 1$ or $L = \\infty$ it diverges; if $L = 1$ the test says nothing.",
+    "Root Test: let $L = \\lim_{n \\to \\infty} \\sqrt[n]{|a_n|}$, with the same three conclusions as the ratio test.",
+    "Ratio test shines with factorials and exponentials; root test shines when the whole term is an $n$-th power. Both give $L = 1$ on p-series and other rational terms, so use comparison there.",
+    "Useful limits for ratio computations: $\\frac{(n+1)!}{n!} = n+1$, $\\frac{c^{n+1}}{c^n} = c$, and $\\left(\\frac{n+1}{n}\\right)^k \\to 1$ for any fixed power $k$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Absolute or conditional?",
+      "problem": "Classify $\\sum_{n=1}^{\\infty} \\dfrac{(-1)^n}{n^2}$ and $\\sum_{n=1}^{\\infty} \\dfrac{(-1)^n}{n}$ as absolutely convergent, conditionally convergent, or divergent.",
+      "steps": [
+        "Why this step: test absolute convergence first, since it is the stronger property. For the first series, $\\sum \\left| \\frac{(-1)^n}{n^2} \\right| = \\sum \\frac{1}{n^2}$ is a p-series with $p = 2 > 1$. It converges.",
+        "So the first series is absolutely convergent, and therefore convergent. No alternating series test needed.",
+        "For the second series, $\\sum \\left| \\frac{(-1)^n}{n} \\right| = \\sum \\frac{1}{n}$ is the harmonic series, which diverges. So it is not absolutely convergent.",
+        "Does it converge at all? $b_n = \\frac{1}{n}$ is decreasing with limit $0$, so the Alternating Series Test says yes. Conclusion: the second series is conditionally convergent."
+      ]
+    },
+    {
+      "title": "Ratio test with a power",
+      "problem": "Does $\\sum_{n=1}^{\\infty} \\dfrac{n^2}{3^n}$ converge?",
+      "steps": [
+        "Why this step: the $3^n$ suggests the ratio test, since $\\frac{3^{n+1}}{3^n}$ cancels to $3$. Write $a_n = \\frac{n^2}{3^n}$ and form the ratio: $\\dfrac{a_{n+1}}{a_n} = \\dfrac{(n+1)^2}{3^{n+1}} \\cdot \\dfrac{3^n}{n^2} = \\dfrac{1}{3} \\left( \\dfrac{n+1}{n} \\right)^2$.",
+        "Take the limit: $\\left( \\frac{n+1}{n} \\right)^2 = \\left( 1 + \\frac{1}{n} \\right)^2 \\to 1$, so $L = \\frac{1}{3}$.",
+        "Since $L = \\frac{1}{3} < 1$, the series converges (absolutely; all terms are positive anyway). The polynomial $n^2$ loses to the exponential $3^n$."
+      ]
+    },
+    {
+      "title": "Ratio test with a factorial",
+      "problem": "Does $\\sum_{n=1}^{\\infty} \\dfrac{n!}{10^n}$ converge?",
+      "steps": [
+        "Why this step: factorials almost always mean ratio test. Form $\\dfrac{a_{n+1}}{a_n} = \\dfrac{(n+1)!}{10^{n+1}} \\cdot \\dfrac{10^n}{n!}$.",
+        "Simplify using $\\frac{(n+1)!}{n!} = n+1$ and $\\frac{10^n}{10^{n+1}} = \\frac{1}{10}$: the ratio is $\\dfrac{n+1}{10}$.",
+        "As $n \\to \\infty$ this grows without bound, so $L = \\infty > 1$. The series diverges.",
+        "Sanity check: the first terms shrink ($\\frac{1}{10}, \\frac{2}{100}, \\frac{6}{1000}, \\ldots$), but once $n > 10$ each term is more than the previous one. The factorial wins in the end."
+      ]
+    },
+    {
+      "title": "Root test",
+      "problem": "Does $\\sum_{n=1}^{\\infty} \\left( \\dfrac{2n}{3n+1} \\right)^n$ converge?",
+      "steps": [
+        "Why this step: the entire term is raised to the $n$-th power, which is the signature of the root test. Taking the $n$-th root strips the exponent: $\\sqrt[n]{|a_n|} = \\dfrac{2n}{3n+1}$.",
+        "Take the limit by dividing by $n$: $\\dfrac{2}{3 + 1/n} \\to \\dfrac{2}{3}$.",
+        "Since $L = \\frac{2}{3} < 1$, the series converges absolutely. Far out, the terms behave like $\\left( \\frac{2}{3} \\right)^n$, a convergent geometric series."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Concluding something from $L = 1$. For $\\sum \\frac{1}{n}$ and $\\sum \\frac{1}{n^2}$ the ratio test gives $L = 1$ both times, yet one diverges and one converges. When $L = 1$, switch tests.",
+    "Simplifying $\\frac{(n+1)!}{n!}$ as $1$ or as $(n+1)!$. It equals $n+1$. Check with $n = 3$: $\\frac{24}{6} = 4$.",
+    "Forgetting the absolute value in the ratio and getting a negative \"limit\" for an alternating series. The ratio test always uses $\\left| \\frac{a_{n+1}}{a_n} \\right|$.",
+    "Saying \"the series converges by the alternating series test, so it converges absolutely.\" The alternating series test only ever shows plain convergence. To show absolute convergence you must test $\\sum |a_n|$ separately."
+  ],
+  "whyItMatters": "The ratio test is the key that unlocks power series in the next nodes. Applied to $\\sum c_n x^n$, it tells you exactly which $x$ values make the series converge, producing the radius of convergence. Absolute convergence is what makes power series safe to differentiate and integrate term by term, which is how you will get series for $\\ln(1+x)$ and $\\arctan x$ from the geometric series and integrate functions that have no elementary antiderivative.",
+  "checkYourself": [
+    {
+      "q": "Compute $\\lim_{n \\to \\infty} \\left| \\frac{a_{n+1}}{a_n} \\right|$ for $a_n = \\dfrac{2^n}{n!}$ and conclude.",
+      "a": "The ratio is $\\frac{2}{n+1} \\to 0 < 1$, so the series converges absolutely."
+    },
+    {
+      "q": "Is $\\sum \\dfrac{(-1)^n}{n^{1.5}}$ absolutely convergent, conditionally convergent, or divergent?",
+      "a": "Absolutely convergent ($p = 1.5 > 1$)."
+    },
+    {
+      "q": "The ratio test gives $L = 1$ for $\\sum \\frac{n}{n^2+1}$. What next?",
+      "a": "Use limit comparison with $\\frac{1}{n}$; the series diverges."
+    },
+    {
+      "q": "What is $\\lim_{n \\to \\infty} \\sqrt[n]{|a_n|}$ for $a_n = \\left( \\frac{n}{2n+5} \\right)^n$?",
+      "a": "$\\frac{1}{2}$, so the series converges."
+    }
+  ],
+  "readingGuide": [
+    "Find the definitions of absolute and conditional convergence and write down one series of each kind from memory.",
+    "Locate the proof that absolute convergence implies convergence; notice the trick of writing $a_n + |a_n|$ and comparing with $2|a_n|$.",
+    "Before reading the proof of the ratio test, explain to yourself why terms that shrink by a factor near $L < 1$ behave like a geometric series.",
+    "Find the remark about the ratio test being inconclusive when $L = 1$ and verify it yourself on $\\sum \\frac{1}{n}$ and $\\sum \\frac{1}{n^2}$.",
+    "Before reading the worked example with factorials, simplify $\\frac{(n+1)!}{n!}$ on your own and try the example."
+  ]
+}

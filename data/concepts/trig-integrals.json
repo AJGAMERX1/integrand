@@ -1,0 +1,89 @@
+{
+  "nodeId": "trig-integrals",
+  "title": "Trigonometric Integrals",
+  "overview": "This section is about integrals like $\\int \\sin^3 x \\cos^2 x\\,dx$: products of powers of trig functions. There is no new integration rule here. The whole method is to **use identities to rearrange** the integrand until a plain substitution works. Two identities do almost all the work: the Pythagorean identity $\\sin^2 x + \\cos^2 x = 1$ and its cousin $1 + \\tan^2 x = \\sec^2 x$.\n\nFor $\\int \\sin^m x \\cos^n x\\,dx$, look at the exponents. If the power of sine is **odd**, peel off one factor of $\\sin x$ to be the $du$ for the substitution $u = \\cos x$ (since $du = -\\sin x\\,dx$). The remaining even power of sine converts to cosines by $\\sin^2 x = 1 - \\cos^2 x$. If the power of cosine is odd, do the mirror image with $u = \\sin x$. If **both powers are even**, no factor can be peeled off; instead use the half-angle identities\n$$\\sin^2 x = \\frac{1 - \\cos 2x}{2}, \\qquad \\cos^2 x = \\frac{1 + \\cos 2x}{2}$$\nto lower the powers, then integrate term by term.\n\nFor $\\int \\tan^m x \\sec^n x\\,dx$ the same logic uses a different pair of derivatives: $(\\tan x)' = \\sec^2 x$ and $(\\sec x)' = \\sec x \\tan x$. If the power of secant is even, save a $\\sec^2 x$ for $du$, substitute $u = \\tan x$, and convert the rest with $\\sec^2 x = 1 + \\tan^2 x$. If the power of tangent is odd, save a $\\sec x \\tan x$ for $du$, substitute $u = \\sec x$, and convert with $\\tan^2 x = \\sec^2 x - 1$.\n\nTwo standalone facts worth memorizing: $\\int \\tan x\\,dx = \\ln|\\sec x| + C$ and $\\int \\sec x\\,dx = \\ln|\\sec x + \\tan x| + C$.\n\nFinally, products with different angles, such as $\\sin 3x \\cos x$, are handled by the product-to-sum identities, which turn a product into a sum of sines or cosines that integrate directly.\n\nThe skill being built is pattern recognition: look at the exponents, decide which factor to save, and let an identity do the rest.",
+  "keyIdeas": [
+    "Odd power of sine: save one $\\sin x$, convert the rest with $\\sin^2 x = 1 - \\cos^2 x$, substitute $u = \\cos x$. Odd power of cosine: mirror image with $u = \\sin x$.",
+    "Both powers even: use $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$ and $\\cos^2 x = \\frac{1 + \\cos 2x}{2}$ to reduce the powers.",
+    "Even power of secant: save $\\sec^2 x$, convert the rest with $\\sec^2 x = 1 + \\tan^2 x$, substitute $u = \\tan x$.",
+    "Odd power of tangent (with at least one secant): save $\\sec x \\tan x$, convert with $\\tan^2 x = \\sec^2 x - 1$, substitute $u = \\sec x$.",
+    "Memorize $\\int \\tan x\\,dx = \\ln|\\sec x| + C$ and $\\int \\sec x\\,dx = \\ln|\\sec x + \\tan x| + C$.",
+    "Different angles: use product-to-sum, e.g. $\\sin A \\cos B = \\frac{1}{2}\\left[ \\sin(A - B) + \\sin(A + B) \\right]$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Odd power of sine",
+      "problem": "Evaluate $\\int \\sin^3 x \\cos^2 x\\,dx$.",
+      "steps": [
+        "The power of sine is odd (3). Save one $\\sin x$ to pair with $dx$ and rewrite the rest: $\\sin^3 x = \\sin^2 x \\cdot \\sin x = (1 - \\cos^2 x) \\sin x$.",
+        "The integral becomes $\\int (1 - \\cos^2 x) \\cos^2 x \\,\\sin x\\,dx$. Everything except the saved $\\sin x\\,dx$ is now in terms of $\\cos x$.",
+        "Substitute $u = \\cos x$, $du = -\\sin x\\,dx$: $-\\int (1 - u^2) u^2\\,du = -\\int (u^2 - u^4)\\,du$.",
+        "Integrate: $-\\left( \\frac{u^3}{3} - \\frac{u^5}{5} \\right) + C = \\frac{u^5}{5} - \\frac{u^3}{3} + C$.",
+        "Back-substitute: $\\frac{\\cos^5 x}{5} - \\frac{\\cos^3 x}{3} + C$. Check by differentiating: $\\cos^4 x (-\\sin x) - \\cos^2 x (-\\sin x) = \\sin x \\cos^2 x (1 - \\cos^2 x) = \\sin^3 x \\cos^2 x$."
+      ]
+    },
+    {
+      "title": "Both powers even",
+      "problem": "Evaluate $\\int_0^\\pi \\sin^2 x\\,dx$.",
+      "steps": [
+        "The power is even and there is no odd factor to save, so use the half-angle identity: $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$.",
+        "Rewrite: $\\int_0^\\pi \\frac{1 - \\cos 2x}{2}\\,dx = \\frac{1}{2} \\int_0^\\pi 1\\,dx - \\frac{1}{2} \\int_0^\\pi \\cos 2x\\,dx$.",
+        "The first piece is $\\frac{1}{2} \\cdot \\pi$. The second: $\\int_0^\\pi \\cos 2x\\,dx = \\left[ \\frac{\\sin 2x}{2} \\right]_0^\\pi = 0 - 0 = 0$.",
+        "Total: $\\frac{\\pi}{2}$. Interpretation: over a full arch, $\\sin^2 x$ averages $\\frac{1}{2}$, so its integral over an interval of length $\\pi$ is $\\frac{\\pi}{2}$. This \"average is one half\" fact is worth remembering."
+      ]
+    },
+    {
+      "title": "Even power of secant",
+      "problem": "Evaluate $\\int \\tan^3 x \\sec^4 x\\,dx$.",
+      "steps": [
+        "The power of secant is even (4). Save one $\\sec^2 x$ for $du$ and convert the other with $\\sec^2 x = 1 + \\tan^2 x$: $\\sec^4 x = (1 + \\tan^2 x) \\sec^2 x$.",
+        "The integral becomes $\\int \\tan^3 x (1 + \\tan^2 x) \\sec^2 x\\,dx$. Everything except the saved $\\sec^2 x\\,dx$ is in terms of $\\tan x$.",
+        "Substitute $u = \\tan x$, $du = \\sec^2 x\\,dx$: $\\int u^3 (1 + u^2)\\,du = \\int (u^3 + u^5)\\,du$.",
+        "Integrate: $\\frac{u^4}{4} + \\frac{u^6}{6} + C = \\frac{\\tan^4 x}{4} + \\frac{\\tan^6 x}{6} + C$.",
+        "Note: because the power of tangent is also odd, the other route ($u = \\sec x$) works too and gives $\\frac{\\sec^6 x}{6} - \\frac{\\sec^4 x}{4} + C$. The two answers differ by a constant, as they must."
+      ]
+    },
+    {
+      "title": "Different angles",
+      "problem": "Evaluate $\\int \\sin 3x \\cos x\\,dx$.",
+      "steps": [
+        "The angles differ, so no substitution matches. Use the product-to-sum identity $\\sin A \\cos B = \\frac{1}{2}\\left[ \\sin(A - B) + \\sin(A + B) \\right]$ with $A = 3x$, $B = x$.",
+        "This gives $\\sin 3x \\cos x = \\frac{1}{2}\\left[ \\sin 2x + \\sin 4x \\right]$, a sum of single sines.",
+        "Integrate each term, remembering the inner constant: $\\int \\sin 2x\\,dx = -\\frac{\\cos 2x}{2}$ and $\\int \\sin 4x\\,dx = -\\frac{\\cos 4x}{4}$.",
+        "Combine with the outer $\\frac{1}{2}$: $-\\frac{\\cos 2x}{4} - \\frac{\\cos 4x}{8} + C$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Writing $\\sin^2 x = 1 - \\cos x$ instead of $1 - \\cos^2 x$. Check at $x = \\frac{\\pi}{3}$: $\\sin^2 x = \\frac{3}{4}$, but $1 - \\cos x = \\frac{1}{2}$. The square matters.",
+    "Saving the wrong factor. For $\\int \\sin^3 x \\cos^2 x\\,dx$, saving a $\\cos x$ leaves $\\sin^3 x \\cos x$, which is not a function of $\\sin x$ alone times $d(\\sin x)$. Save a factor whose derivative matches what is left.",
+    "Forgetting the chain-rule constant in $\\int \\cos 2x\\,dx$. The answer is $\\frac{\\sin 2x}{2} + C$, not $\\sin 2x + C$. Differentiate to check: $(\\sin 2x)' = 2 \\cos 2x$.",
+    "Dropping the minus sign from $du = -\\sin x\\,dx$ when $u = \\cos x$. In the first example this sign is what makes the $\\cos^5 x$ term positive."
+  ],
+  "whyItMatters": "These integrals are the vocabulary for trigonometric substitution, which turns square roots of quadratics into exactly the powers of sine, cosine, tangent, and secant handled here. They also appear directly in Fourier series, where integrals of products of sines and cosines over a period decide which frequencies are present in a signal. And the \"manipulate first, then substitute\" mindset is the core of the strategy section later in this chapter.",
+  "checkYourself": [
+    {
+      "q": "For $\\int \\cos^5 x\\,dx$, which factor do you save and what is $u$?",
+      "a": "Save one $\\cos x$, write $\\cos^4 x = (1 - \\sin^2 x)^2$, and let $u = \\sin x$."
+    },
+    {
+      "q": "Rewrite $\\cos^2 x$ using a half-angle identity.",
+      "a": "$\\cos^2 x = \\frac{1 + \\cos 2x}{2}$."
+    },
+    {
+      "q": "What is $\\int \\sec^2 x\\,dx$? What about $\\int \\sec x \\tan x\\,dx$?",
+      "a": "$\\tan x + C$ and $\\sec x + C$. These are the two derivatives that drive the tangent-secant substitutions."
+    },
+    {
+      "q": "Evaluate $\\int_0^{\\pi/2} \\cos^2 x\\,dx$.",
+      "a": "$\\frac{\\pi}{4}$, since $\\cos^2 x$ averages $\\frac{1}{2}$ over this interval of length $\\frac{\\pi}{2}$."
+    }
+  ],
+  "readingGuide": [
+    "Find the summary of strategies for $\\int \\sin^m x \\cos^n x\\,dx$ and rewrite each case in your own words: which factor is saved and which identity converts the rest.",
+    "Before reading the solution of the example with both exponents even, try writing the integrand with half-angle identities yourself.",
+    "Locate the derivation of $\\int \\sec x\\,dx$ and note the trick used to make it a substitution.",
+    "Find the strategies for $\\int \\tan^m x \\sec^n x\\,dx$ and compare them with the sine-cosine cases: which derivative plays the role of $du$ in each.",
+    "Look for the product-to-sum identities and check one of them with a specific angle, like $A = B = \\frac{\\pi}{4}$."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "nodeId": "derivatives-rates",
+  "title": "Derivatives and Rates of Change",
+  "overview": "The tangent problem and the velocity problem were the same limit in two costumes. That limit now gets a name. The **derivative of $f$ at $a$** is\n$$f'(a) = \\lim_{h \\to 0}\\frac{f(a + h) - f(a)}{h},$$\nprovided the limit exists. The fraction is the slope of the secant line from $(a, f(a))$ to a nearby point $h$ units to the right; the limit is the slope of the tangent line. An equivalent form, with the nearby point called $x$ instead of $a + h$, is $f'(a) = \\lim_{x \\to a}\\frac{f(x) - f(a)}{x - a}$. Both say the same thing, and you should be able to use whichever makes the algebra cleaner.\n\nComputing a derivative from the definition is a three-step routine: write out $f(a + h)$ carefully, subtract $f(a)$ and simplify until a factor of $h$ can be canceled from the numerator, then let $h \\to 0$. For $f(x) = x^2$ at $a = 3$: $f(3 + h) = 9 + 6h + h^2$, subtract 9 to get $6h + h^2 = h(6 + h)$, divide by $h$ to get $6 + h$, and the limit is 6. The algebra always produces a $\\frac{0}{0}$ form that cancels; if it does not cancel, look for an arithmetic error.\n\nOnce you have $f'(a)$, the **tangent line** at $(a, f(a))$ is immediate from point-slope form: $y - f(a) = f'(a)(x - a)$. For $x^2$ at 3, that is $y - 9 = 6(x - 3)$, or $y = 6x - 9$.\n\nThe derivative is also a **rate of change**. If $y = f(x)$, then as $x$ changes from $x_1$ to $x_2$ the quantity $y$ changes by $\\Delta y = f(x_2) - f(x_1)$, and the **average rate of change** is $\\frac{\\Delta y}{\\Delta x}$, the secant slope. Its limit as $\\Delta x \\to 0$ is the **instantaneous rate of change**, the derivative. When $x$ is time and $f$ is position, the derivative is velocity. When $f$ is the cost of producing $x$ items, $f'(x)$ is the marginal cost, roughly the cost of the next item. When $f$ is temperature as a function of position, $f'$ is the temperature gradient. The units of $f'(a)$ are always units of $f$ per unit of $x$, which is a useful check on any interpretation.\n\nReading the sign and size of a derivative is as important as computing it. $f'(a) > 0$ means $f$ is increasing at $a$; the tangent slopes up. $f'(a) < 0$ means decreasing. A large $|f'(a)|$ means the graph is steep there and small changes in $x$ produce big changes in $f$. $f'(a) = 0$ means the tangent is horizontal, which is where maxima and minima hide. Being able to look at a graph and estimate where the derivative is positive, negative, large, or zero is a skill worth practicing now, before any formulas.",
+  "keyIdeas": [
+    "$f'(a) = \\lim_{h \\to 0}\\frac{f(a + h) - f(a)}{h} = \\lim_{x \\to a}\\frac{f(x) - f(a)}{x - a}$, the slope of the tangent line at $(a, f(a))$.",
+    "From the definition: expand $f(a + h)$, subtract $f(a)$, cancel a factor of $h$, then let $h \\to 0$.",
+    "Tangent line at $a$: $y - f(a) = f'(a)(x - a)$.",
+    "Average rate of change over $[x_1, x_2]$ is $\\frac{f(x_2) - f(x_1)}{x_2 - x_1}$; the instantaneous rate at $a$ is $f'(a)$.",
+    "Velocity is the derivative of position; marginal cost is the derivative of cost; the units of $f'$ are units of $f$ per unit of $x$.",
+    "$f'(a) > 0$ means increasing at $a$, $f'(a) < 0$ decreasing, $f'(a) = 0$ a horizontal tangent; $|f'(a)|$ measures steepness."
+  ],
+  "workedExamples": [
+    {
+      "title": "Derivative from the definition and a tangent line",
+      "problem": "For $f(x) = x^2 - 4x$, find $f'(2)$ from the definition and the equation of the tangent line at $x = 2$.",
+      "steps": [
+        "$f(2 + h) = (2 + h)^2 - 4(2 + h) = 4 + 4h + h^2 - 8 - 4h = h^2 - 4$. And $f(2) = 4 - 8 = -4$.",
+        "Difference: $f(2 + h) - f(2) = h^2 - 4 - (-4) = h^2$. Divide by $h$: $\\frac{h^2}{h} = h$.",
+        "Limit as $h \\to 0$: $f'(2) = 0$. The tangent is horizontal; $x = 2$ is the vertex of this parabola.",
+        "Tangent line: $y - (-4) = 0\\cdot(x - 2)$, that is $y = -4$. Check: the vertex of $x^2 - 4x$ is at $x = \\frac{4}{2} = 2$, where $y = -4$. Consistent."
+      ]
+    },
+    {
+      "title": "A reciprocal function",
+      "problem": "Find $f'(a)$ for $f(x) = \\dfrac{3}{x}$ at a general point $a \\ne 0$, and the slope at $a = -1$.",
+      "steps": [
+        "$\\frac{f(a + h) - f(a)}{h} = \\frac{\\frac{3}{a + h} - \\frac{3}{a}}{h}$. Combine the numerator: $\\frac{3a - 3(a + h)}{a(a + h)} = \\frac{-3h}{a(a + h)}$.",
+        "Divide by $h$: $\\frac{-3}{a(a + h)}$. The $h$ canceled, as it must.",
+        "Limit as $h \\to 0$: $f'(a) = \\frac{-3}{a^2}$.",
+        "At $a = -1$: $f'(-1) = -3$. The graph of $\\frac{3}{x}$ is falling steeply there. Check with a secant: from $-1$ to $-0.9$, $\\frac{-3.333 - (-3)}{0.1} = -3.33$, close to $-3$."
+      ]
+    },
+    {
+      "title": "Velocity from a position function",
+      "problem": "A ball thrown upward has height $s(t) = 20t - 5t^2$ meters after $t$ seconds. Find its velocity at $t = 1$ and at $t = 3$, and interpret the signs.",
+      "steps": [
+        "$s(t + h) - s(t) = 20(t + h) - 5(t + h)^2 - 20t + 5t^2 = 20h - 10th - 5h^2 = h(20 - 10t - 5h)$.",
+        "Divide by $h$ and let $h \\to 0$: $v(t) = s'(t) = 20 - 10t$ meters per second.",
+        "$v(1) = 10$ m/s: positive, the ball is still rising. $v(3) = -10$ m/s: negative, the ball is falling.",
+        "$v(2) = 0$: the ball is momentarily at rest at the top, where $s(2) = 40 - 20 = 20$ meters, the maximum height."
+      ]
+    },
+    {
+      "title": "Average versus instantaneous rate with units",
+      "problem": "The cost of producing $x$ chairs is $C(x) = 500 + 40x + 0.1x^2$ in some currency. Find the average rate of change of cost from $x = 100$ to $x = 110$, and the instantaneous rate at $x = 100$.",
+      "steps": [
+        "$C(100) = 500 + 4000 + 1000 = 5500$. $C(110) = 500 + 4400 + 1210 = 6110$.",
+        "Average rate: $\\frac{6110 - 5500}{10} = 61$ per chair over that range.",
+        "Instantaneous rate: $\\frac{C(100 + h) - C(100)}{h} = \\frac{40h + 0.1(200h + h^2)}{h} = 40 + 20 + 0.1h = 60 + 0.1h \\to 60$. So $C'(100) = 60$ per chair.",
+        "Interpretation: at a production level of 100, each additional chair costs about 60 (the marginal cost). The average over the next 10 chairs is slightly higher, 61, because the marginal cost is rising."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Forgetting to subtract $f(a)$ and dividing $f(a + h)$ alone by $h$. The numerator must be a difference, or the $h$ will not cancel.",
+    "Setting $h = 0$ too early, which produces $\\frac{0}{0}$. Simplify until the $h$ cancels, then take the limit.",
+    "Expanding $(a + h)^2$ as $a^2 + h^2$. The middle term $2ah$ is the one that survives division by $h$; without it the derivative of $x^2$ would come out as 0.",
+    "Confusing $f'(a)$ with $f(a)$. One is the slope of the tangent, the other is the height of the point; the tangent line needs both.",
+    "Reporting a rate without units or with the wrong units. Velocity from meters and seconds is meters per second; marginal cost is currency per item."
+  ],
+  "whyItMatters": "The derivative and the integral are inverse operations, and this definition is half of that relationship: once you can find rates of change, the Fundamental Theorem says that integrating a rate recovers the total change, $\\int_a^b f'(x)\\,dx = f(b) - f(a)$. Velocity integrates to displacement; marginal cost integrates to total cost. Every antiderivative you will compute is an answer to the question \"what function has this derivative?\", so understanding what a derivative measures is the foundation for understanding what an integral measures.",
+  "checkYourself": [
+    {
+      "q": "Using the definition, what is $f'(1)$ for $f(x) = x^2$?",
+      "a": "$\\lim\\frac{(1 + h)^2 - 1}{h} = \\lim(2 + h) = 2$."
+    },
+    {
+      "q": "Tangent line to $y = x^2$ at $(1, 1)$?",
+      "a": "$y - 1 = 2(x - 1)$, or $y = 2x - 1$."
+    },
+    {
+      "q": "If $s(t) = t^3$ is position in meters at $t$ seconds, what are the units of $s'(t)$?",
+      "a": "Meters per second."
+    },
+    {
+      "q": "What does $f'(a) < 0$ tell you about the graph at $a$?",
+      "a": "It is decreasing there; the tangent slopes downward."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of the derivative at a number in both forms (with $h$ and with $x \\to a$) and explain why they are the same.",
+    "Before reading the solution of the first example that computes a derivative from the definition, do the three-step routine yourself.",
+    "Locate the discussion of the tangent line and write down the point-slope form with $f'(a)$ as the slope.",
+    "Find the definitions of average and instantaneous rate of change and the interpretations (velocity, marginal cost, and others); note the units in each.",
+    "Look for an example that interprets the sign and size of a derivative, and practice reading a graph for where $f'$ is positive, negative, and zero."
+  ]
+}

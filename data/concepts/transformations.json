@@ -1,0 +1,86 @@
+{
+  "nodeId": "transformations",
+  "title": "Transformations of Graphs",
+  "overview": "Once you know the shape of a few basic graphs, you can sketch hundreds of others without plotting a single point, because most functions you meet are a basic one that has been shifted, stretched, or flipped. The basic shapes worth memorizing are $y = x^2$ (a U with vertex at the origin), $y = x^3$, $y = \\sqrt{x}$ (starting at the origin and bending right), $y = |x|$ (a V), $y = \\frac{1}{x}$, and later $y = e^x$, $y = \\ln x$, $y = \\sin x$, $y = \\cos x$. Everything in this node is a rule for how a change to the formula moves the picture.\n\nAdding a constant **outside** the function moves the graph vertically: $y = f(x) + 3$ is the graph of $f$ lifted 3 units, and $y = f(x) - 3$ drops it 3 units. That one is intuitive, since every output is 3 bigger. Adding a constant **inside** moves the graph horizontally, and it moves the \"wrong\" way: $y = f(x - 2)$ is $f$ shifted 2 units to the **right**. The reason is that $f(x - 2)$ at $x = 5$ equals $f(3)$: the graph at 5 shows what $f$ used to show at 3, so everything has moved right by 2. Similarly $f(x + 2)$ shifts left. The rule of thumb: inside the parentheses, the sign is opposite to the direction.\n\nMultiplying stretches. $y = 2f(x)$ doubles every output, stretching the graph vertically away from the $x$-axis; $y = \\frac{1}{2}f(x)$ squashes it. Multiplying inside, $y = f(2x)$, squeezes the graph horizontally by a factor of 2, because the input reaches any given value twice as fast; $y = f(\\frac{x}{2})$ stretches it horizontally. Again, inside changes do the opposite of what they look like.\n\nA negative sign reflects. $y = -f(x)$ flips the graph upside down across the $x$-axis. $y = f(-x)$ flips it left-to-right across the $y$-axis. A function with $f(-x) = f(x)$, like $x^2$ or $\\cos x$, is **even** and symmetric about the $y$-axis; one with $f(-x) = -f(x)$, like $x^3$ or $\\sin x$, is **odd** and symmetric through the origin.\n\nWhen several transformations are combined, as in $y = -2(x + 1)^2 + 3$, apply them in the order that undoes the formula from the inside out: start with $x^2$, shift left 1 (the $x + 1$), stretch vertically by 2, reflect across the $x$-axis (the minus), and finally shift up 3. The vertex travels from $(0, 0)$ to $(-1, 0)$ and then to $(-1, 3)$. Tracking one or two landmark points through each step is enough to draw the final graph accurately.",
+  "keyIdeas": [
+    "$y = f(x) + c$ shifts the graph up by $c$; $y = f(x) - c$ shifts it down.",
+    "$y = f(x - c)$ shifts the graph right by $c$; $y = f(x + c)$ shifts it left (inside changes go the opposite way).",
+    "$y = c f(x)$ stretches vertically by factor $c$ (squashes if $0 < c < 1$); $y = f(cx)$ squeezes horizontally by factor $c$.",
+    "$y = -f(x)$ reflects across the $x$-axis; $y = f(-x)$ reflects across the $y$-axis.",
+    "Even functions satisfy $f(-x) = f(x)$ and are symmetric about the $y$-axis; odd functions satisfy $f(-x) = -f(x)$ and are symmetric through the origin.",
+    "For combined transformations, work from the inside out: horizontal shift, then stretch and reflect, then vertical shift; track a landmark point through each step."
+  ],
+  "workedExamples": [
+    {
+      "title": "Shifting a parabola",
+      "problem": "Describe how to get the graph of $y = (x - 3)^2 - 4$ from $y = x^2$, and find its vertex and $x$-intercepts.",
+      "steps": [
+        "The $(x - 3)$ inside shifts the graph right 3 units. The $-4$ outside shifts it down 4 units.",
+        "The vertex of $y = x^2$ is $(0, 0)$; after the shifts it is at $(3, -4)$.",
+        "$x$-intercepts: set $(x - 3)^2 - 4 = 0$, so $(x - 3)^2 = 4$, $x - 3 = \\pm 2$, giving $x = 5$ and $x = 1$.",
+        "Check: both intercepts are 2 units from the axis of symmetry $x = 3$, as a parabola requires. Check $x = 1$: $(1-3)^2 - 4 = 0$. Correct."
+      ]
+    },
+    {
+      "title": "Stretch and reflection of a square root",
+      "problem": "Sketch $y = -2\\sqrt{x + 1}$ by tracking the points $(0, 0)$, $(1, 1)$, and $(4, 2)$ of $y = \\sqrt{x}$.",
+      "steps": [
+        "Inside first: $x + 1$ shifts left 1. The three points become $(-1, 0)$, $(0, 1)$, $(3, 2)$.",
+        "Multiply outputs by 2: $(-1, 0)$, $(0, 2)$, $(3, 4)$.",
+        "Multiply outputs by $-1$ (reflect across the $x$-axis): $(-1, 0)$, $(0, -2)$, $(3, -4)$.",
+        "Verify directly: at $x = 3$, $y = -2\\sqrt{4} = -4$. The graph starts at $(-1, 0)$ and bends downward to the right."
+      ]
+    },
+    {
+      "title": "Reading a transformation from a graph's landmarks",
+      "problem": "A graph has the V shape of $y = |x|$ but its corner is at $(2, -5)$ and it opens downward. Write its equation.",
+      "steps": [
+        "The corner of $y = |x|$ is at $(0, 0)$. Moving it to $(2, -5)$ needs a shift right 2 (inside: $x - 2$) and down 5 (outside: $-5$).",
+        "Opening downward means a reflection across the $x$-axis, which is a minus sign outside.",
+        "Assemble: $y = -|x - 2| - 5$.",
+        "Check the corner: $x = 2$ gives $y = -0 - 5 = -5$. Check a second point: $x = 4$ gives $y = -2 - 5 = -7$, which is 2 units below the corner, consistent with a downward V of slope $\\pm 1$."
+      ]
+    },
+    {
+      "title": "Even or odd?",
+      "problem": "Decide whether $f(x) = x^4 - 3x^2$ and $g(x) = x^3 + x$ are even, odd, or neither.",
+      "steps": [
+        "Compute $f(-x) = (-x)^4 - 3(-x)^2 = x^4 - 3x^2 = f(x)$. So $f$ is even and its graph is symmetric about the $y$-axis.",
+        "Compute $g(-x) = (-x)^3 + (-x) = -x^3 - x = -(x^3 + x) = -g(x)$. So $g$ is odd and its graph is symmetric through the origin.",
+        "Rule of thumb for polynomials: all even powers gives even, all odd powers gives odd, a mix gives neither. For example $x^2 + x$ is neither.",
+        "Preview: for an odd function, $\\int_{-a}^{a} g(x)\\,dx = 0$ because the areas on the two sides cancel. Symmetry is a shortcut for integrals."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Shifting the wrong way for an inside change: thinking $f(x + 3)$ moves right. Check with $f(x) = x^2$: $(x + 3)^2$ has its vertex where $x + 3 = 0$, at $x = -3$, which is to the left.",
+    "Applying the vertical shift before the stretch: for $y = 2f(x) + 1$, shifting first and then doubling gives $2f(x) + 2$. Stretch first, then shift.",
+    "Confusing $-f(x)$ with $f(-x)$. For $f(x) = \\sqrt{x}$, $-\\sqrt{x}$ opens downward on the right; $\\sqrt{-x}$ opens upward on the left.",
+    "Declaring a function odd because it has a minus sign, or even because its degree is even. Test the definition: $x^2 - x$ has $f(-x) = x^2 + x$, which is neither $f(x)$ nor $-f(x)$."
+  ],
+  "whyItMatters": "Transformations are how you sketch quickly enough to check an integral's sign and set up its limits, and they explain why $\\int_{-a}^{a}$ of an odd function is 0 and of an even function is twice the integral from 0 to $a$. In Chapter 5, the substitution $u = x - 3$ is literally a horizontal shift of the graph, and $u = 2x$ is a horizontal squeeze that changes $dx$ into $\\frac{1}{2}du$, so understanding what inside changes do prepares you for why substitution works.",
+  "checkYourself": [
+    {
+      "q": "How does the graph of $y = \\sqrt{x - 4} + 1$ relate to $y = \\sqrt{x}$?",
+      "a": "Shifted right 4 and up 1; it starts at $(4, 1)$."
+    },
+    {
+      "q": "What does $y = f(3x)$ do to the graph of $f$?",
+      "a": "Squeezes it horizontally by a factor of 3."
+    },
+    {
+      "q": "Is $f(x) = x^5 - 2x$ even, odd, or neither?",
+      "a": "Odd: $f(-x) = -x^5 + 2x = -f(x)$."
+    },
+    {
+      "q": "Vertex of $y = -(x + 2)^2 + 7$?",
+      "a": "$(-2, 7)$, opening downward."
+    }
+  ],
+  "readingGuide": [
+    "Practice: sketch $y = x^2$, $y = x^3$, $y = \\sqrt{x}$, $y = |x|$, $y = \\frac{1}{x}$ from memory with two labeled points each.",
+    "Practice: for each basic graph, sketch three transformed versions (one shift, one stretch, one reflection) and label where a landmark point went.",
+    "Practice: given a vertex or corner and a direction of opening, write the equation of the transformed parabola or V.",
+    "Practice: classify ten functions as even, odd, or neither by computing $f(-x)$, not by guessing."
+  ]
+}

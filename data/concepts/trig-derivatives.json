@@ -1,0 +1,87 @@
+{
+  "nodeId": "trig-derivatives",
+  "title": "Derivatives of Trigonometric Functions",
+  "overview": "Look at the graph of $y = \\sin x$ and read off its slopes. At $x = 0$ the wave rises steeply, slope 1. At $x = \\frac{\\pi}{2}$ it peaks, slope 0. At $x = \\pi$ it descends through the axis, slope $-1$. At $\\frac{3\\pi}{2}$ it bottoms out, slope 0. Now compare those four numbers, $1, 0, -1, 0$, with the values of $\\cos x$ at the same points: $\\cos 0 = 1$, $\\cos\\frac{\\pi}{2} = 0$, $\\cos\\pi = -1$, $\\cos\\frac{3\\pi}{2} = 0$. They match. The slope of the sine wave is the cosine wave:\n$$\\frac{d}{dx}\\sin x = \\cos x, \\qquad \\frac{d}{dx}\\cos x = -\\sin x.$$\nThe second formula has a minus sign, which you can also see from the graph: cosine starts at its peak and immediately heads downward, so its slope at 0 is negative, while $\\sin 0 = 0$ and $\\sin x$ is positive just to the right, so $-\\sin x$ is negative there. Both formulas require $x$ in radians.\n\nProving the first formula from the definition uses the addition formula $\\sin(x + h) = \\sin x\\cos h + \\cos x\\sin h$, which turns the difference quotient into $\\sin x\\cdot\\frac{\\cos h - 1}{h} + \\cos x\\cdot\\frac{\\sin h}{h}$. Everything then rests on two limits:\n$$\\lim_{h \\to 0}\\frac{\\sin h}{h} = 1, \\qquad \\lim_{h \\to 0}\\frac{\\cos h - 1}{h} = 0.$$\nThe first says that for a tiny angle $h$ (in radians), $\\sin h$ is almost exactly $h$: $\\sin 0.01 = 0.0099998$. It is proved by squeezing $\\frac{\\sin h}{h}$ between $\\cos h$ and 1 using areas in the unit circle. The second follows from the first by multiplying by the conjugate. These two limits are worth remembering on their own; they settle many limit problems involving trig functions.\n\nThe other four trig derivatives follow from the quotient rule. Since $\\tan x = \\frac{\\sin x}{\\cos x}$, the quotient rule gives $\\frac{\\cos x\\cos x - \\sin x(-\\sin x)}{\\cos^2 x} = \\frac{\\cos^2 x + \\sin^2 x}{\\cos^2 x} = \\frac{1}{\\cos^2 x} = \\sec^2 x$. The full table:\n$$\\frac{d}{dx}\\tan x = \\sec^2 x, \\quad \\frac{d}{dx}\\cot x = -\\csc^2 x, \\quad \\frac{d}{dx}\\sec x = \\sec x\\tan x, \\quad \\frac{d}{dx}\\csc x = -\\csc x\\cot x.$$\nA pattern helps with the signs: the three \"co\" functions (cosine, cotangent, cosecant) all have a minus sign in their derivatives, and each co-derivative is the original derivative with every function swapped for its co-function.\n\nThese rules combine with everything before. $\\frac{d}{dx}[x^2\\sin x] = 2x\\sin x + x^2\\cos x$ by the product rule; $\\frac{d}{dx}\\frac{\\sin x}{1 + \\cos x}$ by the quotient rule simplifies, after using $\\sin^2 + \\cos^2 = 1$, to $\\frac{1}{1 + \\cos x}$. Simplifying trig derivatives almost always means reaching for the Pythagorean identity. And since $\\frac{d}{dx}\\sin x = \\cos x$ and $\\frac{d}{dx}\\cos x = -\\sin x$, differentiating $\\sin x$ four times returns $\\sin x$: the derivatives cycle with period 4.",
+  "keyIdeas": [
+    "$\\frac{d}{dx}\\sin x = \\cos x$ and $\\frac{d}{dx}\\cos x = -\\sin x$, with $x$ in radians.",
+    "$\\lim_{h \\to 0}\\frac{\\sin h}{h} = 1$ and $\\lim_{h \\to 0}\\frac{\\cos h - 1}{h} = 0$; for small $h$, $\\sin h \\approx h$.",
+    "$\\frac{d}{dx}\\tan x = \\sec^2 x$ and $\\frac{d}{dx}\\sec x = \\sec x\\tan x$, both from the quotient rule.",
+    "$\\frac{d}{dx}\\cot x = -\\csc^2 x$ and $\\frac{d}{dx}\\csc x = -\\csc x\\cot x$; the co-functions carry a minus sign.",
+    "Simplify trig derivatives with $\\sin^2 x + \\cos^2 x = 1$ and the definitions of $\\tan$, $\\sec$, $\\csc$, $\\cot$.",
+    "The derivatives of $\\sin x$ cycle: $\\sin x \\to \\cos x \\to -\\sin x \\to -\\cos x \\to \\sin x$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Product rule with a trig function",
+      "problem": "Differentiate $y = x\\cos x$ and find the slope at $x = \\pi$.",
+      "steps": [
+        "Product rule with $f = x$, $g = \\cos x$: $y' = (1)\\cos x + x(-\\sin x) = \\cos x - x\\sin x$.",
+        "At $x = \\pi$: $\\cos\\pi - \\pi\\sin\\pi = -1 - 0 = -1$.",
+        "Check with a secant from $\\pi$ to $\\pi + 0.01$: $y(\\pi) = -\\pi \\approx -3.14159$ and $y(3.15159) = 3.15159\\cos(3.15159) \\approx 3.15159\\cdot(-0.99995) \\approx -3.15143$, slope $\\approx \\frac{-3.15143 + 3.14159}{0.01} \\approx -0.98$. Close to $-1$."
+      ]
+    },
+    {
+      "title": "Quotient rule and simplification",
+      "problem": "Differentiate $y = \\dfrac{\\sin x}{1 + \\cos x}$ and simplify.",
+      "steps": [
+        "Quotient rule: $y' = \\frac{\\cos x(1 + \\cos x) - \\sin x(-\\sin x)}{(1 + \\cos x)^2}$.",
+        "Expand the numerator: $\\cos x + \\cos^2 x + \\sin^2 x = \\cos x + 1$, using the Pythagorean identity.",
+        "So $y' = \\frac{1 + \\cos x}{(1 + \\cos x)^2} = \\frac{1}{1 + \\cos x}$.",
+        "Check at $x = 0$: $y' = \\frac{1}{2}$. Secant from 0 to 0.01: $y(0.01) = \\frac{0.0099998}{1.99995} \\approx 0.005$, slope $\\approx 0.5$. Correct."
+      ]
+    },
+    {
+      "title": "Using the special limits",
+      "problem": "Evaluate $\\lim_{x \\to 0}\\dfrac{\\sin 4x}{x}$ and $\\lim_{x \\to 0}\\dfrac{\\tan x}{x}$.",
+      "steps": [
+        "For the first, make the argument of sine match the denominator: $\\frac{\\sin 4x}{x} = 4\\cdot\\frac{\\sin 4x}{4x}$. As $x \\to 0$, $4x \\to 0$ too, so $\\frac{\\sin 4x}{4x} \\to 1$ and the limit is $4$.",
+        "For the second, write $\\tan x = \\frac{\\sin x}{\\cos x}$: $\\frac{\\tan x}{x} = \\frac{\\sin x}{x}\\cdot\\frac{1}{\\cos x}$.",
+        "As $x \\to 0$: $\\frac{\\sin x}{x} \\to 1$ and $\\frac{1}{\\cos x} \\to 1$, so the limit is $1$.",
+        "Numerical check of the first: $x = 0.01$ gives $\\frac{\\sin 0.04}{0.01} = \\frac{0.039989}{0.01} \\approx 3.999$. Good."
+      ]
+    },
+    {
+      "title": "A tangent line to a trig curve",
+      "problem": "Find the tangent line to $y = \\tan x$ at $x = \\frac{\\pi}{4}$.",
+      "steps": [
+        "Point: $\\tan\\frac{\\pi}{4} = 1$, so $\\left(\\frac{\\pi}{4}, 1\\right)$.",
+        "Slope: $y' = \\sec^2 x$, and $\\sec\\frac{\\pi}{4} = \\frac{1}{\\cos(\\pi/4)} = \\frac{1}{\\sqrt{2}/2} = \\sqrt{2}$, so $y' = (\\sqrt{2})^2 = 2$.",
+        "Point-slope: $y - 1 = 2\\left(x - \\frac{\\pi}{4}\\right)$, or $y = 2x + 1 - \\frac{\\pi}{2}$.",
+        "Check: $\\tan(0.7954 + 0.01) = \\tan(0.8054) \\approx 1.0202$, and the line gives $1 + 2(0.01) = 1.02$. The curve is slightly above the line, as expected since $\\tan$ bends upward there."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Dropping the minus sign: $\\frac{d}{dx}\\cos x = \\sin x$. Look at the graph: cosine is decreasing just after 0, so its derivative there must be negative, and $-\\sin x$ is.",
+    "Working in degrees. $\\lim_{h \\to 0}\\frac{\\sin h}{h}$ equals $\\frac{\\pi}{180}$ in degrees, and all the derivative formulas pick up that factor. Use radians.",
+    "Writing $\\frac{d}{dx}\\tan x = \\sec x$ or $\\sec x\\tan x$. It is $\\sec^2 x$; the quotient rule produces a squared denominator.",
+    "Treating $\\frac{\\sin 4x}{x}$ as having limit 1. Match the arguments: the limit is 4.",
+    "Stopping before simplifying a trig quotient-rule result. Use $\\sin^2 + \\cos^2 = 1$ and the ratio definitions; the simplified form is what answer keys show."
+  ],
+  "whyItMatters": "Every trig derivative is an integral read backwards: $\\int\\cos x\\,dx = \\sin x + C$, $\\int\\sin x\\,dx = -\\cos x + C$, $\\int\\sec^2 x\\,dx = \\tan x + C$, $\\int\\sec x\\tan x\\,dx = \\sec x + C$. These four are the foundation of the trig integrals in Chapters 5 and 7, and $\\int_0^\\pi\\sin x\\,dx = 2$ is one of the first definite integrals that is not a polynomial. The limit $\\frac{\\sin h}{h} \\to 1$ also reappears whenever you approximate arcs by chords, as in arc length and polar areas.",
+  "checkYourself": [
+    {
+      "q": "$\\frac{d}{dx}[3\\sin x - 2\\cos x]$?",
+      "a": "$3\\cos x + 2\\sin x$."
+    },
+    {
+      "q": "$\\frac{d}{dx}[x\\tan x]$?",
+      "a": "$\\tan x + x\\sec^2 x$."
+    },
+    {
+      "q": "$\\lim_{t \\to 0}\\frac{\\sin 3t}{t}$?",
+      "a": "3."
+    },
+    {
+      "q": "What is the 4th derivative of $\\cos x$?",
+      "a": "$\\cos x$."
+    }
+  ],
+  "readingGuide": [
+    "Find the graphical argument that the slope of $\\sin x$ is $\\cos x$ and trace it yourself at the four quarter-period points.",
+    "Locate the proof that $\\lim_{h \\to 0}\\frac{\\sin h}{h} = 1$ and identify the two areas (or lengths) in the unit circle that squeeze it.",
+    "Find the derivation of $\\frac{d}{dx}\\sin x$ from the definition and note where the addition formula is used.",
+    "Derive $\\frac{d}{dx}\\tan x$ with the quotient rule yourself before reading it, then compare the table of all six derivatives.",
+    "Before reading the solution of the first limit example, try matching the argument of sine to the denominator."
+  ]
+}

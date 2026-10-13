@@ -1,0 +1,88 @@
+{
+  "nodeId": "optimization",
+  "title": "Optimization Problems",
+  "overview": "An optimization problem asks for the best of something: the largest area a fence can enclose, the cheapest can that holds a liter, the shortest route, the maximum profit. The calculus is the closed interval method and the derivative tests from earlier sections. The new skill is translation: turning a paragraph of words into a function of one variable on a known interval. Most of the difficulty, and most of the errors, live in that translation, so this section is about a procedure for doing it carefully.\n\nThe steps. **Understand**: read the problem, identify what is to be maximized or minimized (call it $Q$) and what you are free to choose. **Draw** a picture and label every quantity with a letter, including the ones you cannot choose directly. **Write** $Q$ as a formula in those letters. **Use the constraint**: the problem always contains a fixed relationship (a given perimeter, a given volume, a point that must lie on a curve) that lets you eliminate all but one variable, so $Q$ becomes a function of a single variable $x$. **Find the domain** of $x$ from the physical situation (lengths positive, the box must fit inside the sheet). **Optimize**: find critical numbers, and use the closed interval method if the domain is a closed interval, or the First or Second Derivative Test if it is open or infinite. **Answer** the question that was asked, with units, which may be the value of $Q$, the value of $x$, or some other dimension.\n\nA worked pattern: a farmer has 400 meters of fence and wants to enclose a rectangular field against a straight river, fencing three sides. Let $x$ be the length of each side perpendicular to the river and $y$ the side parallel. Area $A = xy$; constraint $2x + y = 400$, so $y = 400 - 2x$ and $A(x) = x(400 - 2x) = 400x - 2x^2$ on $0 \\le x \\le 200$. Then $A'(x) = 400 - 4x = 0$ at $x = 100$, $A(100) = 20000$, and the endpoints give 0, so the maximum area is 20000 square meters with dimensions 100 by 200. Notice that the answer is not a square; the river changes the optimal shape.\n\nWhen the domain is open or infinite, the closed interval method does not apply, but there is a useful shortcut: if $f$ is continuous on an interval and has **only one** critical number $c$ there, and $c$ is a local maximum (say by the First Derivative Test), then it is the absolute maximum on the interval. The graph can only go down on both sides of $c$ and never turn around again. The same holds for a single local minimum.\n\nCommon constraint sources: perimeter and area formulas, the Pythagorean theorem for distances, similar triangles for shapes inside shapes, volume formulas for boxes and cylinders, and \"the point lies on the curve $y = f(x)$.\" If after eliminating variables the function is unpleasant, consider optimizing something simpler with the same extremes, such as the squared distance instead of the distance, since squaring preserves where a positive quantity is largest or smallest.",
+  "keyIdeas": [
+    "Procedure: name the quantity $Q$ to optimize, draw and label, write $Q$ in terms of the variables, use the constraint to reduce to one variable, find the domain, optimize, answer the question asked.",
+    "The constraint is the fixed relationship in the problem (perimeter, volume, a point on a curve); solve it for one variable and substitute.",
+    "The domain comes from the physical situation; on a closed interval use the closed interval method.",
+    "First Derivative Test for absolute extremes: a single critical number on an interval that is a local max (or min) is the absolute max (or min) there.",
+    "Minimizing a distance is the same as minimizing its square; use whichever is simpler.",
+    "Report the quantity the question asks for, with units, and check that it is plausible."
+  ],
+  "workedExamples": [
+    {
+      "title": "An open-top box",
+      "problem": "A box with a square base and no top must hold 32 cubic meters. Find the dimensions that minimize the amount of material (surface area).",
+      "steps": [
+        "Let the base be $x$ by $x$ and the height $h$. Material: $S = x^2 + 4xh$ (one base, four sides). Constraint: volume $x^2h = 32$, so $h = \\frac{32}{x^2}$.",
+        "Substitute: $S(x) = x^2 + 4x\\cdot\\frac{32}{x^2} = x^2 + \\frac{128}{x}$, for $x > 0$ (open domain).",
+        "$S'(x) = 2x - \\frac{128}{x^2} = 0$ when $2x^3 = 128$, $x^3 = 64$, $x = 4$. This is the only critical number.",
+        "$S''(x) = 2 + \\frac{256}{x^3} > 0$, so $x = 4$ is a local minimum, hence the absolute minimum on $(0, \\infty)$. Dimensions: base 4 by 4, height $h = \\frac{32}{16} = 2$ meters. Minimum material $S(4) = 16 + 32 = 48$ square meters."
+      ]
+    },
+    {
+      "title": "Closest point on a curve",
+      "problem": "Find the point on the parabola $y = x^2$ closest to the point $(0, 3)$.",
+      "steps": [
+        "A point on the curve is $(x, x^2)$. Its squared distance to $(0, 3)$ is $D(x) = x^2 + (x^2 - 3)^2$. Minimizing $D$ minimizes the distance, with easier algebra.",
+        "$D'(x) = 2x + 2(x^2 - 3)(2x) = 2x + 4x^3 - 12x = 4x^3 - 10x = 2x(2x^2 - 5)$. Critical numbers: $x = 0$ and $x = \\pm\\sqrt{5/2} \\approx \\pm 1.581$.",
+        "Values: $D(0) = 9$; $D\\left(\\pm\\sqrt{5/2}\\right) = \\frac{5}{2} + \\left(\\frac{5}{2} - 3\\right)^2 = 2.5 + 0.25 = 2.75$. As $x \\to \\pm\\infty$, $D \\to \\infty$, so the minimum is 2.75.",
+        "Closest points: $\\left(\\pm\\sqrt{5/2}, \\frac{5}{2}\\right)$, at distance $\\sqrt{2.75} \\approx 1.658$. The point $x = 0$ is a local maximum of $D$ (distance 3), not the answer."
+      ]
+    },
+    {
+      "title": "A can of fixed volume",
+      "problem": "A cylindrical can must hold 500 cubic centimeters. Find the radius that minimizes the surface area (top, bottom, and side).",
+      "steps": [
+        "Surface area: $S = 2\\pi r^2 + 2\\pi rh$. Constraint: $\\pi r^2h = 500$, so $h = \\frac{500}{\\pi r^2}$.",
+        "Substitute: $S(r) = 2\\pi r^2 + 2\\pi r\\cdot\\frac{500}{\\pi r^2} = 2\\pi r^2 + \\frac{1000}{r}$, for $r > 0$.",
+        "$S'(r) = 4\\pi r - \\frac{1000}{r^2} = 0$ when $r^3 = \\frac{1000}{4\\pi} = \\frac{250}{\\pi}$, so $r = \\sqrt[3]{250/\\pi} \\approx 4.30$ cm. $S'' = 4\\pi + \\frac{2000}{r^3} > 0$, so this is the minimum.",
+        "Then $h = \\frac{500}{\\pi(4.30)^2} \\approx 8.61$ cm, which is $2r$: the optimal can is as tall as it is wide. (In general: at the optimum $r^3 = \\frac{250}{\\pi}$ means $500 = 2\\pi r^3$, so $h = \\frac{500}{\\pi r^2} = \\frac{2\\pi r^3}{\\pi r^2} = 2r$.)"
+      ]
+    },
+    {
+      "title": "Maximizing revenue",
+      "problem": "A theater sells 300 tickets per night at 20 each. For every 1 the price drops, 25 more tickets sell. What price maximizes revenue, and what is that revenue?",
+      "steps": [
+        "Let $x$ be the number of 1-unit price drops. Price $= 20 - x$, tickets $= 300 + 25x$, revenue $R(x) = (20 - x)(300 + 25x)$.",
+        "Expand: $R(x) = 6000 + 500x - 300x - 25x^2 = 6000 + 200x - 25x^2$. Domain: $0 \\le x \\le 20$ (price cannot go below 0).",
+        "$R'(x) = 200 - 50x = 0$ at $x = 4$. Closed interval method: $R(0) = 6000$, $R(4) = 6000 + 800 - 400 = 6400$, $R(20) = 0$.",
+        "Maximum revenue 6400 at $x = 4$: price $16$, selling $400$ tickets. Check: $16\\cdot 400 = 6400$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Differentiating a formula that still has two variables. Use the constraint to eliminate one first; $A = xy$ cannot be optimized until $y$ is written in terms of $x$.",
+    "Forgetting the domain, and so missing an endpoint maximum or accepting a negative length. Write the interval down before optimizing.",
+    "Answering the wrong question: giving $x$ when the maximum value was asked, or the area when the dimensions were asked.",
+    "Assuming a critical number is a maximum because the problem said \"maximize.\" Confirm with a test; the critical number at $x = 0$ in the parabola example was a maximum of the distance, not a minimum.",
+    "Using the wrong surface-area formula, such as including a top on an open box. Draw the picture and count the faces."
+  ],
+  "whyItMatters": "Optimization and integration meet whenever the quantity to optimize is itself an integral: the shape of a container minimizing material subject to a volume given by an integral, or the $x$ that maximizes $\\int_0^x f(t)\\,dt$, which by the Fundamental Theorem happens where $f(x) = 0$. The translation skill, turning words into a function and a constraint, is the same one used to set up integrals for work, fluid force, and probability in later chapters. And the single-critical-number shortcut saves effort every time an integral-based quantity has an obvious best value.",
+  "checkYourself": [
+    {
+      "q": "Two positive numbers sum to 20. Which pair has the largest product?",
+      "a": "$P = x(20 - x)$, $P' = 20 - 2x = 0$ at $x = 10$: both 10, product 100."
+    },
+    {
+      "q": "Why minimize the squared distance instead of the distance?",
+      "a": "Same minimizer, no square root to differentiate."
+    },
+    {
+      "q": "A function on $(0, \\infty)$ has one critical number, a local minimum. Is it the absolute minimum?",
+      "a": "Yes."
+    },
+    {
+      "q": "Perimeter of a rectangle is 40. Dimensions of maximum area?",
+      "a": "$10 \\times 10$, a square, area 100."
+    }
+  ],
+  "readingGuide": [
+    "Find the list of steps for solving optimization problems and keep it beside you for every exercise.",
+    "Before reading the solution of the fence or field example, set it up yourself through the single-variable function and its domain.",
+    "Find the statement of the First Derivative Test for absolute extreme values and note when it replaces the closed interval method.",
+    "Look for an example that minimizes a distance and check whether the text squares the distance first.",
+    "Find the economics example (cost, revenue, or profit) and note how marginal cost and marginal revenue relate at the optimum."
+  ]
+}

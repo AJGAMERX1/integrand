@@ -1,0 +1,87 @@
+{
+  "nodeId": "log-derivatives",
+  "title": "Derivatives of Logarithmic Functions",
+  "overview": "The natural logarithm is the inverse of $e^x$, and implicit differentiation turns that fact into its derivative. If $y = \\ln x$, then $e^y = x$. Differentiate both sides: $e^y\\,y' = 1$, so $y' = \\frac{1}{e^y} = \\frac{1}{x}$. Therefore\n$$\\frac{d}{dx}\\ln x = \\frac{1}{x}.$$\nThis is a surprising formula: a transcendental function has a derivative that is a simple power of $x$. It fills the one gap in the power rule, since $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1}$ fails at $n = -1$, and now you know the missing antiderivative of $\\frac{1}{x}$ is $\\ln x$. Because $\\ln x$ is only defined for $x > 0$, the formula holds there; for negative $x$ the function $\\ln|x|$ has the same derivative, so $\\frac{d}{dx}\\ln|x| = \\frac{1}{x}$ for all $x \\ne 0$.\n\nFor other bases, use $\\log_b x = \\frac{\\ln x}{\\ln b}$: the derivative is $\\frac{1}{x\\ln b}$. With the chain rule,\n$$\\frac{d}{dx}\\ln g(x) = \\frac{g'(x)}{g(x)},$$\nso $\\frac{d}{dx}\\ln(x^2 + 1) = \\frac{2x}{x^2 + 1}$ and $\\frac{d}{dx}\\ln(\\sin x) = \\frac{\\cos x}{\\sin x} = \\cot x$. The pattern \"derivative of the inside over the inside\" is worth recognizing instantly, in both directions.\n\nThe log rules can make differentiation much easier if you apply them **before** differentiating. To differentiate $\\ln\\frac{x^2\\sqrt{x + 1}}{(x - 3)^4}$, first expand it into $2\\ln x + \\frac{1}{2}\\ln(x + 1) - 4\\ln(x - 3)$, and then each term is a one-line derivative: $\\frac{2}{x} + \\frac{1}{2(x + 1)} - \\frac{4}{x - 3}$. Attacking the original with the chain rule and the quotient rule would be far longer.\n\nThat trick extends to functions with no log in them, a method called **logarithmic differentiation**. To differentiate a big product or quotient like $y = \\frac{x^3\\sqrt{x^2 + 1}}{(2x + 1)^5}$, take $\\ln$ of both sides, expand with the log rules, differentiate implicitly (the left side becomes $\\frac{y'}{y}$), and finally multiply through by $y$. It also handles the case the power rule and the exponential rule both miss, a variable base with a variable exponent, like $y = x^x$: $\\ln y = x\\ln x$, so $\\frac{y'}{y} = \\ln x + 1$ and $y' = x^x(\\ln x + 1)$.\n\nFinally, the number $e$ has a limit description that comes from the derivative of $\\ln x$ at $x = 1$ being 1:\n$$e = \\lim_{x \\to 0}(1 + x)^{1/x} = \\lim_{n \\to \\infty}\\left(1 + \\frac{1}{n}\\right)^n.$$\nThe second form is the compound-interest limit: investing at 100 percent interest compounded $n$ times a year approaches a factor of $e$ as $n$ grows. It is a nice check that the $e$ defined by slopes is the same $e$ that appears in finance.",
+  "keyIdeas": [
+    "$\\frac{d}{dx}\\ln x = \\frac{1}{x}$ for $x > 0$, and $\\frac{d}{dx}\\ln|x| = \\frac{1}{x}$ for all $x \\ne 0$.",
+    "$\\frac{d}{dx}\\log_b x = \\frac{1}{x\\ln b}$.",
+    "Chain rule form: $\\frac{d}{dx}\\ln g(x) = \\frac{g'(x)}{g(x)}$, the derivative of the inside over the inside.",
+    "Expand with the log rules before differentiating: $\\ln\\frac{AB}{C} = \\ln A + \\ln B - \\ln C$ and $\\ln A^r = r\\ln A$.",
+    "Logarithmic differentiation: take $\\ln$ of both sides, expand, differentiate implicitly to get $\\frac{y'}{y}$, multiply by $y$; it handles big products and $x^x$.",
+    "$e = \\lim_{x \\to 0}(1 + x)^{1/x} = \\lim_{n \\to \\infty}\\left(1 + \\frac{1}{n}\\right)^n$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Chain rule with a logarithm",
+      "problem": "Differentiate $y = \\ln(x^2 + 3x)$ and $y = \\ln(\\cos x)$.",
+      "steps": [
+        "First: inside is $x^2 + 3x$ with derivative $2x + 3$. So $y' = \\frac{2x + 3}{x^2 + 3x}$.",
+        "Second: inside is $\\cos x$ with derivative $-\\sin x$. So $y' = \\frac{-\\sin x}{\\cos x} = -\\tan x$.",
+        "Check the first at $x = 1$: $y' = \\frac{5}{4} = 1.25$. Secant from 1 to 1.01: $\\frac{\\ln(4.0501) - \\ln 4}{0.01} = \\frac{1.39875 - 1.38629}{0.01} \\approx 1.246$. Good."
+      ]
+    },
+    {
+      "title": "Expand first",
+      "problem": "Differentiate $y = \\ln\\dfrac{(x + 2)^3}{\\sqrt{x}}$.",
+      "steps": [
+        "Expand with the log rules: $y = 3\\ln(x + 2) - \\frac{1}{2}\\ln x$.",
+        "Differentiate each term: $y' = \\frac{3}{x + 2} - \\frac{1}{2x}$.",
+        "Optional common denominator: $\\frac{6x - (x + 2)}{2x(x + 2)} = \\frac{5x - 2}{2x(x + 2)}$.",
+        "Check at $x = 2$: $y' = \\frac{3}{4} - \\frac{1}{4} = \\frac{1}{2}$, and the combined form gives $\\frac{8}{16} = \\frac{1}{2}$. Consistent."
+      ]
+    },
+    {
+      "title": "Logarithmic differentiation of a product",
+      "problem": "Differentiate $y = \\dfrac{x^2\\sqrt{x + 1}}{(x - 1)^3}$ for $x > 1$.",
+      "steps": [
+        "Take $\\ln$ of both sides and expand: $\\ln y = 2\\ln x + \\frac{1}{2}\\ln(x + 1) - 3\\ln(x - 1)$.",
+        "Differentiate implicitly: $\\frac{y'}{y} = \\frac{2}{x} + \\frac{1}{2(x + 1)} - \\frac{3}{x - 1}$.",
+        "Multiply by $y$: $y' = \\frac{x^2\\sqrt{x + 1}}{(x - 1)^3}\\left(\\frac{2}{x} + \\frac{1}{2(x + 1)} - \\frac{3}{x - 1}\\right)$.",
+        "Check at $x = 3$: $y = \\frac{9\\cdot 2}{8} = 2.25$ and the bracket is $\\frac{2}{3} + \\frac{1}{8} - \\frac{3}{2} = -0.7083$, so $y' \\approx -1.594$. Secant from 3 to 3.01: $y(3.01) = \\frac{9.0601\\cdot\\sqrt{4.01}}{2.01^3} \\approx \\frac{9.0601\\cdot 2.00250}{8.1206} \\approx 2.2342$, slope $\\approx -1.58$. Good."
+      ]
+    },
+    {
+      "title": "A variable base and a variable exponent",
+      "problem": "Differentiate $y = x^{\\sin x}$ for $x > 0$.",
+      "steps": [
+        "Neither the power rule (needs constant exponent) nor the exponential rule (needs constant base) applies. Take logs: $\\ln y = \\sin x\\cdot\\ln x$.",
+        "Differentiate with the product rule on the right: $\\frac{y'}{y} = \\cos x\\ln x + \\frac{\\sin x}{x}$.",
+        "Multiply by $y$: $y' = x^{\\sin x}\\left(\\cos x\\ln x + \\frac{\\sin x}{x}\\right)$.",
+        "Sanity check at $x = 1$: $y = 1^{\\sin 1} = 1$, and $y' = 1\\cdot(\\cos 1\\cdot 0 + \\sin 1) = \\sin 1 \\approx 0.841$. A secant from 1 to 1.01 gives $\\frac{1.01^{\\sin 1.01} - 1}{0.01} \\approx \\frac{1.008447 - 1}{0.01} \\approx 0.845$. Good."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Writing $\\frac{d}{dx}\\ln(x^2 + 1) = \\frac{1}{x^2 + 1}$. The chain rule requires multiplying by the inner derivative: $\\frac{2x}{x^2 + 1}$.",
+    "Differentiating $\\ln(5x)$ as $\\frac{1}{5x}$. It is $\\frac{5}{5x} = \\frac{1}{x}$, the same as $\\ln x$, because $\\ln(5x) = \\ln 5 + \\ln x$ and the constant vanishes.",
+    "Using the power rule on $x^x$ to get $x\\cdot x^{x-1} = x^x$, or the exponential rule to get $x^x\\ln x$. Both are incomplete; logarithmic differentiation gives $x^x(\\ln x + 1)$.",
+    "Forgetting to multiply by $y$ at the end of logarithmic differentiation and reporting $\\frac{y'}{y}$ as the derivative.",
+    "Writing $\\frac{d}{dx}\\log_{10}x = \\frac{1}{x}$. Other bases need the factor $\\frac{1}{\\ln b}$: $\\frac{1}{x\\ln 10}$."
+  ],
+  "whyItMatters": "$\\int\\frac{dx}{x} = \\ln|x| + C$ is the antiderivative the power rule cannot give, and the pattern $\\int\\frac{g'(x)}{g(x)}\\,dx = \\ln|g(x)| + C$ is one of the most used substitutions: it is how $\\int\\tan x\\,dx = -\\ln|\\cos x| + C$ is found, and it is the backbone of partial fractions, where every $\\frac{A}{x - a}$ piece integrates to a log. Logarithmic differentiation reappears in growth models and in the ratio test of Chapter 11.",
+  "checkYourself": [
+    {
+      "q": "$\\frac{d}{dx}\\ln(3x^2 - 1)$?",
+      "a": "$\\frac{6x}{3x^2 - 1}$."
+    },
+    {
+      "q": "$\\frac{d}{dx}[x\\ln x]$?",
+      "a": "$\\ln x + 1$."
+    },
+    {
+      "q": "$\\frac{d}{dx}\\log_2 x$?",
+      "a": "$\\frac{1}{x\\ln 2}$."
+    },
+    {
+      "q": "What is $\\lim_{n \\to \\infty}\\left(1 + \\frac{1}{n}\\right)^n$?",
+      "a": "$e$."
+    }
+  ],
+  "readingGuide": [
+    "Find the derivation of $\\frac{d}{dx}\\ln x$ from the inverse relationship with $e^x$ and reproduce it by implicit differentiation.",
+    "Locate the general formula for $\\frac{d}{dx}\\ln g(x)$ and the version with absolute value; note why $\\ln|x|$ matters for negative $x$.",
+    "Before reading the solution of the first example with a log of a quotient or product, expand it with the log rules and differentiate term by term.",
+    "Find the steps of logarithmic differentiation and apply them to $y = x^x$ before looking at any example of that type.",
+    "Find the limit expression for $e$ and the table of values approaching it; compute $(1 + \\frac{1}{100})^{100}$ yourself."
+  ]
+}

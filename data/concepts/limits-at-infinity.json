@@ -1,0 +1,89 @@
+{
+  "nodeId": "limits-at-infinity",
+  "title": "Limits at Infinity; Horizontal Asymptotes",
+  "overview": "The limits so far asked what happens as $x$ approaches a number. Now ask what happens as $x$ grows without bound. We write $\\lim_{x \\to \\infty}f(x) = L$ if $f(x)$ gets as close to $L$ as you like once $x$ is large enough, and $\\lim_{x \\to -\\infty}f(x) = L$ for the same idea far to the left. When either limit equals $L$, the line $y = L$ is a **horizontal asymptote**: the graph flattens toward that height. A function can have two different horizontal asymptotes (one on each side), one, or none.\n\nThe master fact is\n$$\\lim_{x \\to \\infty}\\frac{1}{x^r} = 0 \\quad\\text{for any } r > 0,$$\nand the same as $x \\to -\\infty$ when $x^r$ makes sense there. One over something huge is tiny. Everything else comes from this fact and the limit laws, which work for $x \\to \\pm\\infty$ exactly as before.\n\nFor a **rational function**, divide every term in the numerator and denominator by the highest power of $x$ that appears in the denominator. Each term then becomes a constant or a constant over a power of $x$, and the latter go to 0. The result is the ratio of leading coefficients if the degrees are equal; $0$ if the numerator has lower degree; and $\\pm\\infty$ if the numerator has higher degree. For instance $\\frac{3x^2 - x}{5x^2 + 7}$ becomes $\\frac{3 - \\frac{1}{x}}{5 + \\frac{7}{x^2}} \\to \\frac{3}{5}$. This is really a statement about which terms matter: for large $x$, only the highest power in each polynomial counts.\n\nSquare roots need care with signs. For large positive $x$, $\\sqrt{x^2} = x$, but for large negative $x$, $\\sqrt{x^2} = |x| = -x$. So $\\frac{\\sqrt{x^2 + 1}}{x}$ tends to $1$ as $x \\to \\infty$ and to $-1$ as $x \\to -\\infty$, and the graph has two horizontal asymptotes. When a limit has the form $\\infty - \\infty$, as in $\\sqrt{x^2 + x} - x$, multiply by the conjugate to turn it into a quotient you can handle.\n\nExponentials and logs have their own end behavior. $e^x \\to \\infty$ as $x \\to \\infty$ and $e^x \\to 0$ as $x \\to -\\infty$, so $y = 0$ is a horizontal asymptote of $e^x$ on the left only. $\\ln x \\to \\infty$ as $x \\to \\infty$, but so slowly that it has no asymptote. Oscillating functions like $\\sin x$ have no limit at infinity at all, because they keep swinging; but $\\frac{\\sin x}{x} \\to 0$ by the Squeeze Theorem, since $-\\frac{1}{x} \\le \\frac{\\sin x}{x} \\le \\frac{1}{x}$.\n\nFinally, $\\lim_{x \\to \\infty}f(x) = \\infty$ means $f$ grows without bound, with no asymptote. For polynomials the leading term decides: $x^3 - 100x^2 \\to \\infty$ because for large $x$, $x^3$ overwhelms $100x^2$. Factor out the leading power to see it: $x^3\\left(1 - \\frac{100}{x}\\right)$, and the parenthesis tends to 1.",
+  "keyIdeas": [
+    "$\\lim_{x \\to \\infty}f(x) = L$ means $f(x)$ approaches $L$ as $x$ grows without bound; $y = L$ is then a horizontal asymptote.",
+    "$\\lim_{x \\to \\pm\\infty}\\frac{1}{x^r} = 0$ for $r > 0$; this plus the limit laws handles most cases.",
+    "For a rational function, divide top and bottom by the highest power of $x$ in the denominator; the limit is the ratio of leading coefficients (equal degrees), 0 (lower numerator degree), or $\\pm\\infty$ (higher numerator degree).",
+    "For $x \\to -\\infty$, $\\sqrt{x^2} = -x$; square-root expressions can give different asymptotes on the two sides.",
+    "$\\infty - \\infty$ forms with roots are handled by multiplying by the conjugate.",
+    "$e^x \\to 0$ as $x \\to -\\infty$ and $\\to \\infty$ as $x \\to \\infty$; $\\ln x \\to \\infty$ slowly; $\\sin x$ has no limit at infinity.",
+    "For a polynomial, the leading term determines the behavior at $\\pm\\infty$."
+  ],
+  "workedExamples": [
+    {
+      "title": "A rational function with equal degrees",
+      "problem": "Find $\\lim_{x \\to \\infty}\\dfrac{4x^2 - 3x + 1}{2x^2 + 5}$ and the horizontal asymptote.",
+      "steps": [
+        "The highest power in the denominator is $x^2$. Divide every term by $x^2$: $\\frac{4 - \\frac{3}{x} + \\frac{1}{x^2}}{2 + \\frac{5}{x^2}}$.",
+        "As $x \\to \\infty$, each fraction with $x$ in the denominator goes to 0: the expression tends to $\\frac{4 - 0 + 0}{2 + 0} = 2$.",
+        "The same computation works as $x \\to -\\infty$ (even powers of $x$ are positive), so the limit is 2 on both sides.",
+        "Horizontal asymptote: $y = 2$. Check: at $x = 100$ the value is $\\frac{39701}{20005} \\approx 1.985$, close to 2."
+      ]
+    },
+    {
+      "title": "A square root with different behavior on each side",
+      "problem": "Find $\\lim_{x \\to \\infty}\\dfrac{2x + 1}{\\sqrt{x^2 + 4}}$ and $\\lim_{x \\to -\\infty}\\dfrac{2x + 1}{\\sqrt{x^2 + 4}}$.",
+      "steps": [
+        "For $x \\to \\infty$: divide top and bottom by $x$, and inside the root write $x = \\sqrt{x^2}$ (valid for $x > 0$): $\\frac{2 + \\frac{1}{x}}{\\sqrt{1 + \\frac{4}{x^2}}} \\to \\frac{2}{\\sqrt{1}} = 2$.",
+        "For $x \\to -\\infty$: now $x < 0$, so $x = -\\sqrt{x^2}$, and dividing the root by $x$ means dividing by $-\\sqrt{x^2}$: $\\frac{2 + \\frac{1}{x}}{-\\sqrt{1 + \\frac{4}{x^2}}} \\to \\frac{2}{-1} = -2$.",
+        "Two horizontal asymptotes: $y = 2$ on the right and $y = -2$ on the left.",
+        "Check with $x = -100$: $\\frac{-199}{\\sqrt{10004}} \\approx \\frac{-199}{100.02} \\approx -1.99$. Consistent with $-2$."
+      ]
+    },
+    {
+      "title": "An infinity-minus-infinity form",
+      "problem": "Evaluate $\\lim_{x \\to \\infty}\\left(\\sqrt{x^2 + 6x} - x\\right)$.",
+      "steps": [
+        "Both terms go to $\\infty$, so the difference is not obviously anything. Multiply and divide by the conjugate $\\sqrt{x^2 + 6x} + x$.",
+        "Numerator becomes $(x^2 + 6x) - x^2 = 6x$. So the expression equals $\\frac{6x}{\\sqrt{x^2 + 6x} + x}$.",
+        "Divide top and bottom by $x$ (positive): $\\frac{6}{\\sqrt{1 + \\frac{6}{x}} + 1} \\to \\frac{6}{1 + 1} = 3$.",
+        "Check: $x = 1000$ gives $\\sqrt{1006000} - 1000 \\approx 1002.996 - 1000 = 2.996$. Approaching 3."
+      ]
+    },
+    {
+      "title": "Exponential end behavior",
+      "problem": "Find the horizontal asymptotes of $f(x) = \\dfrac{3}{1 + e^{-x}}$.",
+      "steps": [
+        "As $x \\to \\infty$, $e^{-x} \\to 0$, so $f(x) \\to \\frac{3}{1 + 0} = 3$.",
+        "As $x \\to -\\infty$, $-x \\to \\infty$ so $e^{-x} \\to \\infty$, and the denominator blows up: $f(x) \\to 0$.",
+        "Two horizontal asymptotes: $y = 3$ on the right and $y = 0$ on the left. The graph is an S-shaped curve rising from 0 to 3 (a logistic curve).",
+        "Check: $f(0) = \\frac{3}{2}$, halfway between, and $f(5) = \\frac{3}{1 + 0.0067} \\approx 2.98$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Dividing by the highest power in the numerator instead of the denominator, which can leave the denominator going to 0. Use the denominator's highest power.",
+    "Writing $\\sqrt{x^2} = x$ when $x \\to -\\infty$. For negative $x$, $\\sqrt{x^2} = -x$; forgetting this flips the sign of the asymptote.",
+    "Treating $\\infty - \\infty$ as 0 or $\\frac{\\infty}{\\infty}$ as 1. These forms carry no information; simplify first.",
+    "Assuming a function cannot cross its horizontal asymptote. It can, any number of times; the asymptote only describes the far ends. $\\frac{\\sin x}{x}$ crosses $y = 0$ infinitely often.",
+    "Giving $e^x$ a horizontal asymptote on the right. $e^x \\to \\infty$ there; only the left side flattens to $y = 0$."
+  ],
+  "whyItMatters": "Improper integrals like $\\int_1^\\infty\\frac{dx}{x^2}$ are defined as $\\lim_{t \\to \\infty}\\int_1^t\\frac{dx}{x^2} = \\lim_{t \\to \\infty}\\left(1 - \\frac{1}{t}\\right) = 1$, a limit at infinity of exactly this kind, and whether such an integral converges is a question about how fast the integrand goes to 0. Sequences and series in Chapter 11 are limits as $n \\to \\infty$, and the definite integral itself is a limit of Riemann sums as the number of rectangles $n \\to \\infty$, computed by the \"divide by the highest power of $n$\" technique from this section.",
+  "checkYourself": [
+    {
+      "q": "$\\lim_{x \\to \\infty}\\frac{5x + 2}{x^2 - 1}$?",
+      "a": "0; the denominator has higher degree."
+    },
+    {
+      "q": "$\\lim_{x \\to -\\infty}\\frac{7x^3 - x}{2x^3 + 9}$?",
+      "a": "$\\frac{7}{2}$."
+    },
+    {
+      "q": "Horizontal asymptote(s) of $y = e^{x}$?",
+      "a": "$y = 0$ as $x \\to -\\infty$ only."
+    },
+    {
+      "q": "$\\lim_{x \\to \\infty}\\frac{\\cos x}{x}$?",
+      "a": "0, by the Squeeze Theorem."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of a limit at infinity and of a horizontal asymptote; note that the asymptote is a line the graph approaches, not necessarily avoids.",
+    "Locate the key fact about $\\frac{1}{x^r}$ and the technique of dividing by the highest power of $x$; apply it to a rational function of your own before reading the examples.",
+    "Look for the example with a square root and watch how the sign of $x$ is handled for $x \\to -\\infty$.",
+    "Find the discussion of $e^x$ and of oscillating functions at infinity, and sketch the end behavior of each.",
+    "Before reading the solution of any example with $\\sqrt{\\cdots} - x$, try the conjugate trick yourself."
+  ]
+}

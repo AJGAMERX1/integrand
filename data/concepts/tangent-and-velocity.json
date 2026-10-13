@@ -1,0 +1,87 @@
+{
+  "nodeId": "tangent-and-velocity",
+  "title": "The Tangent and Velocity Problems",
+  "overview": "Calculus was invented to answer two questions that algebra cannot. First: what is the slope of a curve at a single point? A line has one slope everywhere, but a curve like $y = x^2$ is steeper the farther right you go, so \"the slope at $x = 1$\" has to mean the slope of the **tangent line**, the straight line that just grazes the curve there and matches its direction. Second: how fast is a moving object going at a single instant? Average speed over an interval is distance divided by time, but at one instant both the distance and the time are zero, and $\\frac{0}{0}$ is meaningless. Both questions have the same shape, and they are solved by the same trick.\n\nThe trick is to sneak up on the answer. To find the slope of the tangent to $y = x^2$ at $P = (1, 1)$, pick a second point $Q$ on the curve nearby, say $Q = (1.5, 2.25)$, and compute the slope of the **secant line** through $P$ and $Q$: $\\frac{2.25 - 1}{1.5 - 1} = 2.5$. That is not the tangent slope, but it is close. Move $Q$ closer: at $x = 1.1$ the secant slope is $\\frac{1.21 - 1}{0.1} = 2.1$; at $x = 1.01$ it is $2.01$; at $x = 1.001$ it is $2.001$. From the left, $x = 0.9$ gives $1.9$ and $x = 0.99$ gives $1.99$. The secant slopes are closing in on 2 from both sides. We say the slope of the tangent line is the **limit** of the secant slopes as $Q$ approaches $P$, and here that limit is 2. In general, for a point $x = a$ and a nearby point $x$, the secant slope is\n$$m_{\\text{sec}} = \\frac{f(x) - f(a)}{x - a},$$\nand the tangent slope is what this approaches as $x \\to a$.\n\nVelocity works identically. If a ball dropped from rest has fallen $s(t) = 4.9t^2$ meters after $t$ seconds, its average velocity between $t = 2$ and $t = 2.1$ is $\\frac{s(2.1) - s(2)}{0.1} = \\frac{21.609 - 19.6}{0.1} = 20.09$ meters per second. Over $[2, 2.01]$ it is $19.649$; over $[2, 2.001]$ it is $19.6049$. These average velocities approach $19.6$, and we call that the **instantaneous velocity** at $t = 2$. Geometrically, average velocity is the slope of a secant line on the graph of $s$, and instantaneous velocity is the slope of the tangent. The two problems are literally the same problem.\n\nWhy not just plug in $x = a$? Because the secant formula becomes $\\frac{0}{0}$ there. The limit idea says: do not plug in, but look at what the values do as you get arbitrarily close. In the $x^2$ example the secant slope simplifies to $\\frac{x^2 - 1}{x - 1} = \\frac{(x-1)(x+1)}{x - 1} = x + 1$ for $x \\ne 1$, and $x + 1$ clearly heads to 2. That algebraic cancellation is the second half of the trick, and it is what the next sections develop into a general method.\n\nKeep the two pictures together as you continue: a limit is a number that a quantity approaches, the tangent slope is a limit of secant slopes, and instantaneous velocity is a limit of average velocities. Everything called a derivative is one of these limits.",
+  "keyIdeas": [
+    "The slope of a curve at a point means the slope of its tangent line, the line that touches the curve at that point and matches its direction.",
+    "A secant line through $(a, f(a))$ and a nearby point $(x, f(x))$ has slope $\\frac{f(x) - f(a)}{x - a}$; the tangent slope is the limit of these as $x \\to a$.",
+    "Average velocity over $[a, a + h]$ is $\\frac{s(a + h) - s(a)}{h}$; instantaneous velocity at $t = a$ is the limit as $h \\to 0$.",
+    "Average velocity is a secant slope on the position graph; instantaneous velocity is a tangent slope. The two problems are the same.",
+    "Plugging in $x = a$ gives $\\frac{0}{0}$, which is why a limit is needed; algebra (factoring and canceling) often reveals what the limit is.",
+    "A table of secant slopes approaching from both sides is a good way to guess a limit before you can prove it."
+  ],
+  "workedExamples": [
+    {
+      "title": "Guessing a tangent slope from a table",
+      "problem": "Estimate the slope of the tangent line to $y = x^3$ at the point $(2, 8)$ using secant slopes.",
+      "steps": [
+        "Secant slope from $x = 2$ to a nearby $x$: $\\frac{x^3 - 8}{x - 2}$.",
+        "$x = 2.1$: $\\frac{9.261 - 8}{0.1} = 12.61$. $x = 2.01$: $\\frac{8.120601 - 8}{0.01} = 12.0601$. $x = 2.001$: about $12.006$.",
+        "From the left, $x = 1.9$: $\\frac{6.859 - 8}{-0.1} = 11.41$. $x = 1.99$: $\\frac{7.880599 - 8}{-0.01} = 11.9401$.",
+        "Both sides approach 12, so the tangent slope is 12. Confirm algebraically: $x^3 - 8 = (x - 2)(x^2 + 2x + 4)$, so the secant slope is $x^2 + 2x + 4$ for $x \\ne 2$, which equals $4 + 4 + 4 = 12$ at $x = 2$.",
+        "Tangent line: through $(2, 8)$ with slope 12, $y - 8 = 12(x - 2)$, or $y = 12x - 16$."
+      ]
+    },
+    {
+      "title": "Instantaneous velocity of a falling object",
+      "problem": "A rock dropped from a cliff has fallen $s(t) = 4.9t^2$ meters after $t$ seconds. Find its velocity at $t = 3$.",
+      "steps": [
+        "Average velocity over $[3, 3 + h]$: $\\frac{4.9(3 + h)^2 - 4.9(9)}{h}$.",
+        "Expand: $4.9(9 + 6h + h^2) - 44.1 = 29.4h + 4.9h^2$. Divide by $h$: $29.4 + 4.9h$.",
+        "Table: $h = 0.1$ gives $29.89$; $h = 0.01$ gives $29.449$; $h = -0.01$ gives $29.351$. All approaching $29.4$.",
+        "As $h \\to 0$ the expression $29.4 + 4.9h$ approaches $29.4$. The instantaneous velocity at $t = 3$ is $29.4$ meters per second (and generally $9.8t$)."
+      ]
+    },
+    {
+      "title": "Secant slope simplification with a rational function",
+      "problem": "Find the slope of the tangent to $y = \\dfrac{1}{x}$ at $x = 2$.",
+      "steps": [
+        "Secant slope from $2$ to $x$: $\\frac{\\frac{1}{x} - \\frac{1}{2}}{x - 2}$.",
+        "Combine the numerator: $\\frac{1}{x} - \\frac{1}{2} = \\frac{2 - x}{2x}$. So the slope is $\\frac{2 - x}{2x(x - 2)}$.",
+        "Since $2 - x = -(x - 2)$, cancel to get $\\frac{-1}{2x}$ for $x \\ne 2$.",
+        "As $x \\to 2$ this approaches $-\\frac{1}{4}$. Check with a table: $x = 2.1$ gives $\\frac{0.47619 - 0.5}{0.1} = -0.238$, close to $-0.25$. The tangent slopes down, as the graph of $\\frac{1}{x}$ does."
+      ]
+    },
+    {
+      "title": "Reading velocity from a position table",
+      "problem": "A car's position (in meters) is recorded as $s(0) = 0$, $s(1) = 3$, $s(2) = 12$, $s(3) = 27$, $s(4) = 48$. Estimate its velocity at $t = 2$.",
+      "steps": [
+        "Average velocity over $[2, 3]$: $\\frac{27 - 12}{1} = 15$ m/s. Over $[1, 2]$: $\\frac{12 - 3}{1} = 9$ m/s.",
+        "The instantaneous velocity at $t = 2$ should lie between these, and a reasonable estimate is their average, $12$ m/s, which is also the secant slope over $[1, 3]$: $\\frac{27 - 3}{2} = 12$.",
+        "Sanity check: the data fit $s(t) = 3t^2$ exactly, and the method of the previous example gives velocity $6t = 12$ at $t = 2$. The symmetric estimate was exact here."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Plugging $x = a$ directly into the secant slope and declaring the answer undefined. The $\\frac{0}{0}$ is a signal to simplify or to take a limit, not the final answer.",
+    "Approaching from one side only. The secant slopes must settle to the same value from the left and the right; checking both guards against jumps and corners.",
+    "Confusing average velocity with instantaneous velocity. Average velocity needs an interval; instantaneous velocity is at one moment and is a limit.",
+    "Using the secant slope at $x = 2.1$ as if it were the tangent slope. It is only an approximation; the limit is the exact value.",
+    "Forgetting that velocity can be negative: a secant slope of $-5$ means the object is moving in the negative direction at 5 units per second."
+  ],
+  "whyItMatters": "The tangent problem becomes the derivative, and the velocity problem is its first application. The integral turns out to be the reverse: if the derivative of position is velocity, then integrating velocity recovers position, which is the Fundamental Theorem of Calculus in one sentence. The \"sneak up on it\" strategy, approximate and then take a limit, is also exactly how the definite integral is defined, using rectangles instead of secant lines.",
+  "checkYourself": [
+    {
+      "q": "Secant slope of $y = x^2$ between $x = 3$ and $x = 3.5$?",
+      "a": "$\\frac{12.25 - 9}{0.5} = 6.5$."
+    },
+    {
+      "q": "What value do the secant slopes of $y = x^2$ at $x = 3$ approach?",
+      "a": "6."
+    },
+    {
+      "q": "If $s(t) = 5t^2$, what is the average velocity on $[1, 1.1]$?",
+      "a": "$\\frac{6.05 - 5}{0.1} = 10.5$."
+    },
+    {
+      "q": "Geometrically, instantaneous velocity is the slope of what?",
+      "a": "The tangent line to the position graph."
+    }
+  ],
+  "readingGuide": [
+    "Find the description of the tangent problem and note how the secant line is used to approximate the tangent.",
+    "Before reading the solution of the first example that estimates a tangent slope with a table, build your own table with points on both sides.",
+    "Locate the velocity problem and write a one-line statement of how average velocity and instantaneous velocity are related.",
+    "Look for the moment the text says the two problems are the same, and explain in your own words why a velocity is a slope."
+  ]
+}

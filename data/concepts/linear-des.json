@@ -1,0 +1,80 @@
+{
+  "nodeId": "linear-des",
+  "title": "Linear Equations",
+  "overview": "A first-order **linear** differential equation has the form\n$$\\frac{dy}{dx} + P(x)\\,y = Q(x),$$\nwhere $P$ and $Q$ are functions of $x$ only. The unknown $y$ and its derivative appear only to the first power and are not multiplied together. The equation $y' + 2y = 6$ is linear; so is $y' + \\frac{y}{x} = x^2$. But $y' = x + y$ is linear too, once you move the $y$ across: $y' - y = x$. Many equations that are not separable are linear, and this section gives a method that always works for them.\n\nThe trick is to multiply the whole equation by a carefully chosen function $I(x)$, called the **integrating factor**, so that the left side becomes the derivative of a product. We want\n$$I(x)\\,y' + I(x)P(x)\\,y = \\left(I(x)\\,y\\right)'.$$\nThe product rule says $(Iy)' = Iy' + I'y$, so we need $I' = IP$. That is a separable equation for $I$, with solution\n$$I(x) = e^{\\int P(x)\\,dx}.$$\n(Any one antiderivative will do; no constant is needed.)\n\nNow the whole equation reads $(Iy)' = IQ$. Integrate both sides, then divide by $I$:\n$$y = \\frac{1}{I(x)}\\left(\\int I(x)\\,Q(x)\\,dx + C\\right).$$\n\nThe recipe, in order: write the equation in standard form with the coefficient of $y'$ equal to $1$; identify $P(x)$; compute $I = e^{\\int P\\,dx}$; multiply through; recognize the left side as $(Iy)'$; integrate; solve for $y$. The integration in the last step is where the technique from earlier chapters shows up, often integration by parts.\n\nLinear equations model circuits (current with resistance and inductance), mixing tanks with changing volume, and any situation where the rate of change has a part proportional to $y$ plus a part that depends only on time.",
+  "keyIdeas": [
+    "Standard form of a first-order linear equation: $\\frac{dy}{dx} + P(x)y = Q(x)$. Divide through first if $y'$ has a coefficient.",
+    "The integrating factor is $I(x) = e^{\\int P(x)\\,dx}$; it is built so that $(Iy)' = Iy' + IPy$, the left side of the multiplied equation.",
+    "After multiplying, $(I(x)y)' = I(x)Q(x)$; integrate both sides and divide by $I$ to get $y = \\frac{1}{I}\\left(\\int IQ\\,dx + C\\right)$.",
+    "No constant is needed when computing $\\int P\\,dx$ for $I$; any constant would multiply the whole equation by a nonzero number and cancel.",
+    "When $P$ is constant, $I = e^{Px}$; when $P = \\frac{a}{x}$, $I = e^{a\\ln x} = x^a$ for $x > 0$.",
+    "The constant $C$ appears when you integrate $IQ$; apply the initial condition after solving for $y$."
+  ],
+  "workedExamples": [
+    {
+      "title": "A constant coefficient",
+      "problem": "Solve $\\frac{dy}{dx} + 2y = 6$ with $y(0) = 0$.",
+      "steps": [
+        "Already in standard form with $P(x) = 2$ and $Q(x) = 6$. Integrating factor: $I = e^{\\int 2\\,dx} = e^{2x}$.",
+        "Multiply the equation by $e^{2x}$: $e^{2x}y' + 2e^{2x}y = 6e^{2x}$. The left side is exactly $\\left(e^{2x}y\\right)'$ by the product rule, which is the whole point of choosing $I$ this way.",
+        "Integrate: $e^{2x}y = \\int 6e^{2x}\\,dx = 3e^{2x} + C$.",
+        "Divide by $e^{2x}$: $y = 3 + Ce^{-2x}$. Initial condition $y(0) = 0$ gives $3 + C = 0$, so $C = -3$ and $y = 3 - 3e^{-2x}$.",
+        "Check: $y' = 6e^{-2x}$ and $2y = 6 - 6e^{-2x}$, so $y' + 2y = 6$. Also $y \\to 3$ as $x \\to \\infty$, matching the equilibrium where $2y = 6$."
+      ]
+    },
+    {
+      "title": "A coefficient that depends on $x$",
+      "problem": "Solve $\\frac{dy}{dx} + \\frac{y}{x} = x^2$ for $x > 0$, with $y(1) = 1$.",
+      "steps": [
+        "Standard form with $P(x) = \\frac{1}{x}$, $Q(x) = x^2$. Integrating factor: $I = e^{\\int \\frac{1}{x}\\,dx} = e^{\\ln x} = x$ (using $x > 0$).",
+        "Multiply by $x$: $xy' + y = x^3$. The left side is $(xy)'$. Check with the product rule: $(xy)' = y + xy'$. Yes.",
+        "Integrate: $xy = \\int x^3\\,dx = \\frac{x^4}{4} + C$.",
+        "Solve: $y = \\frac{x^3}{4} + \\frac{C}{x}$. Initial condition $y(1) = \\frac{1}{4} + C = 1$ gives $C = \\frac{3}{4}$, so $y = \\frac{x^3}{4} + \\frac{3}{4x}$.",
+        "Check: $y' = \\frac{3x^2}{4} - \\frac{3}{4x^2}$ and $\\frac{y}{x} = \\frac{x^2}{4} + \\frac{3}{4x^2}$; the sum is $x^2$. Correct."
+      ]
+    },
+    {
+      "title": "Integration by parts in the last step",
+      "problem": "Solve $\\frac{dy}{dx} = x - y$ with $y(0) = 1$.",
+      "steps": [
+        "Rewrite in standard form: $y' + y = x$. So $P = 1$, $Q = x$, and $I = e^{x}$. This equation is not separable, so the integrating factor is the right tool.",
+        "Multiply: $e^x y' + e^x y = xe^x$, that is $(e^x y)' = xe^x$.",
+        "Integrate the right side by parts with $u = x$, $dv = e^x\\,dx$: $\\int xe^x\\,dx = xe^x - e^x + C$.",
+        "So $e^x y = (x - 1)e^x + C$ and $y = x - 1 + Ce^{-x}$. The initial condition $y(0) = -1 + C = 1$ gives $C = 2$: $y = x - 1 + 2e^{-x}$.",
+        "Check: $y' = 1 - 2e^{-x}$ and $x - y = x - (x - 1 + 2e^{-x}) = 1 - 2e^{-x}$. Equal. For large $x$ the solution hugs the line $y = x - 1$, exactly what the direction field for this equation suggested."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Computing the integrating factor before putting the equation in standard form. For $xy' + 2y = x^3$, divide by $x$ first so $P = \\frac{2}{x}$ and $I = x^2$; using $P = 2$ gives the wrong $I = e^{2x}$.",
+    "Adding a constant inside the integrating factor, $I = e^{\\int P\\,dx + C}$. It just multiplies $I$ by $e^C$, which cancels, so it is harmless but pointless; leave it out.",
+    "Forgetting the constant when integrating $IQ$. The $C$ must appear before dividing by $I$: $y = \\frac{1}{I}(\\ldots + C)$, so the constant term in $y$ is $\\frac{C}{I}$, not a bare $C$. For $y' + 2y = 6$ the correct family is $3 + Ce^{-2x}$, not $3 + C$.",
+    "Multiplying only one side by $I$. Both sides must be multiplied, or the equation changes. Check that after multiplying, the left side really differentiates to $(Iy)'$.",
+    "Trying to separate a linear equation that is not separable, such as $y' = x - y$. If the right side is a sum involving both $x$ and $y$, reach for the integrating factor."
+  ],
+  "whyItMatters": "The integrating factor is the product rule run backward: an integration technique for differential equations, just as substitution is the chain rule run backward. Linear equations are the ones science solves most often, because small departures from equilibrium are nearly always linear. The method extends to second-order linear equations (springs, circuits, waves) and, with matrices, to systems of equations. And the final integration step is a reminder that integration by parts and friends are never far away.",
+  "checkYourself": [
+    {
+      "q": "What is the integrating factor for $y' + 3y = e^x$?",
+      "a": "$I = e^{3x}$."
+    },
+    {
+      "q": "Put $xy' - y = x^2$ in standard form and find $I$ for $x > 0$.",
+      "a": "$y' - \\frac{y}{x} = x$, so $P = -\\frac{1}{x}$ and $I = e^{-\\ln x} = \\frac{1}{x}$."
+    },
+    {
+      "q": "Solve $y' + y = 0$ with the integrating factor.",
+      "a": "$(e^x y)' = 0$ gives $e^x y = C$, so $y = Ce^{-x}$."
+    },
+    {
+      "q": "Is $y' = y^2 + x$ linear?",
+      "a": "No: $y$ appears squared."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of a first-order linear equation and test a few equations in the section yourself: linear or not, separable or not.",
+    "Locate the derivation of the integrating factor and identify the exact line where the product rule is used to choose $I$.",
+    "Before reading the solution of the first worked example, compute $I$, multiply through, and integrate on your own; then compare.",
+    "Look for the electric circuit application and note which physical quantities play the roles of $P(x)$ and $Q(x)$."
+  ]
+}

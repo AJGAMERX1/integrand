@@ -1,0 +1,93 @@
+{
+  "nodeId": "integration-by-parts",
+  "title": "Integration by Parts",
+  "overview": "Substitution undoes the chain rule. Integration by parts undoes the **product rule**. Start from the product rule, $(uv)' = u'v + uv'$, and integrate both sides: $uv = \\int u'v\\,dx + \\int uv'\\,dx$. Rearranging gives the formula, usually written with differentials:\n$$\\int u\\,dv = uv - \\int v\\,du.$$\n\nRead it as a trade. You split the integrand into two pieces: a piece $u$ that you will **differentiate** and a piece $dv$ that you will **integrate**. The formula hands you back $uv$ plus a new integral, $\\int v\\,du$. The trade is worth making when the new integral is easier than the old one. That happens when differentiating $u$ simplifies it (a power of $x$ loses a degree; $\\ln x$ becomes $\\frac{1}{x}$) and integrating $dv$ does not make it worse ($e^x$, $\\sin x$, $\\cos x$ stay the same size).\n\nA reliable way to choose $u$: pick, in this order of preference, a logarithm, then an inverse trig function, then a polynomial, then an exponential or trig function. Whatever is left becomes $dv$, and it must be something you can integrate.\n\nThree patterns cover most problems. A polynomial times $e^x$ or a trig function: let $u$ be the polynomial and repeat parts once per degree. A lone $\\ln x$ or $\\arctan x$: let $u$ be that function and $dv = dx$. A product like $e^x \\sin x$: apply parts twice, and the original integral reappears on the right. Move it to the left and solve for it algebraically.\n\nFor definite integrals the formula becomes $\\int_a^b u\\,dv = \\left[ uv \\right]_a^b - \\int_a^b v\\,du$. Evaluate the $uv$ term at the limits just like any antiderivative. And remember that a wrong choice of $u$ is not a failure; if the new integral looks harder, swap the roles and try again.",
+  "keyIdeas": [
+    "The formula: $\\int u\\,dv = uv - \\int v\\,du$, which is the product rule read backwards.",
+    "Choose $u$ to be the factor that gets simpler when differentiated, and $dv$ to be a factor you can integrate. Preference for $u$: log, inverse trig, polynomial, then exponential or trig.",
+    "A polynomial of degree $n$ times $e^x$, $\\sin x$, or $\\cos x$ needs parts $n$ times, each time differentiating the polynomial.",
+    "For $\\ln x$ or $\\arctan x$ alone, take $dv = dx$ so $v = x$.",
+    "When the original integral reappears after two rounds (as with $e^x \\cos x$), move it to the other side and solve for it.",
+    "Definite version: $\\int_a^b u\\,dv = \\left[ uv \\right]_a^b - \\int_a^b v\\,du$."
+  ],
+  "workedExamples": [
+    {
+      "title": "The basic trade",
+      "problem": "Evaluate $\\int x e^x\\,dx$.",
+      "steps": [
+        "Two factors: $x$ and $e^x$. Differentiating $x$ gives 1, which is simpler; integrating $e^x$ gives $e^x$, no worse. So let $u = x$ and $dv = e^x\\,dx$.",
+        "Compute the other two pieces: $du = dx$ and $v = e^x$. (No constant is needed for $v$ at this stage.)",
+        "Apply the formula: $\\int x e^x\\,dx = x e^x - \\int e^x\\,dx$. The new integral has no $x$ in front; that is the payoff.",
+        "Finish: $x e^x - e^x + C$. Factor if you like: $e^x (x - 1) + C$.",
+        "Check by differentiating: $(x e^x - e^x)' = e^x + x e^x - e^x = x e^x$. Correct."
+      ]
+    },
+    {
+      "title": "Integrating a logarithm alone",
+      "problem": "Evaluate $\\int \\ln x\\,dx$.",
+      "steps": [
+        "There is only one visible factor, so invent the second: write the integrand as $\\ln x \\cdot 1$. Let $u = \\ln x$ and $dv = 1\\,dx$.",
+        "Then $du = \\frac{1}{x}\\,dx$ and $v = x$. The log, which we cannot integrate directly, becomes $\\frac{1}{x}$, which we can handle.",
+        "Apply the formula: $\\int \\ln x\\,dx = x \\ln x - \\int x \\cdot \\frac{1}{x}\\,dx = x \\ln x - \\int 1\\,dx$.",
+        "Finish: $x \\ln x - x + C$.",
+        "Check: $(x \\ln x - x)' = \\ln x + x \\cdot \\frac{1}{x} - 1 = \\ln x$. Correct."
+      ]
+    },
+    {
+      "title": "A definite integral with parts",
+      "problem": "Evaluate $\\int_0^\\pi x \\sin x\\,dx$.",
+      "steps": [
+        "Let $u = x$ (differentiates to 1) and $dv = \\sin x\\,dx$ (integrates to $-\\cos x$). So $du = dx$ and $v = -\\cos x$.",
+        "Apply the definite formula: $\\int_0^\\pi x \\sin x\\,dx = \\left[ -x \\cos x \\right]_0^\\pi - \\int_0^\\pi (-\\cos x)\\,dx = \\left[ -x \\cos x \\right]_0^\\pi + \\int_0^\\pi \\cos x\\,dx$.",
+        "Evaluate the boundary term: at $x = \\pi$, $-\\pi \\cos \\pi = -\\pi(-1) = \\pi$; at $x = 0$, $0$. So the term is $\\pi$.",
+        "Evaluate the remaining integral: $\\int_0^\\pi \\cos x\\,dx = \\left[ \\sin x \\right]_0^\\pi = 0 - 0 = 0$.",
+        "Total: $\\pi$. Sense check: $x \\sin x$ is positive on $(0, \\pi)$ and peaks a bit above 1.8 near $x = 2$, so an area of about 3.14 over an interval of length 3.14 is reasonable."
+      ]
+    },
+    {
+      "title": "When the integral comes back",
+      "problem": "Evaluate $\\int e^x \\cos x\\,dx$.",
+      "steps": [
+        "Neither factor simplifies when differentiated, so just pick one: $u = \\cos x$, $dv = e^x\\,dx$. Then $du = -\\sin x\\,dx$ and $v = e^x$.",
+        "First round: $\\int e^x \\cos x\\,dx = e^x \\cos x + \\int e^x \\sin x\\,dx$. The new integral is the same type, not easier yet.",
+        "Second round on $\\int e^x \\sin x\\,dx$ with the same roles: $u = \\sin x$, $dv = e^x\\,dx$, so $du = \\cos x\\,dx$ and $v = e^x$. This gives $e^x \\sin x - \\int e^x \\cos x\\,dx$.",
+        "Substitute back. Calling the original integral $I$: $I = e^x \\cos x + e^x \\sin x - I$. The integral has reappeared with a minus sign.",
+        "Solve for $I$: $2I = e^x (\\cos x + \\sin x)$, so $I = \\frac{e^x (\\sin x + \\cos x)}{2} + C$.",
+        "Check: differentiating $\\frac{1}{2} e^x (\\sin x + \\cos x)$ gives $\\frac{1}{2} e^x (\\sin x + \\cos x) + \\frac{1}{2} e^x (\\cos x - \\sin x) = e^x \\cos x$. Correct."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Choosing $u = e^x$ and $dv = x\\,dx$ in $\\int x e^x\\,dx$. Then $v = \\frac{x^2}{2}$ and the new integral $\\int \\frac{x^2}{2} e^x\\,dx$ is harder than the original. If the new integral grows, swap the choice.",
+    "Dropping the minus sign in $uv - \\int v\\,du$. For $\\int x \\sin x\\,dx$, $v = -\\cos x$, so $-\\int v\\,du = +\\int \\cos x\\,dx$. Two negatives make a positive; track them one at a time.",
+    "Forgetting to evaluate $uv$ at the limits in a definite integral. The $\\left[ uv \\right]_a^b$ term is a number, not a function, and it usually contributes.",
+    "In the loop pattern, switching which factor is $u$ between rounds. If you do, the second round undoes the first and you get $I = I$, which is true but useless. Keep the same roles.",
+    "Writing $\\int \\ln x\\,dx = \\frac{1}{x} + C$. That is the derivative, not the antiderivative. Check: $(\\frac{1}{x})' = -\\frac{1}{x^2} \\ne \\ln x$."
+  ],
+  "whyItMatters": "Integration by parts is the tool that makes whole families of integrals possible: anything with a logarithm, inverse trig functions, polynomials times exponentials, and the Gamma function that generalizes factorials. It is the engine behind reduction formulas, Taylor's theorem with remainder, and Laplace transforms in differential equations. Every time a product shows up under an integral sign, this is the first idea to reach for.",
+  "checkYourself": [
+    {
+      "q": "For $\\int x^2 e^x\\,dx$, what should $u$ be, and how many rounds of parts will it take?",
+      "a": "$u = x^2$, since differentiating lowers the degree. Two rounds, one per degree. The answer is $e^x (x^2 - 2x + 2) + C$."
+    },
+    {
+      "q": "What are $u$ and $dv$ for $\\int \\arctan x\\,dx$?",
+      "a": "$u = \\arctan x$, $dv = dx$, so $du = \\frac{dx}{1 + x^2}$ and $v = x$."
+    },
+    {
+      "q": "Write the parts formula in words.",
+      "a": "The integral of $u\\,dv$ equals $u$ times $v$ minus the integral of $v\\,du$."
+    },
+    {
+      "q": "Evaluate $\\int_0^1 x e^x\\,dx$.",
+      "a": "$\\left[ x e^x - e^x \\right]_0^1 = (e - e) - (0 - 1) = 1$."
+    }
+  ],
+  "readingGuide": [
+    "Find the derivation of the formula from the product rule and follow each algebraic step until it feels obvious.",
+    "Before reading the solution of the first example, decide for yourself which factor should be $u$ and why.",
+    "Look for the example that integrates a logarithm by itself, and note the trick of taking $dv = dx$.",
+    "Find the example where the original integral reappears and watch exactly how it is moved to the other side and solved for.",
+    "Note how the definite-integral version handles the $uv$ term at the limits."
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "nodeId": "graphing-with-technology",
+  "title": "Graphing with Calculus and Calculators",
+  "overview": "A graphing calculator or plotting app draws a curve in a second, so why bother with calculus? Because the picture it draws is only as good as the window you choose, and it never tells you what you are missing. Zoom out and a local maximum vanishes into a flat line; zoom in and you may be staring at one wiggle of a graph with three others off-screen. Calculus tells you where the interesting features are, so that you can aim the window at them. The two tools are partners: calculus to decide what to look at, the machine to look at it precisely.\n\nThe usual workflow starts with a default plot and then asks what calculus predicts. Compute $f'$ and solve $f' = 0$ (by hand or with the machine's solver) to find every critical number; if the plot does not show a turning point at each one, the window is wrong. Compute $f''$ to find inflection points; a stretch that looks straight may hide an inflection point that a closer view reveals. Compute the limits at $\\pm\\infty$ and locate vertical asymptotes; if the plot shows the graph flattening but calculus says there is no horizontal asymptote, the window is cutting off the growth.\n\nPolynomials with widely separated features are the classic trap. A function like $f(x) = x^6 - 15x^4 + 50x^2 + 3$ has critical numbers at a few small values of $x$ but values in the millions by $x = 10$, so a window wide enough to see the growth squashes all the local extremes into a flat line near the axis, while a window narrow enough to see the extremes shows nothing of the growth. The right approach is several windows: one for the global shape, one or more zooms on the regions calculus identifies. No single picture tells the whole story.\n\nTechnology also helps when calculus alone is too messy. If $f'(x) = 0$ is a quintic equation, you solve it numerically, with the calculator's root finder or by Newton's method, and then use the numerical critical numbers for your sign chart. If two curves meet at a point you cannot find algebraically, the intersection tool gives a decimal good enough to set up an integral. The division of labor is: calculus provides the structure (how many extremes, how many inflection points, what the end behavior is), and the machine provides the decimals.\n\nA few habits make calculator graphs trustworthy. Always check the window's scale on both axes; a graph that looks like a line may have a vertical scale of millions. Be suspicious of any feature that disappears when you change the window. And when the plot and the calculus disagree, the calculus is almost always right and the window is wrong; find the discrepancy rather than accepting the picture. Learning to read a machine's output critically is a skill you will use far beyond this course.",
+  "keyIdeas": [
+    "A plotted graph depends entirely on the viewing window; features can be hidden by a window that is too wide or too narrow.",
+    "Use calculus to predict the features (critical numbers, inflection points, asymptotes, end behavior), then choose windows that show each of them.",
+    "Polynomials with small-$x$ features and large-$x$ growth need multiple windows; no single plot shows everything.",
+    "When $f' = 0$ or $f'' = 0$ cannot be solved by hand, solve numerically and use the decimal results in your sign charts.",
+    "If the plot and the calculus disagree, the window is almost certainly the problem.",
+    "Always read the axis scales; a flat-looking stretch may hide extremes under a huge vertical scale."
+  ],
+  "workedExamples": [
+    {
+      "title": "Hidden extremes in a polynomial",
+      "problem": "Use calculus to decide how many local extremes $f(x) = x^4 - 8x^2 + 3$ has, and describe a window that shows them all.",
+      "steps": [
+        "$f'(x) = 4x^3 - 16x = 4x(x^2 - 4) = 4x(x - 2)(x + 2)$. Critical numbers: $-2, 0, 2$.",
+        "Sign chart: $f' < 0$ on $(-\\infty, -2)$, $> 0$ on $(-2, 0)$, $< 0$ on $(0, 2)$, $> 0$ on $(2, \\infty)$. So local minima at $x = \\pm 2$ and a local maximum at $x = 0$: three extremes.",
+        "Values: $f(\\pm 2) = 16 - 32 + 3 = -13$ and $f(0) = 3$. A window of $-4 \\le x \\le 4$ and $-20 \\le y \\le 40$ shows all three turning points clearly; a default window of $-10 \\le x \\le 10$, $-10 \\le y \\le 10$ would show only two steep lines leaving the screen.",
+        "Check end behavior: $x^4$ dominates, so the graph rises on both sides, consistent with minima at the outer critical numbers."
+      ]
+    },
+    {
+      "title": "An inflection point that looks like a straight stretch",
+      "problem": "The graph of $g(x) = x^3 - 0.3x + 1$ looks almost linear near $x = 0$ on a wide window. Does it have local extremes and an inflection point there?",
+      "steps": [
+        "$g'(x) = 3x^2 - 0.3 = 0$ at $x = \\pm\\sqrt{0.1} \\approx \\pm 0.316$. These are critical numbers; the sign chart ($g' > 0$ outside, $< 0$ between) gives a local maximum at $-0.316$ and a local minimum at $0.316$.",
+        "Values: $g(-0.316) \\approx -0.0316 + 0.0949 + 1 \\approx 1.063$ and $g(0.316) \\approx 0.937$. The wiggle is only about $0.13$ tall, invisible on a window with $y$ from $-10$ to $10$.",
+        "$g''(x) = 6x = 0$ at $x = 0$, with a sign change, so $(0, 1)$ is an inflection point between the two extremes.",
+        "A window of $-1 \\le x \\le 1$, $0.8 \\le y \\le 1.2$ reveals the S-shaped wiggle that the wide view hid."
+      ]
+    },
+    {
+      "title": "Combining a numerical root with a sign chart",
+      "problem": "For $h(x) = x^5 - 3x + 1$, a calculator shows two turning points. Confirm with calculus and locate them.",
+      "steps": [
+        "$h'(x) = 5x^4 - 3 = 0$ when $x^4 = 0.6$, so $x = \\pm 0.6^{1/4} \\approx \\pm 0.880$. Exactly two critical numbers, matching the plot.",
+        "$h''(x) = 20x^3$: $h''(0.880) > 0$ gives a local minimum, $h''(-0.880) < 0$ a local maximum.",
+        "Values: $h(0.880) \\approx 0.528 - 2.640 + 1 \\approx -1.11$ and $h(-0.880) \\approx -0.528 + 2.640 + 1 \\approx 3.11$.",
+        "The calculator can refine the decimals, but calculus guarantees there are no other turning points anywhere, which no amount of zooming could prove."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Trusting the default window. Many functions show nothing useful on $[-10, 10]\\times[-10, 10]$; choose the window from the calculus.",
+    "Concluding a function has no extremes because the plot looks monotonic. Compute $f'$; a wiggle may be too small for the current vertical scale.",
+    "Concluding there are no more features off-screen. Only the critical-number count from $f'$ can rule that out.",
+    "Reading a vertical asymptote as a steep line, or a steep line as an asymptote, without checking the limit.",
+    "Rounding a numerical critical number too coarsely and then evaluating $f$ at the rounded value; keep several decimals."
+  ],
+  "whyItMatters": "Setting up an integral numerically, such as finding where two curves cross before computing the area between them, is exactly this partnership: calculus says how many crossings to expect, the machine finds their coordinates. Numerical integration in Chapter 7 is the same spirit, with calculus supplying error bounds for the machine's estimate. And whenever an antiderivative has no closed form, as with $\\int e^{-x^2}\\,dx$, technology is the only way to get a number, and calculus is the only way to know whether to trust it.",
+  "checkYourself": [
+    {
+      "q": "How do you know how many turning points to look for on a plot?",
+      "a": "Count the sign changes of $f'$ at its critical numbers."
+    },
+    {
+      "q": "A plot of $x^4 - 50x^2$ on $[-10, 10]\\times[-10, 10]$ shows almost nothing. Why?",
+      "a": "The minima are at $y = -625$, far below the window."
+    },
+    {
+      "q": "If the plot and the calculus disagree, which do you trust?",
+      "a": "The calculus; adjust the window."
+    },
+    {
+      "q": "When is a numerical solver appropriate for $f' = 0$?",
+      "a": "When the equation cannot be solved by hand, such as a quintic."
+    }
+  ],
+  "readingGuide": [
+    "Find the first example where a default plot hides features, and list which calculus facts reveal them.",
+    "Note how the text chooses successive viewing windows and what each one is meant to show.",
+    "Before reading the solution of an example that uses a calculator to solve $f' = 0$, identify which steps are calculus and which are numerical.",
+    "Look for an example with a slant or horizontal asymptote where the window had to be widened to see it."
+  ]
+}

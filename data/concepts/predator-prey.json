@@ -1,0 +1,79 @@
+{
+  "nodeId": "predator-prey",
+  "title": "Predator-Prey Systems",
+  "overview": "So far one quantity changed at a time. Now take two populations that affect each other: rabbits $R$ and wolves $W$. Alone, rabbits grow exponentially and wolves starve exponentially. Together, every encounter feeds a wolf and costs a rabbit. The number of encounters is proportional to the product $RW$, which gives the **Lotka-Volterra equations**:\n$$\\frac{dR}{dt} = kR - aRW, \\qquad \\frac{dW}{dt} = -rW + bRW,$$\nwith positive constants $k, a, r, b$. The $RW$ terms couple the equations: neither can be solved without the other.\n\nThese equations have no formula solution, but you can learn almost everything by reading them. First, find the **equilibrium points** by setting both rates to zero. One is $R = 0, W = 0$ (nothing alive). The other is $W = \\frac{k}{a}$, $R = \\frac{r}{b}$, where births exactly balance deaths for both species.\n\nSecond, draw the **phase plane**: axes $R$ and $W$, with each point a possible state of the system. At each point the pair $\\left(\\frac{dR}{dt}, \\frac{dW}{dt}\\right)$ gives a direction of motion, just like a direction field but in two dimensions. Solutions trace closed loops around the nonzero equilibrium. Rabbits increase, then wolves increase and eat them, rabbits fall, wolves starve, rabbits recover, and the cycle repeats. Plotted against time, the two populations oscillate with the wolf peak lagging behind the rabbit peak.\n\nThird, divide the equations to eliminate time: $\\frac{dW}{dR} = \\frac{-rW + bRW}{kR - aRW}$. This single equation is separable, and integrating it gives an implicit equation for the loops in the phase plane. That is why the loops are closed: each one is a level curve of a conserved quantity, like a contour line on a map.\n\nThe model ignores carrying capacity, seasons, and hiding places, and real data are messier. But the predicted cycles do show up in records of lynx and hare populations, which is a remarkable success for two short equations.",
+  "keyIdeas": [
+    "Lotka-Volterra: $\\frac{dR}{dt} = kR - aRW$ and $\\frac{dW}{dt} = -rW + bRW$; prey grow alone, predators die alone, and the $RW$ terms model encounters.",
+    "Equilibrium points come from setting both derivatives to zero: $(0, 0)$ and $\\left(\\frac{r}{b}, \\frac{k}{a}\\right)$. Note the prey equilibrium is set by the predator constants and vice versa.",
+    "The phase plane plots $W$ against $R$; the vector $(R', W')$ at each point shows the direction of motion, and solutions are closed loops around the nonzero equilibrium.",
+    "Dividing the equations gives $\\frac{dW}{dR} = \\frac{W(-r + bR)}{R(k - aW)}$, a separable equation whose solutions are the loop curves.",
+    "Along a loop, prey peaks come first and predator peaks follow; both populations oscillate without settling down.",
+    "The sign of $\\frac{dR}{dt}$ is decided by whether $W$ is below or above $\\frac{k}{a}$; the sign of $\\frac{dW}{dt}$ by whether $R$ is below or above $\\frac{r}{b}$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Finding the equilibrium points",
+      "problem": "For $\\frac{dR}{dt} = R - 0.1RW$ and $\\frac{dW}{dt} = -0.5W + 0.02RW$, find all equilibrium points.",
+      "steps": [
+        "Factor each right side: $\\frac{dR}{dt} = R(1 - 0.1W)$ and $\\frac{dW}{dt} = W(-0.5 + 0.02R)$. Factoring shows at a glance which variable controls which sign.",
+        "Set $R(1 - 0.1W) = 0$: either $R = 0$ or $W = 10$.",
+        "Set $W(-0.5 + 0.02R) = 0$: either $W = 0$ or $R = 25$.",
+        "Combine: $R = 0$ with $W = 0$ gives $(0, 0)$. $R = 0$ with $R = 25$ is impossible, as is $W = 10$ with $W = 0$. $W = 10$ with $R = 25$ gives $(25, 10)$. So the equilibria are $(0, 0)$ and $(25, 10)$.",
+        "Interpret: with $25$ rabbits and $10$ wolves, each population's births exactly match its deaths. Note the rabbit count $25$ came from the wolf equation, and the wolf count $10$ from the rabbit equation."
+      ]
+    },
+    {
+      "title": "Which way does the system move?",
+      "problem": "Same system. At the state $R = 50$, $W = 5$, are the populations increasing or decreasing? What about at $R = 50$, $W = 20$?",
+      "steps": [
+        "At $(50, 5)$: $\\frac{dR}{dt} = 50(1 - 0.5) = 25 > 0$ and $\\frac{dW}{dt} = 5(-0.5 + 1) = 2.5 > 0$. Both increase: plenty of rabbits, few wolves, so both thrive. In the phase plane the arrow points up and to the right.",
+        "At $(50, 20)$: $\\frac{dR}{dt} = 50(1 - 2) = -50 < 0$ and $\\frac{dW}{dt} = 20(-0.5 + 1) = 10 > 0$. Rabbits now decline (too many wolves) while wolves still grow (still plenty of rabbits). Arrow up and to the left.",
+        "Pattern: with $W$ below $10$ rabbits grow, above $10$ they shrink; with $R$ above $25$ wolves grow, below $25$ they shrink. The lines $W = 10$ and $R = 25$ cut the plane into four regions, and the arrows rotate counterclockwise around $(25, 10)$.",
+        "Following the arrows traces a loop: rabbits up, then wolves up, then rabbits down, then wolves down, then back to the start. This is the predator-prey cycle, read entirely from signs."
+      ]
+    },
+    {
+      "title": "The equation of the loops",
+      "problem": "Eliminate $t$ from the same system and solve the resulting separable equation.",
+      "steps": [
+        "Divide: $\\frac{dW}{dR} = \\frac{W(-0.5 + 0.02R)}{R(1 - 0.1W)}$. Time has disappeared; this describes the shape of the path, not the speed along it.",
+        "Separate: put $W$ on the left and $R$ on the right: $\\frac{1 - 0.1W}{W}\\,dW = \\frac{-0.5 + 0.02R}{R}\\,dR$, that is $\\left(\\frac{1}{W} - 0.1\\right) dW = \\left(-\\frac{0.5}{R} + 0.02\\right) dR$.",
+        "Integrate: $\\ln W - 0.1W = -0.5\\ln R + 0.02R + C$.",
+        "Rearrange: $\\ln W - 0.1W + 0.5\\ln R - 0.02R = C$. Each loop in the phase plane is a curve on which this expression is constant; different starting states give different values of $C$ and hence different loops.",
+        "Check that it is conserved: differentiate the left side with respect to $t$ using the chain rule, $\\left(\\frac{1}{W} - 0.1\\right)W' + \\left(\\frac{0.5}{R} - 0.02\\right)R'$, and substitute the original equations. The terms cancel to $0$, so the quantity never changes along a solution. That is why the paths close up instead of spiraling."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Putting the encounter term with the wrong sign. Encounters hurt prey and help predators, so $-aRW$ in the prey equation and $+bRW$ in the predator equation. Check at a point with many predators: $\\frac{dR}{dt}$ should be negative.",
+    "Reading the equilibrium backward. The nonzero equilibrium has $R = \\frac{r}{b}$ from the predator equation and $W = \\frac{k}{a}$ from the prey equation. For the system above, $W = 10$ comes from $1 - 0.1W = 0$, not from the wolf equation.",
+    "Expecting the populations to settle at the equilibrium. Solutions circle it forever; the equilibrium is a center, not an attractor.",
+    "Mixing up the phase plane with a time plot. The phase plane has $R$ and $W$ on the axes with no time axis; a closed loop there corresponds to two oscillating curves when plotted against $t$."
+  ],
+  "whyItMatters": "This is your first system of differential equations, and the phase-plane reasoning (find equilibria, read signs, follow arrows) is exactly how ecologists, epidemiologists, and economists analyze models that cannot be solved in closed form. The conserved quantity found by separating $\\frac{dW}{dR}$ is the same idea as energy conservation in physics, where paths in the position-velocity plane are level curves of energy. And the separation step itself is one more instance of integration doing the real work.",
+  "checkYourself": [
+    {
+      "q": "In $\\frac{dR}{dt} = kR - aRW$, what happens to the prey if there are no predators?",
+      "a": "$\\frac{dR}{dt} = kR$: exponential growth."
+    },
+    {
+      "q": "For $\\frac{dR}{dt} = 2R - 0.01RW$, $\\frac{dW}{dt} = -W + 0.001RW$, find the nonzero equilibrium.",
+      "a": "$W = 200$ (from $2 - 0.01W = 0$) and $R = 1000$ (from $-1 + 0.001R = 0$)."
+    },
+    {
+      "q": "In a predator-prey cycle, which population peaks first?",
+      "a": "The prey; the predator peak follows after a lag."
+    },
+    {
+      "q": "What is the role of the $RW$ terms?",
+      "a": "They model encounters between the species: the number of encounters is proportional to the product of the two populations."
+    }
+  ],
+  "readingGuide": [
+    "Find the list of assumptions behind the predator-prey model and restate each one as a term in the equations.",
+    "Locate the equilibrium calculation. Before reading it, set both derivatives to zero yourself and solve.",
+    "Find the phase-plane figure and identify the four regions created by the equilibrium lines; check the arrow direction in each region using signs.",
+    "Look for the graphs of $R$ and $W$ against time and note which population's peak comes first and why.",
+    "Find where the author divides the two equations to get $\\frac{dW}{dR}$, and separate the resulting equation yourself."
+  ]
+}

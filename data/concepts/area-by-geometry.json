@@ -1,0 +1,86 @@
+{
+  "nodeId": "area-by-geometry",
+  "title": "Area by Geometry",
+  "overview": "Before you learn to integrate, it is worth knowing that many integrals can be computed with nothing but geometry. A definite integral $\\int_a^b f(x)\\,dx$ measures the signed area between the graph of $f$ and the $x$-axis from $x = a$ to $x = b$. When the graph is a straight line, that region is a rectangle, a triangle, or a trapezoid, and you already know how to find those areas. This node is your first Daily Integral tier, and it builds the mental picture every later tier relies on.\n\nThe three formulas: a rectangle of width $w$ and height $h$ has area $wh$. A triangle with base $b$ and height $h$ has area $\\frac{1}{2}bh$. A trapezoid with two parallel sides of lengths $p$ and $q$ separated by distance $w$ has area $\\frac{p + q}{2}\\cdot w$, which is \"average of the parallel sides times the width.\" The trapezoid formula includes the other two: if $p = q$ it is a rectangle, and if one of them is 0 it is a triangle.\n\nNow put a line on the coordinate plane. The region under $y = 3$ from $x = 1$ to $x = 5$ is a rectangle of width 4 and height 3, so $\\int_1^5 3\\,dx = 12$. The region under $y = 2x$ from $x = 0$ to $x = 3$ is a triangle with base 3 (along the axis) and height $2 \\cdot 3 = 6$ (the value of the function at the right end), so $\\int_0^3 2x\\,dx = \\frac{1}{2}(3)(6) = 9$. The region under $y = x + 1$ from $x = 1$ to $x = 4$ is a trapezoid: the parallel sides are vertical, with heights $f(1) = 2$ and $f(4) = 5$, and the width is $4 - 1 = 3$, so the area is $\\frac{2 + 5}{2}\\cdot 3 = 10.5$. The general rule for any line: **evaluate the function at both endpoints, average, multiply by the width.**\n\nArea below the axis counts as negative in an integral. If the line dips under the axis, split the interval where the line crosses, compute each piece's area, and subtract the part below. For example, under $y = x - 2$ from 0 to 4, the piece from 0 to 2 is a triangle of area 2 below the axis and the piece from 2 to 4 is a triangle of area 2 above, so the integral is $-2 + 2 = 0$ even though the total shaded area is 4.\n\nOne more shape is worth adding: a semicircle. The graph of $y = \\sqrt{r^2 - x^2}$ is the upper half of a circle of radius $r$, so the area under it from $-r$ to $r$ is $\\frac{1}{2}\\pi r^2$. A quarter circle from 0 to $r$ has area $\\frac{1}{4}\\pi r^2$. Being able to **see** the shape of a region is a skill that persists long after you learn antiderivatives; it is how you check an answer's sign and rough size in one glance.",
+  "keyIdeas": [
+    "Rectangle: $A = wh$. Triangle: $A = \\frac{1}{2}bh$. Trapezoid: $A = \\frac{p + q}{2}\\cdot w$ (average of the parallel sides times the width).",
+    "The area under a line $y = mx + b$ from $x = a$ to $x = c$ is a trapezoid whose parallel sides are the function values at the endpoints: $A = \\frac{f(a) + f(c)}{2}(c - a)$.",
+    "A definite integral is signed area: regions below the $x$-axis contribute negative amounts.",
+    "When a line crosses the axis inside the interval, split at the crossing point and combine the pieces with signs.",
+    "$\\int_{-r}^{r}\\sqrt{r^2 - x^2}\\,dx = \\frac{1}{2}\\pi r^2$ because the graph is a semicircle.",
+    "Sketch first; the shape tells you which formula to use and whether the answer should be positive or negative."
+  ],
+  "workedExamples": [
+    {
+      "title": "A triangle under a line through the origin",
+      "problem": "Find the area under $y = \\frac{1}{2}x$ from $x = 0$ to $x = 6$, that is, $\\int_0^6 \\frac{1}{2}x\\,dx$.",
+      "steps": [
+        "Sketch: the line starts at the origin and rises to $(6, 3)$. The region under it is a right triangle with the axis as its base.",
+        "Base along the $x$-axis: 6. Height at the right end: $f(6) = 3$.",
+        "Area $= \\frac{1}{2}(6)(3) = 9$.",
+        "Check with the trapezoid rule for lines: $\\frac{f(0) + f(6)}{2}\\cdot 6 = \\frac{0 + 3}{2}\\cdot 6 = 9$. Same."
+      ]
+    },
+    {
+      "title": "A trapezoid under a line",
+      "problem": "Evaluate $\\int_1^5 (2x + 1)\\,dx$ by geometry.",
+      "steps": [
+        "The function is a line, so the region is a trapezoid with vertical parallel sides at $x = 1$ and $x = 5$.",
+        "Heights at the ends: $f(1) = 3$ and $f(5) = 11$. Width: $5 - 1 = 4$.",
+        "Area $= \\frac{3 + 11}{2}\\cdot 4 = 7 \\cdot 4 = 28$.",
+        "Alternative check: a rectangle of height 3 and width 4 (area 12) plus a triangle of base 4 and height $11 - 3 = 8$ (area 16). Total 28. Correct."
+      ]
+    },
+    {
+      "title": "Signed area when the line crosses the axis",
+      "problem": "Evaluate $\\int_0^5 (x - 3)\\,dx$.",
+      "steps": [
+        "The line $y = x - 3$ crosses the axis at $x = 3$. From 0 to 3 it is below the axis; from 3 to 5 it is above. Split there.",
+        "Left piece: a triangle with base 3 and height $|f(0)| = 3$, area $\\frac{1}{2}(3)(3) = 4.5$, counted negative: $-4.5$.",
+        "Right piece: a triangle with base 2 and height $f(5) = 2$, area $\\frac{1}{2}(2)(2) = 2$, counted positive.",
+        "Integral $= -4.5 + 2 = -2.5$. Check with the endpoint-average formula, which handles signs automatically: $\\frac{f(0) + f(5)}{2}\\cdot 5 = \\frac{-3 + 2}{2}\\cdot 5 = -2.5$. Same."
+      ]
+    },
+    {
+      "title": "A quarter circle",
+      "problem": "Evaluate $\\int_0^3 \\sqrt{9 - x^2}\\,dx$.",
+      "steps": [
+        "Recognize the shape: $y = \\sqrt{9 - x^2}$ is the upper half of the circle $x^2 + y^2 = 9$, radius 3.",
+        "From $x = 0$ to $x = 3$ you get the part of that upper half to the right of the $y$-axis: a quarter circle.",
+        "Area of a quarter circle of radius 3: $\\frac{1}{4}\\pi(3^2) = \\frac{9\\pi}{4} \\approx 7.07$.",
+        "Sanity check: the region fits inside a 3 by 3 square (area 9) and contains the triangle with vertices $(0,0)$, $(3,0)$, $(0,3)$ (area 4.5). The answer 7.07 is between. Good."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Using the height at the wrong place for a triangle under a line through the origin. The height is the function value at the far end, not the slope. For $y = 2x$ on $[0, 3]$ the height is $f(3) = 6$.",
+    "Forgetting that area below the axis is negative in an integral. $\\int_0^4 (x - 2)\\,dx = 0$, not 4; the two triangles cancel.",
+    "Multiplying the two parallel sides of a trapezoid instead of averaging them. For heights 3 and 11 and width 4, the area is $\\frac{3 + 11}{2}\\cdot 4 = 28$, not $3 \\cdot 11 \\cdot 4$.",
+    "Treating $\\sqrt{r^2 - x^2}$ as a full circle. It is the upper half only, so the full-width integral is $\\frac{1}{2}\\pi r^2$."
+  ],
+  "whyItMatters": "These geometric integrals are the reference answers for everything that follows. When you first compute $\\int_0^3 2x\\,dx$ with Riemann sums in Chapter 5 and get 9, you will know it is right because the triangle told you so. When the Fundamental Theorem gives $\\left[x^2\\right]_0^3 = 9$, you will see the two ideas agree. And whenever a later integral looks suspicious, a quick sketch and a geometric estimate will catch a sign error or a factor of 2 before it costs you.",
+  "checkYourself": [
+    {
+      "q": "$\\int_2^6 5\\,dx$?",
+      "a": "A rectangle: $4 \\cdot 5 = 20$."
+    },
+    {
+      "q": "$\\int_0^4 x\\,dx$?",
+      "a": "A triangle: $\\frac{1}{2}(4)(4) = 8$."
+    },
+    {
+      "q": "$\\int_0^2 (3x + 2)\\,dx$?",
+      "a": "Trapezoid with heights 2 and 8, width 2: $\\frac{2 + 8}{2}\\cdot 2 = 10$."
+    },
+    {
+      "q": "$\\int_{-2}^{2}\\sqrt{4 - x^2}\\,dx$?",
+      "a": "A semicircle of radius 2: $2\\pi$."
+    }
+  ],
+  "readingGuide": [
+    "Practice: sketch the region under each of $y = 4$, $y = x$, $y = 2x + 1$, $y = 6 - x$ on $[0, 4]$, name its shape, and compute its area.",
+    "Practice: for five lines that cross the axis inside the interval, find the crossing point, compute both pieces, and combine with signs.",
+    "Practice: verify that the endpoint-average formula $\\frac{f(a) + f(b)}{2}(b - a)$ matches the triangle or trapezoid answer each time.",
+    "Practice: compute the area under $y = \\sqrt{r^2 - x^2}$ for several $r$ over the full interval and over half of it."
+  ]
+}

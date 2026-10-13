@@ -1,0 +1,79 @@
+{
+  "nodeId": "approximate-integration",
+  "title": "Approximate Integration",
+  "overview": "Sometimes you cannot find an antiderivative. The integrand may have none in elementary terms (like $e^{-x^2}$), or you may only have measured data, a list of values with no formula at all. Definite integrals still exist in those cases, and you can compute them to any accuracy you want with **numerical rules**. All of them follow the same plan: cut $[a, b]$ into $n$ equal pieces of width $\\Delta x = \\frac{b - a}{n}$, approximate the area over each piece by a simple shape, and add.\n\nThe **Midpoint Rule** uses rectangles whose height is the function value at the middle of each piece:\n$$M_n = \\Delta x \\left[ f(\\bar{x}_1) + f(\\bar{x}_2) + \\cdots + f(\\bar{x}_n) \\right].$$\nThe **Trapezoidal Rule** connects consecutive points with straight lines, making trapezoids. Averaging left and right endpoints gives the pattern $1, 2, 2, \\ldots, 2, 1$:\n$$T_n = \\frac{\\Delta x}{2} \\left[ f(x_0) + 2f(x_1) + 2f(x_2) + \\cdots + 2f(x_{n-1}) + f(x_n) \\right].$$\n**Simpson's Rule** fits a parabola through each pair of adjacent pieces (so $n$ must be even) and gives the pattern $1, 4, 2, 4, \\ldots, 4, 1$:\n$$S_n = \\frac{\\Delta x}{3} \\left[ f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \\cdots + 4f(x_{n-1}) + f(x_n) \\right].$$\n\nHow wrong are they? If $|f''(x)| \\le K$ on $[a, b]$, then the Trapezoidal error is at most $\\frac{K(b - a)^3}{12 n^2}$ and the Midpoint error is at most $\\frac{K(b - a)^3}{24 n^2}$. If $|f^{(4)}(x)| \\le K$, Simpson's error is at most $\\frac{K(b - a)^5}{180 n^4}$. The $n^4$ is why Simpson's rule is so good: doubling $n$ cuts its error by about 16, versus about 4 for the other two.\n\nThere is also a geometric pattern. When the graph is concave up, trapezoids overestimate (the chord sits above the curve) and midpoints underestimate; when concave down, the reverse. The midpoint error is typically about half the trapezoid error and opposite in sign, which is why the weighted combination $\\frac{2M_n + T_n}{3}$ is exactly Simpson's rule.\n\nThese rules turn \"I cannot integrate this\" into \"I can integrate this to six decimal places\", which is what a calculator or computer is doing when it reports a definite integral.",
+  "keyIdeas": [
+    "All rules use $\\Delta x = \\frac{b - a}{n}$ and sample points $x_i = a + i\\,\\Delta x$.",
+    "Midpoint: $M_n = \\Delta x \\sum f(\\bar{x}_i)$ with $\\bar{x}_i$ the midpoint of each subinterval.",
+    "Trapezoidal: $T_n = \\frac{\\Delta x}{2}\\left[ f(x_0) + 2f(x_1) + \\cdots + 2f(x_{n-1}) + f(x_n) \\right]$.",
+    "Simpson ($n$ even): $S_n = \\frac{\\Delta x}{3}\\left[ f(x_0) + 4f(x_1) + 2f(x_2) + \\cdots + 4f(x_{n-1}) + f(x_n) \\right]$. It is exact for polynomials up to degree 3.",
+    "Error bounds: $|E_T| \\le \\frac{K(b-a)^3}{12n^2}$, $|E_M| \\le \\frac{K(b-a)^3}{24n^2}$ with $K \\ge |f''|$; $|E_S| \\le \\frac{K(b-a)^5}{180n^4}$ with $K \\ge |f^{(4)}|$.",
+    "Concave up: $T_n$ overestimates and $M_n$ underestimates. Concave down: the reverse. Also $S_{2n} = \\frac{2M_n + T_n}{3}$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Three rules on a known integral",
+      "problem": "Approximate $\\int_0^2 x^2\\,dx$ with $n = 4$ using the Midpoint, Trapezoidal, and Simpson's rules, and compare with the exact value $\\frac{8}{3} \\approx 2.6667$.",
+      "steps": [
+        "Set up: $\\Delta x = \\frac{2 - 0}{4} = 0.5$, so the grid points are $0, 0.5, 1, 1.5, 2$ with values $f = 0, 0.25, 1, 2.25, 4$.",
+        "Trapezoidal: $T_4 = \\frac{0.5}{2}\\left[ 0 + 2(0.25) + 2(1) + 2(2.25) + 4 \\right] = 0.25 \\cdot 11 = 2.75$. Too big, as expected for a concave-up function.",
+        "Midpoint: the midpoints are $0.25, 0.75, 1.25, 1.75$ with squares $0.0625, 0.5625, 1.5625, 3.0625$, summing to $5.25$. So $M_4 = 0.5 \\cdot 5.25 = 2.625$. Too small, by about half as much as $T_4$ was too big.",
+        "Simpson: $S_4 = \\frac{0.5}{3}\\left[ 0 + 4(0.25) + 2(1) + 4(2.25) + 4 \\right] = \\frac{1}{6} \\cdot 16 = \\frac{8}{3}$. Exact, because Simpson's rule is exact for any polynomial of degree 3 or less.",
+        "Check the combination formula: $\\frac{2M_4 + T_4}{3} = \\frac{5.25 + 2.75}{3} = \\frac{8}{3}$. It reproduces Simpson's value, as the theory says."
+      ]
+    },
+    {
+      "title": "Simpson's rule for a logarithm",
+      "problem": "Approximate $\\ln 2 = \\int_1^2 \\frac{1}{x}\\,dx$ with Simpson's rule, $n = 4$.",
+      "steps": [
+        "Set up: $\\Delta x = \\frac{1}{4} = 0.25$, grid $1, 1.25, 1.5, 1.75, 2$. Values of $\\frac{1}{x}$: $1, 0.8, 0.6667, 0.5714, 0.5$.",
+        "Apply the $1, 4, 2, 4, 1$ weights: $1 + 4(0.8) + 2(0.6667) + 4(0.5714) + 0.5 = 1 + 3.2 + 1.3333 + 2.2857 + 0.5 = 8.3190$.",
+        "Multiply by $\\frac{\\Delta x}{3} = \\frac{0.25}{3}$: $S_4 \\approx \\frac{8.3190}{12} \\approx 0.69325$.",
+        "Compare: $\\ln 2 \\approx 0.69315$. The error is about $0.0001$ using only five function values. The Trapezoidal rule with the same points gives about $0.6970$, an error about 35 times larger."
+      ]
+    },
+    {
+      "title": "Choosing n from an error bound",
+      "problem": "How large must $n$ be so that the Trapezoidal rule approximates $\\int_1^2 \\frac{1}{x}\\,dx$ with error at most $0.0001$? Repeat for Simpson's rule.",
+      "steps": [
+        "Trapezoidal needs a bound on $|f''|$. For $f(x) = \\frac{1}{x}$, $f''(x) = \\frac{2}{x^3}$, which is largest at $x = 1$ on $[1, 2]$. So $K = 2$.",
+        "Error bound: $\\frac{K(b - a)^3}{12n^2} = \\frac{2 \\cdot 1}{12n^2} = \\frac{1}{6n^2}$. Require $\\frac{1}{6n^2} \\le 0.0001$, so $n^2 \\ge \\frac{10000}{6} \\approx 1667$ and $n \\ge 40.8$. Take $n = 41$.",
+        "Simpson needs a bound on $|f^{(4)}|$. Here $f^{(4)}(x) = \\frac{24}{x^5}$, largest at $x = 1$, so $K = 24$.",
+        "Error bound: $\\frac{24 \\cdot 1}{180n^4} = \\frac{2}{15n^4}$. Require $\\frac{2}{15n^4} \\le 0.0001$, so $n^4 \\ge 1333.3$ and $n \\ge 6.05$. Since $n$ must be even, take $n = 8$.",
+        "Compare: 41 subintervals for Trapezoidal versus 8 for Simpson, for the same guaranteed accuracy. The bounds are worst-case, and the actual errors are usually smaller, but the gap between the methods is real."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Using an odd $n$ with Simpson's rule. The $1, 4, 2, \\ldots, 4, 1$ pattern pairs subintervals, so $n$ must be even. With $n = 5$ the weights do not close properly.",
+    "Mixing up the leading factors: $\\frac{\\Delta x}{2}$ for Trapezoidal, $\\frac{\\Delta x}{3}$ for Simpson, plain $\\Delta x$ for Midpoint. Check with $f = 1$ on $[0, 1]$, $n = 2$: every rule must give exactly 1.",
+    "Using grid points instead of midpoints in the Midpoint Rule. For $\\int_0^2 x^2\\,dx$ with $n = 4$ the midpoints are $0.25, 0.75, 1.25, 1.75$, not $0, 0.5, 1, 1.5$ (which would be a left-endpoint sum, giving $1.75$).",
+    "Taking $K$ as the value of $f''$ at one convenient point instead of the maximum of $|f''|$ on the whole interval. The bound is only valid if $K$ is at least as large as $|f''|$ everywhere on $[a, b]$."
+  ],
+  "whyItMatters": "Most integrals that arise in science have no closed form, so numerical integration is how they are actually evaluated, inside every calculator, spreadsheet, and simulation. The error bounds are your first encounter with a central theme of applied math: not just computing an answer but guaranteeing how close it is. The same ideas (sampling, weighted sums, error estimates) return in Taylor polynomial remainders and in the numerical methods for differential equations.",
+  "checkYourself": [
+    {
+      "q": "For $\\int_0^4 f(x)\\,dx$ with $n = 8$, what is $\\Delta x$ and what are the Simpson weights?",
+      "a": "$\\Delta x = 0.5$; weights $1, 4, 2, 4, 2, 4, 2, 4, 1$ times $\\frac{0.5}{3}$."
+    },
+    {
+      "q": "A function is concave down on $[a, b]$. Does $T_n$ overestimate or underestimate?",
+      "a": "Underestimate. The chords lie below a concave-down curve."
+    },
+    {
+      "q": "If you double $n$, roughly how much does the Simpson error shrink? The Trapezoidal error?",
+      "a": "Simpson by a factor of about 16 (the $n^4$); Trapezoidal by about 4 (the $n^2$)."
+    },
+    {
+      "q": "Why is Simpson's rule exact for $\\int_0^2 x^2\\,dx$?",
+      "a": "It fits parabolas, and the integrand is a parabola. It is in fact exact for all polynomials of degree 3 or less."
+    }
+  ],
+  "readingGuide": [
+    "Find the Midpoint and Trapezoidal formulas and relate each coefficient pattern to a picture of rectangles or trapezoids.",
+    "Before reading the solution of the first worked comparison, compute one of the rules yourself for a small $n$ and see whether you get the same number.",
+    "Locate the error bound statements and note which derivative ($f''$ or $f^{(4)}$) each requires and how $n$ appears in the denominator.",
+    "Look for the derivation of Simpson's rule from parabolas through three points and see where the $1, 4, 1$ weights come from.",
+    "Find the table comparing errors as $n$ grows, and check how the errors scale when $n$ doubles."
+  ]
+}

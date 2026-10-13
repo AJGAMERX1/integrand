@@ -1,0 +1,89 @@
+{
+  "nodeId": "conics-polar",
+  "title": "Conic Sections in Polar Coordinates",
+  "overview": "The previous section gave three separate definitions. Here is one definition that covers all three, and it is the reason polar coordinates are the right language for orbits.\n\nFix a point $F$ (the focus) and a line $\\ell$ (the directrix) not through $F$. Pick a positive number $e$, the **eccentricity**. The set of points $P$ with\n$$\\frac{|PF|}{|P\\ell|} = e$$\nis a conic: an ellipse if $e < 1$, a parabola if $e = 1$, a hyperbola if $e > 1$. The parabola case is the old definition exactly (distances equal). For an ellipse, the point stays closer to the focus than to the directrix; for a hyperbola, farther.\n\nPut the focus at the pole and the directrix at $x = d$, a vertical line $d$ units to the right. For a point $(r, \\theta)$, the distance to the focus is $r$ and the distance to the directrix is $d - r\\cos\\theta$. Setting the ratio to $e$ and solving for $r$:\n$$r = \\frac{ed}{1 + e\\cos\\theta}.$$\nMoving the directrix to $x = -d$ changes the sign in the denominator to $1 - e\\cos\\theta$; a horizontal directrix $y = \\pm d$ swaps $\\cos$ for $\\sin$. Four equations, one shape family.\n\nReading an equation is a matter of normalizing. The denominator must start with $1$; if it reads $2 + \\cos\\theta$, divide top and bottom by $2$. The coefficient of $\\cos\\theta$ or $\\sin\\theta$ is $e$, which classifies the conic. The numerator is $ed$, which gives $d$. The vertices are at the angles where the trig function is $\\pm 1$: for a $\\cos\\theta$ equation, at $\\theta = 0$ and $\\theta = \\pi$.\n\nFor an ellipse the eccentricity measures how stretched it is: $e = \\frac{c}{a}$, with $e = 0$ a circle and $e$ near $1$ a long thin oval. Planetary orbits are ellipses with the sun at one focus; Earth's has $e \\approx 0.017$, nearly circular, while comets can have $e$ close to $1$ and sweep in from far away. Kepler's laws follow from the polar equation of the orbit.",
+  "keyIdeas": [
+    "Focus-directrix definition: the conic with eccentricity $e$ is the set of points whose distance to the focus divided by distance to the directrix equals $e$.",
+    "Classification by eccentricity: $e < 1$ ellipse, $e = 1$ parabola, $e > 1$ hyperbola.",
+    "With the focus at the pole and directrix $x = d$: $r = \\dfrac{ed}{1 + e\\cos\\theta}$. Directrix $x = -d$ gives $1 - e\\cos\\theta$; directrix $y = \\pm d$ uses $\\sin\\theta$ with the matching sign.",
+    "To read an equation, divide so the denominator begins with $1$; then the trig coefficient is $e$ and the numerator is $ed$.",
+    "Vertices lie where the trig function equals $\\pm 1$; for a $\\cos\\theta$ equation they are at $\\theta = 0$ and $\\theta = \\pi$, and the center of an ellipse or hyperbola is their midpoint.",
+    "For an ellipse, $e = \\frac{c}{a}$, so $e$ near $0$ is nearly circular and $e$ near $1$ is very elongated; planetary orbits have the sun at a focus."
+  ],
+  "workedExamples": [
+    {
+      "title": "Reading off eccentricity and directrix",
+      "problem": "Identify the conic $r = \\dfrac{6}{2 + \\cos\\theta}$ and find its eccentricity, directrix, and vertices.",
+      "steps": [
+        "Normalize: divide numerator and denominator by $2$ so the denominator starts with $1$: $r = \\dfrac{3}{1 + \\frac{1}{2}\\cos\\theta}$.",
+        "Read: $e = \\frac{1}{2} < 1$, so an ellipse. The numerator is $ed = 3$, so $d = 6$; the plus sign with $\\cos\\theta$ means the directrix is $x = 6$, to the right of the focus at the pole.",
+        "Vertices at $\\theta = 0$ and $\\theta = \\pi$: $r(0) = \\frac{6}{3} = 2$, the point $(2, 0)$; $r(\\pi) = \\frac{6}{1} = 6$, the point $(-6, 0)$.",
+        "Cross-check with the ellipse facts: the major axis runs from $-6$ to $2$, so $2a = 8$, $a = 4$, and the center is $(-2, 0)$. The focus at the origin is $c = 2$ from the center, and $\\frac{c}{a} = \\frac{2}{4} = \\frac{1}{2} = e$. Everything agrees."
+      ]
+    },
+    {
+      "title": "A parabola with a horizontal directrix",
+      "problem": "Identify $r = \\dfrac{4}{1 - \\sin\\theta}$ and find its directrix and vertex.",
+      "steps": [
+        "The denominator already starts with $1$. The coefficient of $\\sin\\theta$ is $1$, so $e = 1$: a parabola.",
+        "$ed = 4$ with $e = 1$ gives $d = 4$. The minus sign with $\\sin\\theta$ means the directrix is the horizontal line $y = -4$, below the focus.",
+        "Vertex: a parabola has one vertex, at the angle pointing toward the directrix, $\\theta = \\frac{3\\pi}{2}$, where $r = \\frac{4}{1 + 1} = 2$. In Cartesian terms the vertex is $(0, -2)$.",
+        "Check the definition: the vertex is $2$ from the focus (the origin) and $2$ from the line $y = -4$. Ratio $1$. Also note $r \\to \\infty$ as $\\theta \\to \\frac{\\pi}{2}$, so the parabola opens upward, away from its directrix."
+      ]
+    },
+    {
+      "title": "A hyperbola, including a negative $r$",
+      "problem": "Identify $r = \\dfrac{10}{2 - 3\\cos\\theta}$ and find its vertices and center.",
+      "steps": [
+        "Normalize by dividing by $2$: $r = \\dfrac{5}{1 - \\frac{3}{2}\\cos\\theta}$. So $e = \\frac{3}{2} > 1$: a hyperbola. $ed = 5$ gives $d = \\frac{10}{3}$, directrix $x = -\\frac{10}{3}$.",
+        "Vertices at $\\theta = 0$ and $\\theta = \\pi$. At $\\theta = \\pi$: $r = \\frac{5}{1 + \\frac{3}{2}} = 2$, the point $(-2, 0)$.",
+        "At $\\theta = 0$: $r = \\frac{5}{1 - \\frac{3}{2}} = -10$. Negative $r$ at angle $0$ means $10$ units in the opposite direction: the point $(-10, 0)$. This is normal for hyperbolas in polar form; one branch is reached through negative $r$ values.",
+        "Center is the midpoint of the vertices: $(-6, 0)$. Then $a = 4$ (half the distance between vertices) and $c = 6$ (center to the focus at the origin), so $\\frac{c}{a} = \\frac{3}{2} = e$. Consistent.",
+        "The denominator vanishes when $\\cos\\theta = \\frac{2}{3}$, and those two directions are the asymptotes: $r$ blows up as $\\theta$ approaches them."
+      ]
+    },
+    {
+      "title": "Writing the equation from the data",
+      "problem": "Find a polar equation for the ellipse with focus at the origin, eccentricity $\\frac{2}{3}$, and directrix $y = 3$.",
+      "steps": [
+        "A horizontal directrix above the focus means the $\\sin\\theta$ form with a plus sign: $r = \\dfrac{ed}{1 + e\\sin\\theta}$.",
+        "Plug in $e = \\frac{2}{3}$ and $d = 3$: $ed = 2$, so $r = \\dfrac{2}{1 + \\frac{2}{3}\\sin\\theta}$.",
+        "Clear the fraction by multiplying top and bottom by $3$: $r = \\dfrac{6}{3 + 2\\sin\\theta}$.",
+        "Check a point: at $\\theta = \\frac{\\pi}{2}$, $r = \\frac{6}{5}$, so the point is $\\left(0, \\frac{6}{5}\\right)$. Its distance to the focus is $\\frac{6}{5}$ and to the line $y = 3$ is $3 - \\frac{6}{5} = \\frac{9}{5}$. Ratio $\\frac{6/5}{9/5} = \\frac{2}{3} = e$. Correct."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Reading $e$ before normalizing. In $r = \\frac{6}{2 + \\cos\\theta}$ the eccentricity is $\\frac{1}{2}$, not $1$. Divide so the denominator starts with $1$.",
+    "Taking the numerator as $d$. The numerator is $ed$; with $e = \\frac{1}{2}$ and numerator $3$, $d = 6$. Check that the vertex distances fit the ratio $e$.",
+    "Treating a negative $r$ at a vertex as an error. For a hyperbola, $r = -10$ at $\\theta = 0$ is the point $(-10, 0)$ on the other branch.",
+    "Mixing up which sign goes with which directrix. Plus with $\\cos\\theta$ means the directrix is on the positive $x$ side; test by checking that $r$ is smallest in the direction of the directrix (the curve is closest to the focus there).",
+    "Assuming the center of the conic is at the pole. The pole is a focus; the center is the midpoint of the two vertices, which for an ellipse sits $c = ae$ away from the focus."
+  ],
+  "whyItMatters": "One polar equation unifies three curves that took three Cartesian definitions, and it is the form that physics uses: solving Newton's equations for a planet gives $r = \\frac{ed}{1 + e\\cos\\theta}$ directly, with the sun at the focus. Kepler's second law (equal areas in equal times) is the polar area integral $\\frac{1}{2}\\int r^2\\,d\\theta$ from the previous section applied to this curve. Eccentricity is the parameter astronomers quote for every orbit, and it is also the key to the trigonometric substitutions that integrate expressions like $\\sqrt{a^2 - x^2}$.",
+  "checkYourself": [
+    {
+      "q": "What conic is $r = \\dfrac{3}{1 + 2\\cos\\theta}$?",
+      "a": "$e = 2$, a hyperbola, with $d = \\frac{3}{2}$ and directrix $x = \\frac{3}{2}$."
+    },
+    {
+      "q": "Normalize $r = \\dfrac{8}{4 - 2\\sin\\theta}$ and read off $e$ and $d$.",
+      "a": "$r = \\dfrac{2}{1 - \\frac{1}{2}\\sin\\theta}$: $e = \\frac{1}{2}$, $ed = 2$, $d = 4$, directrix $y = -4$; an ellipse."
+    },
+    {
+      "q": "For an ellipse with $a = 5$ and $c = 3$, what is the eccentricity?",
+      "a": "$e = \\frac{c}{a} = \\frac{3}{5}$."
+    },
+    {
+      "q": "Where is the vertex of the parabola $r = \\dfrac{2}{1 + \\cos\\theta}$?",
+      "a": "At $\\theta = 0$, $r = 1$: the point $(1, 0)$, halfway between the focus at the origin and the directrix $x = 2$."
+    }
+  ],
+  "readingGuide": [
+    "Find the theorem that defines all conics by one focus-directrix ratio, and restate in your own words how $e$ decides which conic you get.",
+    "Follow the derivation of $r = \\frac{ed}{1 + e\\cos\\theta}$ and identify where the distance to the directrix is written as $d - r\\cos\\theta$.",
+    "Locate the table or list of the four forms (plus or minus, cosine or sine) and work out for each one where the directrix sits.",
+    "Before reading the solution of the first identification example, normalize the equation and find $e$, $d$, and the vertices yourself.",
+    "Look for the discussion of planetary orbits and Kepler's laws, and note how eccentricity describes the shape of each orbit."
+  ]
+}

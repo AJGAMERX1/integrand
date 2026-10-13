@@ -1,0 +1,89 @@
+{
+  "nodeId": "conic-sections",
+  "title": "Conic Sections",
+  "overview": "Slice a cone with a plane and you get one of three curves: a parabola, an ellipse, or a hyperbola. This section defines each one by a geometric rule about distances, then turns the rule into an equation. The algebra is the distance formula plus squaring; the ideas are the definitions.\n\n**Parabola.** The set of points equally distant from a fixed point (the **focus**) and a fixed line (the **directrix**). With focus $(0, p)$ and directrix $y = -p$, the equation is $x^2 = 4py$. The vertex is at the origin, halfway between focus and directrix. If $p < 0$ the parabola opens downward; swapping roles gives $y^2 = 4px$, which opens sideways.\n\n**Ellipse.** The set of points whose distances to two foci add up to a constant $2a$. With foci $(\\pm c, 0)$, the equation is\n$$\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1, \\qquad c^2 = a^2 - b^2.$$\nThe ellipse crosses the $x$-axis at the vertices $(\\pm a, 0)$ and the $y$-axis at $(\\pm b, 0)$, with $a \\ge b$. If the foci are on the $y$-axis the larger denominator moves under $y^2$. A circle is the case $c = 0$.\n\n**Hyperbola.** The set of points whose distances to two foci differ by a constant $2a$. With foci $(\\pm c, 0)$,\n$$\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1, \\qquad c^2 = a^2 + b^2.$$\nIt has two branches, vertices at $(\\pm a, 0)$, and asymptotes $y = \\pm\\frac{b}{a}x$ that the branches approach. Note the sign change in $c^2$: for an ellipse the foci are inside the vertices, for a hyperbola outside.\n\nA shifted conic has the same shape with $x$ replaced by $x - h$ and $y$ by $y - k$, centered at $(h, k)$. Given a messy second-degree equation, complete the square in $x$ and in $y$ to find the center and read off $a$, $b$, and $c$. The sign pattern tells you which conic: one squared term for a parabola, both positive for an ellipse, opposite signs for a hyperbola.",
+  "keyIdeas": [
+    "Parabola: points equidistant from focus and directrix. $x^2 = 4py$ has focus $(0, p)$, directrix $y = -p$, vertex at the origin; $y^2 = 4px$ opens sideways.",
+    "Ellipse: distances to the two foci sum to $2a$. $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ with $a \\ge b$ has vertices $(\\pm a, 0)$, foci $(\\pm c, 0)$, and $c^2 = a^2 - b^2$.",
+    "Hyperbola: distances to the two foci differ by $2a$. $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$ has vertices $(\\pm a, 0)$, foci $(\\pm c, 0)$, $c^2 = a^2 + b^2$, and asymptotes $y = \\pm\\frac{b}{a}x$.",
+    "The larger denominator (ellipse) or the positive term (hyperbola) tells which axis the vertices and foci lie on.",
+    "Shifting: replacing $x$ by $x - h$ and $y$ by $y - k$ moves the center or vertex to $(h, k)$; complete the square to put a general equation in this form.",
+    "Classifying a second-degree equation with no $xy$ term: one square gives a parabola, two squares with the same sign an ellipse, opposite signs a hyperbola."
+  ],
+  "workedExamples": [
+    {
+      "title": "Focus and directrix of a parabola",
+      "problem": "Find the focus and directrix of $x^2 = 8y$.",
+      "steps": [
+        "Match to the standard form $x^2 = 4py$: $4p = 8$, so $p = 2$.",
+        "Focus is $(0, p) = (0, 2)$ and the directrix is $y = -p$, that is $y = -2$. The vertex $(0, 0)$ is halfway between them.",
+        "Check the definition at one point: $(4, 2)$ is on the parabola since $16 = 8 \\cdot 2$. Its distance to the focus $(0, 2)$ is $4$; its distance to the line $y = -2$ is $2 - (-2) = 4$. Equal, as the definition demands.",
+        "Since $p > 0$ the parabola opens upward, toward the focus and away from the directrix."
+      ]
+    },
+    {
+      "title": "Vertices and foci of an ellipse",
+      "problem": "Find the vertices and foci of $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$, and verify the sum-of-distances property at one point.",
+      "steps": [
+        "The larger denominator is under $x^2$, so the major axis is horizontal with $a^2 = 25$, $b^2 = 9$: $a = 5$, $b = 3$.",
+        "Vertices: $(\\pm 5, 0)$. The ellipse also crosses the $y$-axis at $(0, \\pm 3)$.",
+        "Foci: $c^2 = a^2 - b^2 = 25 - 9 = 16$, so $c = 4$ and the foci are $(\\pm 4, 0)$, inside the ellipse on the major axis.",
+        "Verify at $(0, 3)$: distances to $(4, 0)$ and $(-4, 0)$ are each $\\sqrt{16 + 9} = 5$, and $5 + 5 = 10 = 2a$. At the vertex $(5, 0)$: distances are $1$ and $9$, sum $10$ again."
+      ]
+    },
+    {
+      "title": "A hyperbola and its asymptotes",
+      "problem": "Find the vertices, foci, and asymptotes of $\\frac{x^2}{9} - \\frac{y^2}{16} = 1$.",
+      "steps": [
+        "The positive term is $x^2$, so the branches open left and right. $a^2 = 9$, $b^2 = 16$: $a = 3$, $b = 4$.",
+        "Vertices: $(\\pm 3, 0)$. Foci: $c^2 = a^2 + b^2 = 9 + 16 = 25$, $c = 5$, so $(\\pm 5, 0)$, outside the vertices. (This is the $3$-$4$-$5$ triangle in disguise.)",
+        "Asymptotes: $y = \\pm\\frac{b}{a}x = \\pm\\frac{4}{3}x$. Solve the equation for $y$ to see why: $y = \\pm\\frac{4}{3}\\sqrt{x^2 - 9}$, and for large $x$ the root is nearly $x$.",
+        "Sketching tip: draw the box with corners $(\\pm 3, \\pm 4)$; its diagonals are the asymptotes, and the branches start at $(\\pm 3, 0)$ and bend toward the diagonals."
+      ]
+    },
+    {
+      "title": "Completing the square to identify a conic",
+      "problem": "Identify and describe the curve $4x^2 + y^2 - 8x + 4y + 4 = 0$.",
+      "steps": [
+        "Both $x^2$ and $y^2$ appear with the same sign, so this is an ellipse (or a degenerate case). Group by variable: $4(x^2 - 2x) + (y^2 + 4y) = -4$.",
+        "Complete each square, remembering the factor of $4$: $4(x^2 - 2x + 1) + (y^2 + 4y + 4) = -4 + 4 + 4$, that is $4(x - 1)^2 + (y + 2)^2 = 4$.",
+        "Divide by $4$: $(x - 1)^2 + \\frac{(y + 2)^2}{4} = 1$. Center $(1, -2)$, with $a^2 = 4$ under the $y$ term, so the major axis is vertical: $a = 2$, $b = 1$.",
+        "Vertices: $(1, -2 \\pm 2)$, that is $(1, 0)$ and $(1, -4)$. Foci: $c^2 = 4 - 1 = 3$, so $(1, -2 \\pm \\sqrt{3})$.",
+        "Check one vertex in the original equation: $(1, 0)$ gives $4 + 0 - 8 + 0 + 4 = 0$. Correct."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Using $c^2 = a^2 - b^2$ for a hyperbola. For a hyperbola $c^2 = a^2 + b^2$; the foci are outside the vertices. Check: $\\frac{x^2}{9} - \\frac{y^2}{16} = 1$ has $c = 5$, not $\\sqrt{-7}$.",
+    "Reading $a$ from the $x^2$ term automatically. In $\\frac{x^2}{4} + \\frac{y^2}{9} = 1$ the larger denominator is under $y^2$, so $a = 3$ and the vertices are $(0, \\pm 3)$.",
+    "Forgetting to multiply the added constant by the leading coefficient when completing the square. In $4(x^2 - 2x)$, adding $1$ inside the parentheses adds $4$ to the equation, not $1$.",
+    "Confusing $p$ with $4p$ for a parabola. In $x^2 = 8y$, $4p = 8$ so the focus is at $(0, 2)$, not $(0, 8)$. Check with the equidistance test at a point.",
+    "Taking the asymptotes of $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$ as $y = \\pm\\frac{a}{b}x$. The slope is $\\frac{b}{a}$: solve for $y$ and let $x$ grow large to confirm."
+  ],
+  "whyItMatters": "Conics are the paths of planets, comets, and thrown balls, the shapes of satellite dishes and whispering galleries, and the level curves you will meet in multivariable calculus. The next section rewrites all three with one polar equation, which is how Kepler's laws are derived from Newton's. Completing the square and reading an equation's structure are the same skills used in trigonometric substitution, where $\\sqrt{a^2 - x^2}$ and $\\sqrt{x^2 + a^2}$ are, in effect, half-ellipses and half-hyperbolas.",
+  "checkYourself": [
+    {
+      "q": "Find the focus of $y^2 = 12x$.",
+      "a": "$4p = 12$, $p = 3$, focus $(3, 0)$, directrix $x = -3$."
+    },
+    {
+      "q": "Find the foci of $\\frac{x^2}{16} + \\frac{y^2}{25} = 1$.",
+      "a": "Major axis vertical, $c^2 = 25 - 16 = 9$, foci $(0, \\pm 3)$."
+    },
+    {
+      "q": "What are the asymptotes of $y^2 - x^2 = 1$?",
+      "a": "$y = \\pm x$; this hyperbola opens up and down with vertices $(0, \\pm 1)$."
+    },
+    {
+      "q": "Classify $x^2 - 4y^2 + 2x = 0$ without solving fully.",
+      "a": "A hyperbola: the squared terms have opposite signs."
+    }
+  ],
+  "readingGuide": [
+    "Find the three distance definitions (parabola, ellipse, hyperbola) and write each in your own words before looking at any equation.",
+    "Follow the derivation of the ellipse equation from the sum-of-distances definition and mark the step where the second square root is eliminated.",
+    "Before reading the solution of the hyperbola example, find $a$, $b$, $c$, and the asymptotes yourself.",
+    "Locate the discussion of shifted conics and note how the standard forms change when the center moves to $(h, k)$.",
+    "Look for the reflection properties (why parabolic dishes and elliptical rooms work) and connect them to the focus definitions."
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "nodeId": "unit-circle",
+  "title": "The Unit Circle",
+  "overview": "Right triangles only give trig values for angles between $0$ and $\\frac{\\pi}{2}$. Calculus needs $\\sin$ and $\\cos$ for every real number, including negative angles and angles bigger than a full turn, because the input will be a variable $x$ that can be anything. The unit circle is the device that extends the definitions. Draw a circle of radius 1 centered at the origin. Start at the point $(1, 0)$ and travel counterclockwise along the circle through an arc of length $\\theta$ (that is what $\\theta$ radians means on a unit circle). You land at some point $P$. Define\n$$\\cos\\theta = \\text{the } x\\text{-coordinate of } P, \\qquad \\sin\\theta = \\text{the } y\\text{-coordinate of } P.$$\nFor an acute angle this agrees with the triangle definition, because dropping a perpendicular from $P$ makes a right triangle with hypotenuse 1, adjacent side $x$, and opposite side $y$. But now the definition works for any $\\theta$: negative angles go clockwise, and angles beyond $2\\pi$ just keep going around.\n\nThree facts follow immediately. First, since $P$ is on the unit circle, $x^2 + y^2 = 1$, which is $\\cos^2\\theta + \\sin^2\\theta = 1$ again. Second, going once around returns you to the same point, so $\\sin(\\theta + 2\\pi) = \\sin\\theta$ and $\\cos(\\theta + 2\\pi) = \\cos\\theta$: both functions are **periodic** with period $2\\pi$. Third, the signs of $\\sin$ and $\\cos$ depend on the quadrant: in quadrant I both are positive; in II ($\\frac{\\pi}{2} < \\theta < \\pi$) $x$ is negative so cosine is negative; in III both are negative; in IV sine is negative. Tangent, which is $\\frac{y}{x}$, is positive in I and III and negative in II and IV.\n\nThe angles on the axes are easy to read directly from the coordinates: $\\theta = 0$ is $(1, 0)$, $\\frac{\\pi}{2}$ is $(0, 1)$, $\\pi$ is $(-1, 0)$, $\\frac{3\\pi}{2}$ is $(0, -1)$. So $\\sin\\pi = 0$, $\\cos\\pi = -1$, $\\cos\\frac{\\pi}{2} = 0$, and $\\tan\\frac{\\pi}{2}$ is undefined because $x = 0$ there.\n\nFor every other special angle, use a **reference angle**: the acute angle between the terminal side and the $x$-axis. The point for $\\frac{5\\pi}{6}$, for instance, is the mirror image of the point for $\\frac{\\pi}{6}$ across the $y$-axis, so it has the same coordinates with the $x$ flipped: $\\left(-\\frac{\\sqrt{3}}{2}, \\frac{1}{2}\\right)$. In practice: find the reference angle, get the values from the $30$-$60$-$90$ or $45$-$45$-$90$ triangle, then attach signs according to the quadrant. The sixteen points at multiples of $\\frac{\\pi}{6}$ and $\\frac{\\pi}{4}$ are the ones you want to be able to reconstruct in under a minute.\n\nFinally, the symmetry of the circle gives two identities you will use when simplifying integrals: $\\sin(-\\theta) = -\\sin\\theta$ (sine is odd) and $\\cos(-\\theta) = \\cos\\theta$ (cosine is even), because reflecting the point $P$ across the $x$-axis negates its $y$-coordinate and leaves its $x$-coordinate alone.",
+  "keyIdeas": [
+    "On the unit circle, $\\cos\\theta$ is the $x$-coordinate and $\\sin\\theta$ is the $y$-coordinate of the point reached by traveling counterclockwise through angle $\\theta$ from $(1, 0)$.",
+    "$\\cos^2\\theta + \\sin^2\\theta = 1$ because the point is on the circle $x^2 + y^2 = 1$.",
+    "$\\sin$ and $\\cos$ repeat every $2\\pi$: $\\sin(\\theta + 2\\pi) = \\sin\\theta$.",
+    "Signs by quadrant: I all positive; II only sine positive; III only tangent positive; IV only cosine positive.",
+    "Axis angles: $\\sin 0 = 0$, $\\cos 0 = 1$, $\\sin\\frac{\\pi}{2} = 1$, $\\cos\\frac{\\pi}{2} = 0$, $\\sin\\pi = 0$, $\\cos\\pi = -1$.",
+    "For other special angles, use the reference angle's triangle values and attach the quadrant's signs.",
+    "$\\sin(-\\theta) = -\\sin\\theta$ and $\\cos(-\\theta) = \\cos\\theta$."
+  ],
+  "workedExamples": [
+    {
+      "title": "A second-quadrant angle",
+      "problem": "Find $\\sin\\frac{3\\pi}{4}$, $\\cos\\frac{3\\pi}{4}$, and $\\tan\\frac{3\\pi}{4}$.",
+      "steps": [
+        "Locate the angle: $\\frac{3\\pi}{4} = 135^\\circ$, between $\\frac{\\pi}{2}$ and $\\pi$, so quadrant II. There $x < 0$ and $y > 0$.",
+        "Reference angle: the distance to $\\pi$ is $\\pi - \\frac{3\\pi}{4} = \\frac{\\pi}{4}$. The $45^\\circ$ values are $\\frac{\\sqrt{2}}{2}$ for both sine and cosine.",
+        "Attach signs: $\\sin\\frac{3\\pi}{4} = \\frac{\\sqrt{2}}{2}$ (positive), $\\cos\\frac{3\\pi}{4} = -\\frac{\\sqrt{2}}{2}$ (negative).",
+        "$\\tan\\frac{3\\pi}{4} = \\frac{\\sin}{\\cos} = \\frac{\\sqrt{2}/2}{-\\sqrt{2}/2} = -1$. The point is $\\left(-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right)$; check $x^2 + y^2 = \\frac{1}{2} + \\frac{1}{2} = 1$."
+      ]
+    },
+    {
+      "title": "A third-quadrant angle",
+      "problem": "Find $\\cos\\frac{4\\pi}{3}$ and $\\sin\\frac{4\\pi}{3}$.",
+      "steps": [
+        "$\\frac{4\\pi}{3} = 240^\\circ$, between $\\pi$ and $\\frac{3\\pi}{2}$: quadrant III, where both coordinates are negative.",
+        "Reference angle: $\\frac{4\\pi}{3} - \\pi = \\frac{\\pi}{3}$ ($60^\\circ$), with $\\cos\\frac{\\pi}{3} = \\frac{1}{2}$ and $\\sin\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}$.",
+        "Attach the quadrant III signs: $\\cos\\frac{4\\pi}{3} = -\\frac{1}{2}$, $\\sin\\frac{4\\pi}{3} = -\\frac{\\sqrt{3}}{2}$.",
+        "Check: $\\frac{1}{4} + \\frac{3}{4} = 1$. And the tangent, $\\frac{-\\sqrt{3}/2}{-1/2} = \\sqrt{3}$, is positive, as it should be in quadrant III."
+      ]
+    },
+    {
+      "title": "Negative and large angles",
+      "problem": "Evaluate $\\sin\\left(-\\frac{\\pi}{6}\\right)$ and $\\cos\\frac{13\\pi}{6}$.",
+      "steps": [
+        "Sine is odd: $\\sin\\left(-\\frac{\\pi}{6}\\right) = -\\sin\\frac{\\pi}{6} = -\\frac{1}{2}$. Geometrically, going clockwise by $30^\\circ$ lands at $\\left(\\frac{\\sqrt{3}}{2}, -\\frac{1}{2}\\right)$, in quadrant IV.",
+        "For $\\frac{13\\pi}{6}$, subtract a full turn: $\\frac{13\\pi}{6} - 2\\pi = \\frac{13\\pi}{6} - \\frac{12\\pi}{6} = \\frac{\\pi}{6}$. Same point on the circle.",
+        "So $\\cos\\frac{13\\pi}{6} = \\cos\\frac{\\pi}{6} = \\frac{\\sqrt{3}}{2}$."
+      ]
+    },
+    {
+      "title": "Solving a basic trig equation on the circle",
+      "problem": "Find all $\\theta$ in $[0, 2\\pi)$ with $\\cos\\theta = -\\frac{1}{2}$.",
+      "steps": [
+        "Cosine is the $x$-coordinate. The reference angle with $\\cos = \\frac{1}{2}$ is $\\frac{\\pi}{3}$.",
+        "Cosine is negative in quadrants II and III, so there are two answers, one in each.",
+        "Quadrant II: $\\pi - \\frac{\\pi}{3} = \\frac{2\\pi}{3}$. Quadrant III: $\\pi + \\frac{\\pi}{3} = \\frac{4\\pi}{3}$.",
+        "Check: both points have $x$-coordinate $-\\frac{1}{2}$ (they are mirror images across the $x$-axis). Solutions: $\\theta = \\frac{2\\pi}{3}$ and $\\theta = \\frac{4\\pi}{3}$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Swapping sine and cosine: thinking cosine is the $y$-coordinate. Remember that at $\\theta = 0$ the point is $(1, 0)$ and $\\cos 0 = 1$, so cosine is the first coordinate, $x$.",
+    "Forgetting the sign in quadrants II, III, IV and reporting $\\cos\\frac{3\\pi}{4} = \\frac{\\sqrt{2}}{2}$. The point is on the left half of the circle, so its $x$-coordinate is negative.",
+    "Finding only one solution of an equation like $\\sin\\theta = \\frac{1}{2}$. The horizontal line $y = \\frac{1}{2}$ cuts the circle twice, at $\\frac{\\pi}{6}$ and $\\frac{5\\pi}{6}$.",
+    "Computing the reference angle as the angle itself when it is past $\\frac{\\pi}{2}$. The reference angle is always the acute angle to the nearest part of the $x$-axis: for $\\frac{5\\pi}{6}$ it is $\\frac{\\pi}{6}$, not $\\frac{5\\pi}{6}$.",
+    "Treating $\\tan\\frac{\\pi}{2}$ as 0 or 1. The $x$-coordinate there is 0, so tangent is undefined."
+  ],
+  "whyItMatters": "Definite integrals of trig functions require evaluating $\\sin$ and $\\cos$ at the limits, which are usually special angles: $\\int_0^{\\pi}\\sin x\\,dx = -\\cos\\pi + \\cos 0 = 2$. The periodicity and the odd/even symmetries explain why $\\int_{-\\pi}^{\\pi}\\sin x\\,dx = 0$ without any computation. And the identity $\\cos^2\\theta + \\sin^2\\theta = 1$, read off the circle, is the engine behind trig substitution and trig integrals in Chapter 7.",
+  "checkYourself": [
+    {
+      "q": "Coordinates of the unit-circle point at $\\theta = \\pi$?",
+      "a": "$(-1, 0)$, so $\\cos\\pi = -1$, $\\sin\\pi = 0$."
+    },
+    {
+      "q": "$\\sin\\frac{7\\pi}{6}$?",
+      "a": "Quadrant III, reference $\\frac{\\pi}{6}$: $-\\frac{1}{2}$."
+    },
+    {
+      "q": "In which quadrants is $\\tan\\theta$ negative?",
+      "a": "II and IV, where sine and cosine have opposite signs."
+    },
+    {
+      "q": "$\\cos\\left(-\\frac{\\pi}{3}\\right)$?",
+      "a": "Cosine is even: $\\cos\\frac{\\pi}{3} = \\frac{1}{2}$."
+    }
+  ],
+  "readingGuide": [
+    "Find the unit-circle definition of $\\sin\\theta$ and $\\cos\\theta$ and explain to yourself why it agrees with the right-triangle definition for acute angles.",
+    "Locate the figure or table of values at the standard angles and reproduce it on a blank circle from the reference-angle idea.",
+    "Look for the statement of the periodicity of $\\sin$ and $\\cos$ and the sign of each function in each quadrant.",
+    "Before reading the solution of any example that solves an equation like $\\sin\\theta = c$, find both solutions yourself using the circle."
+  ]
+}

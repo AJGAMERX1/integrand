@@ -1,0 +1,88 @@
+{
+  "nodeId": "graphs-of-second-degree",
+  "title": "Circles and Parabolas",
+  "overview": "A line is the graph of a first-degree equation. When $x$ or $y$ is squared you get a second-degree equation, and its graph is a curve. The two curves you need right away are the circle and the parabola. Both are easier than they look once you see that their equations are built from two simple ideas: distance, for the circle, and completing the square, for recognizing either one from a messy equation.\n\nA **circle** is the set of points at a fixed distance $r$ (the radius) from a center $(h, k)$. The distance formula, which is just the Pythagorean theorem, says the distance from $(x, y)$ to $(h, k)$ is $\\sqrt{(x - h)^2 + (y - k)^2}$. Setting that equal to $r$ and squaring gives the standard equation\n$$(x - h)^2 + (y - k)^2 = r^2.$$\nSo $(x - 2)^2 + (y + 1)^2 = 9$ is the circle centered at $(2, -1)$ with radius 3. Watch the signs: the center coordinates are the numbers that make each parenthesis zero. The circle centered at the origin is $x^2 + y^2 = r^2$. The upper half of that circle is the function $y = \\sqrt{r^2 - x^2}$, and the area under it, which you will integrate in Chapter 5, is half the circle's area, $\\frac{1}{2}\\pi r^2$.\n\nA **parabola** is the graph of a quadratic function, $y = ax^2 + bx + c$. It opens upward when $a > 0$ and downward when $a < 0$, and it is symmetric about a vertical line through its lowest (or highest) point, the **vertex**. The vertex form $y = a(x - h)^2 + k$ shows the vertex $(h, k)$ directly, because $(x - h)^2$ is smallest, namely zero, exactly when $x = h$. To get from the standard form to vertex form, complete the square. A shortcut for the vertex's $x$-coordinate is $x = -\\frac{b}{2a}$; then plug that in to get $y$.\n\nTo sketch a parabola, plot the vertex, mark the $y$-intercept $(0, c)$ and its mirror image across the axis of symmetry, find any $x$-intercepts by solving $ax^2 + bx + c = 0$, and draw a smooth U through the points. A parabola can also open sideways: $x = y^2$ is the same shape rotated, and it is not a function of $x$ since it fails the vertical line test.\n\nWhen an equation like $x^2 + y^2 + 6x - 4y + 9 = 0$ arrives in expanded form, group the $x$ terms and the $y$ terms, complete the square in each, and read off the center and radius. If only one variable is squared, the same completing-the-square move exposes a parabola's vertex. Recognizing which curve an equation describes, before sketching anything, saves a lot of plotting.",
+  "keyIdeas": [
+    "Distance between $(x_1, y_1)$ and $(x_2, y_2)$ is $\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$, from the Pythagorean theorem.",
+    "A circle with center $(h, k)$ and radius $r$ is $(x - h)^2 + (y - k)^2 = r^2$.",
+    "The upper semicircle of radius $r$ centered at the origin is the function $y = \\sqrt{r^2 - x^2}$.",
+    "A parabola $y = a(x - h)^2 + k$ has vertex $(h, k)$, opens up if $a > 0$ and down if $a < 0$, and is symmetric about $x = h$.",
+    "For $y = ax^2 + bx + c$ the vertex is at $x = -\\frac{b}{2a}$; completing the square converts to vertex form.",
+    "To identify a curve from an expanded equation, group by variable and complete the square."
+  ],
+  "workedExamples": [
+    {
+      "title": "A circle from its expanded equation",
+      "problem": "Find the center and radius of $x^2 + y^2 - 4x + 6y - 3 = 0$.",
+      "steps": [
+        "Group the $x$ terms and $y$ terms, moving the constant to the right: $(x^2 - 4x) + (y^2 + 6y) = 3$.",
+        "Complete the square in $x$: half of $-4$ is $-2$, square it to get 4. Complete the square in $y$: half of 6 is 3, square it to get 9. Add both to each side: $(x^2 - 4x + 4) + (y^2 + 6y + 9) = 3 + 4 + 9$.",
+        "Write as squares: $(x - 2)^2 + (y + 3)^2 = 16$.",
+        "The center is $(2, -3)$ and the radius is $\\sqrt{16} = 4$. Check a point: $(6, -3)$ should be on the circle (4 to the right of center): $36 + 9 - 24 - 18 - 3 = 0$. Correct."
+      ]
+    },
+    {
+      "title": "Vertex form by completing the square",
+      "problem": "Write $y = 2x^2 - 12x + 13$ in vertex form and find the vertex.",
+      "steps": [
+        "Factor the leading coefficient out of the $x$ terms only: $y = 2(x^2 - 6x) + 13$.",
+        "Inside the parentheses, complete the square: $x^2 - 6x = (x - 3)^2 - 9$. So $y = 2\\left((x - 3)^2 - 9\\right) + 13$.",
+        "Distribute the 2: $y = 2(x - 3)^2 - 18 + 13 = 2(x - 3)^2 - 5$.",
+        "Vertex: $(3, -5)$, opening upward since $2 > 0$. Check with the shortcut $x = -\\frac{b}{2a} = \\frac{12}{4} = 3$ and $y = 18 - 36 + 13 = -5$. Correct."
+      ]
+    },
+    {
+      "title": "Sketching a parabola from its intercepts",
+      "problem": "Sketch $y = -x^2 + 2x + 3$: find the vertex, the intercepts, and the direction it opens.",
+      "steps": [
+        "$a = -1 < 0$, so the parabola opens downward and the vertex is its highest point.",
+        "Vertex $x$-coordinate: $x = -\\frac{b}{2a} = -\\frac{2}{-2} = 1$. Then $y = -1 + 2 + 3 = 4$. Vertex: $(1, 4)$.",
+        "$y$-intercept: $x = 0$ gives $y = 3$. Its mirror image across the axis $x = 1$ is $(2, 3)$.",
+        "$x$-intercepts: solve $-x^2 + 2x + 3 = 0$, or $x^2 - 2x - 3 = 0$, which factors as $(x - 3)(x + 1) = 0$. So the curve crosses the axis at $x = -1$ and $x = 3$, symmetric about $x = 1$ as expected.",
+        "Plot $(-1, 0)$, $(0, 3)$, $(1, 4)$, $(2, 3)$, $(3, 0)$ and draw a smooth downward U through them."
+      ]
+    },
+    {
+      "title": "Writing a circle from geometric data",
+      "problem": "Find the equation of the circle with center $(-1, 2)$ that passes through $(2, 6)$.",
+      "steps": [
+        "The radius is the distance from the center to the given point: $\\sqrt{(2 - (-1))^2 + (6 - 2)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+        "Substitute into the standard form with $h = -1$, $k = 2$: $(x + 1)^2 + (y - 2)^2 = 25$.",
+        "Check that $(2, 6)$ satisfies it: $9 + 16 = 25$. Correct."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Reading the center of $(x - 2)^2 + (y + 1)^2 = 9$ as $(-2, 1)$. The center is where each parenthesis is zero: $(2, -1)$.",
+    "Taking the radius to be 9 in $(x - 2)^2 + (y + 1)^2 = 9$. The right side is $r^2$, so $r = 3$.",
+    "Completing the square inside a factored coefficient without multiplying the correction: from $2(x^2 - 6x)$ writing $2(x - 3)^2 - 9$. The $-9$ inside gets multiplied too: $2(x - 3)^2 - 18$.",
+    "Adding the completing-the-square constant to only one side of a circle equation. Whatever you add on the left must be added on the right.",
+    "Treating $y = \\sqrt{9 - x^2}$ as the whole circle. The square root is nonnegative, so it is only the upper half."
+  ],
+  "whyItMatters": "Your second Daily Integral tier evaluates $\\int_{-r}^{r}\\sqrt{r^2 - x^2}\\,dx$ by recognizing a semicircle and using $\\frac{1}{2}\\pi r^2$, no antiderivative needed. Parabolas are the first curves whose area you compute with Riemann sums, and the area between a parabola and a line is the classic first problem of Chapter 6. Completing the square returns in Chapter 7 to turn $\\int \\frac{dx}{x^2 + 2x + 5}$ into an arctangent.",
+  "checkYourself": [
+    {
+      "q": "Center and radius of $(x + 4)^2 + y^2 = 49$?",
+      "a": "Center $(-4, 0)$, radius 7."
+    },
+    {
+      "q": "Vertex of $y = (x - 5)^2 + 2$?",
+      "a": "$(5, 2)$."
+    },
+    {
+      "q": "Vertex of $y = x^2 + 4x + 1$?",
+      "a": "$x = -2$, $y = 4 - 8 + 1 = -3$; vertex $(-2, -3)$."
+    },
+    {
+      "q": "What is the area under $y = \\sqrt{4 - x^2}$ from $-2$ to $2$?",
+      "a": "Half a circle of radius 2: $\\frac{1}{2}\\pi(4) = 2\\pi$."
+    }
+  ],
+  "readingGuide": [
+    "Find the distance formula and the derivation of the circle equation from it; redo the derivation yourself from a sketch.",
+    "Locate the discussion of parabolas and note how the sign of the leading coefficient controls the direction of opening.",
+    "Before reading the solution of the first example that identifies a circle from an expanded equation, complete the squares yourself and compare.",
+    "Look for how the text handles a parabola that opens left or right, and note why it is not the graph of a function of $x$.",
+    "Make a one-page summary with a sketch of each standard form and its key points (center and radius, vertex and intercepts)."
+  ]
+}

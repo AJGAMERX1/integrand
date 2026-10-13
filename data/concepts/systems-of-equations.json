@@ -1,0 +1,81 @@
+{
+  "nodeId": "systems-of-equations",
+  "title": "Systems of Linear Equations",
+  "overview": "A system of two linear equations is a pair of conditions that must hold at the same time, such as $x + y = 7$ and $x - y = 1$. Each equation on its own has infinitely many solutions, a whole line of points $(x, y)$. Solving the system means finding the point that lies on **both** lines, which is where they cross. For the pair above, that point is $(4, 3)$: check that $4 + 3 = 7$ and $4 - 3 = 1$.\n\nThere are two standard methods, and they are worth learning both because each is quickest in different situations. **Substitution** means solving one equation for one variable and plugging that expression into the other equation. It is the natural choice when one equation already has a variable alone, like $y = 2x - 1$. After substituting, you have a single equation in a single unknown, which you solve as usual; then you go back and find the other variable.\n\n**Elimination** means adding (or subtracting) multiples of the equations so that one variable cancels. If the two equations are $2x + 3y = 12$ and $4x - 3y = 6$, adding them kills $y$ immediately: $6x = 18$, so $x = 3$. When the coefficients do not already cancel, multiply one or both equations by constants first so they do. Elimination shines when both equations are in the form $ax + by = c$.\n\nWhichever method you use, the last step is the same: substitute both values back into both original equations. A system can also have no solution (the lines are parallel, and the algebra produces something false like $0 = 5$) or infinitely many solutions (the two equations describe the same line, and the algebra produces something always true like $0 = 0$). Those outcomes are not mistakes; they are the answer.\n\nSystems appear in calculus more often than you might expect, usually quietly. Finding where two curves intersect, which is the first step in computing the area between them, is solving a system. Partial fractions, a Chapter 7 integration technique, ends with a small linear system for the unknown constants. And in optimization you often need the point where two constraint lines meet.",
+  "keyIdeas": [
+    "A solution of a system is a point $(x, y)$ that satisfies every equation at once; geometrically it is where the lines cross.",
+    "Substitution: solve one equation for a variable, substitute into the other, solve, then back-substitute.",
+    "Elimination: multiply equations by constants so one variable's coefficients are opposites, then add to cancel it.",
+    "A false result such as $0 = 5$ means no solution (parallel lines); an always-true result such as $0 = 0$ means infinitely many (the same line).",
+    "Always check the solution in both original equations."
+  ],
+  "workedExamples": [
+    {
+      "title": "Substitution",
+      "problem": "Solve the system $y = 2x - 1$ and $3x + y = 14$.",
+      "steps": [
+        "The first equation already gives $y$ in terms of $x$, so substitution is the natural choice. Replace $y$ in the second equation: $3x + (2x - 1) = 14$.",
+        "Simplify and solve: $5x - 1 = 14$, so $5x = 15$ and $x = 3$.",
+        "Back-substitute into the first equation: $y = 2(3) - 1 = 5$.",
+        "Check both equations: $5 = 6 - 1$ is true, and $9 + 5 = 14$ is true. Solution: $(3, 5)$."
+      ]
+    },
+    {
+      "title": "Elimination with a multiplier",
+      "problem": "Solve $2x + 3y = 8$ and $5x - 2y = 1$.",
+      "steps": [
+        "Neither variable cancels directly. To cancel $y$, make the coefficients $6$ and $-6$: multiply the first equation by 2 and the second by 3. This gives $4x + 6y = 16$ and $15x - 6y = 3$.",
+        "Add the two equations: $19x = 19$, so $x = 1$.",
+        "Substitute $x = 1$ into the first original equation: $2 + 3y = 8$, so $3y = 6$ and $y = 2$.",
+        "Check the second equation: $5(1) - 2(2) = 1$. True. Solution: $(1, 2)$."
+      ]
+    },
+    {
+      "title": "Where two lines cross",
+      "problem": "Find the intersection of the lines $y = x + 4$ and $y = -2x + 1$.",
+      "steps": [
+        "Both equations give $y$, so set the two expressions equal: $x + 4 = -2x + 1$.",
+        "Collect $x$ terms: $3x = -3$, so $x = -1$.",
+        "Find $y$ from either line: $y = -1 + 4 = 3$. Check the other: $y = 2 + 1 = 3$. The lines cross at $(-1, 3)$.",
+        "This is exactly the step you use to find the limits of integration for the area between two curves."
+      ]
+    },
+    {
+      "title": "Recognizing no solution",
+      "problem": "Solve $x - 2y = 3$ and $-2x + 4y = 5$.",
+      "steps": [
+        "Multiply the first equation by 2: $2x - 4y = 6$.",
+        "Add to the second equation: $(2x - 4y) + (-2x + 4y) = 6 + 5$, which is $0 = 11$.",
+        "That statement is false no matter what $x$ and $y$ are, so no point satisfies both equations. The lines are parallel (both have slope $\\frac{1}{2}$) and never meet.",
+        "Answer: no solution."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Substituting back into the equation you just used to solve for the variable, which only confirms your algebra, not the system. Check the solution in **both** original equations.",
+    "Multiplying only some terms of an equation. From $2x + 3y = 8$, doubling must give $4x + 6y = 16$, including the right side.",
+    "Adding when you should subtract: with $2x + 3y = 12$ and $2x - y = 4$, adding gives $4x + 2y = 16$ and nothing cancels. Subtract to eliminate $x$: $4y = 8$.",
+    "Reporting only $x$. A solution of a two-variable system is a pair $(x, y)$."
+  ],
+  "whyItMatters": "To find the area between $y = x^2$ and $y = x + 2$ you first solve that system to learn where the curves meet; those crossing points become the limits of integration. Later, partial fractions turns a hard integral into a short linear system for unknown constants, and a wrong solution there wrecks the whole integral. Solving systems reliably is quiet background work that keeps integrals correct.",
+  "checkYourself": [
+    {
+      "q": "Solve $x + y = 10$, $x - y = 2$.",
+      "a": "Add: $2x = 12$, $x = 6$, $y = 4$."
+    },
+    {
+      "q": "Solve $y = 3x$, $x + y = 8$.",
+      "a": "$x + 3x = 8$, so $x = 2$, $y = 6$."
+    },
+    {
+      "q": "What does the result $0 = 0$ mean while solving a system?",
+      "a": "Infinitely many solutions; the equations describe the same line."
+    }
+  ],
+  "readingGuide": [
+    "Practice: solve five systems by substitution where one equation is already solved for a variable.",
+    "Practice: solve five systems in the form $ax + by = c$ by elimination, choosing multipliers so one variable cancels.",
+    "Practice: for each pair of lines $y = m_1 x + b_1$ and $y = m_2 x + b_2$, find the crossing point by setting the right sides equal; sketch to confirm.",
+    "Practice: build one system with no solution and one with infinitely many, and watch what the algebra produces."
+  ]
+}

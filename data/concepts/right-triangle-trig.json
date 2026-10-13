@@ -1,0 +1,89 @@
+{
+  "nodeId": "right-triangle-trig",
+  "title": "Right-Triangle Trigonometry",
+  "overview": "Trigonometry begins with a simple observation: all right triangles with the same acute angle are scaled copies of each other, so the **ratios** of their sides depend only on the angle. Those ratios are the trig functions. Pick an acute angle $\\theta$ in a right triangle. The side across from it is the **opposite**, the side next to it (not the hypotenuse) is the **adjacent**, and the longest side, across from the right angle, is the **hypotenuse**. Then\n$$\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}, \\qquad \\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}, \\qquad \\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}}.$$\nMany people remember this as SOH-CAH-TOA. The other three functions are reciprocals: $\\csc\\theta = \\frac{1}{\\sin\\theta}$, $\\sec\\theta = \\frac{1}{\\cos\\theta}$, $\\cot\\theta = \\frac{1}{\\tan\\theta}$, and $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$.\n\nBecause the hypotenuse is the longest side, $\\sin\\theta$ and $\\cos\\theta$ are always between 0 and 1 for an acute angle. The Pythagorean theorem, opposite$^2$ + adjacent$^2$ = hypotenuse$^2$, divided through by hypotenuse$^2$, gives the single most important identity in trigonometry:\n$$\\sin^2\\theta + \\cos^2\\theta = 1.$$\nGiven one trig ratio you can find the others by drawing the triangle: if $\\sin\\theta = \\frac{3}{5}$, draw opposite 3 and hypotenuse 5, compute the adjacent side as $\\sqrt{25 - 9} = 4$, and read off $\\cos\\theta = \\frac{4}{5}$ and $\\tan\\theta = \\frac{3}{4}$.\n\nTwo special triangles give exact values. Half of a square with side 1 is a $45^\\circ$-$45^\\circ$-$90^\\circ$ triangle with legs 1 and hypotenuse $\\sqrt{2}$, so $\\sin 45^\\circ = \\cos 45^\\circ = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$ and $\\tan 45^\\circ = 1$. Half of an equilateral triangle with side 2 is a $30^\\circ$-$60^\\circ$-$90^\\circ$ triangle with sides 1, $\\sqrt{3}$, 2, so $\\sin 30^\\circ = \\frac{1}{2}$, $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$, $\\cos 60^\\circ = \\frac{1}{2}$, $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}$, $\\tan 60^\\circ = \\sqrt{3}$. Redraw these two triangles whenever you need a value rather than memorizing a table.\n\nCalculus measures angles in **radians**, not degrees. A radian is the angle you get when the arc of a circle has the same length as the radius. A full turn is $2\\pi$ radians, so $180^\\circ = \\pi$ radians, and the conversion is\n$$\\text{radians} = \\text{degrees}\\cdot\\frac{\\pi}{180}.$$\nThe special angles become $30^\\circ = \\frac{\\pi}{6}$, $45^\\circ = \\frac{\\pi}{4}$, $60^\\circ = \\frac{\\pi}{3}$, $90^\\circ = \\frac{\\pi}{2}$. Radians are not an arbitrary convention: the derivative of $\\sin x$ is $\\cos x$ only when $x$ is in radians. From now on, treat radians as the default and degrees as the thing you convert away from.",
+  "keyIdeas": [
+    "$\\sin\\theta = \\frac{\\text{opp}}{\\text{hyp}}$, $\\cos\\theta = \\frac{\\text{adj}}{\\text{hyp}}$, $\\tan\\theta = \\frac{\\text{opp}}{\\text{adj}} = \\frac{\\sin\\theta}{\\cos\\theta}$.",
+    "$\\csc$, $\\sec$, $\\cot$ are the reciprocals of $\\sin$, $\\cos$, $\\tan$ respectively.",
+    "$\\sin^2\\theta + \\cos^2\\theta = 1$, which is the Pythagorean theorem divided by the hypotenuse squared.",
+    "Given one ratio, draw the triangle, find the third side by Pythagoras, and read off the other ratios.",
+    "The $45$-$45$-$90$ triangle has sides $1, 1, \\sqrt{2}$; the $30$-$60$-$90$ triangle has sides $1, \\sqrt{3}, 2$.",
+    "$\\pi$ radians $= 180^\\circ$, so radians $=$ degrees $\\cdot \\frac{\\pi}{180}$; special angles: $\\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}, \\frac{\\pi}{2}$.",
+    "Calculus uses radians; the derivative formulas for $\\sin$ and $\\cos$ depend on it."
+  ],
+  "workedExamples": [
+    {
+      "title": "All six ratios from one",
+      "problem": "If $\\cos\\theta = \\frac{5}{13}$ for an acute angle $\\theta$, find the other five trig values.",
+      "steps": [
+        "Draw a right triangle with adjacent 5 and hypotenuse 13 (cosine is adjacent over hypotenuse).",
+        "Pythagoras for the opposite side: $\\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12$.",
+        "Read off: $\\sin\\theta = \\frac{12}{13}$, $\\tan\\theta = \\frac{12}{5}$.",
+        "Reciprocals: $\\csc\\theta = \\frac{13}{12}$, $\\sec\\theta = \\frac{13}{5}$, $\\cot\\theta = \\frac{5}{12}$.",
+        "Check the identity: $\\left(\\frac{12}{13}\\right)^2 + \\left(\\frac{5}{13}\\right)^2 = \\frac{144 + 25}{169} = 1$. Correct."
+      ]
+    },
+    {
+      "title": "Exact values from a special triangle",
+      "problem": "Find $\\sin\\frac{\\pi}{3}$, $\\cos\\frac{\\pi}{3}$, and $\\tan\\frac{\\pi}{6}$ exactly.",
+      "steps": [
+        "Convert to degrees to pick the triangle: $\\frac{\\pi}{3} = 60^\\circ$ and $\\frac{\\pi}{6} = 30^\\circ$, both from the $30$-$60$-$90$ triangle with sides $1$ (opposite $30^\\circ$), $\\sqrt{3}$ (opposite $60^\\circ$), and hypotenuse 2.",
+        "$\\sin 60^\\circ = \\frac{\\text{opp}}{\\text{hyp}} = \\frac{\\sqrt{3}}{2}$, and $\\cos 60^\\circ = \\frac{\\text{adj}}{\\text{hyp}} = \\frac{1}{2}$.",
+        "$\\tan 30^\\circ = \\frac{\\text{opp}}{\\text{adj}} = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}$.",
+        "Check: $\\sin^2 60^\\circ + \\cos^2 60^\\circ = \\frac{3}{4} + \\frac{1}{4} = 1$."
+      ]
+    },
+    {
+      "title": "Solving a triangle",
+      "problem": "A ladder 10 meters long leans against a wall, making an angle of $\\frac{\\pi}{3}$ with the ground. How high up the wall does it reach, and how far is its base from the wall?",
+      "steps": [
+        "Sketch: the ladder is the hypotenuse (10), the wall height is the side opposite the angle, the ground distance is the adjacent side.",
+        "Height: $\\sin\\frac{\\pi}{3} = \\frac{h}{10}$, so $h = 10\\cdot\\frac{\\sqrt{3}}{2} = 5\\sqrt{3} \\approx 8.66$ meters.",
+        "Base distance: $\\cos\\frac{\\pi}{3} = \\frac{d}{10}$, so $d = 10\\cdot\\frac{1}{2} = 5$ meters.",
+        "Check with Pythagoras: $5^2 + (5\\sqrt{3})^2 = 25 + 75 = 100 = 10^2$. Correct."
+      ]
+    },
+    {
+      "title": "Converting between degrees and radians",
+      "problem": "Convert $135^\\circ$ to radians and $\\frac{5\\pi}{6}$ to degrees.",
+      "steps": [
+        "$135^\\circ \\cdot \\frac{\\pi}{180} = \\frac{135\\pi}{180}$. Reduce by 45: $\\frac{3\\pi}{4}$.",
+        "Sanity check: $135^\\circ$ is $90^\\circ + 45^\\circ$, which is $\\frac{\\pi}{2} + \\frac{\\pi}{4} = \\frac{3\\pi}{4}$. Same.",
+        "$\\frac{5\\pi}{6}$ radians $\\cdot \\frac{180^\\circ}{\\pi} = \\frac{5 \\cdot 180^\\circ}{6} = 150^\\circ$."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Mixing up which side is adjacent. The adjacent side touches the angle and is not the hypotenuse; the hypotenuse is always the side across from the right angle.",
+    "Writing $\\sin^2\\theta$ as $\\sin(\\theta^2)$. $\\sin^2\\theta$ means $(\\sin\\theta)^2$: compute the sine first, then square.",
+    "Using degrees in a calculus formula. If a calculator is in degree mode, $\\sin(1)$ gives 0.017 instead of 0.841. Set it to radians.",
+    "Confusing the $30^\\circ$ and $60^\\circ$ values. The $30^\\circ$ angle is opposite the shortest side, 1, so $\\sin 30^\\circ = \\frac{1}{2}$; $\\sin 60^\\circ$ is the bigger one, $\\frac{\\sqrt{3}}{2}$.",
+    "Thinking $\\tan\\theta$ must be at most 1. $\\tan 60^\\circ = \\sqrt{3} \\approx 1.73$; tangent is a ratio of two legs and can be any positive number."
+  ],
+  "whyItMatters": "Every trig derivative and integral assumes radians, and the first trig limit you meet, $\\lim_{x \\to 0}\\frac{\\sin x}{x} = 1$, is false in degrees. The special values let you evaluate definite integrals like $\\int_0^{\\pi/3}\\cos x\\,dx = \\sin\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}$ exactly. And the \"draw the triangle, find the third side\" move is exactly what trig substitution does in Chapter 7 to convert $\\sqrt{a^2 - x^2}$ back into $x$.",
+  "checkYourself": [
+    {
+      "q": "If $\\tan\\theta = \\frac{3}{4}$ (acute), what is $\\sin\\theta$?",
+      "a": "Hypotenuse is 5, so $\\sin\\theta = \\frac{3}{5}$."
+    },
+    {
+      "q": "$\\cos\\frac{\\pi}{4}$?",
+      "a": "$\\frac{\\sqrt{2}}{2}$."
+    },
+    {
+      "q": "Convert $240^\\circ$ to radians.",
+      "a": "$\\frac{4\\pi}{3}$."
+    },
+    {
+      "q": "How many degrees is $\\frac{\\pi}{2}$?",
+      "a": "$90^\\circ$."
+    }
+  ],
+  "readingGuide": [
+    "Find the definitions of the six trig functions in terms of a right triangle and copy them onto a labeled sketch of your own.",
+    "Locate the discussion of radian measure and the conversion to degrees; convert $30^\\circ$, $45^\\circ$, $60^\\circ$, $90^\\circ$, $180^\\circ$, $270^\\circ$, $360^\\circ$ yourself.",
+    "Look for the table or figure of exact values at the special angles and rebuild it from the two special triangles rather than memorizing it.",
+    "Find the arc-length relation $s = r\\theta$ and check that it gives the full circumference when $\\theta = 2\\pi$.",
+    "Note that this appendix also covers the unit circle and identities, which are separate nodes; on this pass focus only on the right-triangle definitions and radians."
+  ]
+}

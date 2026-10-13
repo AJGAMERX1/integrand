@@ -1,0 +1,89 @@
+{
+  "nodeId": "trig-identities",
+  "title": "Essential Trig Identities",
+  "overview": "An identity is an equation that is true for every value of the variable. Trig identities are useful because the same quantity can be written in many trig forms, and the form you start with is often not the one you can integrate or differentiate. Learning a small set of identities, and the habit of reaching for them, turns many impossible-looking problems into routine ones. You do not need dozens; you need about eight, used well.\n\nThe foundation is the **Pythagorean identity**, $\\sin^2 x + \\cos^2 x = 1$, which came from the unit circle. Dividing it by $\\cos^2 x$ gives $\\tan^2 x + 1 = \\sec^2 x$; dividing by $\\sin^2 x$ gives $1 + \\cot^2 x = \\csc^2 x$. These three let you trade a squared trig function for another one, which is exactly what is needed when an integrand contains $\\sin^2 x$ or $\\sqrt{1 - x^2}$. Alongside these sit the definitions $\\tan x = \\frac{\\sin x}{\\cos x}$, $\\sec x = \\frac{1}{\\cos x}$, and so on; when an expression has tangents and secants, rewriting everything in terms of sine and cosine often makes it collapse.\n\nThe **addition formulas** tell you what happens when you take the sine or cosine of a sum:\n$$\\sin(a + b) = \\sin a\\cos b + \\cos a\\sin b, \\qquad \\cos(a + b) = \\cos a\\cos b - \\sin a\\sin b.$$\nReplacing $b$ by $-b$ and using that sine is odd and cosine is even gives the subtraction versions, with the signs flipped. The one to be careful with is cosine: the sum formula has a minus in it. Notice that $\\sin(a + b)$ is **not** $\\sin a + \\sin b$; with $a = b = \\frac{\\pi}{2}$ the left side is $\\sin\\pi = 0$ and the right side is 2.\n\nSetting $a = b = x$ in the addition formulas gives the **double-angle formulas**:\n$$\\sin 2x = 2\\sin x\\cos x, \\qquad \\cos 2x = \\cos^2 x - \\sin^2 x = 2\\cos^2 x - 1 = 1 - 2\\sin^2 x.$$\nThe three versions of $\\cos 2x$ come from substituting the Pythagorean identity. Solving the last two for the squares gives the **half-angle (power-reducing) formulas**, which are the single most important identities for integration:\n$$\\sin^2 x = \\frac{1 - \\cos 2x}{2}, \\qquad \\cos^2 x = \\frac{1 + \\cos 2x}{2}.$$\nThey convert a square, which you cannot integrate directly, into a first power of a cosine, which you can.\n\nTo verify an identity or simplify an expression, work on one side only, convert to sines and cosines if stuck, look for a Pythagorean pattern, and combine fractions over a common denominator. A good check for any manipulation is to plug in a specific angle like $x = \\frac{\\pi}{6}$ on both sides.",
+  "keyIdeas": [
+    "$\\sin^2 x + \\cos^2 x = 1$, and dividing gives $\\tan^2 x + 1 = \\sec^2 x$ and $1 + \\cot^2 x = \\csc^2 x$.",
+    "$\\sin(a \\pm b) = \\sin a\\cos b \\pm \\cos a\\sin b$ and $\\cos(a \\pm b) = \\cos a\\cos b \\mp \\sin a\\sin b$.",
+    "$\\sin 2x = 2\\sin x\\cos x$.",
+    "$\\cos 2x = \\cos^2 x - \\sin^2 x = 2\\cos^2 x - 1 = 1 - 2\\sin^2 x$.",
+    "Power reduction: $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$ and $\\cos^2 x = \\frac{1 + \\cos 2x}{2}$.",
+    "When stuck, rewrite everything in sines and cosines, combine fractions, and look for $\\sin^2 + \\cos^2$.",
+    "Test any identity with a specific angle such as $\\frac{\\pi}{6}$ before trusting it."
+  ],
+  "workedExamples": [
+    {
+      "title": "Simplifying to a single function",
+      "problem": "Simplify $\\dfrac{\\sin x}{1 + \\cos x} + \\dfrac{1 + \\cos x}{\\sin x}$.",
+      "steps": [
+        "Combine over the common denominator $\\sin x(1 + \\cos x)$: the numerator is $\\sin^2 x + (1 + \\cos x)^2$.",
+        "Expand the square: $\\sin^2 x + 1 + 2\\cos x + \\cos^2 x$. Group $\\sin^2 x + \\cos^2 x = 1$: the numerator becomes $2 + 2\\cos x = 2(1 + \\cos x)$.",
+        "Cancel $(1 + \\cos x)$: $\\frac{2(1 + \\cos x)}{\\sin x(1 + \\cos x)} = \\frac{2}{\\sin x} = 2\\csc x$.",
+        "Check with $x = \\frac{\\pi}{2}$: original is $\\frac{1}{1 + 0} + \\frac{1 + 0}{1} = 2$; result is $2\\csc\\frac{\\pi}{2} = 2$. Correct."
+      ]
+    },
+    {
+      "title": "An exact value from an addition formula",
+      "problem": "Find $\\cos\\frac{\\pi}{12}$ exactly.",
+      "steps": [
+        "Write $\\frac{\\pi}{12}$ as a difference of special angles: $\\frac{\\pi}{3} - \\frac{\\pi}{4}$ (that is $60^\\circ - 45^\\circ = 15^\\circ$).",
+        "Cosine subtraction formula: $\\cos(a - b) = \\cos a\\cos b + \\sin a\\sin b$.",
+        "Substitute: $\\cos\\frac{\\pi}{3}\\cos\\frac{\\pi}{4} + \\sin\\frac{\\pi}{3}\\sin\\frac{\\pi}{4} = \\frac{1}{2}\\cdot\\frac{\\sqrt{2}}{2} + \\frac{\\sqrt{3}}{2}\\cdot\\frac{\\sqrt{2}}{2}$.",
+        "Combine: $\\frac{\\sqrt{2} + \\sqrt{6}}{4} \\approx \\frac{1.414 + 2.449}{4} \\approx 0.966$. A calculator gives $\\cos 15^\\circ \\approx 0.966$. Correct."
+      ]
+    },
+    {
+      "title": "Rewriting a square for integration",
+      "problem": "Rewrite $\\sin^2 x\\cos^2 x$ so that it contains no squares of trig functions.",
+      "steps": [
+        "First notice $\\sin x\\cos x = \\frac{1}{2}\\sin 2x$ (from the double-angle formula). So $\\sin^2 x\\cos^2 x = (\\sin x\\cos x)^2 = \\frac{1}{4}\\sin^2 2x$.",
+        "Now reduce the remaining square with the power-reduction formula applied to the angle $2x$: $\\sin^2 2x = \\frac{1 - \\cos 4x}{2}$.",
+        "Combine: $\\sin^2 x\\cos^2 x = \\frac{1}{4}\\cdot\\frac{1 - \\cos 4x}{2} = \\frac{1 - \\cos 4x}{8}$.",
+        "Check with $x = \\frac{\\pi}{4}$: left side is $\\left(\\frac{\\sqrt{2}}{2}\\right)^2\\left(\\frac{\\sqrt{2}}{2}\\right)^2 = \\frac{1}{4}$; right side is $\\frac{1 - \\cos\\pi}{8} = \\frac{2}{8} = \\frac{1}{4}$. Correct. This form integrates immediately."
+      ]
+    },
+    {
+      "title": "Using the Pythagorean identity with a known ratio",
+      "problem": "If $\\sin x = \\frac{2}{3}$ and $x$ is in quadrant II, find $\\cos x$ and $\\sin 2x$.",
+      "steps": [
+        "From $\\cos^2 x = 1 - \\sin^2 x = 1 - \\frac{4}{9} = \\frac{5}{9}$, so $\\cos x = \\pm\\frac{\\sqrt{5}}{3}$.",
+        "In quadrant II cosine is negative, so $\\cos x = -\\frac{\\sqrt{5}}{3}$.",
+        "Double angle: $\\sin 2x = 2\\sin x\\cos x = 2\\cdot\\frac{2}{3}\\cdot\\left(-\\frac{\\sqrt{5}}{3}\\right) = -\\frac{4\\sqrt{5}}{9}$.",
+        "Sanity check: $\\left|-\\frac{4\\sqrt{5}}{9}\\right| \\approx 0.994 \\le 1$, a legal sine value. And $2x$ is in quadrant III or IV (since $x$ is between $90^\\circ$ and $180^\\circ$), where sine is negative. Consistent."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Writing $\\sin(a + b) = \\sin a + \\sin b$. With $a = b = \\frac{\\pi}{2}$: $\\sin\\pi = 0$ but $1 + 1 = 2$. Use the addition formula.",
+    "Writing $\\sin^2 x = \\frac{1 + \\cos 2x}{2}$ (the signs swapped). Test $x = 0$: $\\sin^2 0 = 0$, and $\\frac{1 - \\cos 0}{2} = 0$ is the one that works, so sine takes the minus.",
+    "Using $\\cos 2x = \\cos^2 x + \\sin^2 x$. That sum is always 1, not $\\cos 2x$. The double-angle formula has a minus: $\\cos^2 x - \\sin^2 x$.",
+    "Canceling across a sum: $\\frac{\\sin x + 1}{\\sin x} = 1 + 1$. Split the fraction instead: $1 + \\frac{1}{\\sin x} = 1 + \\csc x$.",
+    "Dropping the $\\pm$ when solving $\\cos^2 x = \\frac{5}{9}$ and then forgetting to use the quadrant to choose the sign."
+  ],
+  "whyItMatters": "The integral $\\int\\sin^2 x\\,dx$ cannot be done by any substitution; it needs $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$. Trig substitution turns $\\sqrt{1 - x^2}$ into $\\cos\\theta$ using the Pythagorean identity. The derivative of $\\sin x$ is found from the addition formula for $\\sin(x + h)$. And every time an answer comes out as $2\\sin x\\cos x$ you will want to recognize it as $\\sin 2x$ so your answer matches the key.",
+  "checkYourself": [
+    {
+      "q": "Simplify $(1 - \\sin x)(1 + \\sin x)$.",
+      "a": "$1 - \\sin^2 x = \\cos^2 x$."
+    },
+    {
+      "q": "Write $\\cos^2 x$ without a square.",
+      "a": "$\\frac{1 + \\cos 2x}{2}$."
+    },
+    {
+      "q": "$\\sin\\left(x + \\frac{\\pi}{2}\\right) = $ ?",
+      "a": "$\\sin x\\cdot 0 + \\cos x\\cdot 1 = \\cos x$."
+    },
+    {
+      "q": "If $\\cos x = \\frac{3}{5}$, what is $\\cos 2x$?",
+      "a": "$2\\cos^2 x - 1 = 2\\cdot\\frac{9}{25} - 1 = -\\frac{7}{25}$."
+    }
+  ],
+  "readingGuide": [
+    "Find the Pythagorean identity and derive the two divided versions ($\\sec^2$, $\\csc^2$) yourself before reading them.",
+    "Locate the addition formulas and use them to derive the double-angle formulas by setting both angles equal.",
+    "Find the half-angle (power-reducing) formulas and derive them from the two alternate forms of $\\cos 2x$.",
+    "Before reading the solution of the first example that proves an identity, try it by converting everything to sines and cosines.",
+    "Check each identity on the page with $x = \\frac{\\pi}{6}$ once; it builds trust and catches sign errors."
+  ]
+}

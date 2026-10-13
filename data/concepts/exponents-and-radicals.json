@@ -1,0 +1,87 @@
+{
+  "nodeId": "exponents-and-radicals",
+  "title": "Exponents and Radicals",
+  "overview": "An exponent is a count of repeated multiplication: $2^3$ means $2 \\cdot 2 \\cdot 2 = 8$. Every exponent rule follows from this one idea if you keep asking \"how many factors are there?\" Multiplying $2^3 \\cdot 2^4$ puts three 2s next to four 2s, which is seven 2s, so $2^3 \\cdot 2^4 = 2^7$. Dividing $\\frac{2^5}{2^2}$ cancels two of the five factors, leaving $2^3$. Raising a power to a power, $(2^3)^4$, is four copies of three 2s, which is $2^{12}$. In symbols:\n$$a^m a^n = a^{m+n}, \\qquad \\frac{a^m}{a^n} = a^{m-n}, \\qquad (a^m)^n = a^{mn}, \\qquad (ab)^n = a^n b^n.$$\n\nThe counting picture runs out when the exponent is zero, negative, or a fraction, so those are defined to keep the rules working. Since $\\frac{a^3}{a^3} = 1$ and the rule says it is $a^0$, we define $a^0 = 1$ for any $a \\ne 0$. Since $\\frac{a^2}{a^5}$ should be $a^{-3}$ and is also $\\frac{1}{a^3}$, we define $a^{-n} = \\frac{1}{a^n}$. A negative exponent means \"flip to the other side of the fraction bar,\" nothing more; it never makes a number negative. For instance $2^{-3} = \\frac{1}{8}$, a small positive number.\n\nFractional exponents are roots. If $(a^{1/2})^2$ must equal $a^{1} = a$, then $a^{1/2}$ is a number whose square is $a$, which is $\\sqrt{a}$. In general $a^{1/n} = \\sqrt[n]{a}$, and $a^{m/n} = (\\sqrt[n]{a})^m$. So $8^{2/3} = (\\sqrt[3]{8})^2 = 2^2 = 4$. Taking the root first keeps the numbers small. The symbol $\\sqrt{a}$ always means the **nonnegative** square root: $\\sqrt{9} = 3$, not $\\pm 3$. Consequently $\\sqrt{x^2} = |x|$, not $x$.\n\nRadicals obey the same product and quotient rules because they are exponents in disguise: $\\sqrt{ab} = \\sqrt{a}\\sqrt{b}$ and $\\sqrt{\\frac{a}{b}} = \\frac{\\sqrt{a}}{\\sqrt{b}}$ (for $a, b \\ge 0$). This is how you simplify: $\\sqrt{50} = \\sqrt{25 \\cdot 2} = 5\\sqrt{2}$. But there is **no** rule for the square root of a sum. $\\sqrt{9 + 16} = \\sqrt{25} = 5$, while $\\sqrt{9} + \\sqrt{16} = 7$.\n\nThe most useful calculus habit from this node is rewriting every radical and every fraction as a power of $x$: $\\sqrt{x} = x^{1/2}$, $\\frac{1}{x^3} = x^{-3}$, $\\frac{1}{\\sqrt[3]{x}} = x^{-1/3}$. The power rule for derivatives and integrals only works once the expression looks like $x^n$, so you will do this translation at the start of a huge number of problems.",
+  "keyIdeas": [
+    "$a^m a^n = a^{m+n}$ and $\\frac{a^m}{a^n} = a^{m-n}$: same base, add or subtract the exponents.",
+    "$(a^m)^n = a^{mn}$ and $(ab)^n = a^n b^n$, but $(a + b)^n \\ne a^n + b^n$.",
+    "$a^0 = 1$ (for $a \\ne 0$) and $a^{-n} = \\frac{1}{a^n}$; a negative exponent flips the factor across the fraction bar.",
+    "$a^{1/n} = \\sqrt[n]{a}$ and $a^{m/n} = (\\sqrt[n]{a})^m$; take the root first to keep numbers small.",
+    "$\\sqrt{a}$ means the nonnegative root, so $\\sqrt{x^2} = |x|$.",
+    "$\\sqrt{ab} = \\sqrt{a}\\sqrt{b}$ for $a, b \\ge 0$, but there is no rule for $\\sqrt{a + b}$.",
+    "For calculus, rewrite radicals and reciprocals as powers: $\\frac{1}{\\sqrt{x}} = x^{-1/2}$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Simplifying with the exponent rules",
+      "problem": "Simplify $\\dfrac{(2x^3)^2 \\cdot x^{-4}}{4x}$ and write the answer with a positive exponent.",
+      "steps": [
+        "Apply the power-of-a-product rule to the numerator's first factor: $(2x^3)^2 = 2^2 (x^3)^2 = 4x^6$.",
+        "Multiply the numerator: $4x^6 \\cdot x^{-4} = 4x^{6 + (-4)} = 4x^2$.",
+        "Divide by the denominator: $\\frac{4x^2}{4x} = x^{2-1} = x$.",
+        "Sanity check with $x = 2$: original is $\\frac{(16)^2 \\cdot \\frac{1}{16}}{8} = \\frac{16}{8} = 2$, and the answer $x = 2$. They agree."
+      ]
+    },
+    {
+      "title": "Evaluating a fractional exponent",
+      "problem": "Evaluate $16^{-3/4}$.",
+      "steps": [
+        "Handle the negative sign first: $16^{-3/4} = \\frac{1}{16^{3/4}}$.",
+        "Take the root before the power: $16^{3/4} = (\\sqrt[4]{16})^3$. Since $2^4 = 16$, the fourth root is 2.",
+        "Cube it: $2^3 = 8$. So $16^{3/4} = 8$.",
+        "Therefore $16^{-3/4} = \\frac{1}{8}$. Note the answer is positive; the negative exponent only flipped the fraction."
+      ]
+    },
+    {
+      "title": "Simplifying a radical",
+      "problem": "Simplify $\\sqrt{72x^5}$, assuming $x \\ge 0$.",
+      "steps": [
+        "Pull out the largest perfect square from 72: $72 = 36 \\cdot 2$, and 36 is a perfect square.",
+        "Pull out the largest even power from $x^5$: $x^5 = x^4 \\cdot x$, and $x^4 = (x^2)^2$ is a perfect square.",
+        "Use the product rule for radicals: $\\sqrt{36 \\cdot x^4 \\cdot 2x} = \\sqrt{36}\\sqrt{x^4}\\sqrt{2x} = 6x^2\\sqrt{2x}$.",
+        "Check with $x = 2$: $\\sqrt{72 \\cdot 32} = \\sqrt{2304} = 48$, and $6 \\cdot 4 \\cdot \\sqrt{4} = 24 \\cdot 2 = 48$. Correct."
+      ]
+    },
+    {
+      "title": "Rewriting for the power rule",
+      "problem": "Write $\\dfrac{3}{x^2\\sqrt{x}}$ as a constant times a single power of $x$.",
+      "steps": [
+        "Convert the radical to an exponent: $\\sqrt{x} = x^{1/2}$, so the denominator is $x^2 \\cdot x^{1/2} = x^{2 + 1/2} = x^{5/2}$.",
+        "Move the denominator up with a negative exponent: $\\frac{3}{x^{5/2}} = 3x^{-5/2}$.",
+        "Check with $x = 4$: original is $\\frac{3}{16 \\cdot 2} = \\frac{3}{32}$. The rewritten form is $3 \\cdot 4^{-5/2} = \\frac{3}{(\\sqrt{4})^5} = \\frac{3}{32}$. Correct."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Writing $\\sqrt{a^2 + b^2} = a + b$. Check with $a = b = 1$: the left side is $\\sqrt{2} \\approx 1.41$, the right side is $2$. Roots do not split over addition.",
+    "Thinking a negative exponent makes the value negative: $2^{-2} = -4$. In fact $2^{-2} = \\frac{1}{2^2} = \\frac{1}{4}$, positive.",
+    "Multiplying exponents when multiplying powers: $x^2 \\cdot x^3 = x^6$. Count the factors: two $x$s times three $x$s is five $x$s, so $x^5$.",
+    "Writing $(x + y)^2 = x^2 + y^2$. With $x = y = 1$ the left side is 4, the right side is 2. The correct expansion is $x^2 + 2xy + y^2$.",
+    "Writing $\\sqrt{x^2} = x$ for all $x$. With $x = -3$, $\\sqrt{9} = 3 \\ne -3$. The correct identity is $\\sqrt{x^2} = |x|$."
+  ],
+  "whyItMatters": "The power rule, $\\frac{d}{dx}x^n = nx^{n-1}$ and $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$, is the single most used tool in calculus, and it only applies after you have rewritten $\\sqrt{x}$, $\\frac{1}{x^4}$, and $\\frac{1}{\\sqrt[3]{x}}$ as powers. Being fluent here is what lets you integrate $\\int \\frac{dx}{\\sqrt{x}}$ in one line instead of getting stuck before the calculus even starts.",
+  "checkYourself": [
+    {
+      "q": "Simplify $x^5 \\cdot x^{-2}$.",
+      "a": "$x^3$."
+    },
+    {
+      "q": "Evaluate $27^{2/3}$.",
+      "a": "$(\\sqrt[3]{27})^2 = 3^2 = 9$."
+    },
+    {
+      "q": "Write $\\frac{1}{\\sqrt[3]{x}}$ as a power of $x$.",
+      "a": "$x^{-1/3}$."
+    },
+    {
+      "q": "Simplify $\\sqrt{18}$.",
+      "a": "$3\\sqrt{2}$."
+    }
+  ],
+  "readingGuide": [
+    "Practice: write each of $\\sqrt{x}$, $\\frac{1}{x^2}$, $\\frac{1}{\\sqrt{x}}$, $\\sqrt[3]{x^2}$, $x\\sqrt{x}$ as a single power $x^n$, then convert back.",
+    "Practice: simplify ten expressions mixing products, quotients, and powers of powers, checking each with $x = 2$ on a calculator.",
+    "Practice: evaluate $4^{3/2}$, $8^{-1/3}$, $32^{2/5}$, $(\\frac{1}{9})^{-1/2}$ without a calculator, root first.",
+    "Practice: simplify $\\sqrt{48}$, $\\sqrt{200}$, $\\sqrt{x^7}$, $\\sqrt[3]{54}$ by pulling out perfect powers."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "nodeId": "modeling-with-des",
+  "title": "Modeling with Differential Equations",
+  "overview": "A differential equation is an equation that contains a derivative. That sounds technical, but you have been reading them all along. \"The population grows at a rate proportional to its size\" is the differential equation $\\frac{dP}{dt} = kP$. \"A hot cup cools at a rate proportional to how much hotter it is than the room\" is $\\frac{dT}{dt} = -k(T - T_{\\text{room}})$. The equation describes how a quantity changes; the **solution** is the function that actually does the changing.\n\nThat is the key shift. In algebra a solution is a number. Here a solution is a function $y(t)$ that, when you plug it and its derivative into the equation, makes the equation true for all $t$. Checking a proposed solution is just differentiation and substitution. Finding one takes more work and is the subject of the next several sections.\n\nDifferential equations usually have a whole family of solutions, one for each starting value. The extra condition that picks one, such as $y(0) = 4$, is an **initial condition**, and the equation plus the condition is an **initial-value problem**.\n\nYou can learn a lot from an equation without solving it. Look at the sign of $\\frac{dy}{dt}$: if it is positive, $y$ is increasing. Look for values where $\\frac{dy}{dt} = 0$: those are **equilibrium solutions**, constant functions that never change. For the logistic equation $\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{M}\\right)$, which models growth with a carrying capacity $M$, the equilibria are $P = 0$ and $P = M$, the population grows when $0 < P < M$, and it shrinks when $P > M$. All of that comes from reading, not solving.\n\nThe order of an equation is the highest derivative in it. This chapter is about first-order equations, which involve only $y$ and $y'$.",
+  "keyIdeas": [
+    "A differential equation relates a function to its derivatives; a solution is a function that satisfies the equation for every value of the variable.",
+    "To verify a solution, differentiate it and substitute both the function and its derivative into the equation; check that the two sides agree identically.",
+    "Natural growth $\\frac{dP}{dt} = kP$ has solutions $P = Ce^{kt}$; the constant $C$ is fixed by an initial condition such as $P(0) = P_0$.",
+    "The logistic equation $\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{M}\\right)$ builds in a carrying capacity $M$: growth is nearly exponential when $P$ is small and slows to zero as $P$ approaches $M$.",
+    "An equilibrium solution is a constant $y = c$ with $\\frac{dy}{dt} = 0$; find them by setting the right-hand side equal to zero.",
+    "An initial-value problem is a differential equation together with a condition like $y(t_0) = y_0$ that singles out one solution from the family."
+  ],
+  "workedExamples": [
+    {
+      "title": "Verifying a solution and fitting the initial condition",
+      "problem": "Show that $y = Ce^{-2t} + 1$ solves $\\frac{dy}{dt} = 2 - 2y$ for every constant $C$, then find the solution with $y(0) = 4$.",
+      "steps": [
+        "Differentiate the proposed solution: $\\frac{dy}{dt} = -2Ce^{-2t}$. The constant $1$ disappears.",
+        "Compute the right-hand side with the proposed $y$: $2 - 2y = 2 - 2(Ce^{-2t} + 1) = 2 - 2Ce^{-2t} - 2 = -2Ce^{-2t}$.",
+        "Both sides equal $-2Ce^{-2t}$ for all $t$ and any $C$, so the family is a solution. Verification never required solving anything, only differentiating.",
+        "Apply $y(0) = 4$: $Ce^{0} + 1 = 4$ gives $C = 3$, so $y = 3e^{-2t} + 1$.",
+        "Read the answer: as $t \\to \\infty$, $y \\to 1$. That matches the equation: $\\frac{dy}{dt} = 2 - 2y$ is zero exactly when $y = 1$, the equilibrium, and the solution settles toward it."
+      ]
+    },
+    {
+      "title": "From words to equation: a cooling cup",
+      "problem": "Coffee at $80$ degrees sits in a $20$ degree room and cools at a rate proportional to the temperature difference. Write the differential equation, then check that $T = 20 + 60e^{-kt}$ solves it with the correct starting temperature.",
+      "steps": [
+        "Translate. \"Rate\" means $\\frac{dT}{dt}$. \"Proportional to the difference\" means a constant times $(T - 20)$. Cooling means $T$ decreases while $T > 20$, so the sign must be negative: $\\frac{dT}{dt} = -k(T - 20)$ with $k > 0$.",
+        "Check the equilibrium before solving: $\\frac{dT}{dt} = 0$ when $T = 20$. A cup already at room temperature stays there. Reasonable.",
+        "Verify the proposed solution. Left side: $\\frac{dT}{dt} = -60k e^{-kt}$. Right side: $-k(T - 20) = -k(60e^{-kt}) = -60ke^{-kt}$. They match.",
+        "Initial condition: $T(0) = 20 + 60 = 80$. Correct. And as $t \\to \\infty$, $T \\to 20$, so the coffee approaches room temperature without ever crossing below it."
+      ]
+    },
+    {
+      "title": "A solution that blows up",
+      "problem": "Verify that $y = \\frac{1}{1 - x}$ solves $y' = y^2$ with $y(0) = 1$, and describe where the solution exists.",
+      "steps": [
+        "Differentiate using the chain rule: $y = (1 - x)^{-1}$, so $y' = -(1 - x)^{-2} \\cdot (-1) = \\frac{1}{(1 - x)^2}$.",
+        "Square the function: $y^2 = \\frac{1}{(1 - x)^2}$. Same as $y'$, so the equation holds. And $y(0) = \\frac{1}{1 - 0} = 1$.",
+        "Look at the domain: $y$ is undefined at $x = 1$, and $y \\to \\infty$ as $x \\to 1^-$. The solution exists only on $(-\\infty, 1)$ if we start from $x = 0$.",
+        "Why this matters: the equation $y' = y^2$ looks harmless, yet its solution reaches infinity in finite time. Larger $y$ means faster growth, which makes $y$ larger still. Differential equations can have surprises that the equation alone does not advertise."
+      ]
+    },
+    {
+      "title": "Reading the logistic equation without solving it",
+      "problem": "For $\\frac{dP}{dt} = 0.1P\\left(1 - \\frac{P}{500}\\right)$, find the equilibria, say where $P$ increases, and find the population at which growth is fastest.",
+      "steps": [
+        "Equilibria: the right side is zero when $P = 0$ or $1 - \\frac{P}{500} = 0$, that is $P = 500$. So $M = 500$ is the carrying capacity.",
+        "Sign: for $0 < P < 500$ both factors $0.1P$ and $\\left(1 - \\frac{P}{500}\\right)$ are positive, so $\\frac{dP}{dt} > 0$ and the population grows. For $P > 500$ the second factor is negative, so the population shrinks toward $500$.",
+        "Fastest growth: the rate $g(P) = 0.1P - \\frac{0.1}{500}P^2$ is a downward parabola in $P$ with zeros at $0$ and $500$, so its maximum is at the midpoint $P = 250$.",
+        "Value there: $g(250) = 0.1 \\cdot 250 \\cdot \\frac{1}{2} = 12.5$ per unit time. The population grows fastest when it is at half the carrying capacity, a fact true for every logistic equation."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Checking a solution by plugging in one value of $t$ instead of comparing both sides as functions. A solution must satisfy the equation for all $t$. Test: $y = t$ gives $y' = 1$ and satisfies $y' = y$ at $t = 1$ only, so it is not a solution.",
+    "Getting the sign wrong when translating words. If $y$ decreases toward an equilibrium, the rate must be negative above it. Check your equation at one value: for the coffee, $T = 80$ should give $\\frac{dT}{dt} < 0$.",
+    "Forgetting that the general solution has an arbitrary constant. $y = e^{2t}$ solves $y' = 2y$, but so does every $Ce^{2t}$; without the initial condition you have a family, not an answer.",
+    "Assuming solutions exist for all time. $y' = y^2$ with $y(0) = 1$ blows up at $x = 1$. Always look at the domain of the solution you find."
+  ],
+  "whyItMatters": "Every section of this chapter solves differential equations by integrating: separable equations integrate each side, linear equations integrate after multiplying by a clever factor, and Euler's method is a Riemann sum in disguise. Learning to read an equation first (signs, equilibria, what a solution should look like) is what lets you catch mistakes in those integrations. The exponential and logistic models introduced here reappear in population growth, radioactive decay, cooling, mixing problems, and the predator-prey systems at the end of the chapter.",
+  "checkYourself": [
+    {
+      "q": "Is $y = e^{3t}$ a solution of $y' = 3y$? What about $y = 5e^{3t}$?",
+      "a": "Yes to both: in each case $y' = 3y$ identically."
+    },
+    {
+      "q": "What are the equilibrium solutions of $\\frac{dy}{dt} = y(y - 2)$?",
+      "a": "$y = 0$ and $y = 2$."
+    },
+    {
+      "q": "Write a differential equation for \"the balance $B$ grows at a rate of $5$ percent per year of its current value\".",
+      "a": "$\\frac{dB}{dt} = 0.05B$."
+    },
+    {
+      "q": "For $\\frac{dP}{dt} = 0.2P\\left(1 - \\frac{P}{1000}\\right)$, is $P$ increasing or decreasing when $P = 1200$?",
+      "a": "Decreasing, since $1 - \\frac{1200}{1000} < 0$."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of a differential equation, of its order, and of what it means for a function to be a solution. Write the solution definition in your own words.",
+    "Locate the population model and watch how the author moves from the assumption about growth to the equation, then adds the carrying capacity to get the logistic equation.",
+    "Find the discussion of equilibrium solutions and work out, for each model in the section, where the derivative is zero and what the sign is on either side.",
+    "Before reading the solution of the first example that verifies a given function solves an equation, differentiate and substitute yourself.",
+    "Look for the definition of an initial-value problem and note how the initial condition fixes the constant in the general solution."
+  ]
+}

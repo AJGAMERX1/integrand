@@ -1,0 +1,88 @@
+{
+  "nodeId": "definite-integral",
+  "title": "The Definite Integral",
+  "overview": "The limit of rectangle sums deserves a name and a symbol. For a function $f$ on $[a, b]$, divide the interval into $n$ subintervals of width $\\Delta x = \\frac{b - a}{n}$, pick a sample point $x_i^*$ in each, and form the **Riemann sum** $\\sum_{i=1}^{n}f(x_i^*)\\,\\Delta x$. The **definite integral** of $f$ from $a$ to $b$ is\n$$\\int_a^b f(x)\\,dx = \\lim_{n \\to \\infty}\\sum_{i=1}^{n}f(x_i^*)\\,\\Delta x,$$\nprovided the limit exists and is the same for every choice of sample points. The symbol $\\int$ is a stretched S for \"sum,\" $a$ and $b$ are the **limits of integration**, $f(x)$ is the **integrand**, and $dx$ is the ghost of $\\Delta x$. The integral is a **number**, not a function; the variable $x$ is a dummy, and $\\int_a^b f(t)\\,dt$ is the same number. Every continuous function is **integrable**, and so is every function with finitely many jumps.\n\nWhen $f \\ge 0$ the integral is the area under the graph. When $f$ takes negative values, the rectangles below the axis have negative heights and contribute negatively, so the integral is the **net signed area**: area above the axis minus area below. $\\int_0^{2\\pi}\\sin x\\,dx = 0$ because the hump above cancels the hump below. If you want the total area regardless of sign, integrate $|f|$, which in practice means splitting at the zeros and flipping the signs of the negative pieces.\n\nComputing integrals from the definition uses the sigma formulas, as in the previous section, and the **Midpoint Rule** $M_n$ (sample points at the midpoints of the strips) gives good numerical estimates for a modest $n$. But the real power comes from the **properties** of the integral, which follow from the corresponding properties of sums:\n$$\\int_a^b [f + g]\\,dx = \\int_a^b f\\,dx + \\int_a^b g\\,dx, \\qquad \\int_a^b cf\\,dx = c\\int_a^b f\\,dx, \\qquad \\int_a^b c\\,dx = c(b - a).$$\nIntervals combine: $\\int_a^c f\\,dx + \\int_c^b f\\,dx = \\int_a^b f\\,dx$. Reversing the limits flips the sign, $\\int_b^a f\\,dx = -\\int_a^b f\\,dx$, and $\\int_a^a f\\,dx = 0$. These let you break an integral into pieces you can evaluate by geometry and reassemble.\n\nComparison properties give bounds. If $f \\ge 0$ on $[a, b]$ then the integral is $\\ge 0$; if $f \\ge g$ then $\\int f \\ge \\int g$; and if $m \\le f(x) \\le M$ on $[a, b]$ then\n$$m(b - a) \\le \\int_a^b f(x)\\,dx \\le M(b - a),$$\nbecause the region fits between two rectangles. For $\\int_0^1 e^{-x^2}\\,dx$, where no antiderivative formula exists, the bounds $e^{-1} \\le e^{-x^2} \\le 1$ give an answer between $0.368$ and $1$, and the Midpoint Rule narrows it to about $0.747$. Being able to estimate an integral without computing it is a check you will use for the rest of the course.",
+  "keyIdeas": [
+    "$\\int_a^b f(x)\\,dx = \\lim_{n \\to \\infty}\\sum_{i=1}^{n}f(x_i^*)\\,\\Delta x$ with $\\Delta x = \\frac{b - a}{n}$; it is a number, and $x$ is a dummy variable.",
+    "Continuous functions (and functions with finitely many jumps) are integrable.",
+    "The integral is net signed area: regions below the $x$-axis count negatively. Total area requires integrating $|f|$.",
+    "Linearity: $\\int (f + g) = \\int f + \\int g$ and $\\int cf = c\\int f$; also $\\int_a^b c\\,dx = c(b - a)$.",
+    "Intervals: $\\int_a^c + \\int_c^b = \\int_a^b$, $\\int_b^a = -\\int_a^b$, $\\int_a^a = 0$.",
+    "Comparison: if $m \\le f \\le M$ on $[a, b]$ then $m(b - a) \\le \\int_a^b f\\,dx \\le M(b - a)$; if $f \\ge g$ then $\\int f \\ge \\int g$.",
+    "The Midpoint Rule $M_n = \\sum f(\\bar{x}_i)\\,\\Delta x$ with midpoints $\\bar{x}_i$ is a good numerical estimate."
+  ],
+  "workedExamples": [
+    {
+      "title": "Evaluating by geometry with signed area",
+      "problem": "Evaluate $\\int_{-1}^{3}(2 - x)\\,dx$ by interpreting it as signed area.",
+      "steps": [
+        "The line $y = 2 - x$ crosses the axis at $x = 2$. On $[-1, 2]$ it is above the axis; on $[2, 3]$ below.",
+        "Above: a triangle with base 3 and height $f(-1) = 3$, area $\\frac{1}{2}(3)(3) = 4.5$.",
+        "Below: a triangle with base 1 and height $|f(3)| = 1$, area $0.5$, counted negative.",
+        "Integral $= 4.5 - 0.5 = 4$. Check with the trapezoid formula for lines: $\\frac{f(-1) + f(3)}{2}(3 - (-1)) = \\frac{3 + (-1)}{2}\\cdot 4 = 4$. Same."
+      ]
+    },
+    {
+      "title": "From the definition with the sigma formulas",
+      "problem": "Evaluate $\\int_0^2 (x^2 - x)\\,dx$ as a limit of right-endpoint Riemann sums.",
+      "steps": [
+        "$\\Delta x = \\frac{2}{n}$, $x_i = \\frac{2i}{n}$. Then $f(x_i) = \\frac{4i^2}{n^2} - \\frac{2i}{n}$.",
+        "$R_n = \\sum_{i=1}^{n}\\left(\\frac{4i^2}{n^2} - \\frac{2i}{n}\\right)\\frac{2}{n} = \\frac{8}{n^3}\\sum i^2 - \\frac{4}{n^2}\\sum i = \\frac{8}{n^3}\\cdot\\frac{n(n+1)(2n+1)}{6} - \\frac{4}{n^2}\\cdot\\frac{n(n+1)}{2}$.",
+        "Simplify: $\\frac{4(n+1)(2n+1)}{3n^2} - \\frac{2(n+1)}{n} \\to \\frac{4\\cdot 2}{3} - 2 = \\frac{8}{3} - 2 = \\frac{2}{3}$.",
+        "So $\\int_0^2(x^2 - x)\\,dx = \\frac{2}{3}$. Interpretation: on $[0, 1]$ the integrand is negative (area $\\frac{1}{6}$ below) and on $[1, 2]$ positive (area $\\frac{5}{6}$ above); net $\\frac{5}{6} - \\frac{1}{6} = \\frac{2}{3}$."
+      ]
+    },
+    {
+      "title": "Using the properties",
+      "problem": "Given $\\int_0^4 f(x)\\,dx = 10$ and $\\int_0^2 f(x)\\,dx = 3$, find $\\int_2^4 f(x)\\,dx$, $\\int_4^2 f(x)\\,dx$, and $\\int_0^4 [3f(x) - 2]\\,dx$.",
+      "steps": [
+        "Interval property: $\\int_0^2 + \\int_2^4 = \\int_0^4$, so $\\int_2^4 f\\,dx = 10 - 3 = 7$.",
+        "Reversing limits: $\\int_4^2 f\\,dx = -7$.",
+        "Linearity: $\\int_0^4 [3f - 2]\\,dx = 3\\int_0^4 f\\,dx - \\int_0^4 2\\,dx = 30 - 2(4) = 22$."
+      ]
+    },
+    {
+      "title": "Bounding an integral without computing it",
+      "problem": "Show that $2 \\le \\int_1^3 \\sqrt{1 + x^2}\\,dx \\le 2\\sqrt{10}$, and improve the estimate with the Midpoint Rule, $n = 2$.",
+      "steps": [
+        "On $[1, 3]$, $\\sqrt{1 + x^2}$ is increasing, so its minimum is $\\sqrt{2} \\approx 1.414$ at $x = 1$ and its maximum is $\\sqrt{10} \\approx 3.162$ at $x = 3$.",
+        "Comparison property with $b - a = 2$: $2\\sqrt{2} \\le \\int \\le 2\\sqrt{10}$, that is roughly $2.83 \\le \\int \\le 6.32$. (In particular the integral is at least 2.)",
+        "Midpoint Rule with $n = 2$: $\\Delta x = 1$, midpoints $1.5$ and $2.5$: $M_2 = \\sqrt{3.25} + \\sqrt{7.25} \\approx 1.803 + 2.693 = 4.496$.",
+        "The true value is $4.5048\\ldots$ (the exact answer involves a logarithm), so $M_2$ is already within $0.01$ and lies comfortably inside the bounds."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Treating the integral as total area when the function dips below the axis. $\\int_0^{2\\pi}\\sin x\\,dx = 0$, not 4; total area needs $|f|$.",
+    "Writing $\\int_a^b f(x)\\,dx$ as a function of $x$. It is a number; the $x$ is a dummy variable.",
+    "Splitting a product: $\\int fg \\ne \\left(\\int f\\right)\\left(\\int g\\right)$. Linearity applies to sums and constant multiples only.",
+    "Forgetting the sign flip when reversing limits, or forgetting the $(b - a)$ in $\\int_a^b c\\,dx = c(b - a)$.",
+    "Using the comparison property with $m$ and $M$ that are not actually bounds on the whole interval. Check the endpoints and any interior extremes."
+  ],
+  "whyItMatters": "The definite integral is the central object of the rest of the course. The Fundamental Theorem (next section) shows how to compute it with antiderivatives, Chapter 6 uses it for areas, volumes, and work, Chapter 7 develops techniques for the antiderivatives it needs and numerical rules for when they do not exist, and Chapter 8 applies it to arc length, physics, and probability. The properties and comparison bounds here are what let you check every one of those answers for sign and size. Your Daily Integral tier I2, integrals of lines and semicircles by geometry, lives in this section.",
+  "checkYourself": [
+    {
+      "q": "$\\int_2^5 4\\,dx$?",
+      "a": "$4(5 - 2) = 12$."
+    },
+    {
+      "q": "If $\\int_0^3 f = 8$ and $\\int_3^7 f = -2$, what is $\\int_0^7 f$?",
+      "a": "6."
+    },
+    {
+      "q": "$\\int_{-2}^{2}x\\,dx$?",
+      "a": "0; the triangles cancel (odd function)."
+    },
+    {
+      "q": "Bounds on $\\int_0^1 x^2\\,dx$ from $0 \\le x^2 \\le 1$?",
+      "a": "Between 0 and 1 (the value is $\\frac{1}{3}$)."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of the definite integral and label each part of the notation (integral sign, limits, integrand, $dx$) in your own words.",
+    "Locate the theorem on which functions are integrable and the simplified formula with right endpoints and equal widths.",
+    "Find the explanation of the integral as net signed area and sketch an example where the integral is zero but the area is not.",
+    "Before reading the solution of the example that evaluates an integral from the definition, set up $\\Delta x$, $x_i$, and the sum yourself.",
+    "Copy the list of properties of the integral and the comparison properties, and verify one of each with a simple geometric integral."
+  ]
+}

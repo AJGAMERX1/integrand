@@ -1,0 +1,89 @@
+{
+  "nodeId": "limit-laws",
+  "title": "Calculating Limits Using the Limit Laws",
+  "overview": "Guessing limits from tables is slow and sometimes wrong. The limit laws make most limits a matter of algebra. They say that limits respect arithmetic: if $\\lim_{x \\to a}f(x) = L$ and $\\lim_{x \\to a}g(x) = M$, then the limit of the sum is $L + M$, of the difference is $L - M$, of the product is $LM$, of a constant multiple $cf$ is $cL$, and of the quotient is $\\frac{L}{M}$ provided $M \\ne 0$. Powers and roots behave the same way: $\\lim [f(x)]^n = L^n$ and $\\lim\\sqrt[n]{f(x)} = \\sqrt[n]{L}$ (with $L > 0$ for even roots). Together with the two starting facts $\\lim_{x \\to a}c = c$ and $\\lim_{x \\to a}x = a$, these let you compute the limit of any polynomial or rational function by **direct substitution**: if $p$ is a polynomial, $\\lim_{x \\to a}p(x) = p(a)$, and the same holds for a rational function as long as $a$ is in its domain.\n\nThe interesting cases are the ones where substitution fails, which almost always means a quotient that gives $\\frac{0}{0}$. That form is not an answer; it is a signal that the numerator and denominator share a factor that vanishes at $a$, and your job is to find and cancel it. Three techniques cover most cases. **Factor and cancel**: $\\frac{x^2 - 5x + 6}{x - 2} = \\frac{(x-2)(x-3)}{x - 2} = x - 3$ for $x \\ne 2$, so the limit at 2 is $-1$. **Rationalize**: when a square root is involved, multiply top and bottom by the conjugate, so $\\frac{\\sqrt{x} - 3}{x - 9}$ becomes $\\frac{x - 9}{(x - 9)(\\sqrt{x} + 3)} = \\frac{1}{\\sqrt{x} + 3}$, whose limit at 9 is $\\frac{1}{6}$. **Combine fractions**: a compound fraction like $\\frac{\\frac{1}{x} - \\frac{1}{3}}{x - 3}$ is simplified by putting the numerator over a common denominator first. In every case the cancellation is legal because the limit never lets $x$ equal $a$; the two expressions agree everywhere nearby, so they have the same limit.\n\nIf substitution gives a nonzero number over 0, that is not $\\frac{0}{0}$ and nothing cancels. The limit is infinite (or the one-sided limits are $\\pm\\infty$), and you decide the sign by testing a value on each side.\n\nFor piecewise functions and absolute values, compute the one-sided limits separately using whichever formula applies on each side, then compare. $\\lim_{x \\to 0}\\frac{|x|}{x}$ does not exist because the sides give $1$ and $-1$; $\\lim_{x \\to 0}|x| = 0$ because both sides give 0.\n\nThe **Squeeze Theorem** handles functions you cannot simplify. If $g(x) \\le f(x) \\le h(x)$ near $a$ and the outer two have the same limit $L$ at $a$, then $f$ is trapped and must also have limit $L$. The standard use is with a bounded oscillation: since $-1 \\le \\sin\\frac{1}{x} \\le 1$, multiplying by $x^2 \\ge 0$ gives $-x^2 \\le x^2\\sin\\frac{1}{x} \\le x^2$, and both $\\pm x^2 \\to 0$, so $\\lim_{x \\to 0}x^2\\sin\\frac{1}{x} = 0$ even though $\\sin\\frac{1}{x}$ itself has no limit.",
+  "keyIdeas": [
+    "Limits respect arithmetic: $\\lim(f \\pm g) = L \\pm M$, $\\lim(fg) = LM$, $\\lim\\frac{f}{g} = \\frac{L}{M}$ if $M \\ne 0$, $\\lim[f]^n = L^n$, $\\lim\\sqrt[n]{f} = \\sqrt[n]{L}$.",
+    "Direct substitution: for a polynomial or rational function with $a$ in its domain, $\\lim_{x \\to a}f(x) = f(a)$.",
+    "$\\frac{0}{0}$ is not an answer; it means a common factor vanishes at $a$. Factor and cancel, rationalize with a conjugate, or combine fractions, then substitute.",
+    "Canceling is legal because the limit never uses $x = a$; two functions that agree for all $x \\ne a$ have the same limit at $a$.",
+    "A nonzero number over 0 means an infinite limit; determine the sign from each side separately.",
+    "For piecewise or absolute-value functions, compute each one-sided limit with its own formula and compare.",
+    "Squeeze Theorem: if $g \\le f \\le h$ near $a$ and $\\lim g = \\lim h = L$, then $\\lim f = L$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Factor and cancel",
+      "problem": "Evaluate $\\lim_{x \\to -1}\\dfrac{x^2 + 3x + 2}{x^2 - 1}$.",
+      "steps": [
+        "Substitute $x = -1$: numerator $1 - 3 + 2 = 0$, denominator $1 - 1 = 0$. A $\\frac{0}{0}$ form, so look for the common factor $(x + 1)$.",
+        "Factor: numerator $(x + 1)(x + 2)$, denominator $(x - 1)(x + 1)$.",
+        "Cancel: $\\frac{x + 2}{x - 1}$ for $x \\ne -1$.",
+        "Substitute: $\\frac{-1 + 2}{-1 - 1} = \\frac{1}{-2} = -\\frac{1}{2}$. Check: $x = -0.99$ gives $\\frac{1.01}{-1.99} \\approx -0.5075$, close to $-0.5$."
+      ]
+    },
+    {
+      "title": "Rationalizing",
+      "problem": "Evaluate $\\lim_{h \\to 0}\\dfrac{\\sqrt{9 + h} - 3}{h}$.",
+      "steps": [
+        "Substitution gives $\\frac{3 - 3}{0} = \\frac{0}{0}$. The root blocks factoring, so multiply top and bottom by the conjugate $\\sqrt{9 + h} + 3$.",
+        "Numerator: $(\\sqrt{9 + h} - 3)(\\sqrt{9 + h} + 3) = (9 + h) - 9 = h$.",
+        "Expression becomes $\\frac{h}{h(\\sqrt{9 + h} + 3)} = \\frac{1}{\\sqrt{9 + h} + 3}$ for $h \\ne 0$.",
+        "Substitute $h = 0$: $\\frac{1}{3 + 3} = \\frac{1}{6}$. This is the slope of the tangent to $y = \\sqrt{x}$ at $x = 9$."
+      ]
+    },
+    {
+      "title": "A compound fraction",
+      "problem": "Evaluate $\\lim_{x \\to 4}\\dfrac{\\frac{1}{x} - \\frac{1}{4}}{x - 4}$.",
+      "steps": [
+        "Substitution gives $\\frac{0}{0}$. Combine the numerator: $\\frac{1}{x} - \\frac{1}{4} = \\frac{4 - x}{4x}$.",
+        "The whole expression is $\\frac{4 - x}{4x(x - 4)}$. Since $4 - x = -(x - 4)$, this is $\\frac{-1}{4x}$ for $x \\ne 4$.",
+        "Substitute: $\\frac{-1}{16}$.",
+        "Check: $x = 4.1$ gives $\\frac{0.2439 - 0.25}{0.1} \\approx -0.061$, and $-\\frac{1}{16} = -0.0625$. Consistent."
+      ]
+    },
+    {
+      "title": "Squeeze Theorem",
+      "problem": "Show that $\\lim_{x \\to 0} x\\cos\\dfrac{1}{x} = 0$.",
+      "steps": [
+        "The factor $\\cos\\frac{1}{x}$ has no limit at 0 (it oscillates), so the product law does not apply. But it is bounded: $-1 \\le \\cos\\frac{1}{x} \\le 1$.",
+        "Multiply by $|x|$, which is nonnegative, so inequalities keep their direction: $-|x| \\le x\\cos\\frac{1}{x} \\le |x|$. (Using $|x|$ handles both signs of $x$ at once.)",
+        "Both bounds go to 0: $\\lim_{x \\to 0}(-|x|) = 0$ and $\\lim_{x \\to 0}|x| = 0$.",
+        "By the Squeeze Theorem, $\\lim_{x \\to 0}x\\cos\\frac{1}{x} = 0$. Numerically, $x = 0.01$ gives a value between $-0.01$ and $0.01$, as promised."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Stopping at $\\frac{0}{0}$ and writing \"undefined\" or \"0.\" It is a signal to simplify. $\\lim_{x \\to 2}\\frac{x^2 - 4}{x - 2} = 4$, not undefined.",
+    "Applying the quotient law when the denominator's limit is 0. The law requires $M \\ne 0$; otherwise simplify first or recognize an infinite limit.",
+    "Canceling before factoring correctly, for example writing $\\frac{x^2 - 4}{x - 2} = x - 2$. Factor fully: $(x - 2)(x + 2)$ over $(x - 2)$ gives $x + 2$.",
+    "Multiplying by the conjugate on only the top or only the bottom. Multiply both by the same expression so the value is unchanged.",
+    "Using the Squeeze Theorem with bounds that do not have the same limit, or forgetting to flip inequalities when multiplying by a negative factor."
+  ],
+  "whyItMatters": "Every derivative formula you will learn, the power rule, product rule, and the rest, is proved by taking a $\\frac{0}{0}$ limit and simplifying it with exactly these techniques; the rationalizing example above is literally the derivative of $\\sqrt{x}$. The Squeeze Theorem is what proves $\\lim_{x \\to 0}\\frac{\\sin x}{x} = 1$, the fact behind every trig derivative. And when you compute definite integrals as limits of Riemann sums, the final step is a limit law applied to an expression in $n$.",
+  "checkYourself": [
+    {
+      "q": "$\\lim_{x \\to 3}(2x^2 - x + 1)$?",
+      "a": "Substitute: $18 - 3 + 1 = 16$."
+    },
+    {
+      "q": "$\\lim_{x \\to 1}\\frac{x^2 - 1}{x - 1}$?",
+      "a": "$\\lim(x + 1) = 2$."
+    },
+    {
+      "q": "$\\lim_{t \\to 0}\\frac{\\sqrt{t + 1} - 1}{t}$?",
+      "a": "Rationalize: $\\frac{1}{\\sqrt{t+1} + 1} \\to \\frac{1}{2}$."
+    },
+    {
+      "q": "If $-x^2 \\le f(x) \\le x^2$ for all $x$, what is $\\lim_{x \\to 0}f(x)$?",
+      "a": "0, by the Squeeze Theorem."
+    }
+  ],
+  "readingGuide": [
+    "Find the list of limit laws and write each in words (\"the limit of a product is the product of the limits\"); note the condition on the quotient law.",
+    "Locate the direct substitution property and the explanation of why it holds for polynomials and rational functions.",
+    "Before reading the solution of the first $\\frac{0}{0}$ example, try factoring and canceling yourself; do the same for the first example with a square root.",
+    "Find the statement that two functions agreeing for $x \\ne a$ have the same limit, and explain why that justifies canceling.",
+    "Find the Squeeze Theorem and its figure; redo the oscillating example with $\\cos$ in place of $\\sin$."
+  ]
+}

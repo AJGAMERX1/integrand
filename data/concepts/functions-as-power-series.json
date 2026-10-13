@@ -1,0 +1,86 @@
+{
+  "nodeId": "functions-as-power-series",
+  "title": "Representations of Functions as Power Series",
+  "overview": "The last node asked, \"given a power series, which $x$ make it converge?\" This node turns the question around: **given a function, can you write it as a power series?** When you can, the function becomes an infinite polynomial, and polynomials are the easiest things in calculus to differentiate, integrate, and approximate.\n\nEverything starts from one identity you already know, the geometric series:\n$$\\frac{1}{1 - x} = \\sum_{n=0}^{\\infty} x^n = 1 + x + x^2 + x^3 + \\cdots, \\qquad |x| < 1.$$\nThe trick is substitution. Replace $x$ by $-x$, by $x^2$, by $\\frac{x}{3}$, or by $-x^4$, and you get series for $\\frac{1}{1+x}$, $\\frac{1}{1-x^2}$, $\\frac{1}{3-x}$, and $\\frac{1}{1+x^4}$, each with its own radius found by asking when the new ratio has absolute value less than $1$. Always rewrite the denominator as \"$1$ minus something\" first, pulling out constants as needed.\n\nThe second tool is the theorem that makes power series worth the trouble. Inside its radius of convergence, a power series can be **differentiated and integrated term by term**, exactly like a finite polynomial:\n$$\\frac{d}{dx} \\sum c_n x^n = \\sum n c_n x^{n-1}, \\qquad \\int \\sum c_n x^n\\,dx = C + \\sum c_n \\frac{x^{n+1}}{n+1}.$$\nBoth results have the same radius of convergence $R$ as the original (though the endpoints may change). Differentiating the geometric series gives a series for $\\frac{1}{(1-x)^2}$; integrating the series for $\\frac{1}{1+x}$ gives a series for $\\ln(1+x)$; integrating the series for $\\frac{1}{1+x^2}$ gives a series for $\\arctan x$. When you integrate, remember the constant $C$ and fix it by plugging in $x = 0$.\n\nThe payoff you have been waiting for: integrals with no elementary antiderivative. You cannot write $\\int \\frac{dx}{1+x^4}$ in closed form, but you can expand the integrand as a power series, integrate term by term, and evaluate as many terms as the accuracy demands. For alternating series, the error is at most the first omitted term, so the accuracy is under your control.",
+  "keyIdeas": [
+    "Base identity: $\\dfrac{1}{1-x} = \\sum_{n=0}^{\\infty} x^n$ for $|x| < 1$. Rewrite other denominators as $1$ minus something and substitute.",
+    "After substituting $u$ for $x$, the series converges where $|u| < 1$. For example, $\\frac{1}{1+x^2} = \\sum (-1)^n x^{2n}$ needs $x^2 < 1$, so $|x| < 1$.",
+    "Term-by-term differentiation: if $f(x) = \\sum c_n (x-a)^n$ with radius $R$, then $f'(x) = \\sum n c_n (x-a)^{n-1}$ with the same radius $R$.",
+    "Term-by-term integration: $\\int f(x)\\,dx = C + \\sum c_n \\dfrac{(x-a)^{n+1}}{n+1}$ with the same radius $R$. Find $C$ by substituting $x = a$.",
+    "Standard results from this method: $\\ln(1+x) = \\sum_{n=1}^{\\infty} \\dfrac{(-1)^{n+1} x^n}{n}$ and $\\arctan x = \\sum_{n=0}^{\\infty} \\dfrac{(-1)^n x^{2n+1}}{2n+1}$, both for $|x| < 1$.",
+    "Definite integrals of functions without elementary antiderivatives can be computed by integrating the power series term by term and bounding the tail."
+  ],
+  "workedExamples": [
+    {
+      "title": "Substituting into the geometric series",
+      "problem": "Write $f(x) = \\dfrac{1}{3 - x}$ as a power series centered at $0$ and give its radius of convergence.",
+      "steps": [
+        "Why this step: the geometric identity needs the shape $\\frac{1}{1 - (\\text{something})}$ with a $1$ in front. Factor the $3$ out: $\\dfrac{1}{3 - x} = \\dfrac{1}{3} \\cdot \\dfrac{1}{1 - x/3}$.",
+        "Substitute $u = \\frac{x}{3}$ into $\\frac{1}{1-u} = \\sum u^n$: $\\dfrac{1}{3 - x} = \\dfrac{1}{3} \\sum_{n=0}^{\\infty} \\left( \\dfrac{x}{3} \\right)^n = \\sum_{n=0}^{\\infty} \\dfrac{x^n}{3^{n+1}}$.",
+        "Why this step: the series converges where $|u| < 1$, that is $\\left| \\frac{x}{3} \\right| < 1$, so $|x| < 3$. Radius $R = 3$.",
+        "Check at $x = 0$: the series gives $\\frac{1}{3}$ and $f(0) = \\frac{1}{3}$. At $x = 1$: $\\frac{1}{3} + \\frac{1}{9} + \\frac{1}{27} + \\cdots = \\frac{1}{2} = f(1)$. Good."
+      ]
+    },
+    {
+      "title": "Differentiating to sum a series",
+      "problem": "Find a power series for $\\dfrac{1}{(1-x)^2}$, and use it to compute $\\sum_{n=1}^{\\infty} \\dfrac{n}{2^n}$.",
+      "steps": [
+        "Why this step: notice $\\dfrac{1}{(1-x)^2}$ is the derivative of $\\dfrac{1}{1-x}$. So differentiate the geometric series term by term (legal for $|x| < 1$): $\\dfrac{1}{(1-x)^2} = \\sum_{n=1}^{\\infty} n x^{n-1} = 1 + 2x + 3x^2 + 4x^3 + \\cdots$. The $n = 0$ term vanished because the derivative of the constant $1$ is $0$.",
+        "Why this step: the target sum $\\sum \\frac{n}{2^n}$ has $n$ times a power, which matches this series at $x = \\frac{1}{2}$. Substituting: $\\sum_{n=1}^{\\infty} n \\left( \\dfrac{1}{2} \\right)^{n-1} = \\dfrac{1}{(1 - 1/2)^2} = 4$.",
+        "That sum has the power $n - 1$, but we want $n$. Multiply both sides by $\\frac{1}{2}$: $\\sum_{n=1}^{\\infty} \\dfrac{n}{2^n} = \\dfrac{1}{2} \\cdot 4 = 2$.",
+        "Check with the first terms: $\\frac{1}{2} + \\frac{2}{4} + \\frac{3}{8} + \\frac{4}{16} + \\frac{5}{32} = 1.78$, heading toward $2$."
+      ]
+    },
+    {
+      "title": "Integrating to get a logarithm",
+      "problem": "Find a power series for $\\ln(1 + x)$ centered at $0$ and its radius of convergence.",
+      "steps": [
+        "Why this step: $\\ln(1+x)$ itself is not geometric, but its derivative $\\dfrac{1}{1+x}$ is. Substitute $-x$ into the geometric series: $\\dfrac{1}{1+x} = \\sum_{n=0}^{\\infty} (-1)^n x^n = 1 - x + x^2 - x^3 + \\cdots$ for $|x| < 1$.",
+        "Integrate term by term: $\\ln(1+x) = C + \\sum_{n=0}^{\\infty} (-1)^n \\dfrac{x^{n+1}}{n+1} = C + x - \\dfrac{x^2}{2} + \\dfrac{x^3}{3} - \\cdots$.",
+        "Why this step: fix the constant with $x = 0$. The left side is $\\ln 1 = 0$ and the series is $0$, so $C = 0$.",
+        "Result: $\\ln(1+x) = \\sum_{n=1}^{\\infty} \\dfrac{(-1)^{n+1} x^n}{n}$ with radius $R = 1$ (integration keeps the radius). At $x = 1$ this becomes the alternating harmonic series, which is why its sum is $\\ln 2$."
+      ]
+    },
+    {
+      "title": "An integral with no elementary antiderivative",
+      "problem": "Estimate $\\int_0^{0.2} \\dfrac{dx}{1 + x^4}$ with error less than $10^{-6}$.",
+      "steps": [
+        "Why this step: no substitution or partial-fraction trick gives a clean antiderivative here, but a series does. Put $u = -x^4$ into the geometric series: $\\dfrac{1}{1+x^4} = \\sum_{n=0}^{\\infty} (-1)^n x^{4n} = 1 - x^4 + x^8 - \\cdots$, valid for $|x| < 1$, which covers $[0, 0.2]$.",
+        "Integrate term by term from $0$ to $0.2$: $\\int_0^{0.2} \\dfrac{dx}{1+x^4} = 0.2 - \\dfrac{0.2^5}{5} + \\dfrac{0.2^9}{9} - \\cdots$.",
+        "Why this step: this is an alternating series with shrinking terms, so the error is at most the first omitted term. Compute: $\\frac{0.2^5}{5} = \\frac{0.00032}{5} = 0.000064$ and $\\frac{0.2^9}{9} \\approx 5.7 \\times 10^{-8}$.",
+        "Two terms suffice: $0.2 - 0.000064 = 0.199936$, with error below $5.7 \\times 10^{-8} < 10^{-6}$. (The true value is $0.19993606\\ldots$.)"
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Forgetting to pull out the constant. Writing $\\frac{1}{3 - x} = \\sum x^n / 3^n$ is wrong; check $x = 0$: the left side is $\\frac{1}{3}$ but the series gives $1$. The correct series is $\\sum \\frac{x^n}{3^{n+1}}$.",
+    "Dropping the constant of integration. Integrating the series for $\\frac{1}{1+x}$ gives $\\ln(1+x)$ only after you check $x = 0$; for $\\int \\frac{dx}{1-x} = -\\ln(1-x)$ the same check is what fixes the sign and constant.",
+    "Keeping the radius after a substitution without adjusting. Substituting $x^2$ keeps $R = 1$, but substituting $\\frac{x}{3}$ changes it to $R = 3$. Always solve $|u| < 1$ for $x$.",
+    "Mishandling the index after differentiating. The derivative of $\\sum_{n=0}^{\\infty} x^n$ is $\\sum_{n=1}^{\\infty} n x^{n-1}$: the $n = 0$ term is gone. Writing $\\sum_{n=0}^{\\infty} n x^{n-1}$ is harmless (that term is $0$) but $\\sum_{n=0}^{\\infty} (n+1) x^n$ is the cleaner form."
+  ],
+  "whyItMatters": "This is where series pay off for someone who loves integrals. Many functions you meet in real problems, such as $\\frac{1}{1+x^4}$, $e^{-x^2}$, and $\\frac{\\sin x}{x}$, have no elementary antiderivative, yet their definite integrals are needed constantly in statistics, physics, and engineering. Power series turn every one of them into a polynomial you can integrate, with an error you can bound. The next node extends the method from geometric-style functions to every smooth function through Taylor series.",
+  "checkYourself": [
+    {
+      "q": "Write $\\dfrac{1}{1 + 2x}$ as a power series and give its radius.",
+      "a": "$\\sum (-2)^n x^n = \\sum (-1)^n 2^n x^n$, radius $\\frac{1}{2}$."
+    },
+    {
+      "q": "What is the series for $\\arctan x$, and how is it obtained?",
+      "a": "$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{2n+1}$, by integrating $\\frac{1}{1+x^2} = \\sum (-1)^n x^{2n}$ and using $\\arctan 0 = 0$."
+    },
+    {
+      "q": "If $f(x) = \\sum c_n x^n$ has radius $5$, what is the radius of $f'(x)$?",
+      "a": "Also $5$."
+    },
+    {
+      "q": "Using $\\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots$, estimate $\\ln(1.1)$ with two terms and bound the error.",
+      "a": "$0.1 - 0.005 = 0.095$; error at most $\\frac{0.1^3}{3} \\approx 0.00033$ (true value $0.0953$)."
+    }
+  ],
+  "readingGuide": [
+    "Start from the geometric series and, before reading the examples, derive series for $\\frac{1}{1+x}$, $\\frac{1}{1+x^2}$, and $\\frac{1}{2-x}$ yourself, each with its radius.",
+    "Find the theorem on term-by-term differentiation and integration. Note exactly what it says about the radius and what it does not say about the endpoints.",
+    "Before reading the derivation of the series for $\\ln(1+x)$ or $\\arctan x$, try to produce it by integrating a geometric-type series and fixing the constant.",
+    "Look at the example that uses a series to evaluate a definite integral and work out how the number of terms is chosen from the required accuracy."
+  ]
+}

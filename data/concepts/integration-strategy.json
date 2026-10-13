@@ -1,0 +1,88 @@
+{
+  "nodeId": "integration-strategy",
+  "title": "Strategy for Integration",
+  "overview": "Differentiation is mechanical: every function has a rule and you apply it. Integration is different. You now have a toolbox (substitution, parts, trig integrals, trig substitution, partial fractions), and the real skill is **choosing**. This section is about looking at an integrand and deciding what to try first, and what to try next when the first idea stalls.\n\nStart with a short checklist. One: **simplify** the integrand with algebra or identities before anything else. Expand products, split a fraction into separate terms, cancel common factors, use $\\sin^2 x + \\cos^2 x = 1$. Two: look for an **obvious substitution**, a piece of the integrand whose derivative also appears (up to a constant). Three: **classify the form**. Trig powers point to trig-integral methods. A square root of a quadratic points to trig substitution. A rational function points to partial fractions (after division if needed). A product of different kinds of functions, like a polynomial times $e^x$ or $\\ln x$, points to parts.\n\nIf none of these clicks, try again with a more creative substitution, or try parts even if it does not look like a textbook case, or manipulate the integrand into a friendlier shape (multiply top and bottom by something, add and subtract a term). And remember that methods combine. A substitution often turns an integral into one that parts can finish, and parts can leave a rational function for partial fractions.\n\nAlso know what you have memorized. The basic table (powers, $e^x$, $\\ln$, trig, $\\arctan$, $\\arcsin$) plus a few extras like $\\int \\tan x\\,dx$ and $\\int \\sec x\\,dx$ should be instant. Recognizing one of these after a substitution is how most problems end.\n\nOne honest warning: some integrands, like $e^{x^2}$ and $\\frac{\\sin x}{x}$, have no antiderivative in terms of elementary functions. That is not a failure of technique. When a problem resists every tool, it may be one of these, and numerical or series methods are the right path.",
+  "keyIdeas": [
+    "Simplify first: expand, split fractions, cancel, apply identities. Many integrals fall apart at this step.",
+    "Look for a substitution $u = g(x)$ where $g'(x)$ (times a constant) is also present in the integrand.",
+    "Classify by form: trig powers, roots of quadratics, rational functions, and products of unlike functions each have a designated method.",
+    "Methods chain: substitute, then parts; parts, then partial fractions; trig substitution, then trig integrals.",
+    "Keep the basic antiderivative table instant, including $\\int \\tan x\\,dx$, $\\int \\sec x\\,dx$, $\\int \\frac{dx}{x^2 + a^2}$, and $\\int \\frac{dx}{\\sqrt{a^2 - x^2}}$.",
+    "Some elementary functions, such as $e^{x^2}$, have no elementary antiderivative. Recognize these rather than fighting them."
+  ],
+  "workedExamples": [
+    {
+      "title": "Looks like trig substitution, is not",
+      "problem": "Evaluate $\\int \\frac{x}{\\sqrt{1 - x^2}}\\,dx$.",
+      "steps": [
+        "The $\\sqrt{1 - x^2}$ suggests $x = \\sin\\theta$, but check for an easier substitution first. The derivative of $1 - x^2$ is $-2x$, and there is an $x$ in the numerator.",
+        "Let $u = 1 - x^2$, $du = -2x\\,dx$, so $x\\,dx = -\\frac{1}{2}\\,du$. The integral becomes $-\\frac{1}{2} \\int u^{-1/2}\\,du$.",
+        "Integrate: $-\\frac{1}{2} \\cdot 2u^{1/2} + C = -\\sqrt{1 - x^2} + C$.",
+        "Lesson: the shape of the denominator is not the whole story. Always check whether the numerator is the derivative of the inside before reaching for a heavier tool. Without that $x$ in the numerator, trig substitution (or the $\\arcsin$ formula) would be the way."
+      ]
+    },
+    {
+      "title": "Substitution, then parts",
+      "problem": "Evaluate $\\int x^3 e^{x^2}\\,dx$.",
+      "steps": [
+        "Parts directly on $x^3 e^{x^2}$ is a dead end, because $e^{x^2}$ cannot be integrated. Look for a substitution: the exponent $x^2$ has derivative $2x$, and there is a spare $x$ inside $x^3 = x^2 \\cdot x$.",
+        "Let $u = x^2$, $du = 2x\\,dx$, so $x\\,dx = \\frac{1}{2}\\,du$ and $x^2 = u$. The integral becomes $\\frac{1}{2} \\int u e^u\\,du$.",
+        "Now it is the basic parts pattern. With $u$ as the polynomial and $e^u\\,du$ to integrate: $\\int u e^u\\,du = u e^u - e^u$.",
+        "Combine: $\\frac{1}{2}(u e^u - e^u) + C = \\frac{1}{2} e^{x^2}(x^2 - 1) + C$.",
+        "Check: differentiate $\\frac{1}{2} e^{x^2}(x^2 - 1)$ to get $\\frac{1}{2}\\left[ 2x e^{x^2}(x^2 - 1) + e^{x^2} \\cdot 2x \\right] = x e^{x^2}(x^2 - 1 + 1) = x^3 e^{x^2}$. Correct."
+      ]
+    },
+    {
+      "title": "Manipulate the integrand first",
+      "problem": "Evaluate $\\int \\frac{dx}{1 + e^x}$.",
+      "steps": [
+        "No substitution is visible and it is not a rational function of $x$. Try rewriting: add and subtract $e^x$ in the numerator. $\\frac{1}{1 + e^x} = \\frac{1 + e^x - e^x}{1 + e^x} = 1 - \\frac{e^x}{1 + e^x}$.",
+        "The second term now has the derivative of its denominator in the numerator, since $(1 + e^x)' = e^x$.",
+        "Integrate: $\\int 1\\,dx - \\int \\frac{e^x}{1 + e^x}\\,dx = x - \\ln(1 + e^x) + C$. No absolute value is needed because $1 + e^x > 0$.",
+        "Check: $\\left( x - \\ln(1 + e^x) \\right)' = 1 - \\frac{e^x}{1 + e^x} = \\frac{1}{1 + e^x}$. Correct. The same answer can be reached with $u = e^x$ and partial fractions, which is a good exercise."
+      ]
+    },
+    {
+      "title": "A substitution that creates a product",
+      "problem": "Evaluate $\\int \\sin\\sqrt{x}\\,dx$.",
+      "steps": [
+        "The square root inside the sine is the obstacle. Remove it with $u = \\sqrt{x}$, so $x = u^2$ and $dx = 2u\\,du$. This is a substitution chosen to simplify the inside, not one matched to a visible derivative.",
+        "The integral becomes $\\int \\sin u \\cdot 2u\\,du = 2 \\int u \\sin u\\,du$, a polynomial times a trig function: a parts problem.",
+        "Parts with the polynomial as the part to differentiate and $\\sin u\\,du$ as the part to integrate: $\\int u \\sin u\\,du = -u \\cos u + \\int \\cos u\\,du = -u \\cos u + \\sin u$.",
+        "Multiply by 2 and return to $x$: $2\\sin\\sqrt{x} - 2\\sqrt{x}\\cos\\sqrt{x} + C$.",
+        "Check by differentiating: $2\\cos\\sqrt{x} \\cdot \\frac{1}{2\\sqrt{x}} - 2\\left[ \\frac{1}{2\\sqrt{x}}\\cos\\sqrt{x} - \\sqrt{x}\\sin\\sqrt{x} \\cdot \\frac{1}{2\\sqrt{x}} \\right] = \\sin\\sqrt{x}$. Correct."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Reaching for the heaviest tool first. $\\int \\frac{x\\,dx}{\\sqrt{1 - x^2}}$ by trig substitution works but takes five lines; $u = 1 - x^2$ takes two. Check simple substitutions before anything else.",
+    "Trying parts on $\\int x e^{x^2}\\,dx$. Since $e^{x^2}$ has no elementary antiderivative, parts cannot proceed. The substitution $u = x^2$ is the only route, giving $\\frac{1}{2} e^{x^2} + C$.",
+    "Forgetting to convert $dx$ in a substitution like $u = \\sqrt{x}$. Here $dx = 2u\\,du$, and dropping the $2u$ gives $\\int \\sin u\\,du$, a completely different integral.",
+    "Giving up on $\\int e^{x^2}\\,dx$ as if you made an error. There is no elementary antiderivative; the correct response is a numerical method or a power series, not more algebra."
+  ],
+  "whyItMatters": "Strategy is what turns a list of techniques into the ability to actually integrate. Applied courses in physics, statistics, and engineering hand you integrals with no label saying which method to use, and the choice is the whole problem. The same diagnostic habit, simplify, look for structure, pick the tool, then verify by differentiating, is how you will approach differential equations and series in the chapters ahead.",
+  "checkYourself": [
+    {
+      "q": "What is your first move on $\\int \\frac{x^2 + 3x}{x}\\,dx$?",
+      "a": "Simplify by dividing: the integrand is $x + 3$, so the answer is $\\frac{x^2}{2} + 3x + C$."
+    },
+    {
+      "q": "Which method for $\\int \\frac{dx}{x^2 - 4}$ and which for $\\int \\frac{x\\,dx}{x^2 - 4}$?",
+      "a": "The first is partial fractions (answer $\\frac{1}{4}\\ln\\left|\\frac{x - 2}{x + 2}\\right| + C$). The second is the substitution $u = x^2 - 4$ (answer $\\frac{1}{2}\\ln|x^2 - 4| + C$)."
+    },
+    {
+      "q": "Which method for $\\int x^2 \\ln x\\,dx$?",
+      "a": "Parts, with $\\ln x$ as the part to differentiate and $x^2\\,dx$ as the part to integrate. The answer is $\\frac{x^3}{3}\\ln x - \\frac{x^3}{9} + C$."
+    },
+    {
+      "q": "How do you check any antiderivative?",
+      "a": "Differentiate it and compare with the original integrand."
+    }
+  ],
+  "readingGuide": [
+    "Find the table of basic integration formulas at the start of the section and test yourself: cover the right side and write each antiderivative from memory.",
+    "Locate the numbered strategy steps and write a one-line version of each in your own words.",
+    "Before reading the solution of each example, spend one minute deciding which method you would try first, then compare.",
+    "Look for the discussion of functions with no elementary antiderivative and note the examples given."
+  ]
+}

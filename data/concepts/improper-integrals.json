@@ -1,0 +1,90 @@
+{
+  "nodeId": "improper-integrals",
+  "title": "Improper Integrals",
+  "overview": "Every definite integral so far had a finite interval and a bounded integrand. An **improper integral** breaks one of those rules: the interval stretches to infinity, as in $\\int_1^\\infty \\frac{dx}{x^2}$, or the integrand blows up somewhere, as in $\\int_0^1 \\frac{dx}{\\sqrt{x}}$. Surprisingly, many such integrals still have finite values. A region can be infinitely long yet have finite area, if it gets thin fast enough.\n\nThe definition is a limit. For an infinite interval,\n$$\\int_a^\\infty f(x)\\,dx = \\lim_{t \\to \\infty} \\int_a^t f(x)\\,dx.$$\nYou integrate up to a finite stopping point $t$, get an expression in $t$, and then let $t$ grow. If the limit exists as a finite number, the integral **converges** to that number. If the limit is infinite or does not exist, the integral **diverges**. An integral over $(-\\infty, \\infty)$ is split at any point into two pieces, and both must converge.\n\nFor an integrand that is infinite at an endpoint, the same trick applies from the other side. If $f$ blows up at $b$,\n$$\\int_a^b f(x)\\,dx = \\lim_{t \\to b^-} \\int_a^t f(x)\\,dx.$$\nIf the bad point is in the middle of the interval, split there and treat each side separately. Missing an interior blow-up is the classic trap: $\\int_{-1}^{1} \\frac{dx}{x^2}$ is not $-2$; it diverges, because $\\frac{1}{x^2}$ is infinite at $x = 0$.\n\nThe benchmark family is $\\int_1^\\infty \\frac{dx}{x^p}$, which converges exactly when $p > 1$. So $\\frac{1}{x^2}$ gives a finite area but $\\frac{1}{x}$ does not, even though both go to zero. Near zero the rule flips: $\\int_0^1 \\frac{dx}{x^p}$ converges exactly when $p < 1$.\n\nWhen an integral is too hard to evaluate but you only need to know whether it converges, use **comparison**. If $0 \\le f(x) \\le g(x)$ and $\\int g$ converges, then $\\int f$ converges too (it is squeezed under a finite area). If $0 \\le g(x) \\le f(x)$ and $\\int g$ diverges, then $\\int f$ diverges. The $p$-integrals and $e^{-x}$ are the usual comparison partners.",
+  "keyIdeas": [
+    "Infinite interval: $\\int_a^\\infty f(x)\\,dx = \\lim_{t \\to \\infty} \\int_a^t f(x)\\,dx$. Converges if the limit is finite, diverges otherwise.",
+    "Infinite integrand at an endpoint: replace that endpoint by $t$ and take the one-sided limit. For a blow-up inside the interval, split there; both pieces must converge.",
+    "$p$-test at infinity: $\\int_1^\\infty \\frac{dx}{x^p}$ converges exactly when $p > 1$. Near zero: $\\int_0^1 \\frac{dx}{x^p}$ converges exactly when $p < 1$.",
+    "Going to zero is not enough: $\\frac{1}{x} \\to 0$ but $\\int_1^\\infty \\frac{dx}{x}$ diverges.",
+    "Comparison: for $0 \\le f \\le g$, convergence of $\\int g$ forces convergence of $\\int f$; divergence of $\\int f$ forces divergence of $\\int g$.",
+    "An integral over $(-\\infty, \\infty)$ is two improper integrals; never evaluate it as a single symmetric limit."
+  ],
+  "workedExamples": [
+    {
+      "title": "Two tails that look alike",
+      "problem": "Evaluate $\\int_1^\\infty \\frac{dx}{x^2}$ and $\\int_1^\\infty \\frac{dx}{x}$.",
+      "steps": [
+        "Replace the infinite limit by $t$. First integral: $\\int_1^t x^{-2}\\,dx = \\left[ -\\frac{1}{x} \\right]_1^t = -\\frac{1}{t} + 1$.",
+        "Let $t \\to \\infty$: $-\\frac{1}{t} \\to 0$, so the integral converges to $1$. An infinitely long region with area exactly 1.",
+        "Second integral: $\\int_1^t \\frac{dx}{x} = \\left[ \\ln x \\right]_1^t = \\ln t$.",
+        "Let $t \\to \\infty$: $\\ln t \\to \\infty$. The integral diverges. The region under $\\frac{1}{x}$ has infinite area even though the curve goes to zero.",
+        "Why the difference: $\\frac{1}{x^2}$ shrinks fast enough that the tail areas add up to something finite; $\\frac{1}{x}$ shrinks too slowly. The dividing line is exactly $p = 1$."
+      ]
+    },
+    {
+      "title": "A spike at the endpoint",
+      "problem": "Evaluate $\\int_0^1 \\frac{dx}{\\sqrt{x}}$.",
+      "steps": [
+        "The integrand is infinite at $x = 0$, so the integral is improper at the lower limit. Replace $0$ by $t$ and take $t \\to 0^+$.",
+        "Integrate: $\\int_t^1 x^{-1/2}\\,dx = \\left[ 2\\sqrt{x} \\right]_t^1 = 2 - 2\\sqrt{t}$.",
+        "Let $t \\to 0^+$: $2\\sqrt{t} \\to 0$, so the integral converges to $2$.",
+        "Interpretation: the spike at zero is infinitely tall but so thin that its area is finite. This matches the rule that $\\int_0^1 \\frac{dx}{x^p}$ converges when $p < 1$, and here $p = \\frac{1}{2}$."
+      ]
+    },
+    {
+      "title": "Parts with a limit",
+      "problem": "Evaluate $\\int_0^\\infty x e^{-x}\\,dx$.",
+      "steps": [
+        "Replace $\\infty$ by $t$ and find the antiderivative by parts with $u = x$, $dv = e^{-x}\\,dx$, so $du = dx$, $v = -e^{-x}$: $\\int x e^{-x}\\,dx = -x e^{-x} + \\int e^{-x}\\,dx = -x e^{-x} - e^{-x}$.",
+        "Evaluate from $0$ to $t$: $\\left[ -x e^{-x} - e^{-x} \\right]_0^t = \\left( -t e^{-t} - e^{-t} \\right) - (0 - 1) = 1 - t e^{-t} - e^{-t}$.",
+        "Now the limit. Clearly $e^{-t} \\to 0$. For $t e^{-t} = \\frac{t}{e^t}$, both top and bottom go to infinity; by l'Hospital's rule the limit is $\\lim \\frac{1}{e^t} = 0$. Exponentials beat polynomials.",
+        "So the integral converges to $1$. This integral is the first of a famous family: $\\int_0^\\infty x^n e^{-x}\\,dx = n!$, and here $n = 1$."
+      ]
+    },
+    {
+      "title": "Deciding convergence by comparison",
+      "problem": "Does $\\int_1^\\infty e^{-x^2}\\,dx$ converge?",
+      "steps": [
+        "There is no elementary antiderivative for $e^{-x^2}$, so a direct limit is impossible. Try comparison with something you can integrate.",
+        "For $x \\ge 1$, $x^2 \\ge x$, so $-x^2 \\le -x$ and therefore $e^{-x^2} \\le e^{-x}$. The integrand is squeezed below $e^{-x}$ on the whole interval.",
+        "The comparison integral converges: $\\int_1^\\infty e^{-x}\\,dx = \\lim_{t \\to \\infty} \\left[ -e^{-x} \\right]_1^t = \\lim_{t \\to \\infty} \\left( e^{-1} - e^{-t} \\right) = \\frac{1}{e}$.",
+        "Since $0 \\le e^{-x^2} \\le e^{-x}$ and the larger integral is finite, $\\int_1^\\infty e^{-x^2}\\,dx$ converges, and its value is at most $\\frac{1}{e} \\approx 0.368$. (Its actual value is about $0.139$.)",
+        "Note what comparison does and does not give: it proves convergence and gives a bound, but not the exact value. For the exact value you need numerical methods or the Gaussian integral from multivariable calculus."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Ignoring an interior blow-up. $\\int_{-1}^{1} \\frac{dx}{x^2}$ evaluated as $\\left[ -\\frac{1}{x} \\right]_{-1}^{1} = -2$ is nonsense: the integrand is positive, so the integral cannot be negative. Split at $0$; each piece diverges.",
+    "Concluding that an integral converges because the integrand goes to zero. $\\int_1^\\infty \\frac{dx}{x}$ has an integrand that goes to zero and still diverges.",
+    "Writing $\\int_1^\\infty \\frac{dx}{x^2} = \\left[ -\\frac{1}{x} \\right]_1^\\infty$ and plugging in $\\infty$ as if it were a number. Write the limit explicitly; it keeps you honest when the limit does not exist.",
+    "Getting the $p$-test backwards near zero. At infinity you need $p > 1$; near zero you need $p < 1$. Check: $\\int_0^1 \\frac{dx}{\\sqrt{x}} = 2$ converges with $p = \\frac{1}{2}$, while $\\int_0^1 \\frac{dx}{x}$ diverges.",
+    "Using comparison in the wrong direction. Knowing $f \\le g$ and $\\int g$ diverges tells you nothing about $\\int f$. The bound must be on the useful side."
+  ],
+  "whyItMatters": "Improper integrals are everywhere in science: the total probability under a bell curve is $\\int_{-\\infty}^{\\infty}$, escape velocity is an integral to infinity, and the Laplace transform that solves differential equations is $\\int_0^\\infty$ by definition. They are also the direct link to infinite series: the Integral Test in Chapter 11 says a series converges exactly when the matching improper integral does, so the $p$-test here becomes the $p$-series test there.",
+  "checkYourself": [
+    {
+      "q": "Does $\\int_1^\\infty \\frac{dx}{x^3}$ converge? If so, to what?",
+      "a": "Yes, $p = 3 > 1$. Value $\\lim_{t \\to \\infty} \\left[ -\\frac{1}{2x^2} \\right]_1^t = \\frac{1}{2}$."
+    },
+    {
+      "q": "Does $\\int_0^1 \\frac{dx}{x^2}$ converge?",
+      "a": "No. Near zero the test needs $p < 1$, and here $p = 2$. Directly: $\\int_t^1 x^{-2}\\,dx = \\frac{1}{t} - 1 \\to \\infty$."
+    },
+    {
+      "q": "Evaluate $\\int_0^\\infty e^{-2x}\\,dx$.",
+      "a": "$\\lim_{t \\to \\infty} \\left[ -\\frac{1}{2}e^{-2x} \\right]_0^t = \\frac{1}{2}$."
+    },
+    {
+      "q": "You want to show $\\int_1^\\infty \\frac{dx}{x^2 + 5}$ converges. What do you compare with?",
+      "a": "$\\frac{1}{x^2 + 5} \\le \\frac{1}{x^2}$, and $\\int_1^\\infty \\frac{dx}{x^2} = 1$ converges."
+    }
+  ],
+  "readingGuide": [
+    "Find the definition of an improper integral over an infinite interval and write in your own words what \"convergent\" and \"divergent\" mean.",
+    "Locate the $p$-integral result and make sure you can explain why $p = 1$ is the boundary case.",
+    "Before reading the example with an integrand that is infinite inside the interval, predict what goes wrong if you integrate straight across.",
+    "Find the Comparison Theorem and note the direction of each inequality; then look at how the examples choose a comparison function.",
+    "Look for the discussion of $\\int_{-\\infty}^{\\infty}$ and why it must be split into two integrals."
+  ]
+}

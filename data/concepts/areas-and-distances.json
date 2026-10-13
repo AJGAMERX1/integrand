@@ -1,0 +1,88 @@
+{
+  "nodeId": "areas-and-distances",
+  "title": "Areas and Distances",
+  "overview": "The second great problem of calculus, after the tangent, is **area**: what is the area of the region under the curve $y = f(x)$ from $x = a$ to $x = b$? For a line the region is a trapezoid and geometry answers it. For a curve like $y = x^2$ no formula from geometry applies, because the top edge is not straight. The strategy is the same one that solved the tangent problem: approximate, then take a limit.\n\nApproximate with rectangles. Cut $[a, b]$ into $n$ strips of equal width $\\Delta x = \\frac{b - a}{n}$. Over each strip stand a rectangle whose height is the value of $f$ at some point of the strip; the simplest choices are the **right endpoint** of each strip, giving heights $f(x_1), f(x_2), \\ldots, f(x_n)$ where $x_i = a + i\\,\\Delta x$, or the **left endpoint**, giving $f(x_0), \\ldots, f(x_{n-1})$. The total area of the rectangles,\n$$R_n = \\sum_{i=1}^{n} f(x_i)\\,\\Delta x,$$\nis an estimate of the area under the curve. For an increasing function the right-endpoint rectangles poke above the curve and overestimate, while the left-endpoint ones fall short and underestimate, so the true area is trapped between $L_n$ and $R_n$. As $n$ grows the strips get thin, the rectangles hug the curve more closely, and both estimates close in on the same number. The **area** is defined as that limit:\n$$A = \\lim_{n \\to \\infty}R_n = \\lim_{n \\to \\infty}\\sum_{i=1}^{n} f(x_i)\\,\\Delta x.$$\nAny choice of sample points $x_i^*$ in the strips gives the same limit for a continuous function; midpoints are a popular choice because they are usually more accurate for a given $n$.\n\nFor $y = x^2$ on $[0, 1]$ the limit can be computed exactly with the sigma formulas from the ramp. With $\\Delta x = \\frac{1}{n}$ and right endpoints $x_i = \\frac{i}{n}$: $R_n = \\sum_{i=1}^{n}\\left(\\frac{i}{n}\\right)^2\\frac{1}{n} = \\frac{1}{n^3}\\sum_{i=1}^{n}i^2 = \\frac{1}{n^3}\\cdot\\frac{n(n+1)(2n+1)}{6} = \\frac{(n+1)(2n+1)}{6n^2}$. Dividing top and bottom by $n^2$ gives $\\frac{(1 + \\frac{1}{n})(2 + \\frac{1}{n})}{6} \\to \\frac{1\\cdot 2}{6} = \\frac{1}{3}$. The area under the parabola is exactly $\\frac{1}{3}$. Check against the estimates: $R_4 = \\frac{5\\cdot 9}{96} \\approx 0.469$ and $L_4 = 0.219$, and $\\frac{1}{3}$ lies between them.\n\nThe **distance problem** is the same computation in disguise. If an object moves with velocity $v(t)$, then over a short time interval of length $\\Delta t$ it travels approximately $v(t_i)\\,\\Delta t$, velocity times time, and the total distance is approximately $\\sum v(t_i)\\,\\Delta t$. That is a sum of rectangle areas under the velocity graph, and the exact distance is the limit, the area under $v$. Just as the slope of the position graph is velocity, the area under the velocity graph is distance. The two problems of calculus, tangent and area, are starting to look like inverses of each other.",
+  "keyIdeas": [
+    "Approximate the area under $f$ on $[a, b]$ with $n$ rectangles of width $\\Delta x = \\frac{b - a}{n}$ and heights $f(x_i^*)$ at sample points in each strip.",
+    "Right endpoints $x_i = a + i\\,\\Delta x$ give $R_n = \\sum_{i=1}^{n}f(x_i)\\,\\Delta x$; left endpoints give $L_n$; midpoints give $M_n$.",
+    "For an increasing $f$, $L_n \\le A \\le R_n$; for a decreasing $f$ the inequalities reverse.",
+    "The area is the limit: $A = \\lim_{n \\to \\infty}\\sum_{i=1}^{n}f(x_i^*)\\,\\Delta x$, and the limit is the same for any choice of sample points when $f$ is continuous.",
+    "Exact limits use the sigma formulas: $\\sum i = \\frac{n(n+1)}{2}$, $\\sum i^2 = \\frac{n(n+1)(2n+1)}{6}$, then divide by the highest power of $n$.",
+    "Distance traveled is the area under the velocity graph: $\\sum v(t_i)\\,\\Delta t \\to$ exact distance."
+  ],
+  "workedExamples": [
+    {
+      "title": "Left and right estimates with four rectangles",
+      "problem": "Estimate the area under $f(x) = x^2 + 1$ on $[0, 2]$ using $L_4$ and $R_4$.",
+      "steps": [
+        "$\\Delta x = \\frac{2 - 0}{4} = 0.5$. Partition points: $0, 0.5, 1, 1.5, 2$. Function values: $f(0) = 1$, $f(0.5) = 1.25$, $f(1) = 2$, $f(1.5) = 3.25$, $f(2) = 5$.",
+        "$L_4$ uses the left endpoints $0, 0.5, 1, 1.5$: $L_4 = 0.5(1 + 1.25 + 2 + 3.25) = 0.5(7.5) = 3.75$.",
+        "$R_4$ uses the right endpoints $0.5, 1, 1.5, 2$: $R_4 = 0.5(1.25 + 2 + 3.25 + 5) = 0.5(11.5) = 5.75$.",
+        "$f$ is increasing, so the true area is between 3.75 and 5.75. (It is $\\frac{8}{3} + 2 = \\frac{14}{3} \\approx 4.667$.) The midpoint estimate $M_4 = 0.5(f(0.25) + f(0.75) + f(1.25) + f(1.75)) = 0.5(1.0625 + 1.5625 + 2.5625 + 4.0625) = 4.625$ is much closer."
+      ]
+    },
+    {
+      "title": "Exact area as a limit",
+      "problem": "Find the exact area under $f(x) = 2x$ on $[0, 3]$ as a limit of right-endpoint sums, and check with geometry.",
+      "steps": [
+        "$\\Delta x = \\frac{3}{n}$ and $x_i = \\frac{3i}{n}$, so $f(x_i) = \\frac{6i}{n}$.",
+        "$R_n = \\sum_{i=1}^{n}\\frac{6i}{n}\\cdot\\frac{3}{n} = \\frac{18}{n^2}\\sum_{i=1}^{n}i = \\frac{18}{n^2}\\cdot\\frac{n(n+1)}{2} = \\frac{9(n+1)}{n} = 9 + \\frac{9}{n}$.",
+        "Limit: $\\lim_{n \\to \\infty}\\left(9 + \\frac{9}{n}\\right) = 9$.",
+        "Geometry: the region is a triangle with base 3 and height $f(3) = 6$, area $\\frac{1}{2}(3)(6) = 9$. The limit of sums reproduces the geometric answer, and $R_n$ overestimates by $\\frac{9}{n}$ for every finite $n$, as expected for an increasing function."
+      ]
+    },
+    {
+      "title": "A limit with a cubic",
+      "problem": "Express the area under $y = x^3$ on $[0, 2]$ as a limit and evaluate it.",
+      "steps": [
+        "$\\Delta x = \\frac{2}{n}$, $x_i = \\frac{2i}{n}$, $f(x_i) = \\frac{8i^3}{n^3}$.",
+        "$R_n = \\sum_{i=1}^{n}\\frac{8i^3}{n^3}\\cdot\\frac{2}{n} = \\frac{16}{n^4}\\sum_{i=1}^{n}i^3 = \\frac{16}{n^4}\\left(\\frac{n(n+1)}{2}\\right)^2 = \\frac{4(n+1)^2}{n^2}$.",
+        "Divide by $n^2$: $4\\left(1 + \\frac{1}{n}\\right)^2 \\to 4$.",
+        "The area is 4. Check with $n = 4$: $R_4 = \\frac{4\\cdot 25}{16} = 6.25$, an overestimate, and $L_4 = R_4 - f(2)\\Delta x = 6.25 - 8(0.5) = 2.25$; 4 is between. (The antiderivative method later gives $\\frac{2^4}{4} = 4$.)"
+      ]
+    },
+    {
+      "title": "Distance from a velocity table",
+      "problem": "A car's speedometer reads 10, 14, 18, 20, 20 m/s at $t = 0, 5, 10, 15, 20$ seconds. Estimate the distance traveled in 20 seconds.",
+      "steps": [
+        "$\\Delta t = 5$ seconds. Using left endpoints (velocity at the start of each interval): $L_4 = 5(10 + 14 + 18 + 20) = 5(62) = 310$ meters.",
+        "Using right endpoints: $R_4 = 5(14 + 18 + 20 + 20) = 5(72) = 360$ meters.",
+        "The velocity is nondecreasing, so the true distance is between 310 and 360 meters; averaging gives about 335 meters.",
+        "Each term like $5\\cdot 14 = 70$ is a rectangle of width 5 and height 14 under the velocity graph; the distance is the area under that graph."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Using $n$ values but the wrong endpoints: $R_n$ uses $x_1, \\ldots, x_n$ (right), $L_n$ uses $x_0, \\ldots, x_{n-1}$ (left). Listing all $n + 1$ points is the usual error.",
+    "Forgetting to multiply by $\\Delta x$. The sum of heights is not an area; each height must be multiplied by the width.",
+    "Computing $\\Delta x$ as $\\frac{b}{n}$ when $a \\ne 0$. It is $\\frac{b - a}{n}$, and $x_i = a + i\\,\\Delta x$.",
+    "Taking the limit before simplifying the sum. Use the sigma formulas to get an expression in $n$ first, then divide by the highest power of $n$.",
+    "Assuming $R_n$ always overestimates. It does for increasing $f$; for decreasing $f$ it underestimates."
+  ],
+  "whyItMatters": "This limit of rectangle sums is the definition of the definite integral $\\int_a^b f(x)\\,dx$, which the next section names. Every area, volume, arc length, work, and probability in the later chapters is set up by slicing into thin pieces, summing, and taking exactly this limit. Your Daily Integral tier I1 is this computation with small $n$. And the observation that distance is the area under velocity is the first half of the Fundamental Theorem of Calculus.",
+  "checkYourself": [
+    {
+      "q": "$\\Delta x$ for $[1, 4]$ with $n = 6$?",
+      "a": "$\\frac{3}{6} = 0.5$."
+    },
+    {
+      "q": "$R_2$ for $f(x) = x$ on $[0, 2]$?",
+      "a": "$1(f(1) + f(2)) = 3$."
+    },
+    {
+      "q": "If $f$ is decreasing, which is larger, $L_n$ or $R_n$?",
+      "a": "$L_n$."
+    },
+    {
+      "q": "What does $\\sum v(t_i)\\Delta t$ approximate?",
+      "a": "The distance traveled (area under the velocity graph)."
+    }
+  ],
+  "readingGuide": [
+    "Find the first example estimating an area with rectangles; before reading its solution, compute $L_4$ and $R_4$ yourself.",
+    "Locate the definition of area as a limit of sums and write it in sigma notation with the sample points labeled.",
+    "Find the example that computes the limit exactly using a sum formula, and redo the algebra of dividing by the highest power of $n$.",
+    "Find the distance problem and note where the text says distance equals an area under the velocity graph.",
+    "Look at the figures showing left, right, and midpoint rectangles and decide which over- and underestimate for an increasing function."
+  ]
+}

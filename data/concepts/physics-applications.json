@@ -1,0 +1,90 @@
+{
+  "nodeId": "physics-applications",
+  "title": "Applications to Physics and Engineering",
+  "overview": "This section asks two physical questions that a single number cannot answer directly, and shows that both become integrals once you slice.\n\n**Hydrostatic force.** Water pushes on a submerged wall. The pressure at depth $d$ is $p = \\rho g d$, where $\\rho$ is the density of water and $g$ is gravity; in metric units $\\rho g \\approx 9800$ newtons per cubic meter. The trouble is that pressure changes with depth, so the total force is not pressure times area. Slice the wall into thin horizontal strips. On one strip at depth $d$ with width $w$ and thickness $\\Delta d$, the pressure is nearly constant, so the force is about $\\rho g d \\cdot w\\,\\Delta d$. Add the strips and let them shrink:\n$$F = \\int \\rho g\\,d(y)\\,w(y)\\,dy.$$\nThe only work is describing depth and width in terms of one variable $y$.\n\n**Centers of mass.** A thin plate balances at a single point, its centroid. For point masses $m_i$ at positions $x_i$ on a line, the balance point is $\\bar{x} = \\frac{\\sum m_i x_i}{\\sum m_i}$, the mass-weighted average position. A plate is the same idea with integrals replacing sums. For the region under $y = f(x)$ on $[a, b]$ with area $A$:\n$$\\bar{x} = \\frac{1}{A}\\int_a^b x\\,f(x)\\,dx, \\qquad \\bar{y} = \\frac{1}{A}\\int_a^b \\frac{1}{2}\\left(f(x)\\right)^2 dx.$$\nEach vertical strip has area $f(x)\\,dx$, sits at horizontal position $x$, and has its own midpoint at height $\\frac{1}{2}f(x)$. The formulas are just the weighted averages of those strip positions.\n\nBoth topics have the same shape: a quantity that varies across an object, sliced into pieces where it is nearly constant, then integrated. The integrals themselves are usually easy. The modeling is the lesson.",
+  "keyIdeas": [
+    "Pressure at depth $d$ in a fluid is $p = \\rho g d$, and it acts equally in every direction. Force on a small piece of wall is pressure times that piece's area.",
+    "Hydrostatic force on a vertical plate: $F = \\int \\rho g \\cdot (\\text{depth}) \\cdot (\\text{width})\\,dy$, where depth and width are both written in terms of the strip's position $y$.",
+    "For point masses on a line, $\\bar{x} = \\frac{\\sum m_i x_i}{\\sum m_i}$. The numerator is the moment about the origin; the denominator is the total mass.",
+    "For a uniform plate under $y = f(x)$ on $[a,b]$ with area $A$: $\\bar{x} = \\frac{1}{A}\\int_a^b x f(x)\\,dx$ and $\\bar{y} = \\frac{1}{A}\\int_a^b \\frac{1}{2}(f(x))^2\\,dx$.",
+    "A uniform plate's centroid lies on any axis of symmetry, which often gives one coordinate for free.",
+    "Pappus's Theorem: the volume of a solid of revolution equals the plate's area times the distance traveled by its centroid, $V = 2\\pi\\bar{d}\\,A$."
+  ],
+  "workedExamples": [
+    {
+      "title": "Balancing three weights",
+      "problem": "Masses of $2$, $3$, and $5$ kilograms sit at $x = 0$, $x = 4$, and $x = 10$ on a light rod. Where does it balance?",
+      "steps": [
+        "Compute the moment about the origin: $\\sum m_i x_i = 2 \\cdot 0 + 3 \\cdot 4 + 5 \\cdot 10 = 0 + 12 + 50 = 62$.",
+        "Compute the total mass: $2 + 3 + 5 = 10$.",
+        "Divide: $\\bar{x} = \\frac{62}{10} = 6.2$. The balance point is pulled toward the heavy mass at $x = 10$, as expected.",
+        "Why this matters: the plate formulas below are this same computation with $\\int$ in place of $\\sum$ and area in place of mass."
+      ]
+    },
+    {
+      "title": "Force on a rectangular dam face",
+      "problem": "A vertical rectangular dam is $10$ meters wide, and the water behind it is $6$ meters deep. Find the hydrostatic force on the dam. Use $\\rho g = 9800$ newtons per cubic meter.",
+      "steps": [
+        "Choose a coordinate: let $y$ be the depth below the surface, from $y = 0$ (surface) to $y = 6$ (bottom). Measuring from the surface makes depth simply $y$.",
+        "Describe a strip: at depth $y$ the strip is $10$ wide and $dy$ thick, so its area is $10\\,dy$ and the pressure on it is $9800\\,y$.",
+        "Force on the strip: $9800 \\cdot y \\cdot 10\\,dy$. Integrate over all depths: $F = \\int_0^6 98000\\,y\\,dy$.",
+        "Evaluate: $98000 \\cdot \\left[\\frac{y^2}{2}\\right]_0^6 = 98000 \\cdot 18 = 1{,}764{,}000$ newtons.",
+        "Check by averaging: the pressure runs from $0$ at the top to $9800 \\cdot 6 = 58800$ at the bottom, averaging $29400$. Times the area $60$ gives $1{,}764{,}000$. The integral and the average agree because pressure is linear in depth."
+      ]
+    },
+    {
+      "title": "A triangular plate, width changing with depth",
+      "problem": "A vertical triangular plate has its $4$ meter top edge at the water surface and its bottom vertex $3$ meters below. Find the force on one face.",
+      "steps": [
+        "Set $y$ as depth below the surface, $0 \\le y \\le 3$. Depth is $y$, as before.",
+        "Now the width shrinks with depth. It is $4$ at $y = 0$ and $0$ at $y = 3$, and it changes linearly, so by similar triangles $w(y) = 4\\left(1 - \\frac{y}{3}\\right)$. Check: $w(0) = 4$, $w(3) = 0$.",
+        "Force on a strip: $9800 \\cdot y \\cdot 4\\left(1 - \\frac{y}{3}\\right) dy$. So $F = 39200\\int_0^3 \\left(y - \\frac{y^2}{3}\\right) dy$.",
+        "Integrate: $\\left[\\frac{y^2}{2} - \\frac{y^3}{9}\\right]_0^3 = \\frac{9}{2} - 3 = \\frac{3}{2}$. Then $F = 39200 \\cdot \\frac{3}{2} = 58{,}800$ newtons.",
+        "Check the size: the triangle has area $6$, and the pressure at its centroid (depth $1$ meter, one third of the way down) is $9800$. Area times centroid pressure is $58800$. For a flat plate this shortcut is exact, and it confirms the integral."
+      ]
+    },
+    {
+      "title": "Centroid of a parabolic region",
+      "problem": "Find the centroid of the region under $y = x^2$ from $x = 0$ to $x = 1$.",
+      "steps": [
+        "Area first, since it is the denominator in both formulas: $A = \\int_0^1 x^2\\,dx = \\frac{1}{3}$.",
+        "Horizontal coordinate: $\\bar{x} = \\frac{1}{A}\\int_0^1 x \\cdot x^2\\,dx = 3\\int_0^1 x^3\\,dx = 3 \\cdot \\frac{1}{4} = \\frac{3}{4}$. The region is fat on the right, so the balance point is right of center. Good.",
+        "Vertical coordinate: each strip at $x$ has its midpoint at height $\\frac{1}{2}x^2$, weighted by its area $x^2\\,dx$. So $\\bar{y} = \\frac{1}{A}\\int_0^1 \\frac{1}{2}(x^2)^2\\,dx = 3 \\cdot \\frac{1}{2} \\cdot \\frac{1}{5} = \\frac{3}{10}$.",
+        "Check it is inside the region: at $x = \\frac{3}{4}$ the curve is at height $\\frac{9}{16} \\approx 0.56$, and $\\bar{y} = 0.3$ is below that and above $0$. The centroid $\\left(\\frac{3}{4}, \\frac{3}{10}\\right)$ lies inside the region, as it must for this shape."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Using total depth times total area for hydrostatic force. Pressure varies with depth, so you must integrate. On the $10 \\times 6$ dam, $9800 \\cdot 6 \\cdot 60$ gives $3{,}528{,}000$, double the correct $1{,}764{,}000$.",
+    "Mixing up the coordinate direction. If $y$ is measured upward from the bottom, depth is $(\\text{surface height}) - y$, not $y$. Decide the direction first and write depth explicitly.",
+    "Forgetting the $\\frac{1}{2}$ in $\\bar{y}$. A strip's center is halfway up, at $\\frac{1}{2}f(x)$. For the unit square ($f = 1$ on $[0,1]$) the correct formula gives $\\bar{y} = \\frac{1}{2}$; without the half you get $1$, which is the top edge.",
+    "Dividing by the wrong total. Centroid formulas divide by the area $A$ (the total mass for a uniform plate), not by the interval length $b - a$.",
+    "Describing the width wrong for a tapered plate. Always test your width function at the top and bottom; for the triangle, $w(0) = 4$ and $w(3) = 0$ confirm the formula."
+  ],
+  "whyItMatters": "Hydrostatic force and centroids are integrals of the form $\\int (\\text{varying quantity}) \\times (\\text{slice size})$, the same pattern as work, volume, and arc length. The center of mass idea becomes the expected value in probability (next section), where probability density replaces mass density, and later becomes the moments and double integrals of multivariable calculus. Pappus's Theorem links centroids back to volumes of revolution, a nice reminder that all of these applications are one idea wearing different clothes.",
+  "checkYourself": [
+    {
+      "q": "What is the water pressure at a depth of $2$ meters, with $\\rho g = 9800$?",
+      "a": "$19600$ newtons per square meter."
+    },
+    {
+      "q": "Masses $1$ and $3$ sit at $x = 0$ and $x = 8$. Where is the center of mass?",
+      "a": "$\\bar{x} = \\frac{0 + 24}{4} = 6$."
+    },
+    {
+      "q": "Where is the centroid of the rectangle $0 \\le x \\le 4$, $0 \\le y \\le 2$, and why can you answer without integrating?",
+      "a": "$(2, 1)$, by symmetry: the centroid lies on every axis of symmetry."
+    },
+    {
+      "q": "Write the force integral for a square plate of side $2$ hanging vertically with its top edge $1$ meter below the surface.",
+      "a": "$F = \\int_1^3 \\rho g \\cdot y \\cdot 2\\,dy$, with $y$ the depth; this equals $8\\rho g$."
+    }
+  ],
+  "readingGuide": [
+    "Find the statement that pressure at a point in a fluid is the same in all directions, and note why that lets us use horizontal strips.",
+    "Before reading the solution of the first hydrostatic example, draw the plate, choose your own coordinate for depth, and write the strip force yourself.",
+    "Locate the definitions of moment and center of mass for point masses, then watch how the author passes from sums to integrals for a plate.",
+    "Find the formulas for $\\bar{x}$ and $\\bar{y}$ of a plate and identify where the factor $\\frac{1}{2}$ in $\\bar{y}$ comes from.",
+    "Look for the Theorem of Pappus and test it on a simple solid (for instance a cylinder) in your own words."
+  ]
+}

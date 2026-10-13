@@ -1,0 +1,89 @@
+{
+  "nodeId": "chain-rule",
+  "title": "The Chain Rule",
+  "overview": "You can differentiate $x^2$ and you can differentiate $\\sin x$, but what about $\\sin(x^2)$? It is a composition: the inner function $g(x) = x^2$ feeds the outer function $f(u) = \\sin u$. The **chain rule** says that the derivative of a composition is the derivative of the outer function, evaluated at the inner function, times the derivative of the inner function:\n$$\\frac{d}{dx}f(g(x)) = f'(g(x))\\cdot g'(x).$$\nFor $\\sin(x^2)$: the outer derivative is $\\cos$, evaluated at the inner function to give $\\cos(x^2)$, times the inner derivative $2x$. So $\\frac{d}{dx}\\sin(x^2) = 2x\\cos(x^2)$.\n\nThe intuition is about rates multiplying. If $y$ depends on $u$ and $u$ depends on $x$, and $y$ changes 3 times as fast as $u$ while $u$ changes 2 times as fast as $x$, then $y$ changes 6 times as fast as $x$. In Leibniz notation that is\n$$\\frac{dy}{dx} = \\frac{dy}{du}\\cdot\\frac{du}{dx},$$\nwhich looks like fractions canceling, and that is a good way to remember it. The one thing to be careful about: $\\frac{dy}{du}$ must be evaluated at $u = g(x)$, not left as a function of $u$.\n\nThe most common special case is a power of a function. By the chain rule with outer function $u^n$,\n$$\\frac{d}{dx}[g(x)]^n = n[g(x)]^{n - 1}\\cdot g'(x).$$\nSo $\\frac{d}{dx}(3x^2 + 1)^5 = 5(3x^2 + 1)^4\\cdot 6x = 30x(3x^2 + 1)^4$. The outer power rule leaves the inside untouched, and then you multiply by the inside's derivative. Forgetting that last factor is the single most common calculus error, so make a habit of asking \"what is inside, and what is its derivative?\" every time you differentiate anything that is not a bare $x$.\n\nThe same pattern gives the derivatives of $e^{g(x)}$, $\\sin g(x)$, and so on: $\\frac{d}{dx}e^{g(x)} = e^{g(x)}g'(x)$, so $\\frac{d}{dx}e^{-x^2} = -2xe^{-x^2}$, and $\\frac{d}{dx}\\cos(5x) = -5\\sin(5x)$. It also finally explains the derivative of a general exponential: $b^x = e^{x\\ln b}$, so $\\frac{d}{dx}b^x = e^{x\\ln b}\\cdot\\ln b = b^x\\ln b$. The constant that was mysterious in the exponential section is $\\ln b$.\n\nCompositions can be nested several deep, and the chain rule just applies repeatedly, peeling one layer at a time from the outside in: $\\frac{d}{dx}\\sin^3(2x) = 3\\sin^2(2x)\\cdot\\cos(2x)\\cdot 2$. Three layers (cube, sine, double), three factors. The chain rule also combines with the product and quotient rules; when an expression is a product of compositions, use the product rule first, applying the chain rule to each factor as you differentiate it.",
+  "keyIdeas": [
+    "Chain rule: $\\frac{d}{dx}f(g(x)) = f'(g(x))\\,g'(x)$: outer derivative at the inner function, times the inner derivative.",
+    "Leibniz form: $\\frac{dy}{dx} = \\frac{dy}{du}\\cdot\\frac{du}{dx}$, with $\\frac{dy}{du}$ evaluated at $u = g(x)$.",
+    "Power version: $\\frac{d}{dx}[g(x)]^n = n[g(x)]^{n-1}g'(x)$.",
+    "$\\frac{d}{dx}e^{g(x)} = e^{g(x)}g'(x)$, $\\frac{d}{dx}\\sin g(x) = \\cos g(x)\\cdot g'(x)$, and similarly for every basic function.",
+    "$\\frac{d}{dx}b^x = b^x\\ln b$, because $b^x = e^{x\\ln b}$.",
+    "For nested compositions, peel one layer at a time from the outside; each layer contributes one factor.",
+    "Always ask what is inside and what its derivative is; the missing inner factor is the most common error."
+  ],
+  "workedExamples": [
+    {
+      "title": "A power of a function",
+      "problem": "Differentiate $y = \\sqrt{x^2 + 4}$.",
+      "steps": [
+        "Write as a power: $y = (x^2 + 4)^{1/2}$. Inner function $x^2 + 4$ with derivative $2x$; outer function $u^{1/2}$ with derivative $\\frac{1}{2}u^{-1/2}$.",
+        "Chain rule: $y' = \\frac{1}{2}(x^2 + 4)^{-1/2}\\cdot 2x$.",
+        "Simplify: the 2s cancel, giving $y' = \\frac{x}{\\sqrt{x^2 + 4}}$.",
+        "Check at $x = 0$: $y' = 0$, and indeed the graph of $\\sqrt{x^2 + 4}$ is symmetric with a minimum at 0. At $x = 2$: $y' = \\frac{2}{\\sqrt{8}} \\approx 0.707$; secant from 2 to 2.01 gives $\\frac{\\sqrt{8.0401} - \\sqrt{8}}{0.01} \\approx \\frac{2.83551 - 2.82843}{0.01} \\approx 0.708$. Good."
+      ]
+    },
+    {
+      "title": "Exponential of a function",
+      "problem": "Differentiate $y = e^{3x}\\cos(2x)$.",
+      "steps": [
+        "This is a product, so start with the product rule: $y' = (e^{3x})'\\cos(2x) + e^{3x}(\\cos(2x))'$.",
+        "Chain rule on each factor: $(e^{3x})' = 3e^{3x}$ (inner derivative 3), and $(\\cos(2x))' = -2\\sin(2x)$ (inner derivative 2).",
+        "Assemble: $y' = 3e^{3x}\\cos(2x) - 2e^{3x}\\sin(2x)$.",
+        "Factor: $y' = e^{3x}\\left(3\\cos(2x) - 2\\sin(2x)\\right)$. Check at $x = 0$: $y' = 1\\cdot(3 - 0) = 3$, and the secant from 0 to 0.01 is $\\frac{e^{0.03}\\cos(0.02) - 1}{0.01} \\approx \\frac{1.03045\\cdot 0.99980 - 1}{0.01} \\approx 3.02$. Good."
+      ]
+    },
+    {
+      "title": "Three layers deep",
+      "problem": "Differentiate $y = \\tan^2(x^3)$, which means $[\\tan(x^3)]^2$.",
+      "steps": [
+        "Layers from the outside: square, then tangent, then cube. Peel the square: $2\\tan(x^3)\\cdot\\frac{d}{dx}\\tan(x^3)$.",
+        "Peel the tangent: $\\frac{d}{dx}\\tan(x^3) = \\sec^2(x^3)\\cdot\\frac{d}{dx}x^3$.",
+        "Peel the cube: $\\frac{d}{dx}x^3 = 3x^2$.",
+        "Multiply all the factors: $y' = 2\\tan(x^3)\\cdot\\sec^2(x^3)\\cdot 3x^2 = 6x^2\\tan(x^3)\\sec^2(x^3)$."
+      ]
+    },
+    {
+      "title": "A general exponential and a rate problem",
+      "problem": "A population is $P(t) = 500\\cdot 2^{t/3}$ after $t$ hours. Find $P'(t)$ and the growth rate at $t = 6$.",
+      "steps": [
+        "Write $2^{t/3} = e^{(t/3)\\ln 2}$. The inner function is $\\frac{t\\ln 2}{3}$ with derivative $\\frac{\\ln 2}{3}$.",
+        "Chain rule: $P'(t) = 500\\cdot e^{(t/3)\\ln 2}\\cdot\\frac{\\ln 2}{3} = 500\\cdot 2^{t/3}\\cdot\\frac{\\ln 2}{3}$.",
+        "At $t = 6$: $2^{2} = 4$, so $P'(6) = 500\\cdot 4\\cdot\\frac{0.6931}{3} \\approx 2000\\cdot 0.2310 \\approx 462$ cells per hour.",
+        "Interpretation: the growth rate is proportional to the population itself ($P' = \\frac{\\ln 2}{3}P$), which is the defining feature of exponential growth. At $t = 6$ the population is 2000, so the rate is about 23 percent of the population per hour."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Forgetting the inner derivative: $\\frac{d}{dx}\\sin(x^2) = \\cos(x^2)$. Check at $x = 1$: the secant slope of $\\sin(x^2)$ from 1 to 1.01 is about $1.07$, while $\\cos 1 \\approx 0.54$ and $2\\cos 1 \\approx 1.08$. The factor $2x$ is required.",
+    "Differentiating the inside and leaving the outside unchanged: $\\frac{d}{dx}(x^2 + 1)^5 = (2x)^5$. The outer power rule applies first: $5(x^2 + 1)^4\\cdot 2x$.",
+    "Evaluating the outer derivative at $x$ instead of at $g(x)$: writing $\\cos x\\cdot 2x$ for the derivative of $\\sin(x^2)$. It must be $\\cos(x^2)$.",
+    "Treating $e^{3x}$ like $e^x$: its derivative is $3e^{3x}$, not $e^{3x}$. Any inner coefficient comes out front.",
+    "Applying the chain rule when there is no composition: $\\frac{d}{dx}x^5$ is just $5x^4$; the inner function is $x$ with derivative 1."
+  ],
+  "whyItMatters": "The substitution rule, your Daily Integral tier I4, is the chain rule in reverse: since $\\frac{d}{dx}F(g(x)) = F'(g(x))g'(x)$, any integrand of the form $f(g(x))g'(x)$ integrates to $F(g(x)) + C$. That is exactly why $\\int 2x\\cos(x^2)\\,dx = \\sin(x^2) + C$. Spotting an inner function and its derivative side by side in an integrand is the skill that unlocks most of the integrals in Chapters 5 through 7, and it is the same skill as applying the chain rule correctly.",
+  "checkYourself": [
+    {
+      "q": "$\\frac{d}{dx}(2x + 1)^4$?",
+      "a": "$4(2x + 1)^3\\cdot 2 = 8(2x + 1)^3$."
+    },
+    {
+      "q": "$\\frac{d}{dx}e^{-5x}$?",
+      "a": "$-5e^{-5x}$."
+    },
+    {
+      "q": "$\\frac{d}{dx}\\sin(\\pi x)$?",
+      "a": "$\\pi\\cos(\\pi x)$."
+    },
+    {
+      "q": "$\\frac{d}{dx}10^x$?",
+      "a": "$10^x\\ln 10$."
+    }
+  ],
+  "readingGuide": [
+    "Find the statement of the chain rule in both function notation and Leibniz notation, and explain why the Leibniz version is easy to remember.",
+    "Look at the argument for why the chain rule is true (rates multiplying) and note the subtlety the text mentions about $\\Delta u$ possibly being zero.",
+    "Before reading the solution of the first example with a power of a function, differentiate it yourself and name the inner and outer functions.",
+    "Find the derivation of $\\frac{d}{dx}b^x = b^x\\ln b$ and verify it matches the estimated slopes for $2^x$ and $3^x$ from earlier.",
+    "Find an example with a composition of three functions and write out one factor per layer."
+  ]
+}
