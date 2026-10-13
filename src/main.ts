@@ -25,6 +25,7 @@ const NAV: { route: string; label: string; icon: string }[] = [
 ];
 
 let active: Screen | null = null;
+let renderSeq = 0;
 
 async function applyTheme() {
   const s = await getSettings();
@@ -32,6 +33,7 @@ async function applyTheme() {
 }
 
 async function route() {
+  const seq = ++renderSeq;
   const r = currentRoute();
   const main = document.getElementById('main')!;
   const loader = screens[r.name] ?? screens.today;
@@ -43,7 +45,9 @@ async function route() {
   clear(main);
   try {
     const screen = await loader();
+    if (seq !== renderSeq) return; // a newer navigation superseded this render
     active = screen;
+    clear(main);
     await screen.render(main, r.params);
     main.scrollTop = 0; window.scrollTo(0, 0);
   } catch (err) {
@@ -67,8 +71,7 @@ async function boot() {
   await applyTheme();
   window.addEventListener('settings-changed', applyTheme);
   onRouteChange(route);
-  if (!location.hash) navigate('today');
-  await route();
+  if (!location.hash) navigate('today'); else await route();
   if ('serviceWorker' in navigator && import.meta.env.PROD) {
     navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {});
   }
