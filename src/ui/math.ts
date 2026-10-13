@@ -42,7 +42,7 @@ function configureMathlive() {
   mathliveConfigured = true;
   // Fonts/sounds are served from the package; disable sounds and keep everything local (no CDN).
   MathfieldElement.soundsDirectory = null;
-  MathfieldElement.fontsDirectory = new URL('../../node_modules/mathlive/fonts/', import.meta.url).href;
+  MathfieldElement.fontsDirectory = `${import.meta.env.BASE_URL}fonts/mathlive/`;
 }
 
 export interface MathInput {

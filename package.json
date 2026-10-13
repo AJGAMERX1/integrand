@@ -12,7 +12,11 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "problems:verify": "python3 tools/verify_problems.py data/problems",
-    "problems:generate": "python3 tools/generate_problems.py"
+    "problems:generate": "python3 tools/generate_problems.py",
+    "fonts": "node scripts/copy-fonts.mjs",
+    "predev": "npm run fonts",
+    "prebuild": "npm run fonts",
+    "postinstall": "npm run fonts"
   },
   "dependencies": {
     "katex": "^0.19.0",
