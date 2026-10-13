@@ -1,0 +1,1945 @@
+{
+ "version": 1,
+ "nodes": [
+  {
+   "id": "numbers-and-inequalities",
+   "title": "Numbers, Inequalities, and Absolute Value",
+   "track": 0,
+   "group": "Ramp: Algebra",
+   "stewart": {
+    "section": "App. A",
+    "printedPages": [
+     2,
+     9
+    ],
+    "pagePrefix": "A"
+   },
+   "prereqs": [],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Order the real numbers, solve inequalities, and read absolute value as distance.",
+   "sessions": 2
+  },
+  {
+   "id": "exponents-and-radicals",
+   "title": "Exponents and Radicals",
+   "track": 0,
+   "group": "Ramp: Algebra",
+   "stewart": null,
+   "prereqs": [
+    "numbers-and-inequalities"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Use the exponent rules, negative and fractional exponents, and simplify radicals.",
+   "sessions": 2
+  },
+  {
+   "id": "linear-equations",
+   "title": "Linear Equations and Lines",
+   "track": 0,
+   "group": "Ramp: Algebra",
+   "stewart": {
+    "section": "App. B",
+    "printedPages": [
+     10,
+     15
+    ],
+    "pagePrefix": "A"
+   },
+   "prereqs": [
+    "numbers-and-inequalities"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Solve linear equations and write and graph lines from slope and points.",
+   "sessions": 2
+  },
+  {
+   "id": "systems-of-equations",
+   "title": "Systems of Linear Equations",
+   "track": 0,
+   "group": "Ramp: Algebra",
+   "stewart": null,
+   "prereqs": [
+    "linear-equations"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Solve two-equation systems by substitution and elimination.",
+   "sessions": 2
+  },
+  {
+   "id": "polynomials",
+   "title": "Polynomials",
+   "track": 0,
+   "group": "Ramp: Algebra",
+   "stewart": null,
+   "prereqs": [
+    "exponents-and-radicals"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Add, multiply, and expand polynomials cleanly, including special products.",
+   "sessions": 2
+  },
+  {
+   "id": "factoring-and-quadratics",
+   "title": "Factoring and Quadratics",
+   "track": 0,
+   "group": "Ramp: Algebra",
+   "stewart": null,
+   "prereqs": [
+    "polynomials"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Factor, complete the square, and solve quadratics with the formula.",
+   "sessions": 3
+  },
+  {
+   "id": "rational-expressions",
+   "title": "Rational Expressions",
+   "track": 0,
+   "group": "Ramp: Algebra",
+   "stewart": null,
+   "prereqs": [
+    "factoring-and-quadratics"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Simplify, add, and divide algebraic fractions, and find where they are undefined.",
+   "sessions": 2
+  },
+  {
+   "id": "function-notation",
+   "title": "Function Notation and Domain",
+   "track": 0,
+   "group": "Ramp: Algebra",
+   "stewart": null,
+   "prereqs": [
+    "linear-equations",
+    "factoring-and-quadratics"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Read f(x) as a machine: evaluate, find domain, and compose simple functions.",
+   "sessions": 2
+  },
+  {
+   "id": "graphs-of-second-degree",
+   "title": "Circles and Parabolas",
+   "track": 0,
+   "group": "Ramp: Algebra",
+   "stewart": {
+    "section": "App. C",
+    "printedPages": [
+     16,
+     23
+    ],
+    "pagePrefix": "A"
+   },
+   "prereqs": [
+    "factoring-and-quadratics",
+    "linear-equations"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Recognize circles and parabolas from their equations and sketch them.",
+   "sessions": 2
+  },
+  {
+   "id": "transformations",
+   "title": "Transformations of Graphs",
+   "track": 0,
+   "group": "Ramp: Algebra",
+   "stewart": null,
+   "prereqs": [
+    "function-notation"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Shift, stretch, and reflect a known graph to get a new one.",
+   "sessions": 2
+  },
+  {
+   "id": "exponentials-and-logs-ramp",
+   "title": "Exponential and Log Rules",
+   "track": 0,
+   "group": "Ramp: Algebra",
+   "stewart": null,
+   "prereqs": [
+    "exponents-and-radicals",
+    "function-notation"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Move between exponential and log form and use the log rules to solve equations.",
+   "sessions": 2
+  },
+  {
+   "id": "sigma-notation",
+   "title": "Sigma Notation",
+   "track": 0,
+   "group": "Ramp: Algebra",
+   "stewart": {
+    "section": "App. E",
+    "printedPages": [
+     34,
+     38
+    ],
+    "pagePrefix": "A"
+   },
+   "prereqs": [
+    "polynomials"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Read and write sums with sigma notation and use the basic sum formulas.",
+   "sessions": 2
+  },
+  {
+   "id": "area-by-geometry",
+   "title": "Area by Geometry",
+   "track": 0,
+   "group": "Ramp: Algebra",
+   "stewart": null,
+   "prereqs": [
+    "linear-equations"
+   ],
+   "integralTier": 0,
+   "unlockThreshold": 0.7,
+   "summary": "Find areas of rectangles, triangles, and trapezoids, including the area under a line.",
+   "sessions": 2
+  },
+  {
+   "id": "right-triangle-trig",
+   "title": "Right-Triangle Trigonometry",
+   "track": 0,
+   "group": "Ramp: Trig",
+   "stewart": {
+    "section": "App. D",
+    "printedPages": [
+     24,
+     33
+    ],
+    "pagePrefix": "A"
+   },
+   "prereqs": [
+    "exponents-and-radicals"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Define sine, cosine, and tangent from a right triangle and work in radians.",
+   "sessions": 2
+  },
+  {
+   "id": "unit-circle",
+   "title": "The Unit Circle",
+   "track": 0,
+   "group": "Ramp: Trig",
+   "stewart": {
+    "section": "App. D",
+    "printedPages": [
+     24,
+     33
+    ],
+    "pagePrefix": "A"
+   },
+   "prereqs": [
+    "right-triangle-trig"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Know the exact values at the special angles anywhere on the circle.",
+   "sessions": 3
+  },
+  {
+   "id": "trig-identities",
+   "title": "Essential Trig Identities",
+   "track": 0,
+   "group": "Ramp: Trig",
+   "stewart": {
+    "section": "App. D",
+    "printedPages": [
+     24,
+     33
+    ],
+    "pagePrefix": "A"
+   },
+   "prereqs": [
+    "unit-circle"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Use the Pythagorean, double-angle, and addition identities to rewrite expressions.",
+   "sessions": 2
+  },
+  {
+   "id": "trig-graphs",
+   "title": "Graphs of Trig Functions",
+   "track": 0,
+   "group": "Ramp: Trig",
+   "stewart": {
+    "section": "App. D",
+    "printedPages": [
+     24,
+     33
+    ],
+    "pagePrefix": "A"
+   },
+   "prereqs": [
+    "unit-circle",
+    "transformations"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Sketch sine, cosine, and tangent with amplitude, period, and shifts.",
+   "sessions": 2
+  },
+  {
+   "id": "functions-basics",
+   "title": "Four Ways to Represent a Function",
+   "track": 1,
+   "group": "Ch. 1 Functions and Models",
+   "stewart": {
+    "section": "1.1",
+    "printedPages": [
+     10,
+     22
+    ]
+   },
+   "prereqs": [
+    "function-notation"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Functions as formulas, tables, graphs, and words; domain and the vertical line test.",
+   "sessions": 3
+  },
+  {
+   "id": "essential-functions",
+   "title": "Mathematical Models: A Catalog of Essential Functions",
+   "track": 1,
+   "group": "Ch. 1 Functions and Models",
+   "stewart": {
+    "section": "1.2",
+    "printedPages": [
+     23,
+     35
+    ]
+   },
+   "prereqs": [
+    "functions-basics",
+    "graphs-of-second-degree"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "The standard families: linear, polynomial, power, rational, trig, exponential, log.",
+   "sessions": 3
+  },
+  {
+   "id": "new-functions-from-old",
+   "title": "New Functions from Old Functions",
+   "track": 1,
+   "group": "Ch. 1 Functions and Models",
+   "stewart": {
+    "section": "1.3",
+    "printedPages": [
+     36,
+     44
+    ]
+   },
+   "prereqs": [
+    "functions-basics",
+    "transformations"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Build new functions by transforming, combining, and composing old ones.",
+   "sessions": 2
+  },
+  {
+   "id": "exponential-functions",
+   "title": "Exponential Functions",
+   "track": 1,
+   "group": "Ch. 1 Functions and Models",
+   "stewart": {
+    "section": "1.4",
+    "printedPages": [
+     45,
+     54
+    ]
+   },
+   "prereqs": [
+    "exponentials-and-logs-ramp",
+    "new-functions-from-old"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Exponential growth and decay and the special number e.",
+   "sessions": 2
+  },
+  {
+   "id": "inverse-functions-and-logs",
+   "title": "Inverse Functions and Logarithms",
+   "track": 1,
+   "group": "Ch. 1 Functions and Models",
+   "stewart": {
+    "section": "1.5",
+    "printedPages": [
+     55,
+     67
+    ]
+   },
+   "prereqs": [
+    "exponential-functions"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Undo a function with its inverse; logarithms as inverses of exponentials.",
+   "sessions": 3
+  },
+  {
+   "id": "tangent-and-velocity",
+   "title": "The Tangent and Velocity Problems",
+   "track": 1,
+   "group": "Ch. 2 Limits and Derivatives",
+   "stewart": {
+    "section": "2.1",
+    "printedPages": [
+     78,
+     82
+    ]
+   },
+   "prereqs": [
+    "functions-basics"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "The two problems that started calculus: slope of a curve and instantaneous speed.",
+   "sessions": 1
+  },
+  {
+   "id": "limits-intro",
+   "title": "The Limit of a Function",
+   "track": 1,
+   "group": "Ch. 2 Limits and Derivatives",
+   "stewart": {
+    "section": "2.2",
+    "printedPages": [
+     83,
+     94
+    ]
+   },
+   "prereqs": [
+    "tangent-and-velocity"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "What it means for f(x) to approach a value, one-sided limits, and infinite limits.",
+   "sessions": 3
+  },
+  {
+   "id": "limit-laws",
+   "title": "Calculating Limits Using the Limit Laws",
+   "track": 1,
+   "group": "Ch. 2 Limits and Derivatives",
+   "stewart": {
+    "section": "2.3",
+    "printedPages": [
+     95,
+     103
+    ]
+   },
+   "prereqs": [
+    "limits-intro",
+    "rational-expressions"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Compute limits with the laws, algebra, and the Squeeze Theorem.",
+   "sessions": 3
+  },
+  {
+   "id": "precise-limit",
+   "title": "The Precise Definition of a Limit",
+   "track": 1,
+   "group": "Ch. 2 Limits and Derivatives",
+   "stewart": {
+    "section": "2.4",
+    "printedPages": [
+     104,
+     113
+    ]
+   },
+   "prereqs": [
+    "limit-laws",
+    "numbers-and-inequalities"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "The epsilon-delta definition and how to verify a limit with it.",
+   "sessions": 2
+  },
+  {
+   "id": "continuity",
+   "title": "Continuity",
+   "track": 1,
+   "group": "Ch. 2 Limits and Derivatives",
+   "stewart": {
+    "section": "2.5",
+    "printedPages": [
+     114,
+     125
+    ]
+   },
+   "prereqs": [
+    "limit-laws"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Continuous functions, types of discontinuity, and the Intermediate Value Theorem.",
+   "sessions": 2
+  },
+  {
+   "id": "limits-at-infinity",
+   "title": "Limits at Infinity; Horizontal Asymptotes",
+   "track": 1,
+   "group": "Ch. 2 Limits and Derivatives",
+   "stewart": {
+    "section": "2.6",
+    "printedPages": [
+     126,
+     139
+    ]
+   },
+   "prereqs": [
+    "limit-laws"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "End behavior of functions and horizontal asymptotes.",
+   "sessions": 2
+  },
+  {
+   "id": "derivatives-rates",
+   "title": "Derivatives and Rates of Change",
+   "track": 1,
+   "group": "Ch. 2 Limits and Derivatives",
+   "stewart": {
+    "section": "2.7",
+    "printedPages": [
+     140,
+     151
+    ]
+   },
+   "prereqs": [
+    "limit-laws",
+    "tangent-and-velocity"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "The derivative at a point as a limit of difference quotients.",
+   "sessions": 3
+  },
+  {
+   "id": "derivative-function",
+   "title": "The Derivative as a Function",
+   "track": 1,
+   "group": "Ch. 2 Limits and Derivatives",
+   "stewart": {
+    "section": "2.8",
+    "printedPages": [
+     152,
+     164
+    ]
+   },
+   "prereqs": [
+    "derivatives-rates"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "f prime as a function, differentiability, and higher derivatives.",
+   "sessions": 3
+  },
+  {
+   "id": "power-exp-derivatives",
+   "title": "Derivatives of Polynomials and Exponential Functions",
+   "track": 1,
+   "group": "Ch. 3 Differentiation Rules",
+   "stewart": {
+    "section": "3.1",
+    "printedPages": [
+     172,
+     181
+    ]
+   },
+   "prereqs": [
+    "derivative-function",
+    "exponential-functions"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "The power rule, sum rule, and the derivative of e to the x.",
+   "sessions": 3
+  },
+  {
+   "id": "product-quotient-rules",
+   "title": "The Product and Quotient Rules",
+   "track": 1,
+   "group": "Ch. 3 Differentiation Rules",
+   "stewart": {
+    "section": "3.2",
+    "printedPages": [
+     183,
+     189
+    ]
+   },
+   "prereqs": [
+    "power-exp-derivatives"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Differentiate products and quotients without expanding.",
+   "sessions": 2
+  },
+  {
+   "id": "trig-derivatives",
+   "title": "Derivatives of Trigonometric Functions",
+   "track": 1,
+   "group": "Ch. 3 Differentiation Rules",
+   "stewart": {
+    "section": "3.3",
+    "printedPages": [
+     190,
+     196
+    ]
+   },
+   "prereqs": [
+    "product-quotient-rules",
+    "trig-identities",
+    "trig-graphs"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Derivatives of the six trig functions and the limit of sin x over x.",
+   "sessions": 2
+  },
+  {
+   "id": "chain-rule",
+   "title": "The Chain Rule",
+   "track": 1,
+   "group": "Ch. 3 Differentiation Rules",
+   "stewart": {
+    "section": "3.4",
+    "printedPages": [
+     197,
+     207
+    ]
+   },
+   "prereqs": [
+    "product-quotient-rules",
+    "new-functions-from-old"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Differentiate compositions: outer derivative times inner derivative.",
+   "sessions": 3
+  },
+  {
+   "id": "implicit-differentiation",
+   "title": "Implicit Differentiation",
+   "track": 1,
+   "group": "Ch. 3 Differentiation Rules",
+   "stewart": {
+    "section": "3.5",
+    "printedPages": [
+     208,
+     217
+    ]
+   },
+   "prereqs": [
+    "chain-rule"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Differentiate curves given by equations in x and y, and inverse trig functions.",
+   "sessions": 2
+  },
+  {
+   "id": "log-derivatives",
+   "title": "Derivatives of Logarithmic Functions",
+   "track": 1,
+   "group": "Ch. 3 Differentiation Rules",
+   "stewart": {
+    "section": "3.6",
+    "printedPages": [
+     218,
+     223
+    ]
+   },
+   "prereqs": [
+    "chain-rule",
+    "inverse-functions-and-logs"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Derivatives of ln x and log functions, and logarithmic differentiation.",
+   "sessions": 2
+  },
+  {
+   "id": "rates-in-sciences",
+   "title": "Rates of Change in the Natural and Social Sciences",
+   "track": 1,
+   "group": "Ch. 3 Differentiation Rules",
+   "stewart": {
+    "section": "3.7",
+    "printedPages": [
+     224,
+     236
+    ]
+   },
+   "prereqs": [
+    "chain-rule"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Derivatives as velocity, density, current, and marginal cost.",
+   "sessions": 2
+  },
+  {
+   "id": "exponential-growth-decay",
+   "title": "Exponential Growth and Decay",
+   "track": 1,
+   "group": "Ch. 3 Differentiation Rules",
+   "stewart": {
+    "section": "3.8",
+    "printedPages": [
+     237,
+     243
+    ]
+   },
+   "prereqs": [
+    "log-derivatives"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Solve y prime equals k y and model population, decay, and cooling.",
+   "sessions": 2
+  },
+  {
+   "id": "related-rates",
+   "title": "Related Rates",
+   "track": 1,
+   "group": "Ch. 3 Differentiation Rules",
+   "stewart": {
+    "section": "3.9",
+    "printedPages": [
+     245,
+     250
+    ]
+   },
+   "prereqs": [
+    "implicit-differentiation"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Link rates of changing quantities through an equation and the chain rule.",
+   "sessions": 2
+  },
+  {
+   "id": "linear-approximation",
+   "title": "Linear Approximations and Differentials",
+   "track": 1,
+   "group": "Ch. 3 Differentiation Rules",
+   "stewart": {
+    "section": "3.10",
+    "printedPages": [
+     251,
+     257
+    ]
+   },
+   "prereqs": [
+    "chain-rule"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Approximate a function near a point by its tangent line.",
+   "sessions": 2
+  },
+  {
+   "id": "hyperbolic-functions",
+   "title": "Hyperbolic Functions",
+   "track": 1,
+   "group": "Ch. 3 Differentiation Rules",
+   "stewart": {
+    "section": "3.11",
+    "printedPages": [
+     259,
+     265
+    ]
+   },
+   "prereqs": [
+    "log-derivatives"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "sinh, cosh, tanh and their derivatives.",
+   "sessions": 1
+  },
+  {
+   "id": "max-min-values",
+   "title": "Maximum and Minimum Values",
+   "track": 1,
+   "group": "Ch. 4 Applications of Differentiation",
+   "stewart": {
+    "section": "4.1",
+    "printedPages": [
+     276,
+     284
+    ]
+   },
+   "prereqs": [
+    "derivative-function",
+    "chain-rule"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Critical numbers and the closed-interval method for absolute extrema.",
+   "sessions": 2
+  },
+  {
+   "id": "mean-value-theorem",
+   "title": "The Mean Value Theorem",
+   "track": 1,
+   "group": "Ch. 4 Applications of Differentiation",
+   "stewart": {
+    "section": "4.2",
+    "printedPages": [
+     287,
+     292
+    ]
+   },
+   "prereqs": [
+    "max-min-values",
+    "continuity"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Rolle's Theorem and the Mean Value Theorem and what they guarantee.",
+   "sessions": 2
+  },
+  {
+   "id": "shape-of-graph",
+   "title": "How Derivatives Affect the Shape of a Graph",
+   "track": 1,
+   "group": "Ch. 4 Applications of Differentiation",
+   "stewart": {
+    "section": "4.3",
+    "printedPages": [
+     293,
+     303
+    ]
+   },
+   "prereqs": [
+    "max-min-values"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Increasing, decreasing, concavity, and the first and second derivative tests.",
+   "sessions": 3
+  },
+  {
+   "id": "lhospital",
+   "title": "Indeterminate Forms and l'Hospital's Rule",
+   "track": 1,
+   "group": "Ch. 4 Applications of Differentiation",
+   "stewart": {
+    "section": "4.4",
+    "printedPages": [
+     304,
+     313
+    ]
+   },
+   "prereqs": [
+    "shape-of-graph",
+    "limits-at-infinity",
+    "log-derivatives"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Resolve 0/0 and infinity/infinity limits with derivatives.",
+   "sessions": 2
+  },
+  {
+   "id": "curve-sketching",
+   "title": "Summary of Curve Sketching",
+   "track": 1,
+   "group": "Ch. 4 Applications of Differentiation",
+   "stewart": {
+    "section": "4.5",
+    "printedPages": [
+     315,
+     322
+    ]
+   },
+   "prereqs": [
+    "shape-of-graph",
+    "limits-at-infinity"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "A checklist for sketching a graph by hand from its calculus.",
+   "sessions": 2
+  },
+  {
+   "id": "graphing-with-technology",
+   "title": "Graphing with Calculus and Calculators",
+   "track": 1,
+   "group": "Ch. 4 Applications of Differentiation",
+   "stewart": {
+    "section": "4.6",
+    "printedPages": [
+     323,
+     329
+    ]
+   },
+   "prereqs": [
+    "curve-sketching"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Use calculus to pick a sensible viewing window.",
+   "sessions": 1
+  },
+  {
+   "id": "optimization",
+   "title": "Optimization Problems",
+   "track": 1,
+   "group": "Ch. 4 Applications of Differentiation",
+   "stewart": {
+    "section": "4.7",
+    "printedPages": [
+     330,
+     342
+    ]
+   },
+   "prereqs": [
+    "max-min-values",
+    "shape-of-graph"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Set up a function from a word problem and find its best value.",
+   "sessions": 3
+  },
+  {
+   "id": "newtons-method",
+   "title": "Newton's Method",
+   "track": 1,
+   "group": "Ch. 4 Applications of Differentiation",
+   "stewart": {
+    "section": "4.8",
+    "printedPages": [
+     345,
+     349
+    ]
+   },
+   "prereqs": [
+    "linear-approximation"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Approximate roots by repeatedly following tangent lines.",
+   "sessions": 1
+  },
+  {
+   "id": "antiderivatives",
+   "title": "Antiderivatives",
+   "track": 1,
+   "group": "Ch. 4 Applications of Differentiation",
+   "stewart": {
+    "section": "4.9",
+    "printedPages": [
+     350,
+     357
+    ]
+   },
+   "prereqs": [
+    "power-exp-derivatives",
+    "trig-derivatives"
+   ],
+   "integralTier": 3,
+   "unlockThreshold": 0.7,
+   "summary": "Reverse differentiation: the general antiderivative and the plus C.",
+   "sessions": 3
+  },
+  {
+   "id": "areas-and-distances",
+   "title": "Areas and Distances",
+   "track": 1,
+   "group": "Ch. 5 Integrals",
+   "stewart": {
+    "section": "5.1",
+    "printedPages": [
+     366,
+     377
+    ]
+   },
+   "prereqs": [
+    "sigma-notation",
+    "area-by-geometry",
+    "functions-basics"
+   ],
+   "integralTier": 1,
+   "unlockThreshold": 0.7,
+   "summary": "Approximate area with rectangles and see the limit that defines it.",
+   "sessions": 3
+  },
+  {
+   "id": "definite-integral",
+   "title": "The Definite Integral",
+   "track": 1,
+   "group": "Ch. 5 Integrals",
+   "stewart": {
+    "section": "5.2",
+    "printedPages": [
+     378,
+     390
+    ]
+   },
+   "prereqs": [
+    "areas-and-distances",
+    "limits-at-infinity"
+   ],
+   "integralTier": 2,
+   "unlockThreshold": 0.7,
+   "summary": "The definite integral as a limit of Riemann sums, and its properties.",
+   "sessions": 3
+  },
+  {
+   "id": "ftc",
+   "title": "The Fundamental Theorem of Calculus",
+   "track": 1,
+   "group": "Ch. 5 Integrals",
+   "stewart": {
+    "section": "5.3",
+    "printedPages": [
+     392,
+     401
+    ]
+   },
+   "prereqs": [
+    "definite-integral",
+    "antiderivatives"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Differentiation and integration are inverse processes.",
+   "sessions": 3
+  },
+  {
+   "id": "indefinite-integrals",
+   "title": "Indefinite Integrals and the Net Change Theorem",
+   "track": 1,
+   "group": "Ch. 5 Integrals",
+   "stewart": {
+    "section": "5.4",
+    "printedPages": [
+     402,
+     410
+    ]
+   },
+   "prereqs": [
+    "ftc"
+   ],
+   "integralTier": 3,
+   "unlockThreshold": 0.7,
+   "summary": "Indefinite integrals as families and the integral of a rate as net change.",
+   "sessions": 2
+  },
+  {
+   "id": "substitution",
+   "title": "The Substitution Rule",
+   "track": 1,
+   "group": "Ch. 5 Integrals",
+   "stewart": {
+    "section": "5.5",
+    "printedPages": [
+     412,
+     420
+    ]
+   },
+   "prereqs": [
+    "indefinite-integrals",
+    "chain-rule"
+   ],
+   "integralTier": 4,
+   "unlockThreshold": 0.7,
+   "summary": "Undo the chain rule with u-substitution for indefinite and definite integrals.",
+   "sessions": 3
+  },
+  {
+   "id": "transcendental-integrals",
+   "title": "Integrals of Exponential, Log, and Trig Functions",
+   "track": 1,
+   "group": "Ch. 5 Integrals",
+   "stewart": {
+    "section": "5.4-5.5",
+    "printedPages": [
+     402,
+     420
+    ]
+   },
+   "prereqs": [
+    "substitution",
+    "log-derivatives",
+    "trig-derivatives"
+   ],
+   "integralTier": 5,
+   "unlockThreshold": 0.7,
+   "summary": "Integrate e to the x, 1 over x, and the trig functions, with substitution.",
+   "sessions": 2
+  },
+  {
+   "id": "areas-between-curves",
+   "title": "Areas Between Curves",
+   "track": 1,
+   "group": "Ch. 6 Applications of Integration",
+   "stewart": {
+    "section": "6.1",
+    "printedPages": [
+     428,
+     435
+    ]
+   },
+   "prereqs": [
+    "substitution"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Area between two graphs by integrating top minus bottom.",
+   "sessions": 2
+  },
+  {
+   "id": "volumes",
+   "title": "Volumes",
+   "track": 1,
+   "group": "Ch. 6 Applications of Integration",
+   "stewart": {
+    "section": "6.2",
+    "printedPages": [
+     438,
+     448
+    ]
+   },
+   "prereqs": [
+    "areas-between-curves"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Volumes by slicing: disks and washers.",
+   "sessions": 3
+  },
+  {
+   "id": "cylindrical-shells",
+   "title": "Volumes by Cylindrical Shells",
+   "track": 1,
+   "group": "Ch. 6 Applications of Integration",
+   "stewart": {
+    "section": "6.3",
+    "printedPages": [
+     449,
+     454
+    ]
+   },
+   "prereqs": [
+    "volumes"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Volumes by integrating thin cylindrical shells.",
+   "sessions": 2
+  },
+  {
+   "id": "work",
+   "title": "Work",
+   "track": 1,
+   "group": "Ch. 6 Applications of Integration",
+   "stewart": {
+    "section": "6.4",
+    "printedPages": [
+     455,
+     460
+    ]
+   },
+   "prereqs": [
+    "areas-between-curves"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Work as an integral of force over distance.",
+   "sessions": 2
+  },
+  {
+   "id": "average-value",
+   "title": "Average Value of a Function",
+   "track": 1,
+   "group": "Ch. 6 Applications of Integration",
+   "stewart": {
+    "section": "6.5",
+    "printedPages": [
+     461,
+     463
+    ]
+   },
+   "prereqs": [
+    "areas-between-curves",
+    "mean-value-theorem"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "The average of a function and the Mean Value Theorem for Integrals.",
+   "sessions": 1
+  },
+  {
+   "id": "integration-by-parts",
+   "title": "Integration by Parts",
+   "track": 1,
+   "group": "Ch. 7 Techniques of Integration",
+   "stewart": {
+    "section": "7.1",
+    "printedPages": [
+     472,
+     478
+    ]
+   },
+   "prereqs": [
+    "transcendental-integrals",
+    "product-quotient-rules"
+   ],
+   "integralTier": 6,
+   "unlockThreshold": 0.7,
+   "summary": "Undo the product rule to integrate products.",
+   "sessions": 3
+  },
+  {
+   "id": "trig-integrals",
+   "title": "Trigonometric Integrals",
+   "track": 1,
+   "group": "Ch. 7 Techniques of Integration",
+   "stewart": {
+    "section": "7.2",
+    "printedPages": [
+     479,
+     485
+    ]
+   },
+   "prereqs": [
+    "transcendental-integrals",
+    "trig-identities"
+   ],
+   "integralTier": 6,
+   "unlockThreshold": 0.7,
+   "summary": "Integrate powers and products of sine, cosine, tangent, and secant.",
+   "sessions": 2
+  },
+  {
+   "id": "trig-substitution",
+   "title": "Trigonometric Substitution",
+   "track": 1,
+   "group": "Ch. 7 Techniques of Integration",
+   "stewart": {
+    "section": "7.3",
+    "printedPages": [
+     486,
+     492
+    ]
+   },
+   "prereqs": [
+    "trig-integrals"
+   ],
+   "integralTier": 6,
+   "unlockThreshold": 0.7,
+   "summary": "Replace square roots of quadratics with trig functions.",
+   "sessions": 2
+  },
+  {
+   "id": "partial-fractions",
+   "title": "Integration of Rational Functions by Partial Fractions",
+   "track": 1,
+   "group": "Ch. 7 Techniques of Integration",
+   "stewart": {
+    "section": "7.4",
+    "printedPages": [
+     493,
+     502
+    ]
+   },
+   "prereqs": [
+    "transcendental-integrals",
+    "rational-expressions"
+   ],
+   "integralTier": 6,
+   "unlockThreshold": 0.7,
+   "summary": "Split a rational function into simple pieces and integrate each.",
+   "sessions": 3
+  },
+  {
+   "id": "integration-strategy",
+   "title": "Strategy for Integration",
+   "track": 1,
+   "group": "Ch. 7 Techniques of Integration",
+   "stewart": {
+    "section": "7.5",
+    "printedPages": [
+     503,
+     507
+    ]
+   },
+   "prereqs": [
+    "integration-by-parts",
+    "trig-substitution",
+    "partial-fractions"
+   ],
+   "integralTier": 6,
+   "unlockThreshold": 0.7,
+   "summary": "Choose a technique by recognizing the form of the integrand.",
+   "sessions": 2
+  },
+  {
+   "id": "integration-tables-cas",
+   "title": "Integration Using Tables and Computer Algebra Systems",
+   "track": 1,
+   "group": "Ch. 7 Techniques of Integration",
+   "stewart": {
+    "section": "7.6",
+    "printedPages": [
+     508,
+     512
+    ]
+   },
+   "prereqs": [
+    "integration-strategy"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Use a table or a CAS, and know when to distrust the answer.",
+   "sessions": 1
+  },
+  {
+   "id": "approximate-integration",
+   "title": "Approximate Integration",
+   "track": 1,
+   "group": "Ch. 7 Techniques of Integration",
+   "stewart": {
+    "section": "7.7",
+    "printedPages": [
+     514,
+     526
+    ]
+   },
+   "prereqs": [
+    "definite-integral"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Midpoint, Trapezoidal, and Simpson's rules with error bounds.",
+   "sessions": 2
+  },
+  {
+   "id": "improper-integrals",
+   "title": "Improper Integrals",
+   "track": 1,
+   "group": "Ch. 7 Techniques of Integration",
+   "stewart": {
+    "section": "7.8",
+    "printedPages": [
+     527,
+     536
+    ]
+   },
+   "prereqs": [
+    "integration-strategy",
+    "limits-at-infinity"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Integrals over infinite intervals or with infinite integrands.",
+   "sessions": 2
+  },
+  {
+   "id": "arc-length",
+   "title": "Arc Length",
+   "track": 1,
+   "group": "Ch. 8 Further Applications of Integration",
+   "stewart": {
+    "section": "8.1",
+    "printedPages": [
+     544,
+     549
+    ]
+   },
+   "prereqs": [
+    "integration-strategy"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Length of a curve as an integral.",
+   "sessions": 2
+  },
+  {
+   "id": "surface-area",
+   "title": "Area of a Surface of Revolution",
+   "track": 1,
+   "group": "Ch. 8 Further Applications of Integration",
+   "stewart": {
+    "section": "8.2",
+    "printedPages": [
+     551,
+     556
+    ]
+   },
+   "prereqs": [
+    "arc-length"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Surface area of a curve revolved about an axis.",
+   "sessions": 2
+  },
+  {
+   "id": "physics-applications",
+   "title": "Applications to Physics and Engineering",
+   "track": 1,
+   "group": "Ch. 8 Further Applications of Integration",
+   "stewart": {
+    "section": "8.3",
+    "printedPages": [
+     558,
+     567
+    ]
+   },
+   "prereqs": [
+    "work"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Hydrostatic force and centers of mass.",
+   "sessions": 2
+  },
+  {
+   "id": "economics-biology",
+   "title": "Applications to Economics and Biology",
+   "track": 1,
+   "group": "Ch. 8 Further Applications of Integration",
+   "stewart": {
+    "section": "8.4",
+    "printedPages": [
+     569,
+     572
+    ]
+   },
+   "prereqs": [
+    "areas-between-curves"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Consumer surplus, blood flow, and cardiac output.",
+   "sessions": 1
+  },
+  {
+   "id": "probability",
+   "title": "Probability",
+   "track": 1,
+   "group": "Ch. 8 Further Applications of Integration",
+   "stewart": {
+    "section": "8.5",
+    "printedPages": [
+     573,
+     580
+    ]
+   },
+   "prereqs": [
+    "improper-integrals"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Probability density functions, means, and the normal distribution.",
+   "sessions": 2
+  },
+  {
+   "id": "modeling-with-des",
+   "title": "Modeling with Differential Equations",
+   "track": 1,
+   "group": "Ch. 9 Differential Equations",
+   "stewart": {
+    "section": "9.1",
+    "printedPages": [
+     586,
+     590
+    ]
+   },
+   "prereqs": [
+    "antiderivatives",
+    "exponential-growth-decay"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Read a differential equation as a statement about a rate.",
+   "sessions": 1
+  },
+  {
+   "id": "direction-fields-euler",
+   "title": "Direction Fields and Euler's Method",
+   "track": 1,
+   "group": "Ch. 9 Differential Equations",
+   "stewart": {
+    "section": "9.2",
+    "printedPages": [
+     591,
+     598
+    ]
+   },
+   "prereqs": [
+    "modeling-with-des"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Sketch solutions from slopes and step along them numerically.",
+   "sessions": 2
+  },
+  {
+   "id": "separable-equations",
+   "title": "Separable Equations",
+   "track": 1,
+   "group": "Ch. 9 Differential Equations",
+   "stewart": {
+    "section": "9.3",
+    "printedPages": [
+     599,
+     607
+    ]
+   },
+   "prereqs": [
+    "modeling-with-des",
+    "substitution"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Solve equations where the variables can be separated and integrated.",
+   "sessions": 2
+  },
+  {
+   "id": "population-growth",
+   "title": "Models for Population Growth",
+   "track": 1,
+   "group": "Ch. 9 Differential Equations",
+   "stewart": {
+    "section": "9.4",
+    "printedPages": [
+     610,
+     619
+    ]
+   },
+   "prereqs": [
+    "separable-equations"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "The natural and logistic growth models.",
+   "sessions": 2
+  },
+  {
+   "id": "linear-des",
+   "title": "Linear Equations",
+   "track": 1,
+   "group": "Ch. 9 Differential Equations",
+   "stewart": {
+    "section": "9.5",
+    "printedPages": [
+     620,
+     626
+    ]
+   },
+   "prereqs": [
+    "separable-equations",
+    "integration-by-parts"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "First-order linear equations and the integrating factor.",
+   "sessions": 2
+  },
+  {
+   "id": "predator-prey",
+   "title": "Predator-Prey Systems",
+   "track": 1,
+   "group": "Ch. 9 Differential Equations",
+   "stewart": {
+    "section": "9.6",
+    "printedPages": [
+     627,
+     633
+    ]
+   },
+   "prereqs": [
+    "population-growth"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Two populations that affect each other, modeled as a system.",
+   "sessions": 1
+  },
+  {
+   "id": "parametric-curves",
+   "title": "Curves Defined by Parametric Equations",
+   "track": 1,
+   "group": "Ch. 10 Parametric Equations and Polar Coordinates",
+   "stewart": {
+    "section": "10.1",
+    "printedPages": [
+     640,
+     647
+    ]
+   },
+   "prereqs": [
+    "new-functions-from-old",
+    "trig-graphs"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Describe a curve by x(t) and y(t).",
+   "sessions": 2
+  },
+  {
+   "id": "calculus-parametric",
+   "title": "Calculus with Parametric Curves",
+   "track": 1,
+   "group": "Ch. 10 Parametric Equations and Polar Coordinates",
+   "stewart": {
+    "section": "10.2",
+    "printedPages": [
+     649,
+     656
+    ]
+   },
+   "prereqs": [
+    "parametric-curves",
+    "chain-rule",
+    "arc-length"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Tangents, areas, and arc length for parametric curves.",
+   "sessions": 2
+  },
+  {
+   "id": "polar-coordinates",
+   "title": "Polar Coordinates",
+   "track": 1,
+   "group": "Ch. 10 Parametric Equations and Polar Coordinates",
+   "stewart": {
+    "section": "10.3",
+    "printedPages": [
+     658,
+     667
+    ]
+   },
+   "prereqs": [
+    "unit-circle",
+    "trig-identities"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Locate points by distance and angle and graph polar curves.",
+   "sessions": 2
+  },
+  {
+   "id": "polar-areas-lengths",
+   "title": "Areas and Lengths in Polar Coordinates",
+   "track": 1,
+   "group": "Ch. 10 Parametric Equations and Polar Coordinates",
+   "stewart": {
+    "section": "10.4",
+    "printedPages": [
+     669,
+     673
+    ]
+   },
+   "prereqs": [
+    "polar-coordinates",
+    "trig-integrals"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Area and arc length for polar curves.",
+   "sessions": 2
+  },
+  {
+   "id": "conic-sections",
+   "title": "Conic Sections",
+   "track": 1,
+   "group": "Ch. 10 Parametric Equations and Polar Coordinates",
+   "stewart": {
+    "section": "10.5",
+    "printedPages": [
+     674,
+     681
+    ]
+   },
+   "prereqs": [
+    "graphs-of-second-degree"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Parabolas, ellipses, and hyperbolas from their defining properties.",
+   "sessions": 2
+  },
+  {
+   "id": "conics-polar",
+   "title": "Conic Sections in Polar Coordinates",
+   "track": 1,
+   "group": "Ch. 10 Parametric Equations and Polar Coordinates",
+   "stewart": {
+    "section": "10.6",
+    "printedPages": [
+     682,
+     688
+    ]
+   },
+   "prereqs": [
+    "conic-sections",
+    "polar-coordinates"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "One polar equation for every conic, using eccentricity.",
+   "sessions": 1
+  },
+  {
+   "id": "sequences",
+   "title": "Sequences",
+   "track": 1,
+   "group": "Ch. 11 Infinite Sequences and Series",
+   "stewart": {
+    "section": "11.1",
+    "printedPages": [
+     694,
+     706
+    ]
+   },
+   "prereqs": [
+    "limits-at-infinity"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Lists of numbers and whether they converge.",
+   "sessions": 3
+  },
+  {
+   "id": "series",
+   "title": "Series",
+   "track": 1,
+   "group": "Ch. 11 Infinite Sequences and Series",
+   "stewart": {
+    "section": "11.2",
+    "printedPages": [
+     707,
+     718
+    ]
+   },
+   "prereqs": [
+    "sequences",
+    "sigma-notation"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Adding infinitely many terms: geometric series and the divergence test.",
+   "sessions": 3
+  },
+  {
+   "id": "integral-test",
+   "title": "The Integral Test and Estimates of Sums",
+   "track": 1,
+   "group": "Ch. 11 Infinite Sequences and Series",
+   "stewart": {
+    "section": "11.3",
+    "printedPages": [
+     719,
+     726
+    ]
+   },
+   "prereqs": [
+    "series",
+    "improper-integrals"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Compare a series with an improper integral, including p-series.",
+   "sessions": 2
+  },
+  {
+   "id": "comparison-tests",
+   "title": "The Comparison Tests",
+   "track": 1,
+   "group": "Ch. 11 Infinite Sequences and Series",
+   "stewart": {
+    "section": "11.4",
+    "printedPages": [
+     727,
+     731
+    ]
+   },
+   "prereqs": [
+    "integral-test"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Direct and limit comparison with a known series.",
+   "sessions": 2
+  },
+  {
+   "id": "alternating-series",
+   "title": "Alternating Series",
+   "track": 1,
+   "group": "Ch. 11 Infinite Sequences and Series",
+   "stewart": {
+    "section": "11.5",
+    "printedPages": [
+     732,
+     736
+    ]
+   },
+   "prereqs": [
+    "series"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "The alternating series test and its error estimate.",
+   "sessions": 2
+  },
+  {
+   "id": "ratio-root-tests",
+   "title": "Absolute Convergence and the Ratio and Root Tests",
+   "track": 1,
+   "group": "Ch. 11 Infinite Sequences and Series",
+   "stewart": {
+    "section": "11.6",
+    "printedPages": [
+     737,
+     743
+    ]
+   },
+   "prereqs": [
+    "comparison-tests",
+    "alternating-series"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Absolute vs conditional convergence; the ratio and root tests.",
+   "sessions": 2
+  },
+  {
+   "id": "series-strategy",
+   "title": "Strategy for Testing Series",
+   "track": 1,
+   "group": "Ch. 11 Infinite Sequences and Series",
+   "stewart": {
+    "section": "11.7",
+    "printedPages": [
+     744,
+     745
+    ]
+   },
+   "prereqs": [
+    "ratio-root-tests"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Pick the right convergence test by the shape of the terms.",
+   "sessions": 1
+  },
+  {
+   "id": "power-series",
+   "title": "Power Series",
+   "track": 1,
+   "group": "Ch. 11 Infinite Sequences and Series",
+   "stewart": {
+    "section": "11.8",
+    "printedPages": [
+     746,
+     751
+    ]
+   },
+   "prereqs": [
+    "ratio-root-tests"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Series in x: radius and interval of convergence.",
+   "sessions": 2
+  },
+  {
+   "id": "functions-as-power-series",
+   "title": "Representations of Functions as Power Series",
+   "track": 1,
+   "group": "Ch. 11 Infinite Sequences and Series",
+   "stewart": {
+    "section": "11.9",
+    "printedPages": [
+     752,
+     758
+    ]
+   },
+   "prereqs": [
+    "power-series"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Write familiar functions as power series by differentiating and integrating.",
+   "sessions": 2
+  },
+  {
+   "id": "taylor-series",
+   "title": "Taylor and Maclaurin Series",
+   "track": 1,
+   "group": "Ch. 11 Infinite Sequences and Series",
+   "stewart": {
+    "section": "11.10",
+    "printedPages": [
+     759,
+     772
+    ]
+   },
+   "prereqs": [
+    "functions-as-power-series"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "The Taylor series of a function and the standard Maclaurin series.",
+   "sessions": 3
+  },
+  {
+   "id": "taylor-applications",
+   "title": "Applications of Taylor Polynomials",
+   "track": 1,
+   "group": "Ch. 11 Infinite Sequences and Series",
+   "stewart": {
+    "section": "11.11",
+    "printedPages": [
+     774,
+     782
+    ]
+   },
+   "prereqs": [
+    "taylor-series"
+   ],
+   "integralTier": null,
+   "unlockThreshold": 0.7,
+   "summary": "Approximate functions with polynomials and bound the error.",
+   "sessions": 2
+  }
+ ]
+}

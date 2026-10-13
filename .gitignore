@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.pdf
+.env
+.env.*
+tools/.venv/
+tools/__pycache__/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+!tools/rejected.log

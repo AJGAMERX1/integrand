@@ -1,0 +1,28 @@
+{
+  "name": "integrand",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Integrand: a phone-first daily calculus study coach built around Stewart, Calculus: Early Transcendentals (8th ed.)",
+  "scripts": {
+    "dev": "vite --port 8020",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 8021",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "problems:verify": "python3 tools/verify_problems.py data/problems",
+    "problems:generate": "python3 tools/generate_problems.py"
+  },
+  "dependencies": {
+    "katex": "^0.19.0",
+    "mathlive": "^0.111.1"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.8",
+    "jsdom": "^30.1.2",
+    "typescript": "^5.9.0",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.4"
+  }
+}
