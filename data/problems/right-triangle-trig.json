@@ -1,0 +1,1124 @@
+{
+ "skill": "right-triangle-trig",
+ "problems": [
+  {
+   "id": "right-triangle-trig-9cc3e6",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs of length 40 and 9. Let $\\theta$ be the acute angle opposite the leg of length 40. Find $\\sin\\theta$ as a fraction.",
+   "checker": "numeric",
+   "answer": "40/41",
+   "hints": [
+    "SOH-CAH-TOA: sine = opposite/hypotenuse, cosine = adjacent/hypotenuse, tangent = opposite/adjacent.",
+    "First find the hypotenuse with the Pythagorean theorem: $\\sqrt{40^2 + 9^2} = 41$."
+   ],
+   "solution": [
+    "Hypotenuse: $\\sqrt{1600 + 81} = 41$.",
+    "Opposite $= 40$, adjacent $= 9$.",
+    "$\\sin\\theta = \\frac{40}{41}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-def1dd",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs 8 and 9. Find the length of the hypotenuse (exact, simplified).",
+   "checker": "numeric",
+   "answer": "sqrt(145)",
+   "hints": [
+    "Pythagorean theorem: $a^2 + b^2 = c^2$.",
+    "$c = \\sqrt{8^2 + 9^2}$; simplify the root if you can."
+   ],
+   "solution": [
+    "$c^2 = 64 + 81 = 145$.",
+    "$c = \\sqrt{145}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-a314f3",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "Convert $270^\\circ$ to radians. Give an exact answer in terms of $\\pi$.",
+   "checker": "numeric",
+   "answer": "3*pi/2",
+   "hints": [
+    "$180^\\circ = \\pi$ radians, so multiply degrees by $\\pi/180$.",
+    "$\\dfrac{270}{180}$ reduces to $\\frac{3}{2}$."
+   ],
+   "solution": [
+    "$270^\\circ \\cdot \\dfrac{\\pi}{180^\\circ} = \\dfrac{270\\pi}{180}$.",
+    "$= \\frac{3 \\pi}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-3c5f0d",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "Find the exact value of $\\cos\\left(\\frac{\\pi}{4}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/2",
+   "hints": [
+    "Use the 30-60-90 triangle (sides $1, \\sqrt{3}, 2$) or the 45-45-90 triangle (sides $1, 1, \\sqrt{2}$).",
+    "$\\frac{\\pi}{4}$ is $45^\\circ$: use the 45-45-90 triangle."
+   ],
+   "solution": [
+    "In the reference triangle, the sides give $\\cos(\\frac{\\pi}{4}) = \\frac{\\sqrt{2}}{2}$.",
+    "Rationalize the denominator if needed."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-2f7e92",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "A ramp rises 2 m and makes a $30^\\circ$ angle with the ground. How long is the ramp? Give an exact answer.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "The ramp is the hypotenuse; the rise is opposite the angle.",
+    "ramp $= \\dfrac{2}{\\sin 30^\\circ}$."
+   ],
+   "solution": [
+    "$\\sin 30^\\circ = \\dfrac{2}{\\text{ramp}}$.",
+    "ramp $= \\dfrac{2}{\\frac{1}{2}} = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-1b3320",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "In a right triangle one acute angle is $45^\\circ$ and the side opposite it has length 2. Find the hypotenuse. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "2*sqrt(2)",
+   "hints": [
+    "Pick the ratio that links the opposite side with the side you want: sine (opp/hyp).",
+    "$\\sin 45^\\circ = \\dfrac{2}{?}$."
+   ],
+   "solution": [
+    "$\\sin 45^\\circ = \\frac{\\sqrt{2}}{2}$.",
+    "Side $= \\dfrac{2}{\\frac{\\sqrt{2}}{2}} = 2 \\sqrt{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-44502c",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs 9 and 12 and hypotenuse 15. Which fraction is $\\sin$ of the angle opposite the leg of length 9?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Label the sides relative to that angle: opposite, adjacent, hypotenuse.",
+    "SOH-CAH-TOA."
+   ],
+   "solution": [
+    "Opposite $= 9$, adjacent $= 12$, hypotenuse $= 15$.",
+    "$\\sin\\theta = \\frac{9}{15}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\frac{12}{9}",
+    "\\frac{12}{15}",
+    "\\frac{9}{12}",
+    "\\frac{9}{15}"
+   ]
+  },
+  {
+   "id": "right-triangle-trig-a6e022",
+   "skill": "right-triangle-trig",
+   "difficulty": 3,
+   "statement": "A circle has radius 3. Find the area of the sector with central angle $\\frac{2 \\pi}{3}$ radians. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "3*pi",
+   "hints": [
+    "Sector area $= \\tfrac12 r^2\\theta$ with $\\theta$ in radians.",
+    "$\\tfrac12\\cdot3^2\\cdot\\frac{2 \\pi}{3}$."
+   ],
+   "solution": [
+    "$A = \\tfrac12 r^2\\theta = \\tfrac12\\cdot9\\cdot\\frac{2 \\pi}{3}$.",
+    "$= 3 \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-42d8e7",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "A right triangle has legs $5 \\sqrt{3}$ (opposite $\\theta$) and $5$ (adjacent to $\\theta$). Find $\\theta$ in radians.",
+   "checker": "numeric",
+   "answer": "pi/3",
+   "hints": [
+    "$\\tan\\theta = \\dfrac{\\text{opposite}}{\\text{adjacent}} = \\sqrt{3}$.",
+    "Which special angle has that tangent?"
+   ],
+   "solution": [
+    "$\\tan\\theta = \\sqrt{3}$.",
+    "So $\\theta = \\frac{\\pi}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-12f737",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "For an acute angle $\\theta$, $\\cos 50^\\circ = \\sin\\theta$. Find $\\theta$ in degrees.",
+   "checker": "numeric",
+   "answer": "40",
+   "hints": [
+    "Sine and cosine of complementary angles are equal.",
+    "Two angles are complementary when they add to $90^\\circ$."
+   ],
+   "solution": [
+    "$\\cos\\theta = \\sin(90^\\circ - \\theta)$ for every acute angle.",
+    "So $\\theta = 90^\\circ - 50^\\circ = 40^\\circ$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-cb9f95",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs of length 24 and 7. Let $\\theta$ be the acute angle opposite the leg of length 24. Find $\\cos\\theta$ as a fraction.",
+   "checker": "numeric",
+   "answer": "7/25",
+   "hints": [
+    "SOH-CAH-TOA: sine = opposite/hypotenuse, cosine = adjacent/hypotenuse, tangent = opposite/adjacent.",
+    "First find the hypotenuse with the Pythagorean theorem: $\\sqrt{24^2 + 7^2} = 25$."
+   ],
+   "solution": [
+    "Hypotenuse: $\\sqrt{576 + 49} = 25$.",
+    "Opposite $= 24$, adjacent $= 7$.",
+    "$\\cos\\theta = \\frac{7}{25}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-d275a3",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "$\\theta$ is an acute angle with $\\sin\\theta = \\frac{20}{29}$. Find $\\tan\\theta$.",
+   "checker": "numeric",
+   "answer": "20/21",
+   "hints": [
+    "Draw a right triangle where $\\sin\\theta = \\frac{20}{29}$ and find the third side.",
+    "Use the Pythagorean theorem for the missing side, then read off the ratio."
+   ],
+   "solution": [
+    "Sides: opposite $20$, hypotenuse $29$, so the third side is $\\sqrt{29^2 - 20^2} = 21$.",
+    "$\\tan\\theta = \\frac{20}{21}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-79fc62",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has hypotenuse 20 and one leg 12. Find the other leg.",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "The hypotenuse is the longest side: $c^2 = a^2 + b^2$.",
+    "$b = \\sqrt{20^2 - 12^2}$."
+   ],
+   "solution": [
+    "$b^2 = 400 - 144 = 256$.",
+    "$b = 16$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-efda75",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "Convert $\\dfrac{2\\pi}{5}$ radians to degrees.",
+   "checker": "numeric",
+   "answer": "72",
+   "hints": [
+    "$\\pi$ radians $= 180^\\circ$, so replace $\\pi$ with $180$.",
+    "$\\dfrac{2\\cdot 180}{5}$."
+   ],
+   "solution": [
+    "$\\dfrac{2\\pi}{5} = \\dfrac{2\\cdot 180^\\circ}{5}$.",
+    "$= 72^\\circ$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-1d07f0",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\tan\\left(\\frac{\\pi}{6}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(3)/3",
+   "hints": [
+    "Use the 30-60-90 triangle (sides $1, \\sqrt{3}, 2$) or the 45-45-90 triangle (sides $1, 1, \\sqrt{2}$).",
+    "$\\frac{\\pi}{6}$ is $30^\\circ$: the side opposite it in the 30-60-90 triangle is $1$."
+   ],
+   "solution": [
+    "In the reference triangle, the sides give $\\tan(\\frac{\\pi}{6}) = \\frac{\\sqrt{3}}{3}$.",
+    "Rationalize the denominator if needed."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-ea0d12",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "A 4 m ladder leans against a wall, making a $60^\\circ$ angle with the ground. How high up the wall does it reach? Give an exact answer.",
+   "checker": "numeric",
+   "answer": "2*sqrt(3)",
+   "hints": [
+    "The ladder is the hypotenuse; the height is the side opposite the ground angle.",
+    "height $= 4\\sin 60^\\circ$."
+   ],
+   "solution": [
+    "$\\sin 60^\\circ = \\dfrac{\\text{height}}{4}$.",
+    "height $= 4\\cdot\\frac{\\sqrt{3}}{2} = 2 \\sqrt{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-056439",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "In a right triangle one acute angle is $45^\\circ$ and the side opposite it has length 5. Find the hypotenuse. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "5*sqrt(2)",
+   "hints": [
+    "Pick the ratio that links the opposite side with the side you want: sine (opp/hyp).",
+    "$\\sin 45^\\circ = \\dfrac{5}{?}$."
+   ],
+   "solution": [
+    "$\\sin 45^\\circ = \\frac{\\sqrt{2}}{2}$.",
+    "Side $= \\dfrac{5}{\\frac{\\sqrt{2}}{2}} = 5 \\sqrt{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-0838d1",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs 7 and 24 and hypotenuse 25. Which fraction is $\\tan$ of the angle opposite the leg of length 7?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Label the sides relative to that angle: opposite, adjacent, hypotenuse.",
+    "SOH-CAH-TOA."
+   ],
+   "solution": [
+    "Opposite $= 7$, adjacent $= 24$, hypotenuse $= 25$.",
+    "$\\tan\\theta = \\frac{7}{24}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\frac{24}{7}",
+    "\\frac{24}{25}",
+    "\\frac{7}{25}",
+    "\\frac{7}{24}"
+   ]
+  },
+  {
+   "id": "right-triangle-trig-c57ab6",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "A circle has radius 5. Find the length of the arc cut off by a central angle of $\\frac{\\pi}{2}$ radians. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "5*pi/2",
+   "hints": [
+    "Arc length $s = r\\theta$ (this is why radians are convenient).",
+    "$s = 5\\cdot\\frac{\\pi}{2}$."
+   ],
+   "solution": [
+    "$s = r\\theta = 5\\cdot\\frac{\\pi}{2}$.",
+    "$= \\frac{5 \\pi}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-9f7c9b",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "A right triangle has legs $3$ (opposite $\\theta$) and $3 \\sqrt{3}$ (adjacent to $\\theta$). Find $\\theta$ in radians.",
+   "checker": "numeric",
+   "answer": "pi/6",
+   "hints": [
+    "$\\tan\\theta = \\dfrac{\\text{opposite}}{\\text{adjacent}} = \\frac{\\sqrt{3}}{3}$.",
+    "Which special angle has that tangent?"
+   ],
+   "solution": [
+    "$\\tan\\theta = \\frac{\\sqrt{3}}{3}$.",
+    "So $\\theta = \\frac{\\pi}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-0861ac",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "For an acute angle $\\theta$, $\\sin 65^\\circ = \\cos\\theta$. Find $\\theta$ in degrees.",
+   "checker": "numeric",
+   "answer": "25",
+   "hints": [
+    "Sine and cosine of complementary angles are equal.",
+    "Two angles are complementary when they add to $90^\\circ$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\cos(90^\\circ - \\theta)$ for every acute angle.",
+    "So $\\theta = 90^\\circ - 65^\\circ = 25^\\circ$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-ead9bb",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs of length 6 and 8. Let $\\theta$ be the acute angle opposite the leg of length 6. Find $\\tan\\theta$ as a fraction.",
+   "checker": "numeric",
+   "answer": "3/4",
+   "hints": [
+    "SOH-CAH-TOA: sine = opposite/hypotenuse, cosine = adjacent/hypotenuse, tangent = opposite/adjacent.",
+    "First find the hypotenuse with the Pythagorean theorem: $\\sqrt{6^2 + 8^2} = 10$."
+   ],
+   "solution": [
+    "Hypotenuse: $\\sqrt{36 + 64} = 10$.",
+    "Opposite $= 6$, adjacent $= 8$.",
+    "$\\tan\\theta = \\frac{3}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-919089",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs 2 and 6. Find the length of the hypotenuse (exact, simplified).",
+   "checker": "numeric",
+   "answer": "2*sqrt(10)",
+   "hints": [
+    "Pythagorean theorem: $a^2 + b^2 = c^2$.",
+    "$c = \\sqrt{2^2 + 6^2}$; simplify the root if you can."
+   ],
+   "solution": [
+    "$c^2 = 4 + 36 = 40$.",
+    "$c = 2 \\sqrt{10}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-426420",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "Convert $\\dfrac{\\pi}{4}$ radians to degrees.",
+   "checker": "numeric",
+   "answer": "45",
+   "hints": [
+    "$\\pi$ radians $= 180^\\circ$, so replace $\\pi$ with $180$.",
+    "$\\dfrac{1\\cdot 180}{4}$."
+   ],
+   "solution": [
+    "$\\dfrac{1\\pi}{4} = \\dfrac{1\\cdot 180^\\circ}{4}$.",
+    "$= 45^\\circ$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-c5d03c",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "Find the exact value of $\\sin\\left(45^\\circ\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/2",
+   "hints": [
+    "Use the 30-60-90 triangle (sides $1, \\sqrt{3}, 2$) or the 45-45-90 triangle (sides $1, 1, \\sqrt{2}$).",
+    "$45^\\circ$ is $45^\\circ$: use the 45-45-90 triangle."
+   ],
+   "solution": [
+    "In the reference triangle, the sides give $\\sin(45^\\circ) = \\frac{\\sqrt{2}}{2}$.",
+    "Rationalize the denominator if needed."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-094471",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "A ramp rises 4 m and makes a $45^\\circ$ angle with the ground. How long is the ramp? Give an exact answer.",
+   "checker": "numeric",
+   "answer": "4*sqrt(2)",
+   "hints": [
+    "The ramp is the hypotenuse; the rise is opposite the angle.",
+    "ramp $= \\dfrac{4}{\\sin 45^\\circ}$."
+   ],
+   "solution": [
+    "$\\sin 45^\\circ = \\dfrac{4}{\\text{ramp}}$.",
+    "ramp $= \\dfrac{4}{\\frac{\\sqrt{2}}{2}} = 4 \\sqrt{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-704b6e",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "In a right triangle one acute angle is $30^\\circ$ and the side opposite it has length 5. Find the hypotenuse. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "Pick the ratio that links the opposite side with the side you want: sine (opp/hyp).",
+    "$\\sin 30^\\circ = \\dfrac{5}{?}$."
+   ],
+   "solution": [
+    "$\\sin 30^\\circ = \\frac{1}{2}$.",
+    "Side $= \\dfrac{5}{\\frac{1}{2}} = 10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-4a22b9",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs 6 and 8 and hypotenuse 10. Which fraction is $\\tan$ of the angle opposite the leg of length 6?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Label the sides relative to that angle: opposite, adjacent, hypotenuse.",
+    "SOH-CAH-TOA."
+   ],
+   "solution": [
+    "Opposite $= 6$, adjacent $= 8$, hypotenuse $= 10$.",
+    "$\\tan\\theta = \\frac{6}{8}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\frac{8}{6}",
+    "\\frac{6}{8}",
+    "\\frac{6}{10}",
+    "\\frac{8}{10}"
+   ]
+  },
+  {
+   "id": "right-triangle-trig-96ee35",
+   "skill": "right-triangle-trig",
+   "difficulty": 3,
+   "statement": "A circle has radius 8. Find the area of the sector with central angle $\\frac{5 \\pi}{6}$ radians. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "80*pi/3",
+   "hints": [
+    "Sector area $= \\tfrac12 r^2\\theta$ with $\\theta$ in radians.",
+    "$\\tfrac12\\cdot8^2\\cdot\\frac{5 \\pi}{6}$."
+   ],
+   "solution": [
+    "$A = \\tfrac12 r^2\\theta = \\tfrac12\\cdot64\\cdot\\frac{5 \\pi}{6}$.",
+    "$= \\frac{80 \\pi}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-93cf11",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "For an acute angle $\\theta$, $\\sin 70^\\circ = \\cos\\theta$. Find $\\theta$ in degrees.",
+   "checker": "numeric",
+   "answer": "20",
+   "hints": [
+    "Sine and cosine of complementary angles are equal.",
+    "Two angles are complementary when they add to $90^\\circ$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\cos(90^\\circ - \\theta)$ for every acute angle.",
+    "So $\\theta = 90^\\circ - 70^\\circ = 20^\\circ$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-fed37e",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs of length 24 and 7. Let $\\theta$ be the acute angle opposite the leg of length 24. Find $\\sin\\theta$ as a fraction.",
+   "checker": "numeric",
+   "answer": "24/25",
+   "hints": [
+    "SOH-CAH-TOA: sine = opposite/hypotenuse, cosine = adjacent/hypotenuse, tangent = opposite/adjacent.",
+    "First find the hypotenuse with the Pythagorean theorem: $\\sqrt{24^2 + 7^2} = 25$."
+   ],
+   "solution": [
+    "Hypotenuse: $\\sqrt{576 + 49} = 25$.",
+    "Opposite $= 24$, adjacent $= 7$.",
+    "$\\sin\\theta = \\frac{24}{25}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-934c24",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs 5 and 6. Find the length of the hypotenuse (exact, simplified).",
+   "checker": "numeric",
+   "answer": "sqrt(61)",
+   "hints": [
+    "Pythagorean theorem: $a^2 + b^2 = c^2$.",
+    "$c = \\sqrt{5^2 + 6^2}$; simplify the root if you can."
+   ],
+   "solution": [
+    "$c^2 = 25 + 36 = 61$.",
+    "$c = \\sqrt{61}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-64e8b7",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "Convert $225^\\circ$ to radians. Give an exact answer in terms of $\\pi$.",
+   "checker": "numeric",
+   "answer": "5*pi/4",
+   "hints": [
+    "$180^\\circ = \\pi$ radians, so multiply degrees by $\\pi/180$.",
+    "$\\dfrac{225}{180}$ reduces to $\\frac{5}{4}$."
+   ],
+   "solution": [
+    "$225^\\circ \\cdot \\dfrac{\\pi}{180^\\circ} = \\dfrac{225\\pi}{180}$.",
+    "$= \\frac{5 \\pi}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-eabd79",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "Find the exact value of $\\sin\\left(60^\\circ\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(3)/2",
+   "hints": [
+    "Use the 30-60-90 triangle (sides $1, \\sqrt{3}, 2$) or the 45-45-90 triangle (sides $1, 1, \\sqrt{2}$).",
+    "$60^\\circ$ is $60^\\circ$: the side opposite it in the 30-60-90 triangle is $\\sqrt{3}$."
+   ],
+   "solution": [
+    "In the reference triangle, the sides give $\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$.",
+    "Rationalize the denominator if needed."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-50618e",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "A tree casts a shadow 10 m long when the sun is $30^\\circ$ above the horizon. How tall is the tree? Give an exact answer.",
+   "checker": "numeric",
+   "answer": "10*sqrt(3)/3",
+   "hints": [
+    "The shadow is the adjacent side and the tree is the opposite side.",
+    "height $= 10\\tan 30^\\circ$."
+   ],
+   "solution": [
+    "$\\tan 30^\\circ = \\dfrac{\\text{height}}{10}$.",
+    "height $= 10\\cdot\\frac{\\sqrt{3}}{3} = \\frac{10 \\sqrt{3}}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-1d7a84",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "In a right triangle one acute angle is $45^\\circ$ and the side opposite it has length 6. Find the hypotenuse. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "6*sqrt(2)",
+   "hints": [
+    "Pick the ratio that links the opposite side with the side you want: sine (opp/hyp).",
+    "$\\sin 45^\\circ = \\dfrac{6}{?}$."
+   ],
+   "solution": [
+    "$\\sin 45^\\circ = \\frac{\\sqrt{2}}{2}$.",
+    "Side $= \\dfrac{6}{\\frac{\\sqrt{2}}{2}} = 6 \\sqrt{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-2a9c87",
+   "skill": "right-triangle-trig",
+   "difficulty": 3,
+   "statement": "A circle has radius 9. Find the area of the sector with central angle $\\frac{\\pi}{3}$ radians. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "27*pi/2",
+   "hints": [
+    "Sector area $= \\tfrac12 r^2\\theta$ with $\\theta$ in radians.",
+    "$\\tfrac12\\cdot9^2\\cdot\\frac{\\pi}{3}$."
+   ],
+   "solution": [
+    "$A = \\tfrac12 r^2\\theta = \\tfrac12\\cdot81\\cdot\\frac{\\pi}{3}$.",
+    "$= \\frac{27 \\pi}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-cfbb89",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "A right triangle has legs $1$ (opposite $\\theta$) and $1$ (adjacent to $\\theta$). Find $\\theta$ in radians.",
+   "checker": "numeric",
+   "answer": "pi/4",
+   "hints": [
+    "$\\tan\\theta = \\dfrac{\\text{opposite}}{\\text{adjacent}} = 1.0$.",
+    "Which special angle has that tangent?"
+   ],
+   "solution": [
+    "$\\tan\\theta = 1.0$.",
+    "So $\\theta = \\frac{\\pi}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-2a0a22",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs of length 3 and 4. Let $\\theta$ be the acute angle opposite the leg of length 3. Find $\\tan\\theta$ as a fraction.",
+   "checker": "numeric",
+   "answer": "3/4",
+   "hints": [
+    "SOH-CAH-TOA: sine = opposite/hypotenuse, cosine = adjacent/hypotenuse, tangent = opposite/adjacent.",
+    "First find the hypotenuse with the Pythagorean theorem: $\\sqrt{3^2 + 4^2} = 5$."
+   ],
+   "solution": [
+    "Hypotenuse: $\\sqrt{9 + 16} = 5$.",
+    "Opposite $= 3$, adjacent $= 4$.",
+    "$\\tan\\theta = \\frac{3}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-06a3a2",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "$\\theta$ is an acute angle with $\\cos\\theta = \\frac{40}{41}$. Find $\\tan\\theta$.",
+   "checker": "numeric",
+   "answer": "9/40",
+   "hints": [
+    "Draw a right triangle where $\\cos\\theta = \\frac{40}{41}$ and find the third side.",
+    "Use the Pythagorean theorem for the missing side, then read off the ratio."
+   ],
+   "solution": [
+    "Sides: adjacent $40$, hypotenuse $41$, so the third side is $\\sqrt{41^2 - 40^2} = 9$.",
+    "$\\tan\\theta = \\frac{9}{40}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-554196",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs 3 and 4. Find the length of the hypotenuse (exact, simplified).",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Pythagorean theorem: $a^2 + b^2 = c^2$.",
+    "$c = \\sqrt{3^2 + 4^2}$; simplify the root if you can."
+   ],
+   "solution": [
+    "$c^2 = 9 + 16 = 25$.",
+    "$c = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-01bbb8",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "Convert $\\dfrac{5\\pi}{6}$ radians to degrees.",
+   "checker": "numeric",
+   "answer": "150",
+   "hints": [
+    "$\\pi$ radians $= 180^\\circ$, so replace $\\pi$ with $180$.",
+    "$\\dfrac{5\\cdot 180}{6}$."
+   ],
+   "solution": [
+    "$\\dfrac{5\\pi}{6} = \\dfrac{5\\cdot 180^\\circ}{6}$.",
+    "$= 150^\\circ$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-527458",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "A ramp rises 5 m and makes a $45^\\circ$ angle with the ground. How long is the ramp? Give an exact answer.",
+   "checker": "numeric",
+   "answer": "5*sqrt(2)",
+   "hints": [
+    "The ramp is the hypotenuse; the rise is opposite the angle.",
+    "ramp $= \\dfrac{5}{\\sin 45^\\circ}$."
+   ],
+   "solution": [
+    "$\\sin 45^\\circ = \\dfrac{5}{\\text{ramp}}$.",
+    "ramp $= \\dfrac{5}{\\frac{\\sqrt{2}}{2}} = 5 \\sqrt{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-bb35e3",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "In a right triangle one acute angle is $60^\\circ$ and the side opposite it has length 2. Find the hypotenuse. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "4*sqrt(3)/3",
+   "hints": [
+    "Pick the ratio that links the opposite side with the side you want: sine (opp/hyp).",
+    "$\\sin 60^\\circ = \\dfrac{2}{?}$."
+   ],
+   "solution": [
+    "$\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.",
+    "Side $= \\dfrac{2}{\\frac{\\sqrt{3}}{2}} = \\frac{4 \\sqrt{3}}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-3b2fb1",
+   "skill": "right-triangle-trig",
+   "difficulty": 3,
+   "statement": "A circle has radius 6. Find the area of the sector with central angle $\\frac{2 \\pi}{3}$ radians. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "12*pi",
+   "hints": [
+    "Sector area $= \\tfrac12 r^2\\theta$ with $\\theta$ in radians.",
+    "$\\tfrac12\\cdot6^2\\cdot\\frac{2 \\pi}{3}$."
+   ],
+   "solution": [
+    "$A = \\tfrac12 r^2\\theta = \\tfrac12\\cdot36\\cdot\\frac{2 \\pi}{3}$.",
+    "$= 12 \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-4653ba",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "For an acute angle $\\theta$, $\\cos 10^\\circ = \\sin\\theta$. Find $\\theta$ in degrees.",
+   "checker": "numeric",
+   "answer": "80",
+   "hints": [
+    "Sine and cosine of complementary angles are equal.",
+    "Two angles are complementary when they add to $90^\\circ$."
+   ],
+   "solution": [
+    "$\\cos\\theta = \\sin(90^\\circ - \\theta)$ for every acute angle.",
+    "So $\\theta = 90^\\circ - 10^\\circ = 80^\\circ$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-73e30f",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs of length 3 and 4. Let $\\theta$ be the acute angle opposite the leg of length 3. Find $\\cos\\theta$ as a fraction.",
+   "checker": "numeric",
+   "answer": "4/5",
+   "hints": [
+    "SOH-CAH-TOA: sine = opposite/hypotenuse, cosine = adjacent/hypotenuse, tangent = opposite/adjacent.",
+    "First find the hypotenuse with the Pythagorean theorem: $\\sqrt{3^2 + 4^2} = 5$."
+   ],
+   "solution": [
+    "Hypotenuse: $\\sqrt{9 + 16} = 5$.",
+    "Opposite $= 3$, adjacent $= 4$.",
+    "$\\cos\\theta = \\frac{4}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-822e41",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs 2 and 1. Find the length of the hypotenuse (exact, simplified).",
+   "checker": "numeric",
+   "answer": "sqrt(5)",
+   "hints": [
+    "Pythagorean theorem: $a^2 + b^2 = c^2$.",
+    "$c = \\sqrt{2^2 + 1^2}$; simplify the root if you can."
+   ],
+   "solution": [
+    "$c^2 = 4 + 1 = 5$.",
+    "$c = \\sqrt{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-c0a678",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "Convert $\\dfrac{\\pi}{3}$ radians to degrees.",
+   "checker": "numeric",
+   "answer": "60",
+   "hints": [
+    "$\\pi$ radians $= 180^\\circ$, so replace $\\pi$ with $180$.",
+    "$\\dfrac{1\\cdot 180}{3}$."
+   ],
+   "solution": [
+    "$\\dfrac{1\\pi}{3} = \\dfrac{1\\cdot 180^\\circ}{3}$.",
+    "$= 60^\\circ$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-fc7260",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "Find the exact value of $\\cos\\left(\\frac{\\pi}{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "Use the 30-60-90 triangle (sides $1, \\sqrt{3}, 2$) or the 45-45-90 triangle (sides $1, 1, \\sqrt{2}$).",
+    "$\\frac{\\pi}{3}$ is $60^\\circ$: the side opposite it in the 30-60-90 triangle is $\\sqrt{3}$."
+   ],
+   "solution": [
+    "In the reference triangle, the sides give $\\cos(\\frac{\\pi}{3}) = \\frac{1}{2}$.",
+    "Rationalize the denominator if needed."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-efcdd5",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "A tree casts a shadow 5 m long when the sun is $30^\\circ$ above the horizon. How tall is the tree? Give an exact answer.",
+   "checker": "numeric",
+   "answer": "5*sqrt(3)/3",
+   "hints": [
+    "The shadow is the adjacent side and the tree is the opposite side.",
+    "height $= 5\\tan 30^\\circ$."
+   ],
+   "solution": [
+    "$\\tan 30^\\circ = \\dfrac{\\text{height}}{5}$.",
+    "height $= 5\\cdot\\frac{\\sqrt{3}}{3} = \\frac{5 \\sqrt{3}}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-9f4b98",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs 5 and 12 and hypotenuse 13. Which fraction is $\\tan$ of the angle opposite the leg of length 5?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Label the sides relative to that angle: opposite, adjacent, hypotenuse.",
+    "SOH-CAH-TOA."
+   ],
+   "solution": [
+    "Opposite $= 5$, adjacent $= 12$, hypotenuse $= 13$.",
+    "$\\tan\\theta = \\frac{5}{12}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\frac{5}{12}",
+    "\\frac{12}{5}",
+    "\\frac{12}{13}",
+    "\\frac{5}{13}"
+   ]
+  },
+  {
+   "id": "right-triangle-trig-755afc",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "A circle has radius 2. Find the length of the arc cut off by a central angle of $\\frac{\\pi}{2}$ radians. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "pi",
+   "hints": [
+    "Arc length $s = r\\theta$ (this is why radians are convenient).",
+    "$s = 2\\cdot\\frac{\\pi}{2}$."
+   ],
+   "solution": [
+    "$s = r\\theta = 2\\cdot\\frac{\\pi}{2}$.",
+    "$= \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-84f83b",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "A right triangle has legs $1$ (opposite $\\theta$) and $\\sqrt{3}$ (adjacent to $\\theta$). Find $\\theta$ in radians.",
+   "checker": "numeric",
+   "answer": "pi/6",
+   "hints": [
+    "$\\tan\\theta = \\dfrac{\\text{opposite}}{\\text{adjacent}} = \\frac{\\sqrt{3}}{3}$.",
+    "Which special angle has that tangent?"
+   ],
+   "solution": [
+    "$\\tan\\theta = \\frac{\\sqrt{3}}{3}$.",
+    "So $\\theta = \\frac{\\pi}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-8aa8df",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "For an acute angle $\\theta$, $\\cos 55^\\circ = \\sin\\theta$. Find $\\theta$ in degrees.",
+   "checker": "numeric",
+   "answer": "35",
+   "hints": [
+    "Sine and cosine of complementary angles are equal.",
+    "Two angles are complementary when they add to $90^\\circ$."
+   ],
+   "solution": [
+    "$\\cos\\theta = \\sin(90^\\circ - \\theta)$ for every acute angle.",
+    "So $\\theta = 90^\\circ - 55^\\circ = 35^\\circ$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-ec0b10",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs of length 16 and 12. Let $\\theta$ be the acute angle opposite the leg of length 16. Find $\\cos\\theta$ as a fraction.",
+   "checker": "numeric",
+   "answer": "3/5",
+   "hints": [
+    "SOH-CAH-TOA: sine = opposite/hypotenuse, cosine = adjacent/hypotenuse, tangent = opposite/adjacent.",
+    "First find the hypotenuse with the Pythagorean theorem: $\\sqrt{16^2 + 12^2} = 20$."
+   ],
+   "solution": [
+    "Hypotenuse: $\\sqrt{256 + 144} = 20$.",
+    "Opposite $= 16$, adjacent $= 12$.",
+    "$\\cos\\theta = \\frac{3}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-fb6180",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "$\\theta$ is an acute angle with $\\sin\\theta = \\frac{3}{5}$. Find $\\tan\\theta$.",
+   "checker": "numeric",
+   "answer": "3/4",
+   "hints": [
+    "Draw a right triangle where $\\sin\\theta = \\frac{3}{5}$ and find the third side.",
+    "Use the Pythagorean theorem for the missing side, then read off the ratio."
+   ],
+   "solution": [
+    "Sides: opposite $3$, hypotenuse $5$, so the third side is $\\sqrt{5^2 - 3^2} = 4$.",
+    "$\\tan\\theta = \\frac{3}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-9ecc50",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "A right triangle has legs 6 and 4. Find the length of the hypotenuse (exact, simplified).",
+   "checker": "numeric",
+   "answer": "2*sqrt(13)",
+   "hints": [
+    "Pythagorean theorem: $a^2 + b^2 = c^2$.",
+    "$c = \\sqrt{6^2 + 4^2}$; simplify the root if you can."
+   ],
+   "solution": [
+    "$c^2 = 36 + 16 = 52$.",
+    "$c = 2 \\sqrt{13}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-b21f80",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "Convert $135^\\circ$ to radians. Give an exact answer in terms of $\\pi$.",
+   "checker": "numeric",
+   "answer": "3*pi/4",
+   "hints": [
+    "$180^\\circ = \\pi$ radians, so multiply degrees by $\\pi/180$.",
+    "$\\dfrac{135}{180}$ reduces to $\\frac{3}{4}$."
+   ],
+   "solution": [
+    "$135^\\circ \\cdot \\dfrac{\\pi}{180^\\circ} = \\dfrac{135\\pi}{180}$.",
+    "$= \\frac{3 \\pi}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-df1c64",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\tan\\left(\\frac{\\pi}{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(3)",
+   "hints": [
+    "Use the 30-60-90 triangle (sides $1, \\sqrt{3}, 2$) or the 45-45-90 triangle (sides $1, 1, \\sqrt{2}$).",
+    "$\\frac{\\pi}{3}$ is $60^\\circ$: the side opposite it in the 30-60-90 triangle is $\\sqrt{3}$."
+   ],
+   "solution": [
+    "In the reference triangle, the sides give $\\tan(\\frac{\\pi}{3}) = \\sqrt{3}$.",
+    "Rationalize the denominator if needed."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-397333",
+   "skill": "right-triangle-trig",
+   "difficulty": 2,
+   "statement": "A 10 m ladder leans against a wall, making a $60^\\circ$ angle with the ground. How high up the wall does it reach? Give an exact answer.",
+   "checker": "numeric",
+   "answer": "5*sqrt(3)",
+   "hints": [
+    "The ladder is the hypotenuse; the height is the side opposite the ground angle.",
+    "height $= 10\\sin 60^\\circ$."
+   ],
+   "solution": [
+    "$\\sin 60^\\circ = \\dfrac{\\text{height}}{10}$.",
+    "height $= 10\\cdot\\frac{\\sqrt{3}}{2} = 5 \\sqrt{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-97540d",
+   "skill": "right-triangle-trig",
+   "difficulty": 3,
+   "statement": "In a right triangle one acute angle is $45^\\circ$ and the side opposite it has length 6. Find the other leg (adjacent to the angle). Give an exact answer.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Pick the ratio that links the opposite side with the side you want: tangent (opp/adj).",
+    "$\\tan 45^\\circ = \\dfrac{6}{?}$."
+   ],
+   "solution": [
+    "$\\tan 45^\\circ = 1$.",
+    "Side $= \\dfrac{6}{1} = 6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-1fc102",
+   "skill": "right-triangle-trig",
+   "difficulty": 3,
+   "statement": "A circle has radius 4. Find the area of the sector with central angle $\\frac{\\pi}{3}$ radians. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "8*pi/3",
+   "hints": [
+    "Sector area $= \\tfrac12 r^2\\theta$ with $\\theta$ in radians.",
+    "$\\tfrac12\\cdot4^2\\cdot\\frac{\\pi}{3}$."
+   ],
+   "solution": [
+    "$A = \\tfrac12 r^2\\theta = \\tfrac12\\cdot16\\cdot\\frac{\\pi}{3}$.",
+    "$= \\frac{8 \\pi}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "right-triangle-trig-8fb68d",
+   "skill": "right-triangle-trig",
+   "difficulty": 1,
+   "statement": "For an acute angle $\\theta$, $\\sin 25^\\circ = \\cos\\theta$. Find $\\theta$ in degrees.",
+   "checker": "numeric",
+   "answer": "65",
+   "hints": [
+    "Sine and cosine of complementary angles are equal.",
+    "Two angles are complementary when they add to $90^\\circ$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\cos(90^\\circ - \\theta)$ for every acute angle.",
+    "So $\\theta = 90^\\circ - 25^\\circ = 65^\\circ$."
+   ],
+   "verified": true
+  }
+ ]
+}

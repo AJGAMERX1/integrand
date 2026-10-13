@@ -1,0 +1,883 @@
+{
+ "skill": "areas-and-distances",
+ "problems": [
+  {
+   "id": "areas-and-distances-5bc458",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Estimate the area under $y = \\frac{1}{x}$ from $x = 1$ to $x = 3$ using $6$ rectangles of equal width and right endpoints as sample points. (This is $R_{6}$.)",
+   "checker": "numeric",
+   "answer": "2509/2520",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{3 - 1}{6} = \\frac{1}{3}$.",
+    "The sample points are $x = \\frac{4}{3}, \\frac{5}{3}, 2, \\frac{7}{3}, \\frac{8}{3}, 3$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{3}$ and the heights are $f(\\frac{4}{3}) + f(\\frac{5}{3}) + f(2) + f(\\frac{7}{3}) + f(\\frac{8}{3}) + f(3) = \\frac{3}{4} + \\frac{3}{5} + \\frac{1}{2} + \\frac{3}{7} + \\frac{3}{8} + \\frac{1}{3}$.",
+    "$R_{6} = \\Delta x \\sum f(x_i) = \\frac{1}{3} \\cdot \\frac{2509}{840} = \\frac{2509}{2520}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-0a0bd8",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Estimate the area under $y = \\frac{1}{x}$ from $x = 1$ to $x = 3$ using $4$ rectangles of equal width and left endpoints as sample points. (This is $L_{4}$.)",
+   "checker": "numeric",
+   "answer": "77/60",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{3 - 1}{4} = \\frac{1}{2}$.",
+    "The sample points are $x = 1, \\frac{3}{2}, 2, \\frac{5}{2}$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{2}$ and the heights are $f(1) + f(\\frac{3}{2}) + f(2) + f(\\frac{5}{2}) = 1 + \\frac{2}{3} + \\frac{1}{2} + \\frac{2}{5}$.",
+    "$L_{4} = \\Delta x \\sum f(x_i) = \\frac{1}{2} \\cdot \\frac{77}{30} = \\frac{77}{60}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-01c886",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Estimate the area under $y = x^{3}$ from $x = 0$ to $x = 1$ using $4$ rectangles of equal width and left endpoints as sample points. (This is $L_{4}$.)",
+   "checker": "numeric",
+   "answer": "9/64",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{1 - 0}{4} = \\frac{1}{4}$.",
+    "The sample points are $x = 0, \\frac{1}{4}, \\frac{1}{2}, \\frac{3}{4}$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{4}$ and the heights are $f(0) + f(\\frac{1}{4}) + f(\\frac{1}{2}) + f(\\frac{3}{4}) = 0 + \\frac{1}{64} + \\frac{1}{8} + \\frac{27}{64}$.",
+    "$L_{4} = \\Delta x \\sum f(x_i) = \\frac{1}{4} \\cdot \\frac{9}{16} = \\frac{9}{64}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-f45d6a",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Estimate the area under $y = \\frac{1}{x}$ from $x = 1$ to $x = 2$ using $5$ rectangles of equal width and left endpoints as sample points. (This is $L_{5}$.)",
+   "checker": "numeric",
+   "answer": "1879/2520",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{2 - 1}{5} = \\frac{1}{5}$.",
+    "The sample points are $x = 1, \\frac{6}{5}, \\frac{7}{5}, \\frac{8}{5}, \\frac{9}{5}$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{5}$ and the heights are $f(1) + f(\\frac{6}{5}) + f(\\frac{7}{5}) + f(\\frac{8}{5}) + f(\\frac{9}{5}) = 1 + \\frac{5}{6} + \\frac{5}{7} + \\frac{5}{8} + \\frac{5}{9}$.",
+    "$L_{5} = \\Delta x \\sum f(x_i) = \\frac{1}{5} \\cdot \\frac{1879}{504} = \\frac{1879}{2520}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-e40472",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Estimate the area under $y = x^{3}$ from $x = 2$ to $x = 3$ using $4$ rectangles of equal width and right endpoints as sample points. (This is $R_{4}$.)",
+   "checker": "numeric",
+   "answer": "1197/64",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{3 - 2}{4} = \\frac{1}{4}$.",
+    "The sample points are $x = \\frac{9}{4}, \\frac{5}{2}, \\frac{11}{4}, 3$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{4}$ and the heights are $f(\\frac{9}{4}) + f(\\frac{5}{2}) + f(\\frac{11}{4}) + f(3) = \\frac{729}{64} + \\frac{125}{8} + \\frac{1331}{64} + 27$.",
+    "$R_{4} = \\Delta x \\sum f(x_i) = \\frac{1}{4} \\cdot \\frac{1197}{16} = \\frac{1197}{64}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-c3f6b5",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Estimate the area under $y = 8 - x^{2}$ from $x = 0$ to $x = 2$ using $5$ rectangles of equal width and left endpoints as sample points. (This is $L_{5}$.)",
+   "checker": "numeric",
+   "answer": "352/25",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{2 - 0}{5} = \\frac{2}{5}$.",
+    "The sample points are $x = 0, \\frac{2}{5}, \\frac{4}{5}, \\frac{6}{5}, \\frac{8}{5}$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{2}{5}$ and the heights are $f(0) + f(\\frac{2}{5}) + f(\\frac{4}{5}) + f(\\frac{6}{5}) + f(\\frac{8}{5}) = 8 + \\frac{196}{25} + \\frac{184}{25} + \\frac{164}{25} + \\frac{136}{25}$.",
+    "$L_{5} = \\Delta x \\sum f(x_i) = \\frac{2}{5} \\cdot \\frac{176}{5} = \\frac{352}{25}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-f9cf5d",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Estimate the area under $y = x + 2$ from $x = 1$ to $x = 5$ using $5$ rectangles of equal width and midpoints as sample points. (This is $M_{5}$.)",
+   "checker": "numeric",
+   "answer": "20",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{5 - 1}{5} = \\frac{4}{5}$.",
+    "The sample points are $x = \\frac{7}{5}, \\frac{11}{5}, 3, \\frac{19}{5}, \\frac{23}{5}$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{4}{5}$ and the heights are $f(\\frac{7}{5}) + f(\\frac{11}{5}) + f(3) + f(\\frac{19}{5}) + f(\\frac{23}{5}) = \\frac{17}{5} + \\frac{21}{5} + 5 + \\frac{29}{5} + \\frac{33}{5}$.",
+    "$M_{5} = \\Delta x \\sum f(x_i) = \\frac{4}{5} \\cdot 25 = 20$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-8d23c5",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Estimate the area under $y = x^{3}$ from $x = 0$ to $x = 1$ using $8$ rectangles of equal width and midpoints as sample points. (This is $M_{8}$.)",
+   "checker": "numeric",
+   "answer": "127/512",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{1 - 0}{8} = \\frac{1}{8}$.",
+    "The sample points are $x = \\frac{1}{16}, \\frac{3}{16}, \\frac{5}{16}, \\frac{7}{16}, \\frac{9}{16}, \\frac{11}{16}, \\frac{13}{16}, \\frac{15}{16}$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{8}$; the heights are $f(x_i)$ at $x_i = \\frac{1}{16}, \\frac{3}{16}, \\frac{5}{16}, \\frac{7}{16}, \\frac{9}{16}, \\frac{11}{16}, \\frac{13}{16}, \\frac{15}{16}$.",
+    "$M_{8} = \\Delta x \\sum f(x_i) = \\frac{1}{8} \\cdot \\frac{127}{64} = \\frac{127}{512}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-fab220",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Estimate the area under $y = x^{2} + 3$ from $x = 2$ to $x = 3$ using $6$ rectangles of equal width and midpoints as sample points. (This is $M_{6}$.)",
+   "checker": "numeric",
+   "answer": "4031/432",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{3 - 2}{6} = \\frac{1}{6}$.",
+    "The sample points are $x = \\frac{25}{12}, \\frac{9}{4}, \\frac{29}{12}, \\frac{31}{12}, \\frac{11}{4}, \\frac{35}{12}$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{6}$ and the heights are $f(\\frac{25}{12}) + f(\\frac{9}{4}) + f(\\frac{29}{12}) + f(\\frac{31}{12}) + f(\\frac{11}{4}) + f(\\frac{35}{12}) = \\frac{1057}{144} + \\frac{129}{16} + \\frac{1273}{144} + \\frac{1393}{144} + \\frac{169}{16} + \\frac{1657}{144}$.",
+    "$M_{6} = \\Delta x \\sum f(x_i) = \\frac{1}{6} \\cdot \\frac{4031}{72} = \\frac{4031}{432}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-477d67",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Estimate the area under $y = x^{2}$ from $x = 2$ to $x = 6$ using $4$ rectangles of equal width and left endpoints as sample points. (This is $L_{4}$.)",
+   "checker": "numeric",
+   "answer": "54",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{6 - 2}{4} = 1$.",
+    "The sample points are $x = 2, 3, 4, 5$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = 1$ and the heights are $f(2) + f(3) + f(4) + f(5) = 4 + 9 + 16 + 25$.",
+    "$L_{4} = \\Delta x \\sum f(x_i) = 1 \\cdot 54 = 54$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-b0ba92",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Estimate the area under $y = 3 x + 2$ from $x = 1$ to $x = 2$ using $8$ rectangles of equal width and left endpoints as sample points. (This is $L_{8}$.)",
+   "checker": "numeric",
+   "answer": "101/16",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{2 - 1}{8} = \\frac{1}{8}$.",
+    "The sample points are $x = 1, \\frac{9}{8}, \\frac{5}{4}, \\frac{11}{8}, \\frac{3}{2}, \\frac{13}{8}, \\frac{7}{4}, \\frac{15}{8}$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{8}$; the heights are $f(x_i)$ at $x_i = 1, \\frac{9}{8}, \\frac{5}{4}, \\frac{11}{8}, \\frac{3}{2}, \\frac{13}{8}, \\frac{7}{4}, \\frac{15}{8}$.",
+    "$L_{8} = \\Delta x \\sum f(x_i) = \\frac{1}{8} \\cdot \\frac{101}{2} = \\frac{101}{16}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-4b8e50",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Estimate the area under $y = - x^{2} + 2 x + 1$ from $x = 0$ to $x = 3$ using $8$ rectangles of equal width and right endpoints as sample points. (This is $R_{8}$.)",
+   "checker": "numeric",
+   "answer": "303/128",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{3 - 0}{8} = \\frac{3}{8}$.",
+    "The sample points are $x = \\frac{3}{8}, \\frac{3}{4}, \\frac{9}{8}, \\frac{3}{2}, \\frac{15}{8}, \\frac{9}{4}, \\frac{21}{8}, 3$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{3}{8}$; the heights are $f(x_i)$ at $x_i = \\frac{3}{8}, \\frac{3}{4}, \\frac{9}{8}, \\frac{3}{2}, \\frac{15}{8}, \\frac{9}{4}, \\frac{21}{8}, 3$.",
+    "$R_{8} = \\Delta x \\sum f(x_i) = \\frac{3}{8} \\cdot \\frac{101}{16} = \\frac{303}{128}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-519f83",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Estimate the area under $y = x + 3$ from $x = 0$ to $x = 2$ using $4$ rectangles of equal width and midpoints as sample points. (This is $M_{4}$.)",
+   "checker": "numeric",
+   "answer": "8",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{2 - 0}{4} = \\frac{1}{2}$.",
+    "The sample points are $x = \\frac{1}{4}, \\frac{3}{4}, \\frac{5}{4}, \\frac{7}{4}$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{2}$ and the heights are $f(\\frac{1}{4}) + f(\\frac{3}{4}) + f(\\frac{5}{4}) + f(\\frac{7}{4}) = \\frac{13}{4} + \\frac{15}{4} + \\frac{17}{4} + \\frac{19}{4}$.",
+    "$M_{4} = \\Delta x \\sum f(x_i) = \\frac{1}{2} \\cdot 16 = 8$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-11beb1",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Estimate the area under $y = x + 2$ from $x = 0$ to $x = 1$ using $5$ rectangles of equal width and right endpoints as sample points. (This is $R_{5}$.)",
+   "checker": "numeric",
+   "answer": "13/5",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{1 - 0}{5} = \\frac{1}{5}$.",
+    "The sample points are $x = \\frac{1}{5}, \\frac{2}{5}, \\frac{3}{5}, \\frac{4}{5}, 1$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{5}$ and the heights are $f(\\frac{1}{5}) + f(\\frac{2}{5}) + f(\\frac{3}{5}) + f(\\frac{4}{5}) + f(1) = \\frac{11}{5} + \\frac{12}{5} + \\frac{13}{5} + \\frac{14}{5} + 3$.",
+    "$R_{5} = \\Delta x \\sum f(x_i) = \\frac{1}{5} \\cdot 13 = \\frac{13}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-10bd3a",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Estimate the area under $y = \\frac{1}{x}$ from $x = 1$ to $x = 3$ using $4$ rectangles of equal width and midpoints as sample points. (This is $M_{4}$.)",
+   "checker": "numeric",
+   "answer": "3776/3465",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{3 - 1}{4} = \\frac{1}{2}$.",
+    "The sample points are $x = \\frac{5}{4}, \\frac{7}{4}, \\frac{9}{4}, \\frac{11}{4}$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{2}$ and the heights are $f(\\frac{5}{4}) + f(\\frac{7}{4}) + f(\\frac{9}{4}) + f(\\frac{11}{4}) = \\frac{4}{5} + \\frac{4}{7} + \\frac{4}{9} + \\frac{4}{11}$.",
+    "$M_{4} = \\Delta x \\sum f(x_i) = \\frac{1}{2} \\cdot \\frac{7552}{3465} = \\frac{3776}{3465}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-f4de80",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Estimate the area under $y = 3 x + 2$ from $x = 1$ to $x = 2$ using $6$ rectangles of equal width and right endpoints as sample points. (This is $R_{6}$.)",
+   "checker": "numeric",
+   "answer": "27/4",
+   "hints": [
+    "The width of each rectangle is $\\Delta x = \\dfrac{2 - 1}{6} = \\frac{1}{6}$.",
+    "The sample points are $x = \\frac{7}{6}, \\frac{4}{3}, \\frac{3}{2}, \\frac{5}{3}, \\frac{11}{6}, 2$; add up $f(x_i)\\,\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{6}$ and the heights are $f(\\frac{7}{6}) + f(\\frac{4}{3}) + f(\\frac{3}{2}) + f(\\frac{5}{3}) + f(\\frac{11}{6}) + f(2) = \\frac{11}{2} + 6 + \\frac{13}{2} + 7 + \\frac{15}{2} + 8$.",
+    "$R_{6} = \\Delta x \\sum f(x_i) = \\frac{1}{6} \\cdot \\frac{81}{2} = \\frac{27}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-371683",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Evaluate the sum $\\displaystyle\\sum_{i=1}^{3} \\left(i^{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "36",
+   "hints": [
+    "Sigma notation means: substitute $i = 1, 2, \\dots, 3$ into the formula and add the results.",
+    "Write out the terms: $(1) + (8) + (27)$."
+   ],
+   "solution": [
+    "The terms are $1, 8, 27$.",
+    "Their sum is $36$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-dcee64",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Evaluate the sum $\\displaystyle\\sum_{i=1}^{4} \\left(i^{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "100",
+   "hints": [
+    "Sigma notation means: substitute $i = 1, 2, \\dots, 4$ into the formula and add the results.",
+    "Write out the terms: $(1) + (8) + (27) + (64)$."
+   ],
+   "solution": [
+    "The terms are $1, 8, 27, 64$.",
+    "Their sum is $100$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-c20763",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Evaluate the sum $\\displaystyle\\sum_{i=2}^{6} \\left(2\\right)$.",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "Sigma notation means: substitute $i = 2, 3, \\dots, 6$ into the formula and add the results.",
+    "Write out the terms: $(2) + (2) + (2) + (2) + (2)$."
+   ],
+   "solution": [
+    "The terms are $2, 2, 2, 2, 2$.",
+    "Their sum is $10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-5742d1",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Evaluate the sum $\\displaystyle\\sum_{i=1}^{4} \\left(5\\right)$.",
+   "checker": "numeric",
+   "answer": "20",
+   "hints": [
+    "Sigma notation means: substitute $i = 1, 2, \\dots, 4$ into the formula and add the results.",
+    "Write out the terms: $(5) + (5) + (5) + (5)$."
+   ],
+   "solution": [
+    "The terms are $5, 5, 5, 5$.",
+    "Their sum is $20$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-0647e8",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Evaluate the sum $\\displaystyle\\sum_{i=1}^{5} \\left(\\left(-1\\right)^{i} i\\right)$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Sigma notation means: substitute $i = 1, 2, \\dots, 5$ into the formula and add the results.",
+    "Write out the terms: $(-1) + (2) + (-3) + (4) + (-5)$."
+   ],
+   "solution": [
+    "The terms are $-1, 2, -3, 4, -5$.",
+    "Their sum is $-3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-4551e1",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Evaluate the sum $\\displaystyle\\sum_{i=1}^{10} \\left(2 i + 3\\right)$.",
+   "checker": "numeric",
+   "answer": "140",
+   "hints": [
+    "Sigma notation means: substitute $i = 1, 2, \\dots, 10$ into the formula and add the results.",
+    "Write out the terms: $(5) + (7) + (9) + (11) + (13) + \\cdots$."
+   ],
+   "solution": [
+    "The terms are $5, 7, 9, 11, 13, 15, 17, 19, 21, 23$.",
+    "Their sum is $140$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-995221",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "The velocity of a runner was recorded every $5$ seconds: $\\begin{array}{c|ccccc} t\\ (\\text{s}) & 0 & 5 & 10 & 15 & 20 \\\\ \\hline v\\ (\\text{m/s}) & 11 & 10 & 15 & 15 & 11 \\end{array}$. Estimate the distance traveled during the $20$ seconds using right endpoints (treat the velocity as constant on each interval).",
+   "checker": "numeric",
+   "answer": "255",
+   "hints": [
+    "Distance is velocity times time on each short interval; add the pieces.",
+    "Each interval lasts $5$ s; use the velocity at its end."
+   ],
+   "solution": [
+    "Distance $\\approx (10 + 15 + 15 + 11) \\cdot 5$.",
+    "$= 51 \\cdot 5 = 255$ m."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-2df1f8",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "The velocity of a runner was recorded every $1$ seconds: $\\begin{array}{c|cccccc} t\\ (\\text{s}) & 0 & 1 & 2 & 3 & 4 & 5 \\\\ \\hline v\\ (\\text{m/s}) & 11 & 6 & 13 & 9 & 20 & 16 \\end{array}$. Estimate the distance traveled during the $5$ seconds using left endpoints (treat the velocity as constant on each interval).",
+   "checker": "numeric",
+   "answer": "59",
+   "hints": [
+    "Distance is velocity times time on each short interval; add the pieces.",
+    "Each interval lasts $1$ s; use the velocity at its start."
+   ],
+   "solution": [
+    "Distance $\\approx (11 + 6 + 13 + 9 + 20) \\cdot 1$.",
+    "$= 59 \\cdot 1 = 59$ m."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-d5a86f",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "The velocity of a runner was recorded every $1$ seconds: $\\begin{array}{c|ccccc} t\\ (\\text{s}) & 0 & 1 & 2 & 3 & 4 \\\\ \\hline v\\ (\\text{m/s}) & 5 & 3 & 6 & 14 & 13 \\end{array}$. Estimate the distance traveled during the $4$ seconds using right endpoints (treat the velocity as constant on each interval).",
+   "checker": "numeric",
+   "answer": "36",
+   "hints": [
+    "Distance is velocity times time on each short interval; add the pieces.",
+    "Each interval lasts $1$ s; use the velocity at its end."
+   ],
+   "solution": [
+    "Distance $\\approx (3 + 6 + 14 + 13) \\cdot 1$.",
+    "$= 36 \\cdot 1 = 36$ m."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-3c812f",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "The velocity of a runner was recorded every $5$ seconds: $\\begin{array}{c|cccccc} t\\ (\\text{s}) & 0 & 5 & 10 & 15 & 20 & 25 \\\\ \\hline v\\ (\\text{m/s}) & 10 & 9 & 10 & 18 & 8 & 19 \\end{array}$. Estimate the distance traveled during the $25$ seconds using right endpoints (treat the velocity as constant on each interval).",
+   "checker": "numeric",
+   "answer": "320",
+   "hints": [
+    "Distance is velocity times time on each short interval; add the pieces.",
+    "Each interval lasts $5$ s; use the velocity at its end."
+   ],
+   "solution": [
+    "Distance $\\approx (9 + 10 + 18 + 8 + 19) \\cdot 5$.",
+    "$= 64 \\cdot 5 = 320$ m."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-8eb084",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "The velocity of a runner was recorded every $2$ seconds: $\\begin{array}{c|cccccc} t\\ (\\text{s}) & 0 & 2 & 4 & 6 & 8 & 10 \\\\ \\hline v\\ (\\text{m/s}) & 3 & 6 & 12 & 13 & 17 & 16 \\end{array}$. Estimate the distance traveled during the $10$ seconds using right endpoints (treat the velocity as constant on each interval).",
+   "checker": "numeric",
+   "answer": "128",
+   "hints": [
+    "Distance is velocity times time on each short interval; add the pieces.",
+    "Each interval lasts $2$ s; use the velocity at its end."
+   ],
+   "solution": [
+    "Distance $\\approx (6 + 12 + 13 + 17 + 16) \\cdot 2$.",
+    "$= 64 \\cdot 2 = 128$ m."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-02b296",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "The velocity of a runner was recorded every $2$ seconds: $\\begin{array}{c|cccccc} t\\ (\\text{s}) & 0 & 2 & 4 & 6 & 8 & 10 \\\\ \\hline v\\ (\\text{m/s}) & 7 & 3 & 12 & 7 & 10 & 17 \\end{array}$. Estimate the distance traveled during the $10$ seconds using right endpoints (treat the velocity as constant on each interval).",
+   "checker": "numeric",
+   "answer": "98",
+   "hints": [
+    "Distance is velocity times time on each short interval; add the pieces.",
+    "Each interval lasts $2$ s; use the velocity at its end."
+   ],
+   "solution": [
+    "Distance $\\approx (3 + 12 + 7 + 10 + 17) \\cdot 2$.",
+    "$= 49 \\cdot 2 = 98$ m."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-292954",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "For $f(x) = x^{2}$ on $[0, 1]$, use right endpoints and $n$ subintervals of equal width to express the Riemann sum $R_n = \\sum_{i=1}^{n} f(x_i)\\,\\Delta x$ as a closed-form expression in $n$.",
+   "checker": "equiv",
+   "answer": "(2*n^2+3*n+1)/(6*n^2)",
+   "hints": [
+    "$\\Delta x = 1/n$ and $x_i = 1i/n$, so each term is $f(1i/n)\\cdot 1/n$.",
+    "Use $\\sum_{i=1}^n i = \\frac{n(n+1)}{2}$ or $\\sum_{i=1}^n i^2 = \\frac{n(n+1)(2n+1)}{6}$."
+   ],
+   "solution": [
+    "$R_n = \\sum_{i=1}^n \\frac{i^{2}}{n^{2}} \\cdot \\dfrac{1}{n} = \\dfrac{1}{n^{3}} \\sum_{i=1}^n i^{2}$.",
+    "Using the sum formula: $R_n = \\frac{2 n^{2} + 3 n + 1}{6 n^{2}}$."
+   ],
+   "verified": true,
+   "variable": "n",
+   "domain": [
+    1,
+    20
+   ]
+  },
+  {
+   "id": "areas-and-distances-4d11fe",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "For $f(x) = x$ on $[0, 1]$, use right endpoints and $n$ subintervals of equal width to express the Riemann sum $R_n = \\sum_{i=1}^{n} f(x_i)\\,\\Delta x$ as a closed-form expression in $n$.",
+   "checker": "equiv",
+   "answer": "(n+1)/(2*n)",
+   "hints": [
+    "$\\Delta x = 1/n$ and $x_i = 1i/n$, so each term is $f(1i/n)\\cdot 1/n$.",
+    "Use $\\sum_{i=1}^n i = \\frac{n(n+1)}{2}$ or $\\sum_{i=1}^n i^2 = \\frac{n(n+1)(2n+1)}{6}$."
+   ],
+   "solution": [
+    "$R_n = \\sum_{i=1}^n \\frac{i}{n} \\cdot \\dfrac{1}{n} = \\dfrac{1}{n^{2}} \\sum_{i=1}^n i$.",
+    "Using the sum formula: $R_n = \\frac{n + 1}{2 n}$."
+   ],
+   "verified": true,
+   "variable": "n",
+   "domain": [
+    1,
+    20
+   ]
+  },
+  {
+   "id": "areas-and-distances-24956d",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "The right-endpoint Riemann sum for $f(x) = x$ on $[0, 1]$ with $n$ subintervals simplifies to $R_n = \\frac{n + 1}{2 n}$. Find the exact area under the curve by computing $\\displaystyle\\lim_{n \\to \\infty} R_n$.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "Expand or divide through by the highest power of $n$.",
+    "Terms like $1/n$ and $1/n^2$ vanish in the limit."
+   ],
+   "solution": [
+    "$R_n = \\frac{1}{2} + \\frac{1}{2 n}$.",
+    "As $n \\to \\infty$ the terms with $n$ in the denominator go to $0$, leaving $\\frac{1}{2}$."
+   ],
+   "verified": true,
+   "variable": "n"
+  },
+  {
+   "id": "areas-and-distances-287d4f",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "The right-endpoint Riemann sum for $f(x) = x^{2}$ on $[0, 2]$ with $n$ subintervals simplifies to $R_n = \\frac{8}{3} + \\frac{4}{n} + \\frac{4}{3 n^{2}}$. Find the exact area under the curve by computing $\\displaystyle\\lim_{n \\to \\infty} R_n$.",
+   "checker": "numeric",
+   "answer": "8/3",
+   "hints": [
+    "Expand or divide through by the highest power of $n$.",
+    "Terms like $1/n$ and $1/n^2$ vanish in the limit."
+   ],
+   "solution": [
+    "$R_n = \\frac{8}{3} + \\frac{4}{n} + \\frac{4}{3 n^{2}}$.",
+    "As $n \\to \\infty$ the terms with $n$ in the denominator go to $0$, leaving $\\frac{8}{3}$."
+   ],
+   "verified": true,
+   "variable": "n"
+  },
+  {
+   "id": "areas-and-distances-4616c4",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "For $f(x) = x^{2}$ on $[0, 2]$, use right endpoints and $n$ subintervals of equal width to express the Riemann sum $R_n = \\sum_{i=1}^{n} f(x_i)\\,\\Delta x$ as a closed-form expression in $n$.",
+   "checker": "equiv",
+   "answer": "8/3+4/n+4/(3*n^2)",
+   "hints": [
+    "$\\Delta x = 2/n$ and $x_i = 2i/n$, so each term is $f(2i/n)\\cdot 2/n$.",
+    "Use $\\sum_{i=1}^n i = \\frac{n(n+1)}{2}$ or $\\sum_{i=1}^n i^2 = \\frac{n(n+1)(2n+1)}{6}$."
+   ],
+   "solution": [
+    "$R_n = \\sum_{i=1}^n \\frac{4 i^{2}}{n^{2}} \\cdot \\dfrac{2}{n} = \\dfrac{8}{n^{3}} \\sum_{i=1}^n i^{2}$.",
+    "Using the sum formula: $R_n = \\frac{8}{3} + \\frac{4}{n} + \\frac{4}{3 n^{2}}$."
+   ],
+   "verified": true,
+   "variable": "n",
+   "domain": [
+    1,
+    20
+   ]
+  },
+  {
+   "id": "areas-and-distances-998e68",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[0, 3]$ is divided into $6$ equal subintervals with endpoints $x_0 = 0, x_1, \\dots, x_{6} = 3$. Find $x_{2}$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "First compute $\\Delta x = \\dfrac{3 - (0)}{6}$.",
+    "Then $x_k = a + k\\,\\Delta x$ with $k = 2$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{2}$.",
+    "$x_{2} = 0 + 2\\cdot \\frac{1}{2} = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-10d9af",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[0, 10]$ is divided into $6$ subintervals of equal width. What is $\\Delta x$?",
+   "checker": "numeric",
+   "answer": "5/3",
+   "hints": [
+    "$\\Delta x$ is the total length divided by the number of pieces.",
+    "$\\Delta x = \\dfrac{b - a}{n} = \\dfrac{10 - (0)}{6}$."
+   ],
+   "solution": [
+    "$\\Delta x = \\dfrac{10 - (0)}{6}$.",
+    "$= \\frac{5}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-73dd28",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[2, 7]$ is divided into $10$ subintervals of equal width. What is $\\Delta x$?",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "$\\Delta x$ is the total length divided by the number of pieces.",
+    "$\\Delta x = \\dfrac{b - a}{n} = \\dfrac{7 - (2)}{10}$."
+   ],
+   "solution": [
+    "$\\Delta x = \\dfrac{7 - (2)}{10}$.",
+    "$= \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-e8af30",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[0, 10]$ is divided into $4$ equal subintervals with endpoints $x_0 = 0, x_1, \\dots, x_{4} = 10$. Find $x_{3}$.",
+   "checker": "numeric",
+   "answer": "15/2",
+   "hints": [
+    "First compute $\\Delta x = \\dfrac{10 - (0)}{4}$.",
+    "Then $x_k = a + k\\,\\Delta x$ with $k = 3$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{5}{2}$.",
+    "$x_{3} = 0 + 3\\cdot \\frac{5}{2} = \\frac{15}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-f11a51",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[2, 7]$ is divided into $4$ subintervals of equal width. What is $\\Delta x$?",
+   "checker": "numeric",
+   "answer": "5/4",
+   "hints": [
+    "$\\Delta x$ is the total length divided by the number of pieces.",
+    "$\\Delta x = \\dfrac{b - a}{n} = \\dfrac{7 - (2)}{4}$."
+   ],
+   "solution": [
+    "$\\Delta x = \\dfrac{7 - (2)}{4}$.",
+    "$= \\frac{5}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "areas-and-distances-880bc3",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "The function $f(x) = \\sqrt{x} + 1$ is increasing on $[0, 2]$. Using left endpoints, is the Riemann sum $\\sum f(x_i)\\Delta x$ an underestimate or an overestimate of the area under the graph on $[0, 2]$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Sketch one subinterval: does the rectangle's top sit below or above the curve?",
+    "For an increasing function, the left endpoint gives the smallest height on each subinterval."
+   ],
+   "solution": [
+    "On each subinterval an increasing function has its smallest value at the left endpoint, so each rectangle lies inside the region.",
+    "Therefore the left-endpoint sum is an underestimate."
+   ],
+   "verified": true,
+   "choices": [
+    "impossible to tell without computing",
+    "an overestimate of the area",
+    "exactly the area",
+    "an underestimate of the area"
+   ]
+  },
+  {
+   "id": "areas-and-distances-7c90f2",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "The function $f(x) = 10 - x^{2}$ is decreasing on $[0, 2]$. Using right endpoints, is the Riemann sum $\\sum f(x_i)\\Delta x$ an underestimate or an overestimate of the area under the graph on $[0, 2]$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Sketch one subinterval: does the rectangle's top sit below or above the curve?",
+    "For an decreasing function, the right endpoint gives the smallest height on each subinterval."
+   ],
+   "solution": [
+    "On each subinterval an decreasing function has its smallest value at the right endpoint, so each rectangle lies inside the region.",
+    "Therefore the right-endpoint sum is an underestimate."
+   ],
+   "verified": true,
+   "choices": [
+    "an overestimate of the area",
+    "an underestimate of the area",
+    "exactly the area",
+    "impossible to tell without computing"
+   ]
+  },
+  {
+   "id": "areas-and-distances-f82510",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "The function $f(x) = e^{x}$ is increasing on $[0, 2]$. Using right endpoints, is the Riemann sum $\\sum f(x_i)\\Delta x$ an underestimate or an overestimate of the area under the graph on $[0, 2]$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Sketch one subinterval: does the rectangle's top sit below or above the curve?",
+    "For an increasing function, the left endpoint gives the smallest height on each subinterval."
+   ],
+   "solution": [
+    "On each subinterval an increasing function has its largest value at the right endpoint, so each rectangle lies above the region.",
+    "Therefore the right-endpoint sum is an overestimate."
+   ],
+   "verified": true,
+   "choices": [
+    "an overestimate of the area",
+    "exactly the area",
+    "impossible to tell without computing",
+    "an underestimate of the area"
+   ]
+  },
+  {
+   "id": "areas-and-distances-792e35",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "The function $f(x) = \\frac{1}{x + 1}$ is decreasing on $[0, 2]$. Using left endpoints, is the Riemann sum $\\sum f(x_i)\\Delta x$ an underestimate or an overestimate of the area under the graph on $[0, 2]$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Sketch one subinterval: does the rectangle's top sit below or above the curve?",
+    "For an decreasing function, the right endpoint gives the smallest height on each subinterval."
+   ],
+   "solution": [
+    "On each subinterval an decreasing function has its largest value at the left endpoint, so each rectangle lies above the region.",
+    "Therefore the left-endpoint sum is an overestimate."
+   ],
+   "verified": true,
+   "choices": [
+    "impossible to tell without computing",
+    "an overestimate of the area",
+    "exactly the area",
+    "an underestimate of the area"
+   ]
+  },
+  {
+   "id": "areas-and-distances-1a6a8d",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\sin{\\left(x \\right)} + 2$. Which expression gives the exact area under the graph of $f$ from $x = 1$ to $x = 3$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "With $n$ equal subintervals, $\\Delta x = \\frac{2}{n}$ and the right endpoints are $x_i = 1 + i\\,\\Delta x$.",
+    "The exact area is the limit of the Riemann sums as $n \\to \\infty$, and every term needs the factor $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{2}{n}$, $x_i = 1 + \\frac{2i}{n}$, so $R_n = \\sum f(x_i)\\Delta x$.",
+    "Area $= \\lim_{n \\to \\infty} R_n$; the other options either stop at a finite $n$, use the wrong sample points, or omit $\\Delta x$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} f\\!\\left(1 + \\frac{2i}{n}\\right)\\frac{2}{n}$",
+    "$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} f(i)\\,\\frac{2}{n}$",
+    "$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} f\\!\\left(\\frac{i}{n}\\right)$",
+    "$\\displaystyle\\sum_{i=1}^{n} f\\!\\left(1 + \\frac{2i}{n}\\right)\\frac{2}{n}$ for $n = 10$"
+   ]
+  },
+  {
+   "id": "areas-and-distances-495a76",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\sin{\\left(x \\right)} + 2$. Which expression gives the exact area under the graph of $f$ from $x = 0$ to $x = 1$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "With $n$ equal subintervals, $\\Delta x = \\frac{1}{n}$ and the right endpoints are $x_i = 0 + i\\,\\Delta x$.",
+    "The exact area is the limit of the Riemann sums as $n \\to \\infty$, and every term needs the factor $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{n}$, $x_i = 0 + \\frac{1i}{n}$, so $R_n = \\sum f(x_i)\\Delta x$.",
+    "Area $= \\lim_{n \\to \\infty} R_n$; the other options either stop at a finite $n$, use the wrong sample points, or omit $\\Delta x$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} f\\!\\left(0 + \\frac{1i}{n}\\right)\\frac{1}{n}$",
+    "$\\displaystyle\\sum_{i=1}^{n} f\\!\\left(0 + \\frac{1i}{n}\\right)\\frac{1}{n}$ for $n = 10$",
+    "$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} f(i)\\,\\frac{1}{n}$",
+    "$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} f\\!\\left(\\frac{i}{n}\\right)$"
+   ]
+  },
+  {
+   "id": "areas-and-distances-5da92a",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Let $f(x) = e^{x}$. Which expression gives the exact area under the graph of $f$ from $x = 1$ to $x = 3$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "With $n$ equal subintervals, $\\Delta x = \\frac{2}{n}$ and the right endpoints are $x_i = 1 + i\\,\\Delta x$.",
+    "The exact area is the limit of the Riemann sums as $n \\to \\infty$, and every term needs the factor $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{2}{n}$, $x_i = 1 + \\frac{2i}{n}$, so $R_n = \\sum f(x_i)\\Delta x$.",
+    "Area $= \\lim_{n \\to \\infty} R_n$; the other options either stop at a finite $n$, use the wrong sample points, or omit $\\Delta x$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} f(i)\\,\\frac{2}{n}$",
+    "$\\displaystyle\\sum_{i=1}^{n} f\\!\\left(1 + \\frac{2i}{n}\\right)\\frac{2}{n}$ for $n = 10$",
+    "$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} f\\!\\left(1 + \\frac{2i}{n}\\right)\\frac{2}{n}$",
+    "$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} f\\!\\left(\\frac{i}{n}\\right)$"
+   ]
+  },
+  {
+   "id": "areas-and-distances-f002ae",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Use the limit of right-endpoint Riemann sums to find the exact area under $y = x^2$ from $x = 0$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "125/3",
+   "hints": [
+    "$R_n = \\sum_{i=1}^n \\left(\\frac{5i}{n}\\right)^2 \\frac{5}{n} = \\frac{125}{n^3} \\sum_{i=1}^n i^2$.",
+    "Use $\\sum_{i=1}^n i^2 = \\frac{n(n+1)(2n+1)}{6}$ and let $n \\to \\infty$."
+   ],
+   "solution": [
+    "$R_n = \\dfrac{125}{n^3} \\cdot \\dfrac{n(n+1)(2n+1)}{6} = \\dfrac{125}{6} \\cdot \\dfrac{(n+1)(2n+1)}{n^2}$.",
+    "As $n \\to \\infty$, $\\dfrac{(n+1)(2n+1)}{n^2} \\to 2$, so the area is $\\dfrac{125}{3} = \\frac{125}{3}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "areas-and-distances-3ac1ab",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Use the limit of right-endpoint Riemann sums to find the exact area under $y = x^2$ from $x = 0$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "64/3",
+   "hints": [
+    "$R_n = \\sum_{i=1}^n \\left(\\frac{4i}{n}\\right)^2 \\frac{4}{n} = \\frac{64}{n^3} \\sum_{i=1}^n i^2$.",
+    "Use $\\sum_{i=1}^n i^2 = \\frac{n(n+1)(2n+1)}{6}$ and let $n \\to \\infty$."
+   ],
+   "solution": [
+    "$R_n = \\dfrac{64}{n^3} \\cdot \\dfrac{n(n+1)(2n+1)}{6} = \\dfrac{64}{6} \\cdot \\dfrac{(n+1)(2n+1)}{n^2}$.",
+    "As $n \\to \\infty$, $\\dfrac{(n+1)(2n+1)}{n^2} \\to 2$, so the area is $\\dfrac{64}{3} = \\frac{64}{3}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "areas-and-distances-aae3b4",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Use the limit of right-endpoint Riemann sums to find the exact area under $y = x^2$ from $x = 0$ to $x = 2$.",
+   "checker": "numeric",
+   "answer": "8/3",
+   "hints": [
+    "$R_n = \\sum_{i=1}^n \\left(\\frac{2i}{n}\\right)^2 \\frac{2}{n} = \\frac{8}{n^3} \\sum_{i=1}^n i^2$.",
+    "Use $\\sum_{i=1}^n i^2 = \\frac{n(n+1)(2n+1)}{6}$ and let $n \\to \\infty$."
+   ],
+   "solution": [
+    "$R_n = \\dfrac{8}{n^3} \\cdot \\dfrac{n(n+1)(2n+1)}{6} = \\dfrac{8}{6} \\cdot \\dfrac{(n+1)(2n+1)}{n^2}$.",
+    "As $n \\to \\infty$, $\\dfrac{(n+1)(2n+1)}{n^2} \\to 2$, so the area is $\\dfrac{8}{3} = \\frac{8}{3}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  }
+ ]
+}

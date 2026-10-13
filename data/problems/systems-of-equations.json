@@ -1,0 +1,1170 @@
+{
+ "skill": "systems-of-equations",
+ "problems": [
+  {
+   "id": "systems-of-equations-bdbc1c",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Solve the system $\\begin{cases} 3 x + 4 y = -16 \\\\ 4 x + 4 y = -16 \\end{cases}$ and enter the value of $y$.",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "Use elimination: scale the equations so one variable has opposite coefficients, then add.",
+    "Multiply the first equation by $4$ and the second by $-3$ to eliminate $x$."
+   ],
+   "solution": [
+    "Eliminate one variable: $4\\cdot(3 x + 4 y) - 4\\cdot(4 x + 4 y) = 0$ gives $-4x = 0$, so $x = 0$.",
+    "Substitute back: $y = -4$.",
+    "So $y = -4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-806443",
+   "skill": "systems-of-equations",
+   "difficulty": 1,
+   "statement": "The lines $y = 1 - 3 x$ and $y = 2 x + 1$ intersect at one point. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "At the intersection both equations give the same $y$, so set the right-hand sides equal.",
+    "Solve $1 - 3 x = 2 x + 1$."
+   ],
+   "solution": [
+    "Set equal: $1 - 3 x = 2 x + 1$.",
+    "$-5x = 0$, so $x = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-bf3ec7",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "A chemist mixes a 10% solution with a 60% solution to get 11 liters of a 46.3636% solution. How many liters of the 60% solution are used?",
+   "checker": "numeric",
+   "answer": "8",
+   "hints": [
+    "Name the two unknowns and write two equations: one for the count (or amount) and one for the value.",
+    "The equations are $a+b=11$ and $10a+60b=510$."
+   ],
+   "solution": [
+    "Equations: $a+b=11$ and $10a+60b=510$.",
+    "Solve the first for one unknown and substitute into the second.",
+    "The requested quantity is $8$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-7741dc",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "How many solutions does the system $\\begin{cases} - 2 x - y = -6 \\\\ - 4 x - 2 y = -11 \\end{cases}$ have?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compare the ratios of the $x$ coefficients, the $y$ coefficients, and the constants.",
+    "Proportional coefficients mean the lines are parallel (no solution) or identical (infinitely many)."
+   ],
+   "solution": [
+    "Compare: the second equation's coefficients are 2 times  the first's.",
+    "Here the left sides are proportional but the right sides are not, so the lines are parallel and never meet."
+   ],
+   "verified": true,
+   "choices": [
+    "0",
+    "\\text{infinitely many}",
+    "1"
+   ]
+  },
+  {
+   "id": "systems-of-equations-71d9bf",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Solve $\\begin{cases} 5 x + 4 y = 16 \\\\ - 5 x - 5 y = -15 \\end{cases}$ and enter $x + y$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Solve the system fully first.",
+    "Elimination: combine multiples of the equations so one variable cancels."
+   ],
+   "solution": [
+    "Solving gives $x = 4$ and $y = -1$.",
+    "So $x + y = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-780f04",
+   "skill": "systems-of-equations",
+   "difficulty": 3,
+   "statement": "For which value of $k$ does the system $\\begin{cases} - 2 x - y = -1 \\\\ kx - 3y = 3 \\end{cases}$ have no solution?",
+   "checker": "numeric",
+   "answer": "-6",
+   "hints": [
+    "No solution means the two lines are parallel: same slope, different intercepts.",
+    "The $y$ coefficient $-3$ is $3$ times $-1$, so $k$ must be $3$ times $-2$."
+   ],
+   "solution": [
+    "Parallel lines have proportional coefficients: $\\dfrac{k}{-2} = \\dfrac{-3}{-1} = 3$.",
+    "So $k = -6$; the constants $-1$ and $3$ are not in that ratio, so there is no solution."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-f4aa48",
+   "skill": "systems-of-equations",
+   "difficulty": 1,
+   "statement": "Solve the system $\\begin{cases} 5 x - 5 y = 30 \\\\ - x - y = 4 \\end{cases}$ and enter the value of $y$.",
+   "checker": "numeric",
+   "answer": "-5",
+   "hints": [
+    "Use elimination: scale the equations so one variable has opposite coefficients, then add.",
+    "Multiply the first equation by $-1$ and the second by $-5$ to eliminate $x$."
+   ],
+   "solution": [
+    "Eliminate one variable: $-1\\cdot(5 x - 5 y) - -5\\cdot(- x - y) = -10$ gives $-10x = -10$, so $x = 1$.",
+    "Substitute back: $y = -5$.",
+    "So $y = -5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-3806f0",
+   "skill": "systems-of-equations",
+   "difficulty": 1,
+   "statement": "The lines $y = 3 - 2 x$ and $y = 5 - x$ intersect at one point. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "At the intersection both equations give the same $y$, so set the right-hand sides equal.",
+    "Solve $3 - 2 x = 5 - x$."
+   ],
+   "solution": [
+    "Set equal: $3 - 2 x = 5 - x$.",
+    "$-1x = 2$, so $x = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-e79f0d",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "A jar has 22 coins, all dimes and quarters, worth 400 cents in total. How many quarters are there?",
+   "checker": "numeric",
+   "answer": "12",
+   "hints": [
+    "Name the two unknowns and write two equations: one for the count (or amount) and one for the value.",
+    "The equations are $d+q=22$ and $10d+25q=400$."
+   ],
+   "solution": [
+    "Equations: $d+q=22$ and $10d+25q=400$.",
+    "Solve the first for one unknown and substitute into the second.",
+    "The requested quantity is $12$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-6a82d5",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "How many solutions does the system $\\begin{cases} - 2 x + 3 y = 2 \\\\ - 2 x + y = 2 \\end{cases}$ have?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compare the ratios of the $x$ coefficients, the $y$ coefficients, and the constants.",
+    "Proportional coefficients mean the lines are parallel (no solution) or identical (infinitely many)."
+   ],
+   "solution": [
+    "Compare: the second equation's coefficients are not proportional to the first's.",
+    "Here the coefficients are not proportional, so the lines cross at exactly one point."
+   ],
+   "verified": true,
+   "choices": [
+    "0",
+    "\\text{infinitely many}",
+    "1"
+   ]
+  },
+  {
+   "id": "systems-of-equations-e5d4e2",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Solve $\\begin{cases} x - 4 y = 4 \\\\ x + 4 y = -12 \\end{cases}$ and enter $x + y$.",
+   "checker": "numeric",
+   "answer": "-6",
+   "hints": [
+    "Solve the system fully first.",
+    "Elimination: combine multiples of the equations so one variable cancels."
+   ],
+   "solution": [
+    "Solving gives $x = -4$ and $y = -2$.",
+    "So $x + y = -6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-a0b3e3",
+   "skill": "systems-of-equations",
+   "difficulty": 3,
+   "statement": "For which value of $k$ does the system $\\begin{cases} - 4 x - 3 y = -6 \\\\ kx + 3y = -6 \\end{cases}$ have no solution?",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "No solution means the two lines are parallel: same slope, different intercepts.",
+    "The $y$ coefficient $3$ is $-1$ times $-3$, so $k$ must be $-1$ times $-4$."
+   ],
+   "solution": [
+    "Parallel lines have proportional coefficients: $\\dfrac{k}{-4} = \\dfrac{3}{-3} = -1$.",
+    "So $k = 4$; the constants $-6$ and $-6$ are not in that ratio, so there is no solution."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-23d739",
+   "skill": "systems-of-equations",
+   "difficulty": 1,
+   "statement": "Solve the system $\\begin{cases} - 5 x + 5 y = -45 \\\\ - x - 4 y = 11 \\end{cases}$ and enter the value of $y$.",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "Use elimination: scale the equations so one variable has opposite coefficients, then add.",
+    "Multiply the first equation by $-1$ and the second by $5$ to eliminate $x$."
+   ],
+   "solution": [
+    "Eliminate one variable: $-4\\cdot(- 5 x + 5 y) - 5\\cdot(- x - 4 y) = 125$ gives $25x = 125$, so $x = 5$.",
+    "Substitute back: $y = -4$.",
+    "So $y = -4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-2e328c",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "The lines $y = 2 - 3 x$ and $y = 4 x - 4$ intersect at one point. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "6/7",
+   "hints": [
+    "At the intersection both equations give the same $y$, so set the right-hand sides equal.",
+    "Solve $2 - 3 x = 4 x - 4$."
+   ],
+   "solution": [
+    "Set equal: $2 - 3 x = 4 x - 4$.",
+    "$-7x = -6$, so $x = \\frac{6}{7}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-3af594",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "A jar has 18 coins, all dimes and quarters, worth 330 cents in total. How many quarters are there?",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "Name the two unknowns and write two equations: one for the count (or amount) and one for the value.",
+    "The equations are $d+q=18$ and $10d+25q=330$."
+   ],
+   "solution": [
+    "Equations: $d+q=18$ and $10d+25q=330$.",
+    "Solve the first for one unknown and substitute into the second.",
+    "The requested quantity is $10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-e924f2",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "How many solutions does the system $\\begin{cases} x - 4 y = 3 \\\\ - x + 4 y = -3 \\end{cases}$ have?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compare the ratios of the $x$ coefficients, the $y$ coefficients, and the constants.",
+    "Proportional coefficients mean the lines are parallel (no solution) or identical (infinitely many)."
+   ],
+   "solution": [
+    "Compare: the second equation's coefficients are -1 times  the first's.",
+    "Here the second equation is a multiple of the first, so both describe the same line."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{infinitely many}",
+    "0",
+    "1"
+   ]
+  },
+  {
+   "id": "systems-of-equations-517be0",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Solve $\\begin{cases} x + 4 y = 16 \\\\ 4 x + 2 y = -6 \\end{cases}$ and enter $xy$.",
+   "checker": "numeric",
+   "answer": "-20",
+   "hints": [
+    "Solve the system fully first.",
+    "Elimination: combine multiples of the equations so one variable cancels."
+   ],
+   "solution": [
+    "Solving gives $x = -4$ and $y = 5$.",
+    "So $xy = -20$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-0a1356",
+   "skill": "systems-of-equations",
+   "difficulty": 3,
+   "statement": "For which value of $k$ does the system $\\begin{cases} - x + 3 y = -5 \\\\ kx - 3y = -1 \\end{cases}$ have no solution?",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "No solution means the two lines are parallel: same slope, different intercepts.",
+    "The $y$ coefficient $-3$ is $-1$ times $3$, so $k$ must be $-1$ times $-1$."
+   ],
+   "solution": [
+    "Parallel lines have proportional coefficients: $\\dfrac{k}{-1} = \\dfrac{-3}{3} = -1$.",
+    "So $k = 1$; the constants $-5$ and $-1$ are not in that ratio, so there is no solution."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-35d53b",
+   "skill": "systems-of-equations",
+   "difficulty": 3,
+   "statement": "Solve the system $\\begin{cases} x - 5 y = 5 \\\\ - 2 x + 3 y = 0 \\end{cases}$ and enter the value of $y$.",
+   "checker": "numeric",
+   "answer": "-10/7",
+   "hints": [
+    "Use elimination: scale the equations so one variable has opposite coefficients, then add.",
+    "Multiply the first equation by $-2$ and the second by $-1$ to eliminate $x$."
+   ],
+   "solution": [
+    "Eliminate one variable: $3\\cdot(x - 5 y) - -5\\cdot(- 2 x + 3 y) = 15$ gives $-7x = 15$, so $x = - \\frac{15}{7}$.",
+    "Substitute back: $y = - \\frac{10}{7}$.",
+    "So $y = - \\frac{10}{7}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-04f0b8",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "The lines $y = 8 - 4 x$ and $y = 4 x + 6$ intersect at one point. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "1/4",
+   "hints": [
+    "At the intersection both equations give the same $y$, so set the right-hand sides equal.",
+    "Solve $8 - 4 x = 4 x + 6$."
+   ],
+   "solution": [
+    "Set equal: $8 - 4 x = 4 x + 6$.",
+    "$-8x = -2$, so $x = \\frac{1}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-148d52",
+   "skill": "systems-of-equations",
+   "difficulty": 1,
+   "statement": "The sum of two numbers is 24 and their difference is 22. Find the larger number.",
+   "checker": "numeric",
+   "answer": "23",
+   "hints": [
+    "Name the two unknowns and write two equations: one for the count (or amount) and one for the value.",
+    "The equations are $a+b=24$ and $a-b=22$."
+   ],
+   "solution": [
+    "Equations: $a+b=24$ and $a-b=22$.",
+    "Solve the first for one unknown and substitute into the second.",
+    "The requested quantity is $23$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-f5c10f",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "How many solutions does the system $\\begin{cases} 2 x - 4 y = 6 \\\\ 2 x + y = 4 \\end{cases}$ have?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Compare the ratios of the $x$ coefficients, the $y$ coefficients, and the constants.",
+    "Proportional coefficients mean the lines are parallel (no solution) or identical (infinitely many)."
+   ],
+   "solution": [
+    "Compare: the second equation's coefficients are not proportional to the first's.",
+    "Here the coefficients are not proportional, so the lines cross at exactly one point."
+   ],
+   "verified": true,
+   "choices": [
+    "0",
+    "1",
+    "\\text{infinitely many}"
+   ]
+  },
+  {
+   "id": "systems-of-equations-716f59",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Solve $\\begin{cases} 4 x + 4 y = -8 \\\\ - 2 x + 2 y = 8 \\end{cases}$ and enter $xy$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Solve the system fully first.",
+    "Elimination: combine multiples of the equations so one variable cancels."
+   ],
+   "solution": [
+    "Solving gives $x = -3$ and $y = 1$.",
+    "So $xy = -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-74ae1e",
+   "skill": "systems-of-equations",
+   "difficulty": 3,
+   "statement": "For which value of $k$ does the system $\\begin{cases} 3 x + y = 5 \\\\ kx + 2y = -1 \\end{cases}$ have no solution?",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "No solution means the two lines are parallel: same slope, different intercepts.",
+    "The $y$ coefficient $2$ is $2$ times $1$, so $k$ must be $2$ times $3$."
+   ],
+   "solution": [
+    "Parallel lines have proportional coefficients: $\\dfrac{k}{3} = \\dfrac{2}{1} = 2$.",
+    "So $k = 6$; the constants $5$ and $-1$ are not in that ratio, so there is no solution."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-0e66b2",
+   "skill": "systems-of-equations",
+   "difficulty": 1,
+   "statement": "Solve the system $\\begin{cases} 5 x - 3 y = -15 \\\\ x + 4 y = 20 \\end{cases}$ and enter the value of $y$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Use elimination: scale the equations so one variable has opposite coefficients, then add.",
+    "Multiply the first equation by $1$ and the second by $-5$ to eliminate $x$."
+   ],
+   "solution": [
+    "Eliminate one variable: $4\\cdot(5 x - 3 y) - -3\\cdot(x + 4 y) = 0$ gives $23x = 0$, so $x = 0$.",
+    "Substitute back: $y = 5$.",
+    "So $y = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-ca91f5",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "The lines $y = 3 x - 8$ and $y = 1 - 3 x$ intersect at one point. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "3/2",
+   "hints": [
+    "At the intersection both equations give the same $y$, so set the right-hand sides equal.",
+    "Solve $3 x - 8 = 1 - 3 x$."
+   ],
+   "solution": [
+    "Set equal: $3 x - 8 = 1 - 3 x$.",
+    "$6x = 9$, so $x = \\frac{3}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-14b402",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Adult tickets cost 8 dollars and child tickets cost 6 dollars. 37 tickets were sold for a total of 236 dollars. How many adult tickets were sold?",
+   "checker": "numeric",
+   "answer": "7",
+   "hints": [
+    "Name the two unknowns and write two equations: one for the count (or amount) and one for the value.",
+    "The equations are $a+c=37$ and $8a+6c=236$."
+   ],
+   "solution": [
+    "Equations: $a+c=37$ and $8a+6c=236$.",
+    "Solve the first for one unknown and substitute into the second.",
+    "The requested quantity is $7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-6b6be5",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "How many solutions does the system $\\begin{cases} 2 x - 2 y = 4 \\\\ - 2 x + 2 y = -3 \\end{cases}$ have?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compare the ratios of the $x$ coefficients, the $y$ coefficients, and the constants.",
+    "Proportional coefficients mean the lines are parallel (no solution) or identical (infinitely many)."
+   ],
+   "solution": [
+    "Compare: the second equation's coefficients are -1 times  the first's.",
+    "Here the left sides are proportional but the right sides are not, so the lines are parallel and never meet."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{infinitely many}",
+    "1",
+    "0"
+   ]
+  },
+  {
+   "id": "systems-of-equations-09f156",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Solve $\\begin{cases} - x + 5 y = -7 \\\\ 4 x + y = -14 \\end{cases}$ and enter $xy$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Solve the system fully first.",
+    "Elimination: combine multiples of the equations so one variable cancels."
+   ],
+   "solution": [
+    "Solving gives $x = -3$ and $y = -2$.",
+    "So $xy = 6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-f098e6",
+   "skill": "systems-of-equations",
+   "difficulty": 3,
+   "statement": "For which value of $k$ does the system $\\begin{cases} - 2 x - 4 y = 0 \\\\ kx - 8y = -4 \\end{cases}$ have no solution?",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "No solution means the two lines are parallel: same slope, different intercepts.",
+    "The $y$ coefficient $-8$ is $2$ times $-4$, so $k$ must be $2$ times $-2$."
+   ],
+   "solution": [
+    "Parallel lines have proportional coefficients: $\\dfrac{k}{-2} = \\dfrac{-8}{-4} = 2$.",
+    "So $k = -4$; the constants $0$ and $-4$ are not in that ratio, so there is no solution."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-62c448",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Solve the system $\\begin{cases} 2 x + 5 y = -8 \\\\ - 5 x + 5 y = -15 \\end{cases}$ and enter the value of $y$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "Use elimination: scale the equations so one variable has opposite coefficients, then add.",
+    "Multiply the first equation by $-5$ and the second by $-2$ to eliminate $x$."
+   ],
+   "solution": [
+    "Eliminate one variable: $5\\cdot(2 x + 5 y) - 5\\cdot(- 5 x + 5 y) = 35$ gives $35x = 35$, so $x = 1$.",
+    "Substitute back: $y = -2$.",
+    "So $y = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-83ca9e",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "The lines $y = 2 x + 3$ and $y = 5 - 2 x$ intersect at one point. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "At the intersection both equations give the same $y$, so set the right-hand sides equal.",
+    "Solve $2 x + 3 = 5 - 2 x$."
+   ],
+   "solution": [
+    "Set equal: $2 x + 3 = 5 - 2 x$.",
+    "$4x = 2$, so $x = \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-0e610e",
+   "skill": "systems-of-equations",
+   "difficulty": 1,
+   "statement": "The sum of two numbers is 43 and their difference is 17. Find the larger number.",
+   "checker": "numeric",
+   "answer": "30",
+   "hints": [
+    "Name the two unknowns and write two equations: one for the count (or amount) and one for the value.",
+    "The equations are $a+b=43$ and $a-b=17$."
+   ],
+   "solution": [
+    "Equations: $a+b=43$ and $a-b=17$.",
+    "Solve the first for one unknown and substitute into the second.",
+    "The requested quantity is $30$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-50276d",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "How many solutions does the system $\\begin{cases} - x + 3 y = 6 \\\\ - 2 x + 4 y = -3 \\end{cases}$ have?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Compare the ratios of the $x$ coefficients, the $y$ coefficients, and the constants.",
+    "Proportional coefficients mean the lines are parallel (no solution) or identical (infinitely many)."
+   ],
+   "solution": [
+    "Compare: the second equation's coefficients are not proportional to the first's.",
+    "Here the coefficients are not proportional, so the lines cross at exactly one point."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{infinitely many}",
+    "1",
+    "0"
+   ]
+  },
+  {
+   "id": "systems-of-equations-99c14c",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Solve $\\begin{cases} x - 4 y = 10 \\\\ 5 x - 5 y = 5 \\end{cases}$ and enter $xy$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Solve the system fully first.",
+    "Elimination: combine multiples of the equations so one variable cancels."
+   ],
+   "solution": [
+    "Solving gives $x = -2$ and $y = -3$.",
+    "So $xy = 6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-394ca7",
+   "skill": "systems-of-equations",
+   "difficulty": 3,
+   "statement": "For which value of $k$ does the system $\\begin{cases} 4 x + 2 y = 6 \\\\ kx + 6y = 5 \\end{cases}$ have no solution?",
+   "checker": "numeric",
+   "answer": "12",
+   "hints": [
+    "No solution means the two lines are parallel: same slope, different intercepts.",
+    "The $y$ coefficient $6$ is $3$ times $2$, so $k$ must be $3$ times $4$."
+   ],
+   "solution": [
+    "Parallel lines have proportional coefficients: $\\dfrac{k}{4} = \\dfrac{6}{2} = 3$.",
+    "So $k = 12$; the constants $6$ and $5$ are not in that ratio, so there is no solution."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-c9ba52",
+   "skill": "systems-of-equations",
+   "difficulty": 3,
+   "statement": "Solve the system $\\begin{cases} 2 x + 2 y = 7 \\\\ - 3 x - 2 y = 5 \\end{cases}$ and enter the value of $y$.",
+   "checker": "numeric",
+   "answer": "31/2",
+   "hints": [
+    "Use elimination: scale the equations so one variable has opposite coefficients, then add.",
+    "Multiply the first equation by $-3$ and the second by $-2$ to eliminate $x$."
+   ],
+   "solution": [
+    "Eliminate one variable: $-2\\cdot(2 x + 2 y) - 2\\cdot(- 3 x - 2 y) = -24$ gives $2x = -24$, so $x = -12$.",
+    "Substitute back: $y = \\frac{31}{2}$.",
+    "So $y = \\frac{31}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-f7f54c",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "The lines $y = 2 x - 4$ and $y = 5 - 3 x$ intersect at one point. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "9/5",
+   "hints": [
+    "At the intersection both equations give the same $y$, so set the right-hand sides equal.",
+    "Solve $2 x - 4 = 5 - 3 x$."
+   ],
+   "solution": [
+    "Set equal: $2 x - 4 = 5 - 3 x$.",
+    "$5x = 9$, so $x = \\frac{9}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-e1c40d",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "A chemist mixes a 20% solution with a 80% solution to get 8 liters of a 27.5% solution. How many liters of the 80% solution are used?",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Name the two unknowns and write two equations: one for the count (or amount) and one for the value.",
+    "The equations are $a+b=8$ and $20a+80b=220$."
+   ],
+   "solution": [
+    "Equations: $a+b=8$ and $20a+80b=220$.",
+    "Solve the first for one unknown and substitute into the second.",
+    "The requested quantity is $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-56a6ad",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "How many solutions does the system $\\begin{cases} 2 x - 3 y = 2 \\\\ - 4 x + 6 y = -4 \\end{cases}$ have?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compare the ratios of the $x$ coefficients, the $y$ coefficients, and the constants.",
+    "Proportional coefficients mean the lines are parallel (no solution) or identical (infinitely many)."
+   ],
+   "solution": [
+    "Compare: the second equation's coefficients are -2 times  the first's.",
+    "Here the second equation is a multiple of the first, so both describe the same line."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{infinitely many}",
+    "0",
+    "1"
+   ]
+  },
+  {
+   "id": "systems-of-equations-3056dc",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Solve $\\begin{cases} 2 x + 4 y = -12 \\\\ - 3 x - 2 y = 2 \\end{cases}$ and enter $x + y$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "Solve the system fully first.",
+    "Elimination: combine multiples of the equations so one variable cancels."
+   ],
+   "solution": [
+    "Solving gives $x = 2$ and $y = -4$.",
+    "So $x + y = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-782d55",
+   "skill": "systems-of-equations",
+   "difficulty": 3,
+   "statement": "For which value of $k$ does the system $\\begin{cases} 3 x - 3 y = -5 \\\\ kx + 6y = 3 \\end{cases}$ have no solution?",
+   "checker": "numeric",
+   "answer": "-6",
+   "hints": [
+    "No solution means the two lines are parallel: same slope, different intercepts.",
+    "The $y$ coefficient $6$ is $-2$ times $-3$, so $k$ must be $-2$ times $3$."
+   ],
+   "solution": [
+    "Parallel lines have proportional coefficients: $\\dfrac{k}{3} = \\dfrac{6}{-3} = -2$.",
+    "So $k = -6$; the constants $-5$ and $3$ are not in that ratio, so there is no solution."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-19b8e8",
+   "skill": "systems-of-equations",
+   "difficulty": 3,
+   "statement": "Solve the system $\\begin{cases} x - 4 y = 7 \\\\ - 5 x - 2 y = -9 \\end{cases}$ and enter the value of $y$.",
+   "checker": "numeric",
+   "answer": "-13/11",
+   "hints": [
+    "Use elimination: scale the equations so one variable has opposite coefficients, then add.",
+    "Multiply the first equation by $-5$ and the second by $-1$ to eliminate $x$."
+   ],
+   "solution": [
+    "Eliminate one variable: $-2\\cdot(x - 4 y) - -4\\cdot(- 5 x - 2 y) = -50$ gives $-22x = -50$, so $x = \\frac{25}{11}$.",
+    "Substitute back: $y = - \\frac{13}{11}$.",
+    "So $y = - \\frac{13}{11}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-3ce864",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "The lines $y = 2 x - 6$ and $y = 8 - 4 x$ intersect at one point. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "7/3",
+   "hints": [
+    "At the intersection both equations give the same $y$, so set the right-hand sides equal.",
+    "Solve $2 x - 6 = 8 - 4 x$."
+   ],
+   "solution": [
+    "Set equal: $2 x - 6 = 8 - 4 x$.",
+    "$6x = 14$, so $x = \\frac{7}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-c47828",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "A chemist mixes a 30% solution with a 60% solution to get 14 liters of a 45% solution. How many liters of the 60% solution are used?",
+   "checker": "numeric",
+   "answer": "7",
+   "hints": [
+    "Name the two unknowns and write two equations: one for the count (or amount) and one for the value.",
+    "The equations are $a+b=14$ and $30a+60b=630$."
+   ],
+   "solution": [
+    "Equations: $a+b=14$ and $30a+60b=630$.",
+    "Solve the first for one unknown and substitute into the second.",
+    "The requested quantity is $7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-dfa60f",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "How many solutions does the system $\\begin{cases} 2 x + y = 6 \\\\ x - 3 y = 6 \\end{cases}$ have?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compare the ratios of the $x$ coefficients, the $y$ coefficients, and the constants.",
+    "Proportional coefficients mean the lines are parallel (no solution) or identical (infinitely many)."
+   ],
+   "solution": [
+    "Compare: the second equation's coefficients are not proportional to the first's.",
+    "Here the coefficients are not proportional, so the lines cross at exactly one point."
+   ],
+   "verified": true,
+   "choices": [
+    "1",
+    "0",
+    "\\text{infinitely many}"
+   ]
+  },
+  {
+   "id": "systems-of-equations-f68802",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Solve $\\begin{cases} - 2 x - 5 y = -15 \\\\ 5 x + 5 y = 0 \\end{cases}$ and enter $xy$.",
+   "checker": "numeric",
+   "answer": "-25",
+   "hints": [
+    "Solve the system fully first.",
+    "Elimination: combine multiples of the equations so one variable cancels."
+   ],
+   "solution": [
+    "Solving gives $x = -5$ and $y = 5$.",
+    "So $xy = -25$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-fdfa7b",
+   "skill": "systems-of-equations",
+   "difficulty": 3,
+   "statement": "For which value of $k$ does the system $\\begin{cases} x + 4 y = -5 \\\\ kx + 12y = -3 \\end{cases}$ have no solution?",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "No solution means the two lines are parallel: same slope, different intercepts.",
+    "The $y$ coefficient $12$ is $3$ times $4$, so $k$ must be $3$ times $1$."
+   ],
+   "solution": [
+    "Parallel lines have proportional coefficients: $\\dfrac{k}{1} = \\dfrac{12}{4} = 3$.",
+    "So $k = 3$; the constants $-5$ and $-3$ are not in that ratio, so there is no solution."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-9006eb",
+   "skill": "systems-of-equations",
+   "difficulty": 1,
+   "statement": "Solve the system $\\begin{cases} x + 2 y = -8 \\\\ - 2 x + 2 y = -2 \\end{cases}$ and enter the value of $y$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Use elimination: scale the equations so one variable has opposite coefficients, then add.",
+    "Multiply the first equation by $-2$ and the second by $-1$ to eliminate $x$."
+   ],
+   "solution": [
+    "Eliminate one variable: $2\\cdot(x + 2 y) - 2\\cdot(- 2 x + 2 y) = -12$ gives $6x = -12$, so $x = -2$.",
+    "Substitute back: $y = -3$.",
+    "So $y = -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-1f396d",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Adult tickets cost 12 dollars and child tickets cost 4 dollars. 56 tickets were sold for a total of 456 dollars. How many adult tickets were sold?",
+   "checker": "numeric",
+   "answer": "29",
+   "hints": [
+    "Name the two unknowns and write two equations: one for the count (or amount) and one for the value.",
+    "The equations are $a+c=56$ and $12a+4c=456$."
+   ],
+   "solution": [
+    "Equations: $a+c=56$ and $12a+4c=456$.",
+    "Solve the first for one unknown and substitute into the second.",
+    "The requested quantity is $29$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-2c9e63",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "How many solutions does the system $\\begin{cases} 3 x + 2 y = -4 \\\\ - 3 x - 2 y = 4 \\end{cases}$ have?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compare the ratios of the $x$ coefficients, the $y$ coefficients, and the constants.",
+    "Proportional coefficients mean the lines are parallel (no solution) or identical (infinitely many)."
+   ],
+   "solution": [
+    "Compare: the second equation's coefficients are -1 times  the first's.",
+    "Here the second equation is a multiple of the first, so both describe the same line."
+   ],
+   "verified": true,
+   "choices": [
+    "1",
+    "0",
+    "\\text{infinitely many}"
+   ]
+  },
+  {
+   "id": "systems-of-equations-9ff02b",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Solve $\\begin{cases} - 2 x + 4 y = -12 \\\\ 2 x - y = 9 \\end{cases}$ and enter $x + y$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Solve the system fully first.",
+    "Elimination: combine multiples of the equations so one variable cancels."
+   ],
+   "solution": [
+    "Solving gives $x = 4$ and $y = -1$.",
+    "So $x + y = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-4ee83c",
+   "skill": "systems-of-equations",
+   "difficulty": 3,
+   "statement": "For which value of $k$ does the system $\\begin{cases} x + 2 y = 6 \\\\ kx - 4y = 1 \\end{cases}$ have no solution?",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "No solution means the two lines are parallel: same slope, different intercepts.",
+    "The $y$ coefficient $-4$ is $-2$ times $2$, so $k$ must be $-2$ times $1$."
+   ],
+   "solution": [
+    "Parallel lines have proportional coefficients: $\\dfrac{k}{1} = \\dfrac{-4}{2} = -2$.",
+    "So $k = -2$; the constants $6$ and $1$ are not in that ratio, so there is no solution."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-8b90c9",
+   "skill": "systems-of-equations",
+   "difficulty": 1,
+   "statement": "Solve the system $\\begin{cases} - x - 3 y = -13 \\\\ - x + 5 y = 19 \\end{cases}$ and enter the value of $x$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Use elimination: scale the equations so one variable has opposite coefficients, then add.",
+    "Multiply the first equation by $5$ and the second by $3$ to eliminate $y$."
+   ],
+   "solution": [
+    "Eliminate one variable: $5\\cdot(- x - 3 y) - -3\\cdot(- x + 5 y) = -8$ gives $-8x = -8$, so $x = 1$.",
+    "Substitute back: $y = 4$.",
+    "So $x = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-07357f",
+   "skill": "systems-of-equations",
+   "difficulty": 1,
+   "statement": "The lines $y = x + 8$ and $y = 4 - x$ intersect at one point. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "At the intersection both equations give the same $y$, so set the right-hand sides equal.",
+    "Solve $x + 8 = 4 - x$."
+   ],
+   "solution": [
+    "Set equal: $x + 8 = 4 - x$.",
+    "$2x = -4$, so $x = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-5c081e",
+   "skill": "systems-of-equations",
+   "difficulty": 1,
+   "statement": "The sum of two numbers is 28 and their difference is 22. Find the larger number.",
+   "checker": "numeric",
+   "answer": "25",
+   "hints": [
+    "Name the two unknowns and write two equations: one for the count (or amount) and one for the value.",
+    "The equations are $a+b=28$ and $a-b=22$."
+   ],
+   "solution": [
+    "Equations: $a+b=28$ and $a-b=22$.",
+    "Solve the first for one unknown and substitute into the second.",
+    "The requested quantity is $25$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-f52ee5",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "How many solutions does the system $\\begin{cases} 4 x - 4 y = 0 \\\\ x - 3 y = -2 \\end{cases}$ have?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Compare the ratios of the $x$ coefficients, the $y$ coefficients, and the constants.",
+    "Proportional coefficients mean the lines are parallel (no solution) or identical (infinitely many)."
+   ],
+   "solution": [
+    "Compare: the second equation's coefficients are not proportional to the first's.",
+    "Here the coefficients are not proportional, so the lines cross at exactly one point."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{infinitely many}",
+    "1",
+    "0"
+   ]
+  },
+  {
+   "id": "systems-of-equations-e69712",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Solve $\\begin{cases} - 4 x + 5 y = 0 \\\\ - x - y = 0 \\end{cases}$ and enter $xy$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Solve the system fully first.",
+    "Elimination: combine multiples of the equations so one variable cancels."
+   ],
+   "solution": [
+    "Solving gives $x = 0$ and $y = 0$.",
+    "So $xy = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-8078d3",
+   "skill": "systems-of-equations",
+   "difficulty": 3,
+   "statement": "For which value of $k$ does the system $\\begin{cases} - x + y = -3 \\\\ kx + 2y = -4 \\end{cases}$ have no solution?",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "No solution means the two lines are parallel: same slope, different intercepts.",
+    "The $y$ coefficient $2$ is $2$ times $1$, so $k$ must be $2$ times $-1$."
+   ],
+   "solution": [
+    "Parallel lines have proportional coefficients: $\\dfrac{k}{-1} = \\dfrac{2}{1} = 2$.",
+    "So $k = -2$; the constants $-3$ and $-4$ are not in that ratio, so there is no solution."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-0ed484",
+   "skill": "systems-of-equations",
+   "difficulty": 1,
+   "statement": "Solve the system $\\begin{cases} - x - 3 y = 10 \\\\ - 3 x - y = 14 \\end{cases}$ and enter the value of $y$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "Use elimination: scale the equations so one variable has opposite coefficients, then add.",
+    "Multiply the first equation by $-3$ and the second by $1$ to eliminate $x$."
+   ],
+   "solution": [
+    "Eliminate one variable: $-1\\cdot(- x - 3 y) - -3\\cdot(- 3 x - y) = 32$ gives $-8x = 32$, so $x = -4$.",
+    "Substitute back: $y = -2$.",
+    "So $y = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-0d7b2f",
+   "skill": "systems-of-equations",
+   "difficulty": 1,
+   "statement": "The lines $y = - x - 6$ and $y = - 3 x - 4$ intersect at one point. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "At the intersection both equations give the same $y$, so set the right-hand sides equal.",
+    "Solve $- x - 6 = - 3 x - 4$."
+   ],
+   "solution": [
+    "Set equal: $- x - 6 = - 3 x - 4$.",
+    "$2x = 2$, so $x = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-1b25e2",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "A jar has 12 coins, all dimes and quarters, worth 180 cents in total. How many quarters are there?",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Name the two unknowns and write two equations: one for the count (or amount) and one for the value.",
+    "The equations are $d+q=12$ and $10d+25q=180$."
+   ],
+   "solution": [
+    "Equations: $d+q=12$ and $10d+25q=180$.",
+    "Solve the first for one unknown and substitute into the second.",
+    "The requested quantity is $4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "systems-of-equations-5cc927",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "How many solutions does the system $\\begin{cases} 2 x - 4 y = 3 \\\\ - 2 x - 4 y = 3 \\end{cases}$ have?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compare the ratios of the $x$ coefficients, the $y$ coefficients, and the constants.",
+    "Proportional coefficients mean the lines are parallel (no solution) or identical (infinitely many)."
+   ],
+   "solution": [
+    "Compare: the second equation's coefficients are not proportional to the first's.",
+    "Here the coefficients are not proportional, so the lines cross at exactly one point."
+   ],
+   "verified": true,
+   "choices": [
+    "0",
+    "\\text{infinitely many}",
+    "1"
+   ]
+  },
+  {
+   "id": "systems-of-equations-05d49f",
+   "skill": "systems-of-equations",
+   "difficulty": 2,
+   "statement": "Solve $\\begin{cases} - 3 x - 3 y = 0 \\\\ 2 x + 3 y = 5 \\end{cases}$ and enter $xy$.",
+   "checker": "numeric",
+   "answer": "-25",
+   "hints": [
+    "Solve the system fully first.",
+    "Elimination: combine multiples of the equations so one variable cancels."
+   ],
+   "solution": [
+    "Solving gives $x = -5$ and $y = 5$.",
+    "So $xy = -25$."
+   ],
+   "verified": true
+  }
+ ]
+}

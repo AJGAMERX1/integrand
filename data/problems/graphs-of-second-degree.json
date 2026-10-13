@@ -1,0 +1,1226 @@
+{
+ "skill": "graphs-of-second-degree",
+ "problems": [
+  {
+   "id": "graphs-of-second-degree-4f55b1",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "The equation $(x - 5)^2 + (y)^2 = 16$ describes a circle. What is the $x$-coordinate of its center?",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Standard form: $(x - h)^2 + (y - k)^2 = r^2$ with center $(h, k)$ and radius $r$.",
+    "Inside $(x - h)^2$ the center's $x$-coordinate is $h$ (watch the sign)."
+   ],
+   "solution": [
+    "Match to $(x - h)^2 + (y - k)^2 = r^2$: $h = 5$, $k = 0$, $r^2 = 16$.",
+    "So the answer is $5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-a2426b",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The circle $x^{2} - 10 x + y^{2} - 4 y + 25 = 0$ is written in general form. Find the $x$-coordinate of its center.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Complete the square in $x$ and in $y$ separately.",
+    "Group: $(x^2 - 10x) + (y^2 - 4y) = -25$, then add $(-5)^2$ and $(-2)^2$ to both sides."
+   ],
+   "solution": [
+    "$(x^2 - 10x + 25) + (y^2 - 4y + 4) = -25 + 25 + 4$.",
+    "$(x - 5)^2 + (y - 2)^2 = 4$.",
+    "Center $(5, 2)$, radius $2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-feced6",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 3,
+   "statement": "Find the $y$-coordinate of the vertex of $y = x^{2} + x + 1$.",
+   "checker": "numeric",
+   "answer": "3/4",
+   "hints": [
+    "First find the vertex's $x$-coordinate from $x = -b/(2a)$.",
+    "Then substitute $x = - \\frac{1}{2}$ into the equation."
+   ],
+   "solution": [
+    "$x_v = -\\dfrac{1}{2(1)} = - \\frac{1}{2}$.",
+    "$y_v = (- \\frac{1}{2})^{2} + (- \\frac{1}{2}) + 1 = \\frac{3}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-7eac42",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The parabola $y = 2 x^{2} + 14 x + 24$ crosses the $x$-axis twice. Enter the larger $x$-intercept.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "$x$-intercepts are where $y = 0$: solve the quadratic.",
+    "Factor: $2 x^{2} + 14 x + 24 = 2 \\left(x + 3\\right) \\left(x + 4\\right)$."
+   ],
+   "solution": [
+    "Set $y = 0$: $2 \\left(x + 3\\right) \\left(x + 4\\right) = 0$.",
+    "$x = -4$ or $x = -3$; the larger is $-3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-70d517",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Which equation describes the circle with center $(2, 3)$ and radius $3$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Standard form: $(x - h)^2 + (y - k)^2 = r^2$.",
+    "With $h = 2$ the first factor is $(x - (2))^2 = (x - 2)^2$, and the right side is $r^2 = 9$."
+   ],
+   "solution": [
+    "Substitute $h = 2$, $k = 3$, $r = 3$ into $(x - h)^2 + (y - k)^2 = r^2$.",
+    "$(x - 2)^2 + (y - 3)^2 = 9$."
+   ],
+   "verified": true,
+   "choices": [
+    "(x - 2)^2 + (y - 3)^2 = 3",
+    "(x - 2)^2 + (y + 3)^2 = 9",
+    "(x + 2)^2 + (y + 3)^2 = 9",
+    "(x - 2)^2 + (y - 3)^2 = 9"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-d99daf",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Is the point $(5, 2)$ inside, on, or outside the circle $(x - 4)^2 + (y + 2)^2 = 4$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compare the squared distance from the center to $r^2$.",
+    "Substitute the point into the left side and compare with $4$."
+   ],
+   "solution": [
+    "Left side at the point: $(5 - (4))^2 + (2 - (-2))^2 = 17$.",
+    "Since $17$ is greater than $4$, the point is outside the circle."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{on the circle}",
+    "\\text{inside the circle}",
+    "\\text{outside the circle}"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-f57c63",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Write $y = x^{2} - 2 x + 9$ in vertex form $y = a(x - h)^2 + k$. Enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "(x-1)^2+8",
+   "hints": [
+    "Complete the square.",
+    "Half of the $x$ coefficient (after factoring) is $-1$; square it and compensate."
+   ],
+   "solution": [
+    "$x^2 + -2x + (9)$: add and subtract $1$.",
+    "Result: $y = \\left(x - 1\\right)^{2} + 8$, vertex $(1, 8)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-d3db24",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "Does the parabola $y = - 3 x^{2} + x$ open upward or downward?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Only the sign of the $x^2$ coefficient matters.",
+    "Positive: opens up (has a minimum); negative: opens down (has a maximum)."
+   ],
+   "solution": [
+    "The coefficient of $x^2$ is $-3$, which is negative.",
+    "So the parabola opens downward."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{neither: it is a line}",
+    "\\text{downward}",
+    "\\text{upward}"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-a3fc79",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The points $(-2, -2)$ and $(3, 4)$ are the endpoints of a diameter of a circle. Find the $y$-coordinate of the center.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "The center is the midpoint of any diameter.",
+    "Midpoint: average the coordinates."
+   ],
+   "solution": [
+    "Center $= \\left(\\dfrac{-2 + (3)}{2}, \\dfrac{-2 + (4)}{2}\\right)$.",
+    "The $y$-coordinate is $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-a63d83",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 3,
+   "statement": "Find the maximum value of $y = - 2 x^{2} - 4 x - 1$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "The maximum occurs at the vertex because the parabola opens downward.",
+    "Vertex $x = -b/(2a) = -1$; evaluate $y$ there."
+   ],
+   "solution": [
+    "$x_v = -\\dfrac{-4}{2(-2)} = -1$.",
+    "$y(-1) = 1$ is the maximum value."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-91785a",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "The equation $(x + 4)^2 + (y - 5)^2 = 25$ describes a circle. What is its radius?",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Standard form: $(x - h)^2 + (y - k)^2 = r^2$ with center $(h, k)$ and radius $r$.",
+    "The right-hand side is $r^2 = 25$."
+   ],
+   "solution": [
+    "Match to $(x - h)^2 + (y - k)^2 = r^2$: $h = -4$, $k = 5$, $r^2 = 25$.",
+    "So the answer is $5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-f68795",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The circle $x^{2} + 4 x + y^{2} + 8 y - 5 = 0$ is written in general form. Find the $y$-coordinate of its center.",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "Complete the square in $x$ and in $y$ separately.",
+    "Group: $(x^2 + 4x) + (y^2 + 8y) = 5$, then add $(2)^2$ and $(4)^2$ to both sides."
+   ],
+   "solution": [
+    "$(x^2 + 4x + 4) + (y^2 + 8y + 16) = 5 + 4 + 16$.",
+    "$(x + 2)^2 + (y + 4)^2 = 25$.",
+    "Center $(-2, -4)$, radius $5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-c5eb50",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Find the $x$-coordinate of the vertex of $y = - 2 x^{2} - 7 x - 5$.",
+   "checker": "numeric",
+   "answer": "-7/4",
+   "hints": [
+    "The vertex lies on the axis of symmetry $x = -b/(2a)$.",
+    "$a = -2$, $b = -7$."
+   ],
+   "solution": [
+    "$x = -\\dfrac{-7}{2(-2)} = - \\frac{7}{4}$.",
+    "The vertex is the point on the parabola at this $x$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-7c941a",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "Find the $y$-intercept of the parabola $y = x^{2} + 3 x - 18$. Enter the $y$-value.",
+   "checker": "numeric",
+   "answer": "-18",
+   "hints": [
+    "The $y$-intercept is where $x = 0$.",
+    "Substitute $x = 0$: only the constant term survives."
+   ],
+   "solution": [
+    "Set $x = 0$: $y = -18$.",
+    "So the parabola crosses the $y$-axis at $(0, -18)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-6a1311",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Which equation describes the circle with center $(-2, -5)$ and radius $2$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Standard form: $(x - h)^2 + (y - k)^2 = r^2$.",
+    "With $h = -2$ the first factor is $(x - (-2))^2 = (x + 2)^2$, and the right side is $r^2 = 4$."
+   ],
+   "solution": [
+    "Substitute $h = -2$, $k = -5$, $r = 2$ into $(x - h)^2 + (y - k)^2 = r^2$.",
+    "$(x + 2)^2 + (y + 5)^2 = 4$."
+   ],
+   "verified": true,
+   "choices": [
+    "(x + 2)^2 + (y - 5)^2 = 4",
+    "(x + 2)^2 + (y + 5)^2 = 4",
+    "(x + 2)^2 + (y + 5)^2 = 2",
+    "(x - 2)^2 + (y - 5)^2 = 4"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-ba81c6",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Is the point $(6, -1)$ inside, on, or outside the circle $(x - 2)^2 + (y + 3)^2 = 4$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compare the squared distance from the center to $r^2$.",
+    "Substitute the point into the left side and compare with $4$."
+   ],
+   "solution": [
+    "Left side at the point: $(6 - (2))^2 + (-1 - (-3))^2 = 20$.",
+    "Since $20$ is greater than $4$, the point is outside the circle."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{outside the circle}",
+    "\\text{on the circle}",
+    "\\text{inside the circle}"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-4a7aa9",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Write $y = x^{2} - 2 x - 5$ in vertex form $y = a(x - h)^2 + k$. Enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "(x-1)^2-6",
+   "hints": [
+    "Complete the square.",
+    "Half of the $x$ coefficient (after factoring) is $-1$; square it and compensate."
+   ],
+   "solution": [
+    "$x^2 + -2x + (-5)$: add and subtract $1$.",
+    "Result: $y = \\left(x - 1\\right)^{2} - 6$, vertex $(1, -6)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-02612b",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "Does the parabola $y = 2 x^{2} - 5 x - 3$ open upward or downward?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Only the sign of the $x^2$ coefficient matters.",
+    "Positive: opens up (has a minimum); negative: opens down (has a maximum)."
+   ],
+   "solution": [
+    "The coefficient of $x^2$ is $2$, which is positive.",
+    "So the parabola opens upward."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{upward}",
+    "\\text{neither: it is a line}",
+    "\\text{downward}"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-f3823b",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "A circle has center $(3, -2)$ and passes through $(5, -5)$. Find $r^2$, the square of its radius.",
+   "checker": "numeric",
+   "answer": "13",
+   "hints": [
+    "The radius is the distance from the center to any point on the circle.",
+    "Use the distance formula; you only need the squared distance."
+   ],
+   "solution": [
+    "$r^2 = (5 - (3))^2 + (-5 - (-2))^2$.",
+    "$= 4 + 9 = 13$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-8a1c1e",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 3,
+   "statement": "Find the minimum value of $y = 2 x^{2} + x + 5$.",
+   "checker": "numeric",
+   "answer": "39/8",
+   "hints": [
+    "The minimum occurs at the vertex because the parabola opens upward.",
+    "Vertex $x = -b/(2a) = - \\frac{1}{4}$; evaluate $y$ there."
+   ],
+   "solution": [
+    "$x_v = -\\dfrac{1}{2(2)} = - \\frac{1}{4}$.",
+    "$y(- \\frac{1}{4}) = \\frac{39}{8}$ is the minimum value."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-57b934",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "The equation $(x + 1)^2 + (y - 6)^2 = 36$ describes a circle. What is its radius?",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Standard form: $(x - h)^2 + (y - k)^2 = r^2$ with center $(h, k)$ and radius $r$.",
+    "The right-hand side is $r^2 = 36$."
+   ],
+   "solution": [
+    "Match to $(x - h)^2 + (y - k)^2 = r^2$: $h = -1$, $k = 6$, $r^2 = 36$.",
+    "So the answer is $6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-79d41d",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The circle $x^{2} + 6 x + y^{2} + 10 y + 30 = 0$ is written in general form. Find the $x$-coordinate of its center.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Complete the square in $x$ and in $y$ separately.",
+    "Group: $(x^2 + 6x) + (y^2 + 10y) = -30$, then add $(3)^2$ and $(5)^2$ to both sides."
+   ],
+   "solution": [
+    "$(x^2 + 6x + 9) + (y^2 + 10y + 25) = -30 + 9 + 25$.",
+    "$(x + 3)^2 + (y + 5)^2 = 4$.",
+    "Center $(-3, -5)$, radius $2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-128e88",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Find the $x$-coordinate of the vertex of $y = 2 x^{2} - 6 x - 5$.",
+   "checker": "numeric",
+   "answer": "3/2",
+   "hints": [
+    "The vertex lies on the axis of symmetry $x = -b/(2a)$.",
+    "$a = 2$, $b = -6$."
+   ],
+   "solution": [
+    "$x = -\\dfrac{-6}{2(2)} = \\frac{3}{2}$.",
+    "The vertex is the point on the parabola at this $x$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-956818",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The parabola $y = 2 x^{2} + 10 x - 12$ crosses the $x$-axis twice. Enter the larger $x$-intercept.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "$x$-intercepts are where $y = 0$: solve the quadratic.",
+    "Factor: $2 x^{2} + 10 x - 12 = 2 \\left(x - 1\\right) \\left(x + 6\\right)$."
+   ],
+   "solution": [
+    "Set $y = 0$: $2 \\left(x - 1\\right) \\left(x + 6\\right) = 0$.",
+    "$x = 1$ or $x = -6$; the larger is $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-085226",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Which equation describes the circle with center $(-3, -5)$ and radius $1$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Standard form: $(x - h)^2 + (y - k)^2 = r^2$.",
+    "With $h = -3$ the first factor is $(x - (-3))^2 = (x + 3)^2$, and the right side is $r^2 = 1$."
+   ],
+   "solution": [
+    "Substitute $h = -3$, $k = -5$, $r = 1$ into $(x - h)^2 + (y - k)^2 = r^2$.",
+    "$(x + 3)^2 + (y + 5)^2 = 1$."
+   ],
+   "verified": true,
+   "choices": [
+    "(x + 3)^2 + (y + 5)^2 = 1",
+    "(x - 3)^2 + (y - 5)^2 = 1",
+    "(x + 3)^2 + (y - 5)^2 = 1",
+    "(x - 3)^2 + (y + 5)^2 = 1"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-fe1c22",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Is the point $(-4, -2)$ inside, on, or outside the circle $(x)^2 + (y + 4)^2 = 25$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compare the squared distance from the center to $r^2$.",
+    "Substitute the point into the left side and compare with $25$."
+   ],
+   "solution": [
+    "Left side at the point: $(-4 - (0))^2 + (-2 - (-4))^2 = 20$.",
+    "Since $20$ is less than $25$, the point is inside the circle."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{inside the circle}",
+    "\\text{outside the circle}",
+    "\\text{on the circle}"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-06fb17",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 3,
+   "statement": "Write $y = - x^{2} + 4 x - 10$ in vertex form $y = a(x - h)^2 + k$. Enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "-(x-2)^2-6",
+   "hints": [
+    "Complete the square. First factor $-1$ out of the $x^2$ and $x$ terms.",
+    "Half of the $x$ coefficient (after factoring) is $-2$; square it and compensate."
+   ],
+   "solution": [
+    "Factor: $-1(x^2 + -4x) + -6$.",
+    "Result: $y = - \\left(x - 2\\right)^{2} - 6$, vertex $(2, -6)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-918e30",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "Does the parabola $y = - 2 x^{2} + 5 x + 3$ open upward or downward?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Only the sign of the $x^2$ coefficient matters.",
+    "Positive: opens up (has a minimum); negative: opens down (has a maximum)."
+   ],
+   "solution": [
+    "The coefficient of $x^2$ is $-2$, which is negative.",
+    "So the parabola opens downward."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{neither: it is a line}",
+    "\\text{upward}",
+    "\\text{downward}"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-a5f518",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The points $(5, 4)$ and $(0, -3)$ are the endpoints of a diameter of a circle. Find the $y$-coordinate of the center.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "The center is the midpoint of any diameter.",
+    "Midpoint: average the coordinates."
+   ],
+   "solution": [
+    "Center $= \\left(\\dfrac{5 + (0)}{2}, \\dfrac{4 + (-3)}{2}\\right)$.",
+    "The $y$-coordinate is $\\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-428a2c",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 3,
+   "statement": "Find the minimum value of $y = x^{2} - 8 x + 4$.",
+   "checker": "numeric",
+   "answer": "-12",
+   "hints": [
+    "The minimum occurs at the vertex because the parabola opens upward.",
+    "Vertex $x = -b/(2a) = 4$; evaluate $y$ there."
+   ],
+   "solution": [
+    "$x_v = -\\dfrac{-8}{2(1)} = 4$.",
+    "$y(4) = -12$ is the minimum value."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-efb513",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "The equation $(x + 2)^2 + (y + 4)^2 = 25$ describes a circle. What is its radius?",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Standard form: $(x - h)^2 + (y - k)^2 = r^2$ with center $(h, k)$ and radius $r$.",
+    "The right-hand side is $r^2 = 25$."
+   ],
+   "solution": [
+    "Match to $(x - h)^2 + (y - k)^2 = r^2$: $h = -2$, $k = -4$, $r^2 = 25$.",
+    "So the answer is $5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-b0c066",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 3,
+   "statement": "The circle $x^{2} - 4 x + y^{2} + 6 y + 4 = 0$ is written in general form. Find its radius.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Complete the square in $x$ and in $y$ separately.",
+    "Group: $(x^2 - 4x) + (y^2 + 6y) = -4$, then add $(-2)^2$ and $(3)^2$ to both sides."
+   ],
+   "solution": [
+    "$(x^2 - 4x + 4) + (y^2 + 6y + 9) = -4 + 4 + 9$.",
+    "$(x - 2)^2 + (y + 3)^2 = 9$.",
+    "Center $(2, -3)$, radius $3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-7dda91",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Find the $x$-coordinate of the vertex of $y = x^{2} + 2 x + 4$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "The vertex lies on the axis of symmetry $x = -b/(2a)$.",
+    "$a = 1$, $b = 2$."
+   ],
+   "solution": [
+    "$x = -\\dfrac{2}{2(1)} = -1$.",
+    "The vertex is the point on the parabola at this $x$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-abe9f3",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "Find the $y$-intercept of the parabola $y = - x^{2} + 3 x + 18$. Enter the $y$-value.",
+   "checker": "numeric",
+   "answer": "18",
+   "hints": [
+    "The $y$-intercept is where $x = 0$.",
+    "Substitute $x = 0$: only the constant term survives."
+   ],
+   "solution": [
+    "Set $x = 0$: $y = 18$.",
+    "So the parabola crosses the $y$-axis at $(0, 18)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-5ea050",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Which equation describes the circle with center $(-4, -2)$ and radius $4$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Standard form: $(x - h)^2 + (y - k)^2 = r^2$.",
+    "With $h = -4$ the first factor is $(x - (-4))^2 = (x + 4)^2$, and the right side is $r^2 = 16$."
+   ],
+   "solution": [
+    "Substitute $h = -4$, $k = -2$, $r = 4$ into $(x - h)^2 + (y - k)^2 = r^2$.",
+    "$(x + 4)^2 + (y + 2)^2 = 16$."
+   ],
+   "verified": true,
+   "choices": [
+    "(x - 4)^2 + (y - 2)^2 = 16",
+    "(x + 4)^2 + (y + 2)^2 = 16",
+    "(x + 4)^2 + (y + 2)^2 = 4",
+    "(x + 4)^2 + (y - 2)^2 = 16"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-112ffe",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Is the point $(-4, -9)$ inside, on, or outside the circle $(x + 3)^2 + (y + 3)^2 = 25$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compare the squared distance from the center to $r^2$.",
+    "Substitute the point into the left side and compare with $25$."
+   ],
+   "solution": [
+    "Left side at the point: $(-4 - (-3))^2 + (-9 - (-3))^2 = 37$.",
+    "Since $37$ is greater than $25$, the point is outside the circle."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{outside the circle}",
+    "\\text{inside the circle}",
+    "\\text{on the circle}"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-da6566",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 3,
+   "statement": "Write $y = 2 x^{2} - 20 x + 50$ in vertex form $y = a(x - h)^2 + k$. Enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "2*(x-5)^2",
+   "hints": [
+    "Complete the square. First factor $2$ out of the $x^2$ and $x$ terms.",
+    "Half of the $x$ coefficient (after factoring) is $-5$; square it and compensate."
+   ],
+   "solution": [
+    "Factor: $2(x^2 + -10x) + 0$.",
+    "Result: $y = 2 \\left(x - 5\\right)^{2}$, vertex $(5, 0)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-5a376c",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "Does the parabola $y = 4 x^{2} - 2 x$ open upward or downward?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Only the sign of the $x^2$ coefficient matters.",
+    "Positive: opens up (has a minimum); negative: opens down (has a maximum)."
+   ],
+   "solution": [
+    "The coefficient of $x^2$ is $4$, which is positive.",
+    "So the parabola opens upward."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{neither: it is a line}",
+    "\\text{downward}",
+    "\\text{upward}"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-3b345e",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The points $(-6, -3)$ and $(4, 3)$ are the endpoints of a diameter of a circle. Find the $x$-coordinate of the center.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "The center is the midpoint of any diameter.",
+    "Midpoint: average the coordinates."
+   ],
+   "solution": [
+    "Center $= \\left(\\dfrac{-6 + (4)}{2}, \\dfrac{-3 + (3)}{2}\\right)$.",
+    "The $x$-coordinate is $-1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-6791c4",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 3,
+   "statement": "Find the minimum value of $y = 2 x^{2} - x - 3$.",
+   "checker": "numeric",
+   "answer": "-25/8",
+   "hints": [
+    "The minimum occurs at the vertex because the parabola opens upward.",
+    "Vertex $x = -b/(2a) = \\frac{1}{4}$; evaluate $y$ there."
+   ],
+   "solution": [
+    "$x_v = -\\dfrac{-1}{2(2)} = \\frac{1}{4}$.",
+    "$y(\\frac{1}{4}) = - \\frac{25}{8}$ is the minimum value."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-925a17",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "The equation $(x + 6)^2 + (y - 1)^2 = 16$ describes a circle. What is the $y$-coordinate of its center?",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Standard form: $(x - h)^2 + (y - k)^2 = r^2$ with center $(h, k)$ and radius $r$.",
+    "Inside $(y - k)^2$ the center's $y$-coordinate is $k$ (watch the sign)."
+   ],
+   "solution": [
+    "Match to $(x - h)^2 + (y - k)^2 = r^2$: $h = -6$, $k = 1$, $r^2 = 16$.",
+    "So the answer is $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-351801",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The circle $x^{2} - 10 x + y^{2} + 8 y + 37 = 0$ is written in general form. Find the $y$-coordinate of its center.",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "Complete the square in $x$ and in $y$ separately.",
+    "Group: $(x^2 - 10x) + (y^2 + 8y) = -37$, then add $(-5)^2$ and $(4)^2$ to both sides."
+   ],
+   "solution": [
+    "$(x^2 - 10x + 25) + (y^2 + 8y + 16) = -37 + 25 + 16$.",
+    "$(x - 5)^2 + (y + 4)^2 = 4$.",
+    "Center $(5, -4)$, radius $2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-667094",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Find the $x$-coordinate of the vertex of $y = - x^{2} - 7 x - 2$.",
+   "checker": "numeric",
+   "answer": "-7/2",
+   "hints": [
+    "The vertex lies on the axis of symmetry $x = -b/(2a)$.",
+    "$a = -1$, $b = -7$."
+   ],
+   "solution": [
+    "$x = -\\dfrac{-7}{2(-1)} = - \\frac{7}{2}$.",
+    "The vertex is the point on the parabola at this $x$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-62ef9c",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The parabola $y = x^{2} - 10 x + 24$ crosses the $x$-axis twice. Enter the larger $x$-intercept.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "$x$-intercepts are where $y = 0$: solve the quadratic.",
+    "Factor: $x^{2} - 10 x + 24 = \\left(x - 6\\right) \\left(x - 4\\right)$."
+   ],
+   "solution": [
+    "Set $y = 0$: $\\left(x - 6\\right) \\left(x - 4\\right) = 0$.",
+    "$x = 4$ or $x = 6$; the larger is $6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-b7bfbf",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Which equation describes the circle with center $(5, 4)$ and radius $5$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Standard form: $(x - h)^2 + (y - k)^2 = r^2$.",
+    "With $h = 5$ the first factor is $(x - (5))^2 = (x - 5)^2$, and the right side is $r^2 = 25$."
+   ],
+   "solution": [
+    "Substitute $h = 5$, $k = 4$, $r = 5$ into $(x - h)^2 + (y - k)^2 = r^2$.",
+    "$(x - 5)^2 + (y - 4)^2 = 25$."
+   ],
+   "verified": true,
+   "choices": [
+    "(x - 5)^2 + (y - 4)^2 = 25",
+    "(x + 5)^2 + (y + 4)^2 = 25",
+    "(x - 5)^2 + (y + 4)^2 = 25",
+    "(x - 5)^2 + (y - 4)^2 = 5"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-e07fa2",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Is the point $(-6, 3)$ inside, on, or outside the circle $(x + 1)^2 + (y + 2)^2 = 9$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compare the squared distance from the center to $r^2$.",
+    "Substitute the point into the left side and compare with $9$."
+   ],
+   "solution": [
+    "Left side at the point: $(-6 - (-1))^2 + (3 - (-2))^2 = 50$.",
+    "Since $50$ is greater than $9$, the point is outside the circle."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{inside the circle}",
+    "\\text{on the circle}",
+    "\\text{outside the circle}"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-9fa71c",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 3,
+   "statement": "Write $y = - x^{2} - 8 x - 23$ in vertex form $y = a(x - h)^2 + k$. Enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "-(x+4)^2-7",
+   "hints": [
+    "Complete the square. First factor $-1$ out of the $x^2$ and $x$ terms.",
+    "Half of the $x$ coefficient (after factoring) is $4$; square it and compensate."
+   ],
+   "solution": [
+    "Factor: $-1(x^2 + 8x) + -7$.",
+    "Result: $y = - \\left(x + 4\\right)^{2} - 7$, vertex $(-4, -7)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-3bc7f1",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "Does the parabola $y = 4 x^{2} - 5 x + 4$ open upward or downward?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Only the sign of the $x^2$ coefficient matters.",
+    "Positive: opens up (has a minimum); negative: opens down (has a maximum)."
+   ],
+   "solution": [
+    "The coefficient of $x^2$ is $4$, which is positive.",
+    "So the parabola opens upward."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{neither: it is a line}",
+    "\\text{upward}",
+    "\\text{downward}"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-c21ca4",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "A circle has center $(2, 3)$ and passes through $(-3, 3)$. Find $r^2$, the square of its radius.",
+   "checker": "numeric",
+   "answer": "25",
+   "hints": [
+    "The radius is the distance from the center to any point on the circle.",
+    "Use the distance formula; you only need the squared distance."
+   ],
+   "solution": [
+    "$r^2 = (-3 - (2))^2 + (3 - (3))^2$.",
+    "$= 25 + 0 = 25$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-c04e13",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 3,
+   "statement": "Find the minimum value of $y = 2 x^{2} + 5 x + 4$.",
+   "checker": "numeric",
+   "answer": "7/8",
+   "hints": [
+    "The minimum occurs at the vertex because the parabola opens upward.",
+    "Vertex $x = -b/(2a) = - \\frac{5}{4}$; evaluate $y$ there."
+   ],
+   "solution": [
+    "$x_v = -\\dfrac{5}{2(2)} = - \\frac{5}{4}$.",
+    "$y(- \\frac{5}{4}) = \\frac{7}{8}$ is the minimum value."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-e55e82",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "The equation $(x)^2 + (y + 4)^2 = 100$ describes a circle. What is its radius?",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "Standard form: $(x - h)^2 + (y - k)^2 = r^2$ with center $(h, k)$ and radius $r$.",
+    "The right-hand side is $r^2 = 100$."
+   ],
+   "solution": [
+    "Match to $(x - h)^2 + (y - k)^2 = r^2$: $h = 0$, $k = -4$, $r^2 = 100$.",
+    "So the answer is $10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-656741",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The circle $x^{2} - 4 x + y^{2} - 10 y + 13 = 0$ is written in general form. Find the $x$-coordinate of its center.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Complete the square in $x$ and in $y$ separately.",
+    "Group: $(x^2 - 4x) + (y^2 - 10y) = -13$, then add $(-2)^2$ and $(-5)^2$ to both sides."
+   ],
+   "solution": [
+    "$(x^2 - 4x + 4) + (y^2 - 10y + 25) = -13 + 4 + 25$.",
+    "$(x - 2)^2 + (y - 5)^2 = 16$.",
+    "Center $(2, 5)$, radius $4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-728089",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Find the $x$-coordinate of the vertex of $y = 2 x^{2} - 8 x - 2$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "The vertex lies on the axis of symmetry $x = -b/(2a)$.",
+    "$a = 2$, $b = -8$."
+   ],
+   "solution": [
+    "$x = -\\dfrac{-8}{2(2)} = 2$.",
+    "The vertex is the point on the parabola at this $x$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-a47757",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The parabola $y = 2 x^{2} - 16 x + 24$ crosses the $x$-axis twice. Enter the larger $x$-intercept.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "$x$-intercepts are where $y = 0$: solve the quadratic.",
+    "Factor: $2 x^{2} - 16 x + 24 = 2 \\left(x - 6\\right) \\left(x - 2\\right)$."
+   ],
+   "solution": [
+    "Set $y = 0$: $2 \\left(x - 6\\right) \\left(x - 2\\right) = 0$.",
+    "$x = 6$ or $x = 2$; the larger is $6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-e3af35",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Which equation describes the circle with center $(2, -5)$ and radius $3$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Standard form: $(x - h)^2 + (y - k)^2 = r^2$.",
+    "With $h = 2$ the first factor is $(x - (2))^2 = (x - 2)^2$, and the right side is $r^2 = 9$."
+   ],
+   "solution": [
+    "Substitute $h = 2$, $k = -5$, $r = 3$ into $(x - h)^2 + (y - k)^2 = r^2$.",
+    "$(x - 2)^2 + (y + 5)^2 = 9$."
+   ],
+   "verified": true,
+   "choices": [
+    "(x - 2)^2 + (y + 5)^2 = 9",
+    "(x - 2)^2 + (y - 5)^2 = 9",
+    "(x - 2)^2 + (y + 5)^2 = 3",
+    "(x + 2)^2 + (y - 5)^2 = 9"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-40c4a1",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Is the point $(-6, -8)$ inside, on, or outside the circle $(x + 3)^2 + (y + 4)^2 = 16$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compare the squared distance from the center to $r^2$.",
+    "Substitute the point into the left side and compare with $16$."
+   ],
+   "solution": [
+    "Left side at the point: $(-6 - (-3))^2 + (-8 - (-4))^2 = 25$.",
+    "Since $25$ is greater than $16$, the point is outside the circle."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{inside the circle}",
+    "\\text{on the circle}",
+    "\\text{outside the circle}"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-cb3a1c",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Write $y = x^{2} + 6 x + 16$ in vertex form $y = a(x - h)^2 + k$. Enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "(x+3)^2+7",
+   "hints": [
+    "Complete the square.",
+    "Half of the $x$ coefficient (after factoring) is $3$; square it and compensate."
+   ],
+   "solution": [
+    "$x^2 + 6x + (16)$: add and subtract $9$.",
+    "Result: $y = \\left(x + 3\\right)^{2} + 7$, vertex $(-3, 7)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-cc786b",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "Does the parabola $y = x^{2} - 5 x - 4$ open upward or downward?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Only the sign of the $x^2$ coefficient matters.",
+    "Positive: opens up (has a minimum); negative: opens down (has a maximum)."
+   ],
+   "solution": [
+    "The coefficient of $x^2$ is $1$, which is positive.",
+    "So the parabola opens upward."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{upward}",
+    "\\text{neither: it is a line}",
+    "\\text{downward}"
+   ]
+  },
+  {
+   "id": "graphs-of-second-degree-31a3a8",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The points $(-5, 5)$ and $(-6, -5)$ are the endpoints of a diameter of a circle. Find the $y$-coordinate of the center.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "The center is the midpoint of any diameter.",
+    "Midpoint: average the coordinates."
+   ],
+   "solution": [
+    "Center $= \\left(\\dfrac{-5 + (-6)}{2}, \\dfrac{5 + (-5)}{2}\\right)$.",
+    "The $y$-coordinate is $0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-2e31cc",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 3,
+   "statement": "Find the maximum value of $y = - 2 x^{2} + 8 x + 5$.",
+   "checker": "numeric",
+   "answer": "13",
+   "hints": [
+    "The maximum occurs at the vertex because the parabola opens downward.",
+    "Vertex $x = -b/(2a) = 2$; evaluate $y$ there."
+   ],
+   "solution": [
+    "$x_v = -\\dfrac{8}{2(-2)} = 2$.",
+    "$y(2) = 13$ is the maximum value."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-006613",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "The equation $(x)^2 + (y + 4)^2 = 49$ describes a circle. What is the $y$-coordinate of its center?",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "Standard form: $(x - h)^2 + (y - k)^2 = r^2$ with center $(h, k)$ and radius $r$.",
+    "Inside $(y - k)^2$ the center's $y$-coordinate is $k$ (watch the sign)."
+   ],
+   "solution": [
+    "Match to $(x - h)^2 + (y - k)^2 = r^2$: $h = 0$, $k = -4$, $r^2 = 49$.",
+    "So the answer is $-4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-ac9cb9",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "The circle $x^{2} - 10 x + y^{2} - 4 y + 28 = 0$ is written in general form. Find the $y$-coordinate of its center.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Complete the square in $x$ and in $y$ separately.",
+    "Group: $(x^2 - 10x) + (y^2 - 4y) = -28$, then add $(-5)^2$ and $(-2)^2$ to both sides."
+   ],
+   "solution": [
+    "$(x^2 - 10x + 25) + (y^2 - 4y + 4) = -28 + 25 + 4$.",
+    "$(x - 5)^2 + (y - 2)^2 = 1$.",
+    "Center $(5, 2)$, radius $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-ba79f3",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 2,
+   "statement": "Find the $x$-coordinate of the vertex of $y = 2 x^{2} - 6 x + 1$.",
+   "checker": "numeric",
+   "answer": "3/2",
+   "hints": [
+    "The vertex lies on the axis of symmetry $x = -b/(2a)$.",
+    "$a = 2$, $b = -6$."
+   ],
+   "solution": [
+    "$x = -\\dfrac{-6}{2(2)} = \\frac{3}{2}$.",
+    "The vertex is the point on the parabola at this $x$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "graphs-of-second-degree-061f98",
+   "skill": "graphs-of-second-degree",
+   "difficulty": 1,
+   "statement": "Find the $y$-intercept of the parabola $y = - x^{2} + x + 6$. Enter the $y$-value.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "The $y$-intercept is where $x = 0$.",
+    "Substitute $x = 0$: only the constant term survives."
+   ],
+   "solution": [
+    "Set $x = 0$: $y = 6$.",
+    "So the parabola crosses the $y$-axis at $(0, 6)$."
+   ],
+   "verified": true
+  }
+ ]
+}

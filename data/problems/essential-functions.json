@@ -1,0 +1,1117 @@
+{
+ "skill": "essential-functions",
+ "problems": [
+  {
+   "id": "essential-functions-81483a",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Find the linear function $f$ whose graph passes through $(5, -19)$ and $(3, -11)$.",
+   "checker": "equiv",
+   "answer": "1-4*x",
+   "hints": [
+    "The slope is the change in $y$ divided by the change in $x$ between the two points.",
+    "Once you have the slope $m$, plug one point into $y = mx + b$ to find $b$."
+   ],
+   "solution": [
+    "Slope: $m = \\dfrac{-11 - (-19)}{3 - (5)} = -4$.",
+    "Using $(5, -19)$: $-19 = -4(5) + b$, so $b = 1$.",
+    "$f(x) = 1 - 4 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "essential-functions-266faa",
+   "skill": "essential-functions",
+   "difficulty": 2,
+   "statement": "Find the linear function $f$ whose graph passes through $(2, -2)$ and $(-4, -5)$.",
+   "checker": "equiv",
+   "answer": "x/2-3",
+   "hints": [
+    "The slope is the change in $y$ divided by the change in $x$ between the two points.",
+    "Once you have the slope $m$, plug one point into $y = mx + b$ to find $b$."
+   ],
+   "solution": [
+    "Slope: $m = \\dfrac{-5 - (-2)}{-4 - (2)} = \\frac{1}{2}$.",
+    "Using $(2, -2)$: $-2 = \\frac{1}{2}(2) + b$, so $b = -3$.",
+    "$f(x) = \\frac{x}{2} - 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "essential-functions-5f6528",
+   "skill": "essential-functions",
+   "difficulty": 2,
+   "statement": "Find the linear function $f$ whose graph passes through $(1, - \\frac{9}{2})$ and $(2, -6)$.",
+   "checker": "equiv",
+   "answer": "-3*x/2-3",
+   "hints": [
+    "The slope is the change in $y$ divided by the change in $x$ between the two points.",
+    "Once you have the slope $m$, plug one point into $y = mx + b$ to find $b$."
+   ],
+   "solution": [
+    "Slope: $m = \\dfrac{-6 - (- \\frac{9}{2})}{2 - (1)} = - \\frac{3}{2}$.",
+    "Using $(1, - \\frac{9}{2})$: $- \\frac{9}{2} = - \\frac{3}{2}(1) + b$, so $b = -3$.",
+    "$f(x) = - \\frac{3 x}{2} - 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "essential-functions-036987",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Find the linear function $f$ whose graph passes through $(2, -14)$ and $(1, -10)$.",
+   "checker": "equiv",
+   "answer": "-4*x-6",
+   "hints": [
+    "The slope is the change in $y$ divided by the change in $x$ between the two points.",
+    "Once you have the slope $m$, plug one point into $y = mx + b$ to find $b$."
+   ],
+   "solution": [
+    "Slope: $m = \\dfrac{-10 - (-14)}{1 - (2)} = -4$.",
+    "Using $(2, -14)$: $-14 = -4(2) + b$, so $b = -6$.",
+    "$f(x) = - 4 x - 6$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "essential-functions-ce023c",
+   "skill": "essential-functions",
+   "difficulty": 2,
+   "statement": "Find the linear function $f$ whose graph passes through $(2, 1)$ and $(-4, -2)$.",
+   "checker": "equiv",
+   "answer": "x/2",
+   "hints": [
+    "The slope is the change in $y$ divided by the change in $x$ between the two points.",
+    "Once you have the slope $m$, plug one point into $y = mx + b$ to find $b$."
+   ],
+   "solution": [
+    "Slope: $m = \\dfrac{-2 - (1)}{-4 - (2)} = \\frac{1}{2}$.",
+    "Using $(2, 1)$: $1 = \\frac{1}{2}(2) + b$, so $b = 0$.",
+    "$f(x) = \\frac{x}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "essential-functions-73b891",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Find the linear function $f$ whose graph passes through $(-2, -4)$ and $(-1, -3)$.",
+   "checker": "equiv",
+   "answer": "x-2",
+   "hints": [
+    "The slope is the change in $y$ divided by the change in $x$ between the two points.",
+    "Once you have the slope $m$, plug one point into $y = mx + b$ to find $b$."
+   ],
+   "solution": [
+    "Slope: $m = \\dfrac{-3 - (-4)}{-1 - (-2)} = 1$.",
+    "Using $(-2, -4)$: $-4 = 1(-2) + b$, so $b = -2$.",
+    "$f(x) = x - 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "essential-functions-12989c",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Write the formula for the linear function with slope $-1$ whose graph passes through $(4, 5)$.",
+   "checker": "equiv",
+   "answer": "9-x",
+   "hints": [
+    "Use point-slope form: $y - y_0 = m(x - x_0)$.",
+    "Expand and solve for $y$ to get slope-intercept form."
+   ],
+   "solution": [
+    "$y - (5) = -1(x - (4))$.",
+    "$f(x) = 9 - x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "essential-functions-e3b287",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Write the formula for the linear function with slope $\\frac{1}{2}$ whose graph passes through $(3, -5)$.",
+   "checker": "equiv",
+   "answer": "x/2-13/2",
+   "hints": [
+    "Use point-slope form: $y - y_0 = m(x - x_0)$.",
+    "Expand and solve for $y$ to get slope-intercept form."
+   ],
+   "solution": [
+    "$y - (-5) = \\frac{1}{2}(x - (3))$.",
+    "$f(x) = \\frac{x}{2} - \\frac{13}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "essential-functions-91cdf6",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Write the formula for the linear function with slope $-3$ whose graph passes through $(0, 3)$.",
+   "checker": "equiv",
+   "answer": "3-3*x",
+   "hints": [
+    "Use point-slope form: $y - y_0 = m(x - x_0)$.",
+    "Expand and solve for $y$ to get slope-intercept form."
+   ],
+   "solution": [
+    "$y - (3) = -3(x - (0))$.",
+    "$f(x) = 3 - 3 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "essential-functions-175310",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Write the formula for the linear function with slope $3$ whose graph passes through $(-2, -2)$.",
+   "checker": "equiv",
+   "answer": "3*x+4",
+   "hints": [
+    "Use point-slope form: $y - y_0 = m(x - x_0)$.",
+    "Expand and solve for $y$ to get slope-intercept form."
+   ],
+   "solution": [
+    "$y - (-2) = 3(x - (-2))$.",
+    "$f(x) = 3 x + 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "essential-functions-33995c",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Write the formula for the linear function with slope $-2$ whose graph passes through $(0, 5)$.",
+   "checker": "equiv",
+   "answer": "5-2*x",
+   "hints": [
+    "Use point-slope form: $y - y_0 = m(x - x_0)$.",
+    "Expand and solve for $y$ to get slope-intercept form."
+   ],
+   "solution": [
+    "$y - (5) = -2(x - (0))$.",
+    "$f(x) = 5 - 2 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "essential-functions-f9fac1",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "What is the degree of the polynomial $P(x) = - 5 x^{4} - 6 x^{5} +x^{2} +x^{3} +4 x -1 - 4 x^{6}$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "The degree is the largest exponent on $x$, regardless of the order the terms are written in.",
+    "Scan every term for its exponent; the constant term has degree 0."
+   ],
+   "solution": [
+    "The term with the highest power of $x$ is $- 4 x^{6}$.",
+    "So the degree is $6$ and the leading coefficient is $-4$."
+   ],
+   "verified": true,
+   "choices": [
+    "$-6$",
+    "$36$",
+    "$6$",
+    "$\\frac{13}{2}$"
+   ]
+  },
+  {
+   "id": "essential-functions-c78d1d",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "What is the degree of the polynomial $P(x) = x^{2} +2 +2 x^{3} - 3 x$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "The degree is the largest exponent on $x$, regardless of the order the terms are written in.",
+    "Scan every term for its exponent; the constant term has degree 0."
+   ],
+   "solution": [
+    "The term with the highest power of $x$ is $2 x^{3}$.",
+    "So the degree is $3$ and the leading coefficient is $2$."
+   ],
+   "verified": true,
+   "choices": [
+    "$3$",
+    "$1$",
+    "$9$",
+    "$2$"
+   ]
+  },
+  {
+   "id": "essential-functions-0c11dc",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "What is the degree of the polynomial $P(x) = - x^{4} +5 - 6 x^{3} - 3 x^{2} +4 x - 4 x^{5} +2 x^{6}$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "The degree is the largest exponent on $x$, regardless of the order the terms are written in.",
+    "Scan every term for its exponent; the constant term has degree 0."
+   ],
+   "solution": [
+    "The term with the highest power of $x$ is $2 x^{6}$.",
+    "So the degree is $6$ and the leading coefficient is $2$."
+   ],
+   "verified": true,
+   "choices": [
+    "$3$",
+    "$5$",
+    "$-6$",
+    "$6$"
+   ]
+  },
+  {
+   "id": "essential-functions-57c4df",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "What is the degree of the polynomial $P(x) = - 4 x^{4} - 3 x^{3} +4 x^{2} +x -3 - 2 x^{5}$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "The degree is the largest exponent on $x$, regardless of the order the terms are written in.",
+    "Scan every term for its exponent; the constant term has degree 0."
+   ],
+   "solution": [
+    "The term with the highest power of $x$ is $- 2 x^{5}$.",
+    "So the degree is $5$ and the leading coefficient is $-2$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\frac{5}{2}$",
+    "$5$",
+    "$6$",
+    "$\\frac{11}{2}$"
+   ]
+  },
+  {
+   "id": "essential-functions-b63f3e",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "What is the degree of the polynomial $P(x) = - 5 x^{2} - x^{4} +5 x - 4 x^{5} +x^{3} -1 +5 x^{6}$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "The degree is the largest exponent on $x$, regardless of the order the terms are written in.",
+    "Scan every term for its exponent; the constant term has degree 0."
+   ],
+   "solution": [
+    "The term with the highest power of $x$ is $5 x^{6}$.",
+    "So the degree is $6$ and the leading coefficient is $5$."
+   ],
+   "verified": true,
+   "choices": [
+    "$3$",
+    "$\\frac{13}{2}$",
+    "$-6$",
+    "$6$"
+   ]
+  },
+  {
+   "id": "essential-functions-3fb1db",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Which type of function from the catalog of essential functions is $f(x) = x^{\\frac{5}{4}}$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Look at where the variable sits: in the base of a power, in an exponent, inside a trig or log, or in a quotient of polynomials.",
+    "$x^a$ with a constant exponent $a$ is a power function, even when $a$ is a fraction."
+   ],
+   "solution": [
+    "$f(x) = x^{\\frac{5}{4}}$ has the form of a power function.",
+    "Classifying by form matters because each family has its own shape, domain, and rate of growth."
+   ],
+   "verified": true,
+   "choices": [
+    "power function",
+    "polynomial",
+    "rational function",
+    "exponential function"
+   ]
+  },
+  {
+   "id": "essential-functions-7504e1",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Which type of function from the catalog of essential functions is $f(x) = 3^{x}$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Look at where the variable sits: in the base of a power, in an exponent, inside a trig or log, or in a quotient of polynomials.",
+    "A constant base raised to the variable $x$ is exponential."
+   ],
+   "solution": [
+    "$f(x) = 3^{x}$ has the form of a exponential function.",
+    "Classifying by form matters because each family has its own shape, domain, and rate of growth."
+   ],
+   "verified": true,
+   "choices": [
+    "logarithmic function",
+    "rational function",
+    "exponential function",
+    "trigonometric function"
+   ]
+  },
+  {
+   "id": "essential-functions-841612",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Which type of function from the catalog of essential functions is $f(x) = \\frac{x^{2} + 3}{x - 3}$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Look at where the variable sits: in the base of a power, in an exponent, inside a trig or log, or in a quotient of polynomials.",
+    "A ratio of two polynomials is a rational function."
+   ],
+   "solution": [
+    "$f(x) = \\frac{x^{2} + 3}{x - 3}$ has the form of a rational function.",
+    "Classifying by form matters because each family has its own shape, domain, and rate of growth."
+   ],
+   "verified": true,
+   "choices": [
+    "logarithmic function",
+    "rational function",
+    "trigonometric function",
+    "power function"
+   ]
+  },
+  {
+   "id": "essential-functions-56ff6d",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Which type of function from the catalog of essential functions is $f(x) = 3 x^{5} + 3$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Look at where the variable sits: in the base of a power, in an exponent, inside a trig or log, or in a quotient of polynomials.",
+    "Only non-negative integer powers of $x$ with constant coefficients make a polynomial."
+   ],
+   "solution": [
+    "$f(x) = 3 x^{5} + 3$ has the form of a polynomial.",
+    "Classifying by form matters because each family has its own shape, domain, and rate of growth."
+   ],
+   "verified": true,
+   "choices": [
+    "exponential function",
+    "polynomial",
+    "power function",
+    "rational function"
+   ]
+  },
+  {
+   "id": "essential-functions-80f4b1",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Which type of function from the catalog of essential functions is $f(x) = 4 \\cos{\\left(2 x \\right)}$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Look at where the variable sits: in the base of a power, in an exponent, inside a trig or log, or in a quotient of polynomials.",
+    "Sine and cosine of a multiple of $x$ are trigonometric functions."
+   ],
+   "solution": [
+    "$f(x) = 4 \\cos{\\left(2 x \\right)}$ has the form of a trigonometric function.",
+    "Classifying by form matters because each family has its own shape, domain, and rate of growth."
+   ],
+   "verified": true,
+   "choices": [
+    "rational function",
+    "logarithmic function",
+    "trigonometric function",
+    "exponential function"
+   ]
+  },
+  {
+   "id": "essential-functions-497ea3",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Which type of function from the catalog of essential functions is $f(x) = 2 \\ln{\\left(x \\right)} + 4$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Look at where the variable sits: in the base of a power, in an exponent, inside a trig or log, or in a quotient of polynomials.",
+    "$\\ln x$ (with constants) is a logarithmic function."
+   ],
+   "solution": [
+    "$f(x) = 2 \\ln{\\left(x \\right)} + 4$ has the form of a logarithmic function.",
+    "Classifying by form matters because each family has its own shape, domain, and rate of growth."
+   ],
+   "verified": true,
+   "choices": [
+    "polynomial",
+    "rational function",
+    "power function",
+    "logarithmic function"
+   ]
+  },
+  {
+   "id": "essential-functions-a3576c",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "A tank holds $600$ liters and drains at a steady $10$ liters per minute. After how many minutes is the tank empty?",
+   "checker": "numeric",
+   "answer": "60",
+   "hints": [
+    "First write the linear model $V(t) = (\\text{start}) - (\\text{rate})t$.",
+    "Empty means $V(t) = 0$; solve that equation for $t$."
+   ],
+   "solution": [
+    "$V(t) = 600 - 10t$.",
+    "$V(t) = 0$ gives $t = 600/10 = 60$ minutes."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-6aba4e",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "A tank holds $200$ liters and drains at a steady $12$ liters per minute. After how many minutes is the tank empty?",
+   "checker": "numeric",
+   "answer": "50/3",
+   "hints": [
+    "First write the linear model $V(t) = (\\text{start}) - (\\text{rate})t$.",
+    "Empty means $V(t) = 0$; solve that equation for $t$."
+   ],
+   "solution": [
+    "$V(t) = 200 - 12t$.",
+    "$V(t) = 0$ gives $t = 200/12 = \\frac{50}{3}$ minutes."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-f8931b",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "A tank holds $240$ liters and drains at a steady $5$ liters per minute. Write the volume $V$ (liters) as a function of the time $t$ (minutes) since draining began.",
+   "checker": "equiv",
+   "answer": "240-5*t",
+   "hints": [
+    "A steady rate means a linear model: start value plus (rate)(time).",
+    "Draining lowers the volume, so the rate enters with a negative sign."
+   ],
+   "solution": [
+    "Initial volume $240$, decreasing by $5$ each minute: $V(t) = 240 - 5t$.",
+    "The model is valid until the tank is empty, at $t = 48$ minutes."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    48.0
+   ]
+  },
+  {
+   "id": "essential-functions-053185",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "A tank holds $600$ liters and drains at a steady $6$ liters per minute. Write the volume $V$ (liters) as a function of the time $t$ (minutes) since draining began.",
+   "checker": "equiv",
+   "answer": "600-6*t",
+   "hints": [
+    "A steady rate means a linear model: start value plus (rate)(time).",
+    "Draining lowers the volume, so the rate enters with a negative sign."
+   ],
+   "solution": [
+    "Initial volume $600$, decreasing by $6$ each minute: $V(t) = 600 - 6t$.",
+    "The model is valid until the tank is empty, at $t = 100$ minutes."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    100.0
+   ]
+  },
+  {
+   "id": "essential-functions-05b5df",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "A tank holds $240$ liters and drains at a steady $6$ liters per minute. Write the volume $V$ (liters) as a function of the time $t$ (minutes) since draining began.",
+   "checker": "equiv",
+   "answer": "240-6*t",
+   "hints": [
+    "A steady rate means a linear model: start value plus (rate)(time).",
+    "Draining lowers the volume, so the rate enters with a negative sign."
+   ],
+   "solution": [
+    "Initial volume $240$, decreasing by $6$ each minute: $V(t) = 240 - 6t$.",
+    "The model is valid until the tank is empty, at $t = 40$ minutes."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    40.0
+   ]
+  },
+  {
+   "id": "essential-functions-785414",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "A tank holds $200$ liters and drains at a steady $15$ liters per minute. Write the volume $V$ (liters) as a function of the time $t$ (minutes) since draining began.",
+   "checker": "equiv",
+   "answer": "200-15*t",
+   "hints": [
+    "A steady rate means a linear model: start value plus (rate)(time).",
+    "Draining lowers the volume, so the rate enters with a negative sign."
+   ],
+   "solution": [
+    "Initial volume $200$, decreasing by $15$ each minute: $V(t) = 200 - 15t$.",
+    "The model is valid until the tank is empty, at $t = \\frac{40}{3}$ minutes."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    13.333333333333334
+   ]
+  },
+  {
+   "id": "essential-functions-7ae16e",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "For the linear function $f(x) = 7 - 4 x$, by how much does $f(x)$ change when $x$ increases by $6$?",
+   "checker": "numeric",
+   "answer": "-24",
+   "hints": [
+    "For a line, the change in output is always slope times change in input.",
+    "Compute $f(a + 6) - f(a)$ for any $a$; the $b$ and the $a$-terms cancel."
+   ],
+   "solution": [
+    "$f(a+6) - f(a) = -4(a+6) + 7 - (-4a + 7) = -4\\cdot 6$.",
+    "So $f$ changes by $-24$ (a decrease of $24$)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-476ca2",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "For the linear function $f(x) = 3 x - 10$, by how much does $f(x)$ change when $x$ increases by $4$?",
+   "checker": "numeric",
+   "answer": "12",
+   "hints": [
+    "For a line, the change in output is always slope times change in input.",
+    "Compute $f(a + 4) - f(a)$ for any $a$; the $b$ and the $a$-terms cancel."
+   ],
+   "solution": [
+    "$f(a+4) - f(a) = 3(a+4) + -10 - (3a + -10) = 3\\cdot 4$.",
+    "So $f$ changes by $12$ (a increase of $12$)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-476353",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "For the linear function $f(x) = 4 x - 7$, by how much does $f(x)$ change when $x$ increases by $3$?",
+   "checker": "numeric",
+   "answer": "12",
+   "hints": [
+    "For a line, the change in output is always slope times change in input.",
+    "Compute $f(a + 3) - f(a)$ for any $a$; the $b$ and the $a$-terms cancel."
+   ],
+   "solution": [
+    "$f(a+3) - f(a) = 4(a+3) + -7 - (4a + -7) = 4\\cdot 3$.",
+    "So $f$ changes by $12$ (a increase of $12$)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-2d579c",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "For the linear function $f(x) = 3 x + 5$, by how much does $f(x)$ change when $x$ increases by $3$?",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "For a line, the change in output is always slope times change in input.",
+    "Compute $f(a + 3) - f(a)$ for any $a$; the $b$ and the $a$-terms cancel."
+   ],
+   "solution": [
+    "$f(a+3) - f(a) = 3(a+3) + 5 - (3a + 5) = 3\\cdot 3$.",
+    "So $f$ changes by $9$ (a increase of $9$)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-35e425",
+   "skill": "essential-functions",
+   "difficulty": 2,
+   "statement": "Evaluate the power function $f(x) = x^{\\frac{3}{4}}$ at $x = 81$.",
+   "checker": "numeric",
+   "answer": "27",
+   "hints": [
+    "$x^{3/4}$ means take the fourth root, then raise to the power $3$.",
+    "The fourth root of $81$ is $3$."
+   ],
+   "solution": [
+    "$81^{3/4} = (\\sqrt[4]{81})^{3} = 3^{3}$.",
+    "$= 27$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-77e054",
+   "skill": "essential-functions",
+   "difficulty": 2,
+   "statement": "Evaluate the power function $f(x) = x^{\\frac{4}{3}}$ at $x = 8$.",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "$x^{4/3}$ means take the cube root, then raise to the power $4$.",
+    "The cube root of $8$ is $2$."
+   ],
+   "solution": [
+    "$8^{4/3} = (\\sqrt[3]{8})^{4} = 2^{4}$.",
+    "$= 16$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-7aad23",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "Evaluate the power function $f(x) = \\sqrt{x}$ at $x = 25$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "$x^{1/2}$ means take the square root, then raise to the power $1$.",
+    "The square root of $25$ is $5$."
+   ],
+   "solution": [
+    "$25^{1/2} = (\\sqrt[2]{25})^{1} = 5^{1}$.",
+    "$= 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-eb7b70",
+   "skill": "essential-functions",
+   "difficulty": 2,
+   "statement": "Evaluate the power function $f(x) = x^{\\frac{4}{3}}$ at $x = 64$.",
+   "checker": "numeric",
+   "answer": "256",
+   "hints": [
+    "$x^{4/3}$ means take the cube root, then raise to the power $4$.",
+    "The cube root of $64$ is $4$."
+   ],
+   "solution": [
+    "$64^{4/3} = (\\sqrt[3]{64})^{4} = 4^{4}$.",
+    "$= 256$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-5cd700",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "The rational function $f(x) = \\frac{x^{2} + 3}{3 x - 12}$ is undefined at exactly one value of $x$. Find it.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "A rational function is undefined only where its denominator is zero.",
+    "Set the denominator equal to zero and solve."
+   ],
+   "solution": [
+    "Set $3 x - 12 = 0$.",
+    "$x = 4$. The numerator is never zero there, so this is where $f$ is undefined."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-4a36e0",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "The rational function $f(x) = \\frac{x^{2} + 3}{3 x - 5}$ is undefined at exactly one value of $x$. Find it.",
+   "checker": "numeric",
+   "answer": "5/3",
+   "hints": [
+    "A rational function is undefined only where its denominator is zero.",
+    "Set the denominator equal to zero and solve."
+   ],
+   "solution": [
+    "Set $3 x - 5 = 0$.",
+    "$x = \\frac{5}{3}$. The numerator is never zero there, so this is where $f$ is undefined."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-b5f683",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "The rational function $f(x) = \\frac{x^{2} + 3}{x - 6}$ is undefined at exactly one value of $x$. Find it.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "A rational function is undefined only where its denominator is zero.",
+    "Set the denominator equal to zero and solve."
+   ],
+   "solution": [
+    "Set $x - 6 = 0$.",
+    "$x = 6$. The numerator is never zero there, so this is where $f$ is undefined."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-cb9d0f",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "The rational function $f(x) = \\frac{x^{2} + 2}{x + 12}$ is undefined at exactly one value of $x$. Find it.",
+   "checker": "numeric",
+   "answer": "-12",
+   "hints": [
+    "A rational function is undefined only where its denominator is zero.",
+    "Set the denominator equal to zero and solve."
+   ],
+   "solution": [
+    "Set $x + 12 = 0$.",
+    "$x = -12$. The numerator is never zero there, so this is where $f$ is undefined."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-4ffc6d",
+   "skill": "essential-functions",
+   "difficulty": 2,
+   "statement": "A quantity $y$ is directly proportional to $x$, and $y = 20$ when $x = 4$. Find $y$ when $x = 3$.",
+   "checker": "numeric",
+   "answer": "15",
+   "hints": [
+    "Write the model $y = k\\,x^{1}$ and use the given pair to find the constant $k$.",
+    "$k = 20 / 4^{1}$; then substitute $x = 3$."
+   ],
+   "solution": [
+    "$y = k x^{1}$ with $20 = k \\cdot 4^{1}$ gives $k = 5$.",
+    "$y = 5 \\cdot 3^{1} = 15$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-a792b3",
+   "skill": "essential-functions",
+   "difficulty": 3,
+   "statement": "A quantity $y$ is inversely proportional to $x$, and $y = \\frac{1}{4}$ when $x = 4$. Find $y$ when $x = 1$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Write the model $y = k\\,x^{-1}$ and use the given pair to find the constant $k$.",
+    "$k = \\frac{1}{4} / 4^{-1}$; then substitute $x = 1$."
+   ],
+   "solution": [
+    "$y = k x^{-1}$ with $\\frac{1}{4} = k \\cdot 4^{-1}$ gives $k = 1$.",
+    "$y = 1 \\cdot 1^{-1} = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-92c5cc",
+   "skill": "essential-functions",
+   "difficulty": 3,
+   "statement": "A quantity $y$ is inversely proportional to $x$, and $y = \\frac{4}{3}$ when $x = 3$. Find $y$ when $x = 6$.",
+   "checker": "numeric",
+   "answer": "2/3",
+   "hints": [
+    "Write the model $y = k\\,x^{-1}$ and use the given pair to find the constant $k$.",
+    "$k = \\frac{4}{3} / 3^{-1}$; then substitute $x = 6$."
+   ],
+   "solution": [
+    "$y = k x^{-1}$ with $\\frac{4}{3} = k \\cdot 3^{-1}$ gives $k = 4$.",
+    "$y = 4 \\cdot 6^{-1} = \\frac{2}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-c5ad32",
+   "skill": "essential-functions",
+   "difficulty": 2,
+   "statement": "A quantity $y$ is directly proportional to $x$, and $y = 4$ when $x = 2$. Find $y$ when $x = 3$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Write the model $y = k\\,x^{1}$ and use the given pair to find the constant $k$.",
+    "$k = 4 / 2^{1}$; then substitute $x = 3$."
+   ],
+   "solution": [
+    "$y = k x^{1}$ with $4 = k \\cdot 2^{1}$ gives $k = 2$.",
+    "$y = 2 \\cdot 3^{1} = 6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-b30b06",
+   "skill": "essential-functions",
+   "difficulty": 3,
+   "statement": "A quantity $y$ is proportional to $\\sqrt{x}$, and $y = 20$ when $x = 16$. Find $y$ when $x = 4$.",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "Write the model $y = k\\,x^{\\frac{1}{2}}$ and use the given pair to find the constant $k$.",
+    "$k = 20 / 16^{\\frac{1}{2}}$; then substitute $x = 4$."
+   ],
+   "solution": [
+    "$y = k x^{\\frac{1}{2}}$ with $20 = k \\cdot 16^{\\frac{1}{2}}$ gives $k = 5$.",
+    "$y = 5 \\cdot 4^{\\frac{1}{2}} = 10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-275961",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "A ball's height in meters after $t$ seconds is modeled by $h(t) = - 5 t^{2} + 20 t$. What is its height after $2$ seconds?",
+   "checker": "numeric",
+   "answer": "20",
+   "hints": [
+    "This is a quadratic (polynomial) model; just substitute the time.",
+    "Compute $-5(2)^2$ carefully before adding the other terms."
+   ],
+   "solution": [
+    "$h(2) = -5(2)^2 + 20(2) + 0$.",
+    "$= -20 + 40 + 0 = 20$ meters."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-81e752",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "A ball's height in meters after $t$ seconds is modeled by $h(t) = - 5 t^{2} + 20 t + 10$. What is its height after $3$ seconds?",
+   "checker": "numeric",
+   "answer": "25",
+   "hints": [
+    "This is a quadratic (polynomial) model; just substitute the time.",
+    "Compute $-5(3)^2$ carefully before adding the other terms."
+   ],
+   "solution": [
+    "$h(3) = -5(3)^2 + 20(3) + 10$.",
+    "$= -45 + 60 + 10 = 25$ meters."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-15e56d",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "A ball's height in meters after $t$ seconds is modeled by $h(t) = - 5 t^{2} + 20 t + 5$. What is its height after $1$ second?",
+   "checker": "numeric",
+   "answer": "20",
+   "hints": [
+    "This is a quadratic (polynomial) model; just substitute the time.",
+    "Compute $-5(1)^2$ carefully before adding the other terms."
+   ],
+   "solution": [
+    "$h(1) = -5(1)^2 + 20(1) + 5$.",
+    "$= -5 + 20 + 5 = 20$ meters."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-7383b9",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "A ball's height in meters after $t$ seconds is modeled by $h(t) = - 5 t^{2} + 30 t + 5$. What is its height after $3$ seconds?",
+   "checker": "numeric",
+   "answer": "50",
+   "hints": [
+    "This is a quadratic (polynomial) model; just substitute the time.",
+    "Compute $-5(3)^2$ carefully before adding the other terms."
+   ],
+   "solution": [
+    "$h(3) = -5(3)^2 + 30(3) + 5$.",
+    "$= -45 + 90 + 5 = 50$ meters."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-8773b7",
+   "skill": "essential-functions",
+   "difficulty": 1,
+   "statement": "A ball's height in meters after $t$ seconds is modeled by $h(t) = - 5 t^{2} + 10 t$. What is its height after $3$ seconds?",
+   "checker": "numeric",
+   "answer": "-15",
+   "hints": [
+    "This is a quadratic (polynomial) model; just substitute the time.",
+    "Compute $-5(3)^2$ carefully before adding the other terms."
+   ],
+   "solution": [
+    "$h(3) = -5(3)^2 + 10(3) + 0$.",
+    "$= -45 + 30 + 0 = -15$ meters."
+   ],
+   "verified": true
+  },
+  {
+   "id": "essential-functions-fdd937",
+   "skill": "essential-functions",
+   "difficulty": 2,
+   "statement": "Which kind of mathematical model best describes the cost of a taxi ride that charges a fixed fee plus a constant amount per kilometer?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Think about how the output changes as the input increases by equal steps: constant change, repeated multiplication, repeating pattern, or decrease toward zero.",
+    "A fixed start plus the same amount per unit is a line."
+   ],
+   "solution": [
+    "Fixed fee $b$ plus rate $m$ per km gives $C(d) = md + b$, a linear model.",
+    "Matching a situation to a family of functions is the first step of mathematical modeling."
+   ],
+   "verified": true,
+   "choices": [
+    "reciprocal (inverse proportion)",
+    "exponential",
+    "power function",
+    "linear"
+   ]
+  },
+  {
+   "id": "essential-functions-cbc6b7",
+   "skill": "essential-functions",
+   "difficulty": 2,
+   "statement": "Which kind of mathematical model best describes the area of a square as a function of its side length?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Think about how the output changes as the input increases by equal steps: constant change, repeated multiplication, repeating pattern, or decrease toward zero.",
+    "Side squared is a power function $x^2$."
+   ],
+   "solution": [
+    "$A = s^2$ is a power function with exponent 2.",
+    "Matching a situation to a family of functions is the first step of mathematical modeling."
+   ],
+   "verified": true,
+   "choices": [
+    "linear",
+    "exponential",
+    "power function",
+    "trigonometric"
+   ]
+  },
+  {
+   "id": "essential-functions-fb446f",
+   "skill": "essential-functions",
+   "difficulty": 2,
+   "statement": "Which kind of mathematical model best describes a bacteria population that doubles every hour?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Think about how the output changes as the input increases by equal steps: constant change, repeated multiplication, repeating pattern, or decrease toward zero.",
+    "Doubling in equal time steps is repeated multiplication by 2."
+   ],
+   "solution": [
+    "Doubling every hour gives $P(t) = P_0 \\cdot 2^t$, an exponential model.",
+    "Matching a situation to a family of functions is the first step of mathematical modeling."
+   ],
+   "verified": true,
+   "choices": [
+    "exponential",
+    "trigonometric",
+    "power function",
+    "linear"
+   ]
+  },
+  {
+   "id": "essential-functions-1ea5c1",
+   "skill": "essential-functions",
+   "difficulty": 2,
+   "statement": "Which kind of mathematical model best describes the height of a point on a Ferris wheel as a function of time?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Think about how the output changes as the input increases by equal steps: constant change, repeated multiplication, repeating pattern, or decrease toward zero.",
+    "Periodic up-and-down motion calls for sine or cosine."
+   ],
+   "solution": [
+    "Circular motion repeats, so a sine or cosine model fits.",
+    "Matching a situation to a family of functions is the first step of mathematical modeling."
+   ],
+   "verified": true,
+   "choices": [
+    "reciprocal (inverse proportion)",
+    "power function",
+    "exponential",
+    "trigonometric"
+   ]
+  },
+  {
+   "id": "essential-functions-3617bd",
+   "skill": "essential-functions",
+   "difficulty": 2,
+   "statement": "Which kind of mathematical model best describes the time needed to fill a pool as a function of the pump's flow rate (a fixed total volume)?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Think about how the output changes as the input increases by equal steps: constant change, repeated multiplication, repeating pattern, or decrease toward zero.",
+    "A fixed total divided by a rate is $k/x$."
+   ],
+   "solution": [
+    "Time equals volume divided by rate, $T = V/r$, inverse proportion.",
+    "Matching a situation to a family of functions is the first step of mathematical modeling."
+   ],
+   "verified": true,
+   "choices": [
+    "exponential",
+    "trigonometric",
+    "power function",
+    "reciprocal (inverse proportion)"
+   ]
+  }
+ ]
+}

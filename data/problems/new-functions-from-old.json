@@ -1,0 +1,1030 @@
+{
+ "skill": "new-functions-from-old",
+ "problems": [
+  {
+   "id": "new-functions-from-old-6ebe66",
+   "skill": "new-functions-from-old",
+   "difficulty": 3,
+   "statement": "Let $f(x) = 2 x^{2} - 2$ and $g(x) = \\frac{1}{x + 2}$. Find $(f \\circ g)(x)$. You do not need to simplify.",
+   "checker": "equiv",
+   "answer": "-2+2/(x+2)^2",
+   "hints": [
+    "$(f \\circ g)(x)$ means $f(g(x))$: apply $g$ first, then $f$.",
+    "Replace every $x$ in $2 x^{2} - 2$ by the whole expression $\\frac{1}{x + 2}$."
+   ],
+   "solution": [
+    "$(f \\circ g)(x) = f\\big(\\frac{1}{x + 2}\\big)$.",
+    "Substituting into $2 x^{2} - 2$ gives $-2 + \\frac{2}{\\left(x + 2\\right)^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-0f7351",
+   "skill": "new-functions-from-old",
+   "difficulty": 3,
+   "statement": "Let $f(x) = \\sqrt{x + 4}$ and $g(x) = \\frac{1}{x + 1}$. Find $(g \\circ f)(x)$. You do not need to simplify.",
+   "checker": "equiv",
+   "answer": "1/(sqrt(x+4)+1)",
+   "hints": [
+    "$(g \\circ f)(x)$ means $g(f(x))$: apply $f$ first, then $g$.",
+    "Replace every $x$ in $\\frac{1}{x + 1}$ by the whole expression $\\sqrt{x + 4}$."
+   ],
+   "solution": [
+    "$(g \\circ f)(x) = g\\big(\\sqrt{x + 4}\\big)$.",
+    "Substituting into $\\frac{1}{x + 1}$ gives $\\frac{1}{\\sqrt{x + 4} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-81fc30",
+   "skill": "new-functions-from-old",
+   "difficulty": 3,
+   "statement": "Let $f(x) = 3 x^{2} - 3$ and $g(x) = \\frac{1}{x + 2}$. Find $(f \\circ g)(x)$. You do not need to simplify.",
+   "checker": "equiv",
+   "answer": "-3+3/(x+2)^2",
+   "hints": [
+    "$(f \\circ g)(x)$ means $f(g(x))$: apply $g$ first, then $f$.",
+    "Replace every $x$ in $3 x^{2} - 3$ by the whole expression $\\frac{1}{x + 2}$."
+   ],
+   "solution": [
+    "$(f \\circ g)(x) = f\\big(\\frac{1}{x + 2}\\big)$.",
+    "Substituting into $3 x^{2} - 3$ gives $-3 + \\frac{3}{\\left(x + 2\\right)^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-91f503",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 2 x^{2} - 2$ and $g(x) = \\sqrt{x + 3}$. Find $(g \\circ f)(x)$. You do not need to simplify.",
+   "checker": "equiv",
+   "answer": "sqrt(2*x^2+1)",
+   "hints": [
+    "$(g \\circ f)(x)$ means $g(f(x))$: apply $f$ first, then $g$.",
+    "Replace every $x$ in $\\sqrt{x + 3}$ by the whole expression $2 x^{2} - 2$."
+   ],
+   "solution": [
+    "$(g \\circ f)(x) = g\\big(2 x^{2} - 2\\big)$.",
+    "Substituting into $\\sqrt{x + 3}$ gives $\\sqrt{2 x^{2} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-3f0a39",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Let $f(x) = x^{2} - 1$ and $g(x) = 2 x + 3$. Find $(f \\circ g)(x)$. You do not need to simplify.",
+   "checker": "equiv",
+   "answer": "(2*x+3)^2-1",
+   "hints": [
+    "$(f \\circ g)(x)$ means $f(g(x))$: apply $g$ first, then $f$.",
+    "Replace every $x$ in $x^{2} - 1$ by the whole expression $2 x + 3$."
+   ],
+   "solution": [
+    "$(f \\circ g)(x) = f\\big(2 x + 3\\big)$.",
+    "Substituting into $x^{2} - 1$ gives $\\left(2 x + 3\\right)^{2} - 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-62f15f",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Let $f(x) = x^{2} - 2$ and $g(x) = x^{3} - 2 x$. Find $(g \\circ f)(x)$. You do not need to simplify.",
+   "checker": "equiv",
+   "answer": "-2*x^2+(x^2-2)^3+4",
+   "hints": [
+    "$(g \\circ f)(x)$ means $g(f(x))$: apply $f$ first, then $g$.",
+    "Replace every $x$ in $x^{3} - 2 x$ by the whole expression $x^{2} - 2$."
+   ],
+   "solution": [
+    "$(g \\circ f)(x) = g\\big(x^{2} - 2\\big)$.",
+    "Substituting into $x^{3} - 2 x$ gives $- 2 x^{2} + \\left(x^{2} - 2\\right)^{3} + 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-b84182",
+   "skill": "new-functions-from-old",
+   "difficulty": 3,
+   "statement": "Let $f(x) = \\frac{1}{x + 4}$ and $g(x) = \\sqrt{x + 5}$. Find $(f \\circ g)(x)$. You do not need to simplify.",
+   "checker": "equiv",
+   "answer": "1/(sqrt(x+5)+4)",
+   "hints": [
+    "$(f \\circ g)(x)$ means $f(g(x))$: apply $g$ first, then $f$.",
+    "Replace every $x$ in $\\frac{1}{x + 4}$ by the whole expression $\\sqrt{x + 5}$."
+   ],
+   "solution": [
+    "$(f \\circ g)(x) = f\\big(\\sqrt{x + 5}\\big)$.",
+    "Substituting into $\\frac{1}{x + 4}$ gives $\\frac{1}{\\sqrt{x + 5} + 4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-aad887",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 3 x^{2} - 1$ and $g(x) = 4 - 2 x$. Find $(g \\circ f)(x)$. You do not need to simplify.",
+   "checker": "equiv",
+   "answer": "6-6*x^2",
+   "hints": [
+    "$(g \\circ f)(x)$ means $g(f(x))$: apply $f$ first, then $g$.",
+    "Replace every $x$ in $4 - 2 x$ by the whole expression $3 x^{2} - 1$."
+   ],
+   "solution": [
+    "$(g \\circ f)(x) = g\\big(3 x^{2} - 1\\big)$.",
+    "Substituting into $4 - 2 x$ gives $6 - 6 x^{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-9fd4fa",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{1}{x + 3}$ and $g(x) = x + 3$. Find $(g \\circ f)(x)$. You do not need to simplify.",
+   "checker": "equiv",
+   "answer": "3+1/(x+3)",
+   "hints": [
+    "$(g \\circ f)(x)$ means $g(f(x))$: apply $f$ first, then $g$.",
+    "Replace every $x$ in $x + 3$ by the whole expression $\\frac{1}{x + 3}$."
+   ],
+   "solution": [
+    "$(g \\circ f)(x) = g\\big(\\frac{1}{x + 3}\\big)$.",
+    "Substituting into $x + 3$ gives $3 + \\frac{1}{x + 3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-06817a",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Let $f(x) = x^{3} - 2 x$ and $g(x) = 3 x^{2} - 3$. Find $(f \\circ g)(x)$. You do not need to simplify.",
+   "checker": "equiv",
+   "answer": "-6*x^2+(3*x^2-3)^3+6",
+   "hints": [
+    "$(f \\circ g)(x)$ means $f(g(x))$: apply $g$ first, then $f$.",
+    "Replace every $x$ in $x^{3} - 2 x$ by the whole expression $3 x^{2} - 3$."
+   ],
+   "solution": [
+    "$(f \\circ g)(x) = f\\big(3 x^{2} - 3\\big)$.",
+    "Substituting into $x^{3} - 2 x$ gives $- 6 x^{2} + \\left(3 x^{2} - 3\\right)^{3} + 6$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-b631a1",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 4 x^{2} - 2$ and $g(x) = 2 x + 3$. Find $(g \\circ f)(x)$. You do not need to simplify.",
+   "checker": "equiv",
+   "answer": "8*x^2-1",
+   "hints": [
+    "$(g \\circ f)(x)$ means $g(f(x))$: apply $f$ first, then $g$.",
+    "Replace every $x$ in $2 x + 3$ by the whole expression $4 x^{2} - 2$."
+   ],
+   "solution": [
+    "$(g \\circ f)(x) = g\\big(4 x^{2} - 2\\big)$.",
+    "Substituting into $2 x + 3$ gives $8 x^{2} - 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-04bd20",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\frac{1}{x + 3}$ and $g(x) = 2 x^{2} - 2$. Evaluate $f(g(2))$.",
+   "checker": "numeric",
+   "answer": "1/9",
+   "hints": [
+    "Work from the inside out: find $g$ of the number first.",
+    "$g(2) = 6$; now feed that into $f$."
+   ],
+   "solution": [
+    "$g(2) = 6$.",
+    "$f(g(2)) = f(6) = \\frac{1}{9}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-d817ef",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Let $f(x) = - 2 x - 2$ and $g(x) = x^{3} - x$. Evaluate $f(g(2))$.",
+   "checker": "numeric",
+   "answer": "-14",
+   "hints": [
+    "Work from the inside out: find $g$ of the number first.",
+    "$g(2) = 6$; now feed that into $f$."
+   ],
+   "solution": [
+    "$g(2) = 6$.",
+    "$f(g(2)) = f(6) = -14$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-2fb724",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Let $f(x) = x^{2} - 3$ and $g(x) = x^{3} - 3 x$. Evaluate $f(g(2))$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Work from the inside out: find $g$ of the number first.",
+    "$g(2) = 2$; now feed that into $f$."
+   ],
+   "solution": [
+    "$g(2) = 2$.",
+    "$f(g(2)) = f(2) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-4a1739",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\frac{1}{x + 1}$ and $g(x) = x^{2} + 3$. Evaluate $f(g(3))$.",
+   "checker": "numeric",
+   "answer": "1/13",
+   "hints": [
+    "Work from the inside out: find $g$ of the number first.",
+    "$g(3) = 12$; now feed that into $f$."
+   ],
+   "solution": [
+    "$g(3) = 12$.",
+    "$f(g(3)) = f(12) = \\frac{1}{13}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-41b288",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\frac{1}{x + 1}$ and $g(x) = x - 4$. Evaluate $f(g(1))$.",
+   "checker": "numeric",
+   "answer": "-1/2",
+   "hints": [
+    "Work from the inside out: find $g$ of the number first.",
+    "$g(1) = -3$; now feed that into $f$."
+   ],
+   "solution": [
+    "$g(1) = -3$.",
+    "$f(g(1)) = f(-3) = - \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-2c4e5c",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Let $f(x) = x^{3} - x$ and $g(x) = 3 x^{2} - 3$. Evaluate $f(g(0))$.",
+   "checker": "numeric",
+   "answer": "-24",
+   "hints": [
+    "Work from the inside out: find $g$ of the number first.",
+    "$g(0) = -3$; now feed that into $f$."
+   ],
+   "solution": [
+    "$g(0) = -3$.",
+    "$f(g(0)) = f(-3) = -24$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-079c5a",
+   "skill": "new-functions-from-old",
+   "difficulty": 3,
+   "statement": "Start with $f(x) = x^{2}$. Write a formula for the function $g$ whose graph is the graph of $f$ reflected about the $x$-axis and shifted left $2$ units.",
+   "checker": "equiv",
+   "answer": "-(x+2)^2",
+   "hints": [
+    "Horizontal shifts change the input ($x \\to x - c$ moves right by $c$); vertical changes act on the output.",
+    "Apply the transformations one at a time, in the order they are listed."
+   ],
+   "solution": [
+    "Reflecting about the $x$-axis negates the output: $-x^{2}$.",
+    "Shifting left by $2$ replaces $x$ with $x + 2$: $g(x) = - \\left(x + 2\\right)^{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "new-functions-from-old-f3e431",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Start with $f(x) = \\sqrt{x}$. Write a formula for the function $g$ whose graph is the graph of $f$ shifted left $1$ unit and up $3$ units.",
+   "checker": "equiv",
+   "answer": "sqrt(x+1)+3",
+   "hints": [
+    "Horizontal shifts change the input ($x \\to x - c$ moves right by $c$); vertical changes act on the output.",
+    "Apply the transformations one at a time, in the order they are listed."
+   ],
+   "solution": [
+    "Shifting left by $1$ replaces $x$ with $x + 1$: $\\sqrt{x + 1}$.",
+    "Shifting up by $3$ adds $3$: $g(x) = \\sqrt{x + 1} + 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.5,
+    2
+   ]
+  },
+  {
+   "id": "new-functions-from-old-fad0e8",
+   "skill": "new-functions-from-old",
+   "difficulty": 3,
+   "statement": "Start with $f(x) = x^{3}$. Write a formula for the function $g$ whose graph is the graph of $f$ reflected about the $x$-axis and shifted left $4$ units.",
+   "checker": "equiv",
+   "answer": "-(x+4)^3",
+   "hints": [
+    "Horizontal shifts change the input ($x \\to x - c$ moves right by $c$); vertical changes act on the output.",
+    "Apply the transformations one at a time, in the order they are listed."
+   ],
+   "solution": [
+    "Reflecting about the $x$-axis negates the output: $-x^{3}$.",
+    "Shifting left by $4$ replaces $x$ with $x + 4$: $g(x) = - \\left(x + 4\\right)^{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "new-functions-from-old-7611d8",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Start with $f(x) = \\sqrt{x}$. Write a formula for the function $g$ whose graph is the graph of $f$ shifted left $1$ unit and down $3$ units.",
+   "checker": "equiv",
+   "answer": "sqrt(x+1)-3",
+   "hints": [
+    "Horizontal shifts change the input ($x \\to x - c$ moves right by $c$); vertical changes act on the output.",
+    "Apply the transformations one at a time, in the order they are listed."
+   ],
+   "solution": [
+    "Shifting left by $1$ replaces $x$ with $x + 1$: $\\sqrt{x + 1}$.",
+    "Shifting down by $3$ adds $-3$: $g(x) = \\sqrt{x + 1} - 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.5,
+    2
+   ]
+  },
+  {
+   "id": "new-functions-from-old-5459c5",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Start with $f(x) = x^{2}$. Write a formula for the function $g$ whose graph is the graph of $f$ shifted left $3$ units and up $4$ units.",
+   "checker": "equiv",
+   "answer": "(x+3)^2+4",
+   "hints": [
+    "Horizontal shifts change the input ($x \\to x - c$ moves right by $c$); vertical changes act on the output.",
+    "Apply the transformations one at a time, in the order they are listed."
+   ],
+   "solution": [
+    "Shifting left by $3$ replaces $x$ with $x + 3$: $\\left(x + 3\\right)^{2}$.",
+    "Shifting up by $4$ adds $4$: $g(x) = \\left(x + 3\\right)^{2} + 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "new-functions-from-old-92a265",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Start with $f(x) = \\left|{x}\\right|$. Write a formula for the function $g$ whose graph is the graph of $f$ shifted left $3$ units and up $1$ unit.",
+   "checker": "equiv",
+   "answer": "abs(x+3)+1",
+   "hints": [
+    "Horizontal shifts change the input ($x \\to x - c$ moves right by $c$); vertical changes act on the output.",
+    "Apply the transformations one at a time, in the order they are listed."
+   ],
+   "solution": [
+    "Shifting left by $3$ replaces $x$ with $x + 3$: $\\left|{x + 3}\\right|$.",
+    "Shifting up by $1$ adds $1$: $g(x) = \\left|{x + 3}\\right| + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "new-functions-from-old-5a7487",
+   "skill": "new-functions-from-old",
+   "difficulty": 3,
+   "statement": "Start with $f(x) = \\left|{x}\\right|$. Write a formula for the function $g$ whose graph is the graph of $f$ stretched vertically by a factor of $2$ then shifted down $3$ units.",
+   "checker": "equiv",
+   "answer": "2*abs(x)-3",
+   "hints": [
+    "Horizontal shifts change the input ($x \\to x - c$ moves right by $c$); vertical changes act on the output.",
+    "Apply the transformations one at a time, in the order they are listed."
+   ],
+   "solution": [
+    "Vertical stretch multiplies outputs by $2$: $2 \\left|{x}\\right|$.",
+    "Then add $-3$: $g(x) = 2 \\left|{x}\\right| - 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "new-functions-from-old-3a2efc",
+   "skill": "new-functions-from-old",
+   "difficulty": 3,
+   "statement": "Start with $f(x) = \\left|{x}\\right|$. Write a formula for the function $g$ whose graph is the graph of $f$ reflected about the $x$-axis and shifted right $4$ units.",
+   "checker": "equiv",
+   "answer": "-abs(x-4)",
+   "hints": [
+    "Horizontal shifts change the input ($x \\to x - c$ moves right by $c$); vertical changes act on the output.",
+    "Apply the transformations one at a time, in the order they are listed."
+   ],
+   "solution": [
+    "Reflecting about the $x$-axis negates the output: $-\\left|{x}\\right|$.",
+    "Shifting right by $4$ replaces $x$ with $x - 4$: $g(x) = - \\left|{x - 4}\\right|$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "new-functions-from-old-c6d0f7",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Start with $f(x) = \\frac{1}{x}$. Write a formula for the function $g$ whose graph is the graph of $f$ shifted right $1$ unit and down $4$ units.",
+   "checker": "equiv",
+   "answer": "-4+1/(x-1)",
+   "hints": [
+    "Horizontal shifts change the input ($x \\to x - c$ moves right by $c$); vertical changes act on the output.",
+    "Apply the transformations one at a time, in the order they are listed."
+   ],
+   "solution": [
+    "Shifting right by $1$ replaces $x$ with $x - 1$: $\\frac{1}{x - 1}$.",
+    "Shifting down by $4$ adds $-4$: $g(x) = -4 + \\frac{1}{x - 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "new-functions-from-old-6ac55b",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Start with $f(x) = \\frac{1}{x}$. Write a formula for the function $g$ whose graph is the graph of $f$ shifted right $3$ units and up $1$ unit.",
+   "checker": "equiv",
+   "answer": "1+1/(x-3)",
+   "hints": [
+    "Horizontal shifts change the input ($x \\to x - c$ moves right by $c$); vertical changes act on the output.",
+    "Apply the transformations one at a time, in the order they are listed."
+   ],
+   "solution": [
+    "Shifting right by $3$ replaces $x$ with $x - 3$: $\\frac{1}{x - 3}$.",
+    "Shifting up by $1$ adds $1$: $g(x) = 1 + \\frac{1}{x - 3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "new-functions-from-old-0d949b",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "How is the graph of $y = f(x - 2) + 3$ obtained from the graph of $y = f(x)$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Inside the parentheses, $x - c$ shifts right by $c$ (the opposite of what the sign suggests).",
+    "A constant added outside the function moves the graph vertically in the direction of its sign."
+   ],
+   "solution": [
+    "$f(x - 2)$ is $f$ shifted horizontally right by $2$.",
+    "Adding $3$ then moves the graph up by $3$."
+   ],
+   "verified": true,
+   "choices": [
+    "shift right 2, up 3",
+    "shift left 2, down 3",
+    "shift left 2, up 3",
+    "shift right 2, down 3"
+   ]
+  },
+  {
+   "id": "new-functions-from-old-fbde55",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "How is the graph of $y = f(x - 4) + 4$ obtained from the graph of $y = f(x)$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Inside the parentheses, $x - c$ shifts right by $c$ (the opposite of what the sign suggests).",
+    "A constant added outside the function moves the graph vertically in the direction of its sign."
+   ],
+   "solution": [
+    "$f(x - 4)$ is $f$ shifted horizontally right by $4$.",
+    "Adding $4$ then moves the graph up by $4$."
+   ],
+   "verified": true,
+   "choices": [
+    "shift right 4, up 4",
+    "shift left 4, down 4",
+    "shift right 4, down 4",
+    "shift left 4, up 4"
+   ]
+  },
+  {
+   "id": "new-functions-from-old-d4fdfa",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "How is the graph of $y = f(x - 3) + 2$ obtained from the graph of $y = f(x)$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Inside the parentheses, $x - c$ shifts right by $c$ (the opposite of what the sign suggests).",
+    "A constant added outside the function moves the graph vertically in the direction of its sign."
+   ],
+   "solution": [
+    "$f(x - 3)$ is $f$ shifted horizontally right by $3$.",
+    "Adding $2$ then moves the graph up by $2$."
+   ],
+   "verified": true,
+   "choices": [
+    "shift right 3, down 2",
+    "shift right 3, up 2",
+    "shift left 3, down 2",
+    "shift left 3, up 2"
+   ]
+  },
+  {
+   "id": "new-functions-from-old-0b04dc",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "How is the graph of $y = f(x - 4) + 2$ obtained from the graph of $y = f(x)$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Inside the parentheses, $x - c$ shifts right by $c$ (the opposite of what the sign suggests).",
+    "A constant added outside the function moves the graph vertically in the direction of its sign."
+   ],
+   "solution": [
+    "$f(x - 4)$ is $f$ shifted horizontally right by $4$.",
+    "Adding $2$ then moves the graph up by $2$."
+   ],
+   "verified": true,
+   "choices": [
+    "shift right 4, down 2",
+    "shift left 4, down 2",
+    "shift left 4, up 2",
+    "shift right 4, up 2"
+   ]
+  },
+  {
+   "id": "new-functions-from-old-4abadc",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "How is the graph of $y = f(x + 1) - 2$ obtained from the graph of $y = f(x)$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Inside the parentheses, $x - c$ shifts right by $c$ (the opposite of what the sign suggests).",
+    "A constant added outside the function moves the graph vertically in the direction of its sign."
+   ],
+   "solution": [
+    "$f(x + 1)$ is $f$ shifted horizontally left by $1$.",
+    "Adding $-2$ then moves the graph down by $2$."
+   ],
+   "verified": true,
+   "choices": [
+    "shift right 1, up 2",
+    "shift left 1, down 2",
+    "shift left 1, up 2",
+    "shift right 1, down 2"
+   ]
+  },
+  {
+   "id": "new-functions-from-old-6319cf",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Let $h(x) = \\left(4 x - 1\\right)^{3}$. If $h(x) = f(g(x))$ with $f(x) = x^3$, find $g(x)$.",
+   "checker": "equiv",
+   "answer": "4*x-1",
+   "hints": [
+    "Ask: what expression is the outer operation being applied to?",
+    "Whatever sits where the $x$ would be in $f(x) = x^3$ is $g(x)$."
+   ],
+   "solution": [
+    "$h(x) = f(g(x))$ means $h$ is $x^3$ applied to $g(x)$.",
+    "Comparing with $\\left(4 x - 1\\right)^{3}$ shows $g(x) = 4 x - 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-43b9d1",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Let $h(x) = \\frac{1}{x^{2} + 2}$. If $h(x) = f(g(x))$ with $f(x) = 1/x$, find $g(x)$.",
+   "checker": "equiv",
+   "answer": "x^2+2",
+   "hints": [
+    "Ask: what expression is the outer operation being applied to?",
+    "Whatever sits where the $x$ would be in $f(x) = 1/x$ is $g(x)$."
+   ],
+   "solution": [
+    "$h(x) = f(g(x))$ means $h$ is $1/x$ applied to $g(x)$.",
+    "Comparing with $\\frac{1}{x^{2} + 2}$ shows $g(x) = x^{2} + 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-7e8003",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Let $h(x) = \\frac{1}{x^{3} + 3 x}$. If $h(x) = f(g(x))$ with $f(x) = 1/x$, find $g(x)$.",
+   "checker": "equiv",
+   "answer": "x^3+3*x",
+   "hints": [
+    "Ask: what expression is the outer operation being applied to?",
+    "Whatever sits where the $x$ would be in $f(x) = 1/x$ is $g(x)$."
+   ],
+   "solution": [
+    "$h(x) = f(g(x))$ means $h$ is $1/x$ applied to $g(x)$.",
+    "Comparing with $\\frac{1}{x^{3} + 3 x}$ shows $g(x) = x^{3} + 3 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-02e0a1",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Let $h(x) = \\left(x^{2} + 1\\right)^{3}$. If $h(x) = f(g(x))$ with $f(x) = x^3$, find $g(x)$.",
+   "checker": "equiv",
+   "answer": "x^2+1",
+   "hints": [
+    "Ask: what expression is the outer operation being applied to?",
+    "Whatever sits where the $x$ would be in $f(x) = x^3$ is $g(x)$."
+   ],
+   "solution": [
+    "$h(x) = f(g(x))$ means $h$ is $x^3$ applied to $g(x)$.",
+    "Comparing with $\\left(x^{2} + 1\\right)^{3}$ shows $g(x) = x^{2} + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-9584af",
+   "skill": "new-functions-from-old",
+   "difficulty": 2,
+   "statement": "Let $h(x) = \\left(2 x^{2} + 1\\right)^{3}$. If $h(x) = f(g(x))$ with $f(x) = x^3$, find $g(x)$.",
+   "checker": "equiv",
+   "answer": "2*x^2+1",
+   "hints": [
+    "Ask: what expression is the outer operation being applied to?",
+    "Whatever sits where the $x$ would be in $f(x) = x^3$ is $g(x)$."
+   ],
+   "solution": [
+    "$h(x) = f(g(x))$ means $h$ is $x^3$ applied to $g(x)$.",
+    "Comparing with $\\left(2 x^{2} + 1\\right)^{3}$ shows $g(x) = 2 x^{2} + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-170ffd",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\sqrt{x + 1}$ and $g(x) = \\frac{1}{x + 2}$. Find a formula for $(f - g)(x)$.",
+   "checker": "equiv",
+   "answer": "sqrt(x+1)-1/(x+2)",
+   "hints": [
+    "$(f - g)(x)$ is defined as $f(x) - g(x)$ for each $x$.",
+    "Combine the two formulas and collect like terms if possible."
+   ],
+   "solution": [
+    "$(f - g)(x) = \\big(\\sqrt{x + 1}\\big) - \\big(\\frac{1}{x + 2}\\big)$.",
+    "$= \\sqrt{x + 1} - \\frac{1}{x + 2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-41acc6",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\frac{1}{x + 2}$ and $g(x) = 4 x^{2} - 3$. Find a formula for $(f - g)(x)$.",
+   "checker": "equiv",
+   "answer": "-4*x^2+3+1/(x+2)",
+   "hints": [
+    "$(f - g)(x)$ is defined as $f(x) - g(x)$ for each $x$.",
+    "Combine the two formulas and collect like terms if possible."
+   ],
+   "solution": [
+    "$(f - g)(x) = \\big(\\frac{1}{x + 2}\\big) - \\big(4 x^{2} - 3\\big)$.",
+    "$= - 4 x^{2} + 3 + \\frac{1}{x + 2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-59663a",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\frac{1}{x + 1}$ and $g(x) = x^{3} - x$. Evaluate $\\left(\\dfrac{f}{g}\\right)(2)$.",
+   "checker": "numeric",
+   "answer": "1/18",
+   "hints": [
+    "$(f/g)(a)$ means $f(a)$ divided by $g(a)$.",
+    "Compute $f(2)$ and $g(2)$ separately first."
+   ],
+   "solution": [
+    "$f(2) = \\frac{1}{3}$ and $g(2) = 6$.",
+    "$(f/g)(2) = \\frac{1}{3}/6 = \\frac{1}{18}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-bea855",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Let $f(x) = x^{2} - 2$ and $g(x) = x^{3} - 3 x$. Evaluate $\\left(\\dfrac{f}{g}\\right)(1)$.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "$(f/g)(a)$ means $f(a)$ divided by $g(a)$.",
+    "Compute $f(1)$ and $g(1)$ separately first."
+   ],
+   "solution": [
+    "$f(1) = -1$ and $g(1) = -2$.",
+    "$(f/g)(1) = -1/-2 = \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-a7f18d",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 4 x^{2} - 2$ and $g(x) = \\sqrt{x + 4}$. Find a formula for $(fg)(x)$.",
+   "checker": "equiv",
+   "answer": "sqrt(x+4)*(4*x^2-2)",
+   "hints": [
+    "$(fg)(x)$ is defined as $f(x) \\cdot g(x)$ for each $x$.",
+    "Combine the two formulas and collect like terms if possible."
+   ],
+   "solution": [
+    "$(fg)(x) = \\big(4 x^{2} - 2\\big) \\cdot \\big(\\sqrt{x + 4}\\big)$.",
+    "$= 4 x^{2} \\sqrt{x + 4} - 2 \\sqrt{x + 4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2.5
+   ]
+  },
+  {
+   "id": "new-functions-from-old-427fb3",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "The graph of $y = \\left(x + 2\\right)^{2} + 5$ is a shifted parabola. What is the $x$-coordinate of its vertex?",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "Compare with $y = (x - c)^2 + d$, whose vertex is at $(c, d)$.",
+    "Rewrite $x + 2$ as $x - (-2)$."
+   ],
+   "solution": [
+    "$y = (x - (-2))^2 + 5$ is $y = x^2$ shifted left $2$ and up $5$.",
+    "The vertex moves from $(0, 0)$ to $(-2, 5)$, so its $x$-coordinate is $-2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-9f0de5",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "The graph of $y = \\left(x + 5\\right)^{2} + 1$ is a shifted parabola. What is the $x$-coordinate of its vertex?",
+   "checker": "numeric",
+   "answer": "-5",
+   "hints": [
+    "Compare with $y = (x - c)^2 + d$, whose vertex is at $(c, d)$.",
+    "Rewrite $x + 5$ as $x - (-5)$."
+   ],
+   "solution": [
+    "$y = (x - (-5))^2 + 1$ is $y = x^2$ shifted left $5$ and up $1$.",
+    "The vertex moves from $(0, 0)$ to $(-5, 1)$, so its $x$-coordinate is $-5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-7e6aac",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "The graph of $y = \\left(x + 3\\right)^{2} - 1$ is a shifted parabola. What is the $x$-coordinate of its vertex?",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Compare with $y = (x - c)^2 + d$, whose vertex is at $(c, d)$.",
+    "Rewrite $x + 3$ as $x - (-3)$."
+   ],
+   "solution": [
+    "$y = (x - (-3))^2 - 1$ is $y = x^2$ shifted left $3$ and down $1$.",
+    "The vertex moves from $(0, 0)$ to $(-3, -1)$, so its $x$-coordinate is $-3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-d28444",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "The graph of $y = \\left(x + 5\\right)^{2} - 4$ is a shifted parabola. What is the $x$-coordinate of its vertex?",
+   "checker": "numeric",
+   "answer": "-5",
+   "hints": [
+    "Compare with $y = (x - c)^2 + d$, whose vertex is at $(c, d)$.",
+    "Rewrite $x + 5$ as $x - (-5)$."
+   ],
+   "solution": [
+    "$y = (x - (-5))^2 - 4$ is $y = x^2$ shifted left $5$ and down $4$.",
+    "The vertex moves from $(0, 0)$ to $(-5, -4)$, so its $x$-coordinate is $-5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-d7ee7b",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Use the table $\\begin{array}{c|cccc} x & 1 & 2 & 3 & 4 \\\\ \\hline f(x) & 3 & 3 & 4 & 2 \\\\ g(x) & 2 & 3 & 3 & 1 \\end{array}$ to find $(f \\circ g)(3)$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "$(f \\circ g)(a) = f(g(a))$: look up $g(a)$ first.",
+    "$g(3) = 3$; now read $f(3)$ from the table."
+   ],
+   "solution": [
+    "From the table $g(3) = 3$.",
+    "Then $f(3) = 4$, so $(f \\circ g)(3) = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-15b750",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Use the table $\\begin{array}{c|cccc} x & 1 & 2 & 3 & 4 \\\\ \\hline f(x) & 4 & 2 & 1 & 4 \\\\ g(x) & 4 & 3 & 4 & 1 \\end{array}$ to find $(f \\circ g)(4)$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "$(f \\circ g)(a) = f(g(a))$: look up $g(a)$ first.",
+    "$g(4) = 1$; now read $f(1)$ from the table."
+   ],
+   "solution": [
+    "From the table $g(4) = 1$.",
+    "Then $f(1) = 4$, so $(f \\circ g)(4) = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-6da1ab",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Use the table $\\begin{array}{c|cccc} x & 1 & 2 & 3 & 4 \\\\ \\hline f(x) & 3 & 2 & 2 & 4 \\\\ g(x) & 4 & 2 & 4 & 2 \\end{array}$ to find $(f \\circ g)(3)$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "$(f \\circ g)(a) = f(g(a))$: look up $g(a)$ first.",
+    "$g(3) = 4$; now read $f(4)$ from the table."
+   ],
+   "solution": [
+    "From the table $g(3) = 4$.",
+    "Then $f(4) = 4$, so $(f \\circ g)(3) = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "new-functions-from-old-08fcdb",
+   "skill": "new-functions-from-old",
+   "difficulty": 1,
+   "statement": "Use the table $\\begin{array}{c|cccc} x & 1 & 2 & 3 & 4 \\\\ \\hline f(x) & 2 & 1 & 2 & 1 \\\\ g(x) & 4 & 4 & 4 & 4 \\end{array}$ to find $(f \\circ g)(3)$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "$(f \\circ g)(a) = f(g(a))$: look up $g(a)$ first.",
+    "$g(3) = 4$; now read $f(4)$ from the table."
+   ],
+   "solution": [
+    "From the table $g(3) = 4$.",
+    "Then $f(4) = 1$, so $(f \\circ g)(3) = 1$."
+   ],
+   "verified": true
+  }
+ ]
+}

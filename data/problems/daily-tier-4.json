@@ -1,0 +1,1893 @@
+{
+ "skill": "substitution",
+ "problems": [
+  {
+   "id": "daily-tier-4-9d701e",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{\\sin{\\left(\\sqrt{x} \\right)}}{\\sqrt{x}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-2*cos(sqrt(x))",
+   "hints": [
+    "Try the substitution $u = \\sqrt{x}$; then $du = \\frac{1}{2 \\sqrt{x}}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int 2 \\sin{\\left(u \\right)}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\sqrt{x}$, so $du = \\frac{1}{2 \\sqrt{x}}\\,dx$; hence $\\frac{\\sin{\\left(\\sqrt{x} \\right)}}{\\sqrt{x}}\\,dx = 2 \\sin{\\left(u \\right)}\\,du$.",
+    "$\\displaystyle\\int \\frac{\\sin{\\left(\\sqrt{x} \\right)}}{\\sqrt{x}}\\,dx = \\int 2 \\sin{\\left(u \\right)}\\,du = - 2 \\cos{\\left(u \\right)} + C$.",
+    "Substitute $u = \\sqrt{x}$ back: $- 2 \\cos{\\left(\\sqrt{x} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    4
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-5146a3",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x^{2} \\sqrt{x^{3} + 5}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*(x^3+5)^(3/2)/9",
+   "hints": [
+    "Try the substitution $u = x^{3} + 5$; then $du = 3 x^{2}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sqrt{u}}{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{3} + 5$, so $du = 3 x^{2}\\,dx$; hence $x^{2} \\sqrt{x^{3} + 5}\\,dx = \\frac{\\sqrt{u}}{3}\\,du$.",
+    "$\\displaystyle\\int x^{2} \\sqrt{x^{3} + 5}\\,dx = \\int \\frac{\\sqrt{u}}{3}\\,du = \\frac{2 u^{\\frac{3}{2}}}{9} + C$.",
+    "Substitute $u = x^{3} + 5$ back: $\\frac{2 \\left(x^{3} + 5\\right)^{\\frac{3}{2}}}{9} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-2f5bd0",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{x \\ln{\\left(x \\right)}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(ln(x))",
+   "hints": [
+    "Try the substitution $u = \\ln{\\left(x \\right)}$; then $du = \\frac{1}{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, so $du = \\frac{1}{x}\\,dx$; hence $\\frac{1}{x \\ln{\\left(x \\right)}}\\,dx = \\frac{1}{u}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{x \\ln{\\left(x \\right)}}\\,dx = \\int \\frac{1}{u}\\,du = \\ln{\\left(u \\right)} + C$.",
+    "Substitute $u = \\ln{\\left(x \\right)}$ back: $\\ln{\\left(\\ln{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1.5,
+    4
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-fc9705",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\cos{\\left(4 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sin(4*x)/4",
+   "hints": [
+    "Try the substitution $u = 4 x$; then $du = 4\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\cos{\\left(u \\right)}}{4}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 4 x$, so $du = 4\\,dx$; hence $\\cos{\\left(4 x \\right)}\\,dx = \\frac{\\cos{\\left(u \\right)}}{4}\\,du$.",
+    "$\\displaystyle\\int \\cos{\\left(4 x \\right)}\\,dx = \\int \\frac{\\cos{\\left(u \\right)}}{4}\\,du = \\frac{\\sin{\\left(u \\right)}}{4} + C$.",
+    "Substitute $u = 4 x$ back: $\\frac{\\sin{\\left(4 x \\right)}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-7571c9",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x^{3} \\sqrt{x^{4} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(x^4+1)^(3/2)/6",
+   "hints": [
+    "Try the substitution $u = x^{4} + 1$; then $du = 4 x^{3}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sqrt{u}}{4}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{4} + 1$, so $du = 4 x^{3}\\,dx$; hence $x^{3} \\sqrt{x^{4} + 1}\\,dx = \\frac{\\sqrt{u}}{4}\\,du$.",
+    "$\\displaystyle\\int x^{3} \\sqrt{x^{4} + 1}\\,dx = \\int \\frac{\\sqrt{u}}{4}\\,du = \\frac{u^{\\frac{3}{2}}}{6} + C$.",
+    "Substitute $u = x^{4} + 1$ back: $\\frac{\\left(x^{4} + 1\\right)^{\\frac{3}{2}}}{6} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-dd4ca9",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{x}{x^{4} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "atan(x^2)/2",
+   "hints": [
+    "Try the substitution $u = x^{2}$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 \\left(u^{2} + 1\\right)}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2}$, so $du = 2 x\\,dx$; hence $\\frac{x}{x^{4} + 1}\\,dx = \\frac{1}{2 \\left(u^{2} + 1\\right)}\\,du$.",
+    "$\\displaystyle\\int \\frac{x}{x^{4} + 1}\\,dx = \\int \\frac{1}{2 \\left(u^{2} + 1\\right)}\\,du = \\frac{\\arctan{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = x^{2}$ back: $\\frac{\\arctan{\\left(x^{2} \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-bd3a60",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{\\ln{\\left(x \\right)}}{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x)^2/2",
+   "hints": [
+    "Try the substitution $u = \\ln{\\left(x \\right)}$; then $du = \\frac{1}{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int u\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, so $du = \\frac{1}{x}\\,dx$; hence $\\frac{\\ln{\\left(x \\right)}}{x}\\,dx = u\\,du$.",
+    "$\\displaystyle\\int \\frac{\\ln{\\left(x \\right)}}{x}\\,dx = \\int u\\,du = \\frac{u^{2}}{2} + C$.",
+    "Substitute $u = \\ln{\\left(x \\right)}$ back: $\\frac{\\ln{\\left(x \\right)}^{2}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1,
+    4
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-3bd042",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{2 x + 3}{x^{2} + 3 x + 2}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x^2+3*x+2)",
+   "hints": [
+    "Try the substitution $u = x^{2} + 3 x + 2$; then $du = \\left(2 x + 3\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 3 x + 2$, so $du = \\left(2 x + 3\\right)\\,dx$; hence $\\frac{2 x + 3}{x^{2} + 3 x + 2}\\,dx = \\frac{1}{u}\\,du$.",
+    "$\\displaystyle\\int \\frac{2 x + 3}{x^{2} + 3 x + 2}\\,dx = \\int \\frac{1}{u}\\,du = \\ln{\\left(u \\right)} + C$.",
+    "Substitute $u = x^{2} + 3 x + 2$ back: $\\ln{\\left(x^{2} + 3 x + 2 \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-82fc31",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\sqrt{3 x + 2}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*(3*x+2)^(3/2)/9",
+   "hints": [
+    "Try the substitution $u = 3 x + 2$; then $du = 3\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sqrt{u}}{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 3 x + 2$, so $du = 3\\,dx$; hence $\\sqrt{3 x + 2}\\,dx = \\frac{\\sqrt{u}}{3}\\,du$.",
+    "$\\displaystyle\\int \\sqrt{3 x + 2}\\,dx = \\int \\frac{\\sqrt{u}}{3}\\,du = \\frac{2 u^{\\frac{3}{2}}}{9} + C$.",
+    "Substitute $u = 3 x + 2$ back: $\\frac{2 \\left(3 x + 2\\right)^{\\frac{3}{2}}}{9} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.16666666666666663,
+    2.3333333333333335
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-274689",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\tan^{2}{\\left(x \\right)} \\sec^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "tan(x)^3/3",
+   "hints": [
+    "Try the substitution $u = \\tan{\\left(x \\right)}$; then $du = \\sec^{2}{\\left(x \\right)}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int u^{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\tan{\\left(x \\right)}$, so $du = \\sec^{2}{\\left(x \\right)}\\,dx$; hence $\\tan^{2}{\\left(x \\right)} \\sec^{2}{\\left(x \\right)}\\,dx = u^{2}\\,du$.",
+    "$\\displaystyle\\int \\tan^{2}{\\left(x \\right)} \\sec^{2}{\\left(x \\right)}\\,dx = \\int u^{2}\\,du = \\frac{u^{3}}{3} + C$.",
+    "Substitute $u = \\tan{\\left(x \\right)}$ back: $\\frac{\\tan^{3}{\\left(x \\right)}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-76be6c",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{\\sqrt{2 x + 1}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sqrt(2*x+1)",
+   "hints": [
+    "Try the substitution $u = 2 x + 1$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 \\sqrt{u}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x + 1$, so $du = 2\\,dx$; hence $\\frac{1}{\\sqrt{2 x + 1}}\\,dx = \\frac{1}{2 \\sqrt{u}}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{\\sqrt{2 x + 1}}\\,dx = \\int \\frac{1}{2 \\sqrt{u}}\\,du = \\sqrt{u} + C$.",
+    "Substitute $u = 2 x + 1$ back: $\\sqrt{2 x + 1} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.0,
+    2.5
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-1decaf",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{e^{\\frac{1}{x}}}{x^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-exp(1/x)",
+   "hints": [
+    "Try the substitution $u = \\frac{1}{x}$; then $du = \\left(- \\frac{1}{x^{2}}\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - e^{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\frac{1}{x}$, so $du = \\left(- \\frac{1}{x^{2}}\\right)\\,dx$; hence $\\frac{e^{\\frac{1}{x}}}{x^{2}}\\,dx = - e^{u}\\,du$.",
+    "$\\displaystyle\\int \\frac{e^{\\frac{1}{x}}}{x^{2}}\\,dx = \\int - e^{u}\\,du = - e^{u} + C$.",
+    "Substitute $u = \\frac{1}{x}$ back: $- e^{\\frac{1}{x}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-5d2bd9",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{2 x + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(2*x+1)/2",
+   "hints": [
+    "Try the substitution $u = 2 x + 1$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x + 1$, so $du = 2\\,dx$; hence $\\frac{1}{2 x + 1}\\,dx = \\frac{1}{2 u}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{2 x + 1}\\,dx = \\int \\frac{1}{2 u}\\,du = \\frac{\\ln{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = 2 x + 1$ back: $\\frac{\\ln{\\left(2 x + 1 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.0,
+    2.5
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-645263",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x}{\\left(x^{2} + 1\\right)^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-1/(2*(x^2+1))",
+   "hints": [
+    "Try the substitution $u = x^{2} + 1$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 u^{2}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 1$, so $du = 2 x\\,dx$; hence $\\frac{x}{\\left(x^{2} + 1\\right)^{2}}\\,dx = \\frac{1}{2 u^{2}}\\,du$.",
+    "$\\displaystyle\\int \\frac{x}{\\left(x^{2} + 1\\right)^{2}}\\,dx = \\int \\frac{1}{2 u^{2}}\\,du = - \\frac{1}{2 u} + C$.",
+    "Substitute $u = x^{2} + 1$ back: $- \\frac{1}{2 \\left(x^{2} + 1\\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-d21785",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\sin{\\left(2 x - 3 \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-cos(2*x-3)/2",
+   "hints": [
+    "Try the substitution $u = 2 x - 3$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sin{\\left(u \\right)}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x - 3$, so $du = 2\\,dx$; hence $\\sin{\\left(2 x - 3 \\right)}\\,dx = \\frac{\\sin{\\left(u \\right)}}{2}\\,du$.",
+    "$\\displaystyle\\int \\sin{\\left(2 x - 3 \\right)}\\,dx = \\int \\frac{\\sin{\\left(u \\right)}}{2}\\,du = - \\frac{\\cos{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = 2 x - 3$ back: $- \\frac{\\cos{\\left(2 x - 3 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-73578c",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int e^{\\cos{\\left(x \\right)}} \\sin{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-exp(cos(x))",
+   "hints": [
+    "Try the substitution $u = \\cos{\\left(x \\right)}$; then $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - e^{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\cos{\\left(x \\right)}$, so $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$; hence $e^{\\cos{\\left(x \\right)}} \\sin{\\left(x \\right)}\\,dx = - e^{u}\\,du$.",
+    "$\\displaystyle\\int e^{\\cos{\\left(x \\right)}} \\sin{\\left(x \\right)}\\,dx = \\int - e^{u}\\,du = - e^{u} + C$.",
+    "Substitute $u = \\cos{\\left(x \\right)}$ back: $- e^{\\cos{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-2b7625",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x e^{- x^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-exp(-x^2)/2",
+   "hints": [
+    "Try the substitution $u = - x^{2}$; then $du = \\left(- 2 x\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - \\frac{e^{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = - x^{2}$, so $du = \\left(- 2 x\\right)\\,dx$; hence $x e^{- x^{2}}\\,dx = - \\frac{e^{u}}{2}\\,du$.",
+    "$\\displaystyle\\int x e^{- x^{2}}\\,dx = \\int - \\frac{e^{u}}{2}\\,du = - \\frac{e^{u}}{2} + C$.",
+    "Substitute $u = - x^{2}$ back: $- \\frac{e^{- x^{2}}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-31e13f",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{e^{\\sqrt{x}}}{\\sqrt{x}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*exp(sqrt(x))",
+   "hints": [
+    "Try the substitution $u = \\sqrt{x}$; then $du = \\frac{1}{2 \\sqrt{x}}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int 2 e^{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\sqrt{x}$, so $du = \\frac{1}{2 \\sqrt{x}}\\,dx$; hence $\\frac{e^{\\sqrt{x}}}{\\sqrt{x}}\\,dx = 2 e^{u}\\,du$.",
+    "$\\displaystyle\\int \\frac{e^{\\sqrt{x}}}{\\sqrt{x}}\\,dx = \\int 2 e^{u}\\,du = 2 e^{u} + C$.",
+    "Substitute $u = \\sqrt{x}$ back: $2 e^{\\sqrt{x}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-bb1142",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{x^{2} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "atan(x)",
+   "hints": [
+    "Try the substitution $u = x$; then $du = 1\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u^{2} + 1}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x$, so $du = 1\\,dx$; hence $\\frac{1}{x^{2} + 1}\\,dx = \\frac{1}{u^{2} + 1}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{x^{2} + 1}\\,dx = \\int \\frac{1}{u^{2} + 1}\\,du = \\arctan{\\left(u \\right)} + C$.",
+    "Substitute $u = x$ back: $\\arctan{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-21740c",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\sin{\\left(x \\right)} \\cos^{3}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-cos(x)^4/4",
+   "hints": [
+    "Try the substitution $u = \\cos{\\left(x \\right)}$; then $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - u^{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\cos{\\left(x \\right)}$, so $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$; hence $\\sin{\\left(x \\right)} \\cos^{3}{\\left(x \\right)}\\,dx = - u^{3}\\,du$.",
+    "$\\displaystyle\\int \\sin{\\left(x \\right)} \\cos^{3}{\\left(x \\right)}\\,dx = \\int - u^{3}\\,du = - \\frac{u^{4}}{4} + C$.",
+    "Substitute $u = \\cos{\\left(x \\right)}$ back: $- \\frac{\\cos^{4}{\\left(x \\right)}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-d3f7d7",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "atan(sin(x))",
+   "hints": [
+    "Try the substitution $u = \\sin{\\left(x \\right)}$; then $du = \\cos{\\left(x \\right)}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u^{2} + 1}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\sin{\\left(x \\right)}$, so $du = \\cos{\\left(x \\right)}\\,dx$; hence $\\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)} + 1}\\,dx = \\frac{1}{u^{2} + 1}\\,du$.",
+    "$\\displaystyle\\int \\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)} + 1}\\,dx = \\int \\frac{1}{u^{2} + 1}\\,du = \\arctan{\\left(u \\right)} + C$.",
+    "Substitute $u = \\sin{\\left(x \\right)}$ back: $\\arctan{\\left(\\sin{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-640be4",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int e^{x} \\sin{\\left(e^{x} \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-cos(exp(x))",
+   "hints": [
+    "Try the substitution $u = e^{x}$; then $du = e^{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\sin{\\left(u \\right)}\\,du$."
+   ],
+   "solution": [
+    "Let $u = e^{x}$, so $du = e^{x}\\,dx$; hence $e^{x} \\sin{\\left(e^{x} \\right)}\\,dx = \\sin{\\left(u \\right)}\\,du$.",
+    "$\\displaystyle\\int e^{x} \\sin{\\left(e^{x} \\right)}\\,dx = \\int \\sin{\\left(u \\right)}\\,du = - \\cos{\\left(u \\right)} + C$.",
+    "Substitute $u = e^{x}$ back: $- \\cos{\\left(e^{x} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-62361e",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\tan{\\left(2 x \\right)} \\sec{\\left(2 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "1/(2*cos(2*x))",
+   "hints": [
+    "Try the substitution $u = 2 x$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\tan{\\left(u \\right)} \\sec{\\left(u \\right)}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x$, so $du = 2\\,dx$; hence $\\tan{\\left(2 x \\right)} \\sec{\\left(2 x \\right)}\\,dx = \\frac{\\tan{\\left(u \\right)} \\sec{\\left(u \\right)}}{2}\\,du$.",
+    "$\\displaystyle\\int \\tan{\\left(2 x \\right)} \\sec{\\left(2 x \\right)}\\,dx = \\int \\frac{\\tan{\\left(u \\right)} \\sec{\\left(u \\right)}}{2}\\,du = \\frac{1}{2 \\cos{\\left(u \\right)}} + C$.",
+    "Substitute $u = 2 x$ back: $\\frac{1}{2 \\cos{\\left(2 x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.3,
+    0.3
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-f1fc0b",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x^{3} \\sqrt{x^{4} + 2}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(x^4+2)^(3/2)/6",
+   "hints": [
+    "Try the substitution $u = x^{4} + 2$; then $du = 4 x^{3}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sqrt{u}}{4}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{4} + 2$, so $du = 4 x^{3}\\,dx$; hence $x^{3} \\sqrt{x^{4} + 2}\\,dx = \\frac{\\sqrt{u}}{4}\\,du$.",
+    "$\\displaystyle\\int x^{3} \\sqrt{x^{4} + 2}\\,dx = \\int \\frac{\\sqrt{u}}{4}\\,du = \\frac{u^{\\frac{3}{2}}}{6} + C$.",
+    "Substitute $u = x^{4} + 2$ back: $\\frac{\\left(x^{4} + 2\\right)^{\\frac{3}{2}}}{6} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-1253bb",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{e^{x}}{e^{x} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(exp(x)+1)",
+   "hints": [
+    "Try the substitution $u = e^{x} + 1$; then $du = e^{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = e^{x} + 1$, so $du = e^{x}\\,dx$; hence $\\frac{e^{x}}{e^{x} + 1}\\,dx = \\frac{1}{u}\\,du$.",
+    "$\\displaystyle\\int \\frac{e^{x}}{e^{x} + 1}\\,dx = \\int \\frac{1}{u}\\,du = \\ln{\\left(u \\right)} + C$.",
+    "Substitute $u = e^{x} + 1$ back: $\\ln{\\left(e^{x} + 1 \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-264bba",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{x^{2} + 25}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "atan(x/5)/5",
+   "hints": [
+    "Try the substitution $u = \\frac{x}{5}$; then $du = \\frac{1}{5}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{5 \\left(u^{2} + 1\\right)}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\frac{x}{5}$, so $du = \\frac{1}{5}\\,dx$; hence $\\frac{1}{x^{2} + 25}\\,dx = \\frac{1}{5 \\left(u^{2} + 1\\right)}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{x^{2} + 25}\\,dx = \\int \\frac{1}{5 \\left(u^{2} + 1\\right)}\\,du = \\frac{\\arctan{\\left(u \\right)}}{5} + C$.",
+    "Substitute $u = \\frac{x}{5}$ back: $\\frac{\\arctan{\\left(\\frac{x}{5} \\right)}}{5} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-ceae82",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{\\sqrt{2 x + 5}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sqrt(2*x+5)",
+   "hints": [
+    "Try the substitution $u = 2 x + 5$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 \\sqrt{u}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x + 5$, so $du = 2\\,dx$; hence $\\frac{1}{\\sqrt{2 x + 5}}\\,dx = \\frac{1}{2 \\sqrt{u}}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{\\sqrt{2 x + 5}}\\,dx = \\int \\frac{1}{2 \\sqrt{u}}\\,du = \\sqrt{u} + C$.",
+    "Substitute $u = 2 x + 5$ back: $\\sqrt{2 x + 5} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2.0,
+    0.5
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-7e8528",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int e^{3 x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "exp(3*x)/3",
+   "hints": [
+    "Try the substitution $u = 3 x$; then $du = 3\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{e^{u}}{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 3 x$, so $du = 3\\,dx$; hence $e^{3 x}\\,dx = \\frac{e^{u}}{3}\\,du$.",
+    "$\\displaystyle\\int e^{3 x}\\,dx = \\int \\frac{e^{u}}{3}\\,du = \\frac{e^{u}}{3} + C$.",
+    "Substitute $u = 3 x$ back: $\\frac{e^{3 x}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-e1ac60",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\sec^{2}{\\left(3 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sin(3*x)/(3*cos(3*x))",
+   "hints": [
+    "Try the substitution $u = 3 x$; then $du = 3\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sec^{2}{\\left(u \\right)}}{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 3 x$, so $du = 3\\,dx$; hence $\\sec^{2}{\\left(3 x \\right)}\\,dx = \\frac{\\sec^{2}{\\left(u \\right)}}{3}\\,du$.",
+    "$\\displaystyle\\int \\sec^{2}{\\left(3 x \\right)}\\,dx = \\int \\frac{\\sec^{2}{\\left(u \\right)}}{3}\\,du = \\frac{\\sin{\\left(u \\right)}}{3 \\cos{\\left(u \\right)}} + C$.",
+    "Substitute $u = 3 x$ back: $\\frac{\\sin{\\left(3 x \\right)}}{3 \\cos{\\left(3 x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.25,
+    0.25
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-30cbee",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{\\ln{\\left(x \\right)}^{2}}{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x)^3/3",
+   "hints": [
+    "Try the substitution $u = \\ln{\\left(x \\right)}$; then $du = \\frac{1}{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int u^{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, so $du = \\frac{1}{x}\\,dx$; hence $\\frac{\\ln{\\left(x \\right)}^{2}}{x}\\,dx = u^{2}\\,du$.",
+    "$\\displaystyle\\int \\frac{\\ln{\\left(x \\right)}^{2}}{x}\\,dx = \\int u^{2}\\,du = \\frac{u^{3}}{3} + C$.",
+    "Substitute $u = \\ln{\\left(x \\right)}$ back: $\\frac{\\ln{\\left(x \\right)}^{3}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1,
+    4
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-3d0529",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x e^{x^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "exp(x^2)/2",
+   "hints": [
+    "Try the substitution $u = x^{2}$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{e^{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2}$, so $du = 2 x\\,dx$; hence $x e^{x^{2}}\\,dx = \\frac{e^{u}}{2}\\,du$.",
+    "$\\displaystyle\\int x e^{x^{2}}\\,dx = \\int \\frac{e^{u}}{2}\\,du = \\frac{e^{u}}{2} + C$.",
+    "Substitute $u = x^{2}$ back: $\\frac{e^{x^{2}}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-b42475",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\left(4 x - 3\\right)^{3}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(4*x-3)^4/16",
+   "hints": [
+    "Try the substitution $u = 4 x - 3$; then $du = 4\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{u^{3}}{4}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 4 x - 3$, so $du = 4\\,dx$; hence $\\left(4 x - 3\\right)^{3}\\,dx = \\frac{u^{3}}{4}\\,du$.",
+    "$\\displaystyle\\int \\left(4 x - 3\\right)^{3}\\,dx = \\int \\frac{u^{3}}{4}\\,du = \\frac{u^{4}}{16} + C$.",
+    "Substitute $u = 4 x - 3$ back: $\\frac{\\left(4 x - 3\\right)^{4}}{16} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-24ee90",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x \\cos{\\left(x^{2} \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sin(x^2)/2",
+   "hints": [
+    "Try the substitution $u = x^{2}$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\cos{\\left(u \\right)}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2}$, so $du = 2 x\\,dx$; hence $x \\cos{\\left(x^{2} \\right)}\\,dx = \\frac{\\cos{\\left(u \\right)}}{2}\\,du$.",
+    "$\\displaystyle\\int x \\cos{\\left(x^{2} \\right)}\\,dx = \\int \\frac{\\cos{\\left(u \\right)}}{2}\\,du = \\frac{\\sin{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = x^{2}$ back: $\\frac{\\sin{\\left(x^{2} \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-ee88e2",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{\\sqrt{1 - 4 x^{2}}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "asin(2*x)/2",
+   "hints": [
+    "Try the substitution $u = 2 x$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 \\sqrt{1 - u^{2}}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x$, so $du = 2\\,dx$; hence $\\frac{1}{\\sqrt{1 - 4 x^{2}}}\\,dx = \\frac{1}{2 \\sqrt{1 - u^{2}}}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{\\sqrt{1 - 4 x^{2}}}\\,dx = \\int \\frac{1}{2 \\sqrt{1 - u^{2}}}\\,du = \\frac{\\arcsin{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = 2 x$ back: $\\frac{\\arcsin{\\left(2 x \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.45,
+    0.45
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-c68ab6",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int e^{\\sin{\\left(x \\right)}} \\cos{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "exp(sin(x))",
+   "hints": [
+    "Try the substitution $u = \\sin{\\left(x \\right)}$; then $du = \\cos{\\left(x \\right)}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int e^{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\sin{\\left(x \\right)}$, so $du = \\cos{\\left(x \\right)}\\,dx$; hence $e^{\\sin{\\left(x \\right)}} \\cos{\\left(x \\right)}\\,dx = e^{u}\\,du$.",
+    "$\\displaystyle\\int e^{\\sin{\\left(x \\right)}} \\cos{\\left(x \\right)}\\,dx = \\int e^{u}\\,du = e^{u} + C$.",
+    "Substitute $u = \\sin{\\left(x \\right)}$ back: $e^{\\sin{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-a22aa4",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x^{3} \\sqrt{x^{4} + 5}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(x^4+5)^(3/2)/6",
+   "hints": [
+    "Try the substitution $u = x^{4} + 5$; then $du = 4 x^{3}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sqrt{u}}{4}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{4} + 5$, so $du = 4 x^{3}\\,dx$; hence $x^{3} \\sqrt{x^{4} + 5}\\,dx = \\frac{\\sqrt{u}}{4}\\,du$.",
+    "$\\displaystyle\\int x^{3} \\sqrt{x^{4} + 5}\\,dx = \\int \\frac{\\sqrt{u}}{4}\\,du = \\frac{u^{\\frac{3}{2}}}{6} + C$.",
+    "Substitute $u = x^{4} + 5$ back: $\\frac{\\left(x^{4} + 5\\right)^{\\frac{3}{2}}}{6} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-b3f9da",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x \\sin{\\left(x^{2} + 2 \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-cos(x^2+2)/2",
+   "hints": [
+    "Try the substitution $u = x^{2} + 2$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sin{\\left(u \\right)}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 2$, so $du = 2 x\\,dx$; hence $x \\sin{\\left(x^{2} + 2 \\right)}\\,dx = \\frac{\\sin{\\left(u \\right)}}{2}\\,du$.",
+    "$\\displaystyle\\int x \\sin{\\left(x^{2} + 2 \\right)}\\,dx = \\int \\frac{\\sin{\\left(u \\right)}}{2}\\,du = - \\frac{\\cos{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = x^{2} + 2$ back: $- \\frac{\\cos{\\left(x^{2} + 2 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-701983",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x}{x^{2} + 5}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x^2+5)/2",
+   "hints": [
+    "Try the substitution $u = x^{2} + 5$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 5$, so $du = 2 x\\,dx$; hence $\\frac{x}{x^{2} + 5}\\,dx = \\frac{1}{2 u}\\,du$.",
+    "$\\displaystyle\\int \\frac{x}{x^{2} + 5}\\,dx = \\int \\frac{1}{2 u}\\,du = \\frac{\\ln{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = x^{2} + 5$ back: $\\frac{\\ln{\\left(x^{2} + 5 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-895373",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{3 x + 2}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(3*x+2)/3",
+   "hints": [
+    "Try the substitution $u = 3 x + 2$; then $du = 3\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{3 u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 3 x + 2$, so $du = 3\\,dx$; hence $\\frac{1}{3 x + 2}\\,dx = \\frac{1}{3 u}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{3 x + 2}\\,dx = \\int \\frac{1}{3 u}\\,du = \\frac{\\ln{\\left(u \\right)}}{3} + C$.",
+    "Substitute $u = 3 x + 2$ back: $\\frac{\\ln{\\left(3 x + 2 \\right)}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.16666666666666663,
+    2.3333333333333335
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-ed114c",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int x \\left(x^{2} + 1\\right)^{2}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(x^2+1)^3/6",
+   "hints": [
+    "Try the substitution $u = x^{2} + 1$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{u^{2}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 1$, so $du = 2 x\\,dx$; hence $x \\left(x^{2} + 1\\right)^{2}\\,dx = \\frac{u^{2}}{2}\\,du$.",
+    "$\\displaystyle\\int x \\left(x^{2} + 1\\right)^{2}\\,dx = \\int \\frac{u^{2}}{2}\\,du = \\frac{u^{3}}{6} + C$.",
+    "Substitute $u = x^{2} + 1$ back: $\\frac{\\left(x^{2} + 1\\right)^{3}}{6} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-74354b",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-1/sin(x)",
+   "hints": [
+    "Try the substitution $u = \\sin{\\left(x \\right)}$; then $du = \\cos{\\left(x \\right)}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u^{2}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\sin{\\left(x \\right)}$, so $du = \\cos{\\left(x \\right)}\\,dx$; hence $\\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)}}\\,dx = \\frac{1}{u^{2}}\\,du$.",
+    "$\\displaystyle\\int \\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)}}\\,dx = \\int \\frac{1}{u^{2}}\\,du = - \\frac{1}{u} + C$.",
+    "Substitute $u = \\sin{\\left(x \\right)}$ back: $- \\frac{1}{\\sin{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.8
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-aa22d2",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\cos{\\left(2 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sin(2*x)/2",
+   "hints": [
+    "Try the substitution $u = 2 x$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\cos{\\left(u \\right)}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x$, so $du = 2\\,dx$; hence $\\cos{\\left(2 x \\right)}\\,dx = \\frac{\\cos{\\left(u \\right)}}{2}\\,du$.",
+    "$\\displaystyle\\int \\cos{\\left(2 x \\right)}\\,dx = \\int \\frac{\\cos{\\left(u \\right)}}{2}\\,du = \\frac{\\sin{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = 2 x$ back: $\\frac{\\sin{\\left(2 x \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-f538a5",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int e^{2 x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "exp(2*x)/2",
+   "hints": [
+    "Try the substitution $u = 2 x$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{e^{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x$, so $du = 2\\,dx$; hence $e^{2 x}\\,dx = \\frac{e^{u}}{2}\\,du$.",
+    "$\\displaystyle\\int e^{2 x}\\,dx = \\int \\frac{e^{u}}{2}\\,du = \\frac{e^{u}}{2} + C$.",
+    "Substitute $u = 2 x$ back: $\\frac{e^{2 x}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-67e3f9",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x^{2} \\left(x^{3} + 1\\right)^{2}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(x^3+1)^3/9",
+   "hints": [
+    "Try the substitution $u = x^{3} + 1$; then $du = 3 x^{2}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{u^{2}}{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{3} + 1$, so $du = 3 x^{2}\\,dx$; hence $x^{2} \\left(x^{3} + 1\\right)^{2}\\,dx = \\frac{u^{2}}{3}\\,du$.",
+    "$\\displaystyle\\int x^{2} \\left(x^{3} + 1\\right)^{2}\\,dx = \\int \\frac{u^{2}}{3}\\,du = \\frac{u^{3}}{9} + C$.",
+    "Substitute $u = x^{3} + 1$ back: $\\frac{\\left(x^{3} + 1\\right)^{3}}{9} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-4e6713",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int e^{4 x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "exp(4*x)/4",
+   "hints": [
+    "Try the substitution $u = 4 x$; then $du = 4\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{e^{u}}{4}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 4 x$, so $du = 4\\,dx$; hence $e^{4 x}\\,dx = \\frac{e^{u}}{4}\\,du$.",
+    "$\\displaystyle\\int e^{4 x}\\,dx = \\int \\frac{e^{u}}{4}\\,du = \\frac{e^{u}}{4} + C$.",
+    "Substitute $u = 4 x$ back: $\\frac{e^{4 x}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-fd79cd",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x \\sqrt{x^{2} + 5}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(x^2+5)^(3/2)/3",
+   "hints": [
+    "Try the substitution $u = x^{2} + 5$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sqrt{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 5$, so $du = 2 x\\,dx$; hence $x \\sqrt{x^{2} + 5}\\,dx = \\frac{\\sqrt{u}}{2}\\,du$.",
+    "$\\displaystyle\\int x \\sqrt{x^{2} + 5}\\,dx = \\int \\frac{\\sqrt{u}}{2}\\,du = \\frac{u^{\\frac{3}{2}}}{3} + C$.",
+    "Substitute $u = x^{2} + 5$ back: $\\frac{\\left(x^{2} + 5\\right)^{\\frac{3}{2}}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-9a9f2d",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{\\left(2 x + 5\\right)^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-1/(2*(2*x+5))",
+   "hints": [
+    "Try the substitution $u = 2 x + 5$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 u^{2}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x + 5$, so $du = 2\\,dx$; hence $\\frac{1}{\\left(2 x + 5\\right)^{2}}\\,dx = \\frac{1}{2 u^{2}}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{\\left(2 x + 5\\right)^{2}}\\,dx = \\int \\frac{1}{2 u^{2}}\\,du = - \\frac{1}{2 u} + C$.",
+    "Substitute $u = 2 x + 5$ back: $- \\frac{1}{2 \\left(2 x + 5\\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2.0,
+    0.5
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-64eb7f",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int x \\left(x^{2} + 5\\right)^{3}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(x^2+5)^4/8",
+   "hints": [
+    "Try the substitution $u = x^{2} + 5$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{u^{3}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 5$, so $du = 2 x\\,dx$; hence $x \\left(x^{2} + 5\\right)^{3}\\,dx = \\frac{u^{3}}{2}\\,du$.",
+    "$\\displaystyle\\int x \\left(x^{2} + 5\\right)^{3}\\,dx = \\int \\frac{u^{3}}{2}\\,du = \\frac{u^{4}}{8} + C$.",
+    "Substitute $u = x^{2} + 5$ back: $\\frac{\\left(x^{2} + 5\\right)^{4}}{8} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-762387",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x \\sqrt{x^{2} + 2}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(x^2+2)^(3/2)/3",
+   "hints": [
+    "Try the substitution $u = x^{2} + 2$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sqrt{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 2$, so $du = 2 x\\,dx$; hence $x \\sqrt{x^{2} + 2}\\,dx = \\frac{\\sqrt{u}}{2}\\,du$.",
+    "$\\displaystyle\\int x \\sqrt{x^{2} + 2}\\,dx = \\int \\frac{\\sqrt{u}}{2}\\,du = \\frac{u^{\\frac{3}{2}}}{3} + C$.",
+    "Substitute $u = x^{2} + 2$ back: $\\frac{\\left(x^{2} + 2\\right)^{\\frac{3}{2}}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-ce7ea0",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\tan{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-ln(cos(x))",
+   "hints": [
+    "Try the substitution $u = \\cos{\\left(x \\right)}$; then $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\cos{\\left(x \\right)}$, so $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$; hence $\\tan{\\left(x \\right)}\\,dx = - \\frac{1}{u}\\,du$.",
+    "$\\displaystyle\\int \\tan{\\left(x \\right)}\\,dx = \\int - \\frac{1}{u}\\,du = - \\ln{\\left(u \\right)} + C$.",
+    "Substitute $u = \\cos{\\left(x \\right)}$ back: $- \\ln{\\left(\\cos{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-6a7ddf",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x^{2} \\sqrt{x^{3} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*(x^3+1)^(3/2)/9",
+   "hints": [
+    "Try the substitution $u = x^{3} + 1$; then $du = 3 x^{2}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sqrt{u}}{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{3} + 1$, so $du = 3 x^{2}\\,dx$; hence $x^{2} \\sqrt{x^{3} + 1}\\,dx = \\frac{\\sqrt{u}}{3}\\,du$.",
+    "$\\displaystyle\\int x^{2} \\sqrt{x^{3} + 1}\\,dx = \\int \\frac{\\sqrt{u}}{3}\\,du = \\frac{2 u^{\\frac{3}{2}}}{9} + C$.",
+    "Substitute $u = x^{3} + 1$ back: $\\frac{2 \\left(x^{3} + 1\\right)^{\\frac{3}{2}}}{9} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0,
+    2
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-2bd094",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{\\left(3 x + 2\\right)^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-1/(3*(3*x+2))",
+   "hints": [
+    "Try the substitution $u = 3 x + 2$; then $du = 3\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{3 u^{2}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 3 x + 2$, so $du = 3\\,dx$; hence $\\frac{1}{\\left(3 x + 2\\right)^{2}}\\,dx = \\frac{1}{3 u^{2}}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{\\left(3 x + 2\\right)^{2}}\\,dx = \\int \\frac{1}{3 u^{2}}\\,du = - \\frac{1}{3 u} + C$.",
+    "Substitute $u = 3 x + 2$ back: $- \\frac{1}{3 \\left(3 x + 2\\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.16666666666666663,
+    2.3333333333333335
+   ],
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-a5e888",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{3}} \\tan{\\left(3 x \\right)} \\sec{\\left(3 x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-1/3+sqrt(2)/3",
+   "hints": [
+    "Substitute $u = 3 x$, $du = 3\\,dx$, and change the limits: $x = \\frac{\\pi}{4} \\Rightarrow u = \\frac{3 \\pi}{4}$, $x = \\frac{\\pi}{3} \\Rightarrow u = \\pi$.",
+    "The integral becomes $\\displaystyle\\int_{\\frac{3 \\pi}{4}}^{\\pi} \\frac{\\tan{\\left(u \\right)} \\sec{\\left(u \\right)}}{3}\\,du$."
+   ],
+   "solution": [
+    "With $u = 3 x$ the limits become $u = \\frac{3 \\pi}{4}$ and $u = \\pi$.",
+    "$\\displaystyle\\int_{\\frac{3 \\pi}{4}}^{\\pi} \\frac{\\tan{\\left(u \\right)} \\sec{\\left(u \\right)}}{3}\\,du = \\left[\\frac{1}{3 \\cos{\\left(u \\right)}}\\right]_{\\frac{3 \\pi}{4}}^{\\pi} = - \\frac{1}{3} + \\frac{\\sqrt{2}}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-863191",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{2}^{5} \\frac{x}{\\left(x^{2} + 2\\right)^{2}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "7/108",
+   "hints": [
+    "Substitute $u = x^{2} + 2$, $du = 2 x\\,dx$, and change the limits: $x = 2 \\Rightarrow u = 6$, $x = 5 \\Rightarrow u = 27$.",
+    "The integral becomes $\\displaystyle\\int_{6}^{27} \\frac{1}{2 u^{2}}\\,du$."
+   ],
+   "solution": [
+    "With $u = x^{2} + 2$ the limits become $u = 6$ and $u = 27$.",
+    "$\\displaystyle\\int_{6}^{27} \\frac{1}{2 u^{2}}\\,du = \\left[- \\frac{1}{2 u}\\right]_{6}^{27} = \\frac{7}{108}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-dcadea",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} x e^{x^{2}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-1/2+e/2",
+   "hints": [
+    "Substitute $u = x^{2}$, $du = 2 x\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 0$, $x = 1 \\Rightarrow u = 1$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{1} \\frac{e^{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "With $u = x^{2}$ the limits become $u = 0$ and $u = 1$.",
+    "$\\displaystyle\\int_{0}^{1} \\frac{e^{u}}{2}\\,du = \\left[\\frac{e^{u}}{2}\\right]_{0}^{1} = - \\frac{1}{2} + \\frac{e}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-0b0a39",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{2}^{4} \\frac{1}{x \\ln{\\left(x \\right)}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(2)",
+   "hints": [
+    "Substitute $u = \\ln{\\left(x \\right)}$, $du = \\frac{1}{x}\\,dx$, and change the limits: $x = 2 \\Rightarrow u = \\ln{\\left(2 \\right)}$, $x = 4 \\Rightarrow u = \\ln{\\left(4 \\right)}$.",
+    "The integral becomes $\\displaystyle\\int_{\\ln{\\left(2 \\right)}}^{\\ln{\\left(4 \\right)}} \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\ln{\\left(x \\right)}$ the limits become $u = \\ln{\\left(2 \\right)}$ and $u = \\ln{\\left(4 \\right)}$.",
+    "$\\displaystyle\\int_{\\ln{\\left(2 \\right)}}^{\\ln{\\left(4 \\right)}} \\frac{1}{u}\\,du = \\left[\\ln{\\left(u \\right)}\\right]_{\\ln{\\left(2 \\right)}}^{\\ln{\\left(4 \\right)}} = \\ln{\\left(2 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-84e8e1",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{4} \\frac{2 x + 4}{x^{2} + 4 x + 2}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(17)",
+   "hints": [
+    "Substitute $u = x^{2} + 4 x + 2$, $du = \\left(2 x + 4\\right)\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 2$, $x = 4 \\Rightarrow u = 34$.",
+    "The integral becomes $\\displaystyle\\int_{2}^{34} \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "With $u = x^{2} + 4 x + 2$ the limits become $u = 2$ and $u = 34$.",
+    "$\\displaystyle\\int_{2}^{34} \\frac{1}{u}\\,du = \\left[\\ln{\\left(u \\right)}\\right]_{2}^{34} = \\ln{\\left(17 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-bf47d0",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{3}} x \\cos{\\left(x^{2} \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "sin(pi^2/9)/2",
+   "hints": [
+    "Substitute $u = x^{2}$, $du = 2 x\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 0$, $x = \\frac{\\pi}{3} \\Rightarrow u = \\frac{\\pi^{2}}{9}$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{\\frac{\\pi^{2}}{9}} \\frac{\\cos{\\left(u \\right)}}{2}\\,du$."
+   ],
+   "solution": [
+    "With $u = x^{2}$ the limits become $u = 0$ and $u = \\frac{\\pi^{2}}{9}$.",
+    "$\\displaystyle\\int_{0}^{\\frac{\\pi^{2}}{9}} \\frac{\\cos{\\left(u \\right)}}{2}\\,du = \\left[\\frac{\\sin{\\left(u \\right)}}{2}\\right]_{0}^{\\frac{\\pi^{2}}{9}} = \\frac{\\sin{\\left(\\frac{\\pi^{2}}{9} \\right)}}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-eaa4d7",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{\\ln{\\left(3 \\right)}} e^{5 x}\\,dx$.",
+   "checker": "numeric",
+   "answer": "242/5",
+   "hints": [
+    "Substitute $u = 5 x$, $du = 5\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 0$, $x = \\ln{\\left(3 \\right)} \\Rightarrow u = \\ln{\\left(243 \\right)}$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{\\ln{\\left(243 \\right)}} \\frac{e^{u}}{5}\\,du$."
+   ],
+   "solution": [
+    "With $u = 5 x$ the limits become $u = 0$ and $u = \\ln{\\left(243 \\right)}$.",
+    "$\\displaystyle\\int_{0}^{\\ln{\\left(243 \\right)}} \\frac{e^{u}}{5}\\,du = \\left[\\frac{e^{u}}{5}\\right]_{0}^{\\ln{\\left(243 \\right)}} = \\frac{242}{5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-dfde7c",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{4}} e^{\\sin{\\left(x \\right)}} \\cos{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-1+exp(sqrt(2)/2)",
+   "hints": [
+    "Substitute $u = \\sin{\\left(x \\right)}$, $du = \\cos{\\left(x \\right)}\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 0$, $x = \\frac{\\pi}{4} \\Rightarrow u = \\frac{\\sqrt{2}}{2}$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{\\frac{\\sqrt{2}}{2}} e^{u}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\sin{\\left(x \\right)}$ the limits become $u = 0$ and $u = \\frac{\\sqrt{2}}{2}$.",
+    "$\\displaystyle\\int_{0}^{\\frac{\\sqrt{2}}{2}} e^{u}\\,du = \\left[e^{u}\\right]_{0}^{\\frac{\\sqrt{2}}{2}} = -1 + e^{\\frac{\\sqrt{2}}{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-98557c",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{1}^{4} \\frac{1}{\\left(4 x + 2\\right)^{2}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1/36",
+   "hints": [
+    "Substitute $u = 4 x + 2$, $du = 4\\,dx$, and change the limits: $x = 1 \\Rightarrow u = 6$, $x = 4 \\Rightarrow u = 18$.",
+    "The integral becomes $\\displaystyle\\int_{6}^{18} \\frac{1}{4 u^{2}}\\,du$."
+   ],
+   "solution": [
+    "With $u = 4 x + 2$ the limits become $u = 6$ and $u = 18$.",
+    "$\\displaystyle\\int_{6}^{18} \\frac{1}{4 u^{2}}\\,du = \\left[- \\frac{1}{4 u}\\right]_{6}^{18} = \\frac{1}{36}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-4f0f48",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{1}^{e^{2}} \\frac{\\ln{\\left(x \\right)}}{x}\\,dx$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Substitute $u = \\ln{\\left(x \\right)}$, $du = \\frac{1}{x}\\,dx$, and change the limits: $x = 1 \\Rightarrow u = 0$, $x = e^{2} \\Rightarrow u = 2$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{2} u\\,du$."
+   ],
+   "solution": [
+    "With $u = \\ln{\\left(x \\right)}$ the limits become $u = 0$ and $u = 2$.",
+    "$\\displaystyle\\int_{0}^{2} u\\,du = \\left[\\frac{u^{2}}{2}\\right]_{0}^{2} = 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-cc4aba",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{1}^{e} \\frac{\\ln{\\left(x \\right)}^{4}}{x}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1/5",
+   "hints": [
+    "Substitute $u = \\ln{\\left(x \\right)}$, $du = \\frac{1}{x}\\,dx$, and change the limits: $x = 1 \\Rightarrow u = 0$, $x = e \\Rightarrow u = 1$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{1} u^{4}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\ln{\\left(x \\right)}$ the limits become $u = 0$ and $u = 1$.",
+    "$\\displaystyle\\int_{0}^{1} u^{4}\\,du = \\left[\\frac{u^{5}}{5}\\right]_{0}^{1} = \\frac{1}{5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-cdb50e",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{2} e^{2 x}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-1/2+exp(4)/2",
+   "hints": [
+    "Substitute $u = 2 x$, $du = 2\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 0$, $x = 2 \\Rightarrow u = 4$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{4} \\frac{e^{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "With $u = 2 x$ the limits become $u = 0$ and $u = 4$.",
+    "$\\displaystyle\\int_{0}^{4} \\frac{e^{u}}{2}\\,du = \\left[\\frac{e^{u}}{2}\\right]_{0}^{4} = - \\frac{1}{2} + \\frac{e^{4}}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-410dd4",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{3}} \\sin{\\left(4 x + 3 \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-sin(pi/6+3)/4",
+   "hints": [
+    "Substitute $u = 4 x + 3$, $du = 4\\,dx$, and change the limits: $x = \\frac{\\pi}{4} \\Rightarrow u = 3 + \\pi$, $x = \\frac{\\pi}{3} \\Rightarrow u = 3 + \\frac{4 \\pi}{3}$.",
+    "The integral becomes $\\displaystyle\\int_{3 + \\pi}^{3 + \\frac{4 \\pi}{3}} \\frac{\\sin{\\left(u \\right)}}{4}\\,du$."
+   ],
+   "solution": [
+    "With $u = 4 x + 3$ the limits become $u = 3 + \\pi$ and $u = 3 + \\frac{4 \\pi}{3}$.",
+    "$\\displaystyle\\int_{3 + \\pi}^{3 + \\frac{4 \\pi}{3}} \\frac{\\sin{\\left(u \\right)}}{4}\\,du = \\left[- \\frac{\\cos{\\left(u \\right)}}{4}\\right]_{3 + \\pi}^{3 + \\frac{4 \\pi}{3}} = - \\frac{\\sin{\\left(\\frac{\\pi}{6} + 3 \\right)}}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-d22ca3",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{2}} \\sin^{4}{\\left(x \\right)} \\cos{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1/5",
+   "hints": [
+    "Substitute $u = \\sin{\\left(x \\right)}$, $du = \\cos{\\left(x \\right)}\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 0$, $x = \\frac{\\pi}{2} \\Rightarrow u = 1$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{1} u^{4}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\sin{\\left(x \\right)}$ the limits become $u = 0$ and $u = 1$.",
+    "$\\displaystyle\\int_{0}^{1} u^{4}\\,du = \\left[\\frac{u^{5}}{5}\\right]_{0}^{1} = \\frac{1}{5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-0c37d4",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{4} x \\sqrt{x^{2} + 2}\\,dx$.",
+   "checker": "numeric",
+   "answer": "52*sqrt(2)/3",
+   "hints": [
+    "Substitute $u = x^{2} + 2$, $du = 2 x\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 2$, $x = 4 \\Rightarrow u = 18$.",
+    "The integral becomes $\\displaystyle\\int_{2}^{18} \\frac{\\sqrt{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "With $u = x^{2} + 2$ the limits become $u = 2$ and $u = 18$.",
+    "$\\displaystyle\\int_{2}^{18} \\frac{\\sqrt{u}}{2}\\,du = \\left[\\frac{u^{\\frac{3}{2}}}{3}\\right]_{2}^{18} = \\frac{52 \\sqrt{2}}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-271210",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{-1}^{1} \\frac{x}{\\sqrt{x^{2} + 2}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Substitute $u = x^{2} + 2$, $du = 2 x\\,dx$, and change the limits: $x = -1 \\Rightarrow u = 3$, $x = 1 \\Rightarrow u = 3$.",
+    "The integral becomes $\\displaystyle\\int_{3}^{3} \\frac{1}{2 \\sqrt{u}}\\,du$."
+   ],
+   "solution": [
+    "With $u = x^{2} + 2$ the limits become $u = 3$ and $u = 3$.",
+    "$\\displaystyle\\int_{3}^{3} \\frac{1}{2 \\sqrt{u}}\\,du = \\left[\\sqrt{u}\\right]_{3}^{3} = 0$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-3f2dfb",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{2} x^{2} \\left(x^{3} + 2\\right)^{3}\\,dx$.",
+   "checker": "numeric",
+   "answer": "832",
+   "hints": [
+    "Substitute $u = x^{3} + 2$, $du = 3 x^{2}\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 2$, $x = 2 \\Rightarrow u = 10$.",
+    "The integral becomes $\\displaystyle\\int_{2}^{10} \\frac{u^{3}}{3}\\,du$."
+   ],
+   "solution": [
+    "With $u = x^{3} + 2$ the limits become $u = 2$ and $u = 10$.",
+    "$\\displaystyle\\int_{2}^{10} \\frac{u^{3}}{3}\\,du = \\left[\\frac{u^{4}}{12}\\right]_{2}^{10} = 832$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-2453f1",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{4} \\frac{1}{4 x + 2}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(sqrt(3))",
+   "hints": [
+    "Substitute $u = 4 x + 2$, $du = 4\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 2$, $x = 4 \\Rightarrow u = 18$.",
+    "The integral becomes $\\displaystyle\\int_{2}^{18} \\frac{1}{4 u}\\,du$."
+   ],
+   "solution": [
+    "With $u = 4 x + 2$ the limits become $u = 2$ and $u = 18$.",
+    "$\\displaystyle\\int_{2}^{18} \\frac{1}{4 u}\\,du = \\left[\\frac{\\ln{\\left(u \\right)}}{4}\\right]_{2}^{18} = \\frac{\\ln{\\left(3 \\right)}}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-462a5c",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{3} \\left(3 x + 3\\right)^{3}\\,dx$.",
+   "checker": "numeric",
+   "answer": "6885/4",
+   "hints": [
+    "Substitute $u = 3 x + 3$, $du = 3\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 3$, $x = 3 \\Rightarrow u = 12$.",
+    "The integral becomes $\\displaystyle\\int_{3}^{12} \\frac{u^{3}}{3}\\,du$."
+   ],
+   "solution": [
+    "With $u = 3 x + 3$ the limits become $u = 3$ and $u = 12$.",
+    "$\\displaystyle\\int_{3}^{12} \\frac{u^{3}}{3}\\,du = \\left[\\frac{u^{4}}{12}\\right]_{3}^{12} = \\frac{6885}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-2b9e31",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{2}} \\sin{\\left(x \\right)} \\cos^{3}{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "9/64",
+   "hints": [
+    "Substitute $u = \\cos{\\left(x \\right)}$, $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$, and change the limits: $x = \\frac{\\pi}{6} \\Rightarrow u = \\frac{\\sqrt{3}}{2}$, $x = \\frac{\\pi}{2} \\Rightarrow u = 0$.",
+    "The integral becomes $\\displaystyle\\int_{\\frac{\\sqrt{3}}{2}}^{0} - u^{3}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\cos{\\left(x \\right)}$ the limits become $u = \\frac{\\sqrt{3}}{2}$ and $u = 0$.",
+    "$\\displaystyle\\int_{\\frac{\\sqrt{3}}{2}}^{0} - u^{3}\\,du = \\left[- \\frac{u^{4}}{4}\\right]_{\\frac{\\sqrt{3}}{2}}^{0} = \\frac{9}{64}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-9fe07e",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{4}} \\tan{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(sqrt(2))",
+   "hints": [
+    "Substitute $u = \\cos{\\left(x \\right)}$, $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 1$, $x = \\frac{\\pi}{4} \\Rightarrow u = \\frac{\\sqrt{2}}{2}$.",
+    "The integral becomes $\\displaystyle\\int_{1}^{\\frac{\\sqrt{2}}{2}} - \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\cos{\\left(x \\right)}$ the limits become $u = 1$ and $u = \\frac{\\sqrt{2}}{2}$.",
+    "$\\displaystyle\\int_{1}^{\\frac{\\sqrt{2}}{2}} - \\frac{1}{u}\\,du = \\left[- \\ln{\\left(u \\right)}\\right]_{1}^{\\frac{\\sqrt{2}}{2}} = \\frac{\\ln{\\left(2 \\right)}}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-4-72b9cb",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{-1}^{0} x e^{- x^{2}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "(1-e)*exp(-1)/2",
+   "hints": [
+    "Substitute $u = - x^{2}$, $du = \\left(- 2 x\\right)\\,dx$, and change the limits: $x = -1 \\Rightarrow u = -1$, $x = 0 \\Rightarrow u = 0$.",
+    "The integral becomes $\\displaystyle\\int_{-1}^{0} - \\frac{e^{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "With $u = - x^{2}$ the limits become $u = -1$ and $u = 0$.",
+    "$\\displaystyle\\int_{-1}^{0} - \\frac{e^{u}}{2}\\,du = \\left[- \\frac{e^{u}}{2}\\right]_{-1}^{0} = \\frac{1 - e}{2 e}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 4,
+   "tags": [
+    "daily"
+   ]
+  }
+ ]
+}

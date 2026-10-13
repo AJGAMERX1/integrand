@@ -1,0 +1,1287 @@
+{
+ "skill": "factoring-and-quadratics",
+ "problems": [
+  {
+   "id": "factoring-and-quadratics-5527a8",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Factor $x^{2} + x - 2$.",
+   "checker": "equiv",
+   "answer": "(x-1)*(x+2)",
+   "hints": [
+    "Look for two numbers that multiply to $-2$ and add to $1$.",
+    "Try $2$ and $-1$."
+   ],
+   "solution": [
+    "We need two numbers with product $-2$ and sum $1$: they are $2$ and $-1$.",
+    "So $x^{2} + x - 2 = (x + 2)(x - 1)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-d4f4bd",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 3,
+   "statement": "Factor $6 x^{2} - 5 x - 6$.",
+   "checker": "equiv",
+   "answer": "(2*x-3)*(3*x+2)",
+   "hints": [
+    "The leading coefficient is $6$, so the factors look like $(\\square x + \\square)(\\square x + \\square)$.",
+    "Find two numbers with product $-36$ and sum $-5$, then split the middle term and factor by grouping."
+   ],
+   "solution": [
+    "Product of leading coefficient and constant: $6 \\cdot -6 = -36$; we need a pair summing to $-5$: $-9$ and $4$.",
+    "Split the middle term: $6 x^{2} + - 9 x + 4 x + -6$, then group.",
+    "Result: $\\left(2 x - 3\\right) \\left(3 x + 2\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-fac838",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Factor completely: $x^{2} - 64$.",
+   "checker": "equiv",
+   "answer": "(x-8)*(x+8)",
+   "hints": [
+    "This is a difference of squares: $x^2 - 8^2$.",
+    "$u^2 - v^2 = (u - v)(u + v)$."
+   ],
+   "solution": [
+    "Identify the pattern (common factor or difference of squares).",
+    "$x^{2} - 64 = \\left(x - 8\\right) \\left(x + 8\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-0f7783",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Solve $x^{2} - 3 x + 2 = 0$. Enter the larger solution.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Factor the left side, then set each factor equal to zero.",
+    "Two numbers with product $2$ and sum $-3$: $-2$ and $-1$."
+   ],
+   "solution": [
+    "$x^{2} - 3 x + 2 = (x - 2)(x - 1)$.",
+    "So $x = 2$ or $x = 1$.",
+    "The larger solution is $2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-ef77c8",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 3,
+   "statement": "Use the quadratic formula to solve $x^{2} - 5 = 0$. Enter the larger solution in exact form.",
+   "checker": "numeric",
+   "answer": "sqrt(5)",
+   "hints": [
+    "$x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$ with $a = 1$.",
+    "The discriminant is $0^2 - 4(-5) = 20$."
+   ],
+   "solution": [
+    "$a = 1$, $b = 0$, $c = -5$: discriminant $= 0 - (-20) = 20$.",
+    "$x = \\dfrac{0 \\pm \\sqrt{20}}{2}$.",
+    "The larger one uses the plus sign: $x = \\sqrt{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-3c6a29",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Complete the square: write $x^{2} - 2 x - 5$ in the form $(x + h)^2 + k$.",
+   "checker": "equiv",
+   "answer": "(x-1)^2-6",
+   "hints": [
+    "Take half the coefficient of $x$ and square it.",
+    "Half of $-2$ is $-1$; $-1^2 = 1$. Add and subtract it."
+   ],
+   "solution": [
+    "$x^{2} - 2 x - 5 = (x^2 + -2x + 1) + (-6)$.",
+    "$= (x - 1)^2 + (-6)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-0531c0",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Find the $x$-coordinate of the vertex of the parabola $y = - 2 x^{2} + 5 x + 5$.",
+   "checker": "numeric",
+   "answer": "5/4",
+   "hints": [
+    "The vertex sits on the axis of symmetry, halfway between the roots.",
+    "For $y = ax^2 + bx + c$ the axis is $x = -\\dfrac{b}{2a}$."
+   ],
+   "solution": [
+    "$x = -\\dfrac{b}{2a} = -\\dfrac{5}{2(-2)}$.",
+    "$x = \\frac{5}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-16f78f",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "How many real solutions does $3 x^{2} + 4 x - 1 = 0$ have?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compute the discriminant $b^2 - 4ac$.",
+    "Positive: two real solutions; zero: one; negative: none."
+   ],
+   "solution": [
+    "$b^2 - 4ac = (4)^2 - 4(3)(-1) = 28$.",
+    "The discriminant is positive, so there are $2$ real solutions."
+   ],
+   "verified": true,
+   "choices": [
+    "0",
+    "1",
+    "2"
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-18f01a",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "A rectangle is 3 cm longer than it is wide and has area 108 square centimeters. Find its width in cm.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "If the width is $w$, the length is $w + 3$ and the area is $w(w + 3)$.",
+    "Solve $w^2 + 3w - 108 = 0$ by factoring; keep the positive root."
+   ],
+   "solution": [
+    "$w(w + 3) = 108$ gives $w^2 + 3w - 108 = 0$.",
+    "Factor: $(w - 9)(w + 12) = 0$.",
+    "Width must be positive: $w = 9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-b7002b",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Which of these is a factor of $x^{2} + x - 12$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "A factor $x - r$ means $r$ is a root; test each candidate's root in the polynomial.",
+    "Or factor directly: product $-12$, sum $1$."
+   ],
+   "solution": [
+    "$x^{2} + x - 12 = (x + 4)(x - 3)$.",
+    "So $x + 4$ is a factor."
+   ],
+   "verified": true,
+   "choices": [
+    "x - 6",
+    "x + 4",
+    "x - 4",
+    "x + 3"
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-e4573d",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Compute the discriminant $b^2 - 4ac$ of $3 x^{2} + x - 6$.",
+   "checker": "numeric",
+   "answer": "73",
+   "hints": [
+    "Identify $a$, $b$, $c$ from $ax^2 + bx + c$, including signs.",
+    "$a = 3$, $b = 1$, $c = -6$."
+   ],
+   "solution": [
+    "$b^2 - 4ac = (1)^2 - 4(3)(-6)$.",
+    "$= 1 - (-72) = 73$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-277e9a",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 3,
+   "statement": "Find the product of the solutions of $x^{2} + 3 x - 10 = 0$.",
+   "checker": "numeric",
+   "answer": "-10",
+   "hints": [
+    "You can solve the equation, or use the shortcut: for $ax^2+bx+c=0$ the roots sum to $-b/a$ and multiply to $c/a$.",
+    "Here $a = 1$."
+   ],
+   "solution": [
+    "Factor: $x^{2} + 3 x - 10 = \\left(x - 2\\right) \\left(x + 5\\right)$, so the roots are $2$ and $-5$.",
+    "Their product is $-10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-2a0786",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Factor $x^{2} - 5 x - 24$.",
+   "checker": "equiv",
+   "answer": "(x-8)*(x+3)",
+   "hints": [
+    "Look for two numbers that multiply to $-24$ and add to $-5$.",
+    "Try $-8$ and $3$."
+   ],
+   "solution": [
+    "We need two numbers with product $-24$ and sum $-5$: they are $-8$ and $3$.",
+    "So $x^{2} - 5 x - 24 = (x - 8)(x + 3)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-1f8858",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 3,
+   "statement": "Factor $4 x^{2} + 8 x + 3$.",
+   "checker": "equiv",
+   "answer": "(2*x+1)*(2*x+3)",
+   "hints": [
+    "The leading coefficient is $4$, so the factors look like $(\\square x + \\square)(\\square x + \\square)$.",
+    "Find two numbers with product $12$ and sum $8$, then split the middle term and factor by grouping."
+   ],
+   "solution": [
+    "Product of leading coefficient and constant: $4 \\cdot 3 = 12$; we need a pair summing to $8$: $2$ and $6$.",
+    "Split the middle term: $4 x^{2} + 2 x + 6 x + 3$, then group.",
+    "Result: $\\left(2 x + 1\\right) \\left(2 x + 3\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-f3deb1",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Factor completely: $x^{2} - 36$.",
+   "checker": "equiv",
+   "answer": "(x-6)*(x+6)",
+   "hints": [
+    "This is a difference of squares: $x^2 - 6^2$.",
+    "$u^2 - v^2 = (u - v)(u + v)$."
+   ],
+   "solution": [
+    "Identify the pattern (common factor or difference of squares).",
+    "$x^{2} - 36 = \\left(x - 6\\right) \\left(x + 6\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-f01780",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Solve $x^{2} + 6 x - 7 = 0$. Enter the larger solution.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Factor the left side, then set each factor equal to zero.",
+    "Two numbers with product $-7$ and sum $6$: $-1$ and $7$."
+   ],
+   "solution": [
+    "$x^{2} + 6 x - 7 = (x - 1)(x + 7)$.",
+    "So $x = 1$ or $x = -7$.",
+    "The larger solution is $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-92c136",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Complete the square: write $x^{2} + 2 x - 6$ in the form $(x + h)^2 + k$.",
+   "checker": "equiv",
+   "answer": "(x+1)^2-7",
+   "hints": [
+    "Take half the coefficient of $x$ and square it.",
+    "Half of $2$ is $1$; $1^2 = 1$. Add and subtract it."
+   ],
+   "solution": [
+    "$x^{2} + 2 x - 6 = (x^2 + 2x + 1) + (-7)$.",
+    "$= (x + 1)^2 + (-7)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-640e0b",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Find the $x$-coordinate of the vertex of the parabola $y = 3 x^{2} + 5 x - 5$.",
+   "checker": "numeric",
+   "answer": "-5/6",
+   "hints": [
+    "The vertex sits on the axis of symmetry, halfway between the roots.",
+    "For $y = ax^2 + bx + c$ the axis is $x = -\\dfrac{b}{2a}$."
+   ],
+   "solution": [
+    "$x = -\\dfrac{b}{2a} = -\\dfrac{5}{2(3)}$.",
+    "$x = - \\frac{5}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-31c33a",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "How many real solutions does $2 x^{2} + 4 x + 2 = 0$ have?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Compute the discriminant $b^2 - 4ac$.",
+    "Positive: two real solutions; zero: one; negative: none."
+   ],
+   "solution": [
+    "$b^2 - 4ac = (4)^2 - 4(2)(2) = 0$.",
+    "The discriminant is zero, so there are $2$ real solutions."
+   ],
+   "verified": true,
+   "choices": [
+    "0",
+    "2",
+    "1"
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-ecd808",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "A rectangle is 1 cm longer than it is wide and has area 12 square centimeters. Find its width in cm.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "If the width is $w$, the length is $w + 1$ and the area is $w(w + 1)$.",
+    "Solve $w^2 + 1w - 12 = 0$ by factoring; keep the positive root."
+   ],
+   "solution": [
+    "$w(w + 1) = 12$ gives $w^2 + 1w - 12 = 0$.",
+    "Factor: $(w - 3)(w + 4) = 0$.",
+    "Width must be positive: $w = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-8a6f9c",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Which of these is a factor of $x^{2} - 2 x - 3$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "A factor $x - r$ means $r$ is a root; test each candidate's root in the polynomial.",
+    "Or factor directly: product $-3$, sum $-2$."
+   ],
+   "solution": [
+    "$x^{2} - 2 x - 3 = (x - 3)(x + 1)$.",
+    "So $x - 3$ is a factor."
+   ],
+   "verified": true,
+   "choices": [
+    "x + 3",
+    "x - 3",
+    "x + 2",
+    "x - 1"
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-b274c8",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Compute the discriminant $b^2 - 4ac$ of $3 x^{2} + x - 4$.",
+   "checker": "numeric",
+   "answer": "49",
+   "hints": [
+    "Identify $a$, $b$, $c$ from $ax^2 + bx + c$, including signs.",
+    "$a = 3$, $b = 1$, $c = -4$."
+   ],
+   "solution": [
+    "$b^2 - 4ac = (1)^2 - 4(3)(-4)$.",
+    "$= 1 - (-48) = 49$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-dfb01e",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 3,
+   "statement": "Find the product of the solutions of $2 x^{2} + 16 x + 24 = 0$.",
+   "checker": "numeric",
+   "answer": "12",
+   "hints": [
+    "You can solve the equation, or use the shortcut: for $ax^2+bx+c=0$ the roots sum to $-b/a$ and multiply to $c/a$.",
+    "Here $a = 2$."
+   ],
+   "solution": [
+    "Factor: $2 x^{2} + 16 x + 24 = 2 \\left(x + 2\\right) \\left(x + 6\\right)$, so the roots are $-2$ and $-6$.",
+    "Their product is $12$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-5ec471",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Factor $x^{2} + 10 x + 16$.",
+   "checker": "equiv",
+   "answer": "(x+2)*(x+8)",
+   "hints": [
+    "Look for two numbers that multiply to $16$ and add to $10$.",
+    "Try $8$ and $2$."
+   ],
+   "solution": [
+    "We need two numbers with product $16$ and sum $10$: they are $8$ and $2$.",
+    "So $x^{2} + 10 x + 16 = (x + 8)(x + 2)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-371d68",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 3,
+   "statement": "Factor $4 x^{2} + 4 x - 15$.",
+   "checker": "equiv",
+   "answer": "(2*x-3)*(2*x+5)",
+   "hints": [
+    "The leading coefficient is $4$, so the factors look like $(\\square x + \\square)(\\square x + \\square)$.",
+    "Find two numbers with product $-60$ and sum $4$, then split the middle term and factor by grouping."
+   ],
+   "solution": [
+    "Product of leading coefficient and constant: $4 \\cdot -15 = -60$; we need a pair summing to $4$: $10$ and $-6$.",
+    "Split the middle term: $4 x^{2} + 10 x + - 6 x + -15$, then group.",
+    "Result: $\\left(2 x - 3\\right) \\left(2 x + 5\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-913b07",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Factor completely: $x^{2} - 4$.",
+   "checker": "equiv",
+   "answer": "(x-2)*(x+2)",
+   "hints": [
+    "This is a difference of squares: $x^2 - 2^2$.",
+    "$u^2 - v^2 = (u - v)(u + v)$."
+   ],
+   "solution": [
+    "Identify the pattern (common factor or difference of squares).",
+    "$x^{2} - 4 = \\left(x - 2\\right) \\left(x + 2\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-965314",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Solve $x^{2} - 16 = 0$. Enter the larger solution.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Factor the left side, then set each factor equal to zero.",
+    "Two numbers with product $-16$ and sum $0$: $-4$ and $4$."
+   ],
+   "solution": [
+    "$x^{2} - 16 = (x - 4)(x + 4)$.",
+    "So $x = 4$ or $x = -4$.",
+    "The larger solution is $4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-651cfb",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 3,
+   "statement": "Use the quadratic formula to solve $x^{2} + 5 x + 3 = 0$. Enter the larger solution in exact form.",
+   "checker": "numeric",
+   "answer": "-5/2+sqrt(13)/2",
+   "hints": [
+    "$x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$ with $a = 1$.",
+    "The discriminant is $5^2 - 4(3) = 13$."
+   ],
+   "solution": [
+    "$a = 1$, $b = 5$, $c = 3$: discriminant $= 25 - (12) = 13$.",
+    "$x = \\dfrac{-5 \\pm \\sqrt{13}}{2}$.",
+    "The larger one uses the plus sign: $x = - \\frac{5}{2} + \\frac{\\sqrt{13}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-364342",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Complete the square: write $x^{2} + 4 x + 6$ in the form $(x + h)^2 + k$.",
+   "checker": "equiv",
+   "answer": "(x+2)^2+2",
+   "hints": [
+    "Take half the coefficient of $x$ and square it.",
+    "Half of $4$ is $2$; $2^2 = 4$. Add and subtract it."
+   ],
+   "solution": [
+    "$x^{2} + 4 x + 6 = (x^2 + 4x + 4) + (2)$.",
+    "$= (x + 2)^2 + (2)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-22cb33",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Find the $x$-coordinate of the vertex of the parabola $y = 2 x^{2} + 3 x - 1$.",
+   "checker": "numeric",
+   "answer": "-3/4",
+   "hints": [
+    "The vertex sits on the axis of symmetry, halfway between the roots.",
+    "For $y = ax^2 + bx + c$ the axis is $x = -\\dfrac{b}{2a}$."
+   ],
+   "solution": [
+    "$x = -\\dfrac{b}{2a} = -\\dfrac{3}{2(2)}$.",
+    "$x = - \\frac{3}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-46f6dc",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "How many real solutions does $x^{2} + 4 x - 6 = 0$ have?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compute the discriminant $b^2 - 4ac$.",
+    "Positive: two real solutions; zero: one; negative: none."
+   ],
+   "solution": [
+    "$b^2 - 4ac = (4)^2 - 4(1)(-6) = 40$.",
+    "The discriminant is positive, so there are $2$ real solutions."
+   ],
+   "verified": true,
+   "choices": [
+    "2",
+    "0",
+    "1"
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-e1bd2f",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "A rectangle is 3 cm longer than it is wide and has area 18 square centimeters. Find its width in cm.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "If the width is $w$, the length is $w + 3$ and the area is $w(w + 3)$.",
+    "Solve $w^2 + 3w - 18 = 0$ by factoring; keep the positive root."
+   ],
+   "solution": [
+    "$w(w + 3) = 18$ gives $w^2 + 3w - 18 = 0$.",
+    "Factor: $(w - 3)(w + 6) = 0$.",
+    "Width must be positive: $w = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-d5a032",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Which of these is a factor of $x^{2} + 10 x + 24$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "A factor $x - r$ means $r$ is a root; test each candidate's root in the polynomial.",
+    "Or factor directly: product $24$, sum $10$."
+   ],
+   "solution": [
+    "$x^{2} + 10 x + 24 = (x + 6)(x + 4)$.",
+    "So $x + 6$ is a factor."
+   ],
+   "verified": true,
+   "choices": [
+    "x - 6",
+    "x + 8",
+    "x + 6",
+    "x - 4"
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-fa5721",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Compute the discriminant $b^2 - 4ac$ of $3 x^{2} + 4 x + 2$.",
+   "checker": "numeric",
+   "answer": "-8",
+   "hints": [
+    "Identify $a$, $b$, $c$ from $ax^2 + bx + c$, including signs.",
+    "$a = 3$, $b = 4$, $c = 2$."
+   ],
+   "solution": [
+    "$b^2 - 4ac = (4)^2 - 4(3)(2)$.",
+    "$= 16 - (24) = -8$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-cff3b4",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 3,
+   "statement": "Find the sum of the solutions of $x^{2} + 3 x - 10 = 0$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "You can solve the equation, or use the shortcut: for $ax^2+bx+c=0$ the roots sum to $-b/a$ and multiply to $c/a$.",
+    "Here $a = 1$."
+   ],
+   "solution": [
+    "Factor: $x^{2} + 3 x - 10 = \\left(x - 2\\right) \\left(x + 5\\right)$, so the roots are $-5$ and $2$.",
+    "Their sum is $-3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-e3611c",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Factor $x^{2} - 2 x - 15$.",
+   "checker": "equiv",
+   "answer": "(x-5)*(x+3)",
+   "hints": [
+    "Look for two numbers that multiply to $-15$ and add to $-2$.",
+    "Try $-5$ and $3$."
+   ],
+   "solution": [
+    "We need two numbers with product $-15$ and sum $-2$: they are $-5$ and $3$.",
+    "So $x^{2} - 2 x - 15 = (x - 5)(x + 3)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-529575",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 3,
+   "statement": "Factor $15 x^{2} + 34 x + 15$.",
+   "checker": "equiv",
+   "answer": "(3*x+5)*(5*x+3)",
+   "hints": [
+    "The leading coefficient is $15$, so the factors look like $(\\square x + \\square)(\\square x + \\square)$.",
+    "Find two numbers with product $225$ and sum $34$, then split the middle term and factor by grouping."
+   ],
+   "solution": [
+    "Product of leading coefficient and constant: $15 \\cdot 15 = 225$; we need a pair summing to $34$: $25$ and $9$.",
+    "Split the middle term: $15 x^{2} + 25 x + 9 x + 15$, then group.",
+    "Result: $\\left(3 x + 5\\right) \\left(5 x + 3\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-f657cf",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Factor completely: $9 x^{2} - 25$.",
+   "checker": "equiv",
+   "answer": "(3*x-5)*(3*x+5)",
+   "hints": [
+    "Both terms are perfect squares: $(3x)^2$ and $5^2$.",
+    "$u^2 - v^2 = (u - v)(u + v)$."
+   ],
+   "solution": [
+    "Identify the pattern (common factor or difference of squares).",
+    "$9 x^{2} - 25 = \\left(3 x - 5\\right) \\left(3 x + 5\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-1a0b1b",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Solve $x^{2} + 2 x - 35 = 0$. Enter the larger solution.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Factor the left side, then set each factor equal to zero.",
+    "Two numbers with product $-35$ and sum $2$: $7$ and $-5$."
+   ],
+   "solution": [
+    "$x^{2} + 2 x - 35 = (x + 7)(x - 5)$.",
+    "So $x = -7$ or $x = 5$.",
+    "The larger solution is $5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-ffdb63",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 3,
+   "statement": "Use the quadratic formula to solve $x^{2} - 7 x - 7 = 0$. Enter the larger solution in exact form.",
+   "checker": "numeric",
+   "answer": "7/2+sqrt(77)/2",
+   "hints": [
+    "$x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$ with $a = 1$.",
+    "The discriminant is $-7^2 - 4(-7) = 77$."
+   ],
+   "solution": [
+    "$a = 1$, $b = -7$, $c = -7$: discriminant $= 49 - (-28) = 77$.",
+    "$x = \\dfrac{7 \\pm \\sqrt{77}}{2}$.",
+    "The larger one uses the plus sign: $x = \\frac{7}{2} + \\frac{\\sqrt{77}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-097f87",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Complete the square: write $x^{2} - 2 x - 7$ in the form $(x + h)^2 + k$.",
+   "checker": "equiv",
+   "answer": "(x-1)^2-8",
+   "hints": [
+    "Take half the coefficient of $x$ and square it.",
+    "Half of $-2$ is $-1$; $-1^2 = 1$. Add and subtract it."
+   ],
+   "solution": [
+    "$x^{2} - 2 x - 7 = (x^2 + -2x + 1) + (-8)$.",
+    "$= (x - 1)^2 + (-8)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-926403",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Find the $x$-coordinate of the vertex of the parabola $y = - 2 x^{2} - 8 x - 1$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "The vertex sits on the axis of symmetry, halfway between the roots.",
+    "For $y = ax^2 + bx + c$ the axis is $x = -\\dfrac{b}{2a}$."
+   ],
+   "solution": [
+    "$x = -\\dfrac{b}{2a} = -\\dfrac{-8}{2(-2)}$.",
+    "$x = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-218f1a",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "How many real solutions does $- x^{2} + 4 x + 1 = 0$ have?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Compute the discriminant $b^2 - 4ac$.",
+    "Positive: two real solutions; zero: one; negative: none."
+   ],
+   "solution": [
+    "$b^2 - 4ac = (4)^2 - 4(-1)(1) = 20$.",
+    "The discriminant is positive, so there are $2$ real solutions."
+   ],
+   "verified": true,
+   "choices": [
+    "1",
+    "2",
+    "0"
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-3b58d2",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "A rectangle is 4 cm longer than it is wide and has area 12 square centimeters. Find its width in cm.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "If the width is $w$, the length is $w + 4$ and the area is $w(w + 4)$.",
+    "Solve $w^2 + 4w - 12 = 0$ by factoring; keep the positive root."
+   ],
+   "solution": [
+    "$w(w + 4) = 12$ gives $w^2 + 4w - 12 = 0$.",
+    "Factor: $(w - 2)(w + 6) = 0$.",
+    "Width must be positive: $w = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-0f8706",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Which of these is a factor of $x^{2} + 2 x - 8$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "A factor $x - r$ means $r$ is a root; test each candidate's root in the polynomial.",
+    "Or factor directly: product $-8$, sum $2$."
+   ],
+   "solution": [
+    "$x^{2} + 2 x - 8 = (x + 4)(x - 2)$.",
+    "So $x + 4$ is a factor."
+   ],
+   "verified": true,
+   "choices": [
+    "x + 2",
+    "x - 8",
+    "x + 4",
+    "x - 4"
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-213496",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Compute the discriminant $b^2 - 4ac$ of $2 x^{2} + 2 x - 4$.",
+   "checker": "numeric",
+   "answer": "36",
+   "hints": [
+    "Identify $a$, $b$, $c$ from $ax^2 + bx + c$, including signs.",
+    "$a = 2$, $b = 2$, $c = -4$."
+   ],
+   "solution": [
+    "$b^2 - 4ac = (2)^2 - 4(2)(-4)$.",
+    "$= 4 - (-32) = 36$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-b9eb31",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 3,
+   "statement": "Find the product of the solutions of $2 x^{2} - 20 x + 50 = 0$.",
+   "checker": "numeric",
+   "answer": "25",
+   "hints": [
+    "You can solve the equation, or use the shortcut: for $ax^2+bx+c=0$ the roots sum to $-b/a$ and multiply to $c/a$.",
+    "Here $a = 2$."
+   ],
+   "solution": [
+    "Factor: $2 x^{2} - 20 x + 50 = 2 \\left(x - 5\\right)^{2}$, so the roots are $5$ and $5$.",
+    "Their product is $25$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-f58487",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Factor $x^{2} - 2 x - 48$.",
+   "checker": "equiv",
+   "answer": "(x-8)*(x+6)",
+   "hints": [
+    "Look for two numbers that multiply to $-48$ and add to $-2$.",
+    "Try $-8$ and $6$."
+   ],
+   "solution": [
+    "We need two numbers with product $-48$ and sum $-2$: they are $-8$ and $6$.",
+    "So $x^{2} - 2 x - 48 = (x - 8)(x + 6)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-0c458b",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Factor completely: $16 x^{2} - 49$.",
+   "checker": "equiv",
+   "answer": "(4*x-7)*(4*x+7)",
+   "hints": [
+    "Both terms are perfect squares: $(4x)^2$ and $7^2$.",
+    "$u^2 - v^2 = (u - v)(u + v)$."
+   ],
+   "solution": [
+    "Identify the pattern (common factor or difference of squares).",
+    "$16 x^{2} - 49 = \\left(4 x - 7\\right) \\left(4 x + 7\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-518fd4",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Complete the square: write $x^{2} + 10 x + 25$ in the form $(x + h)^2 + k$.",
+   "checker": "equiv",
+   "answer": "(x+5)^2",
+   "hints": [
+    "Take half the coefficient of $x$ and square it.",
+    "Half of $10$ is $5$; $5^2 = 25$. Add and subtract it."
+   ],
+   "solution": [
+    "$x^{2} + 10 x + 25 = (x^2 + 10x + 25) + (0)$.",
+    "$= (x + 5)^2 + (0)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-f59d2b",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Find the $x$-coordinate of the vertex of the parabola $y = - 2 x^{2} - 2 x + 4$.",
+   "checker": "numeric",
+   "answer": "-1/2",
+   "hints": [
+    "The vertex sits on the axis of symmetry, halfway between the roots.",
+    "For $y = ax^2 + bx + c$ the axis is $x = -\\dfrac{b}{2a}$."
+   ],
+   "solution": [
+    "$x = -\\dfrac{b}{2a} = -\\dfrac{-2}{2(-2)}$.",
+    "$x = - \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-5cdd40",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "How many real solutions does $- x^{2} + 2 x - 4 = 0$ have?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compute the discriminant $b^2 - 4ac$.",
+    "Positive: two real solutions; zero: one; negative: none."
+   ],
+   "solution": [
+    "$b^2 - 4ac = (2)^2 - 4(-1)(-4) = -12$.",
+    "The discriminant is negative, so there are $0$ real solutions."
+   ],
+   "verified": true,
+   "choices": [
+    "0",
+    "2",
+    "1"
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-567435",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "A rectangle is 4 cm longer than it is wide and has area 45 square centimeters. Find its width in cm.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "If the width is $w$, the length is $w + 4$ and the area is $w(w + 4)$.",
+    "Solve $w^2 + 4w - 45 = 0$ by factoring; keep the positive root."
+   ],
+   "solution": [
+    "$w(w + 4) = 45$ gives $w^2 + 4w - 45 = 0$.",
+    "Factor: $(w - 5)(w + 9) = 0$.",
+    "Width must be positive: $w = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-0292c1",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Which of these is a factor of $x^{2} + 5 x - 14$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "A factor $x - r$ means $r$ is a root; test each candidate's root in the polynomial.",
+    "Or factor directly: product $-14$, sum $5$."
+   ],
+   "solution": [
+    "$x^{2} + 5 x - 14 = (x + 7)(x - 2)$.",
+    "So $x + 7$ is a factor."
+   ],
+   "verified": true,
+   "choices": [
+    "x - 7",
+    "x + 2",
+    "x + 7",
+    "x - 4"
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-f54708",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Compute the discriminant $b^2 - 4ac$ of $2 x^{2} - 2 x + 3$.",
+   "checker": "numeric",
+   "answer": "-20",
+   "hints": [
+    "Identify $a$, $b$, $c$ from $ax^2 + bx + c$, including signs.",
+    "$a = 2$, $b = -2$, $c = 3$."
+   ],
+   "solution": [
+    "$b^2 - 4ac = (-2)^2 - 4(2)(3)$.",
+    "$= 4 - (24) = -20$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-b585b3",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 3,
+   "statement": "Find the product of the solutions of $x^{2} + 9 x + 18 = 0$.",
+   "checker": "numeric",
+   "answer": "18",
+   "hints": [
+    "You can solve the equation, or use the shortcut: for $ax^2+bx+c=0$ the roots sum to $-b/a$ and multiply to $c/a$.",
+    "Here $a = 1$."
+   ],
+   "solution": [
+    "Factor: $x^{2} + 9 x + 18 = \\left(x + 3\\right) \\left(x + 6\\right)$, so the roots are $-6$ and $-3$.",
+    "Their product is $18$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-00a405",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Factor $x^{2} + 2 x - 48$.",
+   "checker": "equiv",
+   "answer": "(x-6)*(x+8)",
+   "hints": [
+    "Look for two numbers that multiply to $-48$ and add to $2$.",
+    "Try $8$ and $-6$."
+   ],
+   "solution": [
+    "We need two numbers with product $-48$ and sum $2$: they are $8$ and $-6$.",
+    "So $x^{2} + 2 x - 48 = (x + 8)(x - 6)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-048ae8",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 3,
+   "statement": "Factor $6 x^{2} + x - 12$.",
+   "checker": "equiv",
+   "answer": "(2*x+3)*(3*x-4)",
+   "hints": [
+    "The leading coefficient is $6$, so the factors look like $(\\square x + \\square)(\\square x + \\square)$.",
+    "Find two numbers with product $-72$ and sum $1$, then split the middle term and factor by grouping."
+   ],
+   "solution": [
+    "Product of leading coefficient and constant: $6 \\cdot -12 = -72$; we need a pair summing to $1$: $-8$ and $9$.",
+    "Split the middle term: $6 x^{2} + - 8 x + 9 x + -12$, then group.",
+    "Result: $\\left(2 x + 3\\right) \\left(3 x - 4\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-c59684",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 1,
+   "statement": "Factor completely: $5 x^{2} - 20 x$.",
+   "checker": "equiv",
+   "answer": "5*x*(x-4)",
+   "hints": [
+    "Every term is divisible by $5$ and by $x$.",
+    "Factor out the greatest common factor, then check by distributing."
+   ],
+   "solution": [
+    "Identify the pattern (common factor or difference of squares).",
+    "$5 x^{2} - 20 x = 5 x \\left(x - 4\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-0663e4",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Solve $x^{2} + x - 42 = 0$. Enter the larger solution.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Factor the left side, then set each factor equal to zero.",
+    "Two numbers with product $-42$ and sum $1$: $-6$ and $7$."
+   ],
+   "solution": [
+    "$x^{2} + x - 42 = (x - 6)(x + 7)$.",
+    "So $x = 6$ or $x = -7$.",
+    "The larger solution is $6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-589a0b",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Complete the square: write $x^{2} + 6 x + 8$ in the form $(x + h)^2 + k$.",
+   "checker": "equiv",
+   "answer": "(x+3)^2-1",
+   "hints": [
+    "Take half the coefficient of $x$ and square it.",
+    "Half of $6$ is $3$; $3^2 = 9$. Add and subtract it."
+   ],
+   "solution": [
+    "$x^{2} + 6 x + 8 = (x^2 + 6x + 9) + (-1)$.",
+    "$= (x + 3)^2 + (-1)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-f27eaf",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "Find the $x$-coordinate of the vertex of the parabola $y = - 2 x^{2} - 4 x - 2$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "The vertex sits on the axis of symmetry, halfway between the roots.",
+    "For $y = ax^2 + bx + c$ the axis is $x = -\\dfrac{b}{2a}$."
+   ],
+   "solution": [
+    "$x = -\\dfrac{b}{2a} = -\\dfrac{-4}{2(-2)}$.",
+    "$x = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "factoring-and-quadratics-7a782e",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "How many real solutions does $2 x^{2} + 5 x = 0$ have?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compute the discriminant $b^2 - 4ac$.",
+    "Positive: two real solutions; zero: one; negative: none."
+   ],
+   "solution": [
+    "$b^2 - 4ac = (5)^2 - 4(2)(0) = 25$.",
+    "The discriminant is positive, so there are $2$ real solutions."
+   ],
+   "verified": true,
+   "choices": [
+    "0",
+    "1",
+    "2"
+   ]
+  },
+  {
+   "id": "factoring-and-quadratics-b69521",
+   "skill": "factoring-and-quadratics",
+   "difficulty": 2,
+   "statement": "A rectangle is 4 cm longer than it is wide and has area 77 square centimeters. Find its width in cm.",
+   "checker": "numeric",
+   "answer": "7",
+   "hints": [
+    "If the width is $w$, the length is $w + 4$ and the area is $w(w + 4)$.",
+    "Solve $w^2 + 4w - 77 = 0$ by factoring; keep the positive root."
+   ],
+   "solution": [
+    "$w(w + 4) = 77$ gives $w^2 + 4w - 77 = 0$.",
+    "Factor: $(w - 7)(w + 11) = 0$.",
+    "Width must be positive: $w = 7$."
+   ],
+   "verified": true
+  }
+ ]
+}

@@ -1,0 +1,981 @@
+{
+ "skill": "ftc",
+ "problems": [
+  {
+   "id": "ftc-9288fe",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Let $g(x) = \\displaystyle\\int_{2}^{x} \\sin{\\left(t^{2} \\right)}\\,dt$. Find $g'(x)$.",
+   "checker": "equiv",
+   "answer": "sin(x^2)",
+   "hints": [
+    "Part 1 of the Fundamental Theorem: if $g(x) = \\int_a^x f(t)\\,dt$ then $g'(x) = f(x)$.",
+    "Just replace $t$ by $x$ in the integrand; the lower limit does not matter."
+   ],
+   "solution": [
+    "By FTC1 the derivative of $\\int_a^x f(t)\\,dt$ is $f(x)$.",
+    "$g'(x) = \\sin{\\left(x^{2} \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2
+   ]
+  },
+  {
+   "id": "ftc-33a2e3",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Let $g(x) = \\displaystyle\\int_{1}^{x} \\frac{e^{t}}{t}\\,dt$. Find $g'(x)$.",
+   "checker": "equiv",
+   "answer": "exp(x)/x",
+   "hints": [
+    "Part 1 of the Fundamental Theorem: if $g(x) = \\int_a^x f(t)\\,dt$ then $g'(x) = f(x)$.",
+    "Just replace $t$ by $x$ in the integrand; the lower limit does not matter."
+   ],
+   "solution": [
+    "By FTC1 the derivative of $\\int_a^x f(t)\\,dt$ is $f(x)$.",
+    "$g'(x) = \\frac{e^{x}}{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2
+   ]
+  },
+  {
+   "id": "ftc-369da4",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Let $g(x) = \\displaystyle\\int_{1}^{x} t^{2} + 2\\,dt$. Find $g'(x)$.",
+   "checker": "equiv",
+   "answer": "x^2+2",
+   "hints": [
+    "Part 1 of the Fundamental Theorem: if $g(x) = \\int_a^x f(t)\\,dt$ then $g'(x) = f(x)$.",
+    "Just replace $t$ by $x$ in the integrand; the lower limit does not matter."
+   ],
+   "solution": [
+    "By FTC1 the derivative of $\\int_a^x f(t)\\,dt$ is $f(x)$.",
+    "$g'(x) = x^{2} + 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2
+   ]
+  },
+  {
+   "id": "ftc-207dc0",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Let $g(x) = \\displaystyle\\int_{0}^{x} \\frac{1}{t^{2} + 1}\\,dt$. Find $g'(x)$.",
+   "checker": "equiv",
+   "answer": "1/(x^2+1)",
+   "hints": [
+    "Part 1 of the Fundamental Theorem: if $g(x) = \\int_a^x f(t)\\,dt$ then $g'(x) = f(x)$.",
+    "Just replace $t$ by $x$ in the integrand; the lower limit does not matter."
+   ],
+   "solution": [
+    "By FTC1 the derivative of $\\int_a^x f(t)\\,dt$ is $f(x)$.",
+    "$g'(x) = \\frac{1}{x^{2} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2
+   ]
+  },
+  {
+   "id": "ftc-bea1a2",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{1}^{x^{3}} \\frac{e^{t}}{t}\\,dt$.",
+   "checker": "equiv",
+   "answer": "3*exp(x^3)/x",
+   "hints": [
+    "The upper limit is a function $u(x)$, so combine FTC1 with the chain rule: $\\frac{d}{dx}\\int_a^{u(x)} f(t)\\,dt = f(u(x))\\,u'(x)$.",
+    "Here $u = x^{3}$ and $u' = 3 x^{2}$."
+   ],
+   "solution": [
+    "Replace $t$ by $u = x^{3}$ in the integrand and multiply by $u' = 3 x^{2}$.",
+    "$= \\frac{3 e^{x^{3}}}{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-0bd019",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{1}^{e^{x}} \\frac{1}{t^{2} + 1}\\,dt$.",
+   "checker": "equiv",
+   "answer": "exp(x)/(exp(2*x)+1)",
+   "hints": [
+    "The upper limit is a function $u(x)$, so combine FTC1 with the chain rule: $\\frac{d}{dx}\\int_a^{u(x)} f(t)\\,dt = f(u(x))\\,u'(x)$.",
+    "Here $u = e^{x}$ and $u' = e^{x}$."
+   ],
+   "solution": [
+    "Replace $t$ by $u = e^{x}$ in the integrand and multiply by $u' = e^{x}$.",
+    "$= \\frac{e^{x}}{e^{2 x} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-bdffed",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{1}^{3 x + 1} \\frac{e^{t}}{t}\\,dt$.",
+   "checker": "equiv",
+   "answer": "3*exp(3*x+1)/(3*x+1)",
+   "hints": [
+    "The upper limit is a function $u(x)$, so combine FTC1 with the chain rule: $\\frac{d}{dx}\\int_a^{u(x)} f(t)\\,dt = f(u(x))\\,u'(x)$.",
+    "Here $u = 3 x + 1$ and $u' = 3$."
+   ],
+   "solution": [
+    "Replace $t$ by $u = 3 x + 1$ in the integrand and multiply by $u' = 3$.",
+    "$= \\frac{3 e^{3 x + 1}}{3 x + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-8dcabd",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{0}^{\\sqrt{x}} e^{- t^{2}}\\,dt$.",
+   "checker": "equiv",
+   "answer": "exp(-x)/(2*sqrt(x))",
+   "hints": [
+    "The upper limit is a function $u(x)$, so combine FTC1 with the chain rule: $\\frac{d}{dx}\\int_a^{u(x)} f(t)\\,dt = f(u(x))\\,u'(x)$.",
+    "Here $u = \\sqrt{x}$ and $u' = \\frac{1}{2 \\sqrt{x}}$."
+   ],
+   "solution": [
+    "Replace $t$ by $u = \\sqrt{x}$ in the integrand and multiply by $u' = \\frac{1}{2 \\sqrt{x}}$.",
+    "$= \\frac{e^{- x}}{2 \\sqrt{x}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-5f93bd",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{1}^{x^{3}} t^{2} + 2\\,dt$.",
+   "checker": "equiv",
+   "answer": "3*x^2*(x^6+2)",
+   "hints": [
+    "The upper limit is a function $u(x)$, so combine FTC1 with the chain rule: $\\frac{d}{dx}\\int_a^{u(x)} f(t)\\,dt = f(u(x))\\,u'(x)$.",
+    "Here $u = x^{3}$ and $u' = 3 x^{2}$."
+   ],
+   "solution": [
+    "Replace $t$ by $u = x^{3}$ in the integrand and multiply by $u' = 3 x^{2}$.",
+    "$= 3 x^{2} \\left(x^{6} + 2\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-912467",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{1}^{3 x + 1} \\sqrt{t^{3} + 1}\\,dt$.",
+   "checker": "equiv",
+   "answer": "3*sqrt((3*x+1)^3+1)",
+   "hints": [
+    "The upper limit is a function $u(x)$, so combine FTC1 with the chain rule: $\\frac{d}{dx}\\int_a^{u(x)} f(t)\\,dt = f(u(x))\\,u'(x)$.",
+    "Here $u = 3 x + 1$ and $u' = 3$."
+   ],
+   "solution": [
+    "Replace $t$ by $u = 3 x + 1$ in the integrand and multiply by $u' = 3$.",
+    "$= 3 \\sqrt{\\left(3 x + 1\\right)^{3} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-283ebb",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{2}^{x^{2}} \\sqrt{t^{3} + 1}\\,dt$.",
+   "checker": "equiv",
+   "answer": "2*x*sqrt(x^6+1)",
+   "hints": [
+    "The upper limit is a function $u(x)$, so combine FTC1 with the chain rule: $\\frac{d}{dx}\\int_a^{u(x)} f(t)\\,dt = f(u(x))\\,u'(x)$.",
+    "Here $u = x^{2}$ and $u' = 2 x$."
+   ],
+   "solution": [
+    "Replace $t$ by $u = x^{2}$ in the integrand and multiply by $u' = 2 x$.",
+    "$= 2 x \\sqrt{x^{6} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-9bad65",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{0}^{x^{2}} \\ln{\\left(t^{2} + 1 \\right)}\\,dt$.",
+   "checker": "equiv",
+   "answer": "2*x*ln(x^4+1)",
+   "hints": [
+    "The upper limit is a function $u(x)$, so combine FTC1 with the chain rule: $\\frac{d}{dx}\\int_a^{u(x)} f(t)\\,dt = f(u(x))\\,u'(x)$.",
+    "Here $u = x^{2}$ and $u' = 2 x$."
+   ],
+   "solution": [
+    "Replace $t$ by $u = x^{2}$ in the integrand and multiply by $u' = 2 x$.",
+    "$= 2 x \\ln{\\left(x^{4} + 1 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-848575",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{2}^{2 x} \\frac{1}{t^{4} + 1}\\,dt$.",
+   "checker": "equiv",
+   "answer": "2/(16*x^4+1)",
+   "hints": [
+    "The upper limit is a function $u(x)$, so combine FTC1 with the chain rule: $\\frac{d}{dx}\\int_a^{u(x)} f(t)\\,dt = f(u(x))\\,u'(x)$.",
+    "Here $u = 2 x$ and $u' = 2$."
+   ],
+   "solution": [
+    "Replace $t$ by $u = 2 x$ in the integrand and multiply by $u' = 2$.",
+    "$= \\frac{2}{16 x^{4} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-ed398c",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{2}^{2 x} \\frac{1}{t^{2} + 1}\\,dt$.",
+   "checker": "equiv",
+   "answer": "2/(4*x^2+1)",
+   "hints": [
+    "The upper limit is a function $u(x)$, so combine FTC1 with the chain rule: $\\frac{d}{dx}\\int_a^{u(x)} f(t)\\,dt = f(u(x))\\,u'(x)$.",
+    "Here $u = 2 x$ and $u' = 2$."
+   ],
+   "solution": [
+    "Replace $t$ by $u = 2 x$ in the integrand and multiply by $u' = 2$.",
+    "$= \\frac{2}{4 x^{2} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-ff65cc",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{0}^{e^{x}} t^{2} + 3\\,dt$.",
+   "checker": "equiv",
+   "answer": "(exp(2*x)+3)*exp(x)",
+   "hints": [
+    "The upper limit is a function $u(x)$, so combine FTC1 with the chain rule: $\\frac{d}{dx}\\int_a^{u(x)} f(t)\\,dt = f(u(x))\\,u'(x)$.",
+    "Here $u = e^{x}$ and $u' = e^{x}$."
+   ],
+   "solution": [
+    "Replace $t$ by $u = e^{x}$ in the integrand and multiply by $u' = e^{x}$.",
+    "$= \\left(e^{2 x} + 3\\right) e^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-366bc7",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{x}^{5} \\sqrt{t^{2} + 1}\\,dt$.",
+   "checker": "equiv",
+   "answer": "-sqrt(x^2+1)",
+   "hints": [
+    "Swap the limits (which changes the sign) so that the variable is the upper limit.",
+    "Then apply FTC1."
+   ],
+   "solution": [
+    "$\\int_x^{5} f(t)\\,dt = -\\int_{5}^{x} f(t)\\,dt$.",
+    "Differentiating gives $-f(x) = - \\sqrt{x^{2} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-112712",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{x}^{10} \\frac{\\cos{\\left(t \\right)}}{t + 3}\\,dt$.",
+   "checker": "equiv",
+   "answer": "-cos(x)/(x+3)",
+   "hints": [
+    "Swap the limits (which changes the sign) so that the variable is the upper limit.",
+    "Then apply FTC1."
+   ],
+   "solution": [
+    "$\\int_x^{10} f(t)\\,dt = -\\int_{10}^{x} f(t)\\,dt$.",
+    "Differentiating gives $-f(x) = - \\frac{\\cos{\\left(x \\right)}}{x + 3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-cd949c",
+   "skill": "ftc",
+   "difficulty": 3,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{x}^{x^{2}} \\ln{\\left(t^{2} + 1 \\right)}\\,dt$.",
+   "checker": "equiv",
+   "answer": "2*x*ln(x^4+1)-ln(x^2+1)",
+   "hints": [
+    "Split at a constant: $\\int_{u}^{v} = \\int_{c}^{v} - \\int_{c}^{u}$.",
+    "Apply FTC1 with the chain rule to each piece: $f(v)\\,v' - f(u)\\,u'$."
+   ],
+   "solution": [
+    "$\\dfrac{d}{dx}\\int_{x}^{x^{2}} f(t)\\,dt = f(x^{2})\\cdot(2 x) - f(x)\\cdot(1)$.",
+    "$= 2 x \\ln{\\left(x^{4} + 1 \\right)} - \\ln{\\left(x^{2} + 1 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-5f2f6f",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{x}^{3} \\frac{e^{t}}{t}\\,dt$.",
+   "checker": "equiv",
+   "answer": "-exp(x)/x",
+   "hints": [
+    "Swap the limits (which changes the sign) so that the variable is the upper limit.",
+    "Then apply FTC1."
+   ],
+   "solution": [
+    "$\\int_x^{3} f(t)\\,dt = -\\int_{3}^{x} f(t)\\,dt$.",
+    "Differentiating gives $-f(x) = - \\frac{e^{x}}{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-3b34df",
+   "skill": "ftc",
+   "difficulty": 3,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{\\sqrt{x}}^{x} \\sin{\\left(t^{2} \\right)}\\,dt$.",
+   "checker": "equiv",
+   "answer": "sin(x^2)-sin(x)/(2*sqrt(x))",
+   "hints": [
+    "Split at a constant: $\\int_{u}^{v} = \\int_{c}^{v} - \\int_{c}^{u}$.",
+    "Apply FTC1 with the chain rule to each piece: $f(v)\\,v' - f(u)\\,u'$."
+   ],
+   "solution": [
+    "$\\dfrac{d}{dx}\\int_{\\sqrt{x}}^{x} f(t)\\,dt = f(x)\\cdot(1) - f(\\sqrt{x})\\cdot(\\frac{1}{2 \\sqrt{x}})$.",
+    "$= \\sin{\\left(x^{2} \\right)} - \\frac{\\sin{\\left(x \\right)}}{2 \\sqrt{x}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-7cae0e",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Find $\\dfrac{d}{dx}\\displaystyle\\int_{x}^{10} \\frac{1}{t^{2} + 1}\\,dt$.",
+   "checker": "equiv",
+   "answer": "-1/(x^2+1)",
+   "hints": [
+    "Swap the limits (which changes the sign) so that the variable is the upper limit.",
+    "Then apply FTC1."
+   ],
+   "solution": [
+    "$\\int_x^{10} f(t)\\,dt = -\\int_{10}^{x} f(t)\\,dt$.",
+    "Differentiating gives $-f(x) = - \\frac{1}{x^{2} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.5
+   ]
+  },
+  {
+   "id": "ftc-0c7e66",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{4}} \\sec^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = \\frac{\\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}}$."
+   ],
+   "solution": [
+    "$F(x) = \\frac{\\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}}$.",
+    "$F(\\frac{\\pi}{4}) - F(0) = 1 - \\left(0\\right) = 1$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-a163df",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{\\ln{\\left(2 \\right)}}^{\\ln{\\left(4 \\right)}} e^{x}\\,dx$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = e^{x}$."
+   ],
+   "solution": [
+    "$F(x) = e^{x}$.",
+    "$F(\\ln{\\left(4 \\right)}) - F(\\ln{\\left(2 \\right)}) = 4 - \\left(2\\right) = 2$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-2d4f85",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{2}} \\left(- \\sin{\\left(x \\right)} + 2 \\cos{\\left(x \\right)}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = 2 \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "$F(x) = 2 \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}$.",
+    "$F(\\frac{\\pi}{2}) - F(0) = 2 - \\left(1\\right) = 1$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-4fa9b9",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{\\pi} \\left(2 \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = \\sin{\\left(x \\right)} - 2 \\cos{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "$F(x) = \\sin{\\left(x \\right)} - 2 \\cos{\\left(x \\right)}$.",
+    "$F(\\pi) - F(0) = 2 - \\left(-2\\right) = 4$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-f90db6",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{0}^{2} \\left(- 3 x^{3} - 2 x - 2\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-20",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = - \\frac{3 x^{4}}{4} - x^{2} - 2 x$."
+   ],
+   "solution": [
+    "$F(x) = - \\frac{3 x^{4}}{4} - x^{2} - 2 x$.",
+    "$F(2) - F(0) = -20 - \\left(0\\right) = -20$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-918ccf",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{-1}^{1} \\left(- 3 x^{2} + 7 x - 1\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = - x^{3} + \\frac{7 x^{2}}{2} - x$."
+   ],
+   "solution": [
+    "$F(x) = - x^{3} + \\frac{7 x^{2}}{2} - x$.",
+    "$F(1) - F(-1) = \\frac{3}{2} - \\left(\\frac{11}{2}\\right) = -4$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-1fab8a",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{1}^{3} \\left(- 3 x^{3} + 4 x^{2} - 2\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-88/3",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = - \\frac{3 x^{4}}{4} + \\frac{4 x^{3}}{3} - 2 x$."
+   ],
+   "solution": [
+    "$F(x) = - \\frac{3 x^{4}}{4} + \\frac{4 x^{3}}{3} - 2 x$.",
+    "$F(3) - F(1) = - \\frac{123}{4} - \\left(- \\frac{17}{12}\\right) = - \\frac{88}{3}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-1bb509",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{0}^{2} \\left(- x^{2} - 3 x + 1\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-20/3",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = - \\frac{x^{3}}{3} - \\frac{3 x^{2}}{2} + x$."
+   ],
+   "solution": [
+    "$F(x) = - \\frac{x^{3}}{3} - \\frac{3 x^{2}}{2} + x$.",
+    "$F(2) - F(0) = - \\frac{20}{3} - \\left(0\\right) = - \\frac{20}{3}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-357397",
+   "skill": "ftc",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{1}^{2} \\frac{1}{x}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(2)",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = \\ln{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "$F(x) = \\ln{\\left(x \\right)}$.",
+    "$F(2) - F(1) = \\ln{\\left(2 \\right)} - \\left(0\\right) = \\ln{\\left(2 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-c47311",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{0}^{1} \\left(- 4 x^{2} + 4 x - 2\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-4/3",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = - \\frac{4 x^{3}}{3} + 2 x^{2} - 2 x$."
+   ],
+   "solution": [
+    "$F(x) = - \\frac{4 x^{3}}{3} + 2 x^{2} - 2 x$.",
+    "$F(1) - F(0) = - \\frac{4}{3} - \\left(0\\right) = - \\frac{4}{3}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-684023",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{1}^{4} \\left(2 + \\frac{2}{x^{3}}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "111/16",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = 2 x - \\frac{1}{x^{2}}$."
+   ],
+   "solution": [
+    "$F(x) = 2 x - \\frac{1}{x^{2}}$.",
+    "$F(4) - F(1) = \\frac{127}{16} - \\left(1\\right) = \\frac{111}{16}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-7a6c57",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{\\pi} 3 \\cos{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = 3 \\sin{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "$F(x) = 3 \\sin{\\left(x \\right)}$.",
+    "$F(\\pi) - F(0) = 0 - \\left(0\\right) = 0$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-388f06",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{1}^{4} \\left(1 + \\frac{1}{x^{2}}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "15/4",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = x - \\frac{1}{x}$."
+   ],
+   "solution": [
+    "$F(x) = x - \\frac{1}{x}$.",
+    "$F(4) - F(1) = \\frac{15}{4} - \\left(0\\right) = \\frac{15}{4}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-b7de0f",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{1}^{3} \\left(1 + \\frac{1}{x^{2}}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "8/3",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = x - \\frac{1}{x}$."
+   ],
+   "solution": [
+    "$F(x) = x - \\frac{1}{x}$.",
+    "$F(3) - F(1) = \\frac{8}{3} - \\left(0\\right) = \\frac{8}{3}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-28a4ea",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{1}^{2} \\left(2 + \\frac{4}{x^{2}}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = 2 x - \\frac{4}{x}$."
+   ],
+   "solution": [
+    "$F(x) = 2 x - \\frac{4}{x}$.",
+    "$F(2) - F(1) = 2 - \\left(-2\\right) = 4$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-50d139",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{1} \\left(2 x + e^{x}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "e",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = x^{2} + e^{x}$."
+   ],
+   "solution": [
+    "$F(x) = x^{2} + e^{x}$.",
+    "$F(1) - F(0) = 1 + e - \\left(1\\right) = e$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-f9768d",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{4} 3 \\sqrt{x}\\,dx$.",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = 2 x^{\\frac{3}{2}}$."
+   ],
+   "solution": [
+    "$F(x) = 2 x^{\\frac{3}{2}}$.",
+    "$F(4) - F(0) = 16 - \\left(0\\right) = 16$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-b5d421",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{4}^{9} \\left(\\sqrt{x} + 2\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "68/3",
+   "hints": [
+    "Part 2 of the Fundamental Theorem: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ for any antiderivative $F$.",
+    "An antiderivative is $F(x) = \\frac{2 x^{\\frac{3}{2}}}{3} + 2 x$."
+   ],
+   "solution": [
+    "$F(x) = \\frac{2 x^{\\frac{3}{2}}}{3} + 2 x$.",
+    "$F(9) - F(4) = 36 - \\left(\\frac{40}{3}\\right) = \\frac{68}{3}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "ftc-f7c824",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Let $g(x) = \\displaystyle\\int_{0}^{x} \\left(t^{2} - 2 t\\right)dt$. Find $g(2)$.",
+   "checker": "numeric",
+   "answer": "-4/3",
+   "hints": [
+    "$g(c)$ is just the definite integral from $0$ to $c$.",
+    "Evaluate it with an antiderivative (FTC2)."
+   ],
+   "solution": [
+    "$g(2) = \\int_0^{2} (t^{2} - 2 t)\\,dt = \\left[\\frac{t^{3}}{3} - t^{2}\\right]_0^{2}$.",
+    "$= - \\frac{4}{3}$."
+   ],
+   "verified": true,
+   "variable": "t"
+  },
+  {
+   "id": "ftc-bcb56d",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Let $g(x) = \\displaystyle\\int_{0}^{x} \\left(3 - t\\right)dt$. Find $g(2)$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "$g(c)$ is just the definite integral from $0$ to $c$.",
+    "Evaluate it with an antiderivative (FTC2)."
+   ],
+   "solution": [
+    "$g(2) = \\int_0^{2} (3 - t)\\,dt = \\left[- \\frac{t^{2}}{2} + 3 t\\right]_0^{2}$.",
+    "$= 4$."
+   ],
+   "verified": true,
+   "variable": "t"
+  },
+  {
+   "id": "ftc-09f2d0",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Let $g(x) = \\displaystyle\\int_{0}^{x} \\left(t^{2}\\right)dt$. Find $g'(2)$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "By FTC1, $g'(x)$ equals the integrand with $t$ replaced by $x$; no integration needed.",
+    "$g'(x) = x^{2}$."
+   ],
+   "solution": [
+    "$g'(x) = x^{2}$ by FTC1.",
+    "$g'(2) = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "ftc-8bf7c1",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Let $g(x) = \\displaystyle\\int_{0}^{x} \\left(3 - t\\right)dt$. Find $g'(1)$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "By FTC1, $g'(x)$ equals the integrand with $t$ replaced by $x$; no integration needed.",
+    "$g'(x) = 3 - x$."
+   ],
+   "solution": [
+    "$g'(x) = 3 - x$ by FTC1.",
+    "$g'(1) = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "ftc-e81c78",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Let $g(x) = \\displaystyle\\int_{0}^{x} \\left(t^{2} - 2 t\\right)dt$. Find $g'(3)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "By FTC1, $g'(x)$ equals the integrand with $t$ replaced by $x$; no integration needed.",
+    "$g'(x) = x^{2} - 2 x$."
+   ],
+   "solution": [
+    "$g'(x) = x^{2} - 2 x$ by FTC1.",
+    "$g'(3) = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "ftc-93f2c9",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Let $g(x) = \\displaystyle\\int_{0}^{x} \\left(t^{2} - 9\\right)dt$. On which open interval between the two zeros of $g'$ is $g$ decreasing? Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-3,3)",
+   "hints": [
+    "$g'(x) = f(x)$ by FTC1; $g$ decreases where $g' < 0$.",
+    "Solve $x^2 - 9 < 0$."
+   ],
+   "solution": [
+    "$g'(x) = x^2 - 9 = (x - 3)(x + 3)$.",
+    "This is negative exactly for $-3 < x < 3$, so $g$ is decreasing on $(-3, 3)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "ftc-a232bc",
+   "skill": "ftc",
+   "difficulty": 2,
+   "statement": "Let $g(x) = \\displaystyle\\int_{0}^{x} \\left(t^{2} - 4\\right)dt$. On which open interval between the two zeros of $g'$ is $g$ decreasing? Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-2,2)",
+   "hints": [
+    "$g'(x) = f(x)$ by FTC1; $g$ decreases where $g' < 0$.",
+    "Solve $x^2 - 4 < 0$."
+   ],
+   "solution": [
+    "$g'(x) = x^2 - 4 = (x - 2)(x + 2)$.",
+    "This is negative exactly for $-2 < x < 2$, so $g$ is decreasing on $(-2, 2)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "ftc-b0dea2",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Part 1 of the Fundamental Theorem of Calculus says that if $f$ is continuous on $[a, b]$ and $g(x) = \\displaystyle\\int_a^x f(t)\\,dt$, then",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "The theorem links differentiation and integration as inverse processes.",
+    "The derivative of the accumulated area is the height of the curve."
+   ],
+   "solution": [
+    "FTC1: $\\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)$.",
+    "Accumulating $f$ and then differentiating returns $f$ itself."
+   ],
+   "verified": true,
+   "choices": [
+    "$g'(x) = f(x) - f(a)$",
+    "$g'(x) = f(x)$",
+    "$g(x) = f(x) - f(a)$",
+    "$g(x) = f'(x)$"
+   ]
+  },
+  {
+   "id": "ftc-c4c876",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "Part 2 of the Fundamental Theorem says $\\displaystyle\\int_a^b f(x)\\,dx = F(b) - F(a)$ provided that",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Different antiderivatives differ by a constant.",
+    "That constant cancels in $F(b) - F(a)$, so any antiderivative works."
+   ],
+   "solution": [
+    "If $F' = f$ then $\\int_a^b f = F(b) - F(a)$.",
+    "Adding a constant to $F$ changes both $F(b)$ and $F(a)$ equally, so the difference is unaffected."
+   ],
+   "verified": true,
+   "choices": [
+    "$F$ is the unique antiderivative with $F(0) = 0$",
+    "$F$ is the derivative of $f$",
+    "$F$ is any antiderivative of $f$ (and $f$ is continuous)",
+    "$F(a) = 0$"
+   ]
+  },
+  {
+   "id": "ftc-230dff",
+   "skill": "ftc",
+   "difficulty": 1,
+   "statement": "What is wrong with the computation $\\displaystyle\\int_{-1}^{2} \\frac{1}{x^2}\\,dx = \\left[-\\frac{1}{x}\\right]_{-1}^{2} = -\\frac{3}{2}$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "A positive function cannot have a negative integral.",
+    "Check the hypotheses of the theorem."
+   ],
+   "solution": [
+    "$1/x^2 > 0$ everywhere, so the integral cannot be negative; the FTC requires continuity on the whole interval.",
+    "Since $1/x^2$ is unbounded near $0$, the integral is improper (and in fact divergent)."
+   ],
+   "verified": true,
+   "choices": [
+    "the limits were substituted in the wrong order",
+    "the integrand is not continuous on $[-1, 2]$ (it blows up at $0$), so the FTC does not apply",
+    "nothing; the answer is correct",
+    "the antiderivative is wrong"
+   ]
+  }
+ ]
+}

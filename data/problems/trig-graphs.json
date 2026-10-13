@@ -1,0 +1,1177 @@
+{
+ "skill": "trig-graphs",
+ "problems": [
+  {
+   "id": "trig-graphs-439451",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "Find the amplitude of $y = 3 - 3 \\sin{\\left(\\pi x + \\frac{\\pi}{6} \\right)}$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Amplitude is half the distance between the maximum and minimum values.",
+    "For $y = A\\sin(Bx + C) + D$ it is $|A|$."
+   ],
+   "solution": [
+    "The coefficient in front of the trig function is $-3$.",
+    "Amplitude $= |-3| = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-f2d0ab",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Find the period of $y = 3 \\cos{\\left(\\frac{x}{2} \\right)} + 3$.",
+   "checker": "numeric",
+   "answer": "4*pi",
+   "hints": [
+    "The basic sine and cosine have period $2\\pi$.",
+    "For $y = A\\sin(Bx + C) + D$ the period is $2\\pi/|B|$."
+   ],
+   "solution": [
+    "$B = \\frac{1}{2}$.",
+    "Period $= \\dfrac{2\\pi}{\\frac{1}{2}} = 4 \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-854547",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "What is the period of $y = \\tan{\\left(4 x \\right)}$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "The basic tangent repeats every $\\pi$, not $2\\pi$.",
+    "For $y = \\tan(Bx)$ the period is $\\pi/|B|$."
+   ],
+   "solution": [
+    "$B = 4$, so the period is $\\pi/4$.",
+    "$= \\frac{\\pi}{4}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\frac{\\pi}{2}",
+    "\\frac{\\pi}{4}",
+    "\\pi",
+    "\\frac{\\pi}{8}"
+   ]
+  },
+  {
+   "id": "trig-graphs-bcf7f7",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "Consider $y = 4 \\sin{\\left(3 x + 1 \\right)} + 1$. What is the midline $y = ?$ (enter the constant)?",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "The vertical shift $D$ is the midline; the graph swings $|A|$ above and below it.",
+    "Here $D = 1$ and $|A| = 4$."
+   ],
+   "solution": [
+    "Midline $y = 1$, amplitude $4$.",
+    "So the midline is $y = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-59b94f",
+   "skill": "trig-graphs",
+   "difficulty": 3,
+   "statement": "By how many units is the graph of $y = 3 \\cos{\\left(3 x - 6 \\right)}$ shifted horizontally compared with $y = \\cos(3x)$? Enter a positive number for a shift to the right, negative for a shift to the left.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Factor the inside so it reads $B(x - h)$; the shift is $h$.",
+    "If the inside is $Bx + C$, the shift is $-C/B$."
+   ],
+   "solution": [
+    "Inside: $3 x - 6$ $= 3\\left(x - 2\\right)$.",
+    "So the shift is $h = 2$ (right)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-cbb3ab",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Which function has amplitude $5$, period $\\pi$, and midline $y = 0$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Amplitude is the coefficient in front; period is $2\\pi/B$.",
+    "Solve $2\\pi/B = \\pi$ for $B$: $B = 2$."
+   ],
+   "solution": [
+    "$|A| = 5$ and $B = 2\\pi/\\pi = 2$.",
+    "So $y = 5 \\cos{\\left(2 x \\right)}$ (no vertical shift keeps the midline at $0$)."
+   ],
+   "verified": true,
+   "choices": [
+    "y = \\cos{\\left(2 x \\right)}",
+    "y = 5 \\cos{\\left(\\frac{x}{2} \\right)}",
+    "y = 2 \\cos{\\left(5 x \\right)}",
+    "y = 5 \\cos{\\left(2 x \\right)}"
+   ]
+  },
+  {
+   "id": "trig-graphs-dd9cea",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "If $y = \\sin{\\left(x \\right)} + 1$, find $y$ when $x = \\frac{\\pi}{3}$. Give an exact value.",
+   "checker": "numeric",
+   "answer": "sqrt(3)/2+1",
+   "hints": [
+    "Substitute $x = \\frac{\\pi}{3}$ into the formula.",
+    "First compute $\\sin\\left(\\frac{\\pi}{3}\\right)$ from the unit circle."
+   ],
+   "solution": [
+    "$\\sin\\left(\\frac{\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}$.",
+    "$y = 1\\cdot\\frac{\\sqrt{3}}{2} + (1) = \\frac{\\sqrt{3}}{2} + 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-d78ab5",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Compared with $y = \\sin x$, how is the graph of $y = - \\cos{\\left(x \\right)} - 3$ shifted?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "$x - h$ inside shifts right by $h$; a constant added outside shifts up.",
+    "Horizontal shifts feel backwards: $x - \\pi/4$ moves the graph to the right."
+   ],
+   "solution": [
+    "Inside: $x - \\frac{\\pi}{2}$ means right by $\\frac{\\pi}{2}$.",
+    "Outside: $+(-3)$ means down by $3$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{right }\\frac{\\pi}{2}\\text{, down 3}",
+    "\\text{left }\\frac{\\pi}{2}\\text{, down 3}",
+    "\\text{left }\\frac{\\pi}{2}\\text{, up 3}",
+    "\\text{right }\\frac{\\pi}{2}\\text{, up 3}"
+   ]
+  },
+  {
+   "id": "trig-graphs-ba293b",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "How many complete cycles does $y = \\cos{\\left(5 x \\right)}$ make on the interval $[0, 2\\pi]$?",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Find the period first.",
+    "Number of cycles on $[0, 2\\pi]$ is $2\\pi$ divided by the period, which equals $|B|$."
+   ],
+   "solution": [
+    "Period $= 2\\pi/5 = \\frac{2 \\pi}{5}$.",
+    "Cycles in $[0, 2\\pi]$: $2\\pi \\div \\frac{2 \\pi}{5} = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-355442",
+   "skill": "trig-graphs",
+   "difficulty": 3,
+   "statement": "Find the smallest positive $x$ at which $y = 2 \\sin{\\left(3 x \\right)}$ crosses the $x$-axis.",
+   "checker": "numeric",
+   "answer": "pi/3",
+   "hints": [
+    "$\\sin$ is zero first at $\\pi$ (for positive input).",
+    "Set $3x$ equal to that and solve."
+   ],
+   "solution": [
+    "$3x = \\pi$.",
+    "$x = \\frac{\\pi}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-7c137e",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Find the smallest positive $x$ at which $y = \\sin{\\left(2 x \\right)}$ reaches its maximum value.",
+   "checker": "numeric",
+   "answer": "pi/4",
+   "hints": [
+    "$\\sin$ equals $1$ first at $\\frac{\\pi}{2}$ for positive input.",
+    "Set $2x$ equal to that and solve."
+   ],
+   "solution": [
+    "$2x = \\frac{\\pi}{2}$.",
+    "$x = \\frac{\\pi}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-fc3ce7",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "Find the amplitude of $y = \\sin{\\left(\\pi x \\right)}$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Amplitude is half the distance between the maximum and minimum values.",
+    "For $y = A\\sin(Bx + C) + D$ it is $|A|$."
+   ],
+   "solution": [
+    "The coefficient in front of the trig function is $1$.",
+    "Amplitude $= |1| = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-cc8590",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Find the period of $y = - 2 \\cos{\\left(\\pi x + \\frac{\\pi}{6} \\right)} - 2$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "The basic sine and cosine have period $2\\pi$.",
+    "For $y = A\\sin(Bx + C) + D$ the period is $2\\pi/|B|$."
+   ],
+   "solution": [
+    "$B = \\pi$.",
+    "Period $= \\dfrac{2\\pi}{\\pi} = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-265f26",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "What is the period of $y = \\tan{\\left(\\pi x \\right)}$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "The basic tangent repeats every $\\pi$, not $2\\pi$.",
+    "For $y = \\tan(Bx)$ the period is $\\pi/|B|$."
+   ],
+   "solution": [
+    "$B = \\pi$, so the period is $\\pi/\\pi$.",
+    "$= 1$."
+   ],
+   "verified": true,
+   "choices": [
+    "4",
+    "\\frac{1}{2}",
+    "1",
+    "2"
+   ]
+  },
+  {
+   "id": "trig-graphs-054c58",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "Consider $y = 2 \\cos{\\left(2 x \\right)}$. What is the midline $y = ?$ (enter the constant)?",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "The vertical shift $D$ is the midline; the graph swings $|A|$ above and below it.",
+    "Here $D = 0$ and $|A| = 2$."
+   ],
+   "solution": [
+    "Midline $y = 0$, amplitude $2$.",
+    "So the midline is $y = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-e58648",
+   "skill": "trig-graphs",
+   "difficulty": 3,
+   "statement": "By how many units is the graph of $y = 3 \\cos{\\left(x - 2 \\right)}$ shifted horizontally compared with $y = \\cos(x)$? Enter a positive number for a shift to the right, negative for a shift to the left.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Factor the inside so it reads $B(x - h)$; the shift is $h$.",
+    "If the inside is $Bx + C$, the shift is $-C/B$."
+   ],
+   "solution": [
+    "Inside: $x - 2$ $= \\left(x - 2\\right)$.",
+    "So the shift is $h = 2$ (right)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-7f7dc8",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Which function has amplitude $2$, period $\\frac{\\pi}{3}$, and midline $y = 0$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Amplitude is the coefficient in front; period is $2\\pi/B$.",
+    "Solve $2\\pi/B = \\frac{\\pi}{3}$ for $B$: $B = 6$."
+   ],
+   "solution": [
+    "$|A| = 2$ and $B = 2\\pi/\\frac{\\pi}{3} = 6$.",
+    "So $y = 2 \\cos{\\left(6 x \\right)}$ (no vertical shift keeps the midline at $0$)."
+   ],
+   "verified": true,
+   "choices": [
+    "y = 6 \\cos{\\left(2 x \\right)}",
+    "y = 2 \\cos{\\left(6 x \\right)}",
+    "y = \\cos{\\left(6 x \\right)}",
+    "y = 2 \\cos{\\left(\\frac{x}{6} \\right)}"
+   ]
+  },
+  {
+   "id": "trig-graphs-ded840",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "If $y = 4 \\cos{\\left(\\pi x \\right)}$, find $y$ when $x = 0$. Give an exact value.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Substitute $x = 0$ into the formula.",
+    "First compute $\\cos\\left(0\\right)$ from the unit circle."
+   ],
+   "solution": [
+    "$\\cos\\left(0\\right) = 1$.",
+    "$y = 4\\cdot1 + (0) = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-2fb568",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Compared with $y = \\sin x$, how is the graph of $y = - \\cos{\\left(x + \\frac{\\pi}{4} \\right)} - 3$ shifted?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "$x - h$ inside shifts right by $h$; a constant added outside shifts up.",
+    "Horizontal shifts feel backwards: $x - \\pi/4$ moves the graph to the right."
+   ],
+   "solution": [
+    "Inside: $x - \\frac{\\pi}{4}$ means right by $\\frac{\\pi}{4}$.",
+    "Outside: $+(-3)$ means down by $3$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{right }\\frac{\\pi}{4}\\text{, down 3}",
+    "\\text{left }\\frac{\\pi}{4}\\text{, down 3}",
+    "\\text{right }\\frac{\\pi}{4}\\text{, up 3}",
+    "\\text{left }\\frac{\\pi}{4}\\text{, up 3}"
+   ]
+  },
+  {
+   "id": "trig-graphs-106802",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "How many complete cycles does $y = \\cos{\\left(\\frac{x}{2} \\right)}$ make on the interval $[0, 2\\pi]$?",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "Find the period first.",
+    "Number of cycles on $[0, 2\\pi]$ is $2\\pi$ divided by the period, which equals $|B|$."
+   ],
+   "solution": [
+    "Period $= 2\\pi/\\frac{1}{2} = 4 \\pi$.",
+    "Cycles in $[0, 2\\pi]$: $2\\pi \\div 4 \\pi = \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-da491d",
+   "skill": "trig-graphs",
+   "difficulty": 3,
+   "statement": "Find the smallest positive $x$ at which $y = \\cos{\\left(3 x \\right)}$ crosses the $x$-axis.",
+   "checker": "numeric",
+   "answer": "pi/6",
+   "hints": [
+    "$\\cos$ is zero first at $\\frac{\\pi}{2}$ (for positive input).",
+    "Set $3x$ equal to that and solve."
+   ],
+   "solution": [
+    "$3x = \\frac{\\pi}{2}$.",
+    "$x = \\frac{\\pi}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-3b92ef",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Find the smallest positive $x$ at which $y = \\cos{\\left(x \\right)}$ reaches its minimum value.",
+   "checker": "numeric",
+   "answer": "pi",
+   "hints": [
+    "$\\cos$ equals $-1$ first at $\\pi$ for positive input.",
+    "Set $1x$ equal to that and solve."
+   ],
+   "solution": [
+    "$1x = \\pi$.",
+    "$x = \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-c89c75",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "Find the amplitude of $y = \\frac{\\cos{\\left(\\frac{x}{3} + \\frac{\\pi}{4} \\right)}}{2}$.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "Amplitude is half the distance between the maximum and minimum values.",
+    "For $y = A\\sin(Bx + C) + D$ it is $|A|$."
+   ],
+   "solution": [
+    "The coefficient in front of the trig function is $\\frac{1}{2}$.",
+    "Amplitude $= |\\frac{1}{2}| = \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-871564",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Find the period of $y = 2 \\cos{\\left(4 x + \\frac{\\pi}{6} \\right)} + 5$.",
+   "checker": "numeric",
+   "answer": "pi/2",
+   "hints": [
+    "The basic sine and cosine have period $2\\pi$.",
+    "For $y = A\\sin(Bx + C) + D$ the period is $2\\pi/|B|$."
+   ],
+   "solution": [
+    "$B = 4$.",
+    "Period $= \\dfrac{2\\pi}{4} = \\frac{\\pi}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-41b44c",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Consider $y = 5 \\sin{\\left(\\frac{x}{3} + \\frac{\\pi}{6} \\right)}$. What is the minimum value of $y$?",
+   "checker": "numeric",
+   "answer": "-5",
+   "hints": [
+    "The vertical shift $D$ is the midline; the graph swings $|A|$ above and below it.",
+    "Here $D = 0$ and $|A| = 5$."
+   ],
+   "solution": [
+    "Midline $y = 0$, amplitude $5$.",
+    "Minimum $= 0 - 5 = -5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-0eba25",
+   "skill": "trig-graphs",
+   "difficulty": 3,
+   "statement": "By how many units is the graph of $y = - \\cos{\\left(3 x \\right)}$ shifted horizontally compared with $y = \\cos(3x)$? Enter a positive number for a shift to the right, negative for a shift to the left.",
+   "checker": "numeric",
+   "answer": "pi/3",
+   "hints": [
+    "Factor the inside so it reads $B(x - h)$; the shift is $h$.",
+    "If the inside is $Bx + C$, the shift is $-C/B$."
+   ],
+   "solution": [
+    "Inside: $3 x - \\pi$ $= 3\\left(x - \\frac{\\pi}{3}\\right)$.",
+    "So the shift is $h = \\frac{\\pi}{3}$ (right)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-666ada",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Which function has amplitude $5$, period $2 \\pi$, and midline $y = 0$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Amplitude is the coefficient in front; period is $2\\pi/B$.",
+    "Solve $2\\pi/B = 2 \\pi$ for $B$: $B = 1$."
+   ],
+   "solution": [
+    "$|A| = 5$ and $B = 2\\pi/2 \\pi = 1$.",
+    "So $y = 5 \\cos{\\left(x \\right)}$ (no vertical shift keeps the midline at $0$)."
+   ],
+   "verified": true,
+   "choices": [
+    "y = 5 \\cos{\\left(x \\right)}",
+    "y = 5 \\cos{\\left(3 x \\right)}",
+    "y = \\cos{\\left(x \\right)}",
+    "y = \\cos{\\left(5 x \\right)}"
+   ]
+  },
+  {
+   "id": "trig-graphs-90fcf2",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "If $y = 4 \\sin{\\left(2 x \\right)}$, find $y$ when $x = \\frac{\\pi}{3}$. Give an exact value.",
+   "checker": "numeric",
+   "answer": "2*sqrt(3)",
+   "hints": [
+    "Substitute $x = \\frac{\\pi}{3}$ into the formula.",
+    "First compute $\\sin\\left(\\frac{2 \\pi}{3}\\right)$ from the unit circle."
+   ],
+   "solution": [
+    "$\\sin\\left(\\frac{2 \\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}$.",
+    "$y = 4\\cdot\\frac{\\sqrt{3}}{2} + (0) = 2 \\sqrt{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-183efe",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Compared with $y = \\cos x$, how is the graph of $y = \\sin{\\left(x + \\frac{\\pi}{3} \\right)} + 2$ shifted?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "$x - h$ inside shifts right by $h$; a constant added outside shifts up.",
+    "Horizontal shifts feel backwards: $x - \\pi/4$ moves the graph to the right."
+   ],
+   "solution": [
+    "Inside: $x - \\frac{\\pi}{6}$ means right by $\\frac{\\pi}{6}$.",
+    "Outside: $+(2)$ means up by $2$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{left }\\frac{\\pi}{6}\\text{, up 2}",
+    "\\text{right }\\frac{\\pi}{6}\\text{, up 2}",
+    "\\text{left }\\frac{\\pi}{6}\\text{, down 2}",
+    "\\text{right }\\frac{\\pi}{6}\\text{, down 2}"
+   ]
+  },
+  {
+   "id": "trig-graphs-a4d2f2",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "How many complete cycles does $y = \\sin{\\left(5 x \\right)}$ make on the interval $[0, 2\\pi]$?",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Find the period first.",
+    "Number of cycles on $[0, 2\\pi]$ is $2\\pi$ divided by the period, which equals $|B|$."
+   ],
+   "solution": [
+    "Period $= 2\\pi/5 = \\frac{2 \\pi}{5}$.",
+    "Cycles in $[0, 2\\pi]$: $2\\pi \\div \\frac{2 \\pi}{5} = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-74998e",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Find the smallest positive $x$ at which $y = \\cos{\\left(2 x \\right)}$ reaches its maximum value.",
+   "checker": "numeric",
+   "answer": "pi",
+   "hints": [
+    "$\\cos$ equals $1$ first at $2 \\pi$ for positive input.",
+    "Set $2x$ equal to that and solve."
+   ],
+   "solution": [
+    "$2x = 2 \\pi$.",
+    "$x = \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-c8079f",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "Find the amplitude of $y = 2 \\sin{\\left(4 x \\right)}$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Amplitude is half the distance between the maximum and minimum values.",
+    "For $y = A\\sin(Bx + C) + D$ it is $|A|$."
+   ],
+   "solution": [
+    "The coefficient in front of the trig function is $2$.",
+    "Amplitude $= |2| = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-0ce2f3",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "Find the period of $y = 5 \\sin{\\left(x + \\frac{\\pi}{6} \\right)} - 2$.",
+   "checker": "numeric",
+   "answer": "2*pi",
+   "hints": [
+    "The basic sine and cosine have period $2\\pi$.",
+    "For $y = A\\sin(Bx + C) + D$ the period is $2\\pi/|B|$."
+   ],
+   "solution": [
+    "$B = 1$.",
+    "Period $= \\dfrac{2\\pi}{1} = 2 \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-f7bd57",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "What is the period of $y = \\tan{\\left(2 x \\right)}$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "The basic tangent repeats every $\\pi$, not $2\\pi$.",
+    "For $y = \\tan(Bx)$ the period is $\\pi/|B|$."
+   ],
+   "solution": [
+    "$B = 2$, so the period is $\\pi/2$.",
+    "$= \\frac{\\pi}{2}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\pi",
+    "\\frac{\\pi}{4}",
+    "\\frac{\\pi}{2}",
+    "2 \\pi"
+   ]
+  },
+  {
+   "id": "trig-graphs-afe4c9",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "Consider $y = 5 \\sin{\\left(3 x + 1 \\right)} - 1$. What is the midline $y = ?$ (enter the constant)?",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "The vertical shift $D$ is the midline; the graph swings $|A|$ above and below it.",
+    "Here $D = -1$ and $|A| = 5$."
+   ],
+   "solution": [
+    "Midline $y = -1$, amplitude $5$.",
+    "So the midline is $y = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-4b9509",
+   "skill": "trig-graphs",
+   "difficulty": 3,
+   "statement": "By how many units is the graph of $y = \\cos{\\left(\\frac{x}{2} + \\frac{\\pi}{8} \\right)}$ shifted horizontally compared with $y = \\cos(\\frac{1}{2}x)$? Enter a positive number for a shift to the right, negative for a shift to the left.",
+   "checker": "numeric",
+   "answer": "-pi/4",
+   "hints": [
+    "Factor the inside so it reads $B(x - h)$; the shift is $h$.",
+    "If the inside is $Bx + C$, the shift is $-C/B$."
+   ],
+   "solution": [
+    "Inside: $\\frac{x}{2} + \\frac{\\pi}{8}$ $= \\frac{1}{2}\\left(x + \\frac{\\pi}{4}\\right)$.",
+    "So the shift is $h = - \\frac{\\pi}{4}$ (left)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-ce2c58",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Which function has amplitude $2$, period $4 \\pi$, and midline $y = 0$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Amplitude is the coefficient in front; period is $2\\pi/B$.",
+    "Solve $2\\pi/B = 4 \\pi$ for $B$: $B = \\frac{1}{2}$."
+   ],
+   "solution": [
+    "$|A| = 2$ and $B = 2\\pi/4 \\pi = \\frac{1}{2}$.",
+    "So $y = 2 \\sin{\\left(\\frac{x}{2} \\right)}$ (no vertical shift keeps the midline at $0$)."
+   ],
+   "verified": true,
+   "choices": [
+    "y = \\frac{\\sin{\\left(2 x \\right)}}{2}",
+    "y = \\sin{\\left(\\frac{x}{2} \\right)}",
+    "y = 2 \\sin{\\left(2 x \\right)}",
+    "y = 2 \\sin{\\left(\\frac{x}{2} \\right)}"
+   ]
+  },
+  {
+   "id": "trig-graphs-fef374",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "If $y = 5 \\cos{\\left(2 x \\right)}$, find $y$ when $x = \\frac{3 \\pi}{2}$. Give an exact value.",
+   "checker": "numeric",
+   "answer": "-5",
+   "hints": [
+    "Substitute $x = \\frac{3 \\pi}{2}$ into the formula.",
+    "First compute $\\cos\\left(3 \\pi\\right)$ from the unit circle."
+   ],
+   "solution": [
+    "$\\cos\\left(3 \\pi\\right) = -1$.",
+    "$y = 5\\cdot-1 + (0) = -5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-6e7b8c",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Compared with $y = \\sin x$, how is the graph of $y = - \\cos{\\left(x + \\frac{\\pi}{3} \\right)} - 1$ shifted?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "$x - h$ inside shifts right by $h$; a constant added outside shifts up.",
+    "Horizontal shifts feel backwards: $x - \\pi/4$ moves the graph to the right."
+   ],
+   "solution": [
+    "Inside: $x - \\frac{\\pi}{6}$ means right by $\\frac{\\pi}{6}$.",
+    "Outside: $+(-1)$ means down by $1$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{left }\\frac{\\pi}{6}\\text{, up 1}",
+    "\\text{right }\\frac{\\pi}{6}\\text{, up 1}",
+    "\\text{right }\\frac{\\pi}{6}\\text{, down 1}",
+    "\\text{left }\\frac{\\pi}{6}\\text{, down 1}"
+   ]
+  },
+  {
+   "id": "trig-graphs-b5f6ae",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "How many complete cycles does $y = \\sin{\\left(2 x \\right)}$ make on the interval $[0, 2\\pi]$?",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Find the period first.",
+    "Number of cycles on $[0, 2\\pi]$ is $2\\pi$ divided by the period, which equals $|B|$."
+   ],
+   "solution": [
+    "Period $= 2\\pi/2 = \\pi$.",
+    "Cycles in $[0, 2\\pi]$: $2\\pi \\div \\pi = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-5d3bc9",
+   "skill": "trig-graphs",
+   "difficulty": 3,
+   "statement": "Find the smallest positive $x$ at which $y = \\sin{\\left(3 x \\right)}$ crosses the $x$-axis.",
+   "checker": "numeric",
+   "answer": "pi/3",
+   "hints": [
+    "$\\sin$ is zero first at $\\pi$ (for positive input).",
+    "Set $3x$ equal to that and solve."
+   ],
+   "solution": [
+    "$3x = \\pi$.",
+    "$x = \\frac{\\pi}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-557f85",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Find the smallest positive $x$ at which $y = \\sin{\\left(\\frac{x}{2} \\right)}$ reaches its maximum value.",
+   "checker": "numeric",
+   "answer": "pi",
+   "hints": [
+    "$\\sin$ equals $1$ first at $\\frac{\\pi}{2}$ for positive input.",
+    "Set $\\frac{1}{2}x$ equal to that and solve."
+   ],
+   "solution": [
+    "$\\frac{1}{2}x = \\frac{\\pi}{2}$.",
+    "$x = \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-bdb3fe",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "Find the amplitude of $y = 2 \\cos{\\left(4 x + 1 \\right)}$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Amplitude is half the distance between the maximum and minimum values.",
+    "For $y = A\\sin(Bx + C) + D$ it is $|A|$."
+   ],
+   "solution": [
+    "The coefficient in front of the trig function is $2$.",
+    "Amplitude $= |2| = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-01af47",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Find the period of $y = 3 \\sin{\\left(\\frac{x}{2} + \\frac{\\pi}{3} \\right)} + 3$.",
+   "checker": "numeric",
+   "answer": "4*pi",
+   "hints": [
+    "The basic sine and cosine have period $2\\pi$.",
+    "For $y = A\\sin(Bx + C) + D$ the period is $2\\pi/|B|$."
+   ],
+   "solution": [
+    "$B = \\frac{1}{2}$.",
+    "Period $= \\dfrac{2\\pi}{\\frac{1}{2}} = 4 \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-0012f0",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Consider $y = \\sin{\\left(\\frac{x}{3} \\right)} + 1$. What is the minimum value of $y$?",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "The vertical shift $D$ is the midline; the graph swings $|A|$ above and below it.",
+    "Here $D = 1$ and $|A| = 1$."
+   ],
+   "solution": [
+    "Midline $y = 1$, amplitude $1$.",
+    "Minimum $= 1 - 1 = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-82b308",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "By how many units is the graph of $y = 2\\cos\\left(\\frac{1}{2}\\left(x + \\frac{\\pi}{3}\\right)\\right)$ shifted horizontally compared with $y = \\cos(\\frac{1}{2}x)$? Enter a positive number for a shift to the right, negative for a shift to the left.",
+   "checker": "numeric",
+   "answer": "-pi/3",
+   "hints": [
+    "Factor the inside so it reads $B(x - h)$; the shift is $h$.",
+    "The inside is already factored: read $h$ directly (watch the sign)."
+   ],
+   "solution": [
+    "Inside: $\\frac{x}{2} + \\frac{\\pi}{6}$ $= \\frac{1}{2}\\left(x + \\frac{\\pi}{3}\\right)$.",
+    "So the shift is $h = - \\frac{\\pi}{3}$ (left)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-fdf8f5",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "If $y = \\frac{\\cos{\\left(\\pi x \\right)}}{2} + 1$, find $y$ when $x = \\frac{3 \\pi}{2}$. Give an exact value.",
+   "checker": "numeric",
+   "answer": "cos(3*pi^2/2)/2+1",
+   "hints": [
+    "Substitute $x = \\frac{3 \\pi}{2}$ into the formula.",
+    "First compute $\\cos\\left(\\frac{3 \\pi^{2}}{2}\\right)$ from the unit circle."
+   ],
+   "solution": [
+    "$\\cos\\left(\\frac{3 \\pi^{2}}{2}\\right) = \\cos{\\left(\\frac{3 \\pi^{2}}{2} \\right)}$.",
+    "$y = \\frac{1}{2}\\cdot\\cos{\\left(\\frac{3 \\pi^{2}}{2} \\right)} + (1) = \\frac{\\cos{\\left(\\frac{3 \\pi^{2}}{2} \\right)}}{2} + 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-d0ada6",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Compared with $y = \\cos x$, how is the graph of $y = \\sin{\\left(x + \\frac{\\pi}{6} \\right)} + 4$ shifted?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "$x - h$ inside shifts right by $h$; a constant added outside shifts up.",
+    "Horizontal shifts feel backwards: $x - \\pi/4$ moves the graph to the right."
+   ],
+   "solution": [
+    "Inside: $x - \\frac{\\pi}{3}$ means right by $\\frac{\\pi}{3}$.",
+    "Outside: $+(4)$ means up by $4$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{right }\\frac{\\pi}{3}\\text{, up 4}",
+    "\\text{left }\\frac{\\pi}{3}\\text{, up 4}",
+    "\\text{left }\\frac{\\pi}{3}\\text{, down 4}",
+    "\\text{right }\\frac{\\pi}{3}\\text{, down 4}"
+   ]
+  },
+  {
+   "id": "trig-graphs-c9d650",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "How many complete cycles does $y = \\cos{\\left(4 x \\right)}$ make on the interval $[0, 2\\pi]$?",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Find the period first.",
+    "Number of cycles on $[0, 2\\pi]$ is $2\\pi$ divided by the period, which equals $|B|$."
+   ],
+   "solution": [
+    "Period $= 2\\pi/4 = \\frac{\\pi}{2}$.",
+    "Cycles in $[0, 2\\pi]$: $2\\pi \\div \\frac{\\pi}{2} = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-b08ff6",
+   "skill": "trig-graphs",
+   "difficulty": 3,
+   "statement": "Find the smallest positive $x$ at which $y = 3 \\sin{\\left(2 x \\right)}$ crosses the $x$-axis.",
+   "checker": "numeric",
+   "answer": "pi/2",
+   "hints": [
+    "$\\sin$ is zero first at $\\pi$ (for positive input).",
+    "Set $2x$ equal to that and solve."
+   ],
+   "solution": [
+    "$2x = \\pi$.",
+    "$x = \\frac{\\pi}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-14741a",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Find the smallest positive $x$ at which $y = \\sin{\\left(2 x \\right)}$ reaches its minimum value.",
+   "checker": "numeric",
+   "answer": "3*pi/4",
+   "hints": [
+    "$\\sin$ equals $-1$ first at $\\frac{3 \\pi}{2}$ for positive input.",
+    "Set $2x$ equal to that and solve."
+   ],
+   "solution": [
+    "$2x = \\frac{3 \\pi}{2}$.",
+    "$x = \\frac{3 \\pi}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-880dd3",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "Find the amplitude of $y = - 3 \\cos{\\left(x + \\frac{\\pi}{3} \\right)}$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Amplitude is half the distance between the maximum and minimum values.",
+    "For $y = A\\sin(Bx + C) + D$ it is $|A|$."
+   ],
+   "solution": [
+    "The coefficient in front of the trig function is $3$.",
+    "Amplitude $= |3| = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-ede29b",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Find the period of $y = 3 \\cos{\\left(\\pi x \\right)} + 1$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "The basic sine and cosine have period $2\\pi$.",
+    "For $y = A\\sin(Bx + C) + D$ the period is $2\\pi/|B|$."
+   ],
+   "solution": [
+    "$B = \\pi$.",
+    "Period $= \\dfrac{2\\pi}{\\pi} = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-e66b9b",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "What is the period of $y = \\tan{\\left(3 x \\right)}$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "The basic tangent repeats every $\\pi$, not $2\\pi$.",
+    "For $y = \\tan(Bx)$ the period is $\\pi/|B|$."
+   ],
+   "solution": [
+    "$B = 3$, so the period is $\\pi/3$.",
+    "$= \\frac{\\pi}{3}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\frac{\\pi}{6}",
+    "\\frac{\\pi}{3}",
+    "\\frac{2 \\pi}{3}",
+    "\\frac{4 \\pi}{3}"
+   ]
+  },
+  {
+   "id": "trig-graphs-d952d9",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Consider $y = - 4 \\cos{\\left(4 x + \\frac{\\pi}{6} \\right)}$. What is the minimum value of $y$?",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "The vertical shift $D$ is the midline; the graph swings $|A|$ above and below it.",
+    "Here $D = 0$ and $|A| = 4$."
+   ],
+   "solution": [
+    "Midline $y = 0$, amplitude $4$.",
+    "Minimum $= 0 - 4 = -4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-f07c61",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "By how many units is the graph of $y = 3\\cos\\left(3\\left(x - 2\\right)\\right)$ shifted horizontally compared with $y = \\cos(3x)$? Enter a positive number for a shift to the right, negative for a shift to the left.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Factor the inside so it reads $B(x - h)$; the shift is $h$.",
+    "The inside is already factored: read $h$ directly (watch the sign)."
+   ],
+   "solution": [
+    "Inside: $3 x - 6$ $= 3\\left(x - 2\\right)$.",
+    "So the shift is $h = 2$ (right)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-64c9c2",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "If $y = 2 \\sin{\\left(\\pi x \\right)} - 2$, find $y$ when $x = \\frac{\\pi}{4}$. Give an exact value.",
+   "checker": "numeric",
+   "answer": "-2+2*sin(pi^2/4)",
+   "hints": [
+    "Substitute $x = \\frac{\\pi}{4}$ into the formula.",
+    "First compute $\\sin\\left(\\frac{\\pi^{2}}{4}\\right)$ from the unit circle."
+   ],
+   "solution": [
+    "$\\sin\\left(\\frac{\\pi^{2}}{4}\\right) = \\sin{\\left(\\frac{\\pi^{2}}{4} \\right)}$.",
+    "$y = 2\\cdot\\sin{\\left(\\frac{\\pi^{2}}{4} \\right)} + (-2) = -2 + 2 \\sin{\\left(\\frac{\\pi^{2}}{4} \\right)}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-264cc8",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Compared with $y = \\cos x$, how is the graph of $y = \\sin{\\left(x + \\frac{\\pi}{4} \\right)} + 2$ shifted?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "$x - h$ inside shifts right by $h$; a constant added outside shifts up.",
+    "Horizontal shifts feel backwards: $x - \\pi/4$ moves the graph to the right."
+   ],
+   "solution": [
+    "Inside: $x - \\frac{\\pi}{4}$ means right by $\\frac{\\pi}{4}$.",
+    "Outside: $+(2)$ means up by $2$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{left }\\frac{\\pi}{4}\\text{, up 2}",
+    "\\text{right }\\frac{\\pi}{4}\\text{, up 2}",
+    "\\text{right }\\frac{\\pi}{4}\\text{, down 2}",
+    "\\text{left }\\frac{\\pi}{4}\\text{, down 2}"
+   ]
+  },
+  {
+   "id": "trig-graphs-0f7768",
+   "skill": "trig-graphs",
+   "difficulty": 3,
+   "statement": "Find the smallest positive $x$ at which $y = 2 \\cos{\\left(x \\right)}$ crosses the $x$-axis.",
+   "checker": "numeric",
+   "answer": "pi/2",
+   "hints": [
+    "$\\cos$ is zero first at $\\frac{\\pi}{2}$ (for positive input).",
+    "Set $1x$ equal to that and solve."
+   ],
+   "solution": [
+    "$1x = \\frac{\\pi}{2}$.",
+    "$x = \\frac{\\pi}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-1dbc75",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Find the smallest positive $x$ at which $y = \\cos{\\left(\\frac{x}{2} \\right)}$ reaches its maximum value.",
+   "checker": "numeric",
+   "answer": "4*pi",
+   "hints": [
+    "$\\cos$ equals $1$ first at $2 \\pi$ for positive input.",
+    "Set $\\frac{1}{2}x$ equal to that and solve."
+   ],
+   "solution": [
+    "$\\frac{1}{2}x = 2 \\pi$.",
+    "$x = 4 \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-2cd236",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "Find the amplitude of $y = - 3 \\cos{\\left(3 x + \\frac{\\pi}{6} \\right)} - 1$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Amplitude is half the distance between the maximum and minimum values.",
+    "For $y = A\\sin(Bx + C) + D$ it is $|A|$."
+   ],
+   "solution": [
+    "The coefficient in front of the trig function is $3$.",
+    "Amplitude $= |3| = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-d05b68",
+   "skill": "trig-graphs",
+   "difficulty": 1,
+   "statement": "Find the period of $y = 3 - \\cos{\\left(2 x + \\frac{\\pi}{6} \\right)}$.",
+   "checker": "numeric",
+   "answer": "pi",
+   "hints": [
+    "The basic sine and cosine have period $2\\pi$.",
+    "For $y = A\\sin(Bx + C) + D$ the period is $2\\pi/|B|$."
+   ],
+   "solution": [
+    "$B = 2$.",
+    "Period $= \\dfrac{2\\pi}{2} = \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-71abcd",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "Consider $y = \\sin{\\left(3 x + \\frac{\\pi}{3} \\right)} - 1$. What is the maximum value of $y$?",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "The vertical shift $D$ is the midline; the graph swings $|A|$ above and below it.",
+    "Here $D = -1$ and $|A| = 1$."
+   ],
+   "solution": [
+    "Midline $y = -1$, amplitude $1$.",
+    "Maximum $= -1 + 1 = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-graphs-27f95b",
+   "skill": "trig-graphs",
+   "difficulty": 2,
+   "statement": "By how many units is the graph of $y = 2\\cos\\left(\\left(x - 2\\right)\\right)$ shifted horizontally compared with $y = \\cos(x)$? Enter a positive number for a shift to the right, negative for a shift to the left.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Factor the inside so it reads $B(x - h)$; the shift is $h$.",
+    "The inside is already factored: read $h$ directly (watch the sign)."
+   ],
+   "solution": [
+    "Inside: $x - 2$ $= \\left(x - 2\\right)$.",
+    "So the shift is $h = 2$ (right)."
+   ],
+   "verified": true
+  }
+ ]
+}

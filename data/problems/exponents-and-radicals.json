@@ -1,0 +1,1274 @@
+{
+ "skill": "exponents-and-radicals",
+ "problems": [
+  {
+   "id": "exponents-and-radicals-00552c",
+   "skill": "exponents-and-radicals",
+   "difficulty": 1,
+   "statement": "Simplify $\\dfrac{x^{2} \\cdot x^{3}}{x^{2}}$. Write the answer with a single power of $x$.",
+   "checker": "equiv",
+   "answer": "x^3",
+   "hints": [
+    "Same base multiplied: add the exponents. Same base divided: subtract the exponents.",
+    "The numerator is $x^{5}$; now subtract $2$."
+   ],
+   "solution": [
+    "$x^{2} \\cdot x^{3} = x^{5}$.",
+    "$x^{5} / x^{2} = x^{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-3dc2aa",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\left(5x^{2}y^{2}\\right)^{3}$.",
+   "checker": "equiv",
+   "answer": "125*x^6*y^6",
+   "hints": [
+    "A power of a product is the product of the powers: raise every factor to the outer exponent.",
+    "Raise the coefficient: $5^{3} = 125$. For the variables, multiply exponents."
+   ],
+   "solution": [
+    "Apply the exponent to each factor: $5^{3} \\cdot (x^{2})^{3} \\cdot (y^{2})^{3}$.",
+    "Multiply exponents: $x^{6}$ and $y^{6}$.",
+    "Result: $125 x^{6} y^{6}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-c428b7",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\sqrt{160}$ (take all perfect-square factors out of the root).",
+   "checker": "numeric",
+   "answer": "4*sqrt(10)",
+   "hints": [
+    "Look for the largest perfect square that divides the number.",
+    "$160 = 16 \\cdot 10$."
+   ],
+   "solution": [
+    "$\\sqrt{160} = \\sqrt{16 \\cdot 10} = \\sqrt{16}\\sqrt{10}$.",
+    "$= 4\\sqrt{10}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-36e927",
+   "skill": "exponents-and-radicals",
+   "difficulty": 3,
+   "statement": "Simplify $\\sqrt[3]{189}$.",
+   "checker": "numeric",
+   "answer": "3*7^(1/3)",
+   "hints": [
+    "Look for a perfect cube factor.",
+    "$189 = 27 \\cdot 7$ and $27 = 3^3$."
+   ],
+   "solution": [
+    "$\\sqrt[3]{189} = \\sqrt[3]{27 \\cdot 7} = \\sqrt[3]{27}\\sqrt[3]{7}$.",
+    "$= 3\\sqrt[3]{7}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-f0fd34",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rewrite $3x^{-1}y^{3}$ using only positive exponents.",
+   "checker": "equiv",
+   "answer": "3*y^3/x",
+   "hints": [
+    "A negative exponent means a reciprocal: $x^{-m} = 1/x^{m}$.",
+    "Only the factor with the negative exponent moves to the denominator."
+   ],
+   "solution": [
+    "$x^{-1} = \\dfrac{1}{x^{1}}$.",
+    "So $3x^{-1}y^{3} = \\frac{3 y^{3}}{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-7f50ee",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rewrite $\\dfrac{x^{-2}}{y^{-1}}$ using only positive exponents.",
+   "checker": "equiv",
+   "answer": "y/x^2",
+   "hints": [
+    "A factor with a negative exponent switches between numerator and denominator.",
+    "$x^{-2}$ goes down, $y^{-1}$ comes up."
+   ],
+   "solution": [
+    "$x^{-2} = 1/x^{2}$ in the numerator and $1/y^{-1} = y^{1}$ in the denominator.",
+    "Result: $\\frac{y}{x^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-5ce97a",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rationalize the denominator: $\\dfrac{6}{\\sqrt{6}}$.",
+   "checker": "numeric",
+   "answer": "sqrt(6)",
+   "hints": [
+    "Multiply numerator and denominator by $\\sqrt{6}$.",
+    "$\\sqrt{6}\\cdot\\sqrt{6} = 6$."
+   ],
+   "solution": [
+    "$\\dfrac{6}{\\sqrt{6}} \\cdot \\dfrac{\\sqrt{6}}{\\sqrt{6}} = \\dfrac{6\\sqrt{6}}{6}$.",
+    "Simplified: $\\sqrt{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-ce2934",
+   "skill": "exponents-and-radicals",
+   "difficulty": 3,
+   "statement": "Rationalize the denominator: $\\dfrac{1}{\\sqrt{7} + 3}$.",
+   "checker": "numeric",
+   "answer": "(3-sqrt(7))/2",
+   "hints": [
+    "Multiply top and bottom by the conjugate $\\sqrt{7} - 3$.",
+    "$(\\sqrt{7}+3)(\\sqrt{7}-3) = 7 - 9$."
+   ],
+   "solution": [
+    "$\\dfrac{1}{\\sqrt{7}+3}\\cdot\\dfrac{\\sqrt{7}-3}{\\sqrt{7}-3} = \\dfrac{\\sqrt{7}-3}{-2}$.",
+    "Simplified: $\\frac{3 - \\sqrt{7}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-9c8f8c",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "For $x > 0$, simplify $\\sqrt{4x^{4}}$.",
+   "checker": "equiv",
+   "answer": "2*x^2",
+   "hints": [
+    "Split the root over the factors: $\\sqrt{ab} = \\sqrt{a}\\sqrt{b}$.",
+    "$\\sqrt{x^{4}} = x^{2}$ when $x > 0$, and $4 = 4\\cdot1$."
+   ],
+   "solution": [
+    "$\\sqrt{4x^{4}} = \\sqrt{4}\\sqrt{1}\\sqrt{x^{4}}$.",
+    "$= 2 x^{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.1,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-322f01",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "For $x > 0$, write $x^{2}\\sqrt{x}$ as a single power of $x$ (fractional and negative exponents allowed).",
+   "checker": "equiv",
+   "answer": "x^(5/2)",
+   "hints": [
+    "$\\sqrt[n]{x} = x^{1/n}$, and dividing by a power means a negative exponent.",
+    "Then add or subtract the exponents as fractions."
+   ],
+   "solution": [
+    "Rewrite every root as a fractional exponent and every reciprocal as a negative exponent.",
+    "Combine the exponents: the result is $x^{\\frac{5}{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.2,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-23279f",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Solve for $n$: $2^{n + 1} = 64$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Write $64$ as a power of $2$.",
+    "$64 = 2^{6}$, so the exponents must be equal."
+   ],
+   "solution": [
+    "$64 = 2^{6}$.",
+    "Equal bases means equal exponents: $n + 1 = 6$.",
+    "So $n = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-008cd4",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\left(2x^{1}\\right)^{3}\\left(5x^{1}\\right)$.",
+   "checker": "equiv",
+   "answer": "40*x^4",
+   "hints": [
+    "Deal with the power first: raise the coefficient and the variable to that power.",
+    "Then multiply coefficients and add the exponents of $x$."
+   ],
+   "solution": [
+    "$\\left(2x^{1}\\right)^{3} = 8x^{3}$.",
+    "Multiply by $5x^{1}$: $40x^{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-cab038",
+   "skill": "exponents-and-radicals",
+   "difficulty": 1,
+   "statement": "Evaluate $7^{0} - 5^{-3}$.",
+   "checker": "numeric",
+   "answer": "124/125",
+   "hints": [
+    "Any non-zero number to the power 0 is 1.",
+    "$5^{-3} = \\dfrac{1}{5^{3}}$."
+   ],
+   "solution": [
+    "$7^0 = 1$ and $5^{-3} = \\frac{1}{125}$.",
+    "So the value is $1 - \\frac{1}{125} = \\frac{124}{125}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-e1cda1",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{x^{2} \\cdot x^{4}}{x^{9}}$. Write the answer with a single power of $x$ (a positive exponent in the denominator is fine).",
+   "checker": "equiv",
+   "answer": "x^(-3)",
+   "hints": [
+    "Same base multiplied: add the exponents. Same base divided: subtract the exponents.",
+    "The numerator is $x^{6}$; now subtract $9$."
+   ],
+   "solution": [
+    "$x^{2} \\cdot x^{4} = x^{6}$.",
+    "$x^{6} / x^{9} = x^{-3}$. A negative exponent means a reciprocal: $x^{-3} = \\dfrac{1}{x^{3}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-c142d6",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\left(3x^{4}y^{3}\\right)^{3}$.",
+   "checker": "equiv",
+   "answer": "27*x^12*y^9",
+   "hints": [
+    "A power of a product is the product of the powers: raise every factor to the outer exponent.",
+    "Raise the coefficient: $3^{3} = 27$. For the variables, multiply exponents."
+   ],
+   "solution": [
+    "Apply the exponent to each factor: $3^{3} \\cdot (x^{4})^{3} \\cdot (y^{3})^{3}$.",
+    "Multiply exponents: $x^{12}$ and $y^{9}$.",
+    "Result: $27 x^{12} y^{9}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-188cd4",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Evaluate $64^{\\frac{2}{3}}$ without a calculator.",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "$a^{m/n}$ means take the $3$th root first, then raise to the power $2$.",
+    "The $3$th root of $64$ is $4$."
+   ],
+   "solution": [
+    "$64^{1/3} = 4$ because $4^{3} = 64$.",
+    "Raise to the power $2$: $4^{2} = 16$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-0382e1",
+   "skill": "exponents-and-radicals",
+   "difficulty": 1,
+   "statement": "Simplify $\\sqrt{20}$ (take all perfect-square factors out of the root).",
+   "checker": "numeric",
+   "answer": "2*sqrt(5)",
+   "hints": [
+    "Look for the largest perfect square that divides the number.",
+    "$20 = 4 \\cdot 5$."
+   ],
+   "solution": [
+    "$\\sqrt{20} = \\sqrt{4 \\cdot 5} = \\sqrt{4}\\sqrt{5}$.",
+    "$= 2\\sqrt{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-2baa11",
+   "skill": "exponents-and-radicals",
+   "difficulty": 3,
+   "statement": "Simplify $\\sqrt[3]{40}$.",
+   "checker": "numeric",
+   "answer": "2*5^(1/3)",
+   "hints": [
+    "Look for a perfect cube factor.",
+    "$40 = 8 \\cdot 5$ and $8 = 2^3$."
+   ],
+   "solution": [
+    "$\\sqrt[3]{40} = \\sqrt[3]{8 \\cdot 5} = \\sqrt[3]{8}\\sqrt[3]{5}$.",
+    "$= 2\\sqrt[3]{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-a3fa4e",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rewrite $5x^{-4}y^{2}$ using only positive exponents.",
+   "checker": "equiv",
+   "answer": "5*y^2/x^4",
+   "hints": [
+    "A negative exponent means a reciprocal: $x^{-m} = 1/x^{m}$.",
+    "Only the factor with the negative exponent moves to the denominator."
+   ],
+   "solution": [
+    "$x^{-4} = \\dfrac{1}{x^{4}}$.",
+    "So $5x^{-4}y^{2} = \\frac{5 y^{2}}{x^{4}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-1ad1e8",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rewrite $\\dfrac{x^{-4}}{y^{-1}}$ using only positive exponents.",
+   "checker": "equiv",
+   "answer": "y/x^4",
+   "hints": [
+    "A factor with a negative exponent switches between numerator and denominator.",
+    "$x^{-4}$ goes down, $y^{-1}$ comes up."
+   ],
+   "solution": [
+    "$x^{-4} = 1/x^{4}$ in the numerator and $1/y^{-1} = y^{1}$ in the denominator.",
+    "Result: $\\frac{y}{x^{4}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-b9e1cb",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rationalize the denominator: $\\dfrac{10}{\\sqrt{3}}$.",
+   "checker": "numeric",
+   "answer": "10*sqrt(3)/3",
+   "hints": [
+    "Multiply numerator and denominator by $\\sqrt{3}$.",
+    "$\\sqrt{3}\\cdot\\sqrt{3} = 3$."
+   ],
+   "solution": [
+    "$\\dfrac{10}{\\sqrt{3}} \\cdot \\dfrac{\\sqrt{3}}{\\sqrt{3}} = \\dfrac{10\\sqrt{3}}{3}$.",
+    "Simplified: $\\frac{10 \\sqrt{3}}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-9e4859",
+   "skill": "exponents-and-radicals",
+   "difficulty": 3,
+   "statement": "Rationalize the denominator: $\\dfrac{1}{\\sqrt{5} + 2}$.",
+   "checker": "numeric",
+   "answer": "-2+sqrt(5)",
+   "hints": [
+    "Multiply top and bottom by the conjugate $\\sqrt{5} - 2$.",
+    "$(\\sqrt{5}+2)(\\sqrt{5}-2) = 5 - 4$."
+   ],
+   "solution": [
+    "$\\dfrac{1}{\\sqrt{5}+2}\\cdot\\dfrac{\\sqrt{5}-2}{\\sqrt{5}-2} = \\dfrac{\\sqrt{5}-2}{1}$.",
+    "Simplified: $-2 + \\sqrt{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-c63723",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "For $x > 0$, simplify $\\sqrt{4x^{6}}$.",
+   "checker": "equiv",
+   "answer": "2*x^3",
+   "hints": [
+    "Split the root over the factors: $\\sqrt{ab} = \\sqrt{a}\\sqrt{b}$.",
+    "$\\sqrt{x^{6}} = x^{3}$ when $x > 0$, and $4 = 4\\cdot1$."
+   ],
+   "solution": [
+    "$\\sqrt{4x^{6}} = \\sqrt{4}\\sqrt{1}\\sqrt{x^{6}}$.",
+    "$= 2 x^{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.1,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-95205a",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "For $x > 0$, write $\\sqrt[4]{x^{3}}$ as a single power of $x$ (fractional and negative exponents allowed).",
+   "checker": "equiv",
+   "answer": "x^(3/4)",
+   "hints": [
+    "$\\sqrt[n]{x} = x^{1/n}$, and dividing by a power means a negative exponent.",
+    "Then add or subtract the exponents as fractions."
+   ],
+   "solution": [
+    "Rewrite every root as a fractional exponent and every reciprocal as a negative exponent.",
+    "Combine the exponents: the result is $x^{\\frac{3}{4}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.2,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-c9b568",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Solve for $n$: $3^{n + 1} = 729$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Write $729$ as a power of $3$.",
+    "$729 = 3^{6}$, so the exponents must be equal."
+   ],
+   "solution": [
+    "$729 = 3^{6}$.",
+    "Equal bases means equal exponents: $n + 1 = 6$.",
+    "So $n = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-7adb17",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\left(3x^{2}\\right)^{2}\\left(5x^{3}\\right)$.",
+   "checker": "equiv",
+   "answer": "45*x^7",
+   "hints": [
+    "Deal with the power first: raise the coefficient and the variable to that power.",
+    "Then multiply coefficients and add the exponents of $x$."
+   ],
+   "solution": [
+    "$\\left(3x^{2}\\right)^{2} = 9x^{4}$.",
+    "Multiply by $5x^{3}$: $45x^{7}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-5de785",
+   "skill": "exponents-and-radicals",
+   "difficulty": 1,
+   "statement": "Evaluate $9^{0} + 4^{-2}$.",
+   "checker": "numeric",
+   "answer": "17/16",
+   "hints": [
+    "Any non-zero number to the power 0 is 1.",
+    "$4^{-2} = \\dfrac{1}{4^{2}}$."
+   ],
+   "solution": [
+    "$9^0 = 1$ and $4^{-2} = \\frac{1}{16}$.",
+    "So the value is $1 + \\frac{1}{16} = \\frac{17}{16}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-077a56",
+   "skill": "exponents-and-radicals",
+   "difficulty": 1,
+   "statement": "Simplify $\\dfrac{x^{2} \\cdot x^{4}}{x^{2}}$. Write the answer with a single power of $x$.",
+   "checker": "equiv",
+   "answer": "x^4",
+   "hints": [
+    "Same base multiplied: add the exponents. Same base divided: subtract the exponents.",
+    "The numerator is $x^{6}$; now subtract $2$."
+   ],
+   "solution": [
+    "$x^{2} \\cdot x^{4} = x^{6}$.",
+    "$x^{6} / x^{2} = x^{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-5748ff",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\left(4x^{3}y^{2}\\right)^{2}$.",
+   "checker": "equiv",
+   "answer": "16*x^6*y^4",
+   "hints": [
+    "A power of a product is the product of the powers: raise every factor to the outer exponent.",
+    "Raise the coefficient: $4^{2} = 16$. For the variables, multiply exponents."
+   ],
+   "solution": [
+    "Apply the exponent to each factor: $4^{2} \\cdot (x^{3})^{2} \\cdot (y^{2})^{2}$.",
+    "Multiply exponents: $x^{6}$ and $y^{4}$.",
+    "Result: $16 x^{6} y^{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-1c0258",
+   "skill": "exponents-and-radicals",
+   "difficulty": 1,
+   "statement": "Evaluate $49^{\\frac{1}{2}}$ without a calculator.",
+   "checker": "numeric",
+   "answer": "7",
+   "hints": [
+    "$a^{m/n}$ means take the $2$th root first, then raise to the power $1$.",
+    "The $2$th root of $49$ is $7$."
+   ],
+   "solution": [
+    "$49^{1/2} = 7$ because $7^{2} = 49$.",
+    "Raise to the power $1$: $7^{1} = 7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-8d5e6a",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\sqrt{252}$ (take all perfect-square factors out of the root).",
+   "checker": "numeric",
+   "answer": "6*sqrt(7)",
+   "hints": [
+    "Look for the largest perfect square that divides the number.",
+    "$252 = 36 \\cdot 7$."
+   ],
+   "solution": [
+    "$\\sqrt{252} = \\sqrt{36 \\cdot 7} = \\sqrt{36}\\sqrt{7}$.",
+    "$= 6\\sqrt{7}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-f206ce",
+   "skill": "exponents-and-radicals",
+   "difficulty": 3,
+   "statement": "Simplify $\\sqrt[3]{56}$.",
+   "checker": "numeric",
+   "answer": "2*7^(1/3)",
+   "hints": [
+    "Look for a perfect cube factor.",
+    "$56 = 8 \\cdot 7$ and $8 = 2^3$."
+   ],
+   "solution": [
+    "$\\sqrt[3]{56} = \\sqrt[3]{8 \\cdot 7} = \\sqrt[3]{8}\\sqrt[3]{7}$.",
+    "$= 2\\sqrt[3]{7}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-dea4d9",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rewrite $2x^{-4}y^{1}$ using only positive exponents.",
+   "checker": "equiv",
+   "answer": "2*y/x^4",
+   "hints": [
+    "A negative exponent means a reciprocal: $x^{-m} = 1/x^{m}$.",
+    "Only the factor with the negative exponent moves to the denominator."
+   ],
+   "solution": [
+    "$x^{-4} = \\dfrac{1}{x^{4}}$.",
+    "So $2x^{-4}y^{1} = \\frac{2 y}{x^{4}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-cc781b",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rewrite $\\dfrac{x^{-3}}{y^{-4}}$ using only positive exponents.",
+   "checker": "equiv",
+   "answer": "y^4/x^3",
+   "hints": [
+    "A factor with a negative exponent switches between numerator and denominator.",
+    "$x^{-3}$ goes down, $y^{-4}$ comes up."
+   ],
+   "solution": [
+    "$x^{-3} = 1/x^{3}$ in the numerator and $1/y^{-4} = y^{4}$ in the denominator.",
+    "Result: $\\frac{y^{4}}{x^{3}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-85e761",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rationalize the denominator: $\\dfrac{9}{\\sqrt{6}}$.",
+   "checker": "numeric",
+   "answer": "3*sqrt(6)/2",
+   "hints": [
+    "Multiply numerator and denominator by $\\sqrt{6}$.",
+    "$\\sqrt{6}\\cdot\\sqrt{6} = 6$."
+   ],
+   "solution": [
+    "$\\dfrac{9}{\\sqrt{6}} \\cdot \\dfrac{\\sqrt{6}}{\\sqrt{6}} = \\dfrac{9\\sqrt{6}}{6}$.",
+    "Simplified: $\\frac{3 \\sqrt{6}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-373f97",
+   "skill": "exponents-and-radicals",
+   "difficulty": 3,
+   "statement": "Rationalize the denominator: $\\dfrac{1}{\\sqrt{7} + 2}$.",
+   "checker": "numeric",
+   "answer": "(-2+sqrt(7))/3",
+   "hints": [
+    "Multiply top and bottom by the conjugate $\\sqrt{7} - 2$.",
+    "$(\\sqrt{7}+2)(\\sqrt{7}-2) = 7 - 4$."
+   ],
+   "solution": [
+    "$\\dfrac{1}{\\sqrt{7}+2}\\cdot\\dfrac{\\sqrt{7}-2}{\\sqrt{7}-2} = \\dfrac{\\sqrt{7}-2}{3}$.",
+    "Simplified: $\\frac{-2 + \\sqrt{7}}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-046d23",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "For $x > 0$, simplify $\\sqrt{18x^{2}}$.",
+   "checker": "equiv",
+   "answer": "3*sqrt(2)*x",
+   "hints": [
+    "Split the root over the factors: $\\sqrt{ab} = \\sqrt{a}\\sqrt{b}$.",
+    "$\\sqrt{x^{2}} = x^{1}$ when $x > 0$, and $18 = 9\\cdot2$."
+   ],
+   "solution": [
+    "$\\sqrt{18x^{2}} = \\sqrt{9}\\sqrt{2}\\sqrt{x^{2}}$.",
+    "$= 3 \\sqrt{2} x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.1,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-00061b",
+   "skill": "exponents-and-radicals",
+   "difficulty": 1,
+   "statement": "Which expression equals $\\dfrac{2^{5}}{2^{2}}$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Rule: same base, divide: subtract exponents.",
+    "Try it with small numbers if you are unsure, e.g. $2^2 \\cdot 2^3 = 4 \\cdot 8 = 32 = 2^5$."
+   ],
+   "solution": [
+    "Rule: same base, divide: subtract exponents.",
+    "So the answer is $2^{3}$."
+   ],
+   "verified": true,
+   "choices": [
+    "2^{5/2}",
+    "2^{3}",
+    "1^{3}",
+    "2^{7}"
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-d78334",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "For $x > 0$, write $\\sqrt{x}\\,\\sqrt[3]{x}$ as a single power of $x$ (fractional and negative exponents allowed).",
+   "checker": "equiv",
+   "answer": "x^(5/6)",
+   "hints": [
+    "$\\sqrt[n]{x} = x^{1/n}$, and dividing by a power means a negative exponent.",
+    "Then add or subtract the exponents as fractions."
+   ],
+   "solution": [
+    "Rewrite every root as a fractional exponent and every reciprocal as a negative exponent.",
+    "Combine the exponents: the result is $x^{\\frac{5}{6}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.2,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-ebcd61",
+   "skill": "exponents-and-radicals",
+   "difficulty": 1,
+   "statement": "Solve for $n$: $3^{n} = 81$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Write $81$ as a power of $3$.",
+    "$81 = 3^{4}$, so the exponents must be equal."
+   ],
+   "solution": [
+    "$81 = 3^{4}$.",
+    "Equal bases means equal exponents: $n = 4$.",
+    "So $n = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-cb1890",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\left(2x^{2}\\right)^{3}\\left(3x^{1}\\right)$.",
+   "checker": "equiv",
+   "answer": "24*x^7",
+   "hints": [
+    "Deal with the power first: raise the coefficient and the variable to that power.",
+    "Then multiply coefficients and add the exponents of $x$."
+   ],
+   "solution": [
+    "$\\left(2x^{2}\\right)^{3} = 8x^{6}$.",
+    "Multiply by $3x^{1}$: $24x^{7}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-52e607",
+   "skill": "exponents-and-radicals",
+   "difficulty": 1,
+   "statement": "Simplify $\\dfrac{x^{5} \\cdot x^{4}}{x^{2}}$. Write the answer with a single power of $x$.",
+   "checker": "equiv",
+   "answer": "x^7",
+   "hints": [
+    "Same base multiplied: add the exponents. Same base divided: subtract the exponents.",
+    "The numerator is $x^{9}$; now subtract $2$."
+   ],
+   "solution": [
+    "$x^{5} \\cdot x^{4} = x^{9}$.",
+    "$x^{9} / x^{2} = x^{7}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-9a52f9",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\left(5x^{4}y^{1}\\right)^{2}$.",
+   "checker": "equiv",
+   "answer": "25*x^8*y^2",
+   "hints": [
+    "A power of a product is the product of the powers: raise every factor to the outer exponent.",
+    "Raise the coefficient: $5^{2} = 25$. For the variables, multiply exponents."
+   ],
+   "solution": [
+    "Apply the exponent to each factor: $5^{2} \\cdot (x^{4})^{2} \\cdot (y^{1})^{2}$.",
+    "Multiply exponents: $x^{8}$ and $y^{2}$.",
+    "Result: $25 x^{8} y^{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-790513",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\sqrt{48}$ (take all perfect-square factors out of the root).",
+   "checker": "numeric",
+   "answer": "4*sqrt(3)",
+   "hints": [
+    "Look for the largest perfect square that divides the number.",
+    "$48 = 16 \\cdot 3$."
+   ],
+   "solution": [
+    "$\\sqrt{48} = \\sqrt{16 \\cdot 3} = \\sqrt{16}\\sqrt{3}$.",
+    "$= 4\\sqrt{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-347a62",
+   "skill": "exponents-and-radicals",
+   "difficulty": 3,
+   "statement": "Simplify $\\sqrt[3]{54}$.",
+   "checker": "numeric",
+   "answer": "3*2^(1/3)",
+   "hints": [
+    "Look for a perfect cube factor.",
+    "$54 = 27 \\cdot 2$ and $27 = 3^3$."
+   ],
+   "solution": [
+    "$\\sqrt[3]{54} = \\sqrt[3]{27 \\cdot 2} = \\sqrt[3]{27}\\sqrt[3]{2}$.",
+    "$= 3\\sqrt[3]{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-d5333c",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rewrite $2x^{-3}y^{2}$ using only positive exponents.",
+   "checker": "equiv",
+   "answer": "2*y^2/x^3",
+   "hints": [
+    "A negative exponent means a reciprocal: $x^{-m} = 1/x^{m}$.",
+    "Only the factor with the negative exponent moves to the denominator."
+   ],
+   "solution": [
+    "$x^{-3} = \\dfrac{1}{x^{3}}$.",
+    "So $2x^{-3}y^{2} = \\frac{2 y^{2}}{x^{3}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-106534",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rewrite $\\dfrac{x^{-1}}{y^{-1}}$ using only positive exponents.",
+   "checker": "equiv",
+   "answer": "y/x",
+   "hints": [
+    "A factor with a negative exponent switches between numerator and denominator.",
+    "$x^{-1}$ goes down, $y^{-1}$ comes up."
+   ],
+   "solution": [
+    "$x^{-1} = 1/x^{1}$ in the numerator and $1/y^{-1} = y^{1}$ in the denominator.",
+    "Result: $\\frac{y}{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-da6f8b",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rationalize the denominator: $\\dfrac{5}{\\sqrt{5}}$.",
+   "checker": "numeric",
+   "answer": "sqrt(5)",
+   "hints": [
+    "Multiply numerator and denominator by $\\sqrt{5}$.",
+    "$\\sqrt{5}\\cdot\\sqrt{5} = 5$."
+   ],
+   "solution": [
+    "$\\dfrac{5}{\\sqrt{5}} \\cdot \\dfrac{\\sqrt{5}}{\\sqrt{5}} = \\dfrac{5\\sqrt{5}}{5}$.",
+    "Simplified: $\\sqrt{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-52a829",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "For $x > 0$, simplify $\\sqrt{27x^{4}}$.",
+   "checker": "equiv",
+   "answer": "3*sqrt(3)*x^2",
+   "hints": [
+    "Split the root over the factors: $\\sqrt{ab} = \\sqrt{a}\\sqrt{b}$.",
+    "$\\sqrt{x^{4}} = x^{2}$ when $x > 0$, and $27 = 9\\cdot3$."
+   ],
+   "solution": [
+    "$\\sqrt{27x^{4}} = \\sqrt{9}\\sqrt{3}\\sqrt{x^{4}}$.",
+    "$= 3 \\sqrt{3} x^{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.1,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-4e46cc",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "For $x > 0$, write $\\dfrac{x}{\\sqrt[3]{x}}$ as a single power of $x$ (fractional and negative exponents allowed).",
+   "checker": "equiv",
+   "answer": "x^(2/3)",
+   "hints": [
+    "$\\sqrt[n]{x} = x^{1/n}$, and dividing by a power means a negative exponent.",
+    "Then add or subtract the exponents as fractions."
+   ],
+   "solution": [
+    "Rewrite every root as a fractional exponent and every reciprocal as a negative exponent.",
+    "Combine the exponents: the result is $x^{\\frac{2}{3}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.2,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-f30cac",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\left(2x^{2}\\right)^{2}\\left(2x^{1}\\right)$.",
+   "checker": "equiv",
+   "answer": "8*x^5",
+   "hints": [
+    "Deal with the power first: raise the coefficient and the variable to that power.",
+    "Then multiply coefficients and add the exponents of $x$."
+   ],
+   "solution": [
+    "$\\left(2x^{2}\\right)^{2} = 4x^{4}$.",
+    "Multiply by $2x^{1}$: $8x^{5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-ee1b3f",
+   "skill": "exponents-and-radicals",
+   "difficulty": 1,
+   "statement": "Evaluate $12^{0} - 3^{-1}$.",
+   "checker": "numeric",
+   "answer": "2/3",
+   "hints": [
+    "Any non-zero number to the power 0 is 1.",
+    "$3^{-1} = \\dfrac{1}{3^{1}}$."
+   ],
+   "solution": [
+    "$12^0 = 1$ and $3^{-1} = \\frac{1}{3}$.",
+    "So the value is $1 - \\frac{1}{3} = \\frac{2}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-52ab82",
+   "skill": "exponents-and-radicals",
+   "difficulty": 1,
+   "statement": "Simplify $\\dfrac{x^{3} \\cdot x^{5}}{x^{7}}$. Write the answer with a single power of $x$.",
+   "checker": "equiv",
+   "answer": "x",
+   "hints": [
+    "Same base multiplied: add the exponents. Same base divided: subtract the exponents.",
+    "The numerator is $x^{8}$; now subtract $7$."
+   ],
+   "solution": [
+    "$x^{3} \\cdot x^{5} = x^{8}$.",
+    "$x^{8} / x^{7} = x^{1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-af9db9",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\left(2x^{1}y^{3}\\right)^{3}$.",
+   "checker": "equiv",
+   "answer": "8*x^3*y^9",
+   "hints": [
+    "A power of a product is the product of the powers: raise every factor to the outer exponent.",
+    "Raise the coefficient: $2^{3} = 8$. For the variables, multiply exponents."
+   ],
+   "solution": [
+    "Apply the exponent to each factor: $2^{3} \\cdot (x^{1})^{3} \\cdot (y^{3})^{3}$.",
+    "Multiply exponents: $x^{3}$ and $y^{9}$.",
+    "Result: $8 x^{3} y^{9}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-35099a",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Evaluate $4^{\\frac{3}{2}}$ without a calculator.",
+   "checker": "numeric",
+   "answer": "8",
+   "hints": [
+    "$a^{m/n}$ means take the $2$th root first, then raise to the power $3$.",
+    "The $2$th root of $4$ is $2$."
+   ],
+   "solution": [
+    "$4^{1/2} = 2$ because $2^{2} = 4$.",
+    "Raise to the power $3$: $2^{3} = 8$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-2b0c38",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Simplify $\\sqrt{175}$ (take all perfect-square factors out of the root).",
+   "checker": "numeric",
+   "answer": "5*sqrt(7)",
+   "hints": [
+    "Look for the largest perfect square that divides the number.",
+    "$175 = 25 \\cdot 7$."
+   ],
+   "solution": [
+    "$\\sqrt{175} = \\sqrt{25 \\cdot 7} = \\sqrt{25}\\sqrt{7}$.",
+    "$= 5\\sqrt{7}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-297e2b",
+   "skill": "exponents-and-radicals",
+   "difficulty": 3,
+   "statement": "Simplify $\\sqrt[3]{135}$.",
+   "checker": "numeric",
+   "answer": "3*5^(1/3)",
+   "hints": [
+    "Look for a perfect cube factor.",
+    "$135 = 27 \\cdot 5$ and $27 = 3^3$."
+   ],
+   "solution": [
+    "$\\sqrt[3]{135} = \\sqrt[3]{27 \\cdot 5} = \\sqrt[3]{27}\\sqrt[3]{5}$.",
+    "$= 3\\sqrt[3]{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-c215ec",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rewrite $7x^{-1}y^{1}$ using only positive exponents.",
+   "checker": "equiv",
+   "answer": "7*y/x",
+   "hints": [
+    "A negative exponent means a reciprocal: $x^{-m} = 1/x^{m}$.",
+    "Only the factor with the negative exponent moves to the denominator."
+   ],
+   "solution": [
+    "$x^{-1} = \\dfrac{1}{x^{1}}$.",
+    "So $7x^{-1}y^{1} = \\frac{7 y}{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-4677eb",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Rationalize the denominator: $\\dfrac{12}{\\sqrt{5}}$.",
+   "checker": "numeric",
+   "answer": "12*sqrt(5)/5",
+   "hints": [
+    "Multiply numerator and denominator by $\\sqrt{5}$.",
+    "$\\sqrt{5}\\cdot\\sqrt{5} = 5$."
+   ],
+   "solution": [
+    "$\\dfrac{12}{\\sqrt{5}} \\cdot \\dfrac{\\sqrt{5}}{\\sqrt{5}} = \\dfrac{12\\sqrt{5}}{5}$.",
+    "Simplified: $\\frac{12 \\sqrt{5}}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-4418eb",
+   "skill": "exponents-and-radicals",
+   "difficulty": 3,
+   "statement": "Rationalize the denominator: $\\dfrac{1}{\\sqrt{5} + 1}$.",
+   "checker": "numeric",
+   "answer": "(-1+sqrt(5))/4",
+   "hints": [
+    "Multiply top and bottom by the conjugate $\\sqrt{5} - 1$.",
+    "$(\\sqrt{5}+1)(\\sqrt{5}-1) = 5 - 1$."
+   ],
+   "solution": [
+    "$\\dfrac{1}{\\sqrt{5}+1}\\cdot\\dfrac{\\sqrt{5}-1}{\\sqrt{5}-1} = \\dfrac{\\sqrt{5}-1}{4}$.",
+    "Simplified: $\\frac{-1 + \\sqrt{5}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-f94179",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "For $x > 0$, simplify $\\sqrt{75x^{4}}$.",
+   "checker": "equiv",
+   "answer": "5*sqrt(3)*x^2",
+   "hints": [
+    "Split the root over the factors: $\\sqrt{ab} = \\sqrt{a}\\sqrt{b}$.",
+    "$\\sqrt{x^{4}} = x^{2}$ when $x > 0$, and $75 = 25\\cdot3$."
+   ],
+   "solution": [
+    "$\\sqrt{75x^{4}} = \\sqrt{25}\\sqrt{3}\\sqrt{x^{4}}$.",
+    "$= 5 \\sqrt{3} x^{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.1,
+    3
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-3b09cf",
+   "skill": "exponents-and-radicals",
+   "difficulty": 1,
+   "statement": "Which expression equals $\\left(2^{3}\\right)^{4}$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Rule: a power of a power: multiply exponents.",
+    "Try it with small numbers if you are unsure, e.g. $2^2 \\cdot 2^3 = 4 \\cdot 8 = 32 = 2^5$."
+   ],
+   "solution": [
+    "Rule: a power of a power: multiply exponents.",
+    "So the answer is $2^{12}$."
+   ],
+   "verified": true,
+   "choices": [
+    "2^{81}",
+    "2^{12}",
+    "8^{3}",
+    "2^{7}"
+   ]
+  },
+  {
+   "id": "exponents-and-radicals-667d75",
+   "skill": "exponents-and-radicals",
+   "difficulty": 2,
+   "statement": "Solve for $n$: $4^{n - 2} = 64$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Write $64$ as a power of $4$.",
+    "$64 = 4^{3}$, so the exponents must be equal."
+   ],
+   "solution": [
+    "$64 = 4^{3}$.",
+    "Equal bases means equal exponents: $n - 2 = 3$.",
+    "So $n = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponents-and-radicals-cb5388",
+   "skill": "exponents-and-radicals",
+   "difficulty": 1,
+   "statement": "Evaluate $3^{0} - 5^{-1}$.",
+   "checker": "numeric",
+   "answer": "4/5",
+   "hints": [
+    "Any non-zero number to the power 0 is 1.",
+    "$5^{-1} = \\dfrac{1}{5^{1}}$."
+   ],
+   "solution": [
+    "$3^0 = 1$ and $5^{-1} = \\frac{1}{5}$.",
+    "So the value is $1 - \\frac{1}{5} = \\frac{4}{5}$."
+   ],
+   "verified": true
+  }
+ ]
+}

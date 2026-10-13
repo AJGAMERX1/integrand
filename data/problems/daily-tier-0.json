@@ -1,0 +1,1522 @@
+{
+ "skill": "area-by-geometry",
+ "problems": [
+  {
+   "id": "area-by-geometry-a9feb0",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 1$ and above the $x$-axis from $x = -5$ to $x = -3$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "A constant function is a horizontal line, so the region is a rectangle.",
+    "Width $-3 - (-5)$, height $1$."
+   ],
+   "solution": [
+    "Width $= -3 - (-5) = 2$, height $= 1$.",
+    "Area $= 2\\cdot1 = 2$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-96553e",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = \\frac{x}{2}$ and above the $x$-axis from $x = 0$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "25/4",
+   "hints": [
+    "The line passes through the origin, so the region is a right triangle.",
+    "Base $5$; height is the $y$-value at $x = 5$."
+   ],
+   "solution": [
+    "Height at $x = 5$: $y = \\frac{5}{2}$.",
+    "Area $= \\tfrac12\\cdot5\\cdot\\frac{5}{2} = \\frac{25}{4}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-bc89f8",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = \\frac{3 x}{2}$ and above the $x$-axis from $x = 0$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "75/4",
+   "hints": [
+    "The line crosses the $x$-axis at $x = 0$, the left end of the interval, so the region is a triangle.",
+    "Base $5$, height $y(5) = \\frac{15}{2}$."
+   ],
+   "solution": [
+    "$y(0) = 0$ and $y(5) = \\frac{15}{2}$.",
+    "Area $= \\tfrac12\\cdot5\\cdot\\frac{15}{2} = \\frac{75}{4}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-3a110f",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 5 - 2 x$ and above the $x$-axis from $x = -4$ to $x = 1$.",
+   "checker": "numeric",
+   "answer": "40",
+   "hints": [
+    "The region is a trapezoid whose parallel sides are the heights at the two ends.",
+    "$y(-4) = 13$, $y(1) = 3$, width $5$."
+   ],
+   "solution": [
+    "$y(-4) = 13$ and $y(1) = 3$.",
+    "Area $= \\dfrac{13 + 3}{2}\\cdot5 = 40$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-00cefe",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = 6 - \\left|{x}\\right|$ and above the $x$-axis from $x = -6$ to $x = 6$.",
+   "checker": "numeric",
+   "answer": "36",
+   "hints": [
+    "This is an upside-down V (a tent) with its peak on the $y$-axis.",
+    "Base from $-6$ to $6$, height $6$: one triangle."
+   ],
+   "solution": [
+    "Peak at $(0, 6)$; the line hits the axis at $x = \\pm6$.",
+    "Area $= \\tfrac12\\cdot12\\cdot6 = 36$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-8b261d",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Let $y = \\begin{cases} 3 x & 0 \\le x \\le 1 \\\\ 3 & 1 < x \\le 5 \\end{cases}$. Find the area under this graph from $x = 0$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "27/2",
+   "hints": [
+    "The graph rises along a line, then stays flat: a triangle followed by a rectangle.",
+    "Triangle: base $1$, height $3$. Rectangle: width $4$, height $3$."
+   ],
+   "solution": [
+    "Triangle: $\\tfrac12\\cdot1\\cdot3 = \\frac{3}{2}$.",
+    "Rectangle: $4\\cdot3 = 12$.",
+    "Total: $\\frac{27}{2}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-1c087c",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "A line passes through $(0, 1)$ and $(2, 8)$. Find the area under the line and above the $x$-axis from $x = 0$ to $x = 2$.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "The two points are the top corners of a trapezoid.",
+    "Parallel sides $1$ and $8$, width $2$."
+   ],
+   "solution": [
+    "Trapezoid with heights $1$, $8$ and width $2$.",
+    "Area $= \\dfrac{1 + 8}{2}\\cdot2 = 9$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-9e911d",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 6 - 3 x$ and above the $x$-axis from $x = 0$ to $x = 2$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "The line starts at height $6$ and reaches the $x$-axis at $x = 2$.",
+    "That makes a right triangle with the axes."
+   ],
+   "solution": [
+    "$y(0) = 6$ and $y(2) = 0$.",
+    "Area $= \\tfrac12\\cdot2\\cdot6 = 6$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-f2935c",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 2 x + 7$ and above the $x$-axis from $x = -2$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "54",
+   "hints": [
+    "The region is a trapezoid whose parallel sides are the heights at the two ends.",
+    "$y(-2) = 3$, $y(4) = 15$, width $6$."
+   ],
+   "solution": [
+    "$y(-2) = 3$ and $y(4) = 15$.",
+    "Area $= \\dfrac{3 + 15}{2}\\cdot6 = 54$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-203c92",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 1$ and above the $x$-axis from $x = -1$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "A constant function is a horizontal line, so the region is a rectangle.",
+    "Width $5 - (-1)$, height $1$."
+   ],
+   "solution": [
+    "Width $= 5 - (-1) = 6$, height $= 1$.",
+    "Area $= 6\\cdot1 = 6$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-5899ba",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = x$ and above the $x$-axis from $x = 0$ to $x = 8$.",
+   "checker": "numeric",
+   "answer": "32",
+   "hints": [
+    "The line passes through the origin, so the region is a right triangle.",
+    "Base $8$; height is the $y$-value at $x = 8$."
+   ],
+   "solution": [
+    "Height at $x = 8$: $y = 8$.",
+    "Area $= \\tfrac12\\cdot8\\cdot8 = 32$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-1edeb5",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 3 x - 6$ and above the $x$-axis from $x = 2$ to $x = 7$.",
+   "checker": "numeric",
+   "answer": "37.5",
+   "hints": [
+    "The line crosses the $x$-axis at $x = 2$, the left end of the interval, so the region is a triangle.",
+    "Base $5$, height $y(7) = 15$."
+   ],
+   "solution": [
+    "$y(2) = 0$ and $y(7) = 15$.",
+    "Area $= \\tfrac12\\cdot5\\cdot15 = \\frac{75}{2}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-5b67be",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = \\left|{x - 6}\\right|$ and above the $x$-axis from $x = 1$ to $x = 8$.",
+   "checker": "numeric",
+   "answer": "29/2",
+   "hints": [
+    "The V has its corner at $x = 6$; split there.",
+    "Two right triangles with legs $5$ and $2$."
+   ],
+   "solution": [
+    "Left triangle: $\\tfrac12\\cdot5^2 = \\frac{25}{2}$. Right: $\\tfrac12\\cdot2^2 = 2$.",
+    "Total: $\\frac{29}{2}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-d7a819",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Let $y = \\begin{cases} 2 x & 0 \\le x \\le \\frac{3}{2} \\\\ 3 & \\frac{3}{2} < x \\le \\frac{9}{2} \\end{cases}$. Find the area under this graph from $x = 0$ to $x = \\frac{9}{2}$.",
+   "checker": "numeric",
+   "answer": "45/4",
+   "hints": [
+    "The graph rises along a line, then stays flat: a triangle followed by a rectangle.",
+    "Triangle: base $\\frac{3}{2}$, height $3$. Rectangle: width $3$, height $3$."
+   ],
+   "solution": [
+    "Triangle: $\\tfrac12\\cdot\\frac{3}{2}\\cdot3 = \\frac{9}{4}$.",
+    "Rectangle: $3\\cdot3 = 9$.",
+    "Total: $\\frac{45}{4}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-5bc387",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "A line passes through $(-2, 6)$ and $(5, 3)$. Find the area under the line and above the $x$-axis from $x = -2$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "63/2",
+   "hints": [
+    "The two points are the top corners of a trapezoid.",
+    "Parallel sides $6$ and $3$, width $7$."
+   ],
+   "solution": [
+    "Trapezoid with heights $6$, $3$ and width $7$.",
+    "Area $= \\dfrac{6 + 3}{2}\\cdot7 = \\frac{63}{2}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-8b8ab8",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 7 - \\frac{7 x}{5}$ and above the $x$-axis from $x = 0$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "35/2",
+   "hints": [
+    "The line starts at height $7$ and reaches the $x$-axis at $x = 5$.",
+    "That makes a right triangle with the axes."
+   ],
+   "solution": [
+    "$y(0) = 7$ and $y(5) = 0$.",
+    "Area $= \\tfrac12\\cdot5\\cdot7 = \\frac{35}{2}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-9ea0ca",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 9$ and above the $x$-axis from $x = 3$ to $x = 9$.",
+   "checker": "numeric",
+   "answer": "54",
+   "hints": [
+    "A constant function is a horizontal line, so the region is a rectangle.",
+    "Width $9 - (3)$, height $9$."
+   ],
+   "solution": [
+    "Width $= 9 - (3) = 6$, height $= 9$.",
+    "Area $= 6\\cdot9 = 54$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-558fad",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = \\frac{x}{2}$ and above the $x$-axis from $x = 0$ to $x = 3$.",
+   "checker": "numeric",
+   "answer": "9/4",
+   "hints": [
+    "The line passes through the origin, so the region is a right triangle.",
+    "Base $3$; height is the $y$-value at $x = 3$."
+   ],
+   "solution": [
+    "Height at $x = 3$: $y = \\frac{3}{2}$.",
+    "Area $= \\tfrac12\\cdot3\\cdot\\frac{3}{2} = \\frac{9}{4}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-32864a",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = \\frac{x}{2} - \\frac{3}{2}$ and above the $x$-axis from $x = 3$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "The line crosses the $x$-axis at $x = 3$, the left end of the interval, so the region is a triangle.",
+    "Base $2$, height $y(5) = 1$."
+   ],
+   "solution": [
+    "$y(3) = 0$ and $y(5) = 1$.",
+    "Area $= \\tfrac12\\cdot2\\cdot1 = 1$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-79ffc7",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 2 x + 12$ and above the $x$-axis from $x = -4$ to $x = 1$.",
+   "checker": "numeric",
+   "answer": "45",
+   "hints": [
+    "The region is a trapezoid whose parallel sides are the heights at the two ends.",
+    "$y(-4) = 4$, $y(1) = 14$, width $5$."
+   ],
+   "solution": [
+    "$y(-4) = 4$ and $y(1) = 14$.",
+    "Area $= \\dfrac{4 + 14}{2}\\cdot5 = 45$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-28775e",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = |x|$ and above the $x$-axis from $x = -1$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "13",
+   "hints": [
+    "$|x|$ makes a V shape; split the region at $x = 0$ into two right triangles.",
+    "Left triangle: legs $1$ and $1$. Right triangle: legs $5$ and $5$."
+   ],
+   "solution": [
+    "Left: $\\tfrac12\\cdot1^2 = \\frac{1}{2}$. Right: $\\tfrac12\\cdot5^2 = \\frac{25}{2}$.",
+    "Total: $13$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-b4569b",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Let $y = \\begin{cases} x & 0 \\le x \\le 6 \\\\ 6 & 6 < x \\le 9 \\end{cases}$. Find the area under this graph from $x = 0$ to $x = 9$.",
+   "checker": "numeric",
+   "answer": "36",
+   "hints": [
+    "The graph rises along a line, then stays flat: a triangle followed by a rectangle.",
+    "Triangle: base $6$, height $6$. Rectangle: width $3$, height $6$."
+   ],
+   "solution": [
+    "Triangle: $\\tfrac12\\cdot6\\cdot6 = 18$.",
+    "Rectangle: $3\\cdot6 = 18$.",
+    "Total: $36$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-ed73b8",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "A line passes through $(0, 1)$ and $(6, 2)$. Find the area under the line and above the $x$-axis from $x = 0$ to $x = 6$.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "The two points are the top corners of a trapezoid.",
+    "Parallel sides $1$ and $2$, width $6$."
+   ],
+   "solution": [
+    "Trapezoid with heights $1$, $2$ and width $6$.",
+    "Area $= \\dfrac{1 + 2}{2}\\cdot6 = 9$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-d2bad1",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 2 - x$ and above the $x$-axis from $x = 0$ to $x = 2$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "The line starts at height $2$ and reaches the $x$-axis at $x = 2$.",
+    "That makes a right triangle with the axes."
+   ],
+   "solution": [
+    "$y(0) = 2$ and $y(2) = 0$.",
+    "Area $= \\tfrac12\\cdot2\\cdot2 = 2$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-9c5b79",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 2 x + 7$ and above the $x$-axis from $x = -2$ to $x = 0$.",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "The region is a trapezoid whose parallel sides are the heights at the two ends.",
+    "$y(-2) = 3$, $y(0) = 7$, width $2$."
+   ],
+   "solution": [
+    "$y(-2) = 3$ and $y(0) = 7$.",
+    "Area $= \\dfrac{3 + 7}{2}\\cdot2 = 10$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-fe6c8c",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 2$ and above the $x$-axis from $x = -1$ to $x = 3$.",
+   "checker": "numeric",
+   "answer": "8",
+   "hints": [
+    "A constant function is a horizontal line, so the region is a rectangle.",
+    "Width $3 - (-1)$, height $2$."
+   ],
+   "solution": [
+    "Width $= 3 - (-1) = 4$, height $= 2$.",
+    "Area $= 4\\cdot2 = 8$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-0ad849",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = x$ and above the $x$-axis from $x = 0$ to $x = 7$.",
+   "checker": "numeric",
+   "answer": "24.5",
+   "hints": [
+    "The line passes through the origin, so the region is a right triangle.",
+    "Base $7$; height is the $y$-value at $x = 7$."
+   ],
+   "solution": [
+    "Height at $x = 7$: $y = 7$.",
+    "Area $= \\tfrac12\\cdot7\\cdot7 = \\frac{49}{2}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-29cc3d",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = \\frac{x}{2} - \\frac{3}{2}$ and above the $x$-axis from $x = 3$ to $x = 7$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "The line crosses the $x$-axis at $x = 3$, the left end of the interval, so the region is a triangle.",
+    "Base $4$, height $y(7) = 2$."
+   ],
+   "solution": [
+    "$y(3) = 0$ and $y(7) = 2$.",
+    "Area $= \\tfrac12\\cdot4\\cdot2 = 4$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-63c325",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 11 - \\frac{x}{2}$ and above the $x$-axis from $x = -1$ to $x = 3$.",
+   "checker": "numeric",
+   "answer": "42",
+   "hints": [
+    "The region is a trapezoid whose parallel sides are the heights at the two ends.",
+    "$y(-1) = \\frac{23}{2}$, $y(3) = \\frac{19}{2}$, width $4$."
+   ],
+   "solution": [
+    "$y(-1) = \\frac{23}{2}$ and $y(3) = \\frac{19}{2}$.",
+    "Area $= \\dfrac{\\frac{23}{2} + \\frac{19}{2}}{2}\\cdot4 = 42$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-d72248",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = |x|$ and above the $x$-axis from $x = -6$ to $x = 2$.",
+   "checker": "numeric",
+   "answer": "20",
+   "hints": [
+    "$|x|$ makes a V shape; split the region at $x = 0$ into two right triangles.",
+    "Left triangle: legs $6$ and $6$. Right triangle: legs $2$ and $2$."
+   ],
+   "solution": [
+    "Left: $\\tfrac12\\cdot6^2 = 18$. Right: $\\tfrac12\\cdot2^2 = 2$.",
+    "Total: $20$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-b7256a",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Let $y = \\begin{cases} x & 0 \\le x \\le 4 \\\\ 4 & 4 < x \\le 9 \\end{cases}$. Find the area under this graph from $x = 0$ to $x = 9$.",
+   "checker": "numeric",
+   "answer": "28",
+   "hints": [
+    "The graph rises along a line, then stays flat: a triangle followed by a rectangle.",
+    "Triangle: base $4$, height $4$. Rectangle: width $5$, height $4$."
+   ],
+   "solution": [
+    "Triangle: $\\tfrac12\\cdot4\\cdot4 = 8$.",
+    "Rectangle: $5\\cdot4 = 20$.",
+    "Total: $28$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-1f4e9c",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "A line passes through $(0, 8)$ and $(4, 3)$. Find the area under the line and above the $x$-axis from $x = 0$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "22",
+   "hints": [
+    "The two points are the top corners of a trapezoid.",
+    "Parallel sides $8$ and $3$, width $4$."
+   ],
+   "solution": [
+    "Trapezoid with heights $8$, $3$ and width $4$.",
+    "Area $= \\dfrac{8 + 3}{2}\\cdot4 = 22$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-1bf63c",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 5 - \\frac{5 x}{7}$ and above the $x$-axis from $x = 0$ to $x = 7$.",
+   "checker": "numeric",
+   "answer": "35/2",
+   "hints": [
+    "The line starts at height $5$ and reaches the $x$-axis at $x = 7$.",
+    "That makes a right triangle with the axes."
+   ],
+   "solution": [
+    "$y(0) = 5$ and $y(7) = 0$.",
+    "Area $= \\tfrac12\\cdot7\\cdot5 = \\frac{35}{2}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-2cf14a",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 11 - 2 x$ and above the $x$-axis from $x = 2$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "12",
+   "hints": [
+    "The region is a trapezoid whose parallel sides are the heights at the two ends.",
+    "$y(2) = 7$, $y(5) = 1$, width $3$."
+   ],
+   "solution": [
+    "$y(2) = 7$ and $y(5) = 1$.",
+    "Area $= \\dfrac{7 + 1}{2}\\cdot3 = 12$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-97b625",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 4$ and above the $x$-axis from $x = 0$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "A constant function is a horizontal line, so the region is a rectangle.",
+    "Width $4 - (0)$, height $4$."
+   ],
+   "solution": [
+    "Width $= 4 - (0) = 4$, height $= 4$.",
+    "Area $= 4\\cdot4 = 16$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-bc1f98",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = \\frac{2 x}{3}$ and above the $x$-axis from $x = 0$ to $x = 1$.",
+   "checker": "numeric",
+   "answer": "1/3",
+   "hints": [
+    "The line passes through the origin, so the region is a right triangle.",
+    "Base $1$; height is the $y$-value at $x = 1$."
+   ],
+   "solution": [
+    "Height at $x = 1$: $y = \\frac{2}{3}$.",
+    "Area $= \\tfrac12\\cdot1\\cdot\\frac{2}{3} = \\frac{1}{3}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-08695f",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = \\frac{x}{2} - 1$ and above the $x$-axis from $x = 2$ to $x = 8$.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "The line crosses the $x$-axis at $x = 2$, the left end of the interval, so the region is a triangle.",
+    "Base $6$, height $y(8) = 3$."
+   ],
+   "solution": [
+    "$y(2) = 0$ and $y(8) = 3$.",
+    "Area $= \\tfrac12\\cdot6\\cdot3 = 9$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-efabaa",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = x + 9$ and above the $x$-axis from $x = 0$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "44",
+   "hints": [
+    "The region is a trapezoid whose parallel sides are the heights at the two ends.",
+    "$y(0) = 9$, $y(4) = 13$, width $4$."
+   ],
+   "solution": [
+    "$y(0) = 9$ and $y(4) = 13$.",
+    "Area $= \\dfrac{9 + 13}{2}\\cdot4 = 44$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-4c2b25",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = 7 - \\left|{x}\\right|$ and above the $x$-axis from $x = -7$ to $x = 7$.",
+   "checker": "numeric",
+   "answer": "49",
+   "hints": [
+    "This is an upside-down V (a tent) with its peak on the $y$-axis.",
+    "Base from $-7$ to $7$, height $7$: one triangle."
+   ],
+   "solution": [
+    "Peak at $(0, 7)$; the line hits the axis at $x = \\pm7$.",
+    "Area $= \\tfrac12\\cdot14\\cdot7 = 49$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-e89086",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Let $y = \\begin{cases} 2 x & 0 \\le x \\le 5 \\\\ 20 - 2 x & 5 < x \\le 10 \\end{cases}$. Find the area under this graph from $x = 0$ to $x = 10$.",
+   "checker": "numeric",
+   "answer": "50",
+   "hints": [
+    "Sketch both pieces: together they form a triangle with its peak in the middle.",
+    "Peak at $x = 5$ with height $10$; base $10$."
+   ],
+   "solution": [
+    "Height at $x = 5$: $10$. Base: $10$.",
+    "Area $= \\tfrac12\\cdot10\\cdot10 = 50$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-a9b997",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "A line passes through $(-2, 2)$ and $(2, 3)$. Find the area under the line and above the $x$-axis from $x = -2$ to $x = 2$.",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "The two points are the top corners of a trapezoid.",
+    "Parallel sides $2$ and $3$, width $4$."
+   ],
+   "solution": [
+    "Trapezoid with heights $2$, $3$ and width $4$.",
+    "Area $= \\dfrac{2 + 3}{2}\\cdot4 = 10$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-330cd5",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 4 - \\frac{2 x}{3}$ and above the $x$-axis from $x = 0$ to $x = 6$.",
+   "checker": "numeric",
+   "answer": "12",
+   "hints": [
+    "The line starts at height $4$ and reaches the $x$-axis at $x = 6$.",
+    "That makes a right triangle with the axes."
+   ],
+   "solution": [
+    "$y(0) = 4$ and $y(6) = 0$.",
+    "Area $= \\tfrac12\\cdot6\\cdot4 = 12$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-89bf2a",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 12$ and above the $x$-axis from $x = -5$ to $x = 1$.",
+   "checker": "numeric",
+   "answer": "72",
+   "hints": [
+    "A constant function is a horizontal line, so the region is a rectangle.",
+    "Width $1 - (-5)$, height $12$."
+   ],
+   "solution": [
+    "Width $= 1 - (-5) = 6$, height $= 12$.",
+    "Area $= 6\\cdot12 = 72$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-76d8d2",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = \\frac{3 x}{2}$ and above the $x$-axis from $x = 0$ to $x = 9$.",
+   "checker": "numeric",
+   "answer": "243/4",
+   "hints": [
+    "The line passes through the origin, so the region is a right triangle.",
+    "Base $9$; height is the $y$-value at $x = 9$."
+   ],
+   "solution": [
+    "Height at $x = 9$: $y = \\frac{27}{2}$.",
+    "Area $= \\tfrac12\\cdot9\\cdot\\frac{27}{2} = \\frac{243}{4}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-4040a8",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 3 x - 3$ and above the $x$-axis from $x = 1$ to $x = 2$.",
+   "checker": "numeric",
+   "answer": "1.5",
+   "hints": [
+    "The line crosses the $x$-axis at $x = 1$, the left end of the interval, so the region is a triangle.",
+    "Base $1$, height $y(2) = 3$."
+   ],
+   "solution": [
+    "$y(1) = 0$ and $y(2) = 3$.",
+    "Area $= \\tfrac12\\cdot1\\cdot3 = \\frac{3}{2}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-19bc3a",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = 5 - \\left|{x}\\right|$ and above the $x$-axis from $x = -5$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "25",
+   "hints": [
+    "This is an upside-down V (a tent) with its peak on the $y$-axis.",
+    "Base from $-5$ to $5$, height $5$: one triangle."
+   ],
+   "solution": [
+    "Peak at $(0, 5)$; the line hits the axis at $x = \\pm5$.",
+    "Area $= \\tfrac12\\cdot10\\cdot5 = 25$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-d6b4f2",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Let $y = \\begin{cases} x & 0 \\le x \\le 2 \\\\ 4 - x & 2 < x \\le 4 \\end{cases}$. Find the area under this graph from $x = 0$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Sketch both pieces: together they form a triangle with its peak in the middle.",
+    "Peak at $x = 2$ with height $2$; base $4$."
+   ],
+   "solution": [
+    "Height at $x = 2$: $2$. Base: $4$.",
+    "Area $= \\tfrac12\\cdot4\\cdot2 = 4$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-6ba148",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "A line passes through $(-1, 5)$ and $(4, 7)$. Find the area under the line and above the $x$-axis from $x = -1$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "30",
+   "hints": [
+    "The two points are the top corners of a trapezoid.",
+    "Parallel sides $5$ and $7$, width $5$."
+   ],
+   "solution": [
+    "Trapezoid with heights $5$, $7$ and width $5$.",
+    "Area $= \\dfrac{5 + 7}{2}\\cdot5 = 30$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-4098c0",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 2 - \\frac{2 x}{3}$ and above the $x$-axis from $x = 0$ to $x = 3$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "The line starts at height $2$ and reaches the $x$-axis at $x = 3$.",
+    "That makes a right triangle with the axes."
+   ],
+   "solution": [
+    "$y(0) = 2$ and $y(3) = 0$.",
+    "Area $= \\tfrac12\\cdot3\\cdot2 = 3$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-e3620a",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = \\frac{x}{2} + 9$ and above the $x$-axis from $x = 0$ to $x = 3$.",
+   "checker": "numeric",
+   "answer": "117/4",
+   "hints": [
+    "The region is a trapezoid whose parallel sides are the heights at the two ends.",
+    "$y(0) = 9$, $y(3) = \\frac{21}{2}$, width $3$."
+   ],
+   "solution": [
+    "$y(0) = 9$ and $y(3) = \\frac{21}{2}$.",
+    "Area $= \\dfrac{9 + \\frac{21}{2}}{2}\\cdot3 = \\frac{117}{4}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-a9644e",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 11$ and above the $x$-axis from $x = 2$ to $x = 6$.",
+   "checker": "numeric",
+   "answer": "44",
+   "hints": [
+    "A constant function is a horizontal line, so the region is a rectangle.",
+    "Width $6 - (2)$, height $11$."
+   ],
+   "solution": [
+    "Width $= 6 - (2) = 4$, height $= 11$.",
+    "Area $= 4\\cdot11 = 44$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-98b51d",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 2 x$ and above the $x$-axis from $x = 0$ to $x = 2$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "The line passes through the origin, so the region is a right triangle.",
+    "Base $2$; height is the $y$-value at $x = 2$."
+   ],
+   "solution": [
+    "Height at $x = 2$: $y = 4$.",
+    "Area $= \\tfrac12\\cdot2\\cdot4 = 4$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-cc58b3",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = x - 5$ and above the $x$-axis from $x = 5$ to $x = 10$.",
+   "checker": "numeric",
+   "answer": "12.5",
+   "hints": [
+    "The line crosses the $x$-axis at $x = 5$, the left end of the interval, so the region is a triangle.",
+    "Base $5$, height $y(10) = 5$."
+   ],
+   "solution": [
+    "$y(5) = 0$ and $y(10) = 5$.",
+    "Area $= \\tfrac12\\cdot5\\cdot5 = \\frac{25}{2}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-843f89",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = \\frac{3 x}{2} + 3$ and above the $x$-axis from $x = 1$ to $x = 6$.",
+   "checker": "numeric",
+   "answer": "165/4",
+   "hints": [
+    "The region is a trapezoid whose parallel sides are the heights at the two ends.",
+    "$y(1) = \\frac{9}{2}$, $y(6) = 12$, width $5$."
+   ],
+   "solution": [
+    "$y(1) = \\frac{9}{2}$ and $y(6) = 12$.",
+    "Area $= \\dfrac{\\frac{9}{2} + 12}{2}\\cdot5 = \\frac{165}{4}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-b4a511",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = |x|$ and above the $x$-axis from $x = -4$ to $x = 6$.",
+   "checker": "numeric",
+   "answer": "26",
+   "hints": [
+    "$|x|$ makes a V shape; split the region at $x = 0$ into two right triangles.",
+    "Left triangle: legs $4$ and $4$. Right triangle: legs $6$ and $6$."
+   ],
+   "solution": [
+    "Left: $\\tfrac12\\cdot4^2 = 8$. Right: $\\tfrac12\\cdot6^2 = 18$.",
+    "Total: $26$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-09f5d5",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Let $y = \\begin{cases} 2 x & 0 \\le x \\le \\frac{5}{2} \\\\ 5 & \\frac{5}{2} < x \\le \\frac{7}{2} \\end{cases}$. Find the area under this graph from $x = 0$ to $x = \\frac{7}{2}$.",
+   "checker": "numeric",
+   "answer": "45/4",
+   "hints": [
+    "The graph rises along a line, then stays flat: a triangle followed by a rectangle.",
+    "Triangle: base $\\frac{5}{2}$, height $5$. Rectangle: width $1$, height $5$."
+   ],
+   "solution": [
+    "Triangle: $\\tfrac12\\cdot\\frac{5}{2}\\cdot5 = \\frac{25}{4}$.",
+    "Rectangle: $1\\cdot5 = 5$.",
+    "Total: $\\frac{45}{4}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-8c1b42",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "A line passes through $(1, 8)$ and $(5, 4)$. Find the area under the line and above the $x$-axis from $x = 1$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "24",
+   "hints": [
+    "The two points are the top corners of a trapezoid.",
+    "Parallel sides $8$ and $4$, width $4$."
+   ],
+   "solution": [
+    "Trapezoid with heights $8$, $4$ and width $4$.",
+    "Area $= \\dfrac{8 + 4}{2}\\cdot4 = 24$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-eeb738",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 8 - x$ and above the $x$-axis from $x = 0$ to $x = 8$.",
+   "checker": "numeric",
+   "answer": "32",
+   "hints": [
+    "The line starts at height $8$ and reaches the $x$-axis at $x = 8$.",
+    "That makes a right triangle with the axes."
+   ],
+   "solution": [
+    "$y(0) = 8$ and $y(8) = 0$.",
+    "Area $= \\tfrac12\\cdot8\\cdot8 = 32$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-4c3f30",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = \\frac{x}{2} + 10$ and above the $x$-axis from $x = -4$ to $x = 3$.",
+   "checker": "numeric",
+   "answer": "273/4",
+   "hints": [
+    "The region is a trapezoid whose parallel sides are the heights at the two ends.",
+    "$y(-4) = 8$, $y(3) = \\frac{23}{2}$, width $7$."
+   ],
+   "solution": [
+    "$y(-4) = 8$ and $y(3) = \\frac{23}{2}$.",
+    "Area $= \\dfrac{8 + \\frac{23}{2}}{2}\\cdot7 = \\frac{273}{4}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-f0f822",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 4$ and above the $x$-axis from $x = 4$ to $x = 13$.",
+   "checker": "numeric",
+   "answer": "36",
+   "hints": [
+    "A constant function is a horizontal line, so the region is a rectangle.",
+    "Width $13 - (4)$, height $4$."
+   ],
+   "solution": [
+    "Width $= 13 - (4) = 9$, height $= 4$.",
+    "Area $= 9\\cdot4 = 36$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-083788",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 4 x$ and above the $x$-axis from $x = 0$ to $x = 7$.",
+   "checker": "numeric",
+   "answer": "98",
+   "hints": [
+    "The line passes through the origin, so the region is a right triangle.",
+    "Base $7$; height is the $y$-value at $x = 7$."
+   ],
+   "solution": [
+    "Height at $x = 7$: $y = 28$.",
+    "Area $= \\tfrac12\\cdot7\\cdot28 = 98$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-524ea7",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = x - 5$ and above the $x$-axis from $x = 5$ to $x = 12$.",
+   "checker": "numeric",
+   "answer": "24.5",
+   "hints": [
+    "The line crosses the $x$-axis at $x = 5$, the left end of the interval, so the region is a triangle.",
+    "Base $7$, height $y(12) = 7$."
+   ],
+   "solution": [
+    "$y(5) = 0$ and $y(12) = 7$.",
+    "Area $= \\tfrac12\\cdot7\\cdot7 = \\frac{49}{2}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-f9054d",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 6 - x$ and above the $x$-axis from $x = 2$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "7.5",
+   "hints": [
+    "The region is a trapezoid whose parallel sides are the heights at the two ends.",
+    "$y(2) = 4$, $y(5) = 1$, width $3$."
+   ],
+   "solution": [
+    "$y(2) = 4$ and $y(5) = 1$.",
+    "Area $= \\dfrac{4 + 1}{2}\\cdot3 = \\frac{15}{2}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-dd4922",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = |x|$ and above the $x$-axis from $x = -5$ to $x = 3$.",
+   "checker": "numeric",
+   "answer": "17",
+   "hints": [
+    "$|x|$ makes a V shape; split the region at $x = 0$ into two right triangles.",
+    "Left triangle: legs $5$ and $5$. Right triangle: legs $3$ and $3$."
+   ],
+   "solution": [
+    "Left: $\\tfrac12\\cdot5^2 = \\frac{25}{2}$. Right: $\\tfrac12\\cdot3^2 = \\frac{9}{2}$.",
+    "Total: $17$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-6ef731",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Let $y = \\begin{cases} \\frac{x}{2} & 0 \\le x \\le 5 \\\\ 5 - \\frac{x}{2} & 5 < x \\le 10 \\end{cases}$. Find the area under this graph from $x = 0$ to $x = 10$.",
+   "checker": "numeric",
+   "answer": "25/2",
+   "hints": [
+    "Sketch both pieces: together they form a triangle with its peak in the middle.",
+    "Peak at $x = 5$ with height $\\frac{5}{2}$; base $10$."
+   ],
+   "solution": [
+    "Height at $x = 5$: $\\frac{5}{2}$. Base: $10$.",
+    "Area $= \\tfrac12\\cdot10\\cdot\\frac{5}{2} = \\frac{25}{2}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-4693c8",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "A line passes through $(2, 4)$ and $(8, 2)$. Find the area under the line and above the $x$-axis from $x = 2$ to $x = 8$.",
+   "checker": "numeric",
+   "answer": "18",
+   "hints": [
+    "The two points are the top corners of a trapezoid.",
+    "Parallel sides $4$ and $2$, width $6$."
+   ],
+   "solution": [
+    "Trapezoid with heights $4$, $2$ and width $6$.",
+    "Area $= \\dfrac{4 + 2}{2}\\cdot6 = 18$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-13ae77",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 5 - \\frac{5 x}{6}$ and above the $x$-axis from $x = 0$ to $x = 6$.",
+   "checker": "numeric",
+   "answer": "15",
+   "hints": [
+    "The line starts at height $5$ and reaches the $x$-axis at $x = 6$.",
+    "That makes a right triangle with the axes."
+   ],
+   "solution": [
+    "$y(0) = 5$ and $y(6) = 0$.",
+    "Area $= \\tfrac12\\cdot6\\cdot5 = 15$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-2c35d7",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 3$ and above the $x$-axis from $x = -3$ to $x = -2$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "A constant function is a horizontal line, so the region is a rectangle.",
+    "Width $-2 - (-3)$, height $3$."
+   ],
+   "solution": [
+    "Width $= -2 - (-3) = 1$, height $= 3$.",
+    "Area $= 1\\cdot3 = 3$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-c3ded9",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 2 x$ and above the $x$-axis from $x = 0$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "25",
+   "hints": [
+    "The line passes through the origin, so the region is a right triangle.",
+    "Base $5$; height is the $y$-value at $x = 5$."
+   ],
+   "solution": [
+    "Height at $x = 5$: $y = 10$.",
+    "Area $= \\tfrac12\\cdot5\\cdot10 = 25$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-c81145",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = \\frac{x}{2} - 2$ and above the $x$-axis from $x = 4$ to $x = 6$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "The line crosses the $x$-axis at $x = 4$, the left end of the interval, so the region is a triangle.",
+    "Base $2$, height $y(6) = 1$."
+   ],
+   "solution": [
+    "$y(4) = 0$ and $y(6) = 1$.",
+    "Area $= \\tfrac12\\cdot2\\cdot1 = 1$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-97010a",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = x + 3$ and above the $x$-axis from $x = 0$ to $x = 6$.",
+   "checker": "numeric",
+   "answer": "36",
+   "hints": [
+    "The region is a trapezoid whose parallel sides are the heights at the two ends.",
+    "$y(0) = 3$, $y(6) = 9$, width $6$."
+   ],
+   "solution": [
+    "$y(0) = 3$ and $y(6) = 9$.",
+    "Area $= \\dfrac{3 + 9}{2}\\cdot6 = 36$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "area-by-geometry-a4ca6f",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = \\left|{x - 4}\\right|$ and above the $x$-axis from $x = 2$ to $x = 7$.",
+   "checker": "numeric",
+   "answer": "13/2",
+   "hints": [
+    "The V has its corner at $x = 4$; split there.",
+    "Two right triangles with legs $2$ and $3$."
+   ],
+   "solution": [
+    "Left triangle: $\\tfrac12\\cdot2^2 = 2$. Right: $\\tfrac12\\cdot3^2 = \\frac{9}{2}$.",
+    "Total: $\\frac{13}{2}$."
+   ],
+   "verified": true,
+   "tier": 0,
+   "tags": [
+    "daily"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1427 @@
+{
+ "skill": "areas-and-distances",
+ "problems": [
+  {
+   "id": "areas-and-distances-c0aecd",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\sum_{k=1}^{3} k^3$.",
+   "checker": "numeric",
+   "answer": "36",
+   "hints": [
+    "Substitute $k = 1, \\ldots, 3$ and add.",
+    "The first term is $1$."
+   ],
+   "solution": [
+    "Terms: $1 + 8 + 27$.",
+    "Sum $= 36$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-fa6801",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[-3, 2]$ is divided into $n = 8$ equal subintervals for a Riemann sum. What is the width $\\Delta x$ of each subinterval?",
+   "checker": "numeric",
+   "answer": "5/8",
+   "hints": [
+    "$\\Delta x = \\dfrac{b - a}{n}$.",
+    "$\\dfrac{2 - (-3)}{8}$."
+   ],
+   "solution": [
+    "$\\Delta x = \\dfrac{2 - (-3)}{8} = \\dfrac{5}{8}$.",
+    "$= \\frac{5}{8}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-d8a885",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "For a Riemann sum on $[1, 9]$ with $n = 3$ equal subintervals, find the midpoint $\\bar{x}_{1}$ of the first subinterval.",
+   "checker": "numeric",
+   "answer": "7/3",
+   "hints": [
+    "$\\Delta x = \\frac{8}{3}$; the subintervals start at $x_0 = 1$.",
+    "$x_i = a + i\\,\\Delta x$; a midpoint is halfway between $x_{i-1}$ and $x_i$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{8}{3}$, so $x_i = 1 + i\\cdot\\frac{8}{3}$.",
+    "The requested point is $\\frac{7}{3}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-c3d485",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "On $[1, 3]$, is the right-endpoint Riemann sum for $f(x) = \\frac{1}{x}$ (with $n = 2$) an overestimate or an underestimate of the true area?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Decide whether $f$ is increasing or decreasing on $[1, 3]$.",
+    "For an increasing function, left endpoints sit below the curve (underestimate) and right endpoints above (overestimate); the reverse for a decreasing function."
+   ],
+   "solution": [
+    "$f$ is decreasing on $[1, 3]$.",
+    "So the right-endpoint rectangles are an underestimate (here $\\frac{5}{6}$ versus the true area $\\ln{\\left(3 \\right)}$)."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{an overestimate}",
+    "\\text{an underestimate}",
+    "\\text{exact}"
+   ],
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-57add8",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Which computation is the right-endpoint Riemann sum for $f(x) = x^{2}$ on $[0, 2]$ with $n = 4$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "$\\Delta x = \\frac{1}{2}$ and the right endpoints are $\\frac{1}{2}, 1, \\frac{3}{2}, 2$.",
+    "Each term is $f(\\text{sample point})\\cdot\\Delta x$; factor out $\\Delta x$."
+   ],
+   "solution": [
+    "Right endpoints: $\\frac{1}{2}, 1, \\frac{3}{2}, 2$; heights $\\frac{1}{4}, 1, \\frac{9}{4}, 4$.",
+    "Sum $= \\frac{1}{2}(\\frac{1}{4} + 1 + \\frac{9}{4} + 4) = \\frac{15}{4}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\frac{1}{2}\\left(\\frac{1}{4} + 1 + \\frac{9}{4} + 4\\right)",
+    "\\frac{1}{2}\\left(0 + \\frac{1}{4} + 1 + \\frac{9}{4}\\right)",
+    "1\\left(\\frac{1}{4} + 1 + \\frac{9}{4} + 4\\right)",
+    "\\frac{1}{2}\\left(\\frac{1}{2} + 1 + \\frac{3}{2} + 2\\right)"
+   ],
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-48d91a",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Use $\\sum_{k=1}^{n} k^2 = \\dfrac{n(n+1)(2n+1)}{6}$ to evaluate $\\sum_{k=1}^{8} k^2$.",
+   "checker": "numeric",
+   "answer": "204",
+   "hints": [
+    "Set $n = 8$.",
+    "$\\dfrac{8\\cdot9\\cdot17}{6}$."
+   ],
+   "solution": [
+    "$\\dfrac{8(9)(17)}{6} = 204$.",
+    "Check with a small case, such as $n = 2$: $1 + 4 = 5$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-baac23",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Approximate the area under $f(x) = 2 x + 1$ on $[0, 4]$ using the left-endpoint Riemann sum with $n = 5$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "84/5",
+   "hints": [
+    "$\\Delta x = \\dfrac{4 - 0}{5} = \\frac{4}{5}$; the sample points are $0, \\frac{4}{5}, \\frac{8}{5}, \\frac{12}{5}, \\frac{16}{5}$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{4}{5}$, sample points $0, \\frac{4}{5}, \\frac{8}{5}, \\frac{12}{5}, \\frac{16}{5}$.",
+    "Heights: $1 + \\frac{13}{5} + \\frac{21}{5} + \\frac{29}{5} + \\frac{37}{5} = 21$.",
+    "Sum $= \\frac{4}{5}\\cdot21 = \\frac{84}{5}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-efe658",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Approximate the area under $f(x) = x^{2}$ on $[0, 3]$ using the left-endpoint Riemann sum with $n = 3$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "$\\Delta x = \\dfrac{3 - 0}{3} = 1$; the sample points are $0, 1, 2$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = 1$, sample points $0, 1, 2$.",
+    "Heights: $0 + 1 + 4 = 5$.",
+    "Sum $= 1\\cdot5 = 5$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-9fc1e6",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Approximate the area under $f(x) = x^{2} + 1$ on $[0, 2]$ using the right-endpoint Riemann sum with $n = 4$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "23/4",
+   "hints": [
+    "$\\Delta x = \\dfrac{2 - 0}{4} = \\frac{1}{2}$; the sample points are $\\frac{1}{2}, 1, \\frac{3}{2}, 2$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{2}$, sample points $\\frac{1}{2}, 1, \\frac{3}{2}, 2$.",
+    "Heights: $\\frac{5}{4} + 2 + \\frac{13}{4} + 5 = \\frac{23}{2}$.",
+    "Sum $= \\frac{1}{2}\\cdot\\frac{23}{2} = \\frac{23}{4}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-9d6a4e",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\sum_{k=1}^{2} k^3$.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "Substitute $k = 1, \\ldots, 2$ and add.",
+    "The first term is $1$."
+   ],
+   "solution": [
+    "Terms: $1 + 8$.",
+    "Sum $= 9$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-0930da",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[-1, 2]$ is divided into $n = 3$ equal subintervals for a Riemann sum. What is the width $\\Delta x$ of each subinterval?",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "$\\Delta x = \\dfrac{b - a}{n}$.",
+    "$\\dfrac{2 - (-1)}{3}$."
+   ],
+   "solution": [
+    "$\\Delta x = \\dfrac{2 - (-1)}{3} = \\dfrac{3}{3}$.",
+    "$= 1$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-f7407a",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "For a Riemann sum on $[2, 5]$ with $n = 5$ equal subintervals, find the right endpoint $x_{2}$ of the second subinterval.",
+   "checker": "numeric",
+   "answer": "16/5",
+   "hints": [
+    "$\\Delta x = \\frac{3}{5}$; the subintervals start at $x_0 = 2$.",
+    "$x_i = a + i\\,\\Delta x$; a midpoint is halfway between $x_{i-1}$ and $x_i$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{3}{5}$, so $x_i = 2 + i\\cdot\\frac{3}{5}$.",
+    "The requested point is $\\frac{16}{5}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-42347d",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "On $[0, 4]$, is the right-endpoint Riemann sum for $f(x) = 4 - x$ (with $n = 2$) an overestimate or an underestimate of the true area?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Decide whether $f$ is increasing or decreasing on $[0, 4]$.",
+    "For an increasing function, left endpoints sit below the curve (underestimate) and right endpoints above (overestimate); the reverse for a decreasing function."
+   ],
+   "solution": [
+    "$f$ is decreasing on $[0, 4]$.",
+    "So the right-endpoint rectangles are an underestimate (here $4$ versus the true area $8$)."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{an overestimate}",
+    "\\text{an underestimate}",
+    "\\text{exact}"
+   ],
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-700ed7",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Use $\\sum_{k=1}^{n} k = \\dfrac{n(n+1)}{2}$ to evaluate $\\sum_{k=1}^{20} k$.",
+   "checker": "numeric",
+   "answer": "210",
+   "hints": [
+    "Set $n = 20$.",
+    "$\\dfrac{20\\cdot21}{2}$."
+   ],
+   "solution": [
+    "$\\dfrac{20(21)}{2} = 210$.",
+    "This formula is what makes Riemann sums with many rectangles manageable."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-5d03c5",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Approximate the area under $f(x) = 2 x + 1$ on $[0, 4]$ using the right-endpoint Riemann sum with $n = 3$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "76/3",
+   "hints": [
+    "$\\Delta x = \\dfrac{4 - 0}{3} = \\frac{4}{3}$; the sample points are $\\frac{4}{3}, \\frac{8}{3}, 4$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{4}{3}$, sample points $\\frac{4}{3}, \\frac{8}{3}, 4$.",
+    "Heights: $\\frac{11}{3} + \\frac{19}{3} + 9 = 19$.",
+    "Sum $= \\frac{4}{3}\\cdot19 = \\frac{76}{3}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-836fc0",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Approximate the area under $f(x) = x^{2} + 1$ on $[0, 2]$ using the midpoint Riemann sum with $n = 2$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "9/2",
+   "hints": [
+    "$\\Delta x = \\dfrac{2 - 0}{2} = 1$; the sample points are $\\frac{1}{2}, \\frac{3}{2}$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = 1$, sample points $\\frac{1}{2}, \\frac{3}{2}$.",
+    "Heights: $\\frac{5}{4} + \\frac{13}{4} = \\frac{9}{2}$.",
+    "Sum $= 1\\cdot\\frac{9}{2} = \\frac{9}{2}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-d6d554",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\sum_{k=1}^{3} 3 k$.",
+   "checker": "numeric",
+   "answer": "18",
+   "hints": [
+    "Substitute $k = 1, \\ldots, 3$ and add.",
+    "The first term is $3$."
+   ],
+   "solution": [
+    "Terms: $3 + 6 + 9$.",
+    "Sum $= 18$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-e32734",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[0, 9]$ is divided into $n = 2$ equal subintervals for a Riemann sum. What is the width $\\Delta x$ of each subinterval?",
+   "checker": "numeric",
+   "answer": "9/2",
+   "hints": [
+    "$\\Delta x = \\dfrac{b - a}{n}$.",
+    "$\\dfrac{9 - (0)}{2}$."
+   ],
+   "solution": [
+    "$\\Delta x = \\dfrac{9 - (0)}{2} = \\dfrac{9}{2}$.",
+    "$= \\frac{9}{2}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-a160fd",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "For a Riemann sum on $[1, 3]$ with $n = 3$ equal subintervals, find the right endpoint $x_{2}$ of the second subinterval.",
+   "checker": "numeric",
+   "answer": "7/3",
+   "hints": [
+    "$\\Delta x = \\frac{2}{3}$; the subintervals start at $x_0 = 1$.",
+    "$x_i = a + i\\,\\Delta x$; a midpoint is halfway between $x_{i-1}$ and $x_i$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{2}{3}$, so $x_i = 1 + i\\cdot\\frac{2}{3}$.",
+    "The requested point is $\\frac{7}{3}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-e73027",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "On $[0, 3]$, is the right-endpoint Riemann sum for $f(x) = 2 x + 1$ (with $n = 2$) an overestimate or an underestimate of the true area?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Decide whether $f$ is increasing or decreasing on $[0, 3]$.",
+    "For an increasing function, left endpoints sit below the curve (underestimate) and right endpoints above (overestimate); the reverse for a decreasing function."
+   ],
+   "solution": [
+    "$f$ is increasing on $[0, 3]$.",
+    "So the right-endpoint rectangles are an overestimate (here $\\frac{33}{2}$ versus the true area $12$)."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{an overestimate}",
+    "\\text{an underestimate}",
+    "\\text{exact}"
+   ],
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-e274f8",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Use $\\sum_{k=1}^{n} k = \\dfrac{n(n+1)}{2}$ to evaluate $\\sum_{k=1}^{25} k$.",
+   "checker": "numeric",
+   "answer": "325",
+   "hints": [
+    "Set $n = 25$.",
+    "$\\dfrac{25\\cdot26}{2}$."
+   ],
+   "solution": [
+    "$\\dfrac{25(26)}{2} = 325$.",
+    "This formula is what makes Riemann sums with many rectangles manageable."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-15aa0d",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Approximate the area under $f(x) = x^{2}$ on $[0, 3]$ using the left-endpoint Riemann sum with $n = 5$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "162/25",
+   "hints": [
+    "$\\Delta x = \\dfrac{3 - 0}{5} = \\frac{3}{5}$; the sample points are $0, \\frac{3}{5}, \\frac{6}{5}, \\frac{9}{5}, \\frac{12}{5}$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{3}{5}$, sample points $0, \\frac{3}{5}, \\frac{6}{5}, \\frac{9}{5}, \\frac{12}{5}$.",
+    "Heights: $0 + \\frac{9}{25} + \\frac{36}{25} + \\frac{81}{25} + \\frac{144}{25} = \\frac{54}{5}$.",
+    "Sum $= \\frac{3}{5}\\cdot\\frac{54}{5} = \\frac{162}{25}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-1f27c8",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Approximate the area under $f(x) = x^{2} + 1$ on $[0, 2]$ using the left-endpoint Riemann sum with $n = 4$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "15/4",
+   "hints": [
+    "$\\Delta x = \\dfrac{2 - 0}{4} = \\frac{1}{2}$; the sample points are $0, \\frac{1}{2}, 1, \\frac{3}{2}$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{2}$, sample points $0, \\frac{1}{2}, 1, \\frac{3}{2}$.",
+    "Heights: $1 + \\frac{5}{4} + 2 + \\frac{13}{4} = \\frac{15}{2}$.",
+    "Sum $= \\frac{1}{2}\\cdot\\frac{15}{2} = \\frac{15}{4}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-d2a39c",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\sum_{k=1}^{5} 4 k + 1$.",
+   "checker": "numeric",
+   "answer": "65",
+   "hints": [
+    "Substitute $k = 1, \\ldots, 5$ and add.",
+    "The first term is $5$."
+   ],
+   "solution": [
+    "Terms: $5 + 9 + 13 + 17 + 21$.",
+    "Sum $= 65$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-f2c018",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[2, 9]$ is divided into $n = 2$ equal subintervals for a Riemann sum. What is the width $\\Delta x$ of each subinterval?",
+   "checker": "numeric",
+   "answer": "7/2",
+   "hints": [
+    "$\\Delta x = \\dfrac{b - a}{n}$.",
+    "$\\dfrac{9 - (2)}{2}$."
+   ],
+   "solution": [
+    "$\\Delta x = \\dfrac{9 - (2)}{2} = \\dfrac{7}{2}$.",
+    "$= \\frac{7}{2}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-074fa8",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "For a Riemann sum on $[-1, 3]$ with $n = 6$ equal subintervals, find the left endpoint $x_{3}$ of the fourth subinterval.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "$\\Delta x = \\frac{2}{3}$; the subintervals start at $x_0 = -1$.",
+    "$x_i = a + i\\,\\Delta x$; a midpoint is halfway between $x_{i-1}$ and $x_i$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{2}{3}$, so $x_i = -1 + i\\cdot\\frac{2}{3}$.",
+    "The requested point is $1$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-97cac7",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "On $[0, 2]$, is the right-endpoint Riemann sum for $f(x) = 5 - x^{2}$ (with $n = 4$) an overestimate or an underestimate of the true area?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Decide whether $f$ is increasing or decreasing on $[0, 2]$.",
+    "For an increasing function, left endpoints sit below the curve (underestimate) and right endpoints above (overestimate); the reverse for a decreasing function."
+   ],
+   "solution": [
+    "$f$ is decreasing on $[0, 2]$.",
+    "So the right-endpoint rectangles are an underestimate (here $\\frac{25}{4}$ versus the true area $\\frac{22}{3}$)."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{an overestimate}",
+    "\\text{an underestimate}",
+    "\\text{exact}"
+   ],
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-1fa5cf",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Use $\\sum_{k=1}^{n} k^2 = \\dfrac{n(n+1)(2n+1)}{6}$ to evaluate $\\sum_{k=1}^{10} k^2$.",
+   "checker": "numeric",
+   "answer": "385",
+   "hints": [
+    "Set $n = 10$.",
+    "$\\dfrac{10\\cdot11\\cdot21}{6}$."
+   ],
+   "solution": [
+    "$\\dfrac{10(11)(21)}{6} = 385$.",
+    "Check with a small case, such as $n = 2$: $1 + 4 = 5$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-a5bc95",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Approximate the area under $f(x) = x^{2}$ on $[1, 3]$ using the left-endpoint Riemann sum with $n = 5$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "178/25",
+   "hints": [
+    "$\\Delta x = \\dfrac{3 - 1}{5} = \\frac{2}{5}$; the sample points are $1, \\frac{7}{5}, \\frac{9}{5}, \\frac{11}{5}, \\frac{13}{5}$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{2}{5}$, sample points $1, \\frac{7}{5}, \\frac{9}{5}, \\frac{11}{5}, \\frac{13}{5}$.",
+    "Heights: $1 + \\frac{49}{25} + \\frac{81}{25} + \\frac{121}{25} + \\frac{169}{25} = \\frac{89}{5}$.",
+    "Sum $= \\frac{2}{5}\\cdot\\frac{89}{5} = \\frac{178}{25}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-485b64",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Approximate the area under $f(x) = x^{3}$ on $[0, 2]$ using the right-endpoint Riemann sum with $n = 4$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "25/4",
+   "hints": [
+    "$\\Delta x = \\dfrac{2 - 0}{4} = \\frac{1}{2}$; the sample points are $\\frac{1}{2}, 1, \\frac{3}{2}, 2$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{2}$, sample points $\\frac{1}{2}, 1, \\frac{3}{2}, 2$.",
+    "Heights: $\\frac{1}{8} + 1 + \\frac{27}{8} + 8 = \\frac{25}{2}$.",
+    "Sum $= \\frac{1}{2}\\cdot\\frac{25}{2} = \\frac{25}{4}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-53ecc1",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Approximate the area under $f(x) = x^{2}$ on $[1, 3]$ using the left-endpoint Riemann sum with $n = 4$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "27/4",
+   "hints": [
+    "$\\Delta x = \\dfrac{3 - 1}{4} = \\frac{1}{2}$; the sample points are $1, \\frac{3}{2}, 2, \\frac{5}{2}$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{2}$, sample points $1, \\frac{3}{2}, 2, \\frac{5}{2}$.",
+    "Heights: $1 + \\frac{9}{4} + 4 + \\frac{25}{4} = \\frac{27}{2}$.",
+    "Sum $= \\frac{1}{2}\\cdot\\frac{27}{2} = \\frac{27}{4}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-f64b30",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\sum_{k=1}^{9} 7$.",
+   "checker": "numeric",
+   "answer": "63",
+   "hints": [
+    "Substitute $k = 1, \\ldots, 9$ and add.",
+    "The first term is $7$."
+   ],
+   "solution": [
+    "Terms: $7 + 7 + 7 + 7 + 7 + 7 + 7 + 7 + 7$.",
+    "Sum $= 63$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-9ce53a",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[-1, 2]$ is divided into $n = 8$ equal subintervals for a Riemann sum. What is the width $\\Delta x$ of each subinterval?",
+   "checker": "numeric",
+   "answer": "3/8",
+   "hints": [
+    "$\\Delta x = \\dfrac{b - a}{n}$.",
+    "$\\dfrac{2 - (-1)}{8}$."
+   ],
+   "solution": [
+    "$\\Delta x = \\dfrac{2 - (-1)}{8} = \\dfrac{3}{8}$.",
+    "$= \\frac{3}{8}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-ae8bd9",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "For a Riemann sum on $[2, 4]$ with $n = 3$ equal subintervals, find the left endpoint $x_{0}$ of the first subinterval.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "$\\Delta x = \\frac{2}{3}$; the subintervals start at $x_0 = 2$.",
+    "$x_i = a + i\\,\\Delta x$; a midpoint is halfway between $x_{i-1}$ and $x_i$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{2}{3}$, so $x_i = 2 + i\\cdot\\frac{2}{3}$.",
+    "The requested point is $2$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-e3b97c",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "On $[0, 2]$, is the left-endpoint Riemann sum for $f(x) = x^{3}$ (with $n = 3$) an overestimate or an underestimate of the true area?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Decide whether $f$ is increasing or decreasing on $[0, 2]$.",
+    "For an increasing function, left endpoints sit below the curve (underestimate) and right endpoints above (overestimate); the reverse for a decreasing function."
+   ],
+   "solution": [
+    "$f$ is increasing on $[0, 2]$.",
+    "So the left-endpoint rectangles are an underestimate (here $\\frac{16}{9}$ versus the true area $4$)."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{an overestimate}",
+    "\\text{an underestimate}",
+    "\\text{exact}"
+   ],
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-e00406",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Which computation is the right-endpoint Riemann sum for $f(x) = 2 x$ on $[0, 3]$ with $n = 2$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "$\\Delta x = \\frac{3}{2}$ and the right endpoints are $\\frac{3}{2}, 3$.",
+    "Each term is $f(\\text{sample point})\\cdot\\Delta x$; factor out $\\Delta x$."
+   ],
+   "solution": [
+    "Right endpoints: $\\frac{3}{2}, 3$; heights $3, 6$.",
+    "Sum $= \\frac{3}{2}(3 + 6) = \\frac{27}{2}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\frac{3}{2}\\left(3 + 6\\right)",
+    "\\frac{3}{2}\\left(0 + 3\\right)",
+    "\\frac{3}{2}\\left(\\frac{3}{2} + 3\\right)",
+    "1\\left(3 + 6\\right)"
+   ],
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-76e13c",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Use $\\sum_{k=1}^{n} k = \\dfrac{n(n+1)}{2}$ to evaluate $\\sum_{k=1}^{100} k$.",
+   "checker": "numeric",
+   "answer": "5050",
+   "hints": [
+    "Set $n = 100$.",
+    "$\\dfrac{100\\cdot101}{2}$."
+   ],
+   "solution": [
+    "$\\dfrac{100(101)}{2} = 5050$.",
+    "This formula is what makes Riemann sums with many rectangles manageable."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-d03aac",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Approximate the area under $f(x) = x^{2} + 1$ on $[0, 2]$ using the midpoint Riemann sum with $n = 3$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "124/27",
+   "hints": [
+    "$\\Delta x = \\dfrac{2 - 0}{3} = \\frac{2}{3}$; the sample points are $\\frac{1}{3}, 1, \\frac{5}{3}$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{2}{3}$, sample points $\\frac{1}{3}, 1, \\frac{5}{3}$.",
+    "Heights: $\\frac{10}{9} + 2 + \\frac{34}{9} = \\frac{62}{9}$.",
+    "Sum $= \\frac{2}{3}\\cdot\\frac{62}{9} = \\frac{124}{27}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-1c7d7e",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Approximate the area under $f(x) = x^{2}$ on $[1, 3]$ using the right-endpoint Riemann sum with $n = 4$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "43/4",
+   "hints": [
+    "$\\Delta x = \\dfrac{3 - 1}{4} = \\frac{1}{2}$; the sample points are $\\frac{3}{2}, 2, \\frac{5}{2}, 3$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{2}$, sample points $\\frac{3}{2}, 2, \\frac{5}{2}, 3$.",
+    "Heights: $\\frac{9}{4} + 4 + \\frac{25}{4} + 9 = \\frac{43}{2}$.",
+    "Sum $= \\frac{1}{2}\\cdot\\frac{43}{2} = \\frac{43}{4}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-d04cbe",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[3, 8]$ is divided into $n = 5$ equal subintervals for a Riemann sum. What is the width $\\Delta x$ of each subinterval?",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "$\\Delta x = \\dfrac{b - a}{n}$.",
+    "$\\dfrac{8 - (3)}{5}$."
+   ],
+   "solution": [
+    "$\\Delta x = \\dfrac{8 - (3)}{5} = \\dfrac{5}{5}$.",
+    "$= 1$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-dcaf0a",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "For a Riemann sum on $[1, 6]$ with $n = 4$ equal subintervals, find the midpoint $\\bar{x}_{3}$ of the third subinterval.",
+   "checker": "numeric",
+   "answer": "33/8",
+   "hints": [
+    "$\\Delta x = \\frac{5}{4}$; the subintervals start at $x_0 = 1$.",
+    "$x_i = a + i\\,\\Delta x$; a midpoint is halfway between $x_{i-1}$ and $x_i$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{5}{4}$, so $x_i = 1 + i\\cdot\\frac{5}{4}$.",
+    "The requested point is $\\frac{33}{8}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-529c94",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "On $[0, 2]$, is the left-endpoint Riemann sum for $f(x) = x^{2}$ (with $n = 3$) an overestimate or an underestimate of the true area?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Decide whether $f$ is increasing or decreasing on $[0, 2]$.",
+    "For an increasing function, left endpoints sit below the curve (underestimate) and right endpoints above (overestimate); the reverse for a decreasing function."
+   ],
+   "solution": [
+    "$f$ is increasing on $[0, 2]$.",
+    "So the left-endpoint rectangles are an underestimate (here $\\frac{40}{27}$ versus the true area $\\frac{8}{3}$)."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{an overestimate}",
+    "\\text{an underestimate}",
+    "\\text{exact}"
+   ],
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-9d7689",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Use $\\sum_{k=1}^{n} k = \\dfrac{n(n+1)}{2}$ to evaluate $\\sum_{k=1}^{50} k$.",
+   "checker": "numeric",
+   "answer": "1275",
+   "hints": [
+    "Set $n = 50$.",
+    "$\\dfrac{50\\cdot51}{2}$."
+   ],
+   "solution": [
+    "$\\dfrac{50(51)}{2} = 1275$.",
+    "This formula is what makes Riemann sums with many rectangles manageable."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-bd04a7",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Approximate the area under $f(x) = x^{2}$ on $[0, 3]$ using the right-endpoint Riemann sum with $n = 2$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "135/8",
+   "hints": [
+    "$\\Delta x = \\dfrac{3 - 0}{2} = \\frac{3}{2}$; the sample points are $\\frac{3}{2}, 3$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{3}{2}$, sample points $\\frac{3}{2}, 3$.",
+    "Heights: $\\frac{9}{4} + 9 = \\frac{45}{4}$.",
+    "Sum $= \\frac{3}{2}\\cdot\\frac{45}{4} = \\frac{135}{8}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-dffdac",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Approximate the area under $f(x) = 6 - x$ on $[0, 4]$ using the left-endpoint Riemann sum with $n = 4$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "18",
+   "hints": [
+    "$\\Delta x = \\dfrac{4 - 0}{4} = 1$; the sample points are $0, 1, 2, 3$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = 1$, sample points $0, 1, 2, 3$.",
+    "Heights: $6 + 5 + 4 + 3 = 18$.",
+    "Sum $= 1\\cdot18 = 18$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-0e360c",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\sum_{k=1}^{3} k^2$.",
+   "checker": "numeric",
+   "answer": "14",
+   "hints": [
+    "Substitute $k = 1, \\ldots, 3$ and add.",
+    "The first term is $1$."
+   ],
+   "solution": [
+    "Terms: $1 + 4 + 9$.",
+    "Sum $= 14$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-0ff30b",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[-2, 2]$ is divided into $n = 5$ equal subintervals for a Riemann sum. What is the width $\\Delta x$ of each subinterval?",
+   "checker": "numeric",
+   "answer": "4/5",
+   "hints": [
+    "$\\Delta x = \\dfrac{b - a}{n}$.",
+    "$\\dfrac{2 - (-2)}{5}$."
+   ],
+   "solution": [
+    "$\\Delta x = \\dfrac{2 - (-2)}{5} = \\dfrac{4}{5}$.",
+    "$= \\frac{4}{5}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-7c33bd",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "For a Riemann sum on $[-1, 2]$ with $n = 3$ equal subintervals, find the right endpoint $x_{1}$ of the first subinterval.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "$\\Delta x = 1$; the subintervals start at $x_0 = -1$.",
+    "$x_i = a + i\\,\\Delta x$; a midpoint is halfway between $x_{i-1}$ and $x_i$."
+   ],
+   "solution": [
+    "$\\Delta x = 1$, so $x_i = -1 + i\\cdot1$.",
+    "The requested point is $0$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-695dcd",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "On $[1, 3]$, is the right-endpoint Riemann sum for $f(x) = \\frac{1}{x}$ (with $n = 4$) an overestimate or an underestimate of the true area?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Decide whether $f$ is increasing or decreasing on $[1, 3]$.",
+    "For an increasing function, left endpoints sit below the curve (underestimate) and right endpoints above (overestimate); the reverse for a decreasing function."
+   ],
+   "solution": [
+    "$f$ is decreasing on $[1, 3]$.",
+    "So the right-endpoint rectangles are an underestimate (here $\\frac{19}{20}$ versus the true area $\\ln{\\left(3 \\right)}$)."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{an overestimate}",
+    "\\text{an underestimate}",
+    "\\text{exact}"
+   ],
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-7bab54",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Approximate the area under $f(x) = x^{2}$ on $[1, 3]$ using the left-endpoint Riemann sum with $n = 2$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "$\\Delta x = \\dfrac{3 - 1}{2} = 1$; the sample points are $1, 2$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = 1$, sample points $1, 2$.",
+    "Heights: $1 + 4 = 5$.",
+    "Sum $= 1\\cdot5 = 5$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-e2640f",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Approximate the area under $f(x) = 4 - x^{2}$ on $[0, 2]$ using the left-endpoint Riemann sum with $n = 4$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "25/4",
+   "hints": [
+    "$\\Delta x = \\dfrac{2 - 0}{4} = \\frac{1}{2}$; the sample points are $0, \\frac{1}{2}, 1, \\frac{3}{2}$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{2}$, sample points $0, \\frac{1}{2}, 1, \\frac{3}{2}$.",
+    "Heights: $4 + \\frac{15}{4} + 3 + \\frac{7}{4} = \\frac{25}{2}$.",
+    "Sum $= \\frac{1}{2}\\cdot\\frac{25}{2} = \\frac{25}{4}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-e1bbb4",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[3, 9]$ is divided into $n = 8$ equal subintervals for a Riemann sum. What is the width $\\Delta x$ of each subinterval?",
+   "checker": "numeric",
+   "answer": "3/4",
+   "hints": [
+    "$\\Delta x = \\dfrac{b - a}{n}$.",
+    "$\\dfrac{9 - (3)}{8}$."
+   ],
+   "solution": [
+    "$\\Delta x = \\dfrac{9 - (3)}{8} = \\dfrac{6}{8}$.",
+    "$= \\frac{3}{4}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-797f64",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "For a Riemann sum on $[2, 9]$ with $n = 3$ equal subintervals, find the midpoint $\\bar{x}_{2}$ of the second subinterval.",
+   "checker": "numeric",
+   "answer": "11/2",
+   "hints": [
+    "$\\Delta x = \\frac{7}{3}$; the subintervals start at $x_0 = 2$.",
+    "$x_i = a + i\\,\\Delta x$; a midpoint is halfway between $x_{i-1}$ and $x_i$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{7}{3}$, so $x_i = 2 + i\\cdot\\frac{7}{3}$.",
+    "The requested point is $\\frac{11}{2}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-cdb22b",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "On $[1, 3]$, is the left-endpoint Riemann sum for $f(x) = \\frac{1}{x}$ (with $n = 4$) an overestimate or an underestimate of the true area?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Decide whether $f$ is increasing or decreasing on $[1, 3]$.",
+    "For an increasing function, left endpoints sit below the curve (underestimate) and right endpoints above (overestimate); the reverse for a decreasing function."
+   ],
+   "solution": [
+    "$f$ is decreasing on $[1, 3]$.",
+    "So the left-endpoint rectangles are an overestimate (here $\\frac{77}{60}$ versus the true area $\\ln{\\left(3 \\right)}$)."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{an overestimate}",
+    "\\text{an underestimate}",
+    "\\text{exact}"
+   ],
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-6958f5",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Use $\\sum_{k=1}^{n} k = \\dfrac{n(n+1)}{2}$ to evaluate $\\sum_{k=1}^{10} k$.",
+   "checker": "numeric",
+   "answer": "55",
+   "hints": [
+    "Set $n = 10$.",
+    "$\\dfrac{10\\cdot11}{2}$."
+   ],
+   "solution": [
+    "$\\dfrac{10(11)}{2} = 55$.",
+    "This formula is what makes Riemann sums with many rectangles manageable."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-98c567",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Approximate the area under $f(x) = 4 - x^{2}$ on $[0, 2]$ using the right-endpoint Riemann sum with $n = 4$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "17/4",
+   "hints": [
+    "$\\Delta x = \\dfrac{2 - 0}{4} = \\frac{1}{2}$; the sample points are $\\frac{1}{2}, 1, \\frac{3}{2}, 2$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{1}{2}$, sample points $\\frac{1}{2}, 1, \\frac{3}{2}, 2$.",
+    "Heights: $\\frac{15}{4} + 3 + \\frac{7}{4} + 0 = \\frac{17}{2}$.",
+    "Sum $= \\frac{1}{2}\\cdot\\frac{17}{2} = \\frac{17}{4}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-d33a05",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Approximate the area under $f(x) = 6 - x$ on $[0, 4]$ using the left-endpoint Riemann sum with $n = 3$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "56/3",
+   "hints": [
+    "$\\Delta x = \\dfrac{4 - 0}{3} = \\frac{4}{3}$; the sample points are $0, \\frac{4}{3}, \\frac{8}{3}$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{4}{3}$, sample points $0, \\frac{4}{3}, \\frac{8}{3}$.",
+    "Heights: $6 + \\frac{14}{3} + \\frac{10}{3} = 14$.",
+    "Sum $= \\frac{4}{3}\\cdot14 = \\frac{56}{3}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-0d994d",
+   "skill": "areas-and-distances",
+   "difficulty": 3,
+   "statement": "Approximate the area under $f(x) = x^{2}$ on $[0, 3]$ using the right-endpoint Riemann sum with $n = 5$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "297/25",
+   "hints": [
+    "$\\Delta x = \\dfrac{3 - 0}{5} = \\frac{3}{5}$; the sample points are $\\frac{3}{5}, \\frac{6}{5}, \\frac{9}{5}, \\frac{12}{5}, 3$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = \\frac{3}{5}$, sample points $\\frac{3}{5}, \\frac{6}{5}, \\frac{9}{5}, \\frac{12}{5}, 3$.",
+    "Heights: $\\frac{9}{25} + \\frac{36}{25} + \\frac{81}{25} + \\frac{144}{25} + 9 = \\frac{99}{5}$.",
+    "Sum $= \\frac{3}{5}\\cdot\\frac{99}{5} = \\frac{297}{25}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-063ab2",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\sum_{k=1}^{4} 2$.",
+   "checker": "numeric",
+   "answer": "8",
+   "hints": [
+    "Substitute $k = 1, \\ldots, 4$ and add.",
+    "The first term is $2$."
+   ],
+   "solution": [
+    "Terms: $2 + 2 + 2 + 2$.",
+    "Sum $= 8$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-4e9bc5",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "The interval $[-2, 1]$ is divided into $n = 6$ equal subintervals for a Riemann sum. What is the width $\\Delta x$ of each subinterval?",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "$\\Delta x = \\dfrac{b - a}{n}$.",
+    "$\\dfrac{1 - (-2)}{6}$."
+   ],
+   "solution": [
+    "$\\Delta x = \\dfrac{1 - (-2)}{6} = \\dfrac{3}{6}$.",
+    "$= \\frac{1}{2}$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-10fb41",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "For a Riemann sum on $[-1, 3]$ with $n = 4$ equal subintervals, find the right endpoint $x_{2}$ of the second subinterval.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "$\\Delta x = 1$; the subintervals start at $x_0 = -1$.",
+    "$x_i = a + i\\,\\Delta x$; a midpoint is halfway between $x_{i-1}$ and $x_i$."
+   ],
+   "solution": [
+    "$\\Delta x = 1$, so $x_i = -1 + i\\cdot1$.",
+    "The requested point is $1$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-70afa4",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "On $[0, 4]$, is the right-endpoint Riemann sum for $f(x) = 4 - x$ (with $n = 3$) an overestimate or an underestimate of the true area?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Decide whether $f$ is increasing or decreasing on $[0, 4]$.",
+    "For an increasing function, left endpoints sit below the curve (underestimate) and right endpoints above (overestimate); the reverse for a decreasing function."
+   ],
+   "solution": [
+    "$f$ is decreasing on $[0, 4]$.",
+    "So the right-endpoint rectangles are an underestimate (here $\\frac{16}{3}$ versus the true area $8$)."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{an overestimate}",
+    "\\text{an underestimate}",
+    "\\text{exact}"
+   ],
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-e0cbad",
+   "skill": "areas-and-distances",
+   "difficulty": 1,
+   "statement": "Approximate the area under $f(x) = 6 - x$ on $[0, 4]$ using the left-endpoint Riemann sum with $n = 2$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "20",
+   "hints": [
+    "$\\Delta x = \\dfrac{4 - 0}{2} = 2$; the sample points are $0, 2$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = 2$, sample points $0, 2$.",
+    "Heights: $6 + 4 = 10$.",
+    "Sum $= 2\\cdot10 = 20$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "areas-and-distances-1d9d16",
+   "skill": "areas-and-distances",
+   "difficulty": 2,
+   "statement": "Approximate the area under $f(x) = 2 x + 1$ on $[0, 4]$ using the right-endpoint Riemann sum with $n = 4$ rectangles. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "24",
+   "hints": [
+    "$\\Delta x = \\dfrac{4 - 0}{4} = 1$; the sample points are $1, 2, 3, 4$.",
+    "Sum $f$ at the sample points, then multiply by $\\Delta x$."
+   ],
+   "solution": [
+    "$\\Delta x = 1$, sample points $1, 2, 3, 4$.",
+    "Heights: $3 + 5 + 7 + 9 = 24$.",
+    "Sum $= 1\\cdot24 = 24$."
+   ],
+   "verified": true,
+   "tier": 1,
+   "tags": [
+    "daily"
+   ]
+  }
+ ]
+}

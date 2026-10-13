@@ -1,0 +1,1868 @@
+{
+ "skill": "antiderivatives",
+ "problems": [
+  {
+   "id": "daily-tier-3-ed9bcf",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $\\int \\left(- 3 \\sqrt[3]{x} + 3 \\sqrt{x}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-9*x^(4/3)/4+2*x^(3/2)",
+   "hints": [
+    "Rewrite roots as fractional powers: $\\sqrt{x} = x^{1/2}$, $\\sqrt[3]{x} = x^{1/3}$, $1/\\sqrt{x} = x^{-1/2}$.",
+    "Then use the power rule on each term."
+   ],
+   "solution": [
+    "Rewrite: $-3x^{\\frac{1}{3}} + 3x^{\\frac{1}{2}}$, then apply the power rule.",
+    "$- \\frac{9 x^{\\frac{4}{3}}}{4} + 2 x^{\\frac{3}{2}} + C$.",
+    "Check: differentiating $- \\frac{9 x^{\\frac{4}{3}}}{4} + 2 x^{\\frac{3}{2}}$ gives back $- 3 \\sqrt[3]{x} + 3 \\sqrt{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-1de2f7",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int \\left(- \\sqrt[3]{x} + 4 \\sqrt{x}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-3*x^(4/3)/4+8*x^(3/2)/3",
+   "hints": [
+    "Rewrite roots as fractional powers: $\\sqrt{x} = x^{1/2}$, $\\sqrt[3]{x} = x^{1/3}$, $1/\\sqrt{x} = x^{-1/2}$.",
+    "Then use the power rule on each term."
+   ],
+   "solution": [
+    "Rewrite: $-x^{\\frac{1}{3}} + 4x^{\\frac{1}{2}}$, then apply the power rule.",
+    "$- \\frac{3 x^{\\frac{4}{3}}}{4} + \\frac{8 x^{\\frac{3}{2}}}{3} + C$.",
+    "Check: differentiating $- \\frac{3 x^{\\frac{4}{3}}}{4} + \\frac{8 x^{\\frac{3}{2}}}{3}$ gives back $- \\sqrt[3]{x} + 4 \\sqrt{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-59d988",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(2 + \\frac{1}{\\sqrt{x}}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*sqrt(x)+2*x",
+   "hints": [
+    "Rewrite roots as fractional powers: $\\sqrt{x} = x^{1/2}$, $\\sqrt[3]{x} = x^{1/3}$, $1/\\sqrt{x} = x^{-1/2}$.",
+    "Then use the power rule on each term."
+   ],
+   "solution": [
+    "Rewrite: $2 + x^{- \\frac{1}{2}}$, then apply the power rule.",
+    "$2 \\sqrt{x} + 2 x + C$.",
+    "Check: differentiating $2 \\sqrt{x} + 2 x$ gives back $2 + \\frac{1}{\\sqrt{x}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-bfbf6b",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Compute $\\int \\frac{x^{3} - 5 x + 1}{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^3/3-5*x+ln(x)",
+   "hints": [
+    "Divide each term of the numerator by the denominator to get a sum of powers of $x$.",
+    "That gives $-5 + x^{-1} + x^{2}$."
+   ],
+   "solution": [
+    "Split the fraction: $\\frac{x^{3} - 5 x + 1}{x} = -5 + x^{-1} + x^{2}$.",
+    "Integrate term by term: $\\frac{x^{3}}{3} - 5 x + \\ln{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-1b2251",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(- 2 x - e^{x}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-x^2-exp(x)",
+   "hints": [
+    "Use the table of basic antiderivatives: $e^x$, $\\sin x \\to -\\cos x$, $\\cos x \\to \\sin x$, $\\sec^2 x \\to \\tan x$, $1/x \\to \\ln|x|$.",
+    "Handle the power term with the power rule."
+   ],
+   "solution": [
+    "Each term is a basic antiderivative from the table.",
+    "$- x^{2} - e^{x} + C$.",
+    "Check: differentiating $- x^{2} - e^{x}$ gives back $- 2 x - e^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-e9666f",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int x^{2} \\left(1 - x\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-x^4/4+x^3/3",
+   "hints": [
+    "There is no product rule for integrals: multiply out first.",
+    "Expanded: $- x^{3} + x^{2}$."
+   ],
+   "solution": [
+    "Expand: $x^{2} \\left(1 - x\\right) = - x^{3} + x^{2}$, then integrate term by term.",
+    "$- \\frac{x^{4}}{4} + \\frac{x^{3}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-6558f7",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Find $\\int \\frac{x^{3} + 2 x + 3}{x^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2/2+2*ln(x)-3/x",
+   "hints": [
+    "Divide each term of the numerator by the denominator to get a sum of powers of $x$.",
+    "That gives $x + 2x^{-1} + 3x^{-2}$."
+   ],
+   "solution": [
+    "Split the fraction: $\\frac{x^{3} + 2 x + 3}{x^{2}} = x + 2x^{-1} + 3x^{-2}$.",
+    "Integrate term by term: $\\frac{x^{2}}{2} + 2 \\ln{\\left(x \\right)} - \\frac{3}{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-0dc750",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int \\left(- 3 x + \\frac{3}{x^{4}}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-3*x^2/2-1/x^3",
+   "hints": [
+    "Write $\\dfrac{1}{x^n}$ as $x^{-n}$ before integrating.",
+    "The power rule then gives $\\dfrac{x^{-n+1}}{-n+1}$."
+   ],
+   "solution": [
+    "Rewrite: $- 3 x + 3x^{-4}$, then apply the power rule.",
+    "$- \\frac{3 x^{2}}{2} - \\frac{1}{x^{3}} + C$.",
+    "Check: differentiating $- \\frac{3 x^{2}}{2} - \\frac{1}{x^{3}}$ gives back $- 3 x + \\frac{3}{x^{4}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-5584ca",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(- 2 \\sqrt[3]{x} + 3 \\sqrt{x}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-3*x^(4/3)/2+2*x^(3/2)",
+   "hints": [
+    "Rewrite roots as fractional powers: $\\sqrt{x} = x^{1/2}$, $\\sqrt[3]{x} = x^{1/3}$, $1/\\sqrt{x} = x^{-1/2}$.",
+    "Then use the power rule on each term."
+   ],
+   "solution": [
+    "Rewrite: $-2x^{\\frac{1}{3}} + 3x^{\\frac{1}{2}}$, then apply the power rule.",
+    "$- \\frac{3 x^{\\frac{4}{3}}}{2} + 2 x^{\\frac{3}{2}} + C$.",
+    "Check: differentiating $- \\frac{3 x^{\\frac{4}{3}}}{2} + 2 x^{\\frac{3}{2}}$ gives back $- 2 \\sqrt[3]{x} + 3 \\sqrt{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-0ea37f",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $\\int \\left(- 3 \\sqrt[3]{x} + \\sqrt{x}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-9*x^(4/3)/4+2*x^(3/2)/3",
+   "hints": [
+    "Rewrite roots as fractional powers: $\\sqrt{x} = x^{1/2}$, $\\sqrt[3]{x} = x^{1/3}$, $1/\\sqrt{x} = x^{-1/2}$.",
+    "Then use the power rule on each term."
+   ],
+   "solution": [
+    "Rewrite: $x^{\\frac{1}{2}} - 3x^{\\frac{1}{3}}$, then apply the power rule.",
+    "$- \\frac{9 x^{\\frac{4}{3}}}{4} + \\frac{2 x^{\\frac{3}{2}}}{3} + C$.",
+    "Check: differentiating $- \\frac{9 x^{\\frac{4}{3}}}{4} + \\frac{2 x^{\\frac{3}{2}}}{3}$ gives back $- 3 \\sqrt[3]{x} + \\sqrt{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-7f439c",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $\\int \\left(4 x - 2 \\sec^{2}{\\left(x \\right)}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*x^2-2*tan(x)",
+   "hints": [
+    "Use the table of basic antiderivatives: $e^x$, $\\sin x \\to -\\cos x$, $\\cos x \\to \\sin x$, $\\sec^2 x \\to \\tan x$, $1/x \\to \\ln|x|$.",
+    "Handle the power term with the power rule."
+   ],
+   "solution": [
+    "Each term is a basic antiderivative from the table.",
+    "$2 x^{2} - 2 \\tan{\\left(x \\right)} + C$.",
+    "Check: differentiating $2 x^{2} - 2 \\tan{\\left(x \\right)}$ gives back $4 x - 2 \\sec^{2}{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-d6e324",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{3}{\\sqrt[3]{x}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "9*x^(2/3)/2",
+   "hints": [
+    "The power rule works for any exponent except $-1$: add one to the exponent and divide by the new exponent.",
+    "Here the exponent becomes $\\frac{2}{3}$."
+   ],
+   "solution": [
+    "Add one to the exponent and divide by it.",
+    "$\\frac{9 x^{\\frac{2}{3}}}{2} + C$.",
+    "Check: differentiating $\\frac{9 x^{\\frac{2}{3}}}{2}$ gives back $\\frac{3}{\\sqrt[3]{x}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-cd7809",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{2 x^{3} + 3 x + 3}{\\sqrt{x}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "4*x^(7/2)/7+2*x^(3/2)+6*sqrt(x)",
+   "hints": [
+    "Divide each term of the numerator by the denominator to get a sum of powers of $x$.",
+    "That gives $2x^{\\frac{5}{2}} + 3x^{\\frac{1}{2}} + 3x^{- \\frac{1}{2}}$."
+   ],
+   "solution": [
+    "Split the fraction: $\\frac{2 x^{3} + 3 x + 3}{\\sqrt{x}} = 2x^{\\frac{5}{2}} + 3x^{\\frac{1}{2}} + 3x^{- \\frac{1}{2}}$.",
+    "Integrate term by term: $\\frac{4 x^{\\frac{7}{2}}}{7} + 2 x^{\\frac{3}{2}} + 6 \\sqrt{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-2beb7b",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int \\left(3 x + \\frac{2}{x^{2}}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "3*x^2/2-2/x",
+   "hints": [
+    "Write $\\dfrac{1}{x^n}$ as $x^{-n}$ before integrating.",
+    "The power rule then gives $\\dfrac{x^{-n+1}}{-n+1}$."
+   ],
+   "solution": [
+    "Rewrite: $2x^{-2} + 3 x$, then apply the power rule.",
+    "$\\frac{3 x^{2}}{2} - \\frac{2}{x} + C$.",
+    "Check: differentiating $\\frac{3 x^{2}}{2} - \\frac{2}{x}$ gives back $3 x + \\frac{2}{x^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-641622",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(- 5 x^{\\frac{3}{2}}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-2*x^(5/2)",
+   "hints": [
+    "The power rule works for any exponent except $-1$: add one to the exponent and divide by the new exponent.",
+    "Here the exponent becomes $\\frac{5}{2}$."
+   ],
+   "solution": [
+    "Add one to the exponent and divide by it.",
+    "$- 2 x^{\\frac{5}{2}} + C$.",
+    "Check: differentiating $- 2 x^{\\frac{5}{2}}$ gives back $- 5 x^{\\frac{3}{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-8eea07",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(x + \\frac{4}{x^{2}}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2/2-4/x",
+   "hints": [
+    "Write $\\dfrac{1}{x^n}$ as $x^{-n}$ before integrating.",
+    "The power rule then gives $\\dfrac{x^{-n+1}}{-n+1}$."
+   ],
+   "solution": [
+    "Rewrite: $x + 4x^{-2}$, then apply the power rule.",
+    "$\\frac{x^{2}}{2} - \\frac{4}{x} + C$.",
+    "Check: differentiating $\\frac{x^{2}}{2} - \\frac{4}{x}$ gives back $x + \\frac{4}{x^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-f65e8f",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\left(4 x^{4} - 4\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "4*x^5/5-4*x",
+   "hints": [
+    "Integrate term by term with the power rule $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.",
+    "Constants come along for the ride; do not forget $+C$."
+   ],
+   "solution": [
+    "Apply the power rule to each term.",
+    "$\\frac{4 x^{5}}{5} - 4 x + C$.",
+    "Check: differentiating $\\frac{4 x^{5}}{5} - 4 x$ gives back $4 x^{4} - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-204f7c",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{3 x^{3} - 4 x + 1}{\\sqrt{x}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "6*x^(7/2)/7-8*x^(3/2)/3+2*sqrt(x)",
+   "hints": [
+    "Divide each term of the numerator by the denominator to get a sum of powers of $x$.",
+    "That gives $x^{- \\frac{1}{2}} - 4x^{\\frac{1}{2}} + 3x^{\\frac{5}{2}}$."
+   ],
+   "solution": [
+    "Split the fraction: $\\frac{3 x^{3} - 4 x + 1}{\\sqrt{x}} = x^{- \\frac{1}{2}} - 4x^{\\frac{1}{2}} + 3x^{\\frac{5}{2}}$.",
+    "Integrate term by term: $\\frac{6 x^{\\frac{7}{2}}}{7} - \\frac{8 x^{\\frac{3}{2}}}{3} + 2 \\sqrt{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-bad474",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find $\\int \\left(3 x^{2} + 4 x + 5\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^3+2*x^2+5*x",
+   "hints": [
+    "Integrate term by term with the power rule $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.",
+    "Constants come along for the ride; do not forget $+C$."
+   ],
+   "solution": [
+    "Apply the power rule to each term.",
+    "$x^{3} + 2 x^{2} + 5 x + C$.",
+    "Check: differentiating $x^{3} + 2 x^{2} + 5 x$ gives back $3 x^{2} + 4 x + 5$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-764adb",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{3 x^{3} + 4}{x^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "3*x^2/2-4/x",
+   "hints": [
+    "Divide each term of the numerator by the denominator to get a sum of powers of $x$.",
+    "That gives $3 x + 4x^{-2}$."
+   ],
+   "solution": [
+    "Split the fraction: $\\frac{3 x^{3} + 4}{x^{2}} = 3 x + 4x^{-2}$.",
+    "Integrate term by term: $\\frac{3 x^{2}}{2} - \\frac{4}{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-f994a9",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{2 x^{3} + 4}{\\sqrt{x}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "4*x^(7/2)/7+8*sqrt(x)",
+   "hints": [
+    "Divide each term of the numerator by the denominator to get a sum of powers of $x$.",
+    "That gives $2x^{\\frac{5}{2}} + 4x^{- \\frac{1}{2}}$."
+   ],
+   "solution": [
+    "Split the fraction: $\\frac{2 x^{3} + 4}{\\sqrt{x}} = 2x^{\\frac{5}{2}} + 4x^{- \\frac{1}{2}}$.",
+    "Integrate term by term: $\\frac{4 x^{\\frac{7}{2}}}{7} + 8 \\sqrt{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-5cc7d1",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{2 x^{3} + 3}{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*x^3/3+3*ln(x)",
+   "hints": [
+    "Divide each term of the numerator by the denominator to get a sum of powers of $x$.",
+    "That gives $2x^{2} + 3x^{-1}$."
+   ],
+   "solution": [
+    "Split the fraction: $\\frac{2 x^{3} + 3}{x} = 2x^{2} + 3x^{-1}$.",
+    "Integrate term by term: $\\frac{2 x^{3}}{3} + 3 \\ln{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-5b61a1",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $\\int \\left(- 3 \\sqrt[3]{x} + 2 \\sqrt{x}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-9*x^(4/3)/4+4*x^(3/2)/3",
+   "hints": [
+    "Rewrite roots as fractional powers: $\\sqrt{x} = x^{1/2}$, $\\sqrt[3]{x} = x^{1/3}$, $1/\\sqrt{x} = x^{-1/2}$.",
+    "Then use the power rule on each term."
+   ],
+   "solution": [
+    "Rewrite: $-3x^{\\frac{1}{3}} + 2x^{\\frac{1}{2}}$, then apply the power rule.",
+    "$- \\frac{9 x^{\\frac{4}{3}}}{4} + \\frac{4 x^{\\frac{3}{2}}}{3} + C$.",
+    "Check: differentiating $- \\frac{9 x^{\\frac{4}{3}}}{4} + \\frac{4 x^{\\frac{3}{2}}}{3}$ gives back $- 3 \\sqrt[3]{x} + 2 \\sqrt{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-25a160",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Compute $\\int \\left(3 - 3 x^{5}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-x^6/2+3*x",
+   "hints": [
+    "Integrate term by term with the power rule $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.",
+    "Constants come along for the ride; do not forget $+C$."
+   ],
+   "solution": [
+    "Apply the power rule to each term.",
+    "$- \\frac{x^{6}}{2} + 3 x + C$.",
+    "Check: differentiating $- \\frac{x^{6}}{2} + 3 x$ gives back $3 - 3 x^{5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-f3b876",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\left(- 3 x^{5} - 5 x^{2} + 1\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-x^6/2-5*x^3/3+x",
+   "hints": [
+    "Integrate term by term with the power rule $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.",
+    "Constants come along for the ride; do not forget $+C$."
+   ],
+   "solution": [
+    "Apply the power rule to each term.",
+    "$- \\frac{x^{6}}{2} - \\frac{5 x^{3}}{3} + x + C$.",
+    "Check: differentiating $- \\frac{x^{6}}{2} - \\frac{5 x^{3}}{3} + x$ gives back $- 3 x^{5} - 5 x^{2} + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-f1b14a",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(x + 2 e^{x}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2/2+2*exp(x)",
+   "hints": [
+    "Use the table of basic antiderivatives: $e^x$, $\\sin x \\to -\\cos x$, $\\cos x \\to \\sin x$, $\\sec^2 x \\to \\tan x$, $1/x \\to \\ln|x|$.",
+    "Handle the power term with the power rule."
+   ],
+   "solution": [
+    "Each term is a basic antiderivative from the table.",
+    "$\\frac{x^{2}}{2} + 2 e^{x} + C$.",
+    "Check: differentiating $\\frac{x^{2}}{2} + 2 e^{x}$ gives back $x + 2 e^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-a156ce",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(- \\sqrt{x}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-2*x^(3/2)/3",
+   "hints": [
+    "The power rule works for any exponent except $-1$: add one to the exponent and divide by the new exponent.",
+    "Here the exponent becomes $\\frac{3}{2}$."
+   ],
+   "solution": [
+    "Add one to the exponent and divide by it.",
+    "$- \\frac{2 x^{\\frac{3}{2}}}{3} + C$.",
+    "Check: differentiating $- \\frac{2 x^{\\frac{3}{2}}}{3}$ gives back $- \\sqrt{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-dfd0aa",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $\\int \\frac{1}{x^{3}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-1/(2*x^2)",
+   "hints": [
+    "The power rule works for any exponent except $-1$: add one to the exponent and divide by the new exponent.",
+    "Here the exponent becomes $-2$."
+   ],
+   "solution": [
+    "Add one to the exponent and divide by it.",
+    "$- \\frac{1}{2 x^{2}} + C$.",
+    "Check: differentiating $- \\frac{1}{2 x^{2}}$ gives back $\\frac{1}{x^{3}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-d74911",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int \\left(3 + \\frac{1}{\\sqrt{x}}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*sqrt(x)+3*x",
+   "hints": [
+    "Rewrite roots as fractional powers: $\\sqrt{x} = x^{1/2}$, $\\sqrt[3]{x} = x^{1/3}$, $1/\\sqrt{x} = x^{-1/2}$.",
+    "Then use the power rule on each term."
+   ],
+   "solution": [
+    "Rewrite: $3 + x^{- \\frac{1}{2}}$, then apply the power rule.",
+    "$2 \\sqrt{x} + 3 x + C$.",
+    "Check: differentiating $2 \\sqrt{x} + 3 x$ gives back $3 + \\frac{1}{\\sqrt{x}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-cd4ca2",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find $\\int \\left(- 4 x^{4} + 4 x + 1\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-4*x^5/5+2*x^2+x",
+   "hints": [
+    "Integrate term by term with the power rule $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.",
+    "Constants come along for the ride; do not forget $+C$."
+   ],
+   "solution": [
+    "Apply the power rule to each term.",
+    "$- \\frac{4 x^{5}}{5} + 2 x^{2} + x + C$.",
+    "Check: differentiating $- \\frac{4 x^{5}}{5} + 2 x^{2} + x$ gives back $- 4 x^{4} + 4 x + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-e25744",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int \\left(x - 4 \\sec^{2}{\\left(x \\right)}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2/2-4*tan(x)",
+   "hints": [
+    "Use the table of basic antiderivatives: $e^x$, $\\sin x \\to -\\cos x$, $\\cos x \\to \\sin x$, $\\sec^2 x \\to \\tan x$, $1/x \\to \\ln|x|$.",
+    "Handle the power term with the power rule."
+   ],
+   "solution": [
+    "Each term is a basic antiderivative from the table.",
+    "$\\frac{x^{2}}{2} - 4 \\tan{\\left(x \\right)} + C$.",
+    "Check: differentiating $\\frac{x^{2}}{2} - 4 \\tan{\\left(x \\right)}$ gives back $x - 4 \\sec^{2}{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-6bdd02",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Compute $\\int \\frac{3 x^{3} + 4 x + 1}{\\sqrt{x}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "6*x^(7/2)/7+8*x^(3/2)/3+2*sqrt(x)",
+   "hints": [
+    "Divide each term of the numerator by the denominator to get a sum of powers of $x$.",
+    "That gives $x^{- \\frac{1}{2}} + 3x^{\\frac{5}{2}} + 4x^{\\frac{1}{2}}$."
+   ],
+   "solution": [
+    "Split the fraction: $\\frac{3 x^{3} + 4 x + 1}{\\sqrt{x}} = x^{- \\frac{1}{2}} + 3x^{\\frac{5}{2}} + 4x^{\\frac{1}{2}}$.",
+    "Integrate term by term: $\\frac{6 x^{\\frac{7}{2}}}{7} + \\frac{8 x^{\\frac{3}{2}}}{3} + 2 \\sqrt{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-a9e86e",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $\\int \\left(- 2 \\sqrt[3]{x} + \\sqrt{x}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-3*x^(4/3)/2+2*x^(3/2)/3",
+   "hints": [
+    "Rewrite roots as fractional powers: $\\sqrt{x} = x^{1/2}$, $\\sqrt[3]{x} = x^{1/3}$, $1/\\sqrt{x} = x^{-1/2}$.",
+    "Then use the power rule on each term."
+   ],
+   "solution": [
+    "Rewrite: $x^{\\frac{1}{2}} - 2x^{\\frac{1}{3}}$, then apply the power rule.",
+    "$- \\frac{3 x^{\\frac{4}{3}}}{2} + \\frac{2 x^{\\frac{3}{2}}}{3} + C$.",
+    "Check: differentiating $- \\frac{3 x^{\\frac{4}{3}}}{2} + \\frac{2 x^{\\frac{3}{2}}}{3}$ gives back $- 2 \\sqrt[3]{x} + \\sqrt{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-bdd22b",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{x^{3} - 5 x + 4}{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^3/3-5*x+4*ln(x)",
+   "hints": [
+    "Divide each term of the numerator by the denominator to get a sum of powers of $x$.",
+    "That gives $-5 + x^{2} + 4x^{-1}$."
+   ],
+   "solution": [
+    "Split the fraction: $\\frac{x^{3} - 5 x + 4}{x} = -5 + x^{2} + 4x^{-1}$.",
+    "Integrate term by term: $\\frac{x^{3}}{3} - 5 x + 4 \\ln{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-9ef705",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Compute $\\int \\left(x^{4} + 2\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^5/5+2*x",
+   "hints": [
+    "Integrate term by term with the power rule $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.",
+    "Constants come along for the ride; do not forget $+C$."
+   ],
+   "solution": [
+    "Apply the power rule to each term.",
+    "$\\frac{x^{5}}{5} + 2 x + C$.",
+    "Check: differentiating $\\frac{x^{5}}{5} + 2 x$ gives back $x^{4} + 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-4691d0",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $\\int \\left(1 + \\frac{3}{\\sqrt{x}}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "6*sqrt(x)+x",
+   "hints": [
+    "Rewrite roots as fractional powers: $\\sqrt{x} = x^{1/2}$, $\\sqrt[3]{x} = x^{1/3}$, $1/\\sqrt{x} = x^{-1/2}$.",
+    "Then use the power rule on each term."
+   ],
+   "solution": [
+    "Rewrite: $1 + 3x^{- \\frac{1}{2}}$, then apply the power rule.",
+    "$6 \\sqrt{x} + x + C$.",
+    "Check: differentiating $6 \\sqrt{x} + x$ gives back $1 + \\frac{3}{\\sqrt{x}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-75bf87",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int \\left(2 - \\cos{\\left(x \\right)}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*x-sin(x)",
+   "hints": [
+    "Use the table of basic antiderivatives: $e^x$, $\\sin x \\to -\\cos x$, $\\cos x \\to \\sin x$, $\\sec^2 x \\to \\tan x$, $1/x \\to \\ln|x|$.",
+    "Handle the power term with the power rule."
+   ],
+   "solution": [
+    "Each term is a basic antiderivative from the table.",
+    "$2 x - \\sin{\\left(x \\right)} + C$.",
+    "Check: differentiating $2 x - \\sin{\\left(x \\right)}$ gives back $2 - \\cos{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    1.2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-fc0cf5",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find $\\int \\left(- 2 x^{2} - x - 3\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-2*x^3/3-x^2/2-3*x",
+   "hints": [
+    "Integrate term by term with the power rule $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.",
+    "Constants come along for the ride; do not forget $+C$."
+   ],
+   "solution": [
+    "Apply the power rule to each term.",
+    "$- \\frac{2 x^{3}}{3} - \\frac{x^{2}}{2} - 3 x + C$.",
+    "Check: differentiating $- \\frac{2 x^{3}}{3} - \\frac{x^{2}}{2} - 3 x$ gives back $- 2 x^{2} - x - 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-cad974",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $\\int \\left(3 x^{2} + \\frac{5}{x^{2}}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^3-5/x",
+   "hints": [
+    "Write $\\dfrac{1}{x^n}$ as $x^{-n}$ before integrating.",
+    "The power rule then gives $\\dfrac{x^{-n+1}}{-n+1}$."
+   ],
+   "solution": [
+    "Rewrite: $3x^{2} + 5x^{-2}$, then apply the power rule.",
+    "$x^{3} - \\frac{5}{x} + C$.",
+    "Check: differentiating $x^{3} - \\frac{5}{x}$ gives back $3 x^{2} + \\frac{5}{x^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-32633e",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int \\left(x + \\frac{3}{x^{3}}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2/2-3/(2*x^2)",
+   "hints": [
+    "Write $\\dfrac{1}{x^n}$ as $x^{-n}$ before integrating.",
+    "The power rule then gives $\\dfrac{x^{-n+1}}{-n+1}$."
+   ],
+   "solution": [
+    "Rewrite: $x + 3x^{-3}$, then apply the power rule.",
+    "$\\frac{x^{2}}{2} - \\frac{3}{2 x^{2}} + C$.",
+    "Check: differentiating $\\frac{x^{2}}{2} - \\frac{3}{2 x^{2}}$ gives back $x + \\frac{3}{x^{3}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-c57098",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Compute $\\int \\frac{x^{3} + 5 x + 3}{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^3/3+5*x+3*ln(x)",
+   "hints": [
+    "Divide each term of the numerator by the denominator to get a sum of powers of $x$.",
+    "That gives $5 + x^{2} + 3x^{-1}$."
+   ],
+   "solution": [
+    "Split the fraction: $\\frac{x^{3} + 5 x + 3}{x} = 5 + x^{2} + 3x^{-1}$.",
+    "Integrate term by term: $\\frac{x^{3}}{3} + 5 x + 3 \\ln{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-eedf3c",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Compute $\\int \\left(4 x^{5} + 3\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*x^6/3+3*x",
+   "hints": [
+    "Integrate term by term with the power rule $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.",
+    "Constants come along for the ride; do not forget $+C$."
+   ],
+   "solution": [
+    "Apply the power rule to each term.",
+    "$\\frac{2 x^{6}}{3} + 3 x + C$.",
+    "Check: differentiating $\\frac{2 x^{6}}{3} + 3 x$ gives back $4 x^{5} + 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-9d06fb",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(- x^{2} + \\frac{4}{x^{3}}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-x^3/3-2/x^2",
+   "hints": [
+    "Write $\\dfrac{1}{x^n}$ as $x^{-n}$ before integrating.",
+    "The power rule then gives $\\dfrac{x^{-n+1}}{-n+1}$."
+   ],
+   "solution": [
+    "Rewrite: $-x^{2} + 4x^{-3}$, then apply the power rule.",
+    "$- \\frac{x^{3}}{3} - \\frac{2}{x^{2}} + C$.",
+    "Check: differentiating $- \\frac{x^{3}}{3} - \\frac{2}{x^{2}}$ gives back $- x^{2} + \\frac{4}{x^{3}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-d68e3b",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int x \\left(x^{2} - 3\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^4/4-3*x^2/2",
+   "hints": [
+    "There is no product rule for integrals: multiply out first.",
+    "Expanded: $x^{3} - 3 x$."
+   ],
+   "solution": [
+    "Expand: $x \\left(x^{2} - 3\\right) = x^{3} - 3 x$, then integrate term by term.",
+    "$\\frac{x^{4}}{4} - \\frac{3 x^{2}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-198a60",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\left(1 - 3 x^{4}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-3*x^5/5+x",
+   "hints": [
+    "Integrate term by term with the power rule $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.",
+    "Constants come along for the ride; do not forget $+C$."
+   ],
+   "solution": [
+    "Apply the power rule to each term.",
+    "$- \\frac{3 x^{5}}{5} + x + C$.",
+    "Check: differentiating $- \\frac{3 x^{5}}{5} + x$ gives back $1 - 3 x^{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-bf7cc8",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find $\\int_{1}^{2} \\left(x^{2} + 2 x\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "16/3",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = \\frac{x^{3}}{3} + x^{2}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = \\frac{x^{3}}{3} + x^{2}$.",
+    "$F(2) - F(1) = \\frac{20}{3} - \\left(\\frac{4}{3}\\right) = \\frac{16}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-7e6c96",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int_{0}^{1} \\left(3 \\sqrt{x} - 2 x\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = 2 x^{\\frac{3}{2}} - x^{2}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = 2 x^{\\frac{3}{2}} - x^{2}$.",
+    "$F(1) - F(0) = 1 - \\left(0\\right) = 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-804978",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{0}^{1} \\left(6 x + 2\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = 3 x^{2} + 2 x$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = 3 x^{2} + 2 x$.",
+    "$F(1) - F(0) = 5 - \\left(0\\right) = 5$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-6cd98f",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $\\int_{0}^{4} \\left(2 \\sqrt{x} + 2 x\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "80/3",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = \\frac{4 x^{\\frac{3}{2}}}{3} + x^{2}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = \\frac{4 x^{\\frac{3}{2}}}{3} + x^{2}$.",
+    "$F(4) - F(0) = \\frac{80}{3} - \\left(0\\right) = \\frac{80}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-c7b471",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{2}} \\cos{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = \\sin{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = \\sin{\\left(x \\right)}$.",
+    "$F(\\frac{\\pi}{2}) - F(0) = 1 - \\left(0\\right) = 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-a1fdf0",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find $\\int_{0}^{3} \\left(2 x - 3\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = x^{2} - 3 x$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = x^{2} - 3 x$.",
+    "$F(3) - F(0) = 0 - \\left(0\\right) = 0$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-018ea2",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Compute $\\int_{-1}^{1} \\left(2 x^{2} - 4 x - 1\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-2/3",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = \\frac{2 x^{3}}{3} - 2 x^{2} - x$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = \\frac{2 x^{3}}{3} - 2 x^{2} - x$.",
+    "$F(1) - F(-1) = - \\frac{7}{3} - \\left(- \\frac{5}{3}\\right) = - \\frac{2}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-265863",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int_{1}^{4} \\left(1 + \\frac{2}{x^{2}}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "9/2",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = x - \\frac{2}{x}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = x - \\frac{2}{x}$.",
+    "$F(4) - F(1) = \\frac{7}{2} - \\left(-1\\right) = \\frac{9}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-6ad9af",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int_{1}^{3} \\left(1 + \\frac{2}{x^{2}}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "10/3",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = x - \\frac{2}{x}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = x - \\frac{2}{x}$.",
+    "$F(3) - F(1) = \\frac{7}{3} - \\left(-1\\right) = \\frac{10}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-61d60d",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Find $\\int_{0}^{\\ln{\\left(3 \\right)}} \\left(2 e^{x} + 3\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "3*ln(3)+4",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = 3 x + 2 e^{x}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = 3 x + 2 e^{x}$.",
+    "$F(\\ln{\\left(3 \\right)}) - F(0) = 3 \\ln{\\left(3 \\right)} + 6 - \\left(2\\right) = \\ln{\\left(27 \\right)} + 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-4884db",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find $\\int_{0}^{1} \\left(2 x^{2} - x - 2\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-11/6",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = \\frac{2 x^{3}}{3} - \\frac{x^{2}}{2} - 2 x$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = \\frac{2 x^{3}}{3} - \\frac{x^{2}}{2} - 2 x$.",
+    "$F(1) - F(0) = - \\frac{11}{6} - \\left(0\\right) = - \\frac{11}{6}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-51fe0a",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find $\\int_{-1}^{1} \\left(x + 2\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = \\frac{x^{2}}{2} + 2 x$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = \\frac{x^{2}}{2} + 2 x$.",
+    "$F(1) - F(-1) = \\frac{5}{2} - \\left(- \\frac{3}{2}\\right) = 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-cebf18",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int_{1}^{4} \\left(2 + \\frac{3}{x^{3}}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "237/32",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = 2 x - \\frac{3}{2 x^{2}}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = 2 x - \\frac{3}{2 x^{2}}$.",
+    "$F(4) - F(1) = \\frac{253}{32} - \\left(\\frac{1}{2}\\right) = \\frac{237}{32}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-6b74d1",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{1} \\left(\\sqrt{x} - x\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "1/6",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = \\frac{2 x^{\\frac{3}{2}}}{3} - \\frac{x^{2}}{2}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = \\frac{2 x^{\\frac{3}{2}}}{3} - \\frac{x^{2}}{2}$.",
+    "$F(1) - F(0) = \\frac{1}{6} - \\left(0\\right) = \\frac{1}{6}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-ca7648",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{6}} \\left(\\sin{\\left(x \\right)} + 1\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-sqrt(3)/2+pi/6+1",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = x - \\cos{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = x - \\cos{\\left(x \\right)}$.",
+    "$F(\\frac{\\pi}{6}) - F(0) = - \\frac{\\sqrt{3}}{2} + \\frac{\\pi}{6} - \\left(-1\\right) = - \\frac{\\sqrt{3}}{2} + \\frac{\\pi}{6} + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-a492ec",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{1}^{4} \\frac{1}{x^{3}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "15/32",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = - \\frac{1}{2 x^{2}}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = - \\frac{1}{2 x^{2}}$.",
+    "$F(4) - F(1) = - \\frac{1}{32} - \\left(- \\frac{1}{2}\\right) = \\frac{15}{32}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-a36dad",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{4}^{9} \\left(\\sqrt{x} + 2 x\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "233/3",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = \\frac{2 x^{\\frac{3}{2}}}{3} + x^{2}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = \\frac{2 x^{\\frac{3}{2}}}{3} + x^{2}$.",
+    "$F(9) - F(4) = 99 - \\left(\\frac{64}{3}\\right) = \\frac{233}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-450f56",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find $\\int_{-2}^{0} \\left(7 x - 2\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-18",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = \\frac{7 x^{2}}{2} - 2 x$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = \\frac{7 x^{2}}{2} - 2 x$.",
+    "$F(0) - F(-2) = 0 - \\left(18\\right) = -18$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-455f4c",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Compute $\\int_{0}^{2} \\left(4 x^{3} + 2 x - 2\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = x^{4} + x^{2} - 2 x$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = x^{4} + x^{2} - 2 x$.",
+    "$F(2) - F(0) = 16 - \\left(0\\right) = 16$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-aad8a6",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $\\int_{1}^{4} \\left(2 + \\frac{1}{x^{3}}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "207/32",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = 2 x - \\frac{1}{2 x^{2}}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = 2 x - \\frac{1}{2 x^{2}}$.",
+    "$F(4) - F(1) = \\frac{255}{32} - \\left(\\frac{3}{2}\\right) = \\frac{207}{32}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-e26776",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{1}^{3} \\left(2 x - 2\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = x^{2} - 2 x$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = x^{2} - 2 x$.",
+    "$F(3) - F(1) = 3 - \\left(-1\\right) = 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-cc9c74",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int_{1}^{3} \\left(1 + \\frac{2}{x^{3}}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "26/9",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = x - \\frac{1}{x^{2}}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = x - \\frac{1}{x^{2}}$.",
+    "$F(3) - F(1) = \\frac{26}{9} - \\left(0\\right) = \\frac{26}{9}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-ecb203",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Compute $\\int_{0}^{\\ln{\\left(3 \\right)}} \\left(e^{x} + 2\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "2+2*ln(3)",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = 2 x + e^{x}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = 2 x + e^{x}$.",
+    "$F(\\ln{\\left(3 \\right)}) - F(0) = \\ln{\\left(9 \\right)} + 3 - \\left(1\\right) = 2 + 2 \\ln{\\left(3 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-d7d8cd",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find $\\int_{0}^{3} \\left(4 x^{2} - 4 x + 2\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "24",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = \\frac{4 x^{3}}{3} - 2 x^{2} + 2 x$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = \\frac{4 x^{3}}{3} - 2 x^{2} + 2 x$.",
+    "$F(3) - F(0) = 24 - \\left(0\\right) = 24$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-681e7f",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{-2}^{0} 4 x\\,dx$.",
+   "checker": "numeric",
+   "answer": "-8",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = 2 x^{2}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = 2 x^{2}$.",
+    "$F(0) - F(-2) = 0 - \\left(8\\right) = -8$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-96c501",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find $\\int_{0}^{1} \\left(4 x^{2} + x + 3\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "29/6",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = \\frac{4 x^{3}}{3} + \\frac{x^{2}}{2} + 3 x$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = \\frac{4 x^{3}}{3} + \\frac{x^{2}}{2} + 3 x$.",
+    "$F(1) - F(0) = \\frac{29}{6} - \\left(0\\right) = \\frac{29}{6}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-3cc6d6",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Compute $\\int_{1}^{2} \\left(x^{2} - 4 x - 3\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-20/3",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = \\frac{x^{3}}{3} - 2 x^{2} - 3 x$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = \\frac{x^{3}}{3} - 2 x^{2} - 3 x$.",
+    "$F(2) - F(1) = - \\frac{34}{3} - \\left(- \\frac{14}{3}\\right) = - \\frac{20}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-3f2c2d",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Compute $\\int_{0}^{1} \\left(4 x^{3} - 2 x - 2\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = x^{4} - x^{2} - 2 x$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = x^{4} - x^{2} - 2 x$.",
+    "$F(1) - F(0) = -2 - \\left(0\\right) = -2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-8128b5",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Compute $\\int_{2}^{4} \\left(1 + \\frac{3}{x^{2}}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "11/4",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = x - \\frac{3}{x}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = x - \\frac{3}{x}$.",
+    "$F(4) - F(2) = \\frac{13}{4} - \\left(\\frac{1}{2}\\right) = \\frac{11}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-3-ba7bf9",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{4} \\left(3 \\sqrt{x} + x\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "24",
+   "hints": [
+    "Find an antiderivative $F$, then compute $F(b) - F(a)$ (FTC2).",
+    "$F(x) = 2 x^{\\frac{3}{2}} + \\frac{x^{2}}{2}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = 2 x^{\\frac{3}{2}} + \\frac{x^{2}}{2}$.",
+    "$F(4) - F(0) = 24 - \\left(0\\right) = 24$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 3,
+   "tags": [
+    "daily"
+   ]
+  }
+ ]
+}

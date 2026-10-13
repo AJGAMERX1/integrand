@@ -1,0 +1,1147 @@
+{
+ "skill": "area-by-geometry",
+ "problems": [
+  {
+   "id": "area-by-geometry-0dca70",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "A rectangle is 8 units wide and 2 units tall. What is its area?",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "Area of a rectangle is width times height.",
+    "$8 \\times 2$."
+   ],
+   "solution": [
+    "$A = 8\\cdot2 = 16$.",
+    "Square units."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-0350ab",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 1$ and above the $x$-axis from $x = 4$ to $x = 9$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "The region is a rectangle.",
+    "Its width is $9 - (4)$ and its height is $1$."
+   ],
+   "solution": [
+    "Width $= 9 - (4) = 5$, height $= 1$.",
+    "Area $= 5\\cdot1 = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-59041a",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under the line $y = \\frac{x}{2}$ from $x = 0$ to $x = 8$.",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "Sketch it: the line starts at the origin, so the region is a right triangle.",
+    "The base is $8$ and the height is the $y$-value at $x = 8$."
+   ],
+   "solution": [
+    "At $x = 8$ the height is $y = 4$.",
+    "Area $= \\tfrac12\\cdot8\\cdot4 = 16$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-1ca75e",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 3 x + 1$ and above the $x$-axis from $x = 1$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "40",
+   "hints": [
+    "The region is a trapezoid standing on the $x$-axis: its parallel sides are the heights at the two ends.",
+    "Heights: $y(1) = 4$ and $y(5) = 16$; width $4$."
+   ],
+   "solution": [
+    "$y(1) = 4$, $y(5) = 16$.",
+    "Area $= \\dfrac{4 + 16}{2}\\cdot4 = 40$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-02349e",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the triangle with vertices $(-1, -5)$, $(5, 5)$, and $(5, -4)$.",
+   "checker": "numeric",
+   "answer": "27",
+   "hints": [
+    "Enclose the triangle in a rectangle and subtract the corner right triangles, or use the shoelace formula.",
+    "Shoelace: $\\tfrac12|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)|$."
+   ],
+   "solution": [
+    "$\\tfrac12|-1(5 - (-4)) + 5(-4 - (-5)) + 5(-5 - (5))|$.",
+    "$= \\tfrac12|-54| = 27$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-0ef62e",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region between the horizontal line $y = 9$ and the line $y = x$ for $0 \\le x \\le 5$.",
+   "checker": "numeric",
+   "answer": "32.5",
+   "hints": [
+    "Take the rectangle under $y = 9$ and remove the triangle under the slanted line.",
+    "Rectangle: $9\\cdot5$; triangle: $\\tfrac12\\cdot5\\cdot5$."
+   ],
+   "solution": [
+    "Rectangle area $= 9\\cdot5 = 45$.",
+    "Triangle under $y = x$: $\\tfrac12\\cdot5\\cdot5 = \\frac{25}{2}$.",
+    "Difference: $\\frac{65}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-149223",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "The region under $y = 3 x + 2$ from $x = 1$ to $x = 4$ is a trapezoid. Which computation gives its area?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "The two parallel sides are the heights of the line at the endpoints.",
+    "Trapezoid area = (average of the parallel sides) times the width."
+   ],
+   "solution": [
+    "Heights: $y(1) = 5$ and $y(4) = 14$; width $3$.",
+    "Area $= \\dfrac{5 + 14}{2}\\cdot3 = \\frac{57}{2}$."
+   ],
+   "verified": true,
+   "choices": [
+    "14\\cdot3",
+    "5\\cdot3",
+    "\\dfrac{5 + 14}{2}\\cdot3",
+    "(5 + 14)\\cdot3"
+   ]
+  },
+  {
+   "id": "area-by-geometry-882239",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of a half circle of radius 6. Give an exact answer in terms of $\\pi$.",
+   "checker": "numeric",
+   "answer": "18*pi",
+   "hints": [
+    "A full circle has area $\\pi r^2$.",
+    "Take half of it."
+   ],
+   "solution": [
+    "Full circle: $\\pi\\cdot6^2 = 36\\pi$.",
+    "Half: $18 \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-7c017e",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = |x|$ from $x = -1$ to $x = 6$.",
+   "checker": "numeric",
+   "answer": "37/2",
+   "hints": [
+    "The graph of $|x|$ is a V: the region is two right triangles meeting at the origin.",
+    "Left triangle: base $1$, height $1$. Right triangle: base $6$, height $6$."
+   ],
+   "solution": [
+    "Left: $\\tfrac12\\cdot1\\cdot1 = \\frac{1}{2}$.",
+    "Right: $\\tfrac12\\cdot6\\cdot6 = 18$.",
+    "Total: $\\frac{37}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-f4c1d7",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "A line passes through $(1, 4)$ and $(4, 1)$. Find the area under this line and above the $x$-axis from $x = 1$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "15/2",
+   "hints": [
+    "You do not need the equation of the line: the two given points are the tops of the trapezoid's parallel sides.",
+    "Parallel sides $4$ and $1$, width $3$."
+   ],
+   "solution": [
+    "The region is a trapezoid with heights $4$ and $1$ and width $4 - 1 = 3$.",
+    "Area $= \\dfrac{4 + 1}{2}\\cdot3 = \\frac{15}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-7c832b",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "A trapezoid has parallel sides of lengths 1 and 10 and height 1. What is its area?",
+   "checker": "numeric",
+   "answer": "11/2",
+   "hints": [
+    "Average the two parallel sides, then multiply by the height.",
+    "$\\dfrac{1 + 10}{2} \\cdot 1$."
+   ],
+   "solution": [
+    "$A = \\dfrac{a + b}{2}h = \\dfrac{1 + 10}{2}\\cdot1$.",
+    "$= \\frac{11}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-998516",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 6$ and above the $x$-axis from $x = 2$ to $x = 9$.",
+   "checker": "numeric",
+   "answer": "42",
+   "hints": [
+    "The region is a rectangle.",
+    "Its width is $9 - (2)$ and its height is $6$."
+   ],
+   "solution": [
+    "Width $= 9 - (2) = 7$, height $= 6$.",
+    "Area $= 7\\cdot6 = 42$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-8a1ff6",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under the line $y = \\frac{3 x}{2}$ from $x = 0$ to $x = 8$.",
+   "checker": "numeric",
+   "answer": "48",
+   "hints": [
+    "Sketch it: the line starts at the origin, so the region is a right triangle.",
+    "The base is $8$ and the height is the $y$-value at $x = 8$."
+   ],
+   "solution": [
+    "At $x = 8$ the height is $y = 12$.",
+    "Area $= \\tfrac12\\cdot8\\cdot12 = 48$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-1642c4",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 10 - 2 x$ and above the $x$-axis from $x = -2$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "48",
+   "hints": [
+    "The region is a trapezoid standing on the $x$-axis: its parallel sides are the heights at the two ends.",
+    "Heights: $y(-2) = 14$ and $y(4) = 2$; width $6$."
+   ],
+   "solution": [
+    "$y(-2) = 14$, $y(4) = 2$.",
+    "Area $= \\dfrac{14 + 2}{2}\\cdot6 = 48$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-980574",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the triangle with vertices $(5, 4)$, $(1, -5)$, and $(-5, 5)$.",
+   "checker": "numeric",
+   "answer": "47",
+   "hints": [
+    "Enclose the triangle in a rectangle and subtract the corner right triangles, or use the shoelace formula.",
+    "Shoelace: $\\tfrac12|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)|$."
+   ],
+   "solution": [
+    "$\\tfrac12|5(-5 - (5)) + 1(5 - (4)) + -5(4 - (-5))|$.",
+    "$= \\tfrac12|-94| = 47$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-eb64ab",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region between the horizontal line $y = 9$ and the line $y = x$ for $0 \\le x \\le 6$.",
+   "checker": "numeric",
+   "answer": "36",
+   "hints": [
+    "Take the rectangle under $y = 9$ and remove the triangle under the slanted line.",
+    "Rectangle: $9\\cdot6$; triangle: $\\tfrac12\\cdot6\\cdot6$."
+   ],
+   "solution": [
+    "Rectangle area $= 9\\cdot6 = 54$.",
+    "Triangle under $y = x$: $\\tfrac12\\cdot6\\cdot6 = 18$.",
+    "Difference: $36$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-883daa",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "The region under $y = 2 x + 5$ from $x = 1$ to $x = 3$ is a trapezoid. Which computation gives its area?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "The two parallel sides are the heights of the line at the endpoints.",
+    "Trapezoid area = (average of the parallel sides) times the width."
+   ],
+   "solution": [
+    "Heights: $y(1) = 7$ and $y(3) = 11$; width $2$.",
+    "Area $= \\dfrac{7 + 11}{2}\\cdot2 = 18$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\dfrac{7 + 11}{2}\\cdot2",
+    "7\\cdot2",
+    "11\\cdot2",
+    "(7 + 11)\\cdot2"
+   ]
+  },
+  {
+   "id": "area-by-geometry-ee82c4",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of a quarter circle of radius 4. Give an exact answer in terms of $\\pi$.",
+   "checker": "numeric",
+   "answer": "4*pi",
+   "hints": [
+    "A full circle has area $\\pi r^2$.",
+    "Take one quarter of it."
+   ],
+   "solution": [
+    "Full circle: $\\pi\\cdot4^2 = 16\\pi$.",
+    "Quarter: $4 \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-fee0f6",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = |x|$ from $x = -3$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "25/2",
+   "hints": [
+    "The graph of $|x|$ is a V: the region is two right triangles meeting at the origin.",
+    "Left triangle: base $3$, height $3$. Right triangle: base $4$, height $4$."
+   ],
+   "solution": [
+    "Left: $\\tfrac12\\cdot3\\cdot3 = \\frac{9}{2}$.",
+    "Right: $\\tfrac12\\cdot4\\cdot4 = 8$.",
+    "Total: $\\frac{25}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-238f2d",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "A line passes through $(2, 5)$ and $(5, 1)$. Find the area under this line and above the $x$-axis from $x = 2$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "You do not need the equation of the line: the two given points are the tops of the trapezoid's parallel sides.",
+    "Parallel sides $5$ and $1$, width $3$."
+   ],
+   "solution": [
+    "The region is a trapezoid with heights $5$ and $1$ and width $5 - 2 = 3$.",
+    "Area $= \\dfrac{5 + 1}{2}\\cdot3 = 9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-e8dbb6",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "A trapezoid has parallel sides of lengths 1 and 4 and height 4. What is its area?",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "Average the two parallel sides, then multiply by the height.",
+    "$\\dfrac{1 + 4}{2} \\cdot 4$."
+   ],
+   "solution": [
+    "$A = \\dfrac{a + b}{2}h = \\dfrac{1 + 4}{2}\\cdot4$.",
+    "$= 10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-02ee06",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 8$ and above the $x$-axis from $x = -3$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "64",
+   "hints": [
+    "The region is a rectangle.",
+    "Its width is $5 - (-3)$ and its height is $8$."
+   ],
+   "solution": [
+    "Width $= 5 - (-3) = 8$, height $= 8$.",
+    "Area $= 8\\cdot8 = 64$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-922a7f",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under the line $y = \\frac{x}{2}$ from $x = 0$ to $x = 5$.",
+   "checker": "numeric",
+   "answer": "25/4",
+   "hints": [
+    "Sketch it: the line starts at the origin, so the region is a right triangle.",
+    "The base is $5$ and the height is the $y$-value at $x = 5$."
+   ],
+   "solution": [
+    "At $x = 5$ the height is $y = \\frac{5}{2}$.",
+    "Area $= \\tfrac12\\cdot5\\cdot\\frac{5}{2} = \\frac{25}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-1f2204",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 2 x + 9$ and above the $x$-axis from $x = -3$ to $x = 3$.",
+   "checker": "numeric",
+   "answer": "54",
+   "hints": [
+    "The region is a trapezoid standing on the $x$-axis: its parallel sides are the heights at the two ends.",
+    "Heights: $y(-3) = 3$ and $y(3) = 15$; width $6$."
+   ],
+   "solution": [
+    "$y(-3) = 3$, $y(3) = 15$.",
+    "Area $= \\dfrac{3 + 15}{2}\\cdot6 = 54$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-a2f950",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the triangle with vertices $(5, 0)$, $(4, 5)$, and $(-5, 3)$.",
+   "checker": "numeric",
+   "answer": "47/2",
+   "hints": [
+    "Enclose the triangle in a rectangle and subtract the corner right triangles, or use the shoelace formula.",
+    "Shoelace: $\\tfrac12|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)|$."
+   ],
+   "solution": [
+    "$\\tfrac12|5(5 - (3)) + 4(3 - (0)) + -5(0 - (5))|$.",
+    "$= \\tfrac12|47| = \\frac{47}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-49af22",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region between the horizontal line $y = 7$ and the line $y = x$ for $0 \\le x \\le 5$.",
+   "checker": "numeric",
+   "answer": "22.5",
+   "hints": [
+    "Take the rectangle under $y = 7$ and remove the triangle under the slanted line.",
+    "Rectangle: $7\\cdot5$; triangle: $\\tfrac12\\cdot5\\cdot5$."
+   ],
+   "solution": [
+    "Rectangle area $= 7\\cdot5 = 35$.",
+    "Triangle under $y = x$: $\\tfrac12\\cdot5\\cdot5 = \\frac{25}{2}$.",
+    "Difference: $\\frac{45}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-69d38d",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "The region under $y = x + 5$ from $x = 3$ to $x = 6$ is a trapezoid. Which computation gives its area?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "The two parallel sides are the heights of the line at the endpoints.",
+    "Trapezoid area = (average of the parallel sides) times the width."
+   ],
+   "solution": [
+    "Heights: $y(3) = 8$ and $y(6) = 11$; width $3$.",
+    "Area $= \\dfrac{8 + 11}{2}\\cdot3 = \\frac{57}{2}$."
+   ],
+   "verified": true,
+   "choices": [
+    "11\\cdot3",
+    "\\dfrac{8 + 11}{2}\\cdot3",
+    "(8 + 11)\\cdot3",
+    "8\\cdot3"
+   ]
+  },
+  {
+   "id": "area-by-geometry-b4c9cf",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of a half circle of radius 5. Give an exact answer in terms of $\\pi$.",
+   "checker": "numeric",
+   "answer": "25*pi/2",
+   "hints": [
+    "A full circle has area $\\pi r^2$.",
+    "Take half of it."
+   ],
+   "solution": [
+    "Full circle: $\\pi\\cdot5^2 = 25\\pi$.",
+    "Half: $\\frac{25 \\pi}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-d52d10",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = |x|$ from $x = -4$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "The graph of $|x|$ is a V: the region is two right triangles meeting at the origin.",
+    "Left triangle: base $4$, height $4$. Right triangle: base $4$, height $4$."
+   ],
+   "solution": [
+    "Left: $\\tfrac12\\cdot4\\cdot4 = 8$.",
+    "Right: $\\tfrac12\\cdot4\\cdot4 = 8$.",
+    "Total: $16$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-985f94",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "A line passes through $(2, 2)$ and $(4, 4)$. Find the area under this line and above the $x$-axis from $x = 2$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "You do not need the equation of the line: the two given points are the tops of the trapezoid's parallel sides.",
+    "Parallel sides $2$ and $4$, width $2$."
+   ],
+   "solution": [
+    "The region is a trapezoid with heights $2$ and $4$ and width $4 - 2 = 2$.",
+    "Area $= \\dfrac{2 + 4}{2}\\cdot2 = 6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-f990e2",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "A trapezoid has parallel sides of lengths 8 and 10 and height 1. What is its area?",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "Average the two parallel sides, then multiply by the height.",
+    "$\\dfrac{8 + 10}{2} \\cdot 1$."
+   ],
+   "solution": [
+    "$A = \\dfrac{a + b}{2}h = \\dfrac{8 + 10}{2}\\cdot1$.",
+    "$= 9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-a184e5",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 3$ and above the $x$-axis from $x = 4$ to $x = 9$.",
+   "checker": "numeric",
+   "answer": "15",
+   "hints": [
+    "The region is a rectangle.",
+    "Its width is $9 - (4)$ and its height is $3$."
+   ],
+   "solution": [
+    "Width $= 9 - (4) = 5$, height $= 3$.",
+    "Area $= 5\\cdot3 = 15$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-26118d",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under the line $y = x$ from $x = 0$ to $x = 7$.",
+   "checker": "numeric",
+   "answer": "24.5",
+   "hints": [
+    "Sketch it: the line starts at the origin, so the region is a right triangle.",
+    "The base is $7$ and the height is the $y$-value at $x = 7$."
+   ],
+   "solution": [
+    "At $x = 7$ the height is $y = 7$.",
+    "Area $= \\tfrac12\\cdot7\\cdot7 = \\frac{49}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-b9a0c8",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = \\frac{x}{2} + 7$ and above the $x$-axis from $x = 2$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "17",
+   "hints": [
+    "The region is a trapezoid standing on the $x$-axis: its parallel sides are the heights at the two ends.",
+    "Heights: $y(2) = 8$ and $y(4) = 9$; width $2$."
+   ],
+   "solution": [
+    "$y(2) = 8$, $y(4) = 9$.",
+    "Area $= \\dfrac{8 + 9}{2}\\cdot2 = 17$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-de96ee",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "The region under $y = x + 1$ from $x = 0$ to $x = 2$ is a trapezoid. Which computation gives its area?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "The two parallel sides are the heights of the line at the endpoints.",
+    "Trapezoid area = (average of the parallel sides) times the width."
+   ],
+   "solution": [
+    "Heights: $y(0) = 1$ and $y(2) = 3$; width $2$.",
+    "Area $= \\dfrac{1 + 3}{2}\\cdot2 = 4$."
+   ],
+   "verified": true,
+   "choices": [
+    "(1 + 3)\\cdot2",
+    "\\dfrac{1 + 3}{2}\\cdot2",
+    "3\\cdot2",
+    "1\\cdot2"
+   ]
+  },
+  {
+   "id": "area-by-geometry-f2a5c6",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of a quarter circle of radius 5. Give an exact answer in terms of $\\pi$.",
+   "checker": "numeric",
+   "answer": "25*pi/4",
+   "hints": [
+    "A full circle has area $\\pi r^2$.",
+    "Take one quarter of it."
+   ],
+   "solution": [
+    "Full circle: $\\pi\\cdot5^2 = 25\\pi$.",
+    "Quarter: $\\frac{25 \\pi}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-b5d7f1",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = |x|$ from $x = -1$ to $x = 3$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "The graph of $|x|$ is a V: the region is two right triangles meeting at the origin.",
+    "Left triangle: base $1$, height $1$. Right triangle: base $3$, height $3$."
+   ],
+   "solution": [
+    "Left: $\\tfrac12\\cdot1\\cdot1 = \\frac{1}{2}$.",
+    "Right: $\\tfrac12\\cdot3\\cdot3 = \\frac{9}{2}$.",
+    "Total: $5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-1b2866",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "A line passes through $(1, 6)$ and $(3, 7)$. Find the area under this line and above the $x$-axis from $x = 1$ to $x = 3$.",
+   "checker": "numeric",
+   "answer": "13",
+   "hints": [
+    "You do not need the equation of the line: the two given points are the tops of the trapezoid's parallel sides.",
+    "Parallel sides $6$ and $7$, width $2$."
+   ],
+   "solution": [
+    "The region is a trapezoid with heights $6$ and $7$ and width $3 - 1 = 2$.",
+    "Area $= \\dfrac{6 + 7}{2}\\cdot2 = 13$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-b8cf90",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "A rectangle is 4 units wide and 12 units tall. What is its area?",
+   "checker": "numeric",
+   "answer": "48",
+   "hints": [
+    "Area of a rectangle is width times height.",
+    "$4 \\times 12$."
+   ],
+   "solution": [
+    "$A = 4\\cdot12 = 48$.",
+    "Square units."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-4413f4",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 9$ and above the $x$-axis from $x = 0$ to $x = 2$.",
+   "checker": "numeric",
+   "answer": "18",
+   "hints": [
+    "The region is a rectangle.",
+    "Its width is $2 - (0)$ and its height is $9$."
+   ],
+   "solution": [
+    "Width $= 2 - (0) = 2$, height $= 9$.",
+    "Area $= 2\\cdot9 = 18$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-fd3fa6",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under the line $y = 2 x$ from $x = 0$ to $x = 8$.",
+   "checker": "numeric",
+   "answer": "64",
+   "hints": [
+    "Sketch it: the line starts at the origin, so the region is a right triangle.",
+    "The base is $8$ and the height is the $y$-value at $x = 8$."
+   ],
+   "solution": [
+    "At $x = 8$ the height is $y = 16$.",
+    "Area $= \\tfrac12\\cdot8\\cdot16 = 64$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-3365ec",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 2 x + 10$ and above the $x$-axis from $x = -3$ to $x = 1$.",
+   "checker": "numeric",
+   "answer": "32",
+   "hints": [
+    "The region is a trapezoid standing on the $x$-axis: its parallel sides are the heights at the two ends.",
+    "Heights: $y(-3) = 4$ and $y(1) = 12$; width $4$."
+   ],
+   "solution": [
+    "$y(-3) = 4$, $y(1) = 12$.",
+    "Area $= \\dfrac{4 + 12}{2}\\cdot4 = 32$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-5865f1",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the triangle with vertices $(2, -5)$, $(-2, -1)$, and $(1, -1)$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Enclose the triangle in a rectangle and subtract the corner right triangles, or use the shoelace formula.",
+    "Shoelace: $\\tfrac12|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)|$."
+   ],
+   "solution": [
+    "$\\tfrac12|2(-1 - (-1)) + -2(-1 - (-5)) + 1(-5 - (-1))|$.",
+    "$= \\tfrac12|-12| = 6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-7d85a3",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region between the horizontal line $y = 3$ and the line $y = x$ for $0 \\le x \\le 2$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Take the rectangle under $y = 3$ and remove the triangle under the slanted line.",
+    "Rectangle: $3\\cdot2$; triangle: $\\tfrac12\\cdot2\\cdot2$."
+   ],
+   "solution": [
+    "Rectangle area $= 3\\cdot2 = 6$.",
+    "Triangle under $y = x$: $\\tfrac12\\cdot2\\cdot2 = 2$.",
+    "Difference: $4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-ee49f8",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "The region under $y = 3 x + 6$ from $x = 0$ to $x = 5$ is a trapezoid. Which computation gives its area?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "The two parallel sides are the heights of the line at the endpoints.",
+    "Trapezoid area = (average of the parallel sides) times the width."
+   ],
+   "solution": [
+    "Heights: $y(0) = 6$ and $y(5) = 21$; width $5$.",
+    "Area $= \\dfrac{6 + 21}{2}\\cdot5 = \\frac{135}{2}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\dfrac{6 + 21}{2}\\cdot5",
+    "(6 + 21)\\cdot5",
+    "6\\cdot5",
+    "21\\cdot5"
+   ]
+  },
+  {
+   "id": "area-by-geometry-cdd39b",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of a half circle of radius 4. Give an exact answer in terms of $\\pi$.",
+   "checker": "numeric",
+   "answer": "8*pi",
+   "hints": [
+    "A full circle has area $\\pi r^2$.",
+    "Take half of it."
+   ],
+   "solution": [
+    "Full circle: $\\pi\\cdot4^2 = 16\\pi$.",
+    "Half: $8 \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-358c5a",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = |x|$ from $x = -4$ to $x = 2$.",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "The graph of $|x|$ is a V: the region is two right triangles meeting at the origin.",
+    "Left triangle: base $4$, height $4$. Right triangle: base $2$, height $2$."
+   ],
+   "solution": [
+    "Left: $\\tfrac12\\cdot4\\cdot4 = 8$.",
+    "Right: $\\tfrac12\\cdot2\\cdot2 = 2$.",
+    "Total: $10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-c47871",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "A trapezoid has parallel sides of lengths 4 and 2 and height 3. What is its area?",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "Average the two parallel sides, then multiply by the height.",
+    "$\\dfrac{4 + 2}{2} \\cdot 3$."
+   ],
+   "solution": [
+    "$A = \\dfrac{a + b}{2}h = \\dfrac{4 + 2}{2}\\cdot3$.",
+    "$= 9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-618cb5",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 7$ and above the $x$-axis from $x = 2$ to $x = 8$.",
+   "checker": "numeric",
+   "answer": "42",
+   "hints": [
+    "The region is a rectangle.",
+    "Its width is $8 - (2)$ and its height is $7$."
+   ],
+   "solution": [
+    "Width $= 8 - (2) = 6$, height $= 7$.",
+    "Area $= 6\\cdot7 = 42$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-6cddcb",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under the line $y = 2 x$ from $x = 0$ to $x = 3$.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "Sketch it: the line starts at the origin, so the region is a right triangle.",
+    "The base is $3$ and the height is the $y$-value at $x = 3$."
+   ],
+   "solution": [
+    "At $x = 3$ the height is $y = 6$.",
+    "Area $= \\tfrac12\\cdot3\\cdot6 = 9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-7fe47b",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = 3 x + 3$ and above the $x$-axis from $x = 3$ to $x = 9$.",
+   "checker": "numeric",
+   "answer": "126",
+   "hints": [
+    "The region is a trapezoid standing on the $x$-axis: its parallel sides are the heights at the two ends.",
+    "Heights: $y(3) = 12$ and $y(9) = 30$; width $6$."
+   ],
+   "solution": [
+    "$y(3) = 12$, $y(9) = 30$.",
+    "Area $= \\dfrac{12 + 30}{2}\\cdot6 = 126$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-f9a31a",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the triangle with vertices $(-1, 4)$, $(-3, 1)$, and $(3, -1)$.",
+   "checker": "numeric",
+   "answer": "11",
+   "hints": [
+    "Enclose the triangle in a rectangle and subtract the corner right triangles, or use the shoelace formula.",
+    "Shoelace: $\\tfrac12|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)|$."
+   ],
+   "solution": [
+    "$\\tfrac12|-1(1 - (-1)) + -3(-1 - (4)) + 3(4 - (1))|$.",
+    "$= \\tfrac12|22| = 11$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-5aecfc",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "The region under $y = 2 x + 5$ from $x = 2$ to $x = 6$ is a trapezoid. Which computation gives its area?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "The two parallel sides are the heights of the line at the endpoints.",
+    "Trapezoid area = (average of the parallel sides) times the width."
+   ],
+   "solution": [
+    "Heights: $y(2) = 9$ and $y(6) = 17$; width $4$.",
+    "Area $= \\dfrac{9 + 17}{2}\\cdot4 = 52$."
+   ],
+   "verified": true,
+   "choices": [
+    "17\\cdot4",
+    "9\\cdot4",
+    "(9 + 17)\\cdot4",
+    "\\dfrac{9 + 17}{2}\\cdot4"
+   ]
+  },
+  {
+   "id": "area-by-geometry-6e1d24",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of a half circle of radius 2. Give an exact answer in terms of $\\pi$.",
+   "checker": "numeric",
+   "answer": "2*pi",
+   "hints": [
+    "A full circle has area $\\pi r^2$.",
+    "Take half of it."
+   ],
+   "solution": [
+    "Full circle: $\\pi\\cdot2^2 = 4\\pi$.",
+    "Half: $2 \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-f23cbe",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = |x|$ from $x = -5$ to $x = 6$.",
+   "checker": "numeric",
+   "answer": "61/2",
+   "hints": [
+    "The graph of $|x|$ is a V: the region is two right triangles meeting at the origin.",
+    "Left triangle: base $5$, height $5$. Right triangle: base $6$, height $6$."
+   ],
+   "solution": [
+    "Left: $\\tfrac12\\cdot5\\cdot5 = \\frac{25}{2}$.",
+    "Right: $\\tfrac12\\cdot6\\cdot6 = 18$.",
+    "Total: $\\frac{61}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-3359dd",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "A line passes through $(0, 4)$ and $(3, 8)$. Find the area under this line and above the $x$-axis from $x = 0$ to $x = 3$.",
+   "checker": "numeric",
+   "answer": "18",
+   "hints": [
+    "You do not need the equation of the line: the two given points are the tops of the trapezoid's parallel sides.",
+    "Parallel sides $4$ and $8$, width $3$."
+   ],
+   "solution": [
+    "The region is a trapezoid with heights $4$ and $8$ and width $3 - 0 = 3$.",
+    "Area $= \\dfrac{4 + 8}{2}\\cdot3 = 18$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-3026cb",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "A trapezoid has parallel sides of lengths 3 and 7 and height 3. What is its area?",
+   "checker": "numeric",
+   "answer": "15",
+   "hints": [
+    "Average the two parallel sides, then multiply by the height.",
+    "$\\dfrac{3 + 7}{2} \\cdot 3$."
+   ],
+   "solution": [
+    "$A = \\dfrac{a + b}{2}h = \\dfrac{3 + 7}{2}\\cdot3$.",
+    "$= 15$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-f2d08c",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under $y = 5$ and above the $x$-axis from $x = 4$ to $x = 6$.",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "The region is a rectangle.",
+    "Its width is $6 - (4)$ and its height is $5$."
+   ],
+   "solution": [
+    "Width $= 6 - (4) = 2$, height $= 5$.",
+    "Area $= 2\\cdot5 = 10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-0d336b",
+   "skill": "area-by-geometry",
+   "difficulty": 1,
+   "statement": "Find the area of the region under the line $y = 3 x$ from $x = 0$ to $x = 8$.",
+   "checker": "numeric",
+   "answer": "96",
+   "hints": [
+    "Sketch it: the line starts at the origin, so the region is a right triangle.",
+    "The base is $8$ and the height is the $y$-value at $x = 8$."
+   ],
+   "solution": [
+    "At $x = 8$ the height is $y = 24$.",
+    "Area $= \\tfrac12\\cdot8\\cdot24 = 96$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-34ccf4",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the region under $y = \\frac{x}{2} + 1$ and above the $x$-axis from $x = -1$ to $x = 1$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "The region is a trapezoid standing on the $x$-axis: its parallel sides are the heights at the two ends.",
+    "Heights: $y(-1) = \\frac{1}{2}$ and $y(1) = \\frac{3}{2}$; width $2$."
+   ],
+   "solution": [
+    "$y(-1) = \\frac{1}{2}$, $y(1) = \\frac{3}{2}$.",
+    "Area $= \\dfrac{\\frac{1}{2} + \\frac{3}{2}}{2}\\cdot2 = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-17dc5e",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "Find the area of the triangle with vertices $(-2, 1)$, $(-4, -1)$, and $(-4, -4)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Enclose the triangle in a rectangle and subtract the corner right triangles, or use the shoelace formula.",
+    "Shoelace: $\\tfrac12|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)|$."
+   ],
+   "solution": [
+    "$\\tfrac12|-2(-1 - (-4)) + -4(-4 - (1)) + -4(1 - (-1))|$.",
+    "$= \\tfrac12|6| = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-cdda80",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region between the horizontal line $y = 7$ and the line $y = x$ for $0 \\le x \\le 6$.",
+   "checker": "numeric",
+   "answer": "24",
+   "hints": [
+    "Take the rectangle under $y = 7$ and remove the triangle under the slanted line.",
+    "Rectangle: $7\\cdot6$; triangle: $\\tfrac12\\cdot6\\cdot6$."
+   ],
+   "solution": [
+    "Rectangle area $= 7\\cdot6 = 42$.",
+    "Triangle under $y = x$: $\\tfrac12\\cdot6\\cdot6 = 18$.",
+    "Difference: $24$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "area-by-geometry-8b3443",
+   "skill": "area-by-geometry",
+   "difficulty": 2,
+   "statement": "The region under $y = 3 x + 6$ from $x = 1$ to $x = 4$ is a trapezoid. Which computation gives its area?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "The two parallel sides are the heights of the line at the endpoints.",
+    "Trapezoid area = (average of the parallel sides) times the width."
+   ],
+   "solution": [
+    "Heights: $y(1) = 9$ and $y(4) = 18$; width $3$.",
+    "Area $= \\dfrac{9 + 18}{2}\\cdot3 = \\frac{81}{2}$."
+   ],
+   "verified": true,
+   "choices": [
+    "9\\cdot3",
+    "18\\cdot3",
+    "\\dfrac{9 + 18}{2}\\cdot3",
+    "(9 + 18)\\cdot3"
+   ]
+  },
+  {
+   "id": "area-by-geometry-b65526",
+   "skill": "area-by-geometry",
+   "difficulty": 3,
+   "statement": "Find the area of the region under $y = |x|$ from $x = -2$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "The graph of $|x|$ is a V: the region is two right triangles meeting at the origin.",
+    "Left triangle: base $2$, height $2$. Right triangle: base $4$, height $4$."
+   ],
+   "solution": [
+    "Left: $\\tfrac12\\cdot2\\cdot2 = 2$.",
+    "Right: $\\tfrac12\\cdot4\\cdot4 = 8$.",
+    "Total: $10$."
+   ],
+   "verified": true
+  }
+ ]
+}

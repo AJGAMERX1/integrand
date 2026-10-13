@@ -1,0 +1,1308 @@
+{
+ "skill": "polynomials",
+ "problems": [
+  {
+   "id": "polynomials-33f3cd",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "Expand $(x - 7)(3 x - 3)$.",
+   "checker": "equiv",
+   "answer": "3*x^2-24*x+21",
+   "hints": [
+    "Multiply every term of the first factor by every term of the second (FOIL).",
+    "First: $3 x^{2}$; Outer + Inner: $- 24 x$; Last: $21$."
+   ],
+   "solution": [
+    "First: $x \\cdot 3 x = 3 x^{2}$.",
+    "Outer and Inner: $- 3 x + - 21 x = - 24 x$.",
+    "Last: $-7 \\cdot -3 = 21$. Total: $3 x^{2} - 24 x + 21$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-876d55",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Expand $(x + 4)^2$.",
+   "checker": "equiv",
+   "answer": "x^2+8*x+16",
+   "hints": [
+    "$(u+v)^2 = u^2 + 2uv + v^2$: do not forget the middle term.",
+    "Write the factor twice and multiply term by term if you are unsure."
+   ],
+   "solution": [
+    "Use the special product pattern (or FOIL).",
+    "Result: $x^{2} + 8 x + 16$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-28db09",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Simplify $(2 x^{2} - 2 x - 2) + (5 - x)$.",
+   "checker": "equiv",
+   "answer": "2*x^2-3*x+3",
+   "hints": [
+    "Combine like terms: the $x^2$ terms together, the $x$ terms together, the constants together.",
+    "Line up the terms by their power of $x$."
+   ],
+   "solution": [
+    "Remove the parentheses: $2 x^{2} - 2 x - 2 + 5 - x$.",
+    "Combine like terms: $2 x^{2} - 3 x + 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-756e8a",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Expand $5 x^{2}(4 x^{2} + 3 x - 4)$.",
+   "checker": "equiv",
+   "answer": "20*x^4+15*x^3-20*x^2",
+   "hints": [
+    "Distribute the monomial to each term.",
+    "Multiply coefficients and add the exponents of $x$."
+   ],
+   "solution": [
+    "Multiply each term by $5 x^{2}$.",
+    "Result: $20 x^{4} + 15 x^{3} - 20 x^{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-bf8a42",
+   "skill": "polynomials",
+   "difficulty": 3,
+   "statement": "Expand $(x + 3)^3$.",
+   "checker": "equiv",
+   "answer": "x^3+9*x^2+27*x+27",
+   "hints": [
+    "Multiply term by term, then combine like terms carefully.",
+    "First expand $(x + 3)^2 = x^{2} + 6 x + 9$, then multiply by $(x + 3)$ once more."
+   ],
+   "solution": [
+    "Multiply every term of the first factor by every term of the second.",
+    "Collect like powers of $x$.",
+    "Result: $x^{3} + 9 x^{2} + 27 x + 27$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-27dbe5",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "What is the degree of the polynomial $(2 x^{2} + 4)(5 - x)$?",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "The degree is the highest power of $x$ after expanding.",
+    "You do not need to expand everything: multiply only the highest-power terms."
+   ],
+   "solution": [
+    "The highest-power terms are $x^{2}$ and $x^{1}$.",
+    "Their product has degree $2 + 1 = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-29621b",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "If $p(x) = 2 x^{3} - 2 x^{2} - 5 x + 5$, find $p(-2)$.",
+   "checker": "numeric",
+   "answer": "-9",
+   "hints": [
+    "Replace every $x$ with $-2$, keeping the parentheses.",
+    "Compute the powers first, then multiply, then add."
+   ],
+   "solution": [
+    "$p(-2) = 2 (-2)^{3} - 2 (-2)^{2} - 5 (-2) + 5$.",
+    "$= -9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-76b3f2",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Which expression equals $(x - 7)^2$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Squaring a binomial produces three terms, not two.",
+    "$(u+v)^2 = u^2 + 2uv + v^2$ with $u = x$, $v = -7$."
+   ],
+   "solution": [
+    "$(x - 7)^2 = x^2 + 2(-7)x + (-7)^2$.",
+    "$= x^{2} - 14 x + 49$."
+   ],
+   "verified": true,
+   "choices": [
+    "x^{2} + 14 x + 49",
+    "x^{2} - 14 x + 49",
+    "x^{2} + 49",
+    "x^{2} - 7 x + 49"
+   ]
+  },
+  {
+   "id": "polynomials-f639b6",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "What is the coefficient of $x^{1}$ (the $x$ term) in the expansion of $(x + 1)(2 x^{2} - 3 x + 5)$?",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Only two products contribute to $x^{1}$: pick a term from each factor whose exponents add to $1$.",
+    "You can expand fully and read it off, but it is faster to collect just the needed products."
+   ],
+   "solution": [
+    "Full expansion: $2 x^{3} - x^{2} + 2 x + 5$.",
+    "The coefficient of $x^{1}$ is $2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-ec95a9",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Find the constant term of $(2 x^{2} - 5)(- x - 1)$ after expanding.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "The constant term comes from multiplying the constants.",
+    "$-5 \\cdot -1$"
+   ],
+   "solution": [
+    "Expansion: $- 2 x^{3} - 2 x^{2} + 5 x + 5$.",
+    "The constant term is $5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-489349",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "Expand $(x - 4)(3 x - 5)$.",
+   "checker": "equiv",
+   "answer": "3*x^2-17*x+20",
+   "hints": [
+    "Multiply every term of the first factor by every term of the second (FOIL).",
+    "First: $3 x^{2}$; Outer + Inner: $- 17 x$; Last: $20$."
+   ],
+   "solution": [
+    "First: $x \\cdot 3 x = 3 x^{2}$.",
+    "Outer and Inner: $- 5 x + - 12 x = - 17 x$.",
+    "Last: $-4 \\cdot -5 = 20$. Total: $3 x^{2} - 17 x + 20$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-e0be6c",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Expand $(x + 9)(x - 9)$.",
+   "checker": "equiv",
+   "answer": "x^2-81",
+   "hints": [
+    "$(u+v)(u-v) = u^2 - v^2$: the middle terms cancel.",
+    "Write the factor twice and multiply term by term if you are unsure."
+   ],
+   "solution": [
+    "Use the special product pattern (or FOIL).",
+    "Result: $x^{2} - 81$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-ed3f1f",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Simplify $(5 x^{2} + 5 x + 1) + (- 4 x^{2} - 2 x - 6)$.",
+   "checker": "equiv",
+   "answer": "x^2+3*x-5",
+   "hints": [
+    "Combine like terms: the $x^2$ terms together, the $x$ terms together, the constants together.",
+    "Line up the terms by their power of $x$."
+   ],
+   "solution": [
+    "Remove the parentheses: $5 x^{2} + 5 x + 1 + - 4 x^{2} - 2 x - 6$.",
+    "Combine like terms: $x^{2} + 3 x - 5$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-d466b9",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Expand $- 3 x^{2}(2 x^{2} + 2 x + 2)$.",
+   "checker": "equiv",
+   "answer": "-6*x^4-6*x^3-6*x^2",
+   "hints": [
+    "Distribute the monomial to each term.",
+    "Multiply coefficients and add the exponents of $x$."
+   ],
+   "solution": [
+    "Multiply each term by $- 3 x^{2}$.",
+    "Result: $- 6 x^{4} - 6 x^{3} - 6 x^{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-1625a0",
+   "skill": "polynomials",
+   "difficulty": 3,
+   "statement": "Expand $(x + 1)(x^{2} - 4 x + 4)$.",
+   "checker": "equiv",
+   "answer": "x^3-3*x^2+4",
+   "hints": [
+    "Multiply term by term, then combine like terms carefully.",
+    "Each of the two terms in the first factor multiplies all three terms in the second: six products."
+   ],
+   "solution": [
+    "Multiply every term of the first factor by every term of the second.",
+    "Collect like powers of $x$.",
+    "Result: $x^{3} - 3 x^{2} + 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-43bd03",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "What is the degree of the polynomial $(3 x^{3} - 2)(x^{2} + 2 x + 5)$?",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "The degree is the highest power of $x$ after expanding.",
+    "You do not need to expand everything: multiply only the highest-power terms."
+   ],
+   "solution": [
+    "The highest-power terms are $x^{3}$ and $x^{2}$.",
+    "Their product has degree $3 + 2 = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-38749e",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "If $p(x) = - x^{3} + x^{2} + 2 x + 4$, find $p(3)$.",
+   "checker": "numeric",
+   "answer": "-8",
+   "hints": [
+    "Replace every $x$ with $3$, keeping the parentheses.",
+    "Compute the powers first, then multiply, then add."
+   ],
+   "solution": [
+    "$p(3) = - (3)^{3} + (3)^{2} + 2 (3) + 4$.",
+    "$= -8$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-4e7319",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Which expression equals $(x - 4)^2$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Squaring a binomial produces three terms, not two.",
+    "$(u+v)^2 = u^2 + 2uv + v^2$ with $u = x$, $v = -4$."
+   ],
+   "solution": [
+    "$(x - 4)^2 = x^2 + 2(-4)x + (-4)^2$.",
+    "$= x^{2} - 8 x + 16$."
+   ],
+   "verified": true,
+   "choices": [
+    "x^{2} + 16",
+    "x^{2} - 4 x + 16",
+    "x^{2} - 8 x + 16",
+    "x^{2} + 8 x + 16"
+   ]
+  },
+  {
+   "id": "polynomials-fb4643",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "What is the coefficient of $x^{1}$ (the $x$ term) in the expansion of $(x - 5)(2 x^{2} - x + 1)$?",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Only two products contribute to $x^{1}$: pick a term from each factor whose exponents add to $1$.",
+    "You can expand fully and read it off, but it is faster to collect just the needed products."
+   ],
+   "solution": [
+    "Full expansion: $2 x^{3} - 11 x^{2} + 6 x - 5$.",
+    "The coefficient of $x^{1}$ is $6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-25f7f4",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Find the constant term of $(3 x^{2} - 3)(2 x + 3)$ after expanding.",
+   "checker": "numeric",
+   "answer": "-9",
+   "hints": [
+    "The constant term comes from multiplying the constants.",
+    "$-3 \\cdot 3$"
+   ],
+   "solution": [
+    "Expansion: $6 x^{3} + 9 x^{2} - 6 x - 9$.",
+    "The constant term is $-9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-89e89f",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "Expand $(2 x - 6)(x + 6)$.",
+   "checker": "equiv",
+   "answer": "2*x^2+6*x-36",
+   "hints": [
+    "Multiply every term of the first factor by every term of the second (FOIL).",
+    "First: $2 x^{2}$; Outer + Inner: $6 x$; Last: $-36$."
+   ],
+   "solution": [
+    "First: $2 x \\cdot x = 2 x^{2}$.",
+    "Outer and Inner: $12 x + - 6 x = 6 x$.",
+    "Last: $-6 \\cdot 6 = -36$. Total: $2 x^{2} + 6 x - 36$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-41b7b9",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Simplify $(4 x^{2} - 5 x - 3) + (- 4 x^{2} - 2 x + 4)$.",
+   "checker": "equiv",
+   "answer": "1-7*x",
+   "hints": [
+    "Combine like terms: the $x^2$ terms together, the $x$ terms together, the constants together.",
+    "Line up the terms by their power of $x$."
+   ],
+   "solution": [
+    "Remove the parentheses: $4 x^{2} - 5 x - 3 + - 4 x^{2} - 2 x + 4$.",
+    "Combine like terms: $1 - 7 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-84284e",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Expand $- 3 x^{3}(3 x^{2} + 2 x - 6)$.",
+   "checker": "equiv",
+   "answer": "-9*x^5-6*x^4+18*x^3",
+   "hints": [
+    "Distribute the monomial to each term.",
+    "Multiply coefficients and add the exponents of $x$."
+   ],
+   "solution": [
+    "Multiply each term by $- 3 x^{3}$.",
+    "Result: $- 9 x^{5} - 6 x^{4} + 18 x^{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-9a7fbb",
+   "skill": "polynomials",
+   "difficulty": 3,
+   "statement": "Expand $(x - 5)^3$.",
+   "checker": "equiv",
+   "answer": "x^3-15*x^2+75*x-125",
+   "hints": [
+    "Multiply term by term, then combine like terms carefully.",
+    "First expand $(x - 5)^2 = x^{2} - 10 x + 25$, then multiply by $(x - 5)$ once more."
+   ],
+   "solution": [
+    "Multiply every term of the first factor by every term of the second.",
+    "Collect like powers of $x$.",
+    "Result: $x^{3} - 15 x^{2} + 75 x - 125$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-8db994",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "What is the degree of the polynomial $(x + 4)(x^{2} + 3 x - 1)$?",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "The degree is the highest power of $x$ after expanding.",
+    "You do not need to expand everything: multiply only the highest-power terms."
+   ],
+   "solution": [
+    "The highest-power terms are $x^{1}$ and $x^{2}$.",
+    "Their product has degree $1 + 2 = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-69d6cf",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "If $p(x) = 2 x^{3} + 2 x^{2} - 6 x - 7$, find $p(-2)$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Replace every $x$ with $-2$, keeping the parentheses.",
+    "Compute the powers first, then multiply, then add."
+   ],
+   "solution": [
+    "$p(-2) = 2 (-2)^{3} + 2 (-2)^{2} - 6 (-2) - 7$.",
+    "$= -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-2b1620",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Which expression equals $(x + 8)^2$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Squaring a binomial produces three terms, not two.",
+    "$(u+v)^2 = u^2 + 2uv + v^2$ with $u = x$, $v = 8$."
+   ],
+   "solution": [
+    "$(x + 8)^2 = x^2 + 2(8)x + (8)^2$.",
+    "$= x^{2} + 16 x + 64$."
+   ],
+   "verified": true,
+   "choices": [
+    "x^{2} + 64",
+    "x^{2} + 16 x + 64",
+    "x^{2} - 16 x + 64",
+    "x^{2} + 8 x + 64"
+   ]
+  },
+  {
+   "id": "polynomials-c3e061",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "What is the coefficient of $x^{1}$ (the $x$ term) in the expansion of $(x + 5)(3 x^{2} + 4 x - 2)$?",
+   "checker": "numeric",
+   "answer": "18",
+   "hints": [
+    "Only two products contribute to $x^{1}$: pick a term from each factor whose exponents add to $1$.",
+    "You can expand fully and read it off, but it is faster to collect just the needed products."
+   ],
+   "solution": [
+    "Full expansion: $3 x^{3} + 19 x^{2} + 18 x - 10$.",
+    "The coefficient of $x^{1}$ is $18$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-c4f79b",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Find the leading coefficient of $(2 x^{2} - 3)(4 - x)$ after expanding.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "The leading coefficient comes from multiplying the highest-power terms.",
+    "$2 \\cdot -1$"
+   ],
+   "solution": [
+    "Expansion: $- 2 x^{3} + 8 x^{2} + 3 x - 12$.",
+    "The leading coefficient is $-2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-e3b34c",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "Expand $(x - 4)(2 x - 7)$.",
+   "checker": "equiv",
+   "answer": "2*x^2-15*x+28",
+   "hints": [
+    "Multiply every term of the first factor by every term of the second (FOIL).",
+    "First: $2 x^{2}$; Outer + Inner: $- 15 x$; Last: $28$."
+   ],
+   "solution": [
+    "First: $x \\cdot 2 x = 2 x^{2}$.",
+    "Outer and Inner: $- 7 x + - 8 x = - 15 x$.",
+    "Last: $-4 \\cdot -7 = 28$. Total: $2 x^{2} - 15 x + 28$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-09feef",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "Expand $(4 x + 6)^2$.",
+   "checker": "equiv",
+   "answer": "16*x^2+48*x+36",
+   "hints": [
+    "$(u+v)^2 = u^2 + 2uv + v^2$ with $u$ the whole first term.",
+    "Write the factor twice and multiply term by term if you are unsure."
+   ],
+   "solution": [
+    "Use the special product pattern (or FOIL).",
+    "Result: $16 x^{2} + 48 x + 36$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-c6ce48",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Simplify $(4 x^{2} - 6 x + 2) - (- 3 x^{2} - 5 x - 4)$.",
+   "checker": "equiv",
+   "answer": "7*x^2-x+6",
+   "hints": [
+    "Combine like terms: the $x^2$ terms together, the $x$ terms together, the constants together.",
+    "When subtracting, change the sign of every term in the second polynomial first."
+   ],
+   "solution": [
+    "Distribute the minus sign: $4 x^{2} - 6 x + 2 + 3 x^{2} + 5 x + 4$.",
+    "Combine like terms: $7 x^{2} - x + 6$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-ed8f17",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Expand $- 3 x(x^{2} + 5 x - 2)$.",
+   "checker": "equiv",
+   "answer": "-3*x^3-15*x^2+6*x",
+   "hints": [
+    "Distribute the monomial to each term.",
+    "Multiply coefficients and add the exponents of $x$."
+   ],
+   "solution": [
+    "Multiply each term by $- 3 x$.",
+    "Result: $- 3 x^{3} - 15 x^{2} + 6 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-ba6b0e",
+   "skill": "polynomials",
+   "difficulty": 3,
+   "statement": "Expand $(x + 4)^3$.",
+   "checker": "equiv",
+   "answer": "x^3+12*x^2+48*x+64",
+   "hints": [
+    "Multiply term by term, then combine like terms carefully.",
+    "First expand $(x + 4)^2 = x^{2} + 8 x + 16$, then multiply by $(x + 4)$ once more."
+   ],
+   "solution": [
+    "Multiply every term of the first factor by every term of the second.",
+    "Collect like powers of $x$.",
+    "Result: $x^{3} + 12 x^{2} + 48 x + 64$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-9bfb33",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "What is the degree of the polynomial $(2 x + 1)(3 x + 2)$?",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "The degree is the highest power of $x$ after expanding.",
+    "You do not need to expand everything: multiply only the highest-power terms."
+   ],
+   "solution": [
+    "The highest-power terms are $x^{1}$ and $x^{1}$.",
+    "Their product has degree $1 + 1 = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-03cd2b",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "If $p(x) = x^{3} + x^{2} - x + 4$, find $p(3)$.",
+   "checker": "numeric",
+   "answer": "37",
+   "hints": [
+    "Replace every $x$ with $3$, keeping the parentheses.",
+    "Compute the powers first, then multiply, then add."
+   ],
+   "solution": [
+    "$p(3) = (3)^{3} + (3)^{2} - (3) + 4$.",
+    "$= 37$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-f0c6cc",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Which expression equals $(x + 4)^2$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Squaring a binomial produces three terms, not two.",
+    "$(u+v)^2 = u^2 + 2uv + v^2$ with $u = x$, $v = 4$."
+   ],
+   "solution": [
+    "$(x + 4)^2 = x^2 + 2(4)x + (4)^2$.",
+    "$= x^{2} + 8 x + 16$."
+   ],
+   "verified": true,
+   "choices": [
+    "x^{2} - 8 x + 16",
+    "x^{2} + 16",
+    "x^{2} + 4 x + 16",
+    "x^{2} + 8 x + 16"
+   ]
+  },
+  {
+   "id": "polynomials-eaa18a",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "What is the coefficient of $x^{1}$ (the $x$ term) in the expansion of $(x - 5)(3 x^{2} - x - 4)$?",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Only two products contribute to $x^{1}$: pick a term from each factor whose exponents add to $1$.",
+    "You can expand fully and read it off, but it is faster to collect just the needed products."
+   ],
+   "solution": [
+    "Full expansion: $3 x^{3} - 16 x^{2} + x + 20$.",
+    "The coefficient of $x^{1}$ is $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-603641",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Find the constant term of $(- 2 x^{2} - 4)(2 x - 4)$ after expanding.",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "The constant term comes from multiplying the constants.",
+    "$-4 \\cdot -4$"
+   ],
+   "solution": [
+    "Expansion: $- 4 x^{3} + 8 x^{2} - 8 x + 16$.",
+    "The constant term is $16$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-fa2dd1",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "Expand $(3 x + 4)(x + 4)$.",
+   "checker": "equiv",
+   "answer": "3*x^2+16*x+16",
+   "hints": [
+    "Multiply every term of the first factor by every term of the second (FOIL).",
+    "First: $3 x^{2}$; Outer + Inner: $16 x$; Last: $16$."
+   ],
+   "solution": [
+    "First: $3 x \\cdot x = 3 x^{2}$.",
+    "Outer and Inner: $12 x + 4 x = 16 x$.",
+    "Last: $4 \\cdot 4 = 16$. Total: $3 x^{2} + 16 x + 16$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-c82c08",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Simplify $(2 x^{2} + 6 x - 3) - (4 x^{2} - 2 x - 4)$.",
+   "checker": "equiv",
+   "answer": "-2*x^2+8*x+1",
+   "hints": [
+    "Combine like terms: the $x^2$ terms together, the $x$ terms together, the constants together.",
+    "When subtracting, change the sign of every term in the second polynomial first."
+   ],
+   "solution": [
+    "Distribute the minus sign: $2 x^{2} + 6 x - 3 - 4 x^{2} + 2 x + 4$.",
+    "Combine like terms: $- 2 x^{2} + 8 x + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-effead",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Expand $5 x^{3}(x^{2} - 2 x - 3)$.",
+   "checker": "equiv",
+   "answer": "5*x^5-10*x^4-15*x^3",
+   "hints": [
+    "Distribute the monomial to each term.",
+    "Multiply coefficients and add the exponents of $x$."
+   ],
+   "solution": [
+    "Multiply each term by $5 x^{3}$.",
+    "Result: $5 x^{5} - 10 x^{4} - 15 x^{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-c4ef13",
+   "skill": "polynomials",
+   "difficulty": 3,
+   "statement": "Expand $(x + 3)(x^{2} - 2 x - 4)$.",
+   "checker": "equiv",
+   "answer": "x^3+x^2-10*x-12",
+   "hints": [
+    "Multiply term by term, then combine like terms carefully.",
+    "Each of the two terms in the first factor multiplies all three terms in the second: six products."
+   ],
+   "solution": [
+    "Multiply every term of the first factor by every term of the second.",
+    "Collect like powers of $x$.",
+    "Result: $x^{3} + x^{2} - 10 x - 12$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-7e2e92",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "What is the degree of the polynomial $(3 x^{3} - 4)(6 x + 5)$?",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "The degree is the highest power of $x$ after expanding.",
+    "You do not need to expand everything: multiply only the highest-power terms."
+   ],
+   "solution": [
+    "The highest-power terms are $x^{3}$ and $x^{1}$.",
+    "Their product has degree $3 + 1 = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-c1bae4",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "If $p(x) = x^{3} - 4 x^{2} - 5 x - 7$, find $p(3)$.",
+   "checker": "numeric",
+   "answer": "-31",
+   "hints": [
+    "Replace every $x$ with $3$, keeping the parentheses.",
+    "Compute the powers first, then multiply, then add."
+   ],
+   "solution": [
+    "$p(3) = (3)^{3} - 4 (3)^{2} - 5 (3) - 7$.",
+    "$= -31$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-692443",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Which expression equals $(x + 6)^2$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Squaring a binomial produces three terms, not two.",
+    "$(u+v)^2 = u^2 + 2uv + v^2$ with $u = x$, $v = 6$."
+   ],
+   "solution": [
+    "$(x + 6)^2 = x^2 + 2(6)x + (6)^2$.",
+    "$= x^{2} + 12 x + 36$."
+   ],
+   "verified": true,
+   "choices": [
+    "x^{2} - 12 x + 36",
+    "x^{2} + 6 x + 36",
+    "x^{2} + 36",
+    "x^{2} + 12 x + 36"
+   ]
+  },
+  {
+   "id": "polynomials-f28486",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "What is the coefficient of $x^{1}$ (the $x$ term) in the expansion of $(x - 5)(3 x^{2} + x - 2)$?",
+   "checker": "numeric",
+   "answer": "-7",
+   "hints": [
+    "Only two products contribute to $x^{1}$: pick a term from each factor whose exponents add to $1$.",
+    "You can expand fully and read it off, but it is faster to collect just the needed products."
+   ],
+   "solution": [
+    "Full expansion: $3 x^{3} - 14 x^{2} - 7 x + 10$.",
+    "The coefficient of $x^{1}$ is $-7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-e6bfaf",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Find the constant term of $(2 x^{2} + 1)(2 x + 4)$ after expanding.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "The constant term comes from multiplying the constants.",
+    "$1 \\cdot 4$"
+   ],
+   "solution": [
+    "Expansion: $4 x^{3} + 8 x^{2} + 2 x + 4$.",
+    "The constant term is $4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-b22e99",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "Expand $(3 x + 4)(3 x - 6)$.",
+   "checker": "equiv",
+   "answer": "9*x^2-6*x-24",
+   "hints": [
+    "Multiply every term of the first factor by every term of the second (FOIL).",
+    "First: $9 x^{2}$; Outer + Inner: $- 6 x$; Last: $-24$."
+   ],
+   "solution": [
+    "First: $3 x \\cdot 3 x = 9 x^{2}$.",
+    "Outer and Inner: $- 18 x + 12 x = - 6 x$.",
+    "Last: $4 \\cdot -6 = -24$. Total: $9 x^{2} - 6 x - 24$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-0d0390",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Expand $(x + 5)^2$.",
+   "checker": "equiv",
+   "answer": "x^2+10*x+25",
+   "hints": [
+    "$(u+v)^2 = u^2 + 2uv + v^2$: do not forget the middle term.",
+    "Write the factor twice and multiply term by term if you are unsure."
+   ],
+   "solution": [
+    "Use the special product pattern (or FOIL).",
+    "Result: $x^{2} + 10 x + 25$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-863433",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Simplify $(5 x^{2} - 3 x + 6) - (3 x^{2} - 3 x + 4)$.",
+   "checker": "equiv",
+   "answer": "2*x^2+2",
+   "hints": [
+    "Combine like terms: the $x^2$ terms together, the $x$ terms together, the constants together.",
+    "When subtracting, change the sign of every term in the second polynomial first."
+   ],
+   "solution": [
+    "Distribute the minus sign: $5 x^{2} - 3 x + 6 - 3 x^{2} + 3 x - 4$.",
+    "Combine like terms: $2 x^{2} + 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-0af33b",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Expand $- 3 x^{3}(4 x^{2} + x - 4)$.",
+   "checker": "equiv",
+   "answer": "-12*x^5-3*x^4+12*x^3",
+   "hints": [
+    "Distribute the monomial to each term.",
+    "Multiply coefficients and add the exponents of $x$."
+   ],
+   "solution": [
+    "Multiply each term by $- 3 x^{3}$.",
+    "Result: $- 12 x^{5} - 3 x^{4} + 12 x^{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-b637b7",
+   "skill": "polynomials",
+   "difficulty": 3,
+   "statement": "Expand $(x + 1)^3$.",
+   "checker": "equiv",
+   "answer": "x^3+3*x^2+3*x+1",
+   "hints": [
+    "Multiply term by term, then combine like terms carefully.",
+    "First expand $(x + 1)^2 = x^{2} + 2 x + 1$, then multiply by $(x + 1)$ once more."
+   ],
+   "solution": [
+    "Multiply every term of the first factor by every term of the second.",
+    "Collect like powers of $x$.",
+    "Result: $x^{3} + 3 x^{2} + 3 x + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-0336b1",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "What is the degree of the polynomial $(2 x^{3} - 1)(5 - 3 x)$?",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "The degree is the highest power of $x$ after expanding.",
+    "You do not need to expand everything: multiply only the highest-power terms."
+   ],
+   "solution": [
+    "The highest-power terms are $x^{3}$ and $x^{1}$.",
+    "Their product has degree $3 + 1 = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-652a5f",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "If $p(x) = 2 x^{3} - 4 x^{2} + 5 x - 1$, find $p(-3)$.",
+   "checker": "numeric",
+   "answer": "-106",
+   "hints": [
+    "Replace every $x$ with $-3$, keeping the parentheses.",
+    "Compute the powers first, then multiply, then add."
+   ],
+   "solution": [
+    "$p(-3) = 2 (-3)^{3} - 4 (-3)^{2} + 5 (-3) - 1$.",
+    "$= -106$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-6ae971",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Which expression equals $(x + 1)^2$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Squaring a binomial produces three terms, not two.",
+    "$(u+v)^2 = u^2 + 2uv + v^2$ with $u = x$, $v = 1$."
+   ],
+   "solution": [
+    "$(x + 1)^2 = x^2 + 2(1)x + (1)^2$.",
+    "$= x^{2} + 2 x + 1$."
+   ],
+   "verified": true,
+   "choices": [
+    "x^{2} + 2 x + 1",
+    "x^{2} + 1",
+    "x^{2} - 2 x + 1",
+    "x^{2} + x + 1"
+   ]
+  },
+  {
+   "id": "polynomials-a8b263",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "What is the coefficient of $x^{2}$ in the expansion of $(x + 1)(x^{2} + 2 x + 5)$?",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Only two products contribute to $x^{2}$: pick a term from each factor whose exponents add to $2$.",
+    "You can expand fully and read it off, but it is faster to collect just the needed products."
+   ],
+   "solution": [
+    "Full expansion: $x^{3} + 3 x^{2} + 7 x + 5$.",
+    "The coefficient of $x^{2}$ is $3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-83ffed",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Find the leading coefficient of $(2 x^{2} - 1)(x + 1)$ after expanding.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "The leading coefficient comes from multiplying the highest-power terms.",
+    "$2 \\cdot 1$"
+   ],
+   "solution": [
+    "Expansion: $2 x^{3} + 2 x^{2} - x - 1$.",
+    "The leading coefficient is $2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "polynomials-095274",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "Expand $(2 x - 2)(3 x + 5)$.",
+   "checker": "equiv",
+   "answer": "6*x^2+4*x-10",
+   "hints": [
+    "Multiply every term of the first factor by every term of the second (FOIL).",
+    "First: $6 x^{2}$; Outer + Inner: $4 x$; Last: $-10$."
+   ],
+   "solution": [
+    "First: $2 x \\cdot 3 x = 6 x^{2}$.",
+    "Outer and Inner: $10 x + - 6 x = 4 x$.",
+    "Last: $-2 \\cdot 5 = -10$. Total: $6 x^{2} + 4 x - 10$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-7abc85",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Expand $(x + 9)^2$.",
+   "checker": "equiv",
+   "answer": "x^2+18*x+81",
+   "hints": [
+    "$(u+v)^2 = u^2 + 2uv + v^2$: do not forget the middle term.",
+    "Write the factor twice and multiply term by term if you are unsure."
+   ],
+   "solution": [
+    "Use the special product pattern (or FOIL).",
+    "Result: $x^{2} + 18 x + 81$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-1532ef",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Simplify $(2 x^{2} - 6 x + 4) - (4 x^{2} + 5 x - 5)$.",
+   "checker": "equiv",
+   "answer": "-2*x^2-11*x+9",
+   "hints": [
+    "Combine like terms: the $x^2$ terms together, the $x$ terms together, the constants together.",
+    "When subtracting, change the sign of every term in the second polynomial first."
+   ],
+   "solution": [
+    "Distribute the minus sign: $2 x^{2} - 6 x + 4 - 4 x^{2} - 5 x + 5$.",
+    "Combine like terms: $- 2 x^{2} - 11 x + 9$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-6beeee",
+   "skill": "polynomials",
+   "difficulty": 1,
+   "statement": "Expand $2 x^{3}(2 x^{2} - 3 x - 4)$.",
+   "checker": "equiv",
+   "answer": "4*x^5-6*x^4-8*x^3",
+   "hints": [
+    "Distribute the monomial to each term.",
+    "Multiply coefficients and add the exponents of $x$."
+   ],
+   "solution": [
+    "Multiply each term by $2 x^{3}$.",
+    "Result: $4 x^{5} - 6 x^{4} - 8 x^{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-4fcf30",
+   "skill": "polynomials",
+   "difficulty": 3,
+   "statement": "Expand $(x - 3)(x^{2} - 3 x - 3)$.",
+   "checker": "equiv",
+   "answer": "x^3-6*x^2+6*x+9",
+   "hints": [
+    "Multiply term by term, then combine like terms carefully.",
+    "Each of the two terms in the first factor multiplies all three terms in the second: six products."
+   ],
+   "solution": [
+    "Multiply every term of the first factor by every term of the second.",
+    "Collect like powers of $x$.",
+    "Result: $x^{3} - 6 x^{2} + 6 x + 9$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "polynomials-020461",
+   "skill": "polynomials",
+   "difficulty": 2,
+   "statement": "What is the degree of the polynomial $(2 x^{3} + 2)(x^{2} + 3 x + 3)$?",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "The degree is the highest power of $x$ after expanding.",
+    "You do not need to expand everything: multiply only the highest-power terms."
+   ],
+   "solution": [
+    "The highest-power terms are $x^{3}$ and $x^{2}$.",
+    "Their product has degree $3 + 2 = 5$."
+   ],
+   "verified": true
+  }
+ ]
+}

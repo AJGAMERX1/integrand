@@ -1,0 +1,1313 @@
+{
+ "skill": "antiderivatives",
+ "problems": [
+  {
+   "id": "antiderivatives-d7212b",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = - x + \\frac{3}{x^{3}}$. (Use $C$ for the constant.)",
+   "checker": "equiv_plus_c",
+   "answer": "-x^2/2-3/(2*x^2)",
+   "hints": [
+    "Reverse the power rule: $\\displaystyle\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ for $n \\ne -1$; integrate term by term.",
+    "Write roots and reciprocals as powers of $x$ first; check your answer by differentiating it."
+   ],
+   "solution": [
+    "Rewrite each term as a power of $x$: $f(x) = - x + 3x^{-3}$.",
+    "$F(x) = - \\frac{x^{2}}{2} - \\frac{3}{2 x^{2}} + C$.",
+    "Check: $F'(x) = - x + \\frac{3}{x^{3}} = f(x)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-0e64a1",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = - 2 \\sqrt[3]{x} + 2 \\sqrt{x}$. (Use $C$ for the constant.)",
+   "checker": "equiv_plus_c",
+   "answer": "-3*x^(4/3)/2+4*x^(3/2)/3",
+   "hints": [
+    "Reverse the power rule: $\\displaystyle\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ for $n \\ne -1$; integrate term by term.",
+    "Write roots and reciprocals as powers of $x$ first; check your answer by differentiating it."
+   ],
+   "solution": [
+    "Rewrite each term as a power of $x$: $f(x) = -2x^{\\frac{1}{3}} + 2x^{\\frac{1}{2}}$.",
+    "$F(x) = - \\frac{3 x^{\\frac{4}{3}}}{2} + \\frac{4 x^{\\frac{3}{2}}}{3} + C$.",
+    "Check: $F'(x) = - 2 \\sqrt[3]{x} + 2 \\sqrt{x} = f(x)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-2fe77b",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = 2 - 2 \\sqrt{x}$. (Use $C$ for the constant.)",
+   "checker": "equiv_plus_c",
+   "answer": "-4*x^(3/2)/3+2*x",
+   "hints": [
+    "Reverse the power rule: $\\displaystyle\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ for $n \\ne -1$; integrate term by term.",
+    "Write roots and reciprocals as powers of $x$ first; check your answer by differentiating it."
+   ],
+   "solution": [
+    "Rewrite each term as a power of $x$: $f(x) = 2 - 2x^{\\frac{1}{2}}$.",
+    "$F(x) = - \\frac{4 x^{\\frac{3}{2}}}{3} + 2 x + C$.",
+    "Check: $F'(x) = 2 - 2 \\sqrt{x} = f(x)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-e68811",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find the most general antiderivative of $f(x) = - 4 x^{3} - x^{2} - 2 x - 1$. (Use $C$ for the constant.)",
+   "checker": "equiv_plus_c",
+   "answer": "-x^4-x^3/3-x^2-x",
+   "hints": [
+    "Reverse the power rule: $\\displaystyle\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ for $n \\ne -1$; integrate term by term.",
+    "Write roots and reciprocals as powers of $x$ first; check your answer by differentiating it."
+   ],
+   "solution": [
+    "Integrate term by term, raising each exponent by one and dividing by the new exponent.",
+    "$F(x) = - x^{4} - \\frac{x^{3}}{3} - x^{2} - x + C$.",
+    "Check: $F'(x) = - 4 x^{3} - x^{2} - 2 x - 1 = f(x)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-ec602d",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = - 3 x + \\frac{4}{x^{3}}$. (Use $C$ for the constant.)",
+   "checker": "equiv_plus_c",
+   "answer": "-3*x^2/2-2/x^2",
+   "hints": [
+    "Reverse the power rule: $\\displaystyle\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ for $n \\ne -1$; integrate term by term.",
+    "Write roots and reciprocals as powers of $x$ first; check your answer by differentiating it."
+   ],
+   "solution": [
+    "Rewrite each term as a power of $x$: $f(x) = - 3 x + 4x^{-3}$.",
+    "$F(x) = - \\frac{3 x^{2}}{2} - \\frac{2}{x^{2}} + C$.",
+    "Check: $F'(x) = - 3 x + \\frac{4}{x^{3}} = f(x)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-93420e",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = - 2 x + \\frac{3}{x^{2}}$. (Use $C$ for the constant.)",
+   "checker": "equiv_plus_c",
+   "answer": "-x^2-3/x",
+   "hints": [
+    "Reverse the power rule: $\\displaystyle\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ for $n \\ne -1$; integrate term by term.",
+    "Write roots and reciprocals as powers of $x$ first; check your answer by differentiating it."
+   ],
+   "solution": [
+    "Rewrite each term as a power of $x$: $f(x) = - 2 x + 3x^{-2}$.",
+    "$F(x) = - x^{2} - \\frac{3}{x} + C$.",
+    "Check: $F'(x) = - 2 x + \\frac{3}{x^{2}} = f(x)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-9c1643",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = - 2 x + \\frac{2}{x^{3}}$. (Use $C$ for the constant.)",
+   "checker": "equiv_plus_c",
+   "answer": "-x^2-1/x^2",
+   "hints": [
+    "Reverse the power rule: $\\displaystyle\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ for $n \\ne -1$; integrate term by term.",
+    "Write roots and reciprocals as powers of $x$ first; check your answer by differentiating it."
+   ],
+   "solution": [
+    "Rewrite each term as a power of $x$: $f(x) = - 2 x + 2x^{-3}$.",
+    "$F(x) = - x^{2} - \\frac{1}{x^{2}} + C$.",
+    "Check: $F'(x) = - 2 x + \\frac{2}{x^{3}} = f(x)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-3723b0",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = - 4 \\sqrt[3]{x} + 2 \\sqrt{x}$. (Use $C$ for the constant.)",
+   "checker": "equiv_plus_c",
+   "answer": "-3*x^(4/3)+4*x^(3/2)/3",
+   "hints": [
+    "Reverse the power rule: $\\displaystyle\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ for $n \\ne -1$; integrate term by term.",
+    "Write roots and reciprocals as powers of $x$ first; check your answer by differentiating it."
+   ],
+   "solution": [
+    "Rewrite each term as a power of $x$: $f(x) = -4x^{\\frac{1}{3}} + 2x^{\\frac{1}{2}}$.",
+    "$F(x) = - 3 x^{\\frac{4}{3}} + \\frac{4 x^{\\frac{3}{2}}}{3} + C$.",
+    "Check: $F'(x) = - 4 \\sqrt[3]{x} + 2 \\sqrt{x} = f(x)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-ceac29",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find the most general antiderivative of $f(x) = 5 x^{3} - 3 x^{2} - 5 x$. (Use $C$ for the constant.)",
+   "checker": "equiv_plus_c",
+   "answer": "5*x^4/4-x^3-5*x^2/2",
+   "hints": [
+    "Reverse the power rule: $\\displaystyle\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ for $n \\ne -1$; integrate term by term.",
+    "Write roots and reciprocals as powers of $x$ first; check your answer by differentiating it."
+   ],
+   "solution": [
+    "Integrate term by term, raising each exponent by one and dividing by the new exponent.",
+    "$F(x) = \\frac{5 x^{4}}{4} - x^{3} - \\frac{5 x^{2}}{2} + C$.",
+    "Check: $F'(x) = 5 x^{3} - 3 x^{2} - 5 x = f(x)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-94059e",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find the most general antiderivative of $f(x) = x^{3} + 2 x + 1$. (Use $C$ for the constant.)",
+   "checker": "equiv_plus_c",
+   "answer": "x^4/4+x^2+x",
+   "hints": [
+    "Reverse the power rule: $\\displaystyle\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ for $n \\ne -1$; integrate term by term.",
+    "Write roots and reciprocals as powers of $x$ first; check your answer by differentiating it."
+   ],
+   "solution": [
+    "Integrate term by term, raising each exponent by one and dividing by the new exponent.",
+    "$F(x) = \\frac{x^{4}}{4} + x^{2} + x + C$.",
+    "Check: $F'(x) = x^{3} + 2 x + 1 = f(x)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-01ffdd",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Find the most general antiderivative of $f(x) = 2 x^{4} - 4 x^{3} - 3 x^{2} + x + 5$. (Use $C$ for the constant.)",
+   "checker": "equiv_plus_c",
+   "answer": "2*x^5/5-x^4-x^3+x^2/2+5*x",
+   "hints": [
+    "Reverse the power rule: $\\displaystyle\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ for $n \\ne -1$; integrate term by term.",
+    "Write roots and reciprocals as powers of $x$ first; check your answer by differentiating it."
+   ],
+   "solution": [
+    "Integrate term by term, raising each exponent by one and dividing by the new exponent.",
+    "$F(x) = \\frac{2 x^{5}}{5} - x^{4} - x^{3} + \\frac{x^{2}}{2} + 5 x + C$.",
+    "Check: $F'(x) = 2 x^{4} - 4 x^{3} - 3 x^{2} + x + 5 = f(x)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-0c75cf",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = - \\sin{\\left(x \\right)} + 3 \\cos{\\left(x \\right)}$.",
+   "checker": "equiv_plus_c",
+   "answer": "3*sin(x)+cos(x)",
+   "hints": [
+    "Each term matches a derivative you know; think of which function differentiates to it.",
+    "Use $\\int \\sin x\\,dx = -\\cos x + C$ and $\\int \\cos x\\,dx = \\sin x + C$."
+   ],
+   "solution": [
+    "Antidifferentiate term by term using $\\int \\sin x\\,dx = -\\cos x + C$ and $\\int \\cos x\\,dx = \\sin x + C$.",
+    "$F(x) = 3 \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-d82b65",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = - 3 \\sin{\\left(x \\right)} + 3 \\cos{\\left(x \\right)}$.",
+   "checker": "equiv_plus_c",
+   "answer": "3*sin(x)+3*cos(x)",
+   "hints": [
+    "Each term matches a derivative you know; think of which function differentiates to it.",
+    "Use $\\int \\sin x\\,dx = -\\cos x + C$ and $\\int \\cos x\\,dx = \\sin x + C$."
+   ],
+   "solution": [
+    "Antidifferentiate term by term using $\\int \\sin x\\,dx = -\\cos x + C$ and $\\int \\cos x\\,dx = \\sin x + C$.",
+    "$F(x) = 3 \\sin{\\left(x \\right)} + 3 \\cos{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-1fa340",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = -3 - \\frac{2}{x^{2} + 1}$.",
+   "checker": "equiv_plus_c",
+   "answer": "-3*x-2*atan(x)",
+   "hints": [
+    "Each term matches a derivative you know; think of which function differentiates to it.",
+    "Use $\\int \\frac{1}{1 + x^2}\\,dx = \\arctan x + C$."
+   ],
+   "solution": [
+    "Antidifferentiate term by term using $\\int \\frac{1}{1 + x^2}\\,dx = \\arctan x + C$.",
+    "$F(x) = - 3 x - 2 \\arctan{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-967300",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = - 2 \\sin{\\left(x \\right)} - \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*cos(x)-1/cos(x)",
+   "hints": [
+    "Each term matches a derivative you know; think of which function differentiates to it.",
+    "Use $\\int \\sec x\\tan x\\,dx = \\sec x + C$."
+   ],
+   "solution": [
+    "Antidifferentiate term by term using $\\int \\sec x\\tan x\\,dx = \\sec x + C$.",
+    "$F(x) = 2 \\cos{\\left(x \\right)} - \\frac{1}{\\cos{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "antiderivatives-9c81e5",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = - 3 x + \\frac{1}{x}$.",
+   "checker": "equiv_plus_c",
+   "answer": "-3*x^2/2+ln(x)",
+   "hints": [
+    "Each term matches a derivative you know; think of which function differentiates to it.",
+    "Use $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$."
+   ],
+   "solution": [
+    "Antidifferentiate term by term using $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$.",
+    "$F(x) = - \\frac{3 x^{2}}{2} + \\ln{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-896562",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = - 3 \\sin{\\left(x \\right)} - \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}$.",
+   "checker": "equiv_plus_c",
+   "answer": "3*cos(x)-1/cos(x)",
+   "hints": [
+    "Each term matches a derivative you know; think of which function differentiates to it.",
+    "Use $\\int \\sec x\\tan x\\,dx = \\sec x + C$."
+   ],
+   "solution": [
+    "Antidifferentiate term by term using $\\int \\sec x\\tan x\\,dx = \\sec x + C$.",
+    "$F(x) = 3 \\cos{\\left(x \\right)} - \\frac{1}{\\cos{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "antiderivatives-d594ed",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = 3 \\sin{\\left(x \\right)} + 4 \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}$.",
+   "checker": "equiv_plus_c",
+   "answer": "-3*cos(x)+4/cos(x)",
+   "hints": [
+    "Each term matches a derivative you know; think of which function differentiates to it.",
+    "Use $\\int \\sec x\\tan x\\,dx = \\sec x + C$."
+   ],
+   "solution": [
+    "Antidifferentiate term by term using $\\int \\sec x\\tan x\\,dx = \\sec x + C$.",
+    "$F(x) = - 3 \\cos{\\left(x \\right)} + \\frac{4}{\\cos{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "antiderivatives-5d0b0f",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = 2 x - \\frac{3}{x}$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2-3*ln(x)",
+   "hints": [
+    "Each term matches a derivative you know; think of which function differentiates to it.",
+    "Use $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$."
+   ],
+   "solution": [
+    "Antidifferentiate term by term using $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$.",
+    "$F(x) = x^{2} - 3 \\ln{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-959fc0",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = 4 \\sec^{2}{\\left(x \\right)} + 1$.",
+   "checker": "equiv_plus_c",
+   "answer": "x+4*sin(x)/cos(x)",
+   "hints": [
+    "Each term matches a derivative you know; think of which function differentiates to it.",
+    "Use $\\int \\sec^2 x\\,dx = \\tan x + C$."
+   ],
+   "solution": [
+    "Antidifferentiate term by term using $\\int \\sec^2 x\\,dx = \\tan x + C$.",
+    "$F(x) = x + \\frac{4 \\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "antiderivatives-ca4d1d",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find the most general antiderivative of $f(x) = x - \\frac{4}{x}$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2/2-4*ln(x)",
+   "hints": [
+    "Each term matches a derivative you know; think of which function differentiates to it.",
+    "Use $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$."
+   ],
+   "solution": [
+    "Antidifferentiate term by term using $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$.",
+    "$F(x) = \\frac{x^{2}}{2} - 4 \\ln{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-69cad6",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $f$ given that $f'(x) = 6 x + 2$ and $f(-1) = -2$.",
+   "checker": "equiv",
+   "answer": "3*x^2+2*x-3",
+   "hints": [
+    "First find the general antiderivative $f(x) = F(x) + C$.",
+    "Then use $f(-1) = -2$ to solve for $C$."
+   ],
+   "solution": [
+    "$f(x) = 3 x^{2} + 2 x + C$.",
+    "$f(-1) = 1 + C = -2$ gives $C = -3$.",
+    "$f(x) = 3 x^{2} + 2 x - 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-466c20",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $f$ given that $f'(x) = 3 e^{x} - 2$ and $f(0) = 2$.",
+   "checker": "equiv",
+   "answer": "-2*x+3*exp(x)-1",
+   "hints": [
+    "First find the general antiderivative $f(x) = F(x) + C$.",
+    "Then use $f(0) = 2$ to solve for $C$."
+   ],
+   "solution": [
+    "$f(x) = - 2 x + 3 e^{x} + C$.",
+    "$f(0) = 3 + C = 2$ gives $C = -1$.",
+    "$f(x) = - 2 x + 3 e^{x} - 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "antiderivatives-c581ee",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $f$ given that $f'(x) = 4 - 3 x$ and $f(2) = 3$.",
+   "checker": "equiv",
+   "answer": "-3*x^2/2+4*x+1",
+   "hints": [
+    "First find the general antiderivative $f(x) = F(x) + C$.",
+    "Then use $f(2) = 3$ to solve for $C$."
+   ],
+   "solution": [
+    "$f(x) = - \\frac{3 x^{2}}{2} + 4 x + C$.",
+    "$f(2) = 2 + C = 3$ gives $C = 1$.",
+    "$f(x) = - \\frac{3 x^{2}}{2} + 4 x + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-2d24cd",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $f$ given that $f'(x) = 4 x^{2} + 4 x + 3$ and $f(2) = -2$.",
+   "checker": "equiv",
+   "answer": "4*x^3/3+2*x^2+3*x-80/3",
+   "hints": [
+    "First find the general antiderivative $f(x) = F(x) + C$.",
+    "Then use $f(2) = -2$ to solve for $C$."
+   ],
+   "solution": [
+    "$f(x) = \\frac{4 x^{3}}{3} + 2 x^{2} + 3 x + C$.",
+    "$f(2) = \\frac{74}{3} + C = -2$ gives $C = - \\frac{80}{3}$.",
+    "$f(x) = \\frac{4 x^{3}}{3} + 2 x^{2} + 3 x - \\frac{80}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-b95160",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $f$ given that $f'(x) = - \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}$ and $f(0) = 0$.",
+   "checker": "equiv",
+   "answer": "sin(x)+cos(x)-1",
+   "hints": [
+    "First find the general antiderivative $f(x) = F(x) + C$.",
+    "Then use $f(0) = 0$ to solve for $C$."
+   ],
+   "solution": [
+    "$f(x) = \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)} + C$.",
+    "$f(0) = 1 + C = 0$ gives $C = -1$.",
+    "$f(x) = \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)} - 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-2b3331",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $f$ given that $f'(x) = 2 x^{2} + 3$ and $f(1) = 2$.",
+   "checker": "equiv",
+   "answer": "2*x^3/3+3*x-5/3",
+   "hints": [
+    "First find the general antiderivative $f(x) = F(x) + C$.",
+    "Then use $f(1) = 2$ to solve for $C$."
+   ],
+   "solution": [
+    "$f(x) = \\frac{2 x^{3}}{3} + 3 x + C$.",
+    "$f(1) = \\frac{11}{3} + C = 2$ gives $C = - \\frac{5}{3}$.",
+    "$f(x) = \\frac{2 x^{3}}{3} + 3 x - \\frac{5}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-12e397",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $f$ given that $f'(x) = 2 x^{3} + x^{2} + x - 4$ and $f(1) = 1$.",
+   "checker": "equiv",
+   "answer": "x^4/2+x^3/3+x^2/2-4*x+11/3",
+   "hints": [
+    "First find the general antiderivative $f(x) = F(x) + C$.",
+    "Then use $f(1) = 1$ to solve for $C$."
+   ],
+   "solution": [
+    "$f(x) = \\frac{x^{4}}{2} + \\frac{x^{3}}{3} + \\frac{x^{2}}{2} - 4 x + C$.",
+    "$f(1) = - \\frac{8}{3} + C = 1$ gives $C = \\frac{11}{3}$.",
+    "$f(x) = \\frac{x^{4}}{2} + \\frac{x^{3}}{3} + \\frac{x^{2}}{2} - 4 x + \\frac{11}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-5f9343",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $f$ given that $f'(x) = x^{2} - 1$ and $f(1) = 5$.",
+   "checker": "equiv",
+   "answer": "x^3/3-x+17/3",
+   "hints": [
+    "First find the general antiderivative $f(x) = F(x) + C$.",
+    "Then use $f(1) = 5$ to solve for $C$."
+   ],
+   "solution": [
+    "$f(x) = \\frac{x^{3}}{3} - x + C$.",
+    "$f(1) = - \\frac{2}{3} + C = 5$ gives $C = \\frac{17}{3}$.",
+    "$f(x) = \\frac{x^{3}}{3} - x + \\frac{17}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-4e5d1b",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $f$ given that $f'(x) = 3 x^{2} - 4 x$ and $f(1) = 5$.",
+   "checker": "equiv",
+   "answer": "x^3-2*x^2+6",
+   "hints": [
+    "First find the general antiderivative $f(x) = F(x) + C$.",
+    "Then use $f(1) = 5$ to solve for $C$."
+   ],
+   "solution": [
+    "$f(x) = x^{3} - 2 x^{2} + C$.",
+    "$f(1) = -1 + C = 5$ gives $C = 6$.",
+    "$f(x) = x^{3} - 2 x^{2} + 6$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-529913",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $f$ given that $f'(x) = - \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}$ and $f(0) = -1$.",
+   "checker": "equiv",
+   "answer": "sin(x)+cos(x)-2",
+   "hints": [
+    "First find the general antiderivative $f(x) = F(x) + C$.",
+    "Then use $f(0) = -1$ to solve for $C$."
+   ],
+   "solution": [
+    "$f(x) = \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)} + C$.",
+    "$f(0) = 1 + C = -1$ gives $C = -2$.",
+    "$f(x) = \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)} - 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-1f46ac",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $f$ given that $f'(x) = - 3 \\sin{\\left(x \\right)} + 3 \\cos{\\left(x \\right)}$ and $f(0) = -2$.",
+   "checker": "equiv",
+   "answer": "3*sin(x)+3*cos(x)-5",
+   "hints": [
+    "First find the general antiderivative $f(x) = F(x) + C$.",
+    "Then use $f(0) = -2$ to solve for $C$."
+   ],
+   "solution": [
+    "$f(x) = 3 \\sin{\\left(x \\right)} + 3 \\cos{\\left(x \\right)} + C$.",
+    "$f(0) = 3 + C = -2$ gives $C = -5$.",
+    "$f(x) = 3 \\sin{\\left(x \\right)} + 3 \\cos{\\left(x \\right)} - 5$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "antiderivatives-476505",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Find $f$ given that $f'(x) = 3 e^{x}$ and $f(0) = -2$.",
+   "checker": "equiv",
+   "answer": "3*exp(x)-5",
+   "hints": [
+    "First find the general antiderivative $f(x) = F(x) + C$.",
+    "Then use $f(0) = -2$ to solve for $C$."
+   ],
+   "solution": [
+    "$f(x) = 3 e^{x} + C$.",
+    "$f(0) = 3 + C = -2$ gives $C = -5$.",
+    "$f(x) = 3 e^{x} - 5$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "antiderivatives-03382e",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Find $f$ given that $f''(x) = 2 x^{2} - 2$, $f'(0) = 3$ and $f(0) = 0$.",
+   "checker": "equiv",
+   "answer": "x^4/6-x^2+3*x",
+   "hints": [
+    "Antidifferentiate twice, keeping a separate constant each time.",
+    "Use $f'(0)$ to fix the first constant before integrating again, then $f(0)$ for the second."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{2 x^{3}}{3} - 2 x + C_1$, and $f'(0) = 3$ gives $C_1 = 3$, so $f'(x) = \\frac{2 x^{3}}{3} - 2 x + 3$.",
+    "$f(x) = \\frac{x^{4}}{6} - x^{2} + 3 x + C_2$, and $f(0) = 0$ gives $C_2 = 0$.",
+    "$f(x) = \\frac{x^{4}}{6} - x^{2} + 3 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ]
+  },
+  {
+   "id": "antiderivatives-152640",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Find $f$ given that $f''(x) = 2 e^{x}$, $f'(0) = -3$ and $f(0) = 2$.",
+   "checker": "equiv",
+   "answer": "-5*x+2*exp(x)",
+   "hints": [
+    "Antidifferentiate twice, keeping a separate constant each time.",
+    "Use $f'(0)$ to fix the first constant before integrating again, then $f(0)$ for the second."
+   ],
+   "solution": [
+    "$f'(x) = 2 e^{x} + C_1$, and $f'(0) = -3$ gives $C_1 = -5$, so $f'(x) = 2 e^{x} - 5$.",
+    "$f(x) = - 5 x + 2 e^{x} + C_2$, and $f(0) = 2$ gives $C_2 = 0$.",
+    "$f(x) = - 5 x + 2 e^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ]
+  },
+  {
+   "id": "antiderivatives-8fdeac",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Find $f$ given that $f''(x) = 2 x$, $f'(0) = -1$ and $f(0) = -2$.",
+   "checker": "equiv",
+   "answer": "x^3/3-x-2",
+   "hints": [
+    "Antidifferentiate twice, keeping a separate constant each time.",
+    "Use $f'(0)$ to fix the first constant before integrating again, then $f(0)$ for the second."
+   ],
+   "solution": [
+    "$f'(x) = x^{2} + C_1$, and $f'(0) = -1$ gives $C_1 = -1$, so $f'(x) = x^{2} - 1$.",
+    "$f(x) = \\frac{x^{3}}{3} - x + C_2$, and $f(0) = -2$ gives $C_2 = -2$.",
+    "$f(x) = \\frac{x^{3}}{3} - x - 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ]
+  },
+  {
+   "id": "antiderivatives-2f726d",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Find $f$ given that $f''(x) = 4 x - 3$, $f'(0) = -2$ and $f(0) = -1$.",
+   "checker": "equiv",
+   "answer": "2*x^3/3-3*x^2/2-2*x-1",
+   "hints": [
+    "Antidifferentiate twice, keeping a separate constant each time.",
+    "Use $f'(0)$ to fix the first constant before integrating again, then $f(0)$ for the second."
+   ],
+   "solution": [
+    "$f'(x) = 2 x^{2} - 3 x + C_1$, and $f'(0) = -2$ gives $C_1 = -2$, so $f'(x) = 2 x^{2} - 3 x - 2$.",
+    "$f(x) = \\frac{2 x^{3}}{3} - \\frac{3 x^{2}}{2} - 2 x + C_2$, and $f(0) = -1$ gives $C_2 = -1$.",
+    "$f(x) = \\frac{2 x^{3}}{3} - \\frac{3 x^{2}}{2} - 2 x - 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ]
+  },
+  {
+   "id": "antiderivatives-856c40",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Find $f$ given that $f''(x) = 9 x^{2} + 2 x$, $f'(0) = -3$ and $f(0) = -3$.",
+   "checker": "equiv",
+   "answer": "3*x^4/4+x^3/3-3*x-3",
+   "hints": [
+    "Antidifferentiate twice, keeping a separate constant each time.",
+    "Use $f'(0)$ to fix the first constant before integrating again, then $f(0)$ for the second."
+   ],
+   "solution": [
+    "$f'(x) = 3 x^{3} + x^{2} + C_1$, and $f'(0) = -3$ gives $C_1 = -3$, so $f'(x) = 3 x^{3} + x^{2} - 3$.",
+    "$f(x) = \\frac{3 x^{4}}{4} + \\frac{x^{3}}{3} - 3 x + C_2$, and $f(0) = -3$ gives $C_2 = -3$.",
+    "$f(x) = \\frac{3 x^{4}}{4} + \\frac{x^{3}}{3} - 3 x - 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ]
+  },
+  {
+   "id": "antiderivatives-b9ea9f",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Find $f$ given that $f''(x) = 10 x^{2} + 4 x$, $f'(0) = -4$ and $f(0) = -1$.",
+   "checker": "equiv",
+   "answer": "5*x^4/6+2*x^3/3-4*x-1",
+   "hints": [
+    "Antidifferentiate twice, keeping a separate constant each time.",
+    "Use $f'(0)$ to fix the first constant before integrating again, then $f(0)$ for the second."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{10 x^{3}}{3} + 2 x^{2} + C_1$, and $f'(0) = -4$ gives $C_1 = -4$, so $f'(x) = \\frac{10 x^{3}}{3} + 2 x^{2} - 4$.",
+    "$f(x) = \\frac{5 x^{4}}{6} + \\frac{2 x^{3}}{3} - 4 x + C_2$, and $f(0) = -1$ gives $C_2 = -1$.",
+    "$f(x) = \\frac{5 x^{4}}{6} + \\frac{2 x^{3}}{3} - 4 x - 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ]
+  },
+  {
+   "id": "antiderivatives-be7a1d",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "Find $f$ given that $f''(x) = 5 x^{2} - 1$, $f'(0) = -1$ and $f(0) = 4$.",
+   "checker": "equiv",
+   "answer": "5*x^4/12-x^2/2-x+4",
+   "hints": [
+    "Antidifferentiate twice, keeping a separate constant each time.",
+    "Use $f'(0)$ to fix the first constant before integrating again, then $f(0)$ for the second."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{5 x^{3}}{3} - x + C_1$, and $f'(0) = -1$ gives $C_1 = -1$, so $f'(x) = \\frac{5 x^{3}}{3} - x - 1$.",
+    "$f(x) = \\frac{5 x^{4}}{12} - \\frac{x^{2}}{2} - x + C_2$, and $f(0) = 4$ gives $C_2 = 4$.",
+    "$f(x) = \\frac{5 x^{4}}{12} - \\frac{x^{2}}{2} - x + 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ]
+  },
+  {
+   "id": "antiderivatives-06bcbf",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "A particle moves along a line with velocity $v(t) = 4 t^{2} - 5 t + 3$ (m/s) and initial position $s(0) = -1$ m. Find its position function $s(t)$.",
+   "checker": "equiv",
+   "answer": "4*t^3/3-5*t^2/2+3*t-1",
+   "hints": [
+    "Position is an antiderivative of velocity: $s(t) = \\int v(t)\\,dt$.",
+    "Use the initial position to determine the constant."
+   ],
+   "solution": [
+    "$s(t) = \\frac{4 t^{3}}{3} - \\frac{5 t^{2}}{2} + 3 t + C$.",
+    "$s(0) = -1$ gives $C = -1$, so $s(t) = \\frac{4 t^{3}}{3} - \\frac{5 t^{2}}{2} + 3 t - 1$."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-12e6f4",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "A particle has acceleration $a(t) = 2 t + 1$ and initial velocity $v(0) = -3$. Find the velocity function $v(t)$.",
+   "checker": "equiv",
+   "answer": "t^2+t-3",
+   "hints": [
+    "Velocity is an antiderivative of acceleration.",
+    "The constant of integration equals $v(0)$ here."
+   ],
+   "solution": [
+    "$v(t) = t^{2} + t + C$.",
+    "$v(0) = -3$ gives $C = -3$, so $v(t) = t^{2} + t - 3$."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-95a5c4",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "A particle has acceleration $a(t) = 6$, initial velocity $v(0) = 6$ and initial position $s(0) = 4$. Find the position function $s(t)$.",
+   "checker": "equiv",
+   "answer": "3*t^2+6*t+4",
+   "hints": [
+    "Integrate acceleration to get velocity (fix the constant with $v(0)$), then integrate velocity to get position (fix the constant with $s(0)$).",
+    "$v(t) = 6 t + 6$."
+   ],
+   "solution": [
+    "$v(t) = \\int a(t)\\,dt = 6 t + 6$ after using $v(0) = 6$.",
+    "$s(t) = \\int v(t)\\,dt = 3 t^{2} + 6 t + 4$ after using $s(0) = 4$."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-a7defc",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "A particle has acceleration $a(t) = 12 t - 4$, initial velocity $v(0) = 0$ and initial position $s(0) = 6$. Find the position function $s(t)$.",
+   "checker": "equiv",
+   "answer": "2*t^3-2*t^2+6",
+   "hints": [
+    "Integrate acceleration to get velocity (fix the constant with $v(0)$), then integrate velocity to get position (fix the constant with $s(0)$).",
+    "$v(t) = 6 t^{2} - 4 t$."
+   ],
+   "solution": [
+    "$v(t) = \\int a(t)\\,dt = 6 t^{2} - 4 t$ after using $v(0) = 0$.",
+    "$s(t) = \\int v(t)\\,dt = 2 t^{3} - 2 t^{2} + 6$ after using $s(0) = 6$."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-273f79",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "A particle has acceleration $a(t) = t + 3$ and initial velocity $v(0) = -1$. Find the velocity function $v(t)$.",
+   "checker": "equiv",
+   "answer": "t^2/2+3*t-1",
+   "hints": [
+    "Velocity is an antiderivative of acceleration.",
+    "The constant of integration equals $v(0)$ here."
+   ],
+   "solution": [
+    "$v(t) = \\frac{t^{2}}{2} + 3 t + C$.",
+    "$v(0) = -1$ gives $C = -1$, so $v(t) = \\frac{t^{2}}{2} + 3 t - 1$."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-4c9c01",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "A particle has acceleration $a(t) = 12 t - 4$, initial velocity $v(0) = 6$ and initial position $s(0) = 5$. Find the position function $s(t)$.",
+   "checker": "equiv",
+   "answer": "2*t^3-2*t^2+6*t+5",
+   "hints": [
+    "Integrate acceleration to get velocity (fix the constant with $v(0)$), then integrate velocity to get position (fix the constant with $s(0)$).",
+    "$v(t) = 6 t^{2} - 4 t + 6$."
+   ],
+   "solution": [
+    "$v(t) = \\int a(t)\\,dt = 6 t^{2} - 4 t + 6$ after using $v(0) = 6$.",
+    "$s(t) = \\int v(t)\\,dt = 2 t^{3} - 2 t^{2} + 6 t + 5$ after using $s(0) = 5$."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-9c0d54",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "A particle has acceleration $a(t) = 12 t - 4$, initial velocity $v(0) = -3$ and initial position $s(0) = 8$. Find the position function $s(t)$.",
+   "checker": "equiv",
+   "answer": "2*t^3-2*t^2-3*t+8",
+   "hints": [
+    "Integrate acceleration to get velocity (fix the constant with $v(0)$), then integrate velocity to get position (fix the constant with $s(0)$).",
+    "$v(t) = 6 t^{2} - 4 t - 3$."
+   ],
+   "solution": [
+    "$v(t) = \\int a(t)\\,dt = 6 t^{2} - 4 t - 3$ after using $v(0) = -3$.",
+    "$s(t) = \\int v(t)\\,dt = 2 t^{3} - 2 t^{2} - 3 t + 8$ after using $s(0) = 8$."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-e4bc63",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "A particle has acceleration $a(t) = 12 t - 4$, initial velocity $v(0) = 1$ and initial position $s(0) = 3$. Find the position function $s(t)$.",
+   "checker": "equiv",
+   "answer": "2*t^3-2*t^2+t+3",
+   "hints": [
+    "Integrate acceleration to get velocity (fix the constant with $v(0)$), then integrate velocity to get position (fix the constant with $s(0)$).",
+    "$v(t) = 6 t^{2} - 4 t + 1$."
+   ],
+   "solution": [
+    "$v(t) = \\int a(t)\\,dt = 6 t^{2} - 4 t + 1$ after using $v(0) = 1$.",
+    "$s(t) = \\int v(t)\\,dt = 2 t^{3} - 2 t^{2} + t + 3$ after using $s(0) = 3$."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    3
+   ]
+  },
+  {
+   "id": "antiderivatives-ec3f04",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "A ball is thrown upward from a height of $5$ m with initial velocity $40$ m/s; take gravity as $-10$ m/s$^2$. When does the ball hit the ground? Give the exact time in seconds.",
+   "checker": "numeric",
+   "answer": "4+sqrt(17)",
+   "hints": [
+    "Build the height function: $s(t) = 5 + 40t - 5t^2$.",
+    "Solve $s(t) = 0$ and keep the positive root."
+   ],
+   "solution": [
+    "$s(t) = - 5 t^{2} + 40 t + 5$.",
+    "$s(t) = 0$ gives $t = 4 + \\sqrt{17}$ s (the other root is negative)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "antiderivatives-5313e9",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "A ball is thrown upward from a height of $25$ m with initial velocity $10$ m/s; take gravity as $-10$ m/s$^2$. When does the ball hit the ground? Give the exact time in seconds.",
+   "checker": "numeric",
+   "answer": "1+sqrt(6)",
+   "hints": [
+    "Build the height function: $s(t) = 25 + 10t - 5t^2$.",
+    "Solve $s(t) = 0$ and keep the positive root."
+   ],
+   "solution": [
+    "$s(t) = - 5 t^{2} + 10 t + 25$.",
+    "$s(t) = 0$ gives $t = 1 + \\sqrt{6}$ s (the other root is negative)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "antiderivatives-220dce",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "A ball is thrown upward from a height of $0$ m with initial velocity $40$ m/s; take gravity as $-10$ m/s$^2$. When does the ball hit the ground? Give the exact time in seconds.",
+   "checker": "numeric",
+   "answer": "8",
+   "hints": [
+    "Build the height function: $s(t) = 0 + 40t - 5t^2$.",
+    "Solve $s(t) = 0$ and keep the positive root."
+   ],
+   "solution": [
+    "$s(t) = - 5 t^{2} + 40 t$.",
+    "$s(t) = 0$ gives $t = 8$ s (the other root is negative)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "antiderivatives-147ba5",
+   "skill": "antiderivatives",
+   "difficulty": 3,
+   "statement": "A ball is thrown upward from a height of $15$ m with initial velocity $20$ m/s; take gravity as $-10$ m/s$^2$. When does the ball hit the ground? Give the exact time in seconds.",
+   "checker": "numeric",
+   "answer": "2+sqrt(7)",
+   "hints": [
+    "Build the height function: $s(t) = 15 + 20t - 5t^2$.",
+    "Solve $s(t) = 0$ and keep the positive root."
+   ],
+   "solution": [
+    "$s(t) = - 5 t^{2} + 20 t + 15$.",
+    "$s(t) = 0$ gives $t = 2 + \\sqrt{7}$ s (the other root is negative)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "antiderivatives-dac1db",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Let $F$ be the antiderivative of $f(x) = 2 x + 1$ with $F(0) = -1$. Find $F\\left(1\\right)$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Find the general antiderivative, use the given value to pin down $C$, then evaluate.",
+    "$F(x) = x^{2} + x + C$."
+   ],
+   "solution": [
+    "$F(x) = x^{2} + x + C$ and $F(0) = -1$ gives $C = -1$, so $F(x) = x^{2} + x - 1$.",
+    "$F(1) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "antiderivatives-b3684c",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Let $F$ be the antiderivative of $f(x) = e^{x}$ with $F(0) = 3$. Find $F\\left(-1\\right)$.",
+   "checker": "numeric",
+   "answer": "exp(-1)+2",
+   "hints": [
+    "Find the general antiderivative, use the given value to pin down $C$, then evaluate.",
+    "$F(x) = e^{x} + C$."
+   ],
+   "solution": [
+    "$F(x) = e^{x} + C$ and $F(0) = 3$ gives $C = 2$, so $F(x) = e^{x} + 2$.",
+    "$F(-1) = e^{-1} + 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "antiderivatives-a8c9c5",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Let $F$ be the antiderivative of $f(x) = 3 e^{x}$ with $F(0) = -3$. Find $F\\left(-1\\right)$.",
+   "checker": "numeric",
+   "answer": "-6+3*exp(-1)",
+   "hints": [
+    "Find the general antiderivative, use the given value to pin down $C$, then evaluate.",
+    "$F(x) = 3 e^{x} + C$."
+   ],
+   "solution": [
+    "$F(x) = 3 e^{x} + C$ and $F(0) = -3$ gives $C = -6$, so $F(x) = 3 e^{x} - 6$.",
+    "$F(-1) = -6 + \\frac{3}{e}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "antiderivatives-9e89c7",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Let $F$ be the antiderivative of $f(x) = 3 x^{2} - 2$ with $F(0) = -1$. Find $F\\left(1\\right)$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "Find the general antiderivative, use the given value to pin down $C$, then evaluate.",
+    "$F(x) = x^{3} - 2 x + C$."
+   ],
+   "solution": [
+    "$F(x) = x^{3} - 2 x + C$ and $F(0) = -1$ gives $C = -1$, so $F(x) = x^{3} - 2 x - 1$.",
+    "$F(1) = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "antiderivatives-599654",
+   "skill": "antiderivatives",
+   "difficulty": 2,
+   "statement": "Let $F$ be the antiderivative of $f(x) = 3 x^{2} - 3$ with $F(0) = -1$. Find $F\\left(2\\right)$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Find the general antiderivative, use the given value to pin down $C$, then evaluate.",
+    "$F(x) = x^{3} - 3 x + C$."
+   ],
+   "solution": [
+    "$F(x) = x^{3} - 3 x + C$ and $F(0) = -1$ gives $C = -1$, so $F(x) = x^{3} - 3 x - 1$.",
+    "$F(2) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "antiderivatives-e791fb",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "If $F$ is an antiderivative of $f$ on an interval, the most general antiderivative of $f$ is",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Two functions with the same derivative on an interval differ by a constant.",
+    "Adding a constant does not change the derivative."
+   ],
+   "solution": [
+    "$(F + C)' = F' = f$, and any antiderivative $G$ satisfies $(G - F)' = 0$, so $G - F$ is constant.",
+    "Hence every antiderivative has the form $F(x) + C$."
+   ],
+   "verified": true,
+   "choices": [
+    "$C\\,F(x)$",
+    "$F(x) + C$ for an arbitrary constant $C$",
+    "$F(x) + Cx$",
+    "$F(x)$ only"
+   ]
+  },
+  {
+   "id": "antiderivatives-ef9654",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "Which function is an antiderivative of $\\dfrac{1}{x}$ on $(0, \\infty)$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "The power rule fails for $n = -1$ because it would divide by zero.",
+    "Which function has derivative $1/x$?"
+   ],
+   "solution": [
+    "$\\frac{d}{dx}\\ln x = \\frac{1}{x}$ for $x > 0$.",
+    "So $\\ln x$ (and $\\ln|x|$ in general) is the antiderivative of $1/x$; the power rule does not apply when $n = -1$."
+   ],
+   "verified": true,
+   "choices": [
+    "$e^x$",
+    "$-\\dfrac{1}{x^2}$",
+    "$\\ln x$",
+    "$\\dfrac{x^0}{0}$"
+   ]
+  },
+  {
+   "id": "antiderivatives-415575",
+   "skill": "antiderivatives",
+   "difficulty": 1,
+   "statement": "An antiderivative of $\\sin x$ is",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Which function has derivative $\\sin x$?",
+    "Recall $(\\cos x)' = -\\sin x$ and adjust the sign."
+   ],
+   "solution": [
+    "$\\frac{d}{dx}(-\\cos x) = \\sin x$.",
+    "So $-\\cos x + C$ is the general antiderivative of $\\sin x$."
+   ],
+   "verified": true,
+   "choices": [
+    "$-\\cos x$",
+    "$\\cos x$",
+    "$\\tan x$",
+    "$-\\sin x$"
+   ]
+  }
+ ]
+}

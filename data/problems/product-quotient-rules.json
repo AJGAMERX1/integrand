@@ -1,0 +1,997 @@
+{
+ "skill": "product-quotient-rules",
+ "problems": [
+  {
+   "id": "product-quotient-rules-e0b909",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the product rule to differentiate $y = \\left(3 x^{2} - x\\right) e^{x}$.",
+   "checker": "equiv",
+   "answer": "(6*x-1)*exp(x)+(3*x^2-x)*exp(x)",
+   "hints": [
+    "$(fg)' = f'g + fg'$: derivative of the first times the second, plus the first times derivative of the second.",
+    "Here $f = 3 x^{2} - x$ with $f' = 6 x - 1$, and $g = e^{x}$ with $g' = e^{x}$."
+   ],
+   "solution": [
+    "$y' = \\big(6 x - 1\\big)\\big(e^{x}\\big) + \\big(3 x^{2} - x\\big)\\big(e^{x}\\big)$.",
+    "Simplified: $y' = \\left(3 x^{2} + 5 x - 1\\right) e^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-1669dd",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the product rule to differentiate $y = \\left(3 x^{2} - x\\right) \\left(e^{x} + 1\\right)$.",
+   "checker": "equiv",
+   "answer": "(6*x-1)*(exp(x)+1)+(3*x^2-x)*exp(x)",
+   "hints": [
+    "$(fg)' = f'g + fg'$: derivative of the first times the second, plus the first times derivative of the second.",
+    "Here $f = 3 x^{2} - x$ with $f' = 6 x - 1$, and $g = e^{x} + 1$ with $g' = e^{x}$."
+   ],
+   "solution": [
+    "$y' = \\big(6 x - 1\\big)\\big(e^{x} + 1\\big) + \\big(3 x^{2} - x\\big)\\big(e^{x}\\big)$.",
+    "Simplified: $y' = x \\left(3 x - 1\\right) e^{x} + \\left(6 x - 1\\right) \\left(e^{x} + 1\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-0c28ff",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the product rule to differentiate $y = \\left(3 e^{x} + 1\\right) e^{x}$.",
+   "checker": "equiv",
+   "answer": "(3*exp(x)+1)*exp(x)+3*exp(2*x)",
+   "hints": [
+    "$(fg)' = f'g + fg'$: derivative of the first times the second, plus the first times derivative of the second.",
+    "Here $f = 3 e^{x} + 1$ with $f' = 3 e^{x}$, and $g = e^{x}$ with $g' = e^{x}$."
+   ],
+   "solution": [
+    "$y' = \\big(3 e^{x}\\big)\\big(e^{x}\\big) + \\big(3 e^{x} + 1\\big)\\big(e^{x}\\big)$.",
+    "Simplified: $y' = \\left(6 e^{x} + 1\\right) e^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-057339",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the product rule to differentiate $y = \\left(x^{3} - 2 x\\right) e^{x}$.",
+   "checker": "equiv",
+   "answer": "(3*x^2-2)*exp(x)+(x^3-2*x)*exp(x)",
+   "hints": [
+    "$(fg)' = f'g + fg'$: derivative of the first times the second, plus the first times derivative of the second.",
+    "Here $f = x^{3} - 2 x$ with $f' = 3 x^{2} - 2$, and $g = e^{x}$ with $g' = e^{x}$."
+   ],
+   "solution": [
+    "$y' = \\big(3 x^{2} - 2\\big)\\big(e^{x}\\big) + \\big(x^{3} - 2 x\\big)\\big(e^{x}\\big)$.",
+    "Simplified: $y' = \\left(3 x^{2} + x \\left(x^{2} - 2\\right) - 2\\right) e^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-cc9e0c",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the product rule to differentiate $y = \\left(x^{2} + 3\\right) \\left(2 e^{x} + 1\\right)$.",
+   "checker": "equiv",
+   "answer": "2*x*(2*exp(x)+1)+2*(x^2+3)*exp(x)",
+   "hints": [
+    "$(fg)' = f'g + fg'$: derivative of the first times the second, plus the first times derivative of the second.",
+    "Here $f = 2 e^{x} + 1$ with $f' = 2 e^{x}$, and $g = x^{2} + 3$ with $g' = 2 x$."
+   ],
+   "solution": [
+    "$y' = \\big(2 e^{x}\\big)\\big(x^{2} + 3\\big) + \\big(2 e^{x} + 1\\big)\\big(2 x\\big)$.",
+    "Simplified: $y' = 2 x \\left(2 e^{x} + 1\\right) + 2 \\left(x^{2} + 3\\right) e^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-02336a",
+   "skill": "product-quotient-rules",
+   "difficulty": 3,
+   "statement": "Use the product rule to differentiate $y = \\sqrt{x} e^{x}$.",
+   "checker": "equiv",
+   "answer": "sqrt(x)*exp(x)+exp(x)/(2*sqrt(x))",
+   "hints": [
+    "$(fg)' = f'g + fg'$: derivative of the first times the second, plus the first times derivative of the second.",
+    "Here $f = e^{x}$ with $f' = e^{x}$, and $g = \\sqrt{x}$ with $g' = \\frac{1}{2 \\sqrt{x}}$."
+   ],
+   "solution": [
+    "$y' = \\big(e^{x}\\big)\\big(\\sqrt{x}\\big) + \\big(e^{x}\\big)\\big(\\frac{1}{2 \\sqrt{x}}\\big)$.",
+    "Simplified: $y' = \\frac{\\left(x + \\frac{1}{2}\\right) e^{x}}{\\sqrt{x}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2.5
+   ]
+  },
+  {
+   "id": "product-quotient-rules-e7527e",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the product rule to differentiate $y = \\left(x^{2} + 2\\right) \\left(2 x^{2} - x\\right)$.",
+   "checker": "equiv",
+   "answer": "2*x*(2*x^2-x)+(4*x-1)*(x^2+2)",
+   "hints": [
+    "$(fg)' = f'g + fg'$: derivative of the first times the second, plus the first times derivative of the second.",
+    "Here $f = x^{2} + 2$ with $f' = 2 x$, and $g = 2 x^{2} - x$ with $g' = 4 x - 1$."
+   ],
+   "solution": [
+    "$y' = \\big(2 x\\big)\\big(2 x^{2} - x\\big) + \\big(x^{2} + 2\\big)\\big(4 x - 1\\big)$.",
+    "Simplified: $y' = 8 x^{3} - 3 x^{2} + 8 x - 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-4eaa9a",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the product rule to differentiate $y = \\left(x^{2} - 2\\right) \\left(3 e^{x} + 1\\right)$.",
+   "checker": "equiv",
+   "answer": "2*x*(3*exp(x)+1)+3*(x^2-2)*exp(x)",
+   "hints": [
+    "$(fg)' = f'g + fg'$: derivative of the first times the second, plus the first times derivative of the second.",
+    "Here $f = 3 e^{x} + 1$ with $f' = 3 e^{x}$, and $g = x^{2} - 2$ with $g' = 2 x$."
+   ],
+   "solution": [
+    "$y' = \\big(3 e^{x}\\big)\\big(x^{2} - 2\\big) + \\big(3 e^{x} + 1\\big)\\big(2 x\\big)$.",
+    "Simplified: $y' = 2 x \\left(3 e^{x} + 1\\right) + 3 \\left(x^{2} - 2\\right) e^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-2fac99",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the product rule to differentiate $y = \\left(x^{2} - 2\\right) \\left(x^{2} - 1\\right)$.",
+   "checker": "equiv",
+   "answer": "2*x*(x^2-2)+2*x*(x^2-1)",
+   "hints": [
+    "$(fg)' = f'g + fg'$: derivative of the first times the second, plus the first times derivative of the second.",
+    "Here $f = x^{2} - 2$ with $f' = 2 x$, and $g = x^{2} - 1$ with $g' = 2 x$."
+   ],
+   "solution": [
+    "$y' = \\big(2 x\\big)\\big(x^{2} - 1\\big) + \\big(x^{2} - 2\\big)\\big(2 x\\big)$.",
+    "Simplified: $y' = 4 x^{3} - 6 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-83043e",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the product rule to differentiate $y = \\left(x^{3} - 2 x\\right) \\left(3 e^{x} + 1\\right)$.",
+   "checker": "equiv",
+   "answer": "(3*x^2-2)*(3*exp(x)+1)+3*(x^3-2*x)*exp(x)",
+   "hints": [
+    "$(fg)' = f'g + fg'$: derivative of the first times the second, plus the first times derivative of the second.",
+    "Here $f = x^{3} - 2 x$ with $f' = 3 x^{2} - 2$, and $g = 3 e^{x} + 1$ with $g' = 3 e^{x}$."
+   ],
+   "solution": [
+    "$y' = \\big(3 x^{2} - 2\\big)\\big(3 e^{x} + 1\\big) + \\big(x^{3} - 2 x\\big)\\big(3 e^{x}\\big)$.",
+    "Simplified: $y' = 3 x \\left(x^{2} - 2\\right) e^{x} + \\left(3 x^{2} - 2\\right) \\left(3 e^{x} + 1\\right)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-e6d5be",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the product rule to differentiate $y = x e^{x}$.",
+   "checker": "equiv",
+   "answer": "x*exp(x)+exp(x)",
+   "hints": [
+    "$(fg)' = f'g + fg'$: derivative of the first times the second, plus the first times derivative of the second.",
+    "Here $f = x$ with $f' = 1$, and $g = e^{x}$ with $g' = e^{x}$."
+   ],
+   "solution": [
+    "$y' = \\big(1\\big)\\big(e^{x}\\big) + \\big(x\\big)\\big(e^{x}\\big)$.",
+    "Simplified: $y' = \\left(x + 1\\right) e^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-3b52f0",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the product rule to differentiate $y = \\left(2 x^{2} - x\\right) e^{x}$.",
+   "checker": "equiv",
+   "answer": "(4*x-1)*exp(x)+(2*x^2-x)*exp(x)",
+   "hints": [
+    "$(fg)' = f'g + fg'$: derivative of the first times the second, plus the first times derivative of the second.",
+    "Here $f = e^{x}$ with $f' = e^{x}$, and $g = 2 x^{2} - x$ with $g' = 4 x - 1$."
+   ],
+   "solution": [
+    "$y' = \\big(e^{x}\\big)\\big(2 x^{2} - x\\big) + \\big(e^{x}\\big)\\big(4 x - 1\\big)$.",
+    "Simplified: $y' = \\left(2 x^{2} + 3 x - 1\\right) e^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-0383cc",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the product rule to differentiate $y = \\left(e^{x} + 1\\right) \\left(2 e^{x} + 1\\right)$.",
+   "checker": "equiv",
+   "answer": "2*(exp(x)+1)*exp(x)+(2*exp(x)+1)*exp(x)",
+   "hints": [
+    "$(fg)' = f'g + fg'$: derivative of the first times the second, plus the first times derivative of the second.",
+    "Here $f = 2 e^{x} + 1$ with $f' = 2 e^{x}$, and $g = e^{x} + 1$ with $g' = e^{x}$."
+   ],
+   "solution": [
+    "$y' = \\big(2 e^{x}\\big)\\big(e^{x} + 1\\big) + \\big(2 e^{x} + 1\\big)\\big(e^{x}\\big)$.",
+    "Simplified: $y' = \\left(4 e^{x} + 3\\right) e^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-8d9345",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the quotient rule to differentiate $y = \\frac{2 x}{x^{2} + 4}$.",
+   "checker": "equiv",
+   "answer": "-4*x^2/(x^2+4)^2+2/(x^2+4)",
+   "hints": [
+    "$\\left(\\dfrac{f}{g}\\right)' = \\dfrac{f'g - fg'}{g^2}$; the order in the numerator matters.",
+    "$f = 2 x$, $f' = 2$; $g = x^{2} + 4$, $g' = 2 x$."
+   ],
+   "solution": [
+    "$y' = \\dfrac{\\big(2\\big)\\big(x^{2} + 4\\big) - \\big(2 x\\big)\\big(2 x\\big)}{\\left(x^{2} + 4\\right)^2}$.",
+    "Simplifying the numerator: $y' = - \\frac{2 \\left(x - 2\\right) \\left(x + 2\\right)}{\\left(x^{2} + 4\\right)^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-4eaae0",
+   "skill": "product-quotient-rules",
+   "difficulty": 3,
+   "statement": "Use the quotient rule to differentiate $y = \\frac{e^{x}}{x^{2}}$.",
+   "checker": "equiv",
+   "answer": "exp(x)/x^2-2*exp(x)/x^3",
+   "hints": [
+    "$\\left(\\dfrac{f}{g}\\right)' = \\dfrac{f'g - fg'}{g^2}$; the order in the numerator matters.",
+    "$f = e^{x}$, $f' = e^{x}$; $g = x^{2}$, $g' = 2 x$."
+   ],
+   "solution": [
+    "$y' = \\dfrac{\\big(e^{x}\\big)\\big(x^{2}\\big) - \\big(e^{x}\\big)\\big(2 x\\big)}{\\left(x^{2}\\right)^2}$.",
+    "Simplifying the numerator: $y' = \\frac{\\left(x - 2\\right) e^{x}}{x^{3}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2.5
+   ]
+  },
+  {
+   "id": "product-quotient-rules-264376",
+   "skill": "product-quotient-rules",
+   "difficulty": 3,
+   "statement": "Use the quotient rule to differentiate $y = \\frac{e^{x}}{x}$.",
+   "checker": "equiv",
+   "answer": "exp(x)/x-exp(x)/x^2",
+   "hints": [
+    "$\\left(\\dfrac{f}{g}\\right)' = \\dfrac{f'g - fg'}{g^2}$; the order in the numerator matters.",
+    "$f = e^{x}$, $f' = e^{x}$; $g = x$, $g' = 1$."
+   ],
+   "solution": [
+    "$y' = \\dfrac{\\big(e^{x}\\big)\\big(x\\big) - \\big(e^{x}\\big)\\big(1\\big)}{\\left(x\\right)^2}$.",
+    "Simplifying the numerator: $y' = \\frac{\\left(x - 1\\right) e^{x}}{x^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2.5
+   ]
+  },
+  {
+   "id": "product-quotient-rules-f65553",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the quotient rule to differentiate $y = \\frac{2 x + 2}{x + 3}$.",
+   "checker": "equiv",
+   "answer": "2/(x+3)-(2*x+2)/(x+3)^2",
+   "hints": [
+    "$\\left(\\dfrac{f}{g}\\right)' = \\dfrac{f'g - fg'}{g^2}$; the order in the numerator matters.",
+    "$f = 2 x + 2$, $f' = 2$; $g = x + 3$, $g' = 1$."
+   ],
+   "solution": [
+    "$y' = \\dfrac{\\big(2\\big)\\big(x + 3\\big) - \\big(2 x + 2\\big)\\big(1\\big)}{\\left(x + 3\\right)^2}$.",
+    "Simplifying the numerator: $y' = \\frac{4}{\\left(x + 3\\right)^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "product-quotient-rules-07286e",
+   "skill": "product-quotient-rules",
+   "difficulty": 3,
+   "statement": "Use the quotient rule to differentiate $y = \\frac{\\sqrt{x}}{x + 1}$.",
+   "checker": "equiv",
+   "answer": "-sqrt(x)/(x+1)^2+1/(2*sqrt(x)*(x+1))",
+   "hints": [
+    "$\\left(\\dfrac{f}{g}\\right)' = \\dfrac{f'g - fg'}{g^2}$; the order in the numerator matters.",
+    "$f = \\sqrt{x}$, $f' = \\frac{1}{2 \\sqrt{x}}$; $g = x + 1$, $g' = 1$."
+   ],
+   "solution": [
+    "$y' = \\dfrac{\\big(\\frac{1}{2 \\sqrt{x}}\\big)\\big(x + 1\\big) - \\big(\\sqrt{x}\\big)\\big(1\\big)}{\\left(x + 1\\right)^2}$.",
+    "Simplifying the numerator: $y' = - \\frac{x - 1}{2 \\sqrt{x} \\left(x + 1\\right)^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "product-quotient-rules-7e2b79",
+   "skill": "product-quotient-rules",
+   "difficulty": 3,
+   "statement": "Use the quotient rule to differentiate $y = \\frac{\\sqrt{x}}{x + 3}$.",
+   "checker": "equiv",
+   "answer": "-sqrt(x)/(x+3)^2+1/(2*sqrt(x)*(x+3))",
+   "hints": [
+    "$\\left(\\dfrac{f}{g}\\right)' = \\dfrac{f'g - fg'}{g^2}$; the order in the numerator matters.",
+    "$f = \\sqrt{x}$, $f' = \\frac{1}{2 \\sqrt{x}}$; $g = x + 3$, $g' = 1$."
+   ],
+   "solution": [
+    "$y' = \\dfrac{\\big(\\frac{1}{2 \\sqrt{x}}\\big)\\big(x + 3\\big) - \\big(\\sqrt{x}\\big)\\big(1\\big)}{\\left(x + 3\\right)^2}$.",
+    "Simplifying the numerator: $y' = - \\frac{x - 3}{2 \\sqrt{x} \\left(x + 3\\right)^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "product-quotient-rules-63181c",
+   "skill": "product-quotient-rules",
+   "difficulty": 3,
+   "statement": "Use the quotient rule to differentiate $y = \\frac{x^{2} - 3}{x^{2} + 1}$.",
+   "checker": "equiv",
+   "answer": "-2*x*(x^2-3)/(x^2+1)^2+2*x/(x^2+1)",
+   "hints": [
+    "$\\left(\\dfrac{f}{g}\\right)' = \\dfrac{f'g - fg'}{g^2}$; the order in the numerator matters.",
+    "$f = x^{2} - 3$, $f' = 2 x$; $g = x^{2} + 1$, $g' = 2 x$."
+   ],
+   "solution": [
+    "$y' = \\dfrac{\\big(2 x\\big)\\big(x^{2} + 1\\big) - \\big(x^{2} - 3\\big)\\big(2 x\\big)}{\\left(x^{2} + 1\\right)^2}$.",
+    "Simplifying the numerator: $y' = \\frac{8 x}{\\left(x^{2} + 1\\right)^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-9bea9a",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the quotient rule to differentiate $y = \\frac{3 x}{x^{2} + 2}$.",
+   "checker": "equiv",
+   "answer": "-6*x^2/(x^2+2)^2+3/(x^2+2)",
+   "hints": [
+    "$\\left(\\dfrac{f}{g}\\right)' = \\dfrac{f'g - fg'}{g^2}$; the order in the numerator matters.",
+    "$f = 3 x$, $f' = 3$; $g = x^{2} + 2$, $g' = 2 x$."
+   ],
+   "solution": [
+    "$y' = \\dfrac{\\big(3\\big)\\big(x^{2} + 2\\big) - \\big(3 x\\big)\\big(2 x\\big)}{\\left(x^{2} + 2\\right)^2}$.",
+    "Simplifying the numerator: $y' = - \\frac{3 \\left(x^{2} - 2\\right)}{\\left(x^{2} + 2\\right)^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-d9a310",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Use the quotient rule to differentiate $y = \\frac{3 x - 1}{x + 1}$.",
+   "checker": "equiv",
+   "answer": "3/(x+1)-(3*x-1)/(x+1)^2",
+   "hints": [
+    "$\\left(\\dfrac{f}{g}\\right)' = \\dfrac{f'g - fg'}{g^2}$; the order in the numerator matters.",
+    "$f = 3 x - 1$, $f' = 3$; $g = x + 1$, $g' = 1$."
+   ],
+   "solution": [
+    "$y' = \\dfrac{\\big(3\\big)\\big(x + 1\\big) - \\big(3 x - 1\\big)\\big(1\\big)}{\\left(x + 1\\right)^2}$.",
+    "Simplifying the numerator: $y' = \\frac{4}{\\left(x + 1\\right)^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "product-quotient-rules-053052",
+   "skill": "product-quotient-rules",
+   "difficulty": 3,
+   "statement": "Use the quotient rule to differentiate $y = \\frac{x^{2} - 1}{x^{2} + 1}$.",
+   "checker": "equiv",
+   "answer": "-2*x*(x^2-1)/(x^2+1)^2+2*x/(x^2+1)",
+   "hints": [
+    "$\\left(\\dfrac{f}{g}\\right)' = \\dfrac{f'g - fg'}{g^2}$; the order in the numerator matters.",
+    "$f = x^{2} - 1$, $f' = 2 x$; $g = x^{2} + 1$, $g' = 2 x$."
+   ],
+   "solution": [
+    "$y' = \\dfrac{\\big(2 x\\big)\\big(x^{2} + 1\\big) - \\big(x^{2} - 1\\big)\\big(2 x\\big)}{\\left(x^{2} + 1\\right)^2}$.",
+    "Simplifying the numerator: $y' = \\frac{4 x}{\\left(x^{2} + 1\\right)^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-a11783",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\left(3 x - 1\\right) \\left(x^{2} - 2\\right)$. Find $f'(2)$.",
+   "checker": "numeric",
+   "answer": "26",
+   "hints": [
+    "Differentiate with the product rule first; do not multiply out unless it helps.",
+    "Then substitute $x = 2$ into the derivative (not into $f$)."
+   ],
+   "solution": [
+    "$f'(x) = 9 x^{2} - 2 x - 6$.",
+    "$f'(2) = 26$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-fac2d5",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{2 x + 2}{x^{2} + 1}$. Find $f'(-1)$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Differentiate with the quotient rule first; do not multiply out unless it helps.",
+    "Then substitute $x = -1$ into the derivative (not into $f$)."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{2 \\left(x^{2} - 2 x \\left(x + 1\\right) + 1\\right)}{\\left(x^{2} + 1\\right)^{2}}$.",
+    "$f'(-1) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-250588",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\left(x + 3\\right) e^{x}$. Find $f'(0)$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Differentiate with the product rule first; do not multiply out unless it helps.",
+    "Then substitute $x = 0$ into the derivative (not into $f$)."
+   ],
+   "solution": [
+    "$f'(x) = \\left(x + 4\\right) e^{x}$.",
+    "$f'(0) = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-c0e5de",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\left(x + 2\\right) e^{x}$. Find $f'(0)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Differentiate with the product rule first; do not multiply out unless it helps.",
+    "Then substitute $x = 0$ into the derivative (not into $f$)."
+   ],
+   "solution": [
+    "$f'(x) = \\left(x + 3\\right) e^{x}$.",
+    "$f'(0) = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-365fb8",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{2 x + 3}{x^{2} + 1}$. Find $f'(0)$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Differentiate with the quotient rule first; do not multiply out unless it helps.",
+    "Then substitute $x = 0$ into the derivative (not into $f$)."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{2 \\left(- x^{2} - 3 x + 1\\right)}{x^{4} + 2 x^{2} + 1}$.",
+    "$f'(0) = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-82cc0f",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{2 x}{x^{2} + 1}$. Find $f'(0)$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Differentiate with the quotient rule first; do not multiply out unless it helps.",
+    "Then substitute $x = 0$ into the derivative (not into $f$)."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{2 \\left(1 - x^{2}\\right)}{x^{4} + 2 x^{2} + 1}$.",
+    "$f'(0) = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-70d48e",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Suppose $f(3) = 3$, $f'(3) = -4$, $g(3) = -4$ and $g'(3) = 2$. Find $(x\\,f(x))'(3)$.",
+   "checker": "numeric",
+   "answer": "-9",
+   "hints": [
+    "Write the product or quotient rule at the point $a$, then plug in the four numbers.",
+    "Use $(xf)'(a) = 1\\cdot f(a) + a\\,f'(a)$."
+   ],
+   "solution": [
+    "$(xf)'(a) = 1\\cdot f(a) + a\\,f'(a)$ with $a = 3$.",
+    "$= (3) + (3) \\cdot (-4) = -9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-16f940",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Suppose $f(3) = -2$, $f'(3) = -3$, $g(3) = 4$ and $g'(3) = -4$. Find $(fg)'(3)$.",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "Write the product or quotient rule at the point $a$, then plug in the four numbers.",
+    "Use $(fg)'(a) = f'(a)g(a) + f(a)g'(a)$."
+   ],
+   "solution": [
+    "$(fg)'(a) = f'(a)g(a) + f(a)g'(a)$ with $a = 3$.",
+    "$= (-3) \\cdot (4) + (-2) \\cdot (-4) = -4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-839d51",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Suppose $f(3) = 3$, $f'(3) = 3$, $g(3) = -5$ and $g'(3) = -3$. Find $(g/f)'(3)$.",
+   "checker": "numeric",
+   "answer": "2/3",
+   "hints": [
+    "Write the product or quotient rule at the point $a$, then plug in the four numbers.",
+    "Use $(g/f)'(a) = \\dfrac{g'(a)f(a) - g(a)f'(a)}{f(a)^2}$."
+   ],
+   "solution": [
+    "$(g/f)'(a) = \\dfrac{g'(a)f(a) - g(a)f'(a)}{f(a)^2}$ with $a = 3$.",
+    "$= ((-3) \\cdot (3) - (-5) \\cdot (3))/(3)^2 = \\frac{2}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-255923",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Suppose $f(4) = 5$, $f'(4) = 2$, $g(4) = -4$ and $g'(4) = 1$. Find $(x\\,f(x))'(4)$.",
+   "checker": "numeric",
+   "answer": "13",
+   "hints": [
+    "Write the product or quotient rule at the point $a$, then plug in the four numbers.",
+    "Use $(xf)'(a) = 1\\cdot f(a) + a\\,f'(a)$."
+   ],
+   "solution": [
+    "$(xf)'(a) = 1\\cdot f(a) + a\\,f'(a)$ with $a = 4$.",
+    "$= (5) + (4) \\cdot (2) = 13$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-599db6",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Suppose $f(5) = -2$, $f'(5) = -2$, $g(5) = 1$ and $g'(5) = 4$. Find $(x\\,f(x))'(5)$.",
+   "checker": "numeric",
+   "answer": "-12",
+   "hints": [
+    "Write the product or quotient rule at the point $a$, then plug in the four numbers.",
+    "Use $(xf)'(a) = 1\\cdot f(a) + a\\,f'(a)$."
+   ],
+   "solution": [
+    "$(xf)'(a) = 1\\cdot f(a) + a\\,f'(a)$ with $a = 5$.",
+    "$= (-2) + (5) \\cdot (-2) = -12$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-471f42",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Suppose $f(3) = -4$, $f'(3) = 2$, $g(3) = 3$ and $g'(3) = 4$. Find $(g/f)'(3)$.",
+   "checker": "numeric",
+   "answer": "-11/8",
+   "hints": [
+    "Write the product or quotient rule at the point $a$, then plug in the four numbers.",
+    "Use $(g/f)'(a) = \\dfrac{g'(a)f(a) - g(a)f'(a)}{f(a)^2}$."
+   ],
+   "solution": [
+    "$(g/f)'(a) = \\dfrac{g'(a)f(a) - g(a)f'(a)}{f(a)^2}$ with $a = 3$.",
+    "$= ((4) \\cdot (-4) - (3) \\cdot (2))/(-4)^2 = - \\frac{11}{8}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-727fea",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Suppose $f(2) = -5$, $f'(2) = 2$, $g(2) = -3$ and $g'(2) = -3$. Find $(fg)'(2)$.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "Write the product or quotient rule at the point $a$, then plug in the four numbers.",
+    "Use $(fg)'(a) = f'(a)g(a) + f(a)g'(a)$."
+   ],
+   "solution": [
+    "$(fg)'(a) = f'(a)g(a) + f(a)g'(a)$ with $a = 2$.",
+    "$= (2) \\cdot (-3) + (-5) \\cdot (-3) = 9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-0aacdb",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Suppose $f(5) = -4$, $f'(5) = 3$, $g(5) = 4$ and $g'(5) = 4$. Find $(f/g)'(5)$.",
+   "checker": "numeric",
+   "answer": "7/4",
+   "hints": [
+    "Write the product or quotient rule at the point $a$, then plug in the four numbers.",
+    "Use $(f/g)'(a) = \\dfrac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$."
+   ],
+   "solution": [
+    "$(f/g)'(a) = \\dfrac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$ with $a = 5$.",
+    "$= ((3) \\cdot (4) - (-4) \\cdot (4))/(4)^2 = \\frac{7}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-5871d4",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Values of two functions and their derivatives are given: $\\begin{array}{c|cccc} x & f(x) & f'(x) & g(x) & g'(x) \\\\ \\hline 3 & -4 & 2 & 4 & -3 \\end{array}$. Let $u(x) = f(x)/g(x)$. Find $u'(3)$.",
+   "checker": "numeric",
+   "answer": "-1/4",
+   "hints": [
+    "Apply the quotient rule at $x = 3$.",
+    "Read the four needed numbers from the table."
+   ],
+   "solution": [
+    "$u'(3) = [f'(3)g(3) - f(3)g'(3)]/g(3)^2$.",
+    "$= - \\frac{1}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-16ebb1",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Values of two functions and their derivatives are given: $\\begin{array}{c|cccc} x & f(x) & f'(x) & g(x) & g'(x) \\\\ \\hline 1 & 3 & 4 & 2 & -2 \\end{array}$. Let $u(x) = f(x)/g(x)$. Find $u'(1)$.",
+   "checker": "numeric",
+   "answer": "7/2",
+   "hints": [
+    "Apply the quotient rule at $x = 1$.",
+    "Read the four needed numbers from the table."
+   ],
+   "solution": [
+    "$u'(1) = [f'(1)g(1) - f(1)g'(1)]/g(1)^2$.",
+    "$= \\frac{7}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-cf1319",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Values of two functions and their derivatives are given: $\\begin{array}{c|cccc} x & f(x) & f'(x) & g(x) & g'(x) \\\\ \\hline 3 & 1 & -2 & -2 & -1 \\end{array}$. Let $u(x) = f(x)/g(x)$. Find $u'(3)$.",
+   "checker": "numeric",
+   "answer": "5/4",
+   "hints": [
+    "Apply the quotient rule at $x = 3$.",
+    "Read the four needed numbers from the table."
+   ],
+   "solution": [
+    "$u'(3) = [f'(3)g(3) - f(3)g'(3)]/g(3)^2$.",
+    "$= \\frac{5}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-774a4e",
+   "skill": "product-quotient-rules",
+   "difficulty": 2,
+   "statement": "Values of two functions and their derivatives are given: $\\begin{array}{c|cccc} x & f(x) & f'(x) & g(x) & g'(x) \\\\ \\hline 1 & 0 & -2 & -3 & 5 \\end{array}$. Let $u(x) = f(x)g(x)$. Find $u'(1)$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Apply the product rule at $x = 1$.",
+    "Read the four needed numbers from the table."
+   ],
+   "solution": [
+    "$u'(1) = f'(1)g(1) + f(1)g'(1)$.",
+    "$= 6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "product-quotient-rules-53e1df",
+   "skill": "product-quotient-rules",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to $y = \\frac{x}{x + 2}$ at $x = 1$.",
+   "checker": "equiv",
+   "answer": "2*x/9+1/9",
+   "hints": [
+    "Use the quotient rule to get the slope at $x = 1$.",
+    "Then point-slope form through the point on the curve."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{2}{\\left(x + 2\\right)^{2}}$, so $f'(1) = \\frac{2}{9}$, and $f(1) = \\frac{1}{3}$.",
+    "$y = \\frac{1}{3} + \\frac{2}{9}(x - 1) = \\frac{2 x}{9} + \\frac{1}{9}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-5d8585",
+   "skill": "product-quotient-rules",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to $y = \\frac{x + 3}{x^{2} + 1}$ at $x = 0$.",
+   "checker": "equiv",
+   "answer": "x+3",
+   "hints": [
+    "Use the quotient rule to get the slope at $x = 0$.",
+    "Then point-slope form through the point on the curve."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{x^{2} - 2 x \\left(x + 3\\right) + 1}{\\left(x^{2} + 1\\right)^{2}}$, so $f'(0) = 1$, and $f(0) = 3$.",
+    "$y = 3 + 1(x - 0) = x + 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-603965",
+   "skill": "product-quotient-rules",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to $y = \\frac{x + 3}{x^{2} + 1}$ at $x = 2$.",
+   "checker": "equiv",
+   "answer": "11/5-3*x/5",
+   "hints": [
+    "Use the quotient rule to get the slope at $x = 2$.",
+    "Then point-slope form through the point on the curve."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{x^{2} - 2 x \\left(x + 3\\right) + 1}{\\left(x^{2} + 1\\right)^{2}}$, so $f'(2) = - \\frac{3}{5}$, and $f(2) = 1$.",
+    "$y = 1 + - \\frac{3}{5}(x - 2) = \\frac{11}{5} - \\frac{3 x}{5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-19345c",
+   "skill": "product-quotient-rules",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to $y = \\left(x^{2} + 1\\right) e^{x}$ at $x = 0$.",
+   "checker": "equiv",
+   "answer": "x+1",
+   "hints": [
+    "Use the product rule to get the slope at $x = 0$.",
+    "Then point-slope form through the point on the curve."
+   ],
+   "solution": [
+    "$f'(x) = \\left(x^{2} + 2 x + 1\\right) e^{x}$, so $f'(0) = 1$, and $f(0) = 1$.",
+    "$y = 1 + 1(x - 0) = x + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "product-quotient-rules-2a0e52",
+   "skill": "product-quotient-rules",
+   "difficulty": 3,
+   "statement": "At which values of $x$ does $y = \\frac{x}{x^{2} + 9}$ have a horizontal tangent?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Differentiate with the quotient rule and set the numerator equal to zero.",
+    "The numerator of $y'$ is $9 - x^{2}$."
+   ],
+   "solution": [
+    "$y' = \\dfrac{(1)(x^2 + 9) - x(2x)}{(x^2 + 9)^2} = \\dfrac{9 - x^2}{(x^2 + 9)^2}$.",
+    "$y' = 0$ when $x^2 = 9$, i.e. $x = \\pm 3$."
+   ],
+   "verified": true,
+   "choices": [
+    "$x = \\pm 9$",
+    "$x = \\pm 3$",
+    "$x = 3$ only",
+    "$x = 0$"
+   ]
+  },
+  {
+   "id": "product-quotient-rules-683e3a",
+   "skill": "product-quotient-rules",
+   "difficulty": 1,
+   "statement": "Which formula is the product rule for $\\dfrac{d}{dx}[f(x)g(x)]$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "The derivative of a product is not the product of the derivatives: test with $f = g = x$.",
+    "Each factor gets differentiated once, in separate terms that are added."
+   ],
+   "solution": [
+    "$(fg)' = f'g + fg'$.",
+    "Check: $(x\\cdot x)' = 1\\cdot x + x\\cdot 1 = 2x$, which matches $(x^2)' = 2x$, whereas $f'g' = 1$ does not."
+   ],
+   "verified": true,
+   "choices": [
+    "$f(x)g'(x)$",
+    "$f'(x)g(x) + f(x)g'(x)$",
+    "$f'(x)g'(x)$",
+    "$f'(x)g(x) - f(x)g'(x)$"
+   ]
+  },
+  {
+   "id": "product-quotient-rules-857822",
+   "skill": "product-quotient-rules",
+   "difficulty": 1,
+   "statement": "Which formula is the quotient rule for $\\dfrac{d}{dx}\\left[\\dfrac{f(x)}{g(x)}\\right]$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Think 'low d-high minus high d-low, over low squared'.",
+    "Test on $1/x$: the answer must be $-1/x^2$."
+   ],
+   "solution": [
+    "$(f/g)' = (f'g - fg')/g^2$.",
+    "With $f = 1, g = x$: $(0\\cdot x - 1\\cdot 1)/x^2 = -1/x^2$, correct."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\dfrac{f'(x)}{g'(x)}$",
+    "$\\dfrac{f(x)g'(x) - f'(x)g(x)}{[g(x)]^2}$",
+    "$\\dfrac{f'(x)g(x) + f(x)g'(x)}{[g(x)]^2}$",
+    "$\\dfrac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$"
+   ]
+  },
+  {
+   "id": "product-quotient-rules-ba30c1",
+   "skill": "product-quotient-rules",
+   "difficulty": 1,
+   "statement": "If $f(2) = 3$, $f'(2) = -1$ and $h(x) = x^2 f(x)$, then $h'(2)$ equals",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Product rule with $u = x^2$ and $v = f(x)$.",
+    "$h'(x) = 2x f(x) + x^2 f'(x)$."
+   ],
+   "solution": [
+    "$h'(2) = 2(2)f(2) + 2^2 f'(2) = 4(3) + 4(-1)$.",
+    "$= 12 - 4 = 8$."
+   ],
+   "verified": true,
+   "choices": [
+    "$8$",
+    "$12$",
+    "$-4$",
+    "$-1$"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1190 @@
+{
+ "skill": "unit-circle",
+ "problems": [
+  {
+   "id": "unit-circle-edb2c8",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\tan\\left(\\frac{7 \\pi}{6}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(3)/3",
+   "hints": [
+    "Locate the angle: $\\frac{7 \\pi}{6}$ is in quadrant III with reference angle $\\frac{\\pi}{6}$.",
+    "Tangent is y/x of the point on the unit circle; fix the sign by quadrant."
+   ],
+   "solution": [
+    "Reference angle $\\frac{\\pi}{6}$, quadrant III.",
+    "$\\tan(\\frac{7 \\pi}{6}) = \\frac{\\sqrt{3}}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-ea9915",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\tan 180^\\circ$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Find the reference angle: the acute angle between the terminal side of $180^\\circ$ and the $x$-axis.",
+    "Then attach the sign for the quadrant (All Students Take Calculus)."
+   ],
+   "solution": [
+    "$180^\\circ$ has reference angle $0^\\circ$.",
+    "$\\tan 180^\\circ = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-dfa2d2",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "Find the reference angle of $\\frac{7 \\pi}{4}$ (in radians).",
+   "checker": "numeric",
+   "answer": "pi/4",
+   "hints": [
+    "The reference angle is the acute angle between the terminal side and the $x$-axis.",
+    "In quadrants II and III measure from $\\pi$; in quadrant IV measure from $2\\pi$."
+   ],
+   "solution": [
+    "$\\frac{7 \\pi}{4}$ is in quadrant IV.",
+    "Its distance to the nearest half-turn of the $x$-axis is $\\frac{\\pi}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-4db5c6",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "In which quadrant does the terminal side of the angle $\\frac{13 \\pi}{6}$ lie?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compare the angle with $\\pi/2$, $\\pi$, and $3\\pi/2$ (add or subtract $2\\pi$ first if it is negative or more than one turn).",
+    "Quadrant I: $0$ to $\\pi/2$; II: $\\pi/2$ to $\\pi$; III: $\\pi$ to $3\\pi/2$; IV: $3\\pi/2$ to $2\\pi$."
+   ],
+   "solution": [
+    "Reduced to one turn: $\\frac{\\pi}{6}$.",
+    "That lies in quadrant I."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{II}",
+    "\\text{IV}",
+    "\\text{I}",
+    "\\text{III}"
+   ]
+  },
+  {
+   "id": "unit-circle-12a0e0",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the angle in $[0, 2\\pi)$ that is coterminal with $- \\frac{5 \\pi}{4}$.",
+   "checker": "numeric",
+   "answer": "3*pi/4",
+   "hints": [
+    "Coterminal angles differ by whole turns of $2\\pi$.",
+    "Add $2\\pi$ until the result is between $0$ and $2\\pi$."
+   ],
+   "solution": [
+    "$- \\frac{5 \\pi}{4} + 2\\pi = \\frac{3 \\pi}{4}$.",
+    "The coterminal angle in $[0, 2\\pi)$ is $\\frac{3 \\pi}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-e81798",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "A point on the unit circle is at angle $0$ measured from the positive $x$-axis. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "On the unit circle the point at angle $\\theta$ is $(\\cos\\theta, \\sin\\theta)$.",
+    "So you need $\\cos\\left(0\\right)$."
+   ],
+   "solution": [
+    "The point is $(\\cos0, \\sin0)$.",
+    "The $x$-coordinate is $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-940725",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Which angle $\\theta$ satisfies $\\cos\\theta = - \\frac{\\sqrt{2}}{2}$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Cosine is the x-coordinate on the unit circle; the sign tells you the possible quadrants.",
+    "Compute the reference angle from the absolute value, then place it in the right quadrant."
+   ],
+   "solution": [
+    "$- \\frac{\\sqrt{2}}{2}$ has reference angle $\\frac{\\pi}{4}$ and the sign points to quadrant III.",
+    "$\\cos\\left(\\frac{5 \\pi}{4}\\right) = - \\frac{\\sqrt{2}}{2}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\frac{5 \\pi}{6}",
+    "\\frac{\\pi}{3}",
+    "\\frac{5 \\pi}{4}",
+    "\\frac{2 \\pi}{3}"
+   ]
+  },
+  {
+   "id": "unit-circle-0ec78d",
+   "skill": "unit-circle",
+   "difficulty": 3,
+   "statement": "Solve $\\sin\\theta = - \\frac{1}{2}$ for $0 \\le \\theta < 2\\pi$. There are two solutions; enter the smaller one.",
+   "checker": "numeric",
+   "answer": "7*pi/6",
+   "hints": [
+    "Find the reference angle from the absolute value, then use the sign to pick two quadrants.",
+    "The two solutions are symmetric: for sine they are reflections across the $y$-axis."
+   ],
+   "solution": [
+    "Reference angle: $\\frac{\\pi}{6}$.",
+    "Solutions in $[0, 2\\pi)$: $\\frac{7 \\pi}{6}$ and $\\frac{11 \\pi}{6}$.",
+    "The smaller is $\\frac{7 \\pi}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-dfa5e7",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\cos\\left(- \\frac{5 \\pi}{6}\\right)$.",
+   "checker": "numeric",
+   "answer": "-sqrt(3)/2",
+   "hints": [
+    "A negative angle is measured clockwise from the positive $x$-axis.",
+    "Cosine is even: $\\cos(-t) = \\cos t$."
+   ],
+   "solution": [
+    "$\\cos(- \\frac{5 \\pi}{6}) = \\cos(\\frac{5 \\pi}{6})$.",
+    "$= - \\frac{\\sqrt{3}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-0a9696",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "Without computing its value, decide whether $\\tan\\left(\\frac{7 \\pi}{6}\\right)$ is positive, negative, or zero.",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Find the quadrant first.",
+    "Sine has the sign of $y$, cosine the sign of $x$, tangent the sign of $y/x$."
+   ],
+   "solution": [
+    "$\\frac{7 \\pi}{6}$ is in quadrant III.",
+    "There $\\tan$ is positive."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{negative}",
+    "\\text{zero}",
+    "\\text{positive}"
+   ]
+  },
+  {
+   "id": "unit-circle-fbfde3",
+   "skill": "unit-circle",
+   "difficulty": 3,
+   "statement": "Find the exact value of $\\sec\\left(\\frac{2 \\pi}{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "$\\sec\\theta = \\dfrac{1}{\\cos\\theta}$.",
+    "First find $\\cos\\left(\\frac{2 \\pi}{3}\\right)$ from the unit circle, then take the reciprocal."
+   ],
+   "solution": [
+    "$\\cos\\left(\\frac{2 \\pi}{3}\\right) = - \\frac{1}{2}$.",
+    "Reciprocal: $-2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-901c38",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\sin\\left(\\frac{7 \\pi}{4}\\right)$.",
+   "checker": "numeric",
+   "answer": "-sqrt(2)/2",
+   "hints": [
+    "Locate the angle: $\\frac{7 \\pi}{4}$ is in quadrant IV with reference angle $\\frac{\\pi}{4}$.",
+    "Sine is the y-coordinate of the point on the unit circle; fix the sign by quadrant."
+   ],
+   "solution": [
+    "Reference angle $\\frac{\\pi}{4}$, quadrant IV.",
+    "$\\sin(\\frac{7 \\pi}{4}) = - \\frac{\\sqrt{2}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-4fab8c",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\cos 300^\\circ$.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "Find the reference angle: the acute angle between the terminal side of $300^\\circ$ and the $x$-axis.",
+    "Then attach the sign for the quadrant (All Students Take Calculus)."
+   ],
+   "solution": [
+    "$300^\\circ$ has reference angle $60^\\circ$.",
+    "$\\cos 300^\\circ = \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-6f6d40",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "Find the reference angle of $\\frac{7 \\pi}{6}$ (in radians).",
+   "checker": "numeric",
+   "answer": "pi/6",
+   "hints": [
+    "The reference angle is the acute angle between the terminal side and the $x$-axis.",
+    "In quadrants II and III measure from $\\pi$; in quadrant IV measure from $2\\pi$."
+   ],
+   "solution": [
+    "$\\frac{7 \\pi}{6}$ is in quadrant III.",
+    "Its distance to the nearest half-turn of the $x$-axis is $\\frac{\\pi}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-48a6e8",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "In which quadrant does the terminal side of the angle $\\frac{5 \\pi}{3}$ lie?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Compare the angle with $\\pi/2$, $\\pi$, and $3\\pi/2$ (add or subtract $2\\pi$ first if it is negative or more than one turn).",
+    "Quadrant I: $0$ to $\\pi/2$; II: $\\pi/2$ to $\\pi$; III: $\\pi$ to $3\\pi/2$; IV: $3\\pi/2$ to $2\\pi$."
+   ],
+   "solution": [
+    "Reduced to one turn: $\\frac{5 \\pi}{3}$.",
+    "That lies in quadrant IV."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{III}",
+    "\\text{I}",
+    "\\text{II}",
+    "\\text{IV}"
+   ]
+  },
+  {
+   "id": "unit-circle-ef6a21",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the angle in $[0, 2\\pi)$ that is coterminal with $- \\frac{\\pi}{2}$.",
+   "checker": "numeric",
+   "answer": "3*pi/2",
+   "hints": [
+    "Coterminal angles differ by whole turns of $2\\pi$.",
+    "Add $2\\pi$ until the result is between $0$ and $2\\pi$."
+   ],
+   "solution": [
+    "$- \\frac{\\pi}{2} + 2\\pi = \\frac{3 \\pi}{2}$.",
+    "The coterminal angle in $[0, 2\\pi)$ is $\\frac{3 \\pi}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-75db27",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "A point on the unit circle is at angle $\\frac{5 \\pi}{4}$ measured from the positive $x$-axis. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "-sqrt(2)/2",
+   "hints": [
+    "On the unit circle the point at angle $\\theta$ is $(\\cos\\theta, \\sin\\theta)$.",
+    "So you need $\\cos\\left(\\frac{5 \\pi}{4}\\right)$."
+   ],
+   "solution": [
+    "The point is $(\\cos\\frac{5 \\pi}{4}, \\sin\\frac{5 \\pi}{4})$.",
+    "The $x$-coordinate is $- \\frac{\\sqrt{2}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-a313bd",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Which angle $\\theta$ satisfies $\\sin\\theta = \\frac{1}{2}$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Sine is the y-coordinate on the unit circle; the sign tells you the possible quadrants.",
+    "Compute the reference angle from the absolute value, then place it in the right quadrant."
+   ],
+   "solution": [
+    "$\\frac{1}{2}$ has reference angle $\\frac{\\pi}{6}$ and the sign points to quadrant I.",
+    "$\\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\frac{11 \\pi}{6}",
+    "\\frac{\\pi}{6}",
+    "\\frac{7 \\pi}{6}",
+    "\\pi"
+   ]
+  },
+  {
+   "id": "unit-circle-41b229",
+   "skill": "unit-circle",
+   "difficulty": 3,
+   "statement": "Solve $\\cos\\theta = \\frac{\\sqrt{2}}{2}$ for $0 \\le \\theta < 2\\pi$. There are two solutions; enter the smaller one.",
+   "checker": "numeric",
+   "answer": "pi/4",
+   "hints": [
+    "Find the reference angle from the absolute value, then use the sign to pick two quadrants.",
+    "The two solutions are symmetric: for cosine they are reflections across the $x$-axis."
+   ],
+   "solution": [
+    "Reference angle: $\\frac{\\pi}{4}$.",
+    "Solutions in $[0, 2\\pi)$: $\\frac{\\pi}{4}$ and $\\frac{7 \\pi}{4}$.",
+    "The smaller is $\\frac{\\pi}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-a041b2",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\cos\\left(- \\frac{\\pi}{2}\\right)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "A negative angle is measured clockwise from the positive $x$-axis.",
+    "Cosine is even: $\\cos(-t) = \\cos t$."
+   ],
+   "solution": [
+    "$\\cos(- \\frac{\\pi}{2}) = \\cos(\\frac{\\pi}{2})$.",
+    "$= 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-0e49da",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\tan\\left(\\frac{3 \\pi}{4}\\right)$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "Locate the angle: $\\frac{3 \\pi}{4}$ is in quadrant II with reference angle $\\frac{\\pi}{4}$.",
+    "Tangent is y/x of the point on the unit circle; fix the sign by quadrant."
+   ],
+   "solution": [
+    "Reference angle $\\frac{\\pi}{4}$, quadrant II.",
+    "$\\tan(\\frac{3 \\pi}{4}) = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-61fcf8",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\cos 270^\\circ$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Find the reference angle: the acute angle between the terminal side of $270^\\circ$ and the $x$-axis.",
+    "Then attach the sign for the quadrant (All Students Take Calculus)."
+   ],
+   "solution": [
+    "$270^\\circ$ has reference angle $90^\\circ$.",
+    "$\\cos 270^\\circ = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-03ab76",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "Find the reference angle of $\\frac{5 \\pi}{6}$ (in radians).",
+   "checker": "numeric",
+   "answer": "pi/6",
+   "hints": [
+    "The reference angle is the acute angle between the terminal side and the $x$-axis.",
+    "In quadrants II and III measure from $\\pi$; in quadrant IV measure from $2\\pi$."
+   ],
+   "solution": [
+    "$\\frac{5 \\pi}{6}$ is in quadrant II.",
+    "Its distance to the nearest half-turn of the $x$-axis is $\\frac{\\pi}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-8415cb",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "In which quadrant does the terminal side of the angle $\\frac{3 \\pi}{4}$ lie?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compare the angle with $\\pi/2$, $\\pi$, and $3\\pi/2$ (add or subtract $2\\pi$ first if it is negative or more than one turn).",
+    "Quadrant I: $0$ to $\\pi/2$; II: $\\pi/2$ to $\\pi$; III: $\\pi$ to $3\\pi/2$; IV: $3\\pi/2$ to $2\\pi$."
+   ],
+   "solution": [
+    "Reduced to one turn: $\\frac{3 \\pi}{4}$.",
+    "That lies in quadrant II."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{II}",
+    "\\text{III}",
+    "\\text{IV}",
+    "\\text{I}"
+   ]
+  },
+  {
+   "id": "unit-circle-75a6e2",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the angle in $[0, 2\\pi)$ that is coterminal with $- \\frac{2 \\pi}{3}$.",
+   "checker": "numeric",
+   "answer": "4*pi/3",
+   "hints": [
+    "Coterminal angles differ by whole turns of $2\\pi$.",
+    "Add $2\\pi$ until the result is between $0$ and $2\\pi$."
+   ],
+   "solution": [
+    "$- \\frac{2 \\pi}{3} + 2\\pi = \\frac{4 \\pi}{3}$.",
+    "The coterminal angle in $[0, 2\\pi)$ is $\\frac{4 \\pi}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-7c4198",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "A point on the unit circle is at angle $\\frac{2 \\pi}{3}$ measured from the positive $x$-axis. Find its $y$-coordinate.",
+   "checker": "numeric",
+   "answer": "sqrt(3)/2",
+   "hints": [
+    "On the unit circle the point at angle $\\theta$ is $(\\cos\\theta, \\sin\\theta)$.",
+    "So you need $\\sin\\left(\\frac{2 \\pi}{3}\\right)$."
+   ],
+   "solution": [
+    "The point is $(\\cos\\frac{2 \\pi}{3}, \\sin\\frac{2 \\pi}{3})$.",
+    "The $y$-coordinate is $\\frac{\\sqrt{3}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-38eb95",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Which angle $\\theta$ satisfies $\\sin\\theta = - \\frac{\\sqrt{3}}{2}$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Sine is the y-coordinate on the unit circle; the sign tells you the possible quadrants.",
+    "Compute the reference angle from the absolute value, then place it in the right quadrant."
+   ],
+   "solution": [
+    "$- \\frac{\\sqrt{3}}{2}$ has reference angle $\\frac{\\pi}{3}$ and the sign points to quadrant IV.",
+    "$\\sin\\left(\\frac{5 \\pi}{3}\\right) = - \\frac{\\sqrt{3}}{2}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\frac{\\pi}{6}",
+    "\\frac{\\pi}{4}",
+    "\\frac{5 \\pi}{3}",
+    "\\frac{3 \\pi}{2}"
+   ]
+  },
+  {
+   "id": "unit-circle-0600b4",
+   "skill": "unit-circle",
+   "difficulty": 3,
+   "statement": "Solve $\\sin\\theta = \\frac{\\sqrt{2}}{2}$ for $0 \\le \\theta < 2\\pi$. There are two solutions; enter the smaller one.",
+   "checker": "numeric",
+   "answer": "pi/4",
+   "hints": [
+    "Find the reference angle from the absolute value, then use the sign to pick two quadrants.",
+    "The two solutions are symmetric: for sine they are reflections across the $y$-axis."
+   ],
+   "solution": [
+    "Reference angle: $\\frac{\\pi}{4}$.",
+    "Solutions in $[0, 2\\pi)$: $\\frac{\\pi}{4}$ and $\\frac{3 \\pi}{4}$.",
+    "The smaller is $\\frac{\\pi}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-eff305",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\cos\\left(- \\frac{2 \\pi}{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "-1/2",
+   "hints": [
+    "A negative angle is measured clockwise from the positive $x$-axis.",
+    "Cosine is even: $\\cos(-t) = \\cos t$."
+   ],
+   "solution": [
+    "$\\cos(- \\frac{2 \\pi}{3}) = \\cos(\\frac{2 \\pi}{3})$.",
+    "$= - \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-fc3160",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "Without computing its value, decide whether $\\tan\\left(\\frac{7 \\pi}{4}\\right)$ is positive, negative, or zero.",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Find the quadrant first.",
+    "Sine has the sign of $y$, cosine the sign of $x$, tangent the sign of $y/x$."
+   ],
+   "solution": [
+    "$\\frac{7 \\pi}{4}$ is in quadrant IV.",
+    "There $\\tan$ is negative."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{zero}",
+    "\\text{negative}",
+    "\\text{positive}"
+   ]
+  },
+  {
+   "id": "unit-circle-1e1ca9",
+   "skill": "unit-circle",
+   "difficulty": 3,
+   "statement": "Find the exact value of $\\csc\\left(\\frac{7 \\pi}{6}\\right)$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "$\\csc\\theta = \\dfrac{1}{\\sin\\theta}$.",
+    "First find $\\sin\\left(\\frac{7 \\pi}{6}\\right)$ from the unit circle, then take the reciprocal."
+   ],
+   "solution": [
+    "$\\sin\\left(\\frac{7 \\pi}{6}\\right) = - \\frac{1}{2}$.",
+    "Reciprocal: $-2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-438a82",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\cos\\left(\\frac{11 \\pi}{6}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(3)/2",
+   "hints": [
+    "Locate the angle: $\\frac{11 \\pi}{6}$ is in quadrant IV with reference angle $\\frac{\\pi}{6}$.",
+    "Cosine is the x-coordinate of the point on the unit circle; fix the sign by quadrant."
+   ],
+   "solution": [
+    "Reference angle $\\frac{\\pi}{6}$, quadrant IV.",
+    "$\\cos(\\frac{11 \\pi}{6}) = \\frac{\\sqrt{3}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-216815",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\cos 90^\\circ$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Find the reference angle: the acute angle between the terminal side of $90^\\circ$ and the $x$-axis.",
+    "Then attach the sign for the quadrant (All Students Take Calculus)."
+   ],
+   "solution": [
+    "$90^\\circ$ has reference angle $90^\\circ$.",
+    "$\\cos 90^\\circ = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-76f983",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "Find the reference angle of $\\frac{2 \\pi}{3}$ (in radians).",
+   "checker": "numeric",
+   "answer": "pi/3",
+   "hints": [
+    "The reference angle is the acute angle between the terminal side and the $x$-axis.",
+    "In quadrants II and III measure from $\\pi$; in quadrant IV measure from $2\\pi$."
+   ],
+   "solution": [
+    "$\\frac{2 \\pi}{3}$ is in quadrant II.",
+    "Its distance to the nearest half-turn of the $x$-axis is $\\frac{\\pi}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-0ea83b",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "In which quadrant does the terminal side of the angle $\\frac{11 \\pi}{6}$ lie?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Compare the angle with $\\pi/2$, $\\pi$, and $3\\pi/2$ (add or subtract $2\\pi$ first if it is negative or more than one turn).",
+    "Quadrant I: $0$ to $\\pi/2$; II: $\\pi/2$ to $\\pi$; III: $\\pi$ to $3\\pi/2$; IV: $3\\pi/2$ to $2\\pi$."
+   ],
+   "solution": [
+    "Reduced to one turn: $\\frac{11 \\pi}{6}$.",
+    "That lies in quadrant IV."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{III}",
+    "\\text{IV}",
+    "\\text{II}",
+    "\\text{I}"
+   ]
+  },
+  {
+   "id": "unit-circle-f2b699",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the angle in $[0, 2\\pi)$ that is coterminal with $\\frac{17 \\pi}{6}$.",
+   "checker": "numeric",
+   "answer": "5*pi/6",
+   "hints": [
+    "Coterminal angles differ by whole turns of $2\\pi$.",
+    "Subtract $2\\pi$ until the result is between $0$ and $2\\pi$."
+   ],
+   "solution": [
+    "$\\frac{17 \\pi}{6} - 2\\pi = \\frac{5 \\pi}{6}$.",
+    "The coterminal angle in $[0, 2\\pi)$ is $\\frac{5 \\pi}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-209051",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "A point on the unit circle is at angle $\\frac{\\pi}{2}$ measured from the positive $x$-axis. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "On the unit circle the point at angle $\\theta$ is $(\\cos\\theta, \\sin\\theta)$.",
+    "So you need $\\cos\\left(\\frac{\\pi}{2}\\right)$."
+   ],
+   "solution": [
+    "The point is $(\\cos\\frac{\\pi}{2}, \\sin\\frac{\\pi}{2})$.",
+    "The $x$-coordinate is $0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-c744e1",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Which angle $\\theta$ satisfies $\\sin\\theta = - \\frac{1}{2}$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Sine is the y-coordinate on the unit circle; the sign tells you the possible quadrants.",
+    "Compute the reference angle from the absolute value, then place it in the right quadrant."
+   ],
+   "solution": [
+    "$- \\frac{1}{2}$ has reference angle $\\frac{\\pi}{6}$ and the sign points to quadrant IV.",
+    "$\\sin\\left(\\frac{11 \\pi}{6}\\right) = - \\frac{1}{2}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\frac{\\pi}{3}",
+    "\\frac{5 \\pi}{4}",
+    "\\frac{\\pi}{6}",
+    "\\frac{11 \\pi}{6}"
+   ]
+  },
+  {
+   "id": "unit-circle-0f11ba",
+   "skill": "unit-circle",
+   "difficulty": 3,
+   "statement": "Solve $\\cos\\theta = - \\frac{1}{2}$ for $0 \\le \\theta < 2\\pi$. There are two solutions; enter the smaller one.",
+   "checker": "numeric",
+   "answer": "2*pi/3",
+   "hints": [
+    "Find the reference angle from the absolute value, then use the sign to pick two quadrants.",
+    "The two solutions are symmetric: for cosine they are reflections across the $x$-axis."
+   ],
+   "solution": [
+    "Reference angle: $\\frac{\\pi}{3}$.",
+    "Solutions in $[0, 2\\pi)$: $\\frac{2 \\pi}{3}$ and $\\frac{4 \\pi}{3}$.",
+    "The smaller is $\\frac{2 \\pi}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-4b5a69",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\sin\\left(- \\frac{\\pi}{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "-sqrt(3)/2",
+   "hints": [
+    "A negative angle is measured clockwise from the positive $x$-axis.",
+    "Sine is odd: $\\sin(-t) = -\\sin t$."
+   ],
+   "solution": [
+    "$\\sin(- \\frac{\\pi}{3}) = -\\sin(\\frac{\\pi}{3})$.",
+    "$= - \\frac{\\sqrt{3}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-1d1d07",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "Without computing its value, decide whether $\\cos\\left(\\frac{5 \\pi}{6}\\right)$ is positive, negative, or zero.",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Find the quadrant first.",
+    "Sine has the sign of $y$, cosine the sign of $x$, tangent the sign of $y/x$."
+   ],
+   "solution": [
+    "$\\frac{5 \\pi}{6}$ is in quadrant II.",
+    "There $\\cos$ is negative."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{positive}",
+    "\\text{negative}",
+    "\\text{zero}"
+   ]
+  },
+  {
+   "id": "unit-circle-31ee9b",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "Find the exact value of $\\cos\\left(\\frac{\\pi}{6}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(3)/2",
+   "hints": [
+    "Locate the angle: $\\frac{\\pi}{6}$ is in quadrant I with reference angle $\\frac{\\pi}{6}$.",
+    "Cosine is the x-coordinate of the point on the unit circle; fix the sign by quadrant."
+   ],
+   "solution": [
+    "Reference angle $\\frac{\\pi}{6}$, quadrant I.",
+    "$\\cos(\\frac{\\pi}{6}) = \\frac{\\sqrt{3}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-d5bb9a",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\sin 150^\\circ$.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "Find the reference angle: the acute angle between the terminal side of $150^\\circ$ and the $x$-axis.",
+    "Then attach the sign for the quadrant (All Students Take Calculus)."
+   ],
+   "solution": [
+    "$150^\\circ$ has reference angle $30^\\circ$.",
+    "$\\sin 150^\\circ = \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-179b82",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "In which quadrant does the terminal side of the angle $- \\frac{\\pi}{3}$ lie?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compare the angle with $\\pi/2$, $\\pi$, and $3\\pi/2$ (add or subtract $2\\pi$ first if it is negative or more than one turn).",
+    "Quadrant I: $0$ to $\\pi/2$; II: $\\pi/2$ to $\\pi$; III: $\\pi$ to $3\\pi/2$; IV: $3\\pi/2$ to $2\\pi$."
+   ],
+   "solution": [
+    "Reduced to one turn: $\\frac{5 \\pi}{3}$.",
+    "That lies in quadrant IV."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{II}",
+    "\\text{I}",
+    "\\text{IV}",
+    "\\text{III}"
+   ]
+  },
+  {
+   "id": "unit-circle-b59199",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the angle in $[0, 2\\pi)$ that is coterminal with $- \\frac{\\pi}{3}$.",
+   "checker": "numeric",
+   "answer": "5*pi/3",
+   "hints": [
+    "Coterminal angles differ by whole turns of $2\\pi$.",
+    "Add $2\\pi$ until the result is between $0$ and $2\\pi$."
+   ],
+   "solution": [
+    "$- \\frac{\\pi}{3} + 2\\pi = \\frac{5 \\pi}{3}$.",
+    "The coterminal angle in $[0, 2\\pi)$ is $\\frac{5 \\pi}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-82941f",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "A point on the unit circle is at angle $0$ measured from the positive $x$-axis. Find its $y$-coordinate.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "On the unit circle the point at angle $\\theta$ is $(\\cos\\theta, \\sin\\theta)$.",
+    "So you need $\\sin\\left(0\\right)$."
+   ],
+   "solution": [
+    "The point is $(\\cos0, \\sin0)$.",
+    "The $y$-coordinate is $0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-980483",
+   "skill": "unit-circle",
+   "difficulty": 3,
+   "statement": "Solve $\\cos\\theta = - \\frac{\\sqrt{3}}{2}$ for $0 \\le \\theta < 2\\pi$. There are two solutions; enter the larger one.",
+   "checker": "numeric",
+   "answer": "7*pi/6",
+   "hints": [
+    "Find the reference angle from the absolute value, then use the sign to pick two quadrants.",
+    "The two solutions are symmetric: for cosine they are reflections across the $x$-axis."
+   ],
+   "solution": [
+    "Reference angle: $\\frac{\\pi}{6}$.",
+    "Solutions in $[0, 2\\pi)$: $\\frac{5 \\pi}{6}$ and $\\frac{7 \\pi}{6}$.",
+    "The larger is $\\frac{7 \\pi}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-edd606",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\sin\\left(- \\frac{5 \\pi}{6}\\right)$.",
+   "checker": "numeric",
+   "answer": "-1/2",
+   "hints": [
+    "A negative angle is measured clockwise from the positive $x$-axis.",
+    "Sine is odd: $\\sin(-t) = -\\sin t$."
+   ],
+   "solution": [
+    "$\\sin(- \\frac{5 \\pi}{6}) = -\\sin(\\frac{5 \\pi}{6})$.",
+    "$= - \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-9977f0",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "Without computing its value, decide whether $\\sin\\left(\\frac{5 \\pi}{6}\\right)$ is positive, negative, or zero.",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Find the quadrant first.",
+    "Sine has the sign of $y$, cosine the sign of $x$, tangent the sign of $y/x$."
+   ],
+   "solution": [
+    "$\\frac{5 \\pi}{6}$ is in quadrant II.",
+    "There $\\sin$ is positive."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{negative}",
+    "\\text{positive}",
+    "\\text{zero}"
+   ]
+  },
+  {
+   "id": "unit-circle-4901e8",
+   "skill": "unit-circle",
+   "difficulty": 3,
+   "statement": "Find the exact value of $\\csc\\left(\\frac{\\pi}{6}\\right)$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "$\\csc\\theta = \\dfrac{1}{\\sin\\theta}$.",
+    "First find $\\sin\\left(\\frac{\\pi}{6}\\right)$ from the unit circle, then take the reciprocal."
+   ],
+   "solution": [
+    "$\\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}$.",
+    "Reciprocal: $2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-a2800b",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\sin\\left(\\frac{5 \\pi}{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "-sqrt(3)/2",
+   "hints": [
+    "Locate the angle: $\\frac{5 \\pi}{3}$ is in quadrant IV with reference angle $\\frac{\\pi}{3}$.",
+    "Sine is the y-coordinate of the point on the unit circle; fix the sign by quadrant."
+   ],
+   "solution": [
+    "Reference angle $\\frac{\\pi}{3}$, quadrant IV.",
+    "$\\sin(\\frac{5 \\pi}{3}) = - \\frac{\\sqrt{3}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-0acdd9",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\tan 150^\\circ$.",
+   "checker": "numeric",
+   "answer": "-sqrt(3)/3",
+   "hints": [
+    "Find the reference angle: the acute angle between the terminal side of $150^\\circ$ and the $x$-axis.",
+    "Then attach the sign for the quadrant (All Students Take Calculus)."
+   ],
+   "solution": [
+    "$150^\\circ$ has reference angle $30^\\circ$.",
+    "$\\tan 150^\\circ = - \\frac{\\sqrt{3}}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-0f263f",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "Find the reference angle of $\\frac{\\pi}{4}$ (in radians).",
+   "checker": "numeric",
+   "answer": "pi/4",
+   "hints": [
+    "The reference angle is the acute angle between the terminal side and the $x$-axis.",
+    "In quadrants II and III measure from $\\pi$; in quadrant IV measure from $2\\pi$."
+   ],
+   "solution": [
+    "$\\frac{\\pi}{4}$ is in quadrant I.",
+    "Its distance to the nearest half-turn of the $x$-axis is $\\frac{\\pi}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-d4be17",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the angle in $[0, 2\\pi)$ that is coterminal with $- \\frac{7 \\pi}{6}$.",
+   "checker": "numeric",
+   "answer": "5*pi/6",
+   "hints": [
+    "Coterminal angles differ by whole turns of $2\\pi$.",
+    "Add $2\\pi$ until the result is between $0$ and $2\\pi$."
+   ],
+   "solution": [
+    "$- \\frac{7 \\pi}{6} + 2\\pi = \\frac{5 \\pi}{6}$.",
+    "The coterminal angle in $[0, 2\\pi)$ is $\\frac{5 \\pi}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-133c03",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "A point on the unit circle is at angle $\\frac{\\pi}{3}$ measured from the positive $x$-axis. Find its $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "On the unit circle the point at angle $\\theta$ is $(\\cos\\theta, \\sin\\theta)$.",
+    "So you need $\\cos\\left(\\frac{\\pi}{3}\\right)$."
+   ],
+   "solution": [
+    "The point is $(\\cos\\frac{\\pi}{3}, \\sin\\frac{\\pi}{3})$.",
+    "The $x$-coordinate is $\\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-d2552a",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Which angle $\\theta$ satisfies $\\cos\\theta = \\frac{1}{2}$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Cosine is the x-coordinate on the unit circle; the sign tells you the possible quadrants.",
+    "Compute the reference angle from the absolute value, then place it in the right quadrant."
+   ],
+   "solution": [
+    "$\\frac{1}{2}$ has reference angle $\\frac{\\pi}{3}$ and the sign points to quadrant IV.",
+    "$\\cos\\left(\\frac{5 \\pi}{3}\\right) = \\frac{1}{2}$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\frac{11 \\pi}{6}",
+    "\\frac{\\pi}{6}",
+    "\\frac{5 \\pi}{3}",
+    "\\frac{2 \\pi}{3}"
+   ]
+  },
+  {
+   "id": "unit-circle-ba19da",
+   "skill": "unit-circle",
+   "difficulty": 3,
+   "statement": "Solve $\\cos\\theta = \\frac{\\sqrt{3}}{2}$ for $0 \\le \\theta < 2\\pi$. There are two solutions; enter the larger one.",
+   "checker": "numeric",
+   "answer": "11*pi/6",
+   "hints": [
+    "Find the reference angle from the absolute value, then use the sign to pick two quadrants.",
+    "The two solutions are symmetric: for cosine they are reflections across the $x$-axis."
+   ],
+   "solution": [
+    "Reference angle: $\\frac{\\pi}{6}$.",
+    "Solutions in $[0, 2\\pi)$: $\\frac{\\pi}{6}$ and $\\frac{11 \\pi}{6}$.",
+    "The larger is $\\frac{11 \\pi}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-b0bc13",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\sin\\left(- \\frac{\\pi}{2}\\right)$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "A negative angle is measured clockwise from the positive $x$-axis.",
+    "Sine is odd: $\\sin(-t) = -\\sin t$."
+   ],
+   "solution": [
+    "$\\sin(- \\frac{\\pi}{2}) = -\\sin(\\frac{\\pi}{2})$.",
+    "$= -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-2157dd",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "Without computing its value, decide whether $\\tan\\left(\\frac{\\pi}{3}\\right)$ is positive, negative, or zero.",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Find the quadrant first.",
+    "Sine has the sign of $y$, cosine the sign of $x$, tangent the sign of $y/x$."
+   ],
+   "solution": [
+    "$\\frac{\\pi}{3}$ is in quadrant I.",
+    "There $\\tan$ is positive."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{positive}",
+    "\\text{negative}",
+    "\\text{zero}"
+   ]
+  },
+  {
+   "id": "unit-circle-9cecf0",
+   "skill": "unit-circle",
+   "difficulty": 3,
+   "statement": "Find the exact value of $\\cot\\left(\\frac{\\pi}{6}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(3)",
+   "hints": [
+    "$\\cot\\theta = \\dfrac{1}{\\tan\\theta}$.",
+    "First find $\\tan\\left(\\frac{\\pi}{6}\\right)$ from the unit circle, then take the reciprocal."
+   ],
+   "solution": [
+    "$\\tan\\left(\\frac{\\pi}{6}\\right) = \\frac{\\sqrt{3}}{3}$.",
+    "Reciprocal: $\\sqrt{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-c91e7f",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\tan\\left(\\frac{4 \\pi}{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(3)",
+   "hints": [
+    "Locate the angle: $\\frac{4 \\pi}{3}$ is in quadrant III with reference angle $\\frac{\\pi}{3}$.",
+    "Tangent is y/x of the point on the unit circle; fix the sign by quadrant."
+   ],
+   "solution": [
+    "Reference angle $\\frac{\\pi}{3}$, quadrant III.",
+    "$\\tan(\\frac{4 \\pi}{3}) = \\sqrt{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-77106e",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\sin 315^\\circ$.",
+   "checker": "numeric",
+   "answer": "-sqrt(2)/2",
+   "hints": [
+    "Find the reference angle: the acute angle between the terminal side of $315^\\circ$ and the $x$-axis.",
+    "Then attach the sign for the quadrant (All Students Take Calculus)."
+   ],
+   "solution": [
+    "$315^\\circ$ has reference angle $45^\\circ$.",
+    "$\\sin 315^\\circ = - \\frac{\\sqrt{2}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "unit-circle-7a62c1",
+   "skill": "unit-circle",
+   "difficulty": 1,
+   "statement": "In which quadrant does the terminal side of the angle $\\frac{5 \\pi}{6}$ lie?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compare the angle with $\\pi/2$, $\\pi$, and $3\\pi/2$ (add or subtract $2\\pi$ first if it is negative or more than one turn).",
+    "Quadrant I: $0$ to $\\pi/2$; II: $\\pi/2$ to $\\pi$; III: $\\pi$ to $3\\pi/2$; IV: $3\\pi/2$ to $2\\pi$."
+   ],
+   "solution": [
+    "Reduced to one turn: $\\frac{5 \\pi}{6}$.",
+    "That lies in quadrant II."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{II}",
+    "\\text{IV}",
+    "\\text{III}",
+    "\\text{I}"
+   ]
+  },
+  {
+   "id": "unit-circle-6c353a",
+   "skill": "unit-circle",
+   "difficulty": 2,
+   "statement": "Find the angle in $[0, 2\\pi)$ that is coterminal with $- \\frac{\\pi}{4}$.",
+   "checker": "numeric",
+   "answer": "7*pi/4",
+   "hints": [
+    "Coterminal angles differ by whole turns of $2\\pi$.",
+    "Add $2\\pi$ until the result is between $0$ and $2\\pi$."
+   ],
+   "solution": [
+    "$- \\frac{\\pi}{4} + 2\\pi = \\frac{7 \\pi}{4}$.",
+    "The coterminal angle in $[0, 2\\pi)$ is $\\frac{7 \\pi}{4}$."
+   ],
+   "verified": true
+  }
+ ]
+}

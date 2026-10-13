@@ -1,0 +1,979 @@
+{
+ "skill": "exponential-functions",
+ "problems": [
+  {
+   "id": "exponential-functions-fe7ce6",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 3^{x}$. Find the exact value of $f(2)$.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "A negative exponent means reciprocal; a fractional exponent $1/2$ means square root.",
+    "$f(2) = 3^{x}$ with $x = 2$."
+   ],
+   "solution": [
+    "$f(2) = 3^{2}$.",
+    "$= 9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-7804a2",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 3^{x}$. Find the exact value of $f(-2)$.",
+   "checker": "numeric",
+   "answer": "1/9",
+   "hints": [
+    "A negative exponent means reciprocal; a fractional exponent $1/2$ means square root.",
+    "$f(-2) = 3^{x}$ with $x = -2$."
+   ],
+   "solution": [
+    "$f(-2) = 3^{-2}$.",
+    "$= \\frac{1}{9}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-473515",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 9^{x}$. Find the exact value of $f(2)$.",
+   "checker": "numeric",
+   "answer": "81",
+   "hints": [
+    "A negative exponent means reciprocal; a fractional exponent $1/2$ means square root.",
+    "$f(2) = 9^{x}$ with $x = 2$."
+   ],
+   "solution": [
+    "$f(2) = 9^{2}$.",
+    "$= 81$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-7db60e",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 16^{x}$. Find the exact value of $f(-1)$.",
+   "checker": "numeric",
+   "answer": "1/16",
+   "hints": [
+    "A negative exponent means reciprocal; a fractional exponent $1/2$ means square root.",
+    "$f(-1) = 16^{x}$ with $x = -1$."
+   ],
+   "solution": [
+    "$f(-1) = 16^{-1}$.",
+    "$= \\frac{1}{16}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-b5b9ec",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 5^{x}$. Find the exact value of $f(3)$.",
+   "checker": "numeric",
+   "answer": "125",
+   "hints": [
+    "A negative exponent means reciprocal; a fractional exponent $1/2$ means square root.",
+    "$f(3) = 5^{x}$ with $x = 3$."
+   ],
+   "solution": [
+    "$f(3) = 5^{3}$.",
+    "$= 125$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-a56003",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 2^{x}$. Find the exact value of $f(-1)$.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "A negative exponent means reciprocal; a fractional exponent $1/2$ means square root.",
+    "$f(-1) = 2^{x}$ with $x = -1$."
+   ],
+   "solution": [
+    "$f(-1) = 2^{-1}$.",
+    "$= \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-9585be",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 9^{x}$. Find the exact value of $f(-1)$.",
+   "checker": "numeric",
+   "answer": "1/9",
+   "hints": [
+    "A negative exponent means reciprocal; a fractional exponent $1/2$ means square root.",
+    "$f(-1) = 9^{x}$ with $x = -1$."
+   ],
+   "solution": [
+    "$f(-1) = 9^{-1}$.",
+    "$= \\frac{1}{9}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-0c7151",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Write $3^{3 x}$ as a single power of $3$.",
+   "checker": "equiv",
+   "answer": "27^x",
+   "hints": [
+    "Use the exponent laws: a power of a power multiplies the exponents.",
+    "Keep the base and combine only the exponents."
+   ],
+   "solution": [
+    "$3^{3 x} = 3^{\\frac{\\ln{\\left(27^{x} \\right)}}{\\ln{\\left(3 \\right)}}}$ by the exponent laws.",
+    "So the single power is $27^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "exponential-functions-76cc13",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Write $3^{x} 3^{2 x + 1}$ as a single power of $3$.",
+   "checker": "equiv",
+   "answer": "3^(3*x+1)",
+   "hints": [
+    "Use the exponent laws: when multiplying powers with the same base, add the exponents.",
+    "Keep the base and combine only the exponents."
+   ],
+   "solution": [
+    "$3^{x} 3^{2 x + 1} = 3^{\\frac{\\ln{\\left(3^{3 x} \\right)}}{\\ln{\\left(3 \\right)}} + 1}$ by the exponent laws.",
+    "So the single power is $3^{3 x + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "exponential-functions-38a15f",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Write $5^{- x} 5^{3 x + 1}$ as a single power of $5$.",
+   "checker": "equiv",
+   "answer": "5^(2*x+1)",
+   "hints": [
+    "Use the exponent laws: when dividing powers with the same base, subtract the exponents.",
+    "Keep the base and combine only the exponents."
+   ],
+   "solution": [
+    "$5^{- x} 5^{3 x + 1} = 5^{\\frac{\\ln{\\left(5^{2 x} \\right)}}{\\ln{\\left(5 \\right)}} + 1}$ by the exponent laws.",
+    "So the single power is $5^{2 x + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "exponential-functions-dc4811",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Write $2 \\cdot 2^{2 x}$ as a single power of $2$.",
+   "checker": "equiv",
+   "answer": "2^(2*x+1)",
+   "hints": [
+    "Use the exponent laws: apply the power rule first, then add and subtract exponents.",
+    "Keep the base and combine only the exponents."
+   ],
+   "solution": [
+    "$2 \\cdot 2^{2 x} = 2^{\\frac{\\ln{\\left(2^{2 x} \\right)}}{\\ln{\\left(2 \\right)}} + 1}$ by the exponent laws.",
+    "So the single power is $2^{2 x + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "exponential-functions-446430",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Write $3^{3 x} 3^{2 x + 1}$ as a single power of $3$.",
+   "checker": "equiv",
+   "answer": "3^(5*x+1)",
+   "hints": [
+    "Use the exponent laws: when multiplying powers with the same base, add the exponents.",
+    "Keep the base and combine only the exponents."
+   ],
+   "solution": [
+    "$3^{3 x} 3^{2 x + 1} = 3^{\\frac{\\ln{\\left(3^{5 x} \\right)}}{\\ln{\\left(3 \\right)}} + 1}$ by the exponent laws.",
+    "So the single power is $3^{5 x + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "exponential-functions-e4adb6",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Write $3^{- x} 3^{2 x + 2}$ as a single power of $3$.",
+   "checker": "equiv",
+   "answer": "3^(x+2)",
+   "hints": [
+    "Use the exponent laws: when dividing powers with the same base, subtract the exponents.",
+    "Keep the base and combine only the exponents."
+   ],
+   "solution": [
+    "$3^{- x} 3^{2 x + 2} = 3^{\\frac{\\ln{\\left(3^{x} \\right)}}{\\ln{\\left(3 \\right)}} + 2}$ by the exponent laws.",
+    "So the single power is $3^{x + 2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "exponential-functions-4c1842",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Write $2^{3 x} 2^{4 x + 1}$ as a single power of $2$.",
+   "checker": "equiv",
+   "answer": "2^(7*x+1)",
+   "hints": [
+    "Use the exponent laws: when multiplying powers with the same base, add the exponents.",
+    "Keep the base and combine only the exponents."
+   ],
+   "solution": [
+    "$2^{3 x} 2^{4 x + 1} = 2^{\\frac{\\ln{\\left(2^{7 x} \\right)}}{\\ln{\\left(2 \\right)}} + 1}$ by the exponent laws.",
+    "So the single power is $2^{7 x + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "exponential-functions-987ceb",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Write $2^{12 x}$ as a single power of $2$.",
+   "checker": "equiv",
+   "answer": "4096^x",
+   "hints": [
+    "Use the exponent laws: a power of a power multiplies the exponents.",
+    "Keep the base and combine only the exponents."
+   ],
+   "solution": [
+    "$2^{12 x} = 2^{\\frac{\\ln{\\left(4096^{x} \\right)}}{\\ln{\\left(2 \\right)}}}$ by the exponent laws.",
+    "So the single power is $4096^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "exponential-functions-74b5b8",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "A culture starts with $100$ cells and doubles every $6$ hours. How many cells are there after $18$ hours?",
+   "checker": "numeric",
+   "answer": "800",
+   "hints": [
+    "Count the number of doublings: $18/6 = 3$.",
+    "Multiply $100$ by $2$ that many times."
+   ],
+   "solution": [
+    "$P(t) = 100\\cdot 2^{t/6}$, and $t = 18$ gives $2^{3} = 8$.",
+    "$P(18) = 100 \\cdot 8 = 800$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-4c6e7d",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "A culture starts with $300$ cells and triples every $1$ hour. How many cells are there after $1$ hours?",
+   "checker": "numeric",
+   "answer": "900",
+   "hints": [
+    "Count the number of triplings: $1/1 = 1$.",
+    "Multiply $300$ by $3$ that many times."
+   ],
+   "solution": [
+    "$P(t) = 300\\cdot 3^{t/1}$, and $t = 1$ gives $3^{1} = 3$.",
+    "$P(1) = 300 \\cdot 3 = 900$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-3f00cc",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "A culture starts with $1000$ cells and doubles every $1$ hour. How many cells are there after $3$ hours?",
+   "checker": "numeric",
+   "answer": "8000",
+   "hints": [
+    "Count the number of doublings: $3/1 = 3$.",
+    "Multiply $1000$ by $2$ that many times."
+   ],
+   "solution": [
+    "$P(t) = 1000\\cdot 2^{t/1}$, and $t = 3$ gives $2^{3} = 8$.",
+    "$P(3) = 1000 \\cdot 8 = 8000$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-ff6edc",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "A culture starts with $50$ cells and doubles every $2$ hours. How many cells are there after $6$ hours?",
+   "checker": "numeric",
+   "answer": "400",
+   "hints": [
+    "Count the number of doublings: $6/2 = 3$.",
+    "Multiply $50$ by $2$ that many times."
+   ],
+   "solution": [
+    "$P(t) = 50\\cdot 2^{t/2}$, and $t = 6$ gives $2^{3} = 8$.",
+    "$P(6) = 50 \\cdot 8 = 400$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-9cb816",
+   "skill": "exponential-functions",
+   "difficulty": 3,
+   "statement": "A culture starts with $500$ cells and triples every $4$ hours. Write the population $P$ as a function of time $t$ in hours.",
+   "checker": "equiv",
+   "answer": "500*3^(t/4)",
+   "hints": [
+    "Each tripling multiplies by $3$; count how many triplings happen in $t$ hours.",
+    "After $t$ hours there have been $t/4$ triplings, so the multiplier is $3^{t/4}$."
+   ],
+   "solution": [
+    "The population multiplies by $3$ every $4$ hours, giving $3^{t/4}$ after $t$ hours.",
+    "$P(t) = 500 \\cdot 3^{t/4}$."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    12
+   ]
+  },
+  {
+   "id": "exponential-functions-5ae8a8",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "A culture starts with $50$ cells and triples every $2$ hours. How many cells are there after $4$ hours?",
+   "checker": "numeric",
+   "answer": "450",
+   "hints": [
+    "Count the number of triplings: $4/2 = 2$.",
+    "Multiply $50$ by $3$ that many times."
+   ],
+   "solution": [
+    "$P(t) = 50\\cdot 3^{t/2}$, and $t = 4$ gives $3^{2} = 9$.",
+    "$P(4) = 50 \\cdot 9 = 450$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-a4a43d",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "A culture starts with $300$ cells and doubles every $1$ hour. Write the population $P$ as a function of time $t$ in hours.",
+   "checker": "equiv",
+   "answer": "300*2^t",
+   "hints": [
+    "Each doubling multiplies by $2$; count how many doublings happen in $t$ hours.",
+    "After $t$ hours there have been $t/1$ doublings, so the multiplier is $2^{t/1}$."
+   ],
+   "solution": [
+    "The population multiplies by $2$ every $1$ hours, giving $2^{t/1}$ after $t$ hours.",
+    "$P(t) = 300 \\cdot 2^{t/1}$."
+   ],
+   "verified": true,
+   "variable": "t",
+   "domain": [
+    0,
+    12
+   ]
+  },
+  {
+   "id": "exponential-functions-0b6998",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "A sample of $160$ mg of a substance has a half-life of $3$ days. How many milligrams remain after $6$ days?",
+   "checker": "numeric",
+   "answer": "40",
+   "hints": [
+    "Each half-life cuts the amount in half.",
+    "$6$ days is $2$ half-lives, so multiply by $(1/2)^{2}$."
+   ],
+   "solution": [
+    "$A(t) = 160\\left(\\tfrac12\\right)^{t/3}$; at $t = 6$ the exponent is $2$.",
+    "$A(6) = 160 \\cdot \\tfrac{1}{4} = 40$ mg."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-cef03b",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "A sample of $500$ mg of a substance has a half-life of $5$ days. How many milligrams remain after $10$ days?",
+   "checker": "numeric",
+   "answer": "125",
+   "hints": [
+    "Each half-life cuts the amount in half.",
+    "$10$ days is $2$ half-lives, so multiply by $(1/2)^{2}$."
+   ],
+   "solution": [
+    "$A(t) = 500\\left(\\tfrac12\\right)^{t/5}$; at $t = 10$ the exponent is $2$.",
+    "$A(10) = 500 \\cdot \\tfrac{1}{4} = 125$ mg."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-bf6237",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "A sample of $160$ mg of a substance has a half-life of $3$ days. How many milligrams remain after $9$ days?",
+   "checker": "numeric",
+   "answer": "20",
+   "hints": [
+    "Each half-life cuts the amount in half.",
+    "$9$ days is $3$ half-lives, so multiply by $(1/2)^{3}$."
+   ],
+   "solution": [
+    "$A(t) = 160\\left(\\tfrac12\\right)^{t/3}$; at $t = 9$ the exponent is $3$.",
+    "$A(9) = 160 \\cdot \\tfrac{1}{8} = 20$ mg."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-dd36fd",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "A sample of $200$ mg of a substance has a half-life of $3$ days. How many milligrams remain after $9$ days?",
+   "checker": "numeric",
+   "answer": "25",
+   "hints": [
+    "Each half-life cuts the amount in half.",
+    "$9$ days is $3$ half-lives, so multiply by $(1/2)^{3}$."
+   ],
+   "solution": [
+    "$A(t) = 200\\left(\\tfrac12\\right)^{t/3}$; at $t = 9$ the exponent is $3$.",
+    "$A(9) = 200 \\cdot \\tfrac{1}{8} = 25$ mg."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-b219c7",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "A sample of $80$ mg of a substance has a half-life of $10$ days. How many milligrams remain after $30$ days?",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "Each half-life cuts the amount in half.",
+    "$30$ days is $3$ half-lives, so multiply by $(1/2)^{3}$."
+   ],
+   "solution": [
+    "$A(t) = 80\\left(\\tfrac12\\right)^{t/10}$; at $t = 30$ the exponent is $3$.",
+    "$A(30) = 80 \\cdot \\tfrac{1}{8} = 10$ mg."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-27045b",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "A sample of $200$ mg of a substance has a half-life of $2$ days. How many milligrams remain after $2$ days?",
+   "checker": "numeric",
+   "answer": "100",
+   "hints": [
+    "Each half-life cuts the amount in half.",
+    "$2$ days is $1$ half-lives, so multiply by $(1/2)^{1}$."
+   ],
+   "solution": [
+    "$A(t) = 200\\left(\\tfrac12\\right)^{t/2}$; at $t = 2$ the exponent is $1$.",
+    "$A(2) = 200 \\cdot \\tfrac{1}{2} = 100$ mg."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-fdb59d",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $4^x = \\frac{1}{4}$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "Write $\\frac{1}{4}$ as a power of $4$.",
+    "When the bases match, the exponents must be equal."
+   ],
+   "solution": [
+    "$\\frac{1}{4} = 4^{-1}$.",
+    "So $4^x = 4^{-1}$ gives $x = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-6cf33e",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "Solve for $x$: $3^x = 27$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Write $27$ as a power of $3$.",
+    "When the bases match, the exponents must be equal."
+   ],
+   "solution": [
+    "$27 = 3^{3}$.",
+    "So $3^x = 3^{3}$ gives $x = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-6709b7",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "Solve for $x$: $5^x = 125$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Write $125$ as a power of $5$.",
+    "When the bases match, the exponents must be equal."
+   ],
+   "solution": [
+    "$125 = 5^{3}$.",
+    "So $5^x = 5^{3}$ gives $x = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-12b361",
+   "skill": "exponential-functions",
+   "difficulty": 1,
+   "statement": "Solve for $x$: $3^x = 81$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Write $81$ as a power of $3$.",
+    "When the bases match, the exponents must be equal."
+   ],
+   "solution": [
+    "$81 = 3^{4}$.",
+    "So $3^x = 3^{4}$ gives $x = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-f15836",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $3^x = \\frac{1}{3}$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "Write $\\frac{1}{3}$ as a power of $3$.",
+    "When the bases match, the exponents must be equal."
+   ],
+   "solution": [
+    "$\\frac{1}{3} = 3^{-1}$.",
+    "So $3^x = 3^{-1}$ gives $x = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-0a14fe",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the value $y = c$ of the horizontal asymptote of $y = e^{x} - 1$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "The term $e^{x}$ approaches $0$ as $x \\to -\\infty$.",
+    "The constant added at the end is what the graph levels off to."
+   ],
+   "solution": [
+    "As $x \\to -\\infty$, $e^{x} \\to 0$.",
+    "So $y \\to -1$: the horizontal asymptote is $y = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-d3c892",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the value $y = c$ of the horizontal asymptote of $y = -1 - 2^{- x}$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "The term $\\left(\\frac{1}{2}\\right)^{x}$ approaches $0$ as $x \\to \\infty$.",
+    "The constant added at the end is what the graph levels off to."
+   ],
+   "solution": [
+    "As $x \\to \\infty$, $- 2^{- x} \\to 0$.",
+    "So $y \\to -1$: the horizontal asymptote is $y = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-f22613",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the value $y = c$ of the horizontal asymptote of $y = 2 e^{x} - 4$.",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "The term $e^{x}$ approaches $0$ as $x \\to -\\infty$.",
+    "The constant added at the end is what the graph levels off to."
+   ],
+   "solution": [
+    "As $x \\to -\\infty$, $2 e^{x} \\to 0$.",
+    "So $y \\to -4$: the horizontal asymptote is $y = -4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-17377f",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the value $y = c$ of the horizontal asymptote of $y = - 3 \\cdot 3^{x} - 5$.",
+   "checker": "numeric",
+   "answer": "-5",
+   "hints": [
+    "The term $3^{x}$ approaches $0$ as $x \\to -\\infty$.",
+    "The constant added at the end is what the graph levels off to."
+   ],
+   "solution": [
+    "As $x \\to -\\infty$, $- 3 \\cdot 3^{x} \\to 0$.",
+    "So $y \\to -5$: the horizontal asymptote is $y = -5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-33c174",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the value $y = c$ of the horizontal asymptote of $y = 4 - 3 \\cdot 3^{x}$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "The term $3^{x}$ approaches $0$ as $x \\to -\\infty$.",
+    "The constant added at the end is what the graph levels off to."
+   ],
+   "solution": [
+    "As $x \\to -\\infty$, $- 3 \\cdot 3^{x} \\to 0$.",
+    "So $y \\to 4$: the horizontal asymptote is $y = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-1ccc32",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the value $y = c$ of the horizontal asymptote of $y = 4 + 3 \\cdot 2^{- x}$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "The term $\\left(\\frac{1}{2}\\right)^{x}$ approaches $0$ as $x \\to \\infty$.",
+    "The constant added at the end is what the graph levels off to."
+   ],
+   "solution": [
+    "As $x \\to \\infty$, $3 \\cdot 2^{- x} \\to 0$.",
+    "So $y \\to 4$: the horizontal asymptote is $y = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-9f8e08",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the exponential function $f(x) = C b^x$ whose graph passes through $(0, 6)$ and $(1, 24)$.",
+   "checker": "equiv",
+   "answer": "6*4^x",
+   "hints": [
+    "At $x = 0$, $b^0 = 1$, so the $y$-intercept gives $C$ directly.",
+    "Then $24 = 6 b^{1}$; solve for $b$."
+   ],
+   "solution": [
+    "$f(0) = C = 6$.",
+    "$f(1) = 6 b^{1} = 24$ gives $b^{1} = 4$, so $b = 4$.",
+    "$f(x) = 6 \\cdot 4^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "exponential-functions-678651",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the exponential function $f(x) = C b^x$ whose graph passes through $(0, 4)$ and $(1, 2)$.",
+   "checker": "equiv",
+   "answer": "4/2^x",
+   "hints": [
+    "At $x = 0$, $b^0 = 1$, so the $y$-intercept gives $C$ directly.",
+    "Then $2 = 4 b^{1}$; solve for $b$."
+   ],
+   "solution": [
+    "$f(0) = C = 4$.",
+    "$f(1) = 4 b^{1} = 2$ gives $b^{1} = \\frac{1}{2}$, so $b = \\frac{1}{2}$.",
+    "$f(x) = 4 \\cdot 2^{- x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "exponential-functions-d398a6",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the exponential function $f(x) = C b^x$ whose graph passes through $(0, 4)$ and $(1, 12)$.",
+   "checker": "equiv",
+   "answer": "4*3^x",
+   "hints": [
+    "At $x = 0$, $b^0 = 1$, so the $y$-intercept gives $C$ directly.",
+    "Then $12 = 4 b^{1}$; solve for $b$."
+   ],
+   "solution": [
+    "$f(0) = C = 4$.",
+    "$f(1) = 4 b^{1} = 12$ gives $b^{1} = 3$, so $b = 3$.",
+    "$f(x) = 4 \\cdot 3^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "exponential-functions-d78a0b",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the exponential function $f(x) = C b^x$ whose graph passes through $(0, 5)$ and $(1, 20)$.",
+   "checker": "equiv",
+   "answer": "5*4^x",
+   "hints": [
+    "At $x = 0$, $b^0 = 1$, so the $y$-intercept gives $C$ directly.",
+    "Then $20 = 5 b^{1}$; solve for $b$."
+   ],
+   "solution": [
+    "$f(0) = C = 5$.",
+    "$f(1) = 5 b^{1} = 20$ gives $b^{1} = 4$, so $b = 4$.",
+    "$f(x) = 5 \\cdot 4^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "exponential-functions-c3b0a5",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the exponential function $f(x) = C b^x$ whose graph passes through $(0, 2)$ and $(1, 6)$.",
+   "checker": "equiv",
+   "answer": "2*3^x",
+   "hints": [
+    "At $x = 0$, $b^0 = 1$, so the $y$-intercept gives $C$ directly.",
+    "Then $6 = 2 b^{1}$; solve for $b$."
+   ],
+   "solution": [
+    "$f(0) = C = 2$.",
+    "$f(1) = 2 b^{1} = 6$ gives $b^{1} = 3$, so $b = 3$.",
+    "$f(x) = 2 \\cdot 3^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "exponential-functions-2bf569",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the range of $f(x) = 3^{x} - 3$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-3,inf)",
+   "hints": [
+    "$3^{x}$ takes every positive value but never $0$ or a negative value.",
+    "Multiplying by $1$ keeps it positive; adding $-3$ shifts the whole range."
+   ],
+   "solution": [
+    "$3^{x} > 0$ for all $x$ and gets arbitrarily close to $0$ and arbitrarily large.",
+    "So $f(x) > -3$ with no upper bound: range $(-3, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-8f8caf",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the range of $f(x) = 3 e^{x} + 1$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(1,inf)",
+   "hints": [
+    "$e^{x}$ takes every positive value but never $0$ or a negative value.",
+    "Multiplying by $3$ keeps it positive; adding $1$ shifts the whole range."
+   ],
+   "solution": [
+    "$3 e^{x} > 0$ for all $x$ and gets arbitrarily close to $0$ and arbitrarily large.",
+    "So $f(x) > 1$ with no upper bound: range $(1, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-5c944c",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "Find the range of $f(x) = 3 \\cdot 2^{x} + 2$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(2,inf)",
+   "hints": [
+    "$2^{x}$ takes every positive value but never $0$ or a negative value.",
+    "Multiplying by $3$ keeps it positive; adding $2$ shifts the whole range."
+   ],
+   "solution": [
+    "$3 \\cdot 2^{x} > 0$ for all $x$ and gets arbitrarily close to $0$ and arbitrarily large.",
+    "So $f(x) > 2$ with no upper bound: range $(2, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponential-functions-3bfc2d",
+   "skill": "exponential-functions",
+   "difficulty": 2,
+   "statement": "For very large $x$, which of these functions is eventually the largest?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compare how each function grows when $x$ is multiplied or increased by a fixed step.",
+    "Any exponential function with base greater than 1 eventually outgrows every power of $x$, no matter how large the exponent."
+   ],
+   "solution": [
+    "Powers like $x^{50}$ grow by a fixed factor when $x$ is scaled, but $\\left(\\frac{11}{10}\\right)^{x}$ multiplies by $\\frac{11}{10}$ for every unit increase in $x$.",
+    "Eventually the exponential function exceeds any polynomial, so it is the largest for large $x$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\left(\\frac{11}{10}\\right)^{x}$",
+    "$x^2 + 50$",
+    "$50x$",
+    "$x^{50}$"
+   ]
+  },
+  {
+   "id": "exponential-functions-162ce2",
+   "skill": "exponential-functions",
+   "difficulty": 3,
+   "statement": "An account with $5000$ dollars grows by $4\\%$ per year, compounded annually. What is the balance after $3$ years? Round to the nearest cent.",
+   "checker": "numeric",
+   "answer": "5624.32",
+   "hints": [
+    "Each year multiplies the balance by $1 + r$.",
+    "The balance is $5000(1 + \\frac{1}{25})^{3}$."
+   ],
+   "solution": [
+    "$A(t) = 5000(\\frac{26}{25})^t$.",
+    "$A(3) = 5000 \\cdot \\frac{26}{25}^{3} \\approx 5624.32$."
+   ],
+   "verified": true,
+   "tolerance": 0.011
+  },
+  {
+   "id": "exponential-functions-002137",
+   "skill": "exponential-functions",
+   "difficulty": 3,
+   "statement": "An account with $2000$ dollars grows by $5\\%$ per year, compounded annually. What is the balance after $3$ years? Round to the nearest cent.",
+   "checker": "numeric",
+   "answer": "2315.25",
+   "hints": [
+    "Each year multiplies the balance by $1 + r$.",
+    "The balance is $2000(1 + \\frac{1}{20})^{3}$."
+   ],
+   "solution": [
+    "$A(t) = 2000(\\frac{21}{20})^t$.",
+    "$A(3) = 2000 \\cdot \\frac{21}{20}^{3} \\approx 2315.25$."
+   ],
+   "verified": true,
+   "tolerance": 0.011
+  },
+  {
+   "id": "exponential-functions-bd15d8",
+   "skill": "exponential-functions",
+   "difficulty": 3,
+   "statement": "An account with $1000$ dollars grows by $4\\%$ per year, compounded annually. What is the balance after $3$ years? Round to the nearest cent.",
+   "checker": "numeric",
+   "answer": "1124.86",
+   "hints": [
+    "Each year multiplies the balance by $1 + r$.",
+    "The balance is $1000(1 + \\frac{1}{25})^{3}$."
+   ],
+   "solution": [
+    "$A(t) = 1000(\\frac{26}{25})^t$.",
+    "$A(3) = 1000 \\cdot \\frac{26}{25}^{3} \\approx 1124.86$."
+   ],
+   "verified": true,
+   "tolerance": 0.011
+  },
+  {
+   "id": "exponential-functions-ca4bf7",
+   "skill": "exponential-functions",
+   "difficulty": 3,
+   "statement": "An account with $5000$ dollars grows by $5\\%$ per year, compounded annually. What is the balance after $3$ years? Round to the nearest cent.",
+   "checker": "numeric",
+   "answer": "5788.12",
+   "hints": [
+    "Each year multiplies the balance by $1 + r$.",
+    "The balance is $5000(1 + \\frac{1}{20})^{3}$."
+   ],
+   "solution": [
+    "$A(t) = 5000(\\frac{21}{20})^t$.",
+    "$A(3) = 5000 \\cdot \\frac{21}{20}^{3} \\approx 5788.12$."
+   ],
+   "verified": true,
+   "tolerance": 0.011
+  }
+ ]
+}

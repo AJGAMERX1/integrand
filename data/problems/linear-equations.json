@@ -1,0 +1,1222 @@
+{
+ "skill": "linear-equations",
+ "problems": [
+  {
+   "id": "linear-equations-320070",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $2 - 5 x = 6 x + 9$.",
+   "checker": "numeric",
+   "answer": "-7/11",
+   "hints": [
+    "Collect the $x$ terms on one side and the constants on the other.",
+    "Subtract $6x$ and $2$ from both sides."
+   ],
+   "solution": [
+    "Subtract $6x$ from both sides: $-11x + (2) = 9$.",
+    "Subtract $2$: $-11x = 7$.",
+    "Divide by $-11$: $x = - \\frac{7}{11}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-c536d3",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $5(x - 2) = -1(x - 5) + (5)$.",
+   "checker": "numeric",
+   "answer": "10/3",
+   "hints": [
+    "Distribute first to remove the parentheses.",
+    "Left side becomes $5 x - 10$; right side becomes $10 - x$."
+   ],
+   "solution": [
+    "Distribute: $5 x - 10 = 10 - x$.",
+    "Move the $x$ terms together: $6x = 20$.",
+    "Divide: $x = \\frac{10}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-fc0c8c",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $\\dfrac{x}{6} + (2) = -7$.",
+   "checker": "numeric",
+   "answer": "-54",
+   "hints": [
+    "Undo the addition first, then undo the division.",
+    "After subtracting $2$, multiply both sides by $6$."
+   ],
+   "solution": [
+    "Subtract $2$: $\\dfrac{x}{6} = -9$.",
+    "Multiply by $6$: $x = -54$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-338c7b",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Find the slope of the line through $(-5, 5)$ and $(4, -1)$.",
+   "checker": "numeric",
+   "answer": "-2/3",
+   "hints": [
+    "Slope is rise over run: change in $y$ divided by change in $x$.",
+    "$m = \\dfrac{-1 - (5)}{4 - (-5)}$."
+   ],
+   "solution": [
+    "$m = \\dfrac{-1 - (5)}{4 - (-5)} = \\dfrac{-6}{9}$.",
+    "$m = - \\frac{2}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-31de3d",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Write the equation of the line with slope $\\frac{2}{3}$ through $(0, 4)$ in the form $y = mx + b$. Enter the right-hand side only.",
+   "checker": "equiv",
+   "answer": "2*x/3+4",
+   "hints": [
+    "Start from point-slope form: $y - y_0 = m(x - x_0)$.",
+    "$y - (4) = \\frac{2}{3}(x - (0))$; then solve for $y$."
+   ],
+   "solution": [
+    "Point-slope: $y - (4) = \\frac{2}{3}(x - (0))$.",
+    "Distribute: $y = \\frac{2 x}{3} + 0 + (4)$.",
+    "So $y = \\frac{2 x}{3} + 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-92de9f",
+   "skill": "linear-equations",
+   "difficulty": 3,
+   "statement": "Find the equation of the line through $(-2, -5)$ and $(6, 0)$. Give it as $y = mx + b$ and enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "5*x/8-15/4",
+   "hints": [
+    "First find the slope from the two points.",
+    "The slope is $\\frac{5}{8}$; then use point-slope form with either point."
+   ],
+   "solution": [
+    "Slope: $m = \\dfrac{0 - (-5)}{6 - (-2)} = \\frac{5}{8}$.",
+    "Point-slope with $(-2, -5)$: $y - (-5) = \\frac{5}{8}(x - (-2))$.",
+    "Solve for $y$: $y = \\frac{5 x}{8} - \\frac{15}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-7b24a6",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Find the line through $(-1, 3)$ that is parallel to $y = 1 - \\frac{3 x}{4}$. Give it as $y = mx + b$ and enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "9/4-3*x/4",
+   "hints": [
+    "Parallel lines share a slope; perpendicular slopes are negative reciprocals.",
+    "The slope you need is $- \\frac{3}{4}$; then use point-slope form."
+   ],
+   "solution": [
+    "The given slope is $- \\frac{3}{4}$, so the parallel slope is $- \\frac{3}{4}$.",
+    "Point-slope: $y - (3) = - \\frac{3}{4}(x - (-1))$.",
+    "Simplify: $y = \\frac{9}{4} - \\frac{3 x}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-882383",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Find the $x$-intercept of the line $- 5 x - 3 y = -1$. Enter just the x-coordinate.",
+   "checker": "numeric",
+   "answer": "1/5",
+   "hints": [
+    "At the $x$-intercept the other variable is $0$.",
+    "Set $y = 0$ and solve for $x$."
+   ],
+   "solution": [
+    "Set $y = 0$: $-5x = -1$.",
+    "So $x = \\frac{1}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-4614bf",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Jo starts with 80 dollars in savings and adds 25 dollars every week. After how many weeks will the savings reach 305 dollars?",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "Write the total as a fixed amount plus a rate times the unknown.",
+    "Savings $= 80 + 25w$."
+   ],
+   "solution": [
+    "Set up the equation: $25 x + 80 = 305$.",
+    "Subtract the fixed amount, then divide by the rate.",
+    "The unknown is $9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-4603d8",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Which equation describes the line with slope $2$ that passes through $(4, 1)$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Check the slope first: it is the coefficient of $x$.",
+    "Then plug in $x = 4$ and see which equation gives $y = 1$."
+   ],
+   "solution": [
+    "The slope $2$ must be the coefficient of $x$.",
+    "Substituting $x = 4$ into $y = 2 x - 7$ gives $y = 1$, so that is the line."
+   ],
+   "verified": true,
+   "choices": [
+    "y = 2 x + 9",
+    "y = 2 x + 1",
+    "y = 2 x - 7",
+    "y = 9 - 2 x"
+   ]
+  },
+  {
+   "id": "linear-equations-b0fd5e",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Where does the line $y = 2 x + 7$ cross the $x$-axis? Enter the $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "-7/2",
+   "hints": [
+    "On the $x$-axis, $y = 0$.",
+    "Solve $2 x + 7 = 0$."
+   ],
+   "solution": [
+    "Set $y = 0$: $2 x + 7 = 0$.",
+    "So $2 x = -7$ and $x = - \\frac{7}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-b22fbe",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "A line has slope $2$ and passes through $(-3, 5)$. What is $y$ when $x = 8$?",
+   "checker": "numeric",
+   "answer": "27",
+   "hints": [
+    "Slope tells you how much $y$ changes for each unit change in $x$.",
+    "From $x = -3$ to $x = 8$ is a run of $11$; the rise is $2 \\cdot 11$."
+   ],
+   "solution": [
+    "Run: $8 - (-3) = 11$. Rise: $2 \\cdot 11 = 22$.",
+    "$y = 5 + 22 = 27$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-bdae76",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "What is the slope of the line $x - 4 y = 4$?",
+   "checker": "numeric",
+   "answer": "1/4",
+   "hints": [
+    "Solve for $y$ to get slope-intercept form.",
+    "Move $1x$ to the right and divide everything by $-4$."
+   ],
+   "solution": [
+    "$-4y = 4 - x$.",
+    "$y = \\frac{x}{4} - 1$, so the slope is $\\frac{1}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-625897",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $3 x + 9 = - 7 x - 4$.",
+   "checker": "numeric",
+   "answer": "-13/10",
+   "hints": [
+    "Collect the $x$ terms on one side and the constants on the other.",
+    "Subtract $-7x$ and $9$ from both sides."
+   ],
+   "solution": [
+    "Subtract $-7x$ from both sides: $10x + (9) = -4$.",
+    "Subtract $9$: $10x = -13$.",
+    "Divide by $10$: $x = - \\frac{13}{10}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-4eb3be",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $3(x - 3) = -2(x - 4) + (7)$.",
+   "checker": "numeric",
+   "answer": "24/5",
+   "hints": [
+    "Distribute first to remove the parentheses.",
+    "Left side becomes $3 x - 9$; right side becomes $15 - 2 x$."
+   ],
+   "solution": [
+    "Distribute: $3 x - 9 = 15 - 2 x$.",
+    "Move the $x$ terms together: $5x = 24$.",
+    "Divide: $x = \\frac{24}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-ac6d8b",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $\\dfrac{x}{3} + (-8) = 0$.",
+   "checker": "numeric",
+   "answer": "24",
+   "hints": [
+    "Undo the addition first, then undo the division.",
+    "After subtracting $-8$, multiply both sides by $3$."
+   ],
+   "solution": [
+    "Subtract $-8$: $\\dfrac{x}{3} = 8$.",
+    "Multiply by $3$: $x = 24$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-ad4a93",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Find the slope of the line through $(-6, 0)$ and $(1, 0)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Slope is rise over run: change in $y$ divided by change in $x$.",
+    "$m = \\dfrac{0 - (0)}{1 - (-6)}$."
+   ],
+   "solution": [
+    "$m = \\dfrac{0 - (0)}{1 - (-6)} = \\dfrac{0}{7}$.",
+    "$m = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-b9222a",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Write the equation of the line with slope $-3$ through $(5, -2)$ in the form $y = mx + b$. Enter the right-hand side only.",
+   "checker": "equiv",
+   "answer": "13-3*x",
+   "hints": [
+    "Start from point-slope form: $y - y_0 = m(x - x_0)$.",
+    "$y - (-2) = -3(x - (5))$; then solve for $y$."
+   ],
+   "solution": [
+    "Point-slope: $y - (-2) = -3(x - (5))$.",
+    "Distribute: $y = - 3 x + 15 + (-2)$.",
+    "So $y = 13 - 3 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-3ef533",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Find the equation of the line through $(-6, 1)$ and $(-5, 0)$. Give it as $y = mx + b$ and enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "-x-5",
+   "hints": [
+    "First find the slope from the two points.",
+    "The slope is $-1$; then use point-slope form with either point."
+   ],
+   "solution": [
+    "Slope: $m = \\dfrac{0 - (1)}{-5 - (-6)} = -1$.",
+    "Point-slope with $(-6, 1)$: $y - (1) = -1(x - (-6))$.",
+    "Solve for $y$: $y = - x - 5$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-681d66",
+   "skill": "linear-equations",
+   "difficulty": 3,
+   "statement": "Find the line through $(-1, 5)$ that is perpendicular to $y = - 2 x - 3$. Give it as $y = mx + b$ and enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "0.5*x+5.5",
+   "hints": [
+    "Parallel lines share a slope; perpendicular slopes are negative reciprocals.",
+    "The slope you need is $\\frac{1}{2}$; then use point-slope form."
+   ],
+   "solution": [
+    "The given slope is $-2$, so the perpendicular slope is $\\frac{1}{2}$.",
+    "Point-slope: $y - (5) = \\frac{1}{2}(x - (-1))$.",
+    "Simplify: $y = 0.5 x + 5.5$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-152a08",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Find the $y$-intercept of the line $4 x + 2 y = -6$. Enter just the y-coordinate.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "At the $y$-intercept the other variable is $0$.",
+    "Set $x = 0$ and solve for $y$."
+   ],
+   "solution": [
+    "Set $x = 0$: $2y = -6$.",
+    "So $y = -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-c0af33",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "A gym charges a 30 dollar sign-up fee plus 15 dollars per month. After how many months does the total paid reach 210 dollars?",
+   "checker": "numeric",
+   "answer": "12",
+   "hints": [
+    "Write the total as a fixed amount plus a rate times the unknown.",
+    "Total $= 30 + 15m$."
+   ],
+   "solution": [
+    "Set up the equation: $15 x + 30 = 210$.",
+    "Subtract the fixed amount, then divide by the rate.",
+    "The unknown is $12$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-bf8c3a",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Which equation describes the line with slope $-1$ that passes through $(2, 1)$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Check the slope first: it is the coefficient of $x$.",
+    "Then plug in $x = 2$ and see which equation gives $y = 1$."
+   ],
+   "solution": [
+    "The slope $-1$ must be the coefficient of $x$.",
+    "Substituting $x = 2$ into $y = 3 - x$ gives $y = 1$, so that is the line."
+   ],
+   "verified": true,
+   "choices": [
+    "y = 1 - x",
+    "y = 3 - x",
+    "y = - x - 1",
+    "y = x - 1"
+   ]
+  },
+  {
+   "id": "linear-equations-c0d139",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Where does the line $y = \\frac{3 x}{2} + 8$ cross the $x$-axis? Enter the $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "-16/3",
+   "hints": [
+    "On the $x$-axis, $y = 0$.",
+    "Solve $\\frac{3 x}{2} + 8 = 0$."
+   ],
+   "solution": [
+    "Set $y = 0$: $\\frac{3 x}{2} + 8 = 0$.",
+    "So $\\frac{3 x}{2} = -8$ and $x = - \\frac{16}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-1cebef",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "A line has slope $- \\frac{3}{2}$ and passes through $(-1, -3)$. What is $y$ when $x = 7$?",
+   "checker": "numeric",
+   "answer": "-15",
+   "hints": [
+    "Slope tells you how much $y$ changes for each unit change in $x$.",
+    "From $x = -1$ to $x = 7$ is a run of $8$; the rise is $- \\frac{3}{2} \\cdot 8$."
+   ],
+   "solution": [
+    "Run: $7 - (-1) = 8$. Rise: $- \\frac{3}{2} \\cdot 8 = -12$.",
+    "$y = -3 + -12 = -15$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-b3d040",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "What is the slope of the line $- 2 x + 4 y = 2$?",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "Solve for $y$ to get slope-intercept form.",
+    "Move $-2x$ to the right and divide everything by $4$."
+   ],
+   "solution": [
+    "$4y = 2 x + 2$.",
+    "$y = \\frac{x}{2} + \\frac{1}{2}$, so the slope is $\\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-a2cc3c",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $5(x - 6) = -2(x - 2) + (6)$.",
+   "checker": "numeric",
+   "answer": "40/7",
+   "hints": [
+    "Distribute first to remove the parentheses.",
+    "Left side becomes $5 x - 30$; right side becomes $10 - 2 x$."
+   ],
+   "solution": [
+    "Distribute: $5 x - 30 = 10 - 2 x$.",
+    "Move the $x$ terms together: $7x = 40$.",
+    "Divide: $x = \\frac{40}{7}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-b9d028",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $\\dfrac{x}{5} + (0) = 6$.",
+   "checker": "numeric",
+   "answer": "30",
+   "hints": [
+    "Undo the addition first, then undo the division.",
+    "After subtracting $0$, multiply both sides by $5$."
+   ],
+   "solution": [
+    "Subtract $0$: $\\dfrac{x}{5} = 6$.",
+    "Multiply by $5$: $x = 30$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-b63936",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Find the slope of the line through $(6, -3)$ and $(-2, -2)$.",
+   "checker": "numeric",
+   "answer": "-1/8",
+   "hints": [
+    "Slope is rise over run: change in $y$ divided by change in $x$.",
+    "$m = \\dfrac{-2 - (-3)}{-2 - (6)}$."
+   ],
+   "solution": [
+    "$m = \\dfrac{-2 - (-3)}{-2 - (6)} = \\dfrac{1}{-8}$.",
+    "$m = - \\frac{1}{8}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-4dfdf8",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Write the equation of the line with slope $\\frac{3}{4}$ through $(0, -3)$ in the form $y = mx + b$. Enter the right-hand side only.",
+   "checker": "equiv",
+   "answer": "3*x/4-3",
+   "hints": [
+    "Start from point-slope form: $y - y_0 = m(x - x_0)$.",
+    "$y - (-3) = \\frac{3}{4}(x - (0))$; then solve for $y$."
+   ],
+   "solution": [
+    "Point-slope: $y - (-3) = \\frac{3}{4}(x - (0))$.",
+    "Distribute: $y = \\frac{3 x}{4} + 0 + (-3)$.",
+    "So $y = \\frac{3 x}{4} - 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-886080",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Find the equation of the line through $(-1, -3)$ and $(-6, -3)$. Give it as $y = mx + b$ and enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "-3",
+   "hints": [
+    "First find the slope from the two points.",
+    "The slope is $0$; then use point-slope form with either point."
+   ],
+   "solution": [
+    "Slope: $m = \\dfrac{-3 - (-3)}{-6 - (-1)} = 0$.",
+    "Point-slope with $(-1, -3)$: $y - (-3) = 0(x - (-1))$.",
+    "Solve for $y$: $y = -3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-5309d2",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Find the line through $(1, 4)$ that is parallel to $y = 5 - 3 x$. Give it as $y = mx + b$ and enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "7-3*x",
+   "hints": [
+    "Parallel lines share a slope; perpendicular slopes are negative reciprocals.",
+    "The slope you need is $-3$; then use point-slope form."
+   ],
+   "solution": [
+    "The given slope is $-3$, so the parallel slope is $-3$.",
+    "Point-slope: $y - (4) = -3(x - (1))$.",
+    "Simplify: $y = 7 - 3 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-e4e229",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Find the $x$-intercept of the line $3 x + 6 y = 2$. Enter just the x-coordinate.",
+   "checker": "numeric",
+   "answer": "2/3",
+   "hints": [
+    "At the $x$-intercept the other variable is $0$.",
+    "Set $y = 0$ and solve for $x$."
+   ],
+   "solution": [
+    "Set $y = 0$: $3x = 2$.",
+    "So $x = \\frac{2}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-2173e4",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "A phone plan costs 20 dollars per month plus 10 cents per minute of calls. If one month's bill was 32.00 dollars, how many minutes were used?",
+   "checker": "numeric",
+   "answer": "120",
+   "hints": [
+    "Write the total as a fixed amount plus a rate times the unknown.",
+    "Bill $= 20 + \\frac{1}{10}m$."
+   ],
+   "solution": [
+    "Set up the equation: $\\frac{x}{10} + 20 = 32$.",
+    "Subtract the fixed amount, then divide by the rate.",
+    "The unknown is $120$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-96165e",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Which equation describes the line with slope $3$ that passes through $(-2, 1)$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Check the slope first: it is the coefficient of $x$.",
+    "Then plug in $x = -2$ and see which equation gives $y = 1$."
+   ],
+   "solution": [
+    "The slope $3$ must be the coefficient of $x$.",
+    "Substituting $x = -2$ into $y = 3 x + 7$ gives $y = 1$, so that is the line."
+   ],
+   "verified": true,
+   "choices": [
+    "y = 3 x + 7",
+    "y = - 3 x - 5",
+    "y = 3 x - 5",
+    "y = 3 x + 1"
+   ]
+  },
+  {
+   "id": "linear-equations-b5fa32",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Where does the line $y = 2 - 2 x$ cross the $x$-axis? Enter the $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "On the $x$-axis, $y = 0$.",
+    "Solve $2 - 2 x = 0$."
+   ],
+   "solution": [
+    "Set $y = 0$: $2 - 2 x = 0$.",
+    "So $- 2 x = -2$ and $x = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-585b55",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "A line has slope $\\frac{1}{2}$ and passes through $(1, -5)$. What is $y$ when $x = 9$?",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "Slope tells you how much $y$ changes for each unit change in $x$.",
+    "From $x = 1$ to $x = 9$ is a run of $8$; the rise is $\\frac{1}{2} \\cdot 8$."
+   ],
+   "solution": [
+    "Run: $9 - (1) = 8$. Rise: $\\frac{1}{2} \\cdot 8 = 4$.",
+    "$y = -5 + 4 = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-a7f6b2",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "What is the slope of the line $5 x - y = 0$?",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Solve for $y$ to get slope-intercept form.",
+    "Move $5x$ to the right and divide everything by $-1$."
+   ],
+   "solution": [
+    "$-1y = - 5 x$.",
+    "$y = 5 x$, so the slope is $5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-785417",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Solve for $x$: $5 x - 7 = 7 - 2 x$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Collect the $x$ terms on one side and the constants on the other.",
+    "Subtract $-2x$ and $-7$ from both sides."
+   ],
+   "solution": [
+    "Subtract $-2x$ from both sides: $7x + (-7) = 7$.",
+    "Subtract $-7$: $7x = 14$.",
+    "Divide by $7$: $x = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-ed41d4",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $2(x + 5) = -2(x + 4) + (7)$.",
+   "checker": "numeric",
+   "answer": "-11/4",
+   "hints": [
+    "Distribute first to remove the parentheses.",
+    "Left side becomes $2 x + 10$; right side becomes $- 2 x - 1$."
+   ],
+   "solution": [
+    "Distribute: $2 x + 10 = - 2 x - 1$.",
+    "Move the $x$ terms together: $4x = -11$.",
+    "Divide: $x = - \\frac{11}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-5aeb2c",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $\\dfrac{x}{2} + (4) = -5$.",
+   "checker": "numeric",
+   "answer": "-18",
+   "hints": [
+    "Undo the addition first, then undo the division.",
+    "After subtracting $4$, multiply both sides by $2$."
+   ],
+   "solution": [
+    "Subtract $4$: $\\dfrac{x}{2} = -9$.",
+    "Multiply by $2$: $x = -18$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-595f1b",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Find the slope of the line through $(6, -1)$ and $(1, -2)$.",
+   "checker": "numeric",
+   "answer": "1/5",
+   "hints": [
+    "Slope is rise over run: change in $y$ divided by change in $x$.",
+    "$m = \\dfrac{-2 - (-1)}{1 - (6)}$."
+   ],
+   "solution": [
+    "$m = \\dfrac{-2 - (-1)}{1 - (6)} = \\dfrac{-1}{-5}$.",
+    "$m = \\frac{1}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-9d3429",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Write the equation of the line with slope $- \\frac{1}{2}$ through $(5, 2)$ in the form $y = mx + b$. Enter the right-hand side only.",
+   "checker": "equiv",
+   "answer": "9/2-x/2",
+   "hints": [
+    "Start from point-slope form: $y - y_0 = m(x - x_0)$.",
+    "$y - (2) = - \\frac{1}{2}(x - (5))$; then solve for $y$."
+   ],
+   "solution": [
+    "Point-slope: $y - (2) = - \\frac{1}{2}(x - (5))$.",
+    "Distribute: $y = - \\frac{x}{2} + \\frac{5}{2} + (2)$.",
+    "So $y = \\frac{9}{2} - \\frac{x}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-46fc2f",
+   "skill": "linear-equations",
+   "difficulty": 3,
+   "statement": "Find the equation of the line through $(5, -3)$ and $(1, -5)$. Give it as $y = mx + b$ and enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "x/2-11/2",
+   "hints": [
+    "First find the slope from the two points.",
+    "The slope is $\\frac{1}{2}$; then use point-slope form with either point."
+   ],
+   "solution": [
+    "Slope: $m = \\dfrac{-5 - (-3)}{1 - (5)} = \\frac{1}{2}$.",
+    "Point-slope with $(5, -3)$: $y - (-3) = \\frac{1}{2}(x - (5))$.",
+    "Solve for $y$: $y = \\frac{x}{2} - \\frac{11}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-fef1a1",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Find the line through $(-1, 4)$ that is parallel to $y = - 2 x - 3$. Give it as $y = mx + b$ and enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "2-2*x",
+   "hints": [
+    "Parallel lines share a slope; perpendicular slopes are negative reciprocals.",
+    "The slope you need is $-2$; then use point-slope form."
+   ],
+   "solution": [
+    "The given slope is $-2$, so the parallel slope is $-2$.",
+    "Point-slope: $y - (4) = -2(x - (-1))$.",
+    "Simplify: $y = 2 - 2 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-b2ab1c",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Find the $x$-intercept of the line $4 x - 5 y = -4$. Enter just the x-coordinate.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "At the $x$-intercept the other variable is $0$.",
+    "Set $y = 0$ and solve for $x$."
+   ],
+   "solution": [
+    "Set $y = 0$: $4x = -4$.",
+    "So $x = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-06b137",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Jo starts with 120 dollars in savings and adds 20 dollars every week. After how many weeks will the savings reach 260 dollars?",
+   "checker": "numeric",
+   "answer": "7",
+   "hints": [
+    "Write the total as a fixed amount plus a rate times the unknown.",
+    "Savings $= 120 + 20w$."
+   ],
+   "solution": [
+    "Set up the equation: $20 x + 120 = 260$.",
+    "Subtract the fixed amount, then divide by the rate.",
+    "The unknown is $7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-acaaa3",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Where does the line $y = - 3 x - 4$ cross the $x$-axis? Enter the $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "-4/3",
+   "hints": [
+    "On the $x$-axis, $y = 0$.",
+    "Solve $- 3 x - 4 = 0$."
+   ],
+   "solution": [
+    "Set $y = 0$: $- 3 x - 4 = 0$.",
+    "So $- 3 x = 4$ and $x = - \\frac{4}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-0bf7eb",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "A line has slope $\\frac{1}{2}$ and passes through $(3, -4)$. What is $y$ when $x = 9$?",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "Slope tells you how much $y$ changes for each unit change in $x$.",
+    "From $x = 3$ to $x = 9$ is a run of $6$; the rise is $\\frac{1}{2} \\cdot 6$."
+   ],
+   "solution": [
+    "Run: $9 - (3) = 6$. Rise: $\\frac{1}{2} \\cdot 6 = 3$.",
+    "$y = -4 + 3 = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-d383b1",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "What is the slope of the line $- 3 x + y = 8$?",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Solve for $y$ to get slope-intercept form.",
+    "Move $-3x$ to the right and divide everything by $1$."
+   ],
+   "solution": [
+    "$1y = 3 x + 8$.",
+    "$y = 3 x + 8$, so the slope is $3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-5aeb04",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $4 - x = 5 - 6 x$.",
+   "checker": "numeric",
+   "answer": "1/5",
+   "hints": [
+    "Collect the $x$ terms on one side and the constants on the other.",
+    "Subtract $-6x$ and $4$ from both sides."
+   ],
+   "solution": [
+    "Subtract $-6x$ from both sides: $5x + (4) = 5$.",
+    "Subtract $4$: $5x = 1$.",
+    "Divide by $5$: $x = \\frac{1}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-57f602",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $-3(x + 6) = 1(x + 3) + (1)$.",
+   "checker": "numeric",
+   "answer": "-11/2",
+   "hints": [
+    "Distribute first to remove the parentheses.",
+    "Left side becomes $- 3 x - 18$; right side becomes $x + 4$."
+   ],
+   "solution": [
+    "Distribute: $- 3 x - 18 = x + 4$.",
+    "Move the $x$ terms together: $-4x = 22$.",
+    "Divide: $x = - \\frac{11}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-d47dbb",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $\\dfrac{x}{4} + (-1) = 4$.",
+   "checker": "numeric",
+   "answer": "20",
+   "hints": [
+    "Undo the addition first, then undo the division.",
+    "After subtracting $-1$, multiply both sides by $4$."
+   ],
+   "solution": [
+    "Subtract $-1$: $\\dfrac{x}{4} = 5$.",
+    "Multiply by $4$: $x = 20$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-366192",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Find the slope of the line through $(-1, -1)$ and $(6, -1)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Slope is rise over run: change in $y$ divided by change in $x$.",
+    "$m = \\dfrac{-1 - (-1)}{6 - (-1)}$."
+   ],
+   "solution": [
+    "$m = \\dfrac{-1 - (-1)}{6 - (-1)} = \\dfrac{0}{7}$.",
+    "$m = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-7c2b3b",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Write the equation of the line with slope $- \\frac{3}{2}$ through $(-4, -4)$ in the form $y = mx + b$. Enter the right-hand side only.",
+   "checker": "equiv",
+   "answer": "-3*x/2-10",
+   "hints": [
+    "Start from point-slope form: $y - y_0 = m(x - x_0)$.",
+    "$y - (-4) = - \\frac{3}{2}(x - (-4))$; then solve for $y$."
+   ],
+   "solution": [
+    "Point-slope: $y - (-4) = - \\frac{3}{2}(x - (-4))$.",
+    "Distribute: $y = - \\frac{3 x}{2} - 6 + (-4)$.",
+    "So $y = - \\frac{3 x}{2} - 10$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-2cbb7f",
+   "skill": "linear-equations",
+   "difficulty": 3,
+   "statement": "Find the equation of the line through $(-6, 4)$ and $(4, 2)$. Give it as $y = mx + b$ and enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "14/5-x/5",
+   "hints": [
+    "First find the slope from the two points.",
+    "The slope is $- \\frac{1}{5}$; then use point-slope form with either point."
+   ],
+   "solution": [
+    "Slope: $m = \\dfrac{2 - (4)}{4 - (-6)} = - \\frac{1}{5}$.",
+    "Point-slope with $(-6, 4)$: $y - (4) = - \\frac{1}{5}(x - (-6))$.",
+    "Solve for $y$: $y = \\frac{14}{5} - \\frac{x}{5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-4dc6b0",
+   "skill": "linear-equations",
+   "difficulty": 3,
+   "statement": "Find the line through $(2, 3)$ that is perpendicular to $y = - \\frac{3 x}{4} - 2$. Give it as $y = mx + b$ and enter the right-hand side.",
+   "checker": "equiv",
+   "answer": "4*x/3+1/3",
+   "hints": [
+    "Parallel lines share a slope; perpendicular slopes are negative reciprocals.",
+    "The slope you need is $\\frac{4}{3}$; then use point-slope form."
+   ],
+   "solution": [
+    "The given slope is $- \\frac{3}{4}$, so the perpendicular slope is $\\frac{4}{3}$.",
+    "Point-slope: $y - (3) = \\frac{4}{3}(x - (2))$.",
+    "Simplify: $y = \\frac{4 x}{3} + \\frac{1}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "linear-equations-54a50a",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Find the $x$-intercept of the line $5 x - 3 y = 9$. Enter just the x-coordinate.",
+   "checker": "numeric",
+   "answer": "9/5",
+   "hints": [
+    "At the $x$-intercept the other variable is $0$.",
+    "Set $y = 0$ and solve for $x$."
+   ],
+   "solution": [
+    "Set $y = 0$: $5x = 9$.",
+    "So $x = \\frac{9}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-12cf9a",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "A rental car costs 35 dollars per day plus 0.25 dollars per mile. A one-day rental cost 72.50 dollars. How many miles were driven?",
+   "checker": "numeric",
+   "answer": "150",
+   "hints": [
+    "Write the total as a fixed amount plus a rate times the unknown.",
+    "Cost $= 35 + \\frac{1}{4}d$."
+   ],
+   "solution": [
+    "Set up the equation: $\\frac{x}{4} + 35 = \\frac{145}{2}$.",
+    "Subtract the fixed amount, then divide by the rate.",
+    "The unknown is $150$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-2ef127",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Which equation describes the line with slope $-2$ that passes through $(1, 1)$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Check the slope first: it is the coefficient of $x$.",
+    "Then plug in $x = 1$ and see which equation gives $y = 1$."
+   ],
+   "solution": [
+    "The slope $-2$ must be the coefficient of $x$.",
+    "Substituting $x = 1$ into $y = 3 - 2 x$ gives $y = 1$, so that is the line."
+   ],
+   "verified": true,
+   "choices": [
+    "y = 2 x - 1",
+    "y = 1 - 2 x",
+    "y = - 2 x - 1",
+    "y = 3 - 2 x"
+   ]
+  },
+  {
+   "id": "linear-equations-094e41",
+   "skill": "linear-equations",
+   "difficulty": 1,
+   "statement": "Where does the line $y = 9 - 3 x$ cross the $x$-axis? Enter the $x$-coordinate.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "On the $x$-axis, $y = 0$.",
+    "Solve $9 - 3 x = 0$."
+   ],
+   "solution": [
+    "Set $y = 0$: $9 - 3 x = 0$.",
+    "So $- 3 x = -9$ and $x = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-80b332",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "A line has slope $4$ and passes through $(1, 4)$. What is $y$ when $x = 6$?",
+   "checker": "numeric",
+   "answer": "24",
+   "hints": [
+    "Slope tells you how much $y$ changes for each unit change in $x$.",
+    "From $x = 1$ to $x = 6$ is a run of $5$; the rise is $4 \\cdot 5$."
+   ],
+   "solution": [
+    "Run: $6 - (1) = 5$. Rise: $4 \\cdot 5 = 20$.",
+    "$y = 4 + 20 = 24$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-420ec8",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "What is the slope of the line $3 x - 6 y = 4$?",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "Solve for $y$ to get slope-intercept form.",
+    "Move $3x$ to the right and divide everything by $-6$."
+   ],
+   "solution": [
+    "$-6y = 4 - 3 x$.",
+    "$y = \\frac{x}{2} - \\frac{2}{3}$, so the slope is $\\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "linear-equations-81941f",
+   "skill": "linear-equations",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $6 x = - 4 x - 3$.",
+   "checker": "numeric",
+   "answer": "-3/10",
+   "hints": [
+    "Collect the $x$ terms on one side and the constants on the other.",
+    "Subtract $-4x$ and $0$ from both sides."
+   ],
+   "solution": [
+    "Subtract $-4x$ from both sides: $10x + (0) = -3$.",
+    "Subtract $0$: $10x = -3$.",
+    "Divide by $10$: $x = - \\frac{3}{10}$."
+   ],
+   "verified": true
+  }
+ ]
+}

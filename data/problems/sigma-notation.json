@@ -1,0 +1,1183 @@
+{
+ "skill": "sigma-notation",
+ "problems": [
+  {
+   "id": "sigma-notation-60edee",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Evaluate $\\sum_{j=1}^{5} 1 - 2 j$.",
+   "checker": "numeric",
+   "answer": "-25",
+   "hints": [
+    "Substitute $j = 1, 2, \\ldots, 5$ into $1 - 2 j$ and add the results.",
+    "The first term is $-1$ and the last is $-9$."
+   ],
+   "solution": [
+    "Terms: $(-1) + (-3) + (-5) + (-7) + (-9)$.",
+    "Sum $= -25$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-2107c3",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Evaluate $\\sum_{k=1}^{4} (-1)^k k$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Write out each term for $k = 1$ to $4$ before adding.",
+    "Watch the sign pattern."
+   ],
+   "solution": [
+    "Terms: $(-1) + 2 + (-3) + 4$.",
+    "Sum $= 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-18357d",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Which sigma notation represents the sum $1 + 3 + 5 + 7$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Find a formula for the $k$th term, then check the first and last values of $k$.",
+    "The terms go up by $2$ each time, so the formula is linear in $k$ with slope $2$."
+   ],
+   "solution": [
+    "The $k$th term is $(2 k - 1)$: at $k = 1$ it gives $1$ and at $k = 4$ it gives $7$.",
+    "So the sum is $\\sum_{k=1}^{4} (2 k - 1)$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\sum_{k=0}^{4} (2 k - 1)",
+    "\\sum_{k=1}^{4} (2 k - 1)",
+    "\\sum_{k=1}^{3} (2 k - 1)",
+    "\\sum_{k=1}^{4} (k + 1)"
+   ]
+  },
+  {
+   "id": "sigma-notation-7d6fa8",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Which written-out sum equals $\\sum_{k=1}^{4} (-1)^{k+1} k$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Plug in $k = 1$, then $k = 2$, and so on up to $k = 4$.",
+    "The first term is $1$."
+   ],
+   "solution": [
+    "Terms for $k = 1, \\ldots, 4$: $1 + (-2) + 3 + (-4)$.",
+    "Match this list against the options."
+   ],
+   "verified": true,
+   "choices": [
+    "1 + 2 + 3 + 4",
+    "2 + 4 + 6 + 8",
+    "1 + (-2) + 3 + (-4)",
+    "1 + 8 + 27 + 64"
+   ]
+  },
+  {
+   "id": "sigma-notation-49d271",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Use the formula $\\sum_{k=1}^{n} k^2 = \\dfrac{n(n+1)(2n+1)}{6}$ to evaluate $\\sum_{k=1}^{7} k^2$.",
+   "checker": "numeric",
+   "answer": "140",
+   "hints": [
+    "Substitute $n = 7$.",
+    "$\\dfrac{7\\cdot8\\cdot15}{6}$."
+   ],
+   "solution": [
+    "$\\dfrac{7(8)(15)}{6} = \\dfrac{840}{6}$.",
+    "$= 140$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-b2d8d1",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "How many terms does the sum $\\sum_{k=5}^{19} k^2$ have?",
+   "checker": "numeric",
+   "answer": "15",
+   "hints": [
+    "Count the integers from the lower limit to the upper limit, inclusive.",
+    "From $5$ to $19$ there are $19 - 5 + 1$ values."
+   ],
+   "solution": [
+    "$k$ takes the values $5, 6, \\ldots, 19$.",
+    "That is $19 - 5 + 1 = 15$ terms."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-de790b",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Suppose $\\sum_{k=1}^{10} a_k = 17$ and $\\sum_{k=1}^{10} b_k = -5$. Find $\\sum_{k=1}^{10} (4a_k - -2b_k + 5)$.",
+   "checker": "numeric",
+   "answer": "108",
+   "hints": [
+    "Sums split over addition and constants factor out: $\\sum (ca_k - db_k) = c\\sum a_k - d\\sum b_k$.",
+    "A constant term adds up to the constant times the number of terms, $10$."
+   ],
+   "solution": [
+    "$\\sum (4a_k - -2b_k + 5) = 4\\sum a_k - -2\\sum b_k + \\sum 5$.",
+    "$= 4(17) - -2(-5) + 5\\cdot10 = 108$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-e47566",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Evaluate $\\sum_{k=1}^{8} \\left((k+1)^2 - k^2\\right)$.",
+   "checker": "numeric",
+   "answer": "80",
+   "hints": [
+    "Write out the first few terms: most of them cancel in pairs.",
+    "Only $-1^2$ and $(9)^2$ survive."
+   ],
+   "solution": [
+    "The terms are $(2^2 - 1^2) + (3^2 - 2^2) + \\cdots + (9^2 - 8^2)$.",
+    "Everything cancels except $-1 + 9^2 = 80$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-f45c1d",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Evaluate $\\sum_{j=2}^{5} 2 j - 1$. Note that the index starts at $2$.",
+   "checker": "numeric",
+   "answer": "24",
+   "hints": [
+    "The index runs over $j = 2, 3, \\ldots, 5$: $4$ terms.",
+    "The first term is $3$."
+   ],
+   "solution": [
+    "Terms: $3 + 5 + 7 + 9$.",
+    "Sum $= 24$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-62427f",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Evaluate $\\sum_{i=1}^{4} i + 1$.",
+   "checker": "numeric",
+   "answer": "14",
+   "hints": [
+    "Substitute $i = 1, 2, \\ldots, 4$ into $i + 1$ and add the results.",
+    "The first term is $2$ and the last is $5$."
+   ],
+   "solution": [
+    "Terms: $2 + 3 + 4 + 5$.",
+    "Sum $= 14$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-94f394",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Evaluate $\\sum_{k=1}^{3} (-1)^k k$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "Write out each term for $k = 1$ to $3$ before adding.",
+    "Watch the sign pattern."
+   ],
+   "solution": [
+    "Terms: $(-1) + 2 + (-3)$.",
+    "Sum $= -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-2ab838",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Which sigma notation represents the sum $4 + 7 + 10 + 13$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Find a formula for the $k$th term, then check the first and last values of $k$.",
+    "The terms go up by $3$ each time, so the formula is linear in $k$ with slope $3$."
+   ],
+   "solution": [
+    "The $k$th term is $(3 k + 1)$: at $k = 1$ it gives $4$ and at $k = 4$ it gives $13$.",
+    "So the sum is $\\sum_{k=1}^{4} (3 k + 1)$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\sum_{k=0}^{4} (3 k + 1)",
+    "\\sum_{k=1}^{3} (3 k + 1)",
+    "\\sum_{k=1}^{4} (k + 4)",
+    "\\sum_{k=1}^{4} (3 k + 1)"
+   ]
+  },
+  {
+   "id": "sigma-notation-cdca30",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Which written-out sum equals $\\sum_{k=1}^{5} k^2$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Plug in $k = 1$, then $k = 2$, and so on up to $k = 5$.",
+    "The first term is $1$."
+   ],
+   "solution": [
+    "Terms for $k = 1, \\ldots, 5$: $1 + 4 + 9 + 16 + 25$.",
+    "Match this list against the options."
+   ],
+   "verified": true,
+   "choices": [
+    "1 + 8 + 27 + 64 + 125",
+    "2 + 4 + 6 + 8 + 10",
+    "1 + 4 + 9 + 16 + 25",
+    "1 + 2 + 3 + 4 + 5"
+   ]
+  },
+  {
+   "id": "sigma-notation-1d4939",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Use the formula $\\sum_{k=1}^{n} k^2 = \\dfrac{n(n+1)(2n+1)}{6}$ to evaluate $\\sum_{k=1}^{10} k^2$.",
+   "checker": "numeric",
+   "answer": "385",
+   "hints": [
+    "Substitute $n = 10$.",
+    "$\\dfrac{10\\cdot11\\cdot21}{6}$."
+   ],
+   "solution": [
+    "$\\dfrac{10(11)(21)}{6} = \\dfrac{2310}{6}$.",
+    "$= 385$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-38796a",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "How many terms does the sum $\\sum_{k=1}^{12} \\frac{1}{k+1}$ have?",
+   "checker": "numeric",
+   "answer": "12",
+   "hints": [
+    "Count the integers from the lower limit to the upper limit, inclusive.",
+    "From $1$ to $12$ there are $12 - 1 + 1$ values."
+   ],
+   "solution": [
+    "$k$ takes the values $1, 2, \\ldots, 12$.",
+    "That is $12 - 1 + 1 = 12$ terms."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-6de0c7",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Suppose $\\sum_{k=1}^{5} a_k = -8$ and $\\sum_{k=1}^{5} b_k = 5$. Find $\\sum_{k=1}^{5} (2a_k - 1b_k + 2)$.",
+   "checker": "numeric",
+   "answer": "-11",
+   "hints": [
+    "Sums split over addition and constants factor out: $\\sum (ca_k - db_k) = c\\sum a_k - d\\sum b_k$.",
+    "A constant term adds up to the constant times the number of terms, $5$."
+   ],
+   "solution": [
+    "$\\sum (2a_k - 1b_k + 2) = 2\\sum a_k - 1\\sum b_k + \\sum 2$.",
+    "$= 2(-8) - 1(5) + 2\\cdot5 = -11$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-8d60ef",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Evaluate $\\sum_{k=1}^{5} \\left((k+1)^2 - k^2\\right)$.",
+   "checker": "numeric",
+   "answer": "35",
+   "hints": [
+    "Write out the first few terms: most of them cancel in pairs.",
+    "Only $-1^2$ and $(6)^2$ survive."
+   ],
+   "solution": [
+    "The terms are $(2^2 - 1^2) + (3^2 - 2^2) + \\cdots + (6^2 - 5^2)$.",
+    "Everything cancels except $-1 + 6^2 = 35$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-30ea3a",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Evaluate $\\sum_{j=2}^{6} 3 j - 1$. Note that the index starts at $2$.",
+   "checker": "numeric",
+   "answer": "55",
+   "hints": [
+    "The index runs over $j = 2, 3, \\ldots, 6$: $5$ terms.",
+    "The first term is $5$."
+   ],
+   "solution": [
+    "Terms: $5 + 8 + 11 + 14 + 17$.",
+    "Sum $= 55$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-069863",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Evaluate $\\sum_{k=1}^{3} 4 k + 4$.",
+   "checker": "numeric",
+   "answer": "36",
+   "hints": [
+    "Substitute $k = 1, 2, \\ldots, 3$ into $4 k + 4$ and add the results.",
+    "The first term is $8$ and the last is $16$."
+   ],
+   "solution": [
+    "Terms: $8 + 12 + 16$.",
+    "Sum $= 36$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-f0dac5",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Evaluate $\\sum_{k=1}^{4} \\frac{1}{k}$. Give an exact fraction.",
+   "checker": "numeric",
+   "answer": "25/12",
+   "hints": [
+    "Write out each term for $k = 1$ to $4$ before adding.",
+    "Use a common denominator."
+   ],
+   "solution": [
+    "Terms: $1 + \\frac{1}{2} + \\frac{1}{3} + \\frac{1}{4}$.",
+    "Sum $= \\frac{25}{12}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-777f96",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Which sigma notation represents the sum $6 + 11 + 16 + 21 + 26 + 31$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Find a formula for the $k$th term, then check the first and last values of $k$.",
+    "The terms go up by $5$ each time, so the formula is linear in $k$ with slope $5$."
+   ],
+   "solution": [
+    "The $k$th term is $(5 k + 1)$: at $k = 1$ it gives $6$ and at $k = 6$ it gives $31$.",
+    "So the sum is $\\sum_{k=1}^{6} (5 k + 1)$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\sum_{k=0}^{6} (5 k + 1)",
+    "\\sum_{k=1}^{6} (k + 6)",
+    "\\sum_{k=1}^{5} (5 k + 1)",
+    "\\sum_{k=1}^{6} (5 k + 1)"
+   ]
+  },
+  {
+   "id": "sigma-notation-c3422a",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Which written-out sum equals $\\sum_{k=1}^{4} (3k - 1)$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Plug in $k = 1$, then $k = 2$, and so on up to $k = 4$.",
+    "The first term is $2$."
+   ],
+   "solution": [
+    "Terms for $k = 1, \\ldots, 4$: $2 + 5 + 8 + 11$.",
+    "Match this list against the options."
+   ],
+   "verified": true,
+   "choices": [
+    "2 + 5 + 8 + 11",
+    "1 + 2 + 3 + 4",
+    "2 + 4 + 6 + 8",
+    "1 + 8 + 27 + 64"
+   ]
+  },
+  {
+   "id": "sigma-notation-fd1879",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "How many terms does the sum $\\sum_{k=4}^{19} k^2$ have?",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "Count the integers from the lower limit to the upper limit, inclusive.",
+    "From $4$ to $19$ there are $19 - 4 + 1$ values."
+   ],
+   "solution": [
+    "$k$ takes the values $4, 5, \\ldots, 19$.",
+    "That is $19 - 4 + 1 = 16$ terms."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-ac69bc",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Suppose $\\sum_{k=1}^{8} a_k = 8$ and $\\sum_{k=1}^{8} b_k = 0$. Find $\\sum_{k=1}^{8} (2a_k - 1b_k + 1)$.",
+   "checker": "numeric",
+   "answer": "24",
+   "hints": [
+    "Sums split over addition and constants factor out: $\\sum (ca_k - db_k) = c\\sum a_k - d\\sum b_k$.",
+    "A constant term adds up to the constant times the number of terms, $8$."
+   ],
+   "solution": [
+    "$\\sum (2a_k - 1b_k + 1) = 2\\sum a_k - 1\\sum b_k + \\sum 1$.",
+    "$= 2(8) - 1(0) + 1\\cdot8 = 24$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-b97769",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Evaluate $\\sum_{k=1}^{6} \\left((k+1)^2 - k^2\\right)$.",
+   "checker": "numeric",
+   "answer": "48",
+   "hints": [
+    "Write out the first few terms: most of them cancel in pairs.",
+    "Only $-1^2$ and $(7)^2$ survive."
+   ],
+   "solution": [
+    "The terms are $(2^2 - 1^2) + (3^2 - 2^2) + \\cdots + (7^2 - 6^2)$.",
+    "Everything cancels except $-1 + 7^2 = 48$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-a2e8f8",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Evaluate $\\sum_{j=2}^{5} 4 j + 2$. Note that the index starts at $2$.",
+   "checker": "numeric",
+   "answer": "64",
+   "hints": [
+    "The index runs over $j = 2, 3, \\ldots, 5$: $4$ terms.",
+    "The first term is $10$."
+   ],
+   "solution": [
+    "Terms: $10 + 14 + 18 + 22$.",
+    "Sum $= 64$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-819862",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Evaluate $\\sum_{i=1}^{3} 4 i - 1$.",
+   "checker": "numeric",
+   "answer": "21",
+   "hints": [
+    "Substitute $i = 1, 2, \\ldots, 3$ into $4 i - 1$ and add the results.",
+    "The first term is $3$ and the last is $11$."
+   ],
+   "solution": [
+    "Terms: $3 + 7 + 11$.",
+    "Sum $= 21$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-dd15ae",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Which sigma notation represents the sum $2 + 4 + 6 + 8$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Find a formula for the $k$th term, then check the first and last values of $k$.",
+    "The terms go up by $2$ each time, so the formula is linear in $k$ with slope $2$."
+   ],
+   "solution": [
+    "The $k$th term is $2 k$: at $k = 1$ it gives $2$ and at $k = 4$ it gives $8$.",
+    "So the sum is $\\sum_{k=1}^{4} 2 k$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\sum_{k=1}^{4} 2 k",
+    "\\sum_{k=1}^{4} 2^k",
+    "\\sum_{k=1}^{4} (2 + k)",
+    "\\sum_{k=1}^{3} 2 k"
+   ]
+  },
+  {
+   "id": "sigma-notation-0efd79",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Which written-out sum equals $\\sum_{k=1}^{5} (-1)^{k+1} k$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Plug in $k = 1$, then $k = 2$, and so on up to $k = 5$.",
+    "The first term is $1$."
+   ],
+   "solution": [
+    "Terms for $k = 1, \\ldots, 5$: $1 + (-2) + 3 + (-4) + 5$.",
+    "Match this list against the options."
+   ],
+   "verified": true,
+   "choices": [
+    "1 + (-2) + 3 + (-4) + 5",
+    "2 + 4 + 6 + 8 + 10",
+    "1 + 2 + 3 + 4 + 5",
+    "1 + 8 + 27 + 64 + 125"
+   ]
+  },
+  {
+   "id": "sigma-notation-1f1e41",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Use the formula $\\sum_{k=1}^{n} k = \\dfrac{n(n+1)}{2}$ to evaluate $\\sum_{k=1}^{20} k$.",
+   "checker": "numeric",
+   "answer": "210",
+   "hints": [
+    "Substitute $n = 20$ into the formula.",
+    "$\\dfrac{20\\cdot21}{2}$."
+   ],
+   "solution": [
+    "$\\dfrac{20(20 + 1)}{2} = \\dfrac{420}{2}$.",
+    "$= 210$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-4abd98",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "How many terms does the sum $\\sum_{k=5}^{8} 3k$ have?",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Count the integers from the lower limit to the upper limit, inclusive.",
+    "From $5$ to $8$ there are $8 - 5 + 1$ values."
+   ],
+   "solution": [
+    "$k$ takes the values $5, 6, \\ldots, 8$.",
+    "That is $8 - 5 + 1 = 4$ terms."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-2ffd38",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Suppose $\\sum_{k=1}^{4} a_k = 13$ and $\\sum_{k=1}^{4} b_k = -5$. Find $\\sum_{k=1}^{4} (2a_k - 1b_k + 5)$.",
+   "checker": "numeric",
+   "answer": "51",
+   "hints": [
+    "Sums split over addition and constants factor out: $\\sum (ca_k - db_k) = c\\sum a_k - d\\sum b_k$.",
+    "A constant term adds up to the constant times the number of terms, $4$."
+   ],
+   "solution": [
+    "$\\sum (2a_k - 1b_k + 5) = 2\\sum a_k - 1\\sum b_k + \\sum 5$.",
+    "$= 2(13) - 1(-5) + 5\\cdot4 = 51$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-e298d8",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Evaluate $\\sum_{i=2}^{4} 2 i - 3$. Note that the index starts at $2$.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "The index runs over $i = 2, 3, \\ldots, 4$: $3$ terms.",
+    "The first term is $1$."
+   ],
+   "solution": [
+    "Terms: $1 + 3 + 5$.",
+    "Sum $= 9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-f5411c",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Evaluate $\\sum_{k=1}^{4} 4 k + 5$.",
+   "checker": "numeric",
+   "answer": "60",
+   "hints": [
+    "Substitute $k = 1, 2, \\ldots, 4$ into $4 k + 5$ and add the results.",
+    "The first term is $9$ and the last is $21$."
+   ],
+   "solution": [
+    "Terms: $9 + 13 + 17 + 21$.",
+    "Sum $= 60$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-c41dba",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Evaluate $\\sum_{k=1}^{3} (k^2 - k)$.",
+   "checker": "numeric",
+   "answer": "8",
+   "hints": [
+    "Write out each term for $k = 1$ to $3$ before adding.",
+    "The first term is $0$."
+   ],
+   "solution": [
+    "Terms: $0 + 2 + 6$.",
+    "Sum $= 8$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-13ae70",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Which sigma notation represents the sum $3 + 7 + 11 + 15$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Find a formula for the $k$th term, then check the first and last values of $k$.",
+    "The terms go up by $4$ each time, so the formula is linear in $k$ with slope $4$."
+   ],
+   "solution": [
+    "The $k$th term is $(4 k - 1)$: at $k = 1$ it gives $3$ and at $k = 4$ it gives $15$.",
+    "So the sum is $\\sum_{k=1}^{4} (4 k - 1)$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\sum_{k=1}^{4} (k + 3)",
+    "\\sum_{k=0}^{4} (4 k - 1)",
+    "\\sum_{k=1}^{3} (4 k - 1)",
+    "\\sum_{k=1}^{4} (4 k - 1)"
+   ]
+  },
+  {
+   "id": "sigma-notation-96663a",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Evaluate $\\sum_{k=1}^{10} 5$ (the summand does not depend on $k$).",
+   "checker": "numeric",
+   "answer": "50",
+   "hints": [
+    "Every term is the same constant.",
+    "There are $10$ terms."
+   ],
+   "solution": [
+    "The sum adds $5$ to itself $10$ times.",
+    "$= 10\\cdot(5) = 50$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-5946c9",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "How many terms does the sum $\\sum_{k=0}^{17} k^2$ have?",
+   "checker": "numeric",
+   "answer": "18",
+   "hints": [
+    "Count the integers from the lower limit to the upper limit, inclusive.",
+    "From $0$ to $17$ there are $17 - 0 + 1$ values."
+   ],
+   "solution": [
+    "$k$ takes the values $0, 1, \\ldots, 17$.",
+    "That is $17 - 0 + 1 = 18$ terms."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-70955c",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Suppose $\\sum_{k=1}^{8} a_k = 19$ and $\\sum_{k=1}^{8} b_k = -5$. Find $\\sum_{k=1}^{8} (3a_k - 1b_k)$.",
+   "checker": "numeric",
+   "answer": "62",
+   "hints": [
+    "Sums split over addition and constants factor out: $\\sum (ca_k - db_k) = c\\sum a_k - d\\sum b_k$.",
+    "A constant term adds up to the constant times the number of terms, $8$."
+   ],
+   "solution": [
+    "$\\sum (3a_k - 1b_k) = 3\\sum a_k - 1\\sum b_k$.",
+    "$= 3(19) - 1(-5) = 62$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-ddfed1",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Evaluate $\\sum_{j=3}^{6} 4 j + 2$. Note that the index starts at $3$.",
+   "checker": "numeric",
+   "answer": "80",
+   "hints": [
+    "The index runs over $j = 3, 4, \\ldots, 6$: $4$ terms.",
+    "The first term is $14$."
+   ],
+   "solution": [
+    "Terms: $14 + 18 + 22 + 26$.",
+    "Sum $= 80$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-6c2422",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Evaluate $\\sum_{i=1}^{6} 6 - 2 i$.",
+   "checker": "numeric",
+   "answer": "-6",
+   "hints": [
+    "Substitute $i = 1, 2, \\ldots, 6$ into $6 - 2 i$ and add the results.",
+    "The first term is $4$ and the last is $-6$."
+   ],
+   "solution": [
+    "Terms: $4 + 2 + 0 + (-2) + (-4) + (-6)$.",
+    "Sum $= -6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-b3acd6",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Evaluate $\\sum_{k=1}^{3} k^3$.",
+   "checker": "numeric",
+   "answer": "36",
+   "hints": [
+    "Write out each term for $k = 1$ to $3$ before adding.",
+    "The first term is $1$."
+   ],
+   "solution": [
+    "Terms: $1 + 8 + 27$.",
+    "Sum $= 36$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-47450c",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Which sigma notation represents the sum $5 + 9 + 13 + 17 + 21$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Find a formula for the $k$th term, then check the first and last values of $k$.",
+    "The terms go up by $4$ each time, so the formula is linear in $k$ with slope $4$."
+   ],
+   "solution": [
+    "The $k$th term is $(4 k + 1)$: at $k = 1$ it gives $5$ and at $k = 5$ it gives $21$.",
+    "So the sum is $\\sum_{k=1}^{5} (4 k + 1)$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\sum_{k=1}^{5} (4 k + 1)",
+    "\\sum_{k=1}^{5} (k + 5)",
+    "\\sum_{k=1}^{4} (4 k + 1)",
+    "\\sum_{k=0}^{5} (4 k + 1)"
+   ]
+  },
+  {
+   "id": "sigma-notation-4a19b9",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Which written-out sum equals $\\sum_{k=1}^{4} (2k - 1)$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Plug in $k = 1$, then $k = 2$, and so on up to $k = 4$.",
+    "The first term is $1$."
+   ],
+   "solution": [
+    "Terms for $k = 1, \\ldots, 4$: $1 + 3 + 5 + 7$.",
+    "Match this list against the options."
+   ],
+   "verified": true,
+   "choices": [
+    "2 + 4 + 6 + 8",
+    "1 + 8 + 27 + 64",
+    "1 + 2 + 3 + 4",
+    "1 + 3 + 5 + 7"
+   ]
+  },
+  {
+   "id": "sigma-notation-6e532e",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Evaluate $\\sum_{k=1}^{10} 7$ (the summand does not depend on $k$).",
+   "checker": "numeric",
+   "answer": "70",
+   "hints": [
+    "Every term is the same constant.",
+    "There are $10$ terms."
+   ],
+   "solution": [
+    "The sum adds $7$ to itself $10$ times.",
+    "$= 10\\cdot(7) = 70$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-9fb633",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "How many terms does the sum $\\sum_{k=5}^{15} (2k+1)$ have?",
+   "checker": "numeric",
+   "answer": "11",
+   "hints": [
+    "Count the integers from the lower limit to the upper limit, inclusive.",
+    "From $5$ to $15$ there are $15 - 5 + 1$ values."
+   ],
+   "solution": [
+    "$k$ takes the values $5, 6, \\ldots, 15$.",
+    "That is $15 - 5 + 1 = 11$ terms."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-2682a5",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Suppose $\\sum_{k=1}^{10} a_k = -8$ and $\\sum_{k=1}^{10} b_k = 15$. Find $\\sum_{k=1}^{10} (-1a_k - 3b_k + 1)$.",
+   "checker": "numeric",
+   "answer": "-27",
+   "hints": [
+    "Sums split over addition and constants factor out: $\\sum (ca_k - db_k) = c\\sum a_k - d\\sum b_k$.",
+    "A constant term adds up to the constant times the number of terms, $10$."
+   ],
+   "solution": [
+    "$\\sum (-1a_k - 3b_k + 1) = -1\\sum a_k - 3\\sum b_k + \\sum 1$.",
+    "$= -1(-8) - 3(15) + 1\\cdot10 = -27$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-1a08d9",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Evaluate $\\sum_{k=1}^{3} \\left((k+1)^2 - k^2\\right)$.",
+   "checker": "numeric",
+   "answer": "15",
+   "hints": [
+    "Write out the first few terms: most of them cancel in pairs.",
+    "Only $-1^2$ and $(4)^2$ survive."
+   ],
+   "solution": [
+    "The terms are $(2^2 - 1^2) + (3^2 - 2^2) + \\cdots + (4^2 - 3^2)$.",
+    "Everything cancels except $-1 + 4^2 = 15$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-4c6992",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Evaluate $\\sum_{j=2}^{5} 3 j - 1$. Note that the index starts at $2$.",
+   "checker": "numeric",
+   "answer": "38",
+   "hints": [
+    "The index runs over $j = 2, 3, \\ldots, 5$: $4$ terms.",
+    "The first term is $5$."
+   ],
+   "solution": [
+    "Terms: $5 + 8 + 11 + 14$.",
+    "Sum $= 38$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-200746",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Evaluate $\\sum_{k=1}^{3} 3 k - 2$.",
+   "checker": "numeric",
+   "answer": "12",
+   "hints": [
+    "Substitute $k = 1, 2, \\ldots, 3$ into $3 k - 2$ and add the results.",
+    "The first term is $1$ and the last is $7$."
+   ],
+   "solution": [
+    "Terms: $1 + 4 + 7$.",
+    "Sum $= 12$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-72c7c8",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Evaluate $\\sum_{k=0}^{3} 2^k$.",
+   "checker": "numeric",
+   "answer": "15",
+   "hints": [
+    "Write out each term for $k = 0$ to $3$ before adding.",
+    "The first term is $1$."
+   ],
+   "solution": [
+    "Terms: $1 + 2 + 4 + 8$.",
+    "Sum $= 15$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-d0cee2",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Which sigma notation represents the sum $3 + 5 + 7 + 9 + 11$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Find a formula for the $k$th term, then check the first and last values of $k$.",
+    "The terms go up by $2$ each time, so the formula is linear in $k$ with slope $2$."
+   ],
+   "solution": [
+    "The $k$th term is $(2 k + 1)$: at $k = 1$ it gives $3$ and at $k = 5$ it gives $11$.",
+    "So the sum is $\\sum_{k=1}^{5} (2 k + 1)$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\sum_{k=1}^{4} (2 k + 1)",
+    "\\sum_{k=0}^{5} (2 k + 1)",
+    "\\sum_{k=1}^{5} (k + 3)",
+    "\\sum_{k=1}^{5} (2 k + 1)"
+   ]
+  },
+  {
+   "id": "sigma-notation-ff3539",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Which written-out sum equals $\\sum_{k=1}^{5} (2k - 1)$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Plug in $k = 1$, then $k = 2$, and so on up to $k = 5$.",
+    "The first term is $1$."
+   ],
+   "solution": [
+    "Terms for $k = 1, \\ldots, 5$: $1 + 3 + 5 + 7 + 9$.",
+    "Match this list against the options."
+   ],
+   "verified": true,
+   "choices": [
+    "1 + 3 + 5 + 7 + 9",
+    "1 + 8 + 27 + 64 + 125",
+    "1 + 2 + 3 + 4 + 5",
+    "2 + 4 + 6 + 8 + 10"
+   ]
+  },
+  {
+   "id": "sigma-notation-040667",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "How many terms does the sum $\\sum_{k=2}^{17} 3k$ have?",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "Count the integers from the lower limit to the upper limit, inclusive.",
+    "From $2$ to $17$ there are $17 - 2 + 1$ values."
+   ],
+   "solution": [
+    "$k$ takes the values $2, 3, \\ldots, 17$.",
+    "That is $17 - 2 + 1 = 16$ terms."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-c6fa92",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Suppose $\\sum_{k=1}^{4} a_k = 18$ and $\\sum_{k=1}^{4} b_k = -9$. Find $\\sum_{k=1}^{4} (3a_k - 3b_k + 1)$.",
+   "checker": "numeric",
+   "answer": "85",
+   "hints": [
+    "Sums split over addition and constants factor out: $\\sum (ca_k - db_k) = c\\sum a_k - d\\sum b_k$.",
+    "A constant term adds up to the constant times the number of terms, $4$."
+   ],
+   "solution": [
+    "$\\sum (3a_k - 3b_k + 1) = 3\\sum a_k - 3\\sum b_k + \\sum 1$.",
+    "$= 3(18) - 3(-9) + 1\\cdot4 = 85$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-8f34f5",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Evaluate $\\sum_{k=1}^{4} \\left((k+1)^2 - k^2\\right)$.",
+   "checker": "numeric",
+   "answer": "24",
+   "hints": [
+    "Write out the first few terms: most of them cancel in pairs.",
+    "Only $-1^2$ and $(5)^2$ survive."
+   ],
+   "solution": [
+    "The terms are $(2^2 - 1^2) + (3^2 - 2^2) + \\cdots + (5^2 - 4^2)$.",
+    "Everything cancels except $-1 + 5^2 = 24$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-e1d5c9",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Evaluate $\\sum_{i=0}^{3} 2 i + 2$. Note that the index starts at $0$.",
+   "checker": "numeric",
+   "answer": "20",
+   "hints": [
+    "The index runs over $i = 0, 1, \\ldots, 3$: $4$ terms.",
+    "The first term is $2$."
+   ],
+   "solution": [
+    "Terms: $2 + 4 + 6 + 8$.",
+    "Sum $= 20$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-7325de",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Evaluate $\\sum_{k=1}^{6} 3 k + 5$.",
+   "checker": "numeric",
+   "answer": "93",
+   "hints": [
+    "Substitute $k = 1, 2, \\ldots, 6$ into $3 k + 5$ and add the results.",
+    "The first term is $8$ and the last is $23$."
+   ],
+   "solution": [
+    "Terms: $8 + 11 + 14 + 17 + 20 + 23$.",
+    "Sum $= 93$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-bb144e",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Which sigma notation represents the sum $3 + 7 + 11 + 15 + 19$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Find a formula for the $k$th term, then check the first and last values of $k$.",
+    "The terms go up by $4$ each time, so the formula is linear in $k$ with slope $4$."
+   ],
+   "solution": [
+    "The $k$th term is $(4 k - 1)$: at $k = 1$ it gives $3$ and at $k = 5$ it gives $19$.",
+    "So the sum is $\\sum_{k=1}^{5} (4 k - 1)$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\sum_{k=0}^{5} (4 k - 1)",
+    "\\sum_{k=1}^{4} (4 k - 1)",
+    "\\sum_{k=1}^{5} (4 k - 1)",
+    "\\sum_{k=1}^{5} (k + 3)"
+   ]
+  },
+  {
+   "id": "sigma-notation-5302bf",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Which written-out sum equals $\\sum_{k=1}^{4} k^2$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Plug in $k = 1$, then $k = 2$, and so on up to $k = 4$.",
+    "The first term is $1$."
+   ],
+   "solution": [
+    "Terms for $k = 1, \\ldots, 4$: $1 + 4 + 9 + 16$.",
+    "Match this list against the options."
+   ],
+   "verified": true,
+   "choices": [
+    "1 + 8 + 27 + 64",
+    "1 + 2 + 3 + 4",
+    "2 + 4 + 6 + 8",
+    "1 + 4 + 9 + 16"
+   ]
+  },
+  {
+   "id": "sigma-notation-938f5b",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "Evaluate $\\sum_{k=1}^{10} -2$ (the summand does not depend on $k$).",
+   "checker": "numeric",
+   "answer": "-20",
+   "hints": [
+    "Every term is the same constant.",
+    "There are $10$ terms."
+   ],
+   "solution": [
+    "The sum adds $-2$ to itself $10$ times.",
+    "$= 10\\cdot(-2) = -20$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-0754a1",
+   "skill": "sigma-notation",
+   "difficulty": 1,
+   "statement": "How many terms does the sum $\\sum_{k=6}^{18} \\frac{1}{k+1}$ have?",
+   "checker": "numeric",
+   "answer": "13",
+   "hints": [
+    "Count the integers from the lower limit to the upper limit, inclusive.",
+    "From $6$ to $18$ there are $18 - 6 + 1$ values."
+   ],
+   "solution": [
+    "$k$ takes the values $6, 7, \\ldots, 18$.",
+    "That is $18 - 6 + 1 = 13$ terms."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-c1e8c6",
+   "skill": "sigma-notation",
+   "difficulty": 3,
+   "statement": "Suppose $\\sum_{k=1}^{8} a_k = -9$ and $\\sum_{k=1}^{8} b_k = -7$. Find $\\sum_{k=1}^{8} (-1a_k - 2b_k)$.",
+   "checker": "numeric",
+   "answer": "23",
+   "hints": [
+    "Sums split over addition and constants factor out: $\\sum (ca_k - db_k) = c\\sum a_k - d\\sum b_k$.",
+    "A constant term adds up to the constant times the number of terms, $8$."
+   ],
+   "solution": [
+    "$\\sum (-1a_k - 2b_k) = -1\\sum a_k - 2\\sum b_k$.",
+    "$= -1(-9) - 2(-7) = 23$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "sigma-notation-ae79dc",
+   "skill": "sigma-notation",
+   "difficulty": 2,
+   "statement": "Evaluate $\\sum_{j=2}^{5} 2 j$. Note that the index starts at $2$.",
+   "checker": "numeric",
+   "answer": "28",
+   "hints": [
+    "The index runs over $j = 2, 3, \\ldots, 5$: $4$ terms.",
+    "The first term is $4$."
+   ],
+   "solution": [
+    "Terms: $4 + 6 + 8 + 10$.",
+    "Sum $= 28$."
+   ],
+   "verified": true
+  }
+ ]
+}

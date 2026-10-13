@@ -1,0 +1,1069 @@
+{
+ "skill": "trig-derivatives",
+ "problems": [
+  {
+   "id": "trig-derivatives-24d555",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Find the derivative of $f(x) = - 5 \\tan{\\left(x \\right)} - 3 \\sec{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "-5*tan(x)^2-3*tan(x)*sec(x)-5",
+   "hints": [
+    "Use the table of trig derivatives: $(\\sin x)' = \\cos x$, $(\\cos x)' = -\\sin x$, $(\\tan x)' = \\sec^2 x$, $(\\sec x)' = \\sec x\\tan x$, $(\\csc x)' = -\\csc x\\cot x$, $(\\cot x)' = -\\csc^2 x$.",
+    "Constants multiply through; differentiate each term separately."
+   ],
+   "solution": [
+    "Differentiate term by term using the trig derivative table.",
+    "$f'(x) = - 5 \\tan^{2}{\\left(x \\right)} - 3 \\tan{\\left(x \\right)} \\sec{\\left(x \\right)} - 5$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.2,
+    1.2
+   ]
+  },
+  {
+   "id": "trig-derivatives-211300",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Find the derivative of $f(x) = - 3 \\cos{\\left(x \\right)} + 4 \\cot{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "3*sin(x)-4*cot(x)^2-4",
+   "hints": [
+    "Use the table of trig derivatives: $(\\sin x)' = \\cos x$, $(\\cos x)' = -\\sin x$, $(\\tan x)' = \\sec^2 x$, $(\\sec x)' = \\sec x\\tan x$, $(\\csc x)' = -\\csc x\\cot x$, $(\\cot x)' = -\\csc^2 x$.",
+    "Constants multiply through; differentiate each term separately."
+   ],
+   "solution": [
+    "Differentiate term by term using the trig derivative table.",
+    "$f'(x) = 3 \\sin{\\left(x \\right)} - 4 \\cot^{2}{\\left(x \\right)} - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.4,
+    2.7
+   ]
+  },
+  {
+   "id": "trig-derivatives-f686a0",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Find the derivative of $f(x) = 5 \\sin{\\left(x \\right)} + 5 \\cos{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "-5*sin(x)+5*cos(x)",
+   "hints": [
+    "Use the table of trig derivatives: $(\\sin x)' = \\cos x$, $(\\cos x)' = -\\sin x$, $(\\tan x)' = \\sec^2 x$, $(\\sec x)' = \\sec x\\tan x$, $(\\csc x)' = -\\csc x\\cot x$, $(\\cot x)' = -\\csc^2 x$.",
+    "Constants multiply through; differentiate each term separately."
+   ],
+   "solution": [
+    "Differentiate term by term using the trig derivative table.",
+    "$f'(x) = - 5 \\sin{\\left(x \\right)} + 5 \\cos{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-derivatives-36d1d1",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Find the derivative of $f(x) = 3 x^{2} + 4 \\csc{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "6*x-4*cot(x)*csc(x)",
+   "hints": [
+    "Use the table of trig derivatives: $(\\sin x)' = \\cos x$, $(\\cos x)' = -\\sin x$, $(\\tan x)' = \\sec^2 x$, $(\\sec x)' = \\sec x\\tan x$, $(\\csc x)' = -\\csc x\\cot x$, $(\\cot x)' = -\\csc^2 x$.",
+    "Constants multiply through; differentiate each term separately."
+   ],
+   "solution": [
+    "Differentiate term by term using the trig derivative table.",
+    "$f'(x) = 6 x - 4 \\cot{\\left(x \\right)} \\csc{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.4,
+    2.7
+   ]
+  },
+  {
+   "id": "trig-derivatives-a6d518",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Find the derivative of $f(x) = 2 \\sin{\\left(x \\right)} + \\sec{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "2*cos(x)+tan(x)*sec(x)",
+   "hints": [
+    "Use the table of trig derivatives: $(\\sin x)' = \\cos x$, $(\\cos x)' = -\\sin x$, $(\\tan x)' = \\sec^2 x$, $(\\sec x)' = \\sec x\\tan x$, $(\\csc x)' = -\\csc x\\cot x$, $(\\cot x)' = -\\csc^2 x$.",
+    "Constants multiply through; differentiate each term separately."
+   ],
+   "solution": [
+    "Differentiate term by term using the trig derivative table.",
+    "$f'(x) = 2 \\cos{\\left(x \\right)} + \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.2,
+    1.2
+   ]
+  },
+  {
+   "id": "trig-derivatives-3a2453",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Find the derivative of $f(x) = - 2 \\sin{\\left(x \\right)} + 4 \\cos{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "-4*sin(x)-2*cos(x)",
+   "hints": [
+    "Use the table of trig derivatives: $(\\sin x)' = \\cos x$, $(\\cos x)' = -\\sin x$, $(\\tan x)' = \\sec^2 x$, $(\\sec x)' = \\sec x\\tan x$, $(\\csc x)' = -\\csc x\\cot x$, $(\\cot x)' = -\\csc^2 x$.",
+    "Constants multiply through; differentiate each term separately."
+   ],
+   "solution": [
+    "Differentiate term by term using the trig derivative table.",
+    "$f'(x) = - 4 \\sin{\\left(x \\right)} - 2 \\cos{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-derivatives-ef9afa",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Find the derivative of $f(x) = 5 \\cos{\\left(x \\right)} + \\cot{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "-5*sin(x)-cot(x)^2-1",
+   "hints": [
+    "Use the table of trig derivatives: $(\\sin x)' = \\cos x$, $(\\cos x)' = -\\sin x$, $(\\tan x)' = \\sec^2 x$, $(\\sec x)' = \\sec x\\tan x$, $(\\csc x)' = -\\csc x\\cot x$, $(\\cot x)' = -\\csc^2 x$.",
+    "Constants multiply through; differentiate each term separately."
+   ],
+   "solution": [
+    "Differentiate term by term using the trig derivative table.",
+    "$f'(x) = - 5 \\sin{\\left(x \\right)} - \\cot^{2}{\\left(x \\right)} - 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.4,
+    2.7
+   ]
+  },
+  {
+   "id": "trig-derivatives-f3b655",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Find the derivative of $f(x) = 5 \\tan{\\left(x \\right)} - 2 \\sec{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "5*tan(x)^2-2*tan(x)*sec(x)+5",
+   "hints": [
+    "Use the table of trig derivatives: $(\\sin x)' = \\cos x$, $(\\cos x)' = -\\sin x$, $(\\tan x)' = \\sec^2 x$, $(\\sec x)' = \\sec x\\tan x$, $(\\csc x)' = -\\csc x\\cot x$, $(\\cot x)' = -\\csc^2 x$.",
+    "Constants multiply through; differentiate each term separately."
+   ],
+   "solution": [
+    "Differentiate term by term using the trig derivative table.",
+    "$f'(x) = 5 \\tan^{2}{\\left(x \\right)} - 2 \\tan{\\left(x \\right)} \\sec{\\left(x \\right)} + 5$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.2,
+    1.2
+   ]
+  },
+  {
+   "id": "trig-derivatives-e8a612",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Find the derivative of $f(x) = - x^{2} - 3 \\csc{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "-2*x+3*cot(x)*csc(x)",
+   "hints": [
+    "Use the table of trig derivatives: $(\\sin x)' = \\cos x$, $(\\cos x)' = -\\sin x$, $(\\tan x)' = \\sec^2 x$, $(\\sec x)' = \\sec x\\tan x$, $(\\csc x)' = -\\csc x\\cot x$, $(\\cot x)' = -\\csc^2 x$.",
+    "Constants multiply through; differentiate each term separately."
+   ],
+   "solution": [
+    "Differentiate term by term using the trig derivative table.",
+    "$f'(x) = - 2 x + 3 \\cot{\\left(x \\right)} \\csc{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.4,
+    2.7
+   ]
+  },
+  {
+   "id": "trig-derivatives-fc6521",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Find the derivative of $f(x) = - 2 \\cos{\\left(x \\right)} + 4 \\cot{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "2*sin(x)-4*cot(x)^2-4",
+   "hints": [
+    "Use the table of trig derivatives: $(\\sin x)' = \\cos x$, $(\\cos x)' = -\\sin x$, $(\\tan x)' = \\sec^2 x$, $(\\sec x)' = \\sec x\\tan x$, $(\\csc x)' = -\\csc x\\cot x$, $(\\cot x)' = -\\csc^2 x$.",
+    "Constants multiply through; differentiate each term separately."
+   ],
+   "solution": [
+    "Differentiate term by term using the trig derivative table.",
+    "$f'(x) = 2 \\sin{\\left(x \\right)} - 4 \\cot^{2}{\\left(x \\right)} - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.4,
+    2.7
+   ]
+  },
+  {
+   "id": "trig-derivatives-9b72cb",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Find the derivative of $f(x) = x^{2} \\tan{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "x^2*(tan(x)^2+1)+2*x*tan(x)",
+   "hints": [
+    "This is a product: use $(uv)' = u'v + uv'$.",
+    "Differentiate the trig factor with the trig table and the other factor with the power or exponential rule."
+   ],
+   "solution": [
+    "Product rule: $f'(x) = x^{2} \\left(\\tan^{2}{\\left(x \\right)} + 1\\right) + 2 x \\tan{\\left(x \\right)}$.",
+    "Each term is one factor differentiated times the other left alone."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.2,
+    1.2
+   ]
+  },
+  {
+   "id": "trig-derivatives-5ebca7",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Find the derivative of $f(x) = x \\sec{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "x*tan(x)*sec(x)+sec(x)",
+   "hints": [
+    "This is a product: use $(uv)' = u'v + uv'$.",
+    "Differentiate the trig factor with the trig table and the other factor with the power or exponential rule."
+   ],
+   "solution": [
+    "Product rule: $f'(x) = x \\tan{\\left(x \\right)} \\sec{\\left(x \\right)} + \\sec{\\left(x \\right)}$.",
+    "Each term is one factor differentiated times the other left alone."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.2,
+    1.2
+   ]
+  },
+  {
+   "id": "trig-derivatives-ba4ae9",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Find the derivative of $f(x) = x \\sin{\\left(x \\right)} + 2 \\cos{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "x*cos(x)-sin(x)",
+   "hints": [
+    "This is a product: use $(uv)' = u'v + uv'$.",
+    "Differentiate the trig factor with the trig table and the other factor with the power or exponential rule."
+   ],
+   "solution": [
+    "Product rule: $f'(x) = x \\cos{\\left(x \\right)} - \\sin{\\left(x \\right)}$.",
+    "Each term is one factor differentiated times the other left alone."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-derivatives-845f87",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Find the derivative of $f(x) = 2 x \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "2*x*cos(x)+sin(x)",
+   "hints": [
+    "This is a product: use $(uv)' = u'v + uv'$.",
+    "Differentiate the trig factor with the trig table and the other factor with the power or exponential rule."
+   ],
+   "solution": [
+    "Product rule: $f'(x) = 2 x \\cos{\\left(x \\right)} + \\sin{\\left(x \\right)}$.",
+    "Each term is one factor differentiated times the other left alone."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-derivatives-ff94fd",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Find the derivative of $f(x) = x \\sin{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "x*cos(x)+sin(x)",
+   "hints": [
+    "This is a product: use $(uv)' = u'v + uv'$.",
+    "Differentiate the trig factor with the trig table and the other factor with the power or exponential rule."
+   ],
+   "solution": [
+    "Product rule: $f'(x) = x \\cos{\\left(x \\right)} + \\sin{\\left(x \\right)}$.",
+    "Each term is one factor differentiated times the other left alone."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-derivatives-01907e",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Find the derivative of $f(x) = 3 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "-3*sin(x)^2+3*cos(x)^2",
+   "hints": [
+    "This is a product: use $(uv)' = u'v + uv'$.",
+    "Differentiate the trig factor with the trig table and the other factor with the power or exponential rule."
+   ],
+   "solution": [
+    "Product rule: $f'(x) = - 3 \\sin^{2}{\\left(x \\right)} + 3 \\cos^{2}{\\left(x \\right)}$.",
+    "Each term is one factor differentiated times the other left alone."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-derivatives-a19b47",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Find the derivative of $f(x) = 2 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "-2*sin(x)^2+2*cos(x)^2",
+   "hints": [
+    "This is a product: use $(uv)' = u'v + uv'$.",
+    "Differentiate the trig factor with the trig table and the other factor with the power or exponential rule."
+   ],
+   "solution": [
+    "Product rule: $f'(x) = - 2 \\sin^{2}{\\left(x \\right)} + 2 \\cos^{2}{\\left(x \\right)}$.",
+    "Each term is one factor differentiated times the other left alone."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-derivatives-fbbb91",
+   "skill": "trig-derivatives",
+   "difficulty": 3,
+   "statement": "Find the derivative of $f(x) = \\frac{\\sin{\\left(x \\right)} + 1}{\\cos{\\left(x \\right)}}$.",
+   "checker": "equiv",
+   "answer": "(sin(x)+1)*sin(x)/cos(x)^2+1",
+   "hints": [
+    "Use the quotient rule: $\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^2}$.",
+    "After differentiating, look for $\\sin^2 x + \\cos^2 x = 1$ to simplify."
+   ],
+   "solution": [
+    "Apply the rule and simplify: $f'(x) = \\frac{\\sin{\\left(x \\right)} + 1}{\\cos^{2}{\\left(x \\right)}}$.",
+    "Using $\\sin^2 x + \\cos^2 x = 1$ where it appears gives the compact form."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.2,
+    1.2
+   ]
+  },
+  {
+   "id": "trig-derivatives-591cc1",
+   "skill": "trig-derivatives",
+   "difficulty": 3,
+   "statement": "Find the derivative of $f(x) = \\frac{\\cos{\\left(x \\right)}}{x}$.",
+   "checker": "equiv",
+   "answer": "-sin(x)/x-cos(x)/x^2",
+   "hints": [
+    "Use the quotient rule: $\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^2}$.",
+    "After differentiating, look for $\\sin^2 x + \\cos^2 x = 1$ to simplify."
+   ],
+   "solution": [
+    "Apply the rule and simplify: $f'(x) = - \\frac{x \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}}{x^{2}}$.",
+    "Using $\\sin^2 x + \\cos^2 x = 1$ where it appears gives the compact form."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "trig-derivatives-0e776a",
+   "skill": "trig-derivatives",
+   "difficulty": 3,
+   "statement": "Find the derivative of $f(x) = \\frac{x}{\\cos{\\left(x \\right)}}$.",
+   "checker": "equiv",
+   "answer": "x*sin(x)/cos(x)^2+1/cos(x)",
+   "hints": [
+    "Use the quotient rule: $\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^2}$.",
+    "After differentiating, look for $\\sin^2 x + \\cos^2 x = 1$ to simplify."
+   ],
+   "solution": [
+    "Apply the rule and simplify: $f'(x) = \\frac{x \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}}{\\cos^{2}{\\left(x \\right)}}$.",
+    "Using $\\sin^2 x + \\cos^2 x = 1$ where it appears gives the compact form."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.2,
+    1.2
+   ]
+  },
+  {
+   "id": "trig-derivatives-277632",
+   "skill": "trig-derivatives",
+   "difficulty": 3,
+   "statement": "Find the derivative of $f(x) = \\frac{\\tan{\\left(x \\right)}}{x^{2} + 1}$.",
+   "checker": "equiv",
+   "answer": "-2*x*tan(x)/(x^2+1)^2+(tan(x)^2+1)/(x^2+1)",
+   "hints": [
+    "Product rule, with $(\\tan x)' = \\sec^2 x$.",
+    "Keep the $\\sec^2 x$ factor; no need to convert to sine and cosine."
+   ],
+   "solution": [
+    "Apply the rule and simplify: $f'(x) = \\frac{- 2 x \\tan{\\left(x \\right)} + \\frac{x^{2} + 1}{\\cos^{2}{\\left(x \\right)}}}{\\left(x^{2} + 1\\right)^{2}}$.",
+    "Using $\\sin^2 x + \\cos^2 x = 1$ where it appears gives the compact form."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.2,
+    1.2
+   ]
+  },
+  {
+   "id": "trig-derivatives-9f2c0e",
+   "skill": "trig-derivatives",
+   "difficulty": 3,
+   "statement": "Find the derivative of $f(x) = \\frac{\\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)} + 1}$.",
+   "checker": "equiv",
+   "answer": "cos(x)/(cos(x)+1)+sin(x)^2/(cos(x)+1)^2",
+   "hints": [
+    "Use the quotient rule: $\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^2}$.",
+    "After differentiating, look for $\\sin^2 x + \\cos^2 x = 1$ to simplify."
+   ],
+   "solution": [
+    "Apply the rule and simplify: $f'(x) = \\frac{1}{\\cos{\\left(x \\right)} + 1}$.",
+    "Using $\\sin^2 x + \\cos^2 x = 1$ where it appears gives the compact form."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "trig-derivatives-e32193",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\sin{\\left(x \\right)} \\cos{\\left(x \\right)}$. Find the exact value of $f'\\left(\\frac{\\pi}{6}\\right)$.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "Differentiate first, then substitute the angle.",
+    "$f'(x) = - \\sin^{2}{\\left(x \\right)} + \\cos^{2}{\\left(x \\right)}$; recall the exact values of sine and cosine at $\\frac{\\pi}{6}$."
+   ],
+   "solution": [
+    "$f'(x) = - \\sin^{2}{\\left(x \\right)} + \\cos^{2}{\\left(x \\right)}$.",
+    "$f'(\\frac{\\pi}{6}) = \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-1f7ccf",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\sec{\\left(x \\right)}$. Find the exact value of $f'\\left(\\frac{\\pi}{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "2*sqrt(3)",
+   "hints": [
+    "Differentiate first, then substitute the angle.",
+    "$f'(x) = \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}$; recall the exact values of sine and cosine at $\\frac{\\pi}{3}$."
+   ],
+   "solution": [
+    "$f'(x) = \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}$.",
+    "$f'(\\frac{\\pi}{3}) = 2 \\sqrt{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-085837",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Let $f(x) = x \\cos{\\left(x \\right)}$. Find the exact value of $f'\\left(\\frac{\\pi}{4}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)*(4-pi)/8",
+   "hints": [
+    "Differentiate first, then substitute the angle.",
+    "$f'(x) = - x \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}$; recall the exact values of sine and cosine at $\\frac{\\pi}{4}$."
+   ],
+   "solution": [
+    "$f'(x) = - x \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}$.",
+    "$f'(\\frac{\\pi}{4}) = \\frac{\\sqrt{2} \\left(4 - \\pi\\right)}{8}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-7c96b4",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\tan{\\left(x \\right)}$. Find the exact value of $f'\\left(0\\right)$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Differentiate first, then substitute the angle.",
+    "$f'(x) = \\tan^{2}{\\left(x \\right)} + 1$; recall the exact values of sine and cosine at $0$."
+   ],
+   "solution": [
+    "$f'(x) = \\tan^{2}{\\left(x \\right)} + 1$.",
+    "$f'(0) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-32efb2",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Let $f(x) = x + \\sin{\\left(x \\right)}$. Find the exact value of $f'\\left(\\pi\\right)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Differentiate first, then substitute the angle.",
+    "$f'(x) = \\cos{\\left(x \\right)} + 1$; recall the exact values of sine and cosine at $\\pi$."
+   ],
+   "solution": [
+    "$f'(x) = \\cos{\\left(x \\right)} + 1$.",
+    "$f'(\\pi) = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-dfbc1b",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\tan{\\left(x \\right)}$. Find the exact value of $f'\\left(\\frac{\\pi}{6}\\right)$.",
+   "checker": "numeric",
+   "answer": "4/3",
+   "hints": [
+    "Differentiate first, then substitute the angle.",
+    "$f'(x) = \\tan^{2}{\\left(x \\right)} + 1$; recall the exact values of sine and cosine at $\\frac{\\pi}{6}$."
+   ],
+   "solution": [
+    "$f'(x) = \\tan^{2}{\\left(x \\right)} + 1$.",
+    "$f'(\\frac{\\pi}{6}) = \\frac{4}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-2892a0",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\sin{\\left(x \\right)} + 2 \\cos{\\left(x \\right)}$. Find the exact value of $f'\\left(\\frac{\\pi}{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "1/2-sqrt(3)",
+   "hints": [
+    "Differentiate first, then substitute the angle.",
+    "$f'(x) = - 2 \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}$; recall the exact values of sine and cosine at $\\frac{\\pi}{3}$."
+   ],
+   "solution": [
+    "$f'(x) = - 2 \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}$.",
+    "$f'(\\frac{\\pi}{3}) = \\frac{1}{2} - \\sqrt{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-141e01",
+   "skill": "trig-derivatives",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to $y = x \\sin{\\left(x \\right)}$ at the point where $x = \\frac{\\pi}{4}$.",
+   "checker": "equiv",
+   "answer": "sqrt(2)*pi*x/8+sqrt(2)*x/2-sqrt(2)*pi^2/32",
+   "hints": [
+    "Slope $= f'(\\frac{\\pi}{4})$; the point is $(\\frac{\\pi}{4}, f(\\frac{\\pi}{4}))$.",
+    "$f'(x) = x \\cos{\\left(x \\right)} + \\sin{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "$f(\\frac{\\pi}{4}) = \\frac{\\sqrt{2} \\pi}{8}$ and $f'(\\frac{\\pi}{4}) = \\frac{\\sqrt{2} \\left(\\pi + 4\\right)}{8}$.",
+    "$y = \\frac{\\sqrt{2} \\pi}{8} + \\frac{\\sqrt{2} \\left(\\pi + 4\\right)}{8}\\left(x - \\frac{\\pi}{4}\\right)$, i.e. $y = \\frac{\\sqrt{2} \\pi x}{8} + \\frac{\\sqrt{2} x}{2} - \\frac{\\sqrt{2} \\pi^{2}}{32}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "trig-derivatives-ad72ec",
+   "skill": "trig-derivatives",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to $y = \\tan{\\left(x \\right)}$ at the point where $x = 0$.",
+   "checker": "equiv",
+   "answer": "x",
+   "hints": [
+    "Slope $= f'(0)$; the point is $(0, f(0))$.",
+    "$f'(x) = \\tan^{2}{\\left(x \\right)} + 1$."
+   ],
+   "solution": [
+    "$f(0) = 0$ and $f'(0) = 1$.",
+    "$y = 0 + 1\\left(x - 0\\right)$, i.e. $y = x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "trig-derivatives-2d5bea",
+   "skill": "trig-derivatives",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to $y = \\cos{\\left(x \\right)}$ at the point where $x = 0$.",
+   "checker": "equiv",
+   "answer": "1",
+   "hints": [
+    "Slope $= f'(0)$; the point is $(0, f(0))$.",
+    "$f'(x) = - \\sin{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "$f(0) = 1$ and $f'(0) = 0$.",
+    "$y = 1 + 0\\left(x - 0\\right)$, i.e. $y = 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "trig-derivatives-cc04f6",
+   "skill": "trig-derivatives",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to $y = \\sin{\\left(x \\right)}$ at the point where $x = \\frac{\\pi}{3}$.",
+   "checker": "equiv",
+   "answer": "x/2-pi/6+sqrt(3)/2",
+   "hints": [
+    "Slope $= f'(\\frac{\\pi}{3})$; the point is $(\\frac{\\pi}{3}, f(\\frac{\\pi}{3}))$.",
+    "$f'(x) = \\cos{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "$f(\\frac{\\pi}{3}) = \\frac{\\sqrt{3}}{2}$ and $f'(\\frac{\\pi}{3}) = \\frac{1}{2}$.",
+    "$y = \\frac{\\sqrt{3}}{2} + \\frac{1}{2}\\left(x - \\frac{\\pi}{3}\\right)$, i.e. $y = \\frac{x}{2} - \\frac{\\pi}{6} + \\frac{\\sqrt{3}}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "trig-derivatives-5963c0",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 0} \\frac{\\tan{\\left(6 x \\right)}}{x}$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Use the special limits $\\lim_{\\theta \\to 0} \\dfrac{\\sin\\theta}{\\theta} = 1$ and $\\lim_{\\theta \\to 0} \\dfrac{\\cos\\theta - 1}{\\theta} = 0$.",
+    "Rescale the variable so the argument of the trig function matches the denominator."
+   ],
+   "solution": [
+    "Rewrite: $\\tan 6x = \\dfrac{\\sin 6x}{\\cos 6x}$ and $\\cos 6x \\to 1$, so this behaves like $\\dfrac{\\sin 6x}{x} \\to 6$.",
+    "So the limit is $6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-db6398",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 0} \\frac{\\cos{\\left(x \\right)} - 1}{3 x}$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Use the special limits $\\lim_{\\theta \\to 0} \\dfrac{\\sin\\theta}{\\theta} = 1$ and $\\lim_{\\theta \\to 0} \\dfrac{\\cos\\theta - 1}{\\theta} = 0$.",
+    "Rescale the variable so the argument of the trig function matches the denominator."
+   ],
+   "solution": [
+    "Rewrite: $\\dfrac{1 - \\cos\\theta}{\\theta} \\to 0$.",
+    "So the limit is $0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-342a78",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 0} \\frac{\\tan{\\left(2 x \\right)}}{x}$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Use the special limits $\\lim_{\\theta \\to 0} \\dfrac{\\sin\\theta}{\\theta} = 1$ and $\\lim_{\\theta \\to 0} \\dfrac{\\cos\\theta - 1}{\\theta} = 0$.",
+    "Rescale the variable so the argument of the trig function matches the denominator."
+   ],
+   "solution": [
+    "Rewrite: $\\tan 2x = \\dfrac{\\sin 2x}{\\cos 2x}$ and $\\cos 2x \\to 1$, so this behaves like $\\dfrac{\\sin 2x}{x} \\to 2$.",
+    "So the limit is $2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-3e3a62",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 0} \\frac{\\sin^{2}{\\left(x \\right)}}{x}$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Use the special limits $\\lim_{\\theta \\to 0} \\dfrac{\\sin\\theta}{\\theta} = 1$ and $\\lim_{\\theta \\to 0} \\dfrac{\\cos\\theta - 1}{\\theta} = 0$.",
+    "Rescale the variable so the argument of the trig function matches the denominator."
+   ],
+   "solution": [
+    "Rewrite: $\\dfrac{\\sin^2 x}{x} = \\sin x \\cdot \\dfrac{\\sin x}{x} \\to 0 \\cdot 1$.",
+    "So the limit is $0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-4935a6",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 0} \\frac{\\sin{\\left(5 x \\right)}}{x}$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Use the special limits $\\lim_{\\theta \\to 0} \\dfrac{\\sin\\theta}{\\theta} = 1$ and $\\lim_{\\theta \\to 0} \\dfrac{\\cos\\theta - 1}{\\theta} = 0$.",
+    "Rescale the variable so the argument of the trig function matches the denominator."
+   ],
+   "solution": [
+    "Rewrite: $\\dfrac{\\sin 5x}{x} = 5\\cdot\\dfrac{\\sin 5x}{5x}$ and $\\dfrac{\\sin \\theta}{\\theta} \\to 1$.",
+    "So the limit is $5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-db9975",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 0} \\frac{1 - \\cos{\\left(3 x \\right)}}{x}$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Use the special limits $\\lim_{\\theta \\to 0} \\dfrac{\\sin\\theta}{\\theta} = 1$ and $\\lim_{\\theta \\to 0} \\dfrac{\\cos\\theta - 1}{\\theta} = 0$.",
+    "Rescale the variable so the argument of the trig function matches the denominator."
+   ],
+   "solution": [
+    "Rewrite: $\\dfrac{1 - \\cos\\theta}{\\theta} \\to 0$.",
+    "So the limit is $0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-f02e27",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "A mass on a spring has position $s(t) = 4 \\sin{\\left(t \\right)} + \\cos{\\left(t \\right)}$. Find its velocity at $t = \\frac{\\pi}{6}$.",
+   "checker": "numeric",
+   "answer": "-1/2+2*sqrt(3)",
+   "hints": [
+    "Velocity is the first derivative of position.",
+    "Differentiate sine and cosine, then substitute the time."
+   ],
+   "solution": [
+    "$v(t) = - \\sin{\\left(t \\right)} + 4 \\cos{\\left(t \\right)}$.",
+    "At $t = \\frac{\\pi}{6}$: $- \\frac{1}{2} + 2 \\sqrt{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-d32d5e",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "A mass on a spring has position $s(t) = 4 \\sin{\\left(t \\right)} + 2 \\cos{\\left(t \\right)}$. Find its acceleration at $t = \\frac{\\pi}{2}$.",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "Acceleration is the second derivative of position.",
+    "Differentiate sine and cosine, then substitute the time."
+   ],
+   "solution": [
+    "$a(t) = - 2 \\left(2 \\sin{\\left(t \\right)} + \\cos{\\left(t \\right)}\\right)$.",
+    "At $t = \\frac{\\pi}{2}$: $-4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-852147",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "A mass on a spring has position $s(t) = 4 \\sin{\\left(t \\right)} + 3 \\cos{\\left(t \\right)}$. Find its velocity at $t = \\frac{\\pi}{2}$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Velocity is the first derivative of position.",
+    "Differentiate sine and cosine, then substitute the time."
+   ],
+   "solution": [
+    "$v(t) = - 3 \\sin{\\left(t \\right)} + 4 \\cos{\\left(t \\right)}$.",
+    "At $t = \\frac{\\pi}{2}$: $-3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-d171af",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "A mass on a spring has position $s(t) = \\sin{\\left(t \\right)} + 2 \\cos{\\left(t \\right)}$. Find its velocity at $t = \\frac{\\pi}{6}$.",
+   "checker": "numeric",
+   "answer": "-1+sqrt(3)/2",
+   "hints": [
+    "Velocity is the first derivative of position.",
+    "Differentiate sine and cosine, then substitute the time."
+   ],
+   "solution": [
+    "$v(t) = - 2 \\sin{\\left(t \\right)} + \\cos{\\left(t \\right)}$.",
+    "At $t = \\frac{\\pi}{6}$: $-1 + \\frac{\\sqrt{3}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-derivatives-9b0304",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Find $f^{(2)}(x)$, the derivative of order $2$, for $f(x) = \\cos{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "-cos(x)",
+   "hints": [
+    "Differentiate repeatedly; sine and cosine cycle with period four.",
+    "Keep careful track of the signs."
+   ],
+   "solution": [
+    "$f'(x) = - \\sin{\\left(x \\right)}$, $f''(x) = - \\cos{\\left(x \\right)}$.",
+    "$f^{(2)}(x) = - \\cos{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-derivatives-c42308",
+   "skill": "trig-derivatives",
+   "difficulty": 2,
+   "statement": "Find $f^{(4)}(x)$, the derivative of order $4$, for $f(x) = \\cos{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "cos(x)",
+   "hints": [
+    "Differentiate repeatedly; sine and cosine cycle with period four.",
+    "Keep careful track of the signs."
+   ],
+   "solution": [
+    "$f'(x) = - \\sin{\\left(x \\right)}$, $f''(x) = - \\cos{\\left(x \\right)}$, $f'''(x) = \\sin{\\left(x \\right)}$.",
+    "$f^{(4)}(x) = \\cos{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-derivatives-b8fbc9",
+   "skill": "trig-derivatives",
+   "difficulty": 3,
+   "statement": "Find $f^{(2)}(x)$, the derivative of order $2$, for $f(x) = - x^{2} + 3 \\sin{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "-(3*sin(x)+2)",
+   "hints": [
+    "Differentiate repeatedly; sine and cosine cycle with period four.",
+    "Keep careful track of the signs."
+   ],
+   "solution": [
+    "$f'(x) = - 2 x + 3 \\cos{\\left(x \\right)}$, $f''(x) = - (3 \\sin{\\left(x \\right)} + 2)$.",
+    "$f^{(2)}(x) = - (3 \\sin{\\left(x \\right)} + 2)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-derivatives-23c368",
+   "skill": "trig-derivatives",
+   "difficulty": 3,
+   "statement": "Find $f^{(4)}(x)$, the derivative of order $4$, for $f(x) = x \\cos{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "x*cos(x)+4*sin(x)",
+   "hints": [
+    "Differentiate repeatedly; sine and cosine cycle with period four.",
+    "Keep careful track of the signs."
+   ],
+   "solution": [
+    "$f'(x) = - x \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}$, $f''(x) = - (x \\cos{\\left(x \\right)} + 2 \\sin{\\left(x \\right)})$, $f'''(x) = x \\sin{\\left(x \\right)} - 3 \\cos{\\left(x \\right)}$.",
+    "$f^{(4)}(x) = x \\cos{\\left(x \\right)} + 4 \\sin{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-derivatives-470f90",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Which expression is the derivative of $f(x) = \\sec{\\left(x \\right)}$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Recall the six basic trig derivatives; the co-functions (cos, cot, csc) all get a minus sign.",
+    "Look up $\\frac{d}{dx}\\sec{\\left(x \\right)}$ in the table."
+   ],
+   "solution": [
+    "$\\frac{d}{dx}\\sec{\\left(x \\right)} = \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}$.",
+    "This is one of the six standard trig derivatives worth memorizing."
+   ],
+   "verified": true,
+   "choices": [
+    "$- \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}$",
+    "$\\sec^{2}{\\left(x \\right)}$",
+    "$\\tan{\\left(x \\right)} \\sec{\\left(x \\right)}$",
+    "$\\tan^{2}{\\left(x \\right)}$"
+   ]
+  },
+  {
+   "id": "trig-derivatives-0388ab",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Which expression is the derivative of $f(x) = \\cos{\\left(x \\right)}$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Recall the six basic trig derivatives; the co-functions (cos, cot, csc) all get a minus sign.",
+    "Look up $\\frac{d}{dx}\\cos{\\left(x \\right)}$ in the table."
+   ],
+   "solution": [
+    "$\\frac{d}{dx}\\cos{\\left(x \\right)} = - \\sin{\\left(x \\right)}$.",
+    "This is one of the six standard trig derivatives worth memorizing."
+   ],
+   "verified": true,
+   "choices": [
+    "$- \\cos{\\left(x \\right)}$",
+    "$- \\sin{\\left(x \\right)}$",
+    "$\\sin{\\left(x \\right)}$",
+    "$\\sec{\\left(x \\right)}$"
+   ]
+  },
+  {
+   "id": "trig-derivatives-81440d",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Which expression is the derivative of $f(x) = \\cot{\\left(x \\right)}$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Recall the six basic trig derivatives; the co-functions (cos, cot, csc) all get a minus sign.",
+    "Look up $\\frac{d}{dx}\\cot{\\left(x \\right)}$ in the table."
+   ],
+   "solution": [
+    "$\\frac{d}{dx}\\cot{\\left(x \\right)} = - \\cot^{2}{\\left(x \\right)} - 1$.",
+    "This is one of the six standard trig derivatives worth memorizing."
+   ],
+   "verified": true,
+   "choices": [
+    "$- \\sec^{2}{\\left(x \\right)}$",
+    "$\\csc^{2}{\\left(x \\right)}$",
+    "$\\cot{\\left(x \\right)} \\csc{\\left(x \\right)}$",
+    "$- \\cot^{2}{\\left(x \\right)} - 1$"
+   ]
+  },
+  {
+   "id": "trig-derivatives-f26573",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Which expression is the derivative of $f(x) = \\tan{\\left(x \\right)}$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Recall the six basic trig derivatives; the co-functions (cos, cot, csc) all get a minus sign.",
+    "Look up $\\frac{d}{dx}\\tan{\\left(x \\right)}$ in the table."
+   ],
+   "solution": [
+    "$\\frac{d}{dx}\\tan{\\left(x \\right)} = \\tan^{2}{\\left(x \\right)} + 1$.",
+    "This is one of the six standard trig derivatives worth memorizing."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\sec{\\left(x \\right)}$",
+    "$\\tan^{2}{\\left(x \\right)} + 1$",
+    "$\\tan{\\left(x \\right)} \\sec{\\left(x \\right)}$",
+    "$- \\sec^{2}{\\left(x \\right)}$"
+   ]
+  },
+  {
+   "id": "trig-derivatives-c83826",
+   "skill": "trig-derivatives",
+   "difficulty": 1,
+   "statement": "Which expression is the derivative of $f(x) = \\csc{\\left(x \\right)}$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Recall the six basic trig derivatives; the co-functions (cos, cot, csc) all get a minus sign.",
+    "Look up $\\frac{d}{dx}\\csc{\\left(x \\right)}$ in the table."
+   ],
+   "solution": [
+    "$\\frac{d}{dx}\\csc{\\left(x \\right)} = - \\cot{\\left(x \\right)} \\csc{\\left(x \\right)}$.",
+    "This is one of the six standard trig derivatives worth memorizing."
+   ],
+   "verified": true,
+   "choices": [
+    "$- \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}$",
+    "$- \\csc^{2}{\\left(x \\right)}$",
+    "$\\cot{\\left(x \\right)} \\csc{\\left(x \\right)}$",
+    "$- \\cot{\\left(x \\right)} \\csc{\\left(x \\right)}$"
+   ]
+  }
+ ]
+}

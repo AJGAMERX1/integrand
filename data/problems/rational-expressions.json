@@ -1,0 +1,1334 @@
+{
+ "skill": "rational-expressions",
+ "problems": [
+  {
+   "id": "rational-expressions-ae5ec5",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Simplify $\\dfrac{x^{2} - 64}{x + 8}$ (assume the denominator is not zero).",
+   "checker": "equiv",
+   "answer": "x-8",
+   "hints": [
+    "Factor the numerator as a difference of squares.",
+    "$x^2 - 64 = (x - 8)(x + 8)$; cancel the common factor."
+   ],
+   "solution": [
+    "$x^2 - 64 = (x - 8)(x + 8)$.",
+    "Cancel $(x + 8)$: the result is $x - 8$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-3acbb2",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{x^{2} + 5 x + 6}{x^{2} - x - 6}$.",
+   "checker": "equiv",
+   "answer": "(x+3)/(x-3)",
+   "hints": [
+    "Factor the top and the bottom separately.",
+    "Both contain the factor $(x + 2)$."
+   ],
+   "solution": [
+    "Numerator: $(x + 2)(x + 3)$. Denominator: $(x + 2)(x - 3)$.",
+    "Cancel the common factor: $\\frac{x + 3}{x - 3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-b31949",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Combine into a single fraction: $\\dfrac{4}{x} + \\dfrac{5}{x + 4}$.",
+   "checker": "equiv",
+   "answer": "(9*x+16)/(x*(x+4))",
+   "hints": [
+    "The common denominator is the product of the two denominators.",
+    "Multiply the first fraction by $\\dfrac{x + 4}{x + 4}$ and the second by $\\dfrac{x}{x}$."
+   ],
+   "solution": [
+    "$\\dfrac{4(x + 4)}{x(x + 4)} + \\dfrac{5x}{x(x + 4)}$.",
+    "Add the numerators: $\\dfrac{9 x + 16}{x(x + 4)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-562c2d",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{1}{x - 4} - \\dfrac{1}{x + 4}$ into one fraction.",
+   "checker": "equiv",
+   "answer": "8/(x^2-16)",
+   "hints": [
+    "Use the product of the denominators as the common denominator.",
+    "Subtract the new numerators carefully (watch the signs)."
+   ],
+   "solution": [
+    "$\\dfrac{(x + 4) - (x - 4)}{(x - 4)(x + 4)}$.",
+    "Numerator simplifies to $8$: result $\\frac{8}{x^{2} - 16}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-d9f09c",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Divide and simplify: $\\dfrac{x + 2}{x + 4} \\div \\dfrac{x + 2}{x + 5}$.",
+   "checker": "equiv",
+   "answer": "(x+5)/(x+4)",
+   "hints": [
+    "Dividing by a fraction is multiplying by its reciprocal.",
+    "After flipping, the factor $(x + 2)$ cancels."
+   ],
+   "solution": [
+    "Flip the second fraction if dividing, then multiply across.",
+    "Cancel the common factor: $\\frac{x + 5}{x + 4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-112fb9",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "For which values of $x$ is $\\dfrac{5}{x^{2} - 10 x + 21}$ undefined? Enter the sum of those values.",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "A fraction is undefined where its denominator is zero.",
+    "Factor the denominator: $(x - 7)(x - 3)$."
+   ],
+   "solution": [
+    "Set $x^{2} - 10 x + 21 = 0$: $(x - 7)(x - 3) = 0$.",
+    "So $x = 3$ or $x = 7$. Their sum is $10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-734c39",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Find the domain of $f(x) = \\dfrac{\\sqrt{x - 3}}{x + 2}$ in interval notation.",
+   "checker": "interval",
+   "answer": "[3,inf)",
+   "hints": [
+    "Two restrictions: the square root needs a non-negative inside, and the denominator cannot be zero.",
+    "The root needs $x \\ge 3$; the denominator is zero at $x = -2$. Is that excluded already?"
+   ],
+   "solution": [
+    "Square root: $x - 3 \\ge 0$, so $x \\ge 3$.",
+    "Denominator: $x \\ne -2$, but $-2 < 3$ so it is already outside the allowed set.",
+    "Domain: $[3, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-3a1382",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "If $f(x) = \\dfrac{4 x - 3}{x^{2} - 5}$, find $f(3)$. Give an exact fraction.",
+   "checker": "numeric",
+   "answer": "9/4",
+   "hints": [
+    "Substitute $x = 3$ into numerator and denominator separately.",
+    "Reduce the fraction if possible."
+   ],
+   "solution": [
+    "Numerator: $4(3) + (-3) = 9$. Denominator: $(3)^2 + (-5) = 4$.",
+    "$f(3) = \\frac{9}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-63fd73",
+   "skill": "rational-expressions",
+   "difficulty": 3,
+   "statement": "Simplify the complex fraction $\\dfrac{1 + \\dfrac{4}{x}}{1 - \\dfrac{16}{x^2}}$.",
+   "checker": "equiv",
+   "answer": "x/(x-4)",
+   "hints": [
+    "Multiply numerator and denominator by $x^2$ to clear the inner fractions.",
+    "That gives $\\dfrac{x^2 + 4x}{x^2 - 16}$; now factor and cancel."
+   ],
+   "solution": [
+    "Multiply top and bottom by $x^2$: $\\dfrac{x^2 + 4x}{x^2 - 16}$.",
+    "Factor: $\\dfrac{x(x + 4)}{(x - 4)(x + 4)}$.",
+    "Cancel: $\\frac{x}{x - 4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-9803cb",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Which value of $x$ makes $\\dfrac{x^{2} + 1}{x + 2}$ undefined?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Division by zero is undefined; look at the denominator only.",
+    "Solve $x + 2 = 0$."
+   ],
+   "solution": [
+    "The denominator $x + 2$ is zero exactly when $x = -2$.",
+    "The numerator does not matter for where the expression is undefined."
+   ],
+   "verified": true,
+   "choices": [
+    "0",
+    "-1",
+    "2",
+    "-2"
+   ]
+  },
+  {
+   "id": "rational-expressions-39fed6",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Simplify $\\dfrac{x^{3} - 2 x^{2}}{x^{2}}$ for $x \\ne 0$.",
+   "checker": "equiv",
+   "answer": "x-2",
+   "hints": [
+    "Factor the greatest common power of $x$ out of the numerator.",
+    "The numerator is $x^{2}(x - 2)$."
+   ],
+   "solution": [
+    "$x^{3} - 2 x^{2} = x^{2}(x - 2)$.",
+    "Cancel $x^{2}$: $x - 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-4e5383",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Simplify $\\dfrac{x^{2} - 64}{x - 8}$ (assume the denominator is not zero).",
+   "checker": "equiv",
+   "answer": "x+8",
+   "hints": [
+    "Factor the numerator as a difference of squares.",
+    "$x^2 - 64 = (x - 8)(x + 8)$; cancel the common factor."
+   ],
+   "solution": [
+    "$x^2 - 64 = (x - 8)(x + 8)$.",
+    "Cancel $(x - 8)$: the result is $x + 8$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-d62e52",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{x^{2} + 6 x + 5}{x^{2} + 2 x - 15}$.",
+   "checker": "equiv",
+   "answer": "(x+1)/(x-3)",
+   "hints": [
+    "Factor the top and the bottom separately.",
+    "Both contain the factor $(x + 5)$."
+   ],
+   "solution": [
+    "Numerator: $(x + 5)(x + 1)$. Denominator: $(x + 5)(x - 3)$.",
+    "Cancel the common factor: $\\frac{x + 1}{x - 3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-7d4262",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Combine into a single fraction: $\\dfrac{-2}{x} + \\dfrac{2}{x + 5}$.",
+   "checker": "equiv",
+   "answer": "-10/(x*(x+5))",
+   "hints": [
+    "The common denominator is the product of the two denominators.",
+    "Multiply the first fraction by $\\dfrac{x + 5}{x + 5}$ and the second by $\\dfrac{x}{x}$."
+   ],
+   "solution": [
+    "$\\dfrac{-2(x + 5)}{x(x + 5)} + \\dfrac{2x}{x(x + 5)}$.",
+    "Add the numerators: $\\dfrac{-10}{x(x + 5)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-5ffae1",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{1}{x + 3} - \\dfrac{1}{x + 5}$ into one fraction.",
+   "checker": "equiv",
+   "answer": "2/(x^2+8*x+15)",
+   "hints": [
+    "Use the product of the denominators as the common denominator.",
+    "Subtract the new numerators carefully (watch the signs)."
+   ],
+   "solution": [
+    "$\\dfrac{(x + 5) - (x + 3)}{(x + 3)(x + 5)}$.",
+    "Numerator simplifies to $2$: result $\\frac{2}{x^{2} + 8 x + 15}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-848381",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Find the domain of $f(x) = \\dfrac{\\sqrt{x - 4}}{x + 2}$ in interval notation.",
+   "checker": "interval",
+   "answer": "[4,inf)",
+   "hints": [
+    "Two restrictions: the square root needs a non-negative inside, and the denominator cannot be zero.",
+    "The root needs $x \\ge 4$; the denominator is zero at $x = -2$. Is that excluded already?"
+   ],
+   "solution": [
+    "Square root: $x - 4 \\ge 0$, so $x \\ge 4$.",
+    "Denominator: $x \\ne -2$, but $-2 < 4$ so it is already outside the allowed set.",
+    "Domain: $[4, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-d9863f",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "If $f(x) = \\dfrac{4 x + 3}{x^{2} - 3}$, find $f(-3)$. Give an exact fraction.",
+   "checker": "numeric",
+   "answer": "-3/2",
+   "hints": [
+    "Substitute $x = -3$ into numerator and denominator separately.",
+    "Reduce the fraction if possible."
+   ],
+   "solution": [
+    "Numerator: $4(-3) + (3) = -9$. Denominator: $(-3)^2 + (-3) = 6$.",
+    "$f(-3) = - \\frac{3}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-0cb145",
+   "skill": "rational-expressions",
+   "difficulty": 3,
+   "statement": "Simplify the complex fraction $\\dfrac{1 + \\dfrac{1}{x}}{1 - \\dfrac{1}{x^2}}$.",
+   "checker": "equiv",
+   "answer": "x/(x-1)",
+   "hints": [
+    "Multiply numerator and denominator by $x^2$ to clear the inner fractions.",
+    "That gives $\\dfrac{x^2 + 1x}{x^2 - 1}$; now factor and cancel."
+   ],
+   "solution": [
+    "Multiply top and bottom by $x^2$: $\\dfrac{x^2 + 1x}{x^2 - 1}$.",
+    "Factor: $\\dfrac{x(x + 1)}{(x - 1)(x + 1)}$.",
+    "Cancel: $\\frac{x}{x - 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-c50f6c",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Simplify $\\dfrac{x^{2} - 4 x}{x^{1}}$ for $x \\ne 0$.",
+   "checker": "equiv",
+   "answer": "x-4",
+   "hints": [
+    "Factor the greatest common power of $x$ out of the numerator.",
+    "The numerator is $x^{1}(x - 4)$."
+   ],
+   "solution": [
+    "$x^{2} - 4 x = x^{1}(x - 4)$.",
+    "Cancel $x^{1}$: $x - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-a7af85",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{x^{2} + 5 x + 4}{x^{2} + 6 x + 5}$.",
+   "checker": "equiv",
+   "answer": "(x+4)/(x+5)",
+   "hints": [
+    "Factor the top and the bottom separately.",
+    "Both contain the factor $(x + 1)$."
+   ],
+   "solution": [
+    "Numerator: $(x + 1)(x + 4)$. Denominator: $(x + 1)(x + 5)$.",
+    "Cancel the common factor: $\\frac{x + 4}{x + 5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-d04648",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Combine into a single fraction: $\\dfrac{-4}{x} + \\dfrac{3}{x + 6}$.",
+   "checker": "equiv",
+   "answer": "(-x-24)/(x*(x+6))",
+   "hints": [
+    "The common denominator is the product of the two denominators.",
+    "Multiply the first fraction by $\\dfrac{x + 6}{x + 6}$ and the second by $\\dfrac{x}{x}$."
+   ],
+   "solution": [
+    "$\\dfrac{-4(x + 6)}{x(x + 6)} + \\dfrac{3x}{x(x + 6)}$.",
+    "Add the numerators: $\\dfrac{- x - 24}{x(x + 6)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-655d94",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{1}{x - 2} - \\dfrac{1}{x - 5}$ into one fraction.",
+   "checker": "equiv",
+   "answer": "-3/(x^2-7*x+10)",
+   "hints": [
+    "Use the product of the denominators as the common denominator.",
+    "Subtract the new numerators carefully (watch the signs)."
+   ],
+   "solution": [
+    "$\\dfrac{(x - 5) - (x - 2)}{(x - 2)(x - 5)}$.",
+    "Numerator simplifies to $-3$: result $- \\frac{3}{x^{2} - 7 x + 10}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-8254a7",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Divide and simplify: $\\dfrac{x - 4}{x + 2} \\div \\dfrac{x - 4}{x + 3}$.",
+   "checker": "equiv",
+   "answer": "(x+3)/(x+2)",
+   "hints": [
+    "Dividing by a fraction is multiplying by its reciprocal.",
+    "After flipping, the factor $(x - 4)$ cancels."
+   ],
+   "solution": [
+    "Flip the second fraction if dividing, then multiply across.",
+    "Cancel the common factor: $\\frac{x + 3}{x + 2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-21b4c5",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "For which values of $x$ is $\\dfrac{2 x}{x^{2} - x - 6}$ undefined? Enter the sum of those values.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "A fraction is undefined where its denominator is zero.",
+    "Factor the denominator: $(x + 2)(x - 3)$."
+   ],
+   "solution": [
+    "Set $x^{2} - x - 6 = 0$: $(x + 2)(x - 3) = 0$.",
+    "So $x = -2$ or $x = 3$. Their sum is $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-cf629b",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Find the domain of $f(x) = \\dfrac{\\sqrt{x - 6}}{x + 3}$ in interval notation.",
+   "checker": "interval",
+   "answer": "[6,inf)",
+   "hints": [
+    "Two restrictions: the square root needs a non-negative inside, and the denominator cannot be zero.",
+    "The root needs $x \\ge 6$; the denominator is zero at $x = -3$. Is that excluded already?"
+   ],
+   "solution": [
+    "Square root: $x - 6 \\ge 0$, so $x \\ge 6$.",
+    "Denominator: $x \\ne -3$, but $-3 < 6$ so it is already outside the allowed set.",
+    "Domain: $[6, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-9a6f1c",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "If $f(x) = \\dfrac{3 - 5 x}{x^{2} - 1}$, find $f(2)$. Give an exact fraction.",
+   "checker": "numeric",
+   "answer": "-7/3",
+   "hints": [
+    "Substitute $x = 2$ into numerator and denominator separately.",
+    "Reduce the fraction if possible."
+   ],
+   "solution": [
+    "Numerator: $-5(2) + (3) = -7$. Denominator: $(2)^2 + (-1) = 3$.",
+    "$f(2) = - \\frac{7}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-5eb3f5",
+   "skill": "rational-expressions",
+   "difficulty": 3,
+   "statement": "Simplify the complex fraction $\\dfrac{1 + \\dfrac{2}{x}}{1 - \\dfrac{4}{x^2}}$.",
+   "checker": "equiv",
+   "answer": "x/(x-2)",
+   "hints": [
+    "Multiply numerator and denominator by $x^2$ to clear the inner fractions.",
+    "That gives $\\dfrac{x^2 + 2x}{x^2 - 4}$; now factor and cancel."
+   ],
+   "solution": [
+    "Multiply top and bottom by $x^2$: $\\dfrac{x^2 + 2x}{x^2 - 4}$.",
+    "Factor: $\\dfrac{x(x + 2)}{(x - 2)(x + 2)}$.",
+    "Cancel: $\\frac{x}{x - 2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-2362e8",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Which value of $x$ makes $\\dfrac{x + 2}{\\left(x + 6\\right)^{2}}$ undefined?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Division by zero is undefined; look at the denominator only.",
+    "Solve $\\left(x + 6\\right)^{2} = 0$."
+   ],
+   "solution": [
+    "The denominator $\\left(x + 6\\right)^{2}$ is zero exactly when $x = -6$.",
+    "The numerator does not matter for where the expression is undefined."
+   ],
+   "verified": true,
+   "choices": [
+    "-6",
+    "0",
+    "6",
+    "-5"
+   ]
+  },
+  {
+   "id": "rational-expressions-718ea4",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Simplify $\\dfrac{x^{3} + 2 x^{2}}{x^{2}}$ for $x \\ne 0$.",
+   "checker": "equiv",
+   "answer": "x+2",
+   "hints": [
+    "Factor the greatest common power of $x$ out of the numerator.",
+    "The numerator is $x^{2}(x + 2)$."
+   ],
+   "solution": [
+    "$x^{3} + 2 x^{2} = x^{2}(x + 2)$.",
+    "Cancel $x^{2}$: $x + 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-34d90a",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Combine into a single fraction: $\\dfrac{-4}{x} + \\dfrac{-3}{x + 6}$.",
+   "checker": "equiv",
+   "answer": "(-7*x-24)/(x*(x+6))",
+   "hints": [
+    "The common denominator is the product of the two denominators.",
+    "Multiply the first fraction by $\\dfrac{x + 6}{x + 6}$ and the second by $\\dfrac{x}{x}$."
+   ],
+   "solution": [
+    "$\\dfrac{-4(x + 6)}{x(x + 6)} + \\dfrac{-3x}{x(x + 6)}$.",
+    "Add the numerators: $\\dfrac{- 7 x - 24}{x(x + 6)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-86a089",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{1}{x + 3} - \\dfrac{1}{x + 2}$ into one fraction.",
+   "checker": "equiv",
+   "answer": "-1/(x^2+5*x+6)",
+   "hints": [
+    "Use the product of the denominators as the common denominator.",
+    "Subtract the new numerators carefully (watch the signs)."
+   ],
+   "solution": [
+    "$\\dfrac{(x + 2) - (x + 3)}{(x + 3)(x + 2)}$.",
+    "Numerator simplifies to $-1$: result $- \\frac{1}{x^{2} + 5 x + 6}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-d986dd",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Multiply and simplify: $\\dfrac{x + 2}{x + 1} \\cdot \\dfrac{x + 1}{x - 2}$.",
+   "checker": "equiv",
+   "answer": "(x+2)/(x-2)",
+   "hints": [
+    "Multiply straight across, then cancel any factor that appears on top and bottom.",
+    "The factor $(x + 1)$ cancels."
+   ],
+   "solution": [
+    "Multiply numerators and denominators.",
+    "Cancel the common factor: $\\frac{x + 2}{x - 2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-593604",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "If $f(x) = \\dfrac{3 x - 4}{x^{2} + 1}$, find $f(3)$. Give an exact fraction.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "Substitute $x = 3$ into numerator and denominator separately.",
+    "Reduce the fraction if possible."
+   ],
+   "solution": [
+    "Numerator: $3(3) + (-4) = 5$. Denominator: $(3)^2 + (1) = 10$.",
+    "$f(3) = \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-716e8f",
+   "skill": "rational-expressions",
+   "difficulty": 3,
+   "statement": "Simplify the complex fraction $\\dfrac{1 + \\dfrac{3}{x}}{1 - \\dfrac{9}{x^2}}$.",
+   "checker": "equiv",
+   "answer": "x/(x-3)",
+   "hints": [
+    "Multiply numerator and denominator by $x^2$ to clear the inner fractions.",
+    "That gives $\\dfrac{x^2 + 3x}{x^2 - 9}$; now factor and cancel."
+   ],
+   "solution": [
+    "Multiply top and bottom by $x^2$: $\\dfrac{x^2 + 3x}{x^2 - 9}$.",
+    "Factor: $\\dfrac{x(x + 3)}{(x - 3)(x + 3)}$.",
+    "Cancel: $\\frac{x}{x - 3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-b05157",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Which value of $x$ makes $\\dfrac{x^{2} + 1}{x + 4}$ undefined?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Division by zero is undefined; look at the denominator only.",
+    "Solve $x + 4 = 0$."
+   ],
+   "solution": [
+    "The denominator $x + 4$ is zero exactly when $x = -4$.",
+    "The numerator does not matter for where the expression is undefined."
+   ],
+   "verified": true,
+   "choices": [
+    "0",
+    "-3",
+    "4",
+    "-4"
+   ]
+  },
+  {
+   "id": "rational-expressions-56e459",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Simplify $\\dfrac{x^{3} + 6 x^{2}}{x^{2}}$ for $x \\ne 0$.",
+   "checker": "equiv",
+   "answer": "x+6",
+   "hints": [
+    "Factor the greatest common power of $x$ out of the numerator.",
+    "The numerator is $x^{2}(x + 6)$."
+   ],
+   "solution": [
+    "$x^{3} + 6 x^{2} = x^{2}(x + 6)$.",
+    "Cancel $x^{2}$: $x + 6$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-c73c30",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{x^{2} - 6 x + 9}{x^{2} - 2 x - 3}$.",
+   "checker": "equiv",
+   "answer": "(x-3)/(x+1)",
+   "hints": [
+    "Factor the top and the bottom separately.",
+    "Both contain the factor $(x - 3)$."
+   ],
+   "solution": [
+    "Numerator: $(x - 3)(x - 3)$. Denominator: $(x - 3)(x + 1)$.",
+    "Cancel the common factor: $\\frac{x - 3}{x + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-2becc5",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Combine into a single fraction: $\\dfrac{-1}{x} + \\dfrac{-4}{x + 3}$.",
+   "checker": "equiv",
+   "answer": "(-5*x-3)/(x*(x+3))",
+   "hints": [
+    "The common denominator is the product of the two denominators.",
+    "Multiply the first fraction by $\\dfrac{x + 3}{x + 3}$ and the second by $\\dfrac{x}{x}$."
+   ],
+   "solution": [
+    "$\\dfrac{-1(x + 3)}{x(x + 3)} + \\dfrac{-4x}{x(x + 3)}$.",
+    "Add the numerators: $\\dfrac{- 5 x - 3}{x(x + 3)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-dcdbcd",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "For which values of $x$ is $\\dfrac{x + 1}{x^{2} - 5 x - 6}$ undefined? Enter the larger value.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "A fraction is undefined where its denominator is zero.",
+    "Factor the denominator: $(x + 1)(x - 6)$."
+   ],
+   "solution": [
+    "Set $x^{2} - 5 x - 6 = 0$: $(x + 1)(x - 6) = 0$.",
+    "So $x = -1$ or $x = 6$. The larger is $6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-0a1d6b",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "If $f(x) = \\dfrac{3 x + 1}{x^{2} - 5}$, find $f(1)$. Give an exact fraction.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "Substitute $x = 1$ into numerator and denominator separately.",
+    "Reduce the fraction if possible."
+   ],
+   "solution": [
+    "Numerator: $3(1) + (1) = 4$. Denominator: $(1)^2 + (-5) = -4$.",
+    "$f(1) = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-2065df",
+   "skill": "rational-expressions",
+   "difficulty": 3,
+   "statement": "Simplify the complex fraction $\\dfrac{1 + \\dfrac{5}{x}}{1 - \\dfrac{25}{x^2}}$.",
+   "checker": "equiv",
+   "answer": "x/(x-5)",
+   "hints": [
+    "Multiply numerator and denominator by $x^2$ to clear the inner fractions.",
+    "That gives $\\dfrac{x^2 + 5x}{x^2 - 25}$; now factor and cancel."
+   ],
+   "solution": [
+    "Multiply top and bottom by $x^2$: $\\dfrac{x^2 + 5x}{x^2 - 25}$.",
+    "Factor: $\\dfrac{x(x + 5)}{(x - 5)(x + 5)}$.",
+    "Cancel: $\\frac{x}{x - 5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-6bbfb2",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Which value of $x$ makes $\\dfrac{x + 2}{\\left(x + 4\\right)^{2}}$ undefined?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Division by zero is undefined; look at the denominator only.",
+    "Solve $\\left(x + 4\\right)^{2} = 0$."
+   ],
+   "solution": [
+    "The denominator $\\left(x + 4\\right)^{2}$ is zero exactly when $x = -4$.",
+    "The numerator does not matter for where the expression is undefined."
+   ],
+   "verified": true,
+   "choices": [
+    "-3",
+    "4",
+    "0",
+    "-4"
+   ]
+  },
+  {
+   "id": "rational-expressions-5a09e5",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Simplify $\\dfrac{x^{2} - 25}{x - 5}$ (assume the denominator is not zero).",
+   "checker": "equiv",
+   "answer": "x+5",
+   "hints": [
+    "Factor the numerator as a difference of squares.",
+    "$x^2 - 25 = (x - 5)(x + 5)$; cancel the common factor."
+   ],
+   "solution": [
+    "$x^2 - 25 = (x - 5)(x + 5)$.",
+    "Cancel $(x - 5)$: the result is $x + 5$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-d46cb0",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Combine into a single fraction: $\\dfrac{-1}{x} + \\dfrac{5}{x + 5}$.",
+   "checker": "equiv",
+   "answer": "(4*x-5)/(x*(x+5))",
+   "hints": [
+    "The common denominator is the product of the two denominators.",
+    "Multiply the first fraction by $\\dfrac{x + 5}{x + 5}$ and the second by $\\dfrac{x}{x}$."
+   ],
+   "solution": [
+    "$\\dfrac{-1(x + 5)}{x(x + 5)} + \\dfrac{5x}{x(x + 5)}$.",
+    "Add the numerators: $\\dfrac{4 x - 5}{x(x + 5)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-0e60a0",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{1}{x - 5} - \\dfrac{1}{x - 1}$ into one fraction.",
+   "checker": "equiv",
+   "answer": "4/(x^2-6*x+5)",
+   "hints": [
+    "Use the product of the denominators as the common denominator.",
+    "Subtract the new numerators carefully (watch the signs)."
+   ],
+   "solution": [
+    "$\\dfrac{(x - 1) - (x - 5)}{(x - 5)(x - 1)}$.",
+    "Numerator simplifies to $4$: result $\\frac{4}{x^{2} - 6 x + 5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-c659aa",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "For which values of $x$ is $\\dfrac{2 x}{x^{2} + 4 x + 3}$ undefined? Enter the sum of those values.",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "A fraction is undefined where its denominator is zero.",
+    "Factor the denominator: $(x + 3)(x + 1)$."
+   ],
+   "solution": [
+    "Set $x^{2} + 4 x + 3 = 0$: $(x + 3)(x + 1) = 0$.",
+    "So $x = -3$ or $x = -1$. Their sum is $-4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-b69350",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Find the domain of $f(x) = \\dfrac{\\sqrt{x + 3}}{x + 6}$ in interval notation.",
+   "checker": "interval",
+   "answer": "[-3,inf)",
+   "hints": [
+    "Two restrictions: the square root needs a non-negative inside, and the denominator cannot be zero.",
+    "The root needs $x \\ge -3$; the denominator is zero at $x = -6$. Is that excluded already?"
+   ],
+   "solution": [
+    "Square root: $x + 3 \\ge 0$, so $x \\ge -3$.",
+    "Denominator: $x \\ne -6$, but $-6 < -3$ so it is already outside the allowed set.",
+    "Domain: $[-3, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-6acb92",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "If $f(x) = \\dfrac{- 4 x - 3}{x^{2} + 5}$, find $f(-1)$. Give an exact fraction.",
+   "checker": "numeric",
+   "answer": "1/6",
+   "hints": [
+    "Substitute $x = -1$ into numerator and denominator separately.",
+    "Reduce the fraction if possible."
+   ],
+   "solution": [
+    "Numerator: $-4(-1) + (-3) = 1$. Denominator: $(-1)^2 + (5) = 6$.",
+    "$f(-1) = \\frac{1}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-4ea8e1",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Which value of $x$ makes $\\dfrac{x + 2}{x + 4}$ undefined?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Division by zero is undefined; look at the denominator only.",
+    "Solve $x + 4 = 0$."
+   ],
+   "solution": [
+    "The denominator $x + 4$ is zero exactly when $x = -4$.",
+    "The numerator does not matter for where the expression is undefined."
+   ],
+   "verified": true,
+   "choices": [
+    "-4",
+    "0",
+    "-3",
+    "4"
+   ]
+  },
+  {
+   "id": "rational-expressions-e3d511",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{x^{2} + 2 x - 8}{x^{2} - 4 x + 4}$.",
+   "checker": "equiv",
+   "answer": "(x+4)/(x-2)",
+   "hints": [
+    "Factor the top and the bottom separately.",
+    "Both contain the factor $(x - 2)$."
+   ],
+   "solution": [
+    "Numerator: $(x - 2)(x + 4)$. Denominator: $(x - 2)(x - 2)$.",
+    "Cancel the common factor: $\\frac{x + 4}{x - 2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-89fbaf",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Combine into a single fraction: $\\dfrac{-2}{x} + \\dfrac{-2}{x + 1}$.",
+   "checker": "equiv",
+   "answer": "2*(-2*x-1)/(x*(x+1))",
+   "hints": [
+    "The common denominator is the product of the two denominators.",
+    "Multiply the first fraction by $\\dfrac{x + 1}{x + 1}$ and the second by $\\dfrac{x}{x}$."
+   ],
+   "solution": [
+    "$\\dfrac{-2(x + 1)}{x(x + 1)} + \\dfrac{-2x}{x(x + 1)}$.",
+    "Add the numerators: $\\dfrac{- 4 x - 2}{x(x + 1)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-0a3935",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{1}{x - 2} - \\dfrac{1}{x - 1}$ into one fraction.",
+   "checker": "equiv",
+   "answer": "1/(x^2-3*x+2)",
+   "hints": [
+    "Use the product of the denominators as the common denominator.",
+    "Subtract the new numerators carefully (watch the signs)."
+   ],
+   "solution": [
+    "$\\dfrac{(x - 1) - (x - 2)}{(x - 2)(x - 1)}$.",
+    "Numerator simplifies to $1$: result $\\frac{1}{x^{2} - 3 x + 2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-280645",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Divide and simplify: $\\dfrac{x + 3}{x + 1} \\div \\dfrac{x + 3}{x + 4}$.",
+   "checker": "equiv",
+   "answer": "(x+4)/(x+1)",
+   "hints": [
+    "Dividing by a fraction is multiplying by its reciprocal.",
+    "After flipping, the factor $(x + 3)$ cancels."
+   ],
+   "solution": [
+    "Flip the second fraction if dividing, then multiply across.",
+    "Cancel the common factor: $\\frac{x + 4}{x + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-51fb84",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "For which values of $x$ is $\\dfrac{5}{x^{2} - 5 x + 4}$ undefined? Enter the sum of those values.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "A fraction is undefined where its denominator is zero.",
+    "Factor the denominator: $(x - 4)(x - 1)$."
+   ],
+   "solution": [
+    "Set $x^{2} - 5 x + 4 = 0$: $(x - 4)(x - 1) = 0$.",
+    "So $x = 1$ or $x = 4$. Their sum is $5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-b6ab4a",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "If $f(x) = \\dfrac{- 4 x - 4}{x^{2} + 4}$, find $f(3)$. Give an exact fraction.",
+   "checker": "numeric",
+   "answer": "-16/13",
+   "hints": [
+    "Substitute $x = 3$ into numerator and denominator separately.",
+    "Reduce the fraction if possible."
+   ],
+   "solution": [
+    "Numerator: $-4(3) + (-4) = -16$. Denominator: $(3)^2 + (4) = 13$.",
+    "$f(3) = - \\frac{16}{13}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-f49c17",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Which value of $x$ makes $\\dfrac{3 x}{\\left(x - 1\\right)^{2}}$ undefined?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Division by zero is undefined; look at the denominator only.",
+    "Solve $\\left(x - 1\\right)^{2} = 0$."
+   ],
+   "solution": [
+    "The denominator $\\left(x - 1\\right)^{2}$ is zero exactly when $x = 1$.",
+    "The numerator does not matter for where the expression is undefined."
+   ],
+   "verified": true,
+   "choices": [
+    "2",
+    "1",
+    "0",
+    "-1"
+   ]
+  },
+  {
+   "id": "rational-expressions-b590ee",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "Simplify $\\dfrac{x^{2} - 1}{x - 1}$ (assume the denominator is not zero).",
+   "checker": "equiv",
+   "answer": "x+1",
+   "hints": [
+    "Factor the numerator as a difference of squares.",
+    "$x^2 - 1 = (x - 1)(x + 1)$; cancel the common factor."
+   ],
+   "solution": [
+    "$x^2 - 1 = (x - 1)(x + 1)$.",
+    "Cancel $(x - 1)$: the result is $x + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-063e12",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{x^{2} - 2 x - 15}{x^{2} + 8 x + 15}$.",
+   "checker": "equiv",
+   "answer": "(x-5)/(x+5)",
+   "hints": [
+    "Factor the top and the bottom separately.",
+    "Both contain the factor $(x + 3)$."
+   ],
+   "solution": [
+    "Numerator: $(x + 3)(x - 5)$. Denominator: $(x + 3)(x + 5)$.",
+    "Cancel the common factor: $\\frac{x - 5}{x + 5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-77ace7",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Combine into a single fraction: $\\dfrac{-4}{x} + \\dfrac{-3}{x + 1}$.",
+   "checker": "equiv",
+   "answer": "(-7*x-4)/(x*(x+1))",
+   "hints": [
+    "The common denominator is the product of the two denominators.",
+    "Multiply the first fraction by $\\dfrac{x + 1}{x + 1}$ and the second by $\\dfrac{x}{x}$."
+   ],
+   "solution": [
+    "$\\dfrac{-4(x + 1)}{x(x + 1)} + \\dfrac{-3x}{x(x + 1)}$.",
+    "Add the numerators: $\\dfrac{- 7 x - 4}{x(x + 1)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-1e637e",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{1}{x - 2} - \\dfrac{1}{x + 3}$ into one fraction.",
+   "checker": "equiv",
+   "answer": "5/(x^2+x-6)",
+   "hints": [
+    "Use the product of the denominators as the common denominator.",
+    "Subtract the new numerators carefully (watch the signs)."
+   ],
+   "solution": [
+    "$\\dfrac{(x + 3) - (x - 2)}{(x - 2)(x + 3)}$.",
+    "Numerator simplifies to $5$: result $\\frac{5}{x^{2} + x - 6}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-0612cf",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Divide and simplify: $\\dfrac{x - 5}{x + 2} \\div \\dfrac{x - 5}{x - 3}$.",
+   "checker": "equiv",
+   "answer": "(x-3)/(x+2)",
+   "hints": [
+    "Dividing by a fraction is multiplying by its reciprocal.",
+    "After flipping, the factor $(x - 5)$ cancels."
+   ],
+   "solution": [
+    "Flip the second fraction if dividing, then multiply across.",
+    "Cancel the common factor: $\\frac{x - 3}{x + 2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "rational-expressions-13ef72",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "For which values of $x$ is $\\dfrac{5}{x^{2} + 8 x + 7}$ undefined? Enter the sum of those values.",
+   "checker": "numeric",
+   "answer": "-8",
+   "hints": [
+    "A fraction is undefined where its denominator is zero.",
+    "Factor the denominator: $(x + 7)(x + 1)$."
+   ],
+   "solution": [
+    "Set $x^{2} + 8 x + 7 = 0$: $(x + 7)(x + 1) = 0$.",
+    "So $x = -7$ or $x = -1$. Their sum is $-8$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-772c7a",
+   "skill": "rational-expressions",
+   "difficulty": 2,
+   "statement": "Find the domain of $f(x) = \\dfrac{\\sqrt{x}}{x + 3}$ in interval notation.",
+   "checker": "interval",
+   "answer": "[0,inf)",
+   "hints": [
+    "Two restrictions: the square root needs a non-negative inside, and the denominator cannot be zero.",
+    "The root needs $x \\ge 0$; the denominator is zero at $x = -3$. Is that excluded already?"
+   ],
+   "solution": [
+    "Square root: $x \\ge 0$, so $x \\ge 0$.",
+    "Denominator: $x \\ne -3$, but $-3 < 0$ so it is already outside the allowed set.",
+    "Domain: $[0, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "rational-expressions-8234ff",
+   "skill": "rational-expressions",
+   "difficulty": 1,
+   "statement": "If $f(x) = \\dfrac{4 x + 1}{x^{2} - 4}$, find $f(1)$. Give an exact fraction.",
+   "checker": "numeric",
+   "answer": "-5/3",
+   "hints": [
+    "Substitute $x = 1$ into numerator and denominator separately.",
+    "Reduce the fraction if possible."
+   ],
+   "solution": [
+    "Numerator: $4(1) + (1) = 5$. Denominator: $(1)^2 + (-4) = -3$.",
+    "$f(1) = - \\frac{5}{3}$."
+   ],
+   "verified": true
+  }
+ ]
+}

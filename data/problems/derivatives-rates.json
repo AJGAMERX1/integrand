@@ -1,0 +1,1014 @@
+{
+ "skill": "derivatives-rates",
+ "problems": [
+  {
+   "id": "derivatives-rates-0bb245",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Use the definition $f'(a) = \\displaystyle\\lim_{h \\to 0} \\dfrac{f(a+h) - f(a)}{h}$ to find $f'(3)$ for $f(x) = 2 x^{2} + x + 1$.",
+   "checker": "numeric",
+   "answer": "13",
+   "hints": [
+    "Write out $f(3+h) - f(3)$ and simplify until a factor of $h$ appears.",
+    "Cancel the $h$, then let $h \\to 0$."
+   ],
+   "solution": [
+    "$\\dfrac{f(3+h) - f(3)}{h}$ simplifies (for $h \\ne 0$) to $2 h + 13$.",
+    "Letting $h \\to 0$ gives $f'(3) = 13$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-e3d80c",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Use the definition $f'(a) = \\displaystyle\\lim_{h \\to 0} \\dfrac{f(a+h) - f(a)}{h}$ to find $f'(3)$ for $f(x) = 3 x^{2} - 4$.",
+   "checker": "numeric",
+   "answer": "18",
+   "hints": [
+    "Write out $f(3+h) - f(3)$ and simplify until a factor of $h$ appears.",
+    "Cancel the $h$, then let $h \\to 0$."
+   ],
+   "solution": [
+    "$\\dfrac{f(3+h) - f(3)}{h}$ simplifies (for $h \\ne 0$) to $3 h + 18$.",
+    "Letting $h \\to 0$ gives $f'(3) = 18$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-c96052",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Use the definition $f'(a) = \\displaystyle\\lim_{h \\to 0} \\dfrac{f(a+h) - f(a)}{h}$ to find $f'(4)$ for $f(x) = 4 x^{2} - 3$.",
+   "checker": "numeric",
+   "answer": "32",
+   "hints": [
+    "Write out $f(4+h) - f(4)$ and simplify until a factor of $h$ appears.",
+    "Cancel the $h$, then let $h \\to 0$."
+   ],
+   "solution": [
+    "$\\dfrac{f(4+h) - f(4)}{h}$ simplifies (for $h \\ne 0$) to $4 h + 32$.",
+    "Letting $h \\to 0$ gives $f'(4) = 32$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-966a1c",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Use the definition $f'(a) = \\displaystyle\\lim_{h \\to 0} \\dfrac{f(a+h) - f(a)}{h}$ to find $f'(2)$ for $f(x) = x^{2} + x + 1$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Write out $f(2+h) - f(2)$ and simplify until a factor of $h$ appears.",
+    "Cancel the $h$, then let $h \\to 0$."
+   ],
+   "solution": [
+    "$\\dfrac{f(2+h) - f(2)}{h}$ simplifies (for $h \\ne 0$) to $h + 5$.",
+    "Letting $h \\to 0$ gives $f'(2) = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-1d4a2a",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Use the definition $f'(a) = \\displaystyle\\lim_{h \\to 0} \\dfrac{f(a+h) - f(a)}{h}$ to find $f'(1)$ for $f(x) = 4 x^{2} - 5$.",
+   "checker": "numeric",
+   "answer": "8",
+   "hints": [
+    "Write out $f(1+h) - f(1)$ and simplify until a factor of $h$ appears.",
+    "Cancel the $h$, then let $h \\to 0$."
+   ],
+   "solution": [
+    "$\\dfrac{f(1+h) - f(1)}{h}$ simplifies (for $h \\ne 0$) to $4 h + 8$.",
+    "Letting $h \\to 0$ gives $f'(1) = 8$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-1af162",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Use the definition $f'(a) = \\displaystyle\\lim_{h \\to 0} \\dfrac{f(a+h) - f(a)}{h}$ to find $f'(1)$ for $f(x) = x^{3} - 3 x$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Write out $f(1+h) - f(1)$ and simplify until a factor of $h$ appears.",
+    "Cancel the $h$, then let $h \\to 0$."
+   ],
+   "solution": [
+    "$\\dfrac{f(1+h) - f(1)}{h}$ simplifies (for $h \\ne 0$) to $h^{2} + 3 h$.",
+    "Letting $h \\to 0$ gives $f'(1) = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-2555e9",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Use the definition $f'(a) = \\displaystyle\\lim_{h \\to 0} \\dfrac{f(a+h) - f(a)}{h}$ to find $f'(2)$ for $f(x) = x^{2} - 4 x$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Write out $f(2+h) - f(2)$ and simplify until a factor of $h$ appears.",
+    "Cancel the $h$, then let $h \\to 0$."
+   ],
+   "solution": [
+    "$\\dfrac{f(2+h) - f(2)}{h}$ simplifies (for $h \\ne 0$) to $h$.",
+    "Letting $h \\to 0$ gives $f'(2) = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-5930d3",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Use the definition $f'(a) = \\displaystyle\\lim_{h \\to 0} \\dfrac{f(a+h) - f(a)}{h}$ to find $f'(4)$ for $f(x) = 2 x^{2} + x + 1$.",
+   "checker": "numeric",
+   "answer": "17",
+   "hints": [
+    "Write out $f(4+h) - f(4)$ and simplify until a factor of $h$ appears.",
+    "Cancel the $h$, then let $h \\to 0$."
+   ],
+   "solution": [
+    "$\\dfrac{f(4+h) - f(4)}{h}$ simplifies (for $h \\ne 0$) to $2 h + 17$.",
+    "Letting $h \\to 0$ gives $f'(4) = 17$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-882659",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Use the definition $f'(a) = \\displaystyle\\lim_{h \\to 0} \\dfrac{f(a+h) - f(a)}{h}$ to find $f'(4)$ for $f(x) = x^{2} + x$.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "Write out $f(4+h) - f(4)$ and simplify until a factor of $h$ appears.",
+    "Cancel the $h$, then let $h \\to 0$."
+   ],
+   "solution": [
+    "$\\dfrac{f(4+h) - f(4)}{h}$ simplifies (for $h \\ne 0$) to $h + 9$.",
+    "Letting $h \\to 0$ gives $f'(4) = 9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-8d5663",
+   "skill": "derivatives-rates",
+   "difficulty": 3,
+   "statement": "Use the definition $f'(a) = \\displaystyle\\lim_{h \\to 0} \\dfrac{f(a+h) - f(a)}{h}$ to find $f'(3)$ for $f(x) = \\frac{4}{x}$.",
+   "checker": "numeric",
+   "answer": "-4/9",
+   "hints": [
+    "Write out $f(3+h) - f(3)$ and simplify until a factor of $h$ appears (rationalize if there is a square root; combine fractions if there is a reciprocal).",
+    "Cancel the $h$, then let $h \\to 0$."
+   ],
+   "solution": [
+    "$\\dfrac{f(3+h) - f(3)}{h}$ simplifies (for $h \\ne 0$) to $- \\frac{4}{3 h + 9}$.",
+    "Letting $h \\to 0$ gives $f'(3) = - \\frac{4}{9}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-51951d",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Use the definition $f'(a) = \\displaystyle\\lim_{h \\to 0} \\dfrac{f(a+h) - f(a)}{h}$ to find $f'(3)$ for $f(x) = 4 x^{2} - 4$.",
+   "checker": "numeric",
+   "answer": "24",
+   "hints": [
+    "Write out $f(3+h) - f(3)$ and simplify until a factor of $h$ appears.",
+    "Cancel the $h$, then let $h \\to 0$."
+   ],
+   "solution": [
+    "$\\dfrac{f(3+h) - f(3)}{h}$ simplifies (for $h \\ne 0$) to $4 h + 24$.",
+    "Letting $h \\to 0$ gives $f'(3) = 24$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-3b7f6a",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Use the definition $f'(a) = \\displaystyle\\lim_{h \\to 0} \\dfrac{f(a+h) - f(a)}{h}$ to find $f'(3)$ for $f(x) = x^{2} + 3 x$.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "Write out $f(3+h) - f(3)$ and simplify until a factor of $h$ appears.",
+    "Cancel the $h$, then let $h \\to 0$."
+   ],
+   "solution": [
+    "$\\dfrac{f(3+h) - f(3)}{h}$ simplifies (for $h \\ne 0$) to $h + 9$.",
+    "Letting $h \\to 0$ gives $f'(3) = 9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-0ff2d7",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Find an equation of the tangent line to the curve $y = 3 x^{2} - 2$ at the point where $x = 2$. Give it in the form $y = mx + b$.",
+   "checker": "equiv",
+   "answer": "12*x-14",
+   "hints": [
+    "The slope of the tangent is $f'(2)$, found from the limit of difference quotients.",
+    "Then use point-slope form through $(2, f(2))$."
+   ],
+   "solution": [
+    "$f(2) = 10$ and the limit of $\\dfrac{f(2+h) - f(2)}{h}$ as $h \\to 0$ is $f'(2) = 12$.",
+    "Tangent: $y - 10 = 12(x - 2)$, i.e. $y = 12 x - 14$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "derivatives-rates-45d317",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Find an equation of the tangent line to the curve $y = \\frac{2}{x}$ at the point where $x = 2$. Give it in the form $y = mx + b$.",
+   "checker": "equiv",
+   "answer": "2-x/2",
+   "hints": [
+    "The slope of the tangent is $f'(2)$, found from the limit of difference quotients.",
+    "Then use point-slope form through $(2, f(2))$."
+   ],
+   "solution": [
+    "$f(2) = 1$ and the limit of $\\dfrac{f(2+h) - f(2)}{h}$ as $h \\to 0$ is $f'(2) = - \\frac{1}{2}$.",
+    "Tangent: $y - 1 = - \\frac{1}{2}(x - 2)$, i.e. $y = 2 - \\frac{x}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "derivatives-rates-608c00",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Find an equation of the tangent line to the curve $y = x^{2} - x$ at the point where $x = 3$. Give it in the form $y = mx + b$.",
+   "checker": "equiv",
+   "answer": "5*x-9",
+   "hints": [
+    "The slope of the tangent is $f'(3)$, found from the limit of difference quotients.",
+    "Then use point-slope form through $(3, f(3))$."
+   ],
+   "solution": [
+    "$f(3) = 6$ and the limit of $\\dfrac{f(3+h) - f(3)}{h}$ as $h \\to 0$ is $f'(3) = 5$.",
+    "Tangent: $y - 6 = 5(x - 3)$, i.e. $y = 5 x - 9$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "derivatives-rates-6489da",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Find an equation of the tangent line to the curve $y = x^{2} - x$ at the point where $x = 2$. Give it in the form $y = mx + b$.",
+   "checker": "equiv",
+   "answer": "3*x-4",
+   "hints": [
+    "The slope of the tangent is $f'(2)$, found from the limit of difference quotients.",
+    "Then use point-slope form through $(2, f(2))$."
+   ],
+   "solution": [
+    "$f(2) = 2$ and the limit of $\\dfrac{f(2+h) - f(2)}{h}$ as $h \\to 0$ is $f'(2) = 3$.",
+    "Tangent: $y - 2 = 3(x - 2)$, i.e. $y = 3 x - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "derivatives-rates-f10b7e",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Find an equation of the tangent line to the curve $y = x^{3} - 3 x$ at the point where $x = 3$. Give it in the form $y = mx + b$.",
+   "checker": "equiv",
+   "answer": "24*x-54",
+   "hints": [
+    "The slope of the tangent is $f'(3)$, found from the limit of difference quotients.",
+    "Then use point-slope form through $(3, f(3))$."
+   ],
+   "solution": [
+    "$f(3) = 18$ and the limit of $\\dfrac{f(3+h) - f(3)}{h}$ as $h \\to 0$ is $f'(3) = 24$.",
+    "Tangent: $y - 18 = 24(x - 3)$, i.e. $y = 24 x - 54$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "derivatives-rates-261613",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Find an equation of the tangent line to the curve $y = x^{2} + 3 x$ at the point where $x = 2$. Give it in the form $y = mx + b$.",
+   "checker": "equiv",
+   "answer": "7*x-4",
+   "hints": [
+    "The slope of the tangent is $f'(2)$, found from the limit of difference quotients.",
+    "Then use point-slope form through $(2, f(2))$."
+   ],
+   "solution": [
+    "$f(2) = 10$ and the limit of $\\dfrac{f(2+h) - f(2)}{h}$ as $h \\to 0$ is $f'(2) = 7$.",
+    "Tangent: $y - 10 = 7(x - 2)$, i.e. $y = 7 x - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "derivatives-rates-9331e6",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Find an equation of the tangent line to the curve $y = 4 x^{2} - 2$ at the point where $x = 3$. Give it in the form $y = mx + b$.",
+   "checker": "equiv",
+   "answer": "24*x-38",
+   "hints": [
+    "The slope of the tangent is $f'(3)$, found from the limit of difference quotients.",
+    "Then use point-slope form through $(3, f(3))$."
+   ],
+   "solution": [
+    "$f(3) = 34$ and the limit of $\\dfrac{f(3+h) - f(3)}{h}$ as $h \\to 0$ is $f'(3) = 24$.",
+    "Tangent: $y - 34 = 24(x - 3)$, i.e. $y = 24 x - 38$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "derivatives-rates-dff8f4",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Find an equation of the tangent line to the curve $y = x^{3} - x$ at the point where $x = 1$. Give it in the form $y = mx + b$.",
+   "checker": "equiv",
+   "answer": "2*x-2",
+   "hints": [
+    "The slope of the tangent is $f'(1)$, found from the limit of difference quotients.",
+    "Then use point-slope form through $(1, f(1))$."
+   ],
+   "solution": [
+    "$f(1) = 0$ and the limit of $\\dfrac{f(1+h) - f(1)}{h}$ as $h \\to 0$ is $f'(1) = 2$.",
+    "Tangent: $y - 0 = 2(x - 1)$, i.e. $y = 2 x - 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "derivatives-rates-0a97ba",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Find an equation of the tangent line to the curve $y = x^{2} + 3 x + 1$ at the point where $x = 3$. Give it in the form $y = mx + b$.",
+   "checker": "equiv",
+   "answer": "9*x-8",
+   "hints": [
+    "The slope of the tangent is $f'(3)$, found from the limit of difference quotients.",
+    "Then use point-slope form through $(3, f(3))$."
+   ],
+   "solution": [
+    "$f(3) = 19$ and the limit of $\\dfrac{f(3+h) - f(3)}{h}$ as $h \\to 0$ is $f'(3) = 9$.",
+    "Tangent: $y - 19 = 9(x - 3)$, i.e. $y = 9 x - 8$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "derivatives-rates-4ac65d",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "Find an equation of the tangent line to the curve $y = 4 x^{2} - 3$ at the point where $x = 2$. Give it in the form $y = mx + b$.",
+   "checker": "equiv",
+   "answer": "16*x-19",
+   "hints": [
+    "The slope of the tangent is $f'(2)$, found from the limit of difference quotients.",
+    "Then use point-slope form through $(2, f(2))$."
+   ],
+   "solution": [
+    "$f(2) = 13$ and the limit of $\\dfrac{f(2+h) - f(2)}{h}$ as $h \\to 0$ is $f'(2) = 16$.",
+    "Tangent: $y - 13 = 16(x - 2)$, i.e. $y = 16 x - 19$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "derivatives-rates-387d6e",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "A ball dropped from a height of $30$ m has height $s(t) = 30 - \\frac{49 t^{2}}{10}$ meters after $t$ seconds. Find its velocity (in m/s) at $t = 3$.",
+   "checker": "numeric",
+   "answer": "-147/5",
+   "hints": [
+    "Instantaneous velocity is the derivative of position: the limit of average velocities over shrinking intervals.",
+    "Compute $\\lim_{h \\to 0} \\dfrac{s(3+h) - s(3)}{h}$."
+   ],
+   "solution": [
+    "$\\dfrac{s(3+h) - s(3)}{h} = - \\frac{49 h}{10} - \\frac{147}{5}$.",
+    "As $h \\to 0$ this approaches $v(3) = - \\frac{147}{5}$ m/s (negative means downward)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-91e377",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "A particle moves with position $s(t) = t^{3} - 4 t^{2} + 5 t$ (meters, $t$ in seconds). Find its instantaneous velocity at $t = 1$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Instantaneous velocity is the derivative of position: the limit of average velocities over shrinking intervals.",
+    "Compute $\\lim_{h \\to 0} \\dfrac{s(1+h) - s(1)}{h}$."
+   ],
+   "solution": [
+    "$\\dfrac{s(1+h) - s(1)}{h} = h^{2} - h$.",
+    "As $h \\to 0$ this approaches $v(1) = 0$ m/s."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-86bc5d",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "A particle moves with position $s(t) = t^{3} - 3 t^{2} + 3 t$ (meters, $t$ in seconds). Find its instantaneous velocity at $t = 2$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Instantaneous velocity is the derivative of position: the limit of average velocities over shrinking intervals.",
+    "Compute $\\lim_{h \\to 0} \\dfrac{s(2+h) - s(2)}{h}$."
+   ],
+   "solution": [
+    "$\\dfrac{s(2+h) - s(2)}{h} = h^{2} + 3 h + 3$.",
+    "As $h \\to 0$ this approaches $v(2) = 3$ m/s."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-f81beb",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "A particle moves with position $s(t) = t^{3} - 2 t^{2} + 4 t$ (meters, $t$ in seconds). Find its instantaneous velocity at $t = 4$.",
+   "checker": "numeric",
+   "answer": "36",
+   "hints": [
+    "Instantaneous velocity is the derivative of position: the limit of average velocities over shrinking intervals.",
+    "Compute $\\lim_{h \\to 0} \\dfrac{s(4+h) - s(4)}{h}$."
+   ],
+   "solution": [
+    "$\\dfrac{s(4+h) - s(4)}{h} = h^{2} + 10 h + 36$.",
+    "As $h \\to 0$ this approaches $v(4) = 36$ m/s."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-162959",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "A particle moves with position $s(t) = t^{3} - 4 t^{2} + 8 t$ (meters, $t$ in seconds). Find its instantaneous velocity at $t = 1$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Instantaneous velocity is the derivative of position: the limit of average velocities over shrinking intervals.",
+    "Compute $\\lim_{h \\to 0} \\dfrac{s(1+h) - s(1)}{h}$."
+   ],
+   "solution": [
+    "$\\dfrac{s(1+h) - s(1)}{h} = h^{2} - h + 3$.",
+    "As $h \\to 0$ this approaches $v(1) = 3$ m/s."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-8cba97",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "A particle moves with position $s(t) = t^{3} - 2 t^{2} + 10 t$ (meters, $t$ in seconds). Find its instantaneous velocity at $t = 2$.",
+   "checker": "numeric",
+   "answer": "14",
+   "hints": [
+    "Instantaneous velocity is the derivative of position: the limit of average velocities over shrinking intervals.",
+    "Compute $\\lim_{h \\to 0} \\dfrac{s(2+h) - s(2)}{h}$."
+   ],
+   "solution": [
+    "$\\dfrac{s(2+h) - s(2)}{h} = h^{2} + 4 h + 14$.",
+    "As $h \\to 0$ this approaches $v(2) = 14$ m/s."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-6f6966",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "A ball dropped from a height of $45$ m has height $s(t) = 45 - \\frac{49 t^{2}}{10}$ meters after $t$ seconds. Find its velocity (in m/s) at $t = 1$.",
+   "checker": "numeric",
+   "answer": "-49/5",
+   "hints": [
+    "Instantaneous velocity is the derivative of position: the limit of average velocities over shrinking intervals.",
+    "Compute $\\lim_{h \\to 0} \\dfrac{s(1+h) - s(1)}{h}$."
+   ],
+   "solution": [
+    "$\\dfrac{s(1+h) - s(1)}{h} = - \\frac{49 h}{10} - \\frac{49}{5}$.",
+    "As $h \\to 0$ this approaches $v(1) = - \\frac{49}{5}$ m/s (negative means downward)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-4cb88b",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "A ball dropped from a height of $45$ m has height $s(t) = 45 - \\frac{49 t^{2}}{10}$ meters after $t$ seconds. Find its velocity (in m/s) at $t = 2$.",
+   "checker": "numeric",
+   "answer": "-98/5",
+   "hints": [
+    "Instantaneous velocity is the derivative of position: the limit of average velocities over shrinking intervals.",
+    "Compute $\\lim_{h \\to 0} \\dfrac{s(2+h) - s(2)}{h}$."
+   ],
+   "solution": [
+    "$\\dfrac{s(2+h) - s(2)}{h} = - \\frac{49 h}{10} - \\frac{98}{5}$.",
+    "As $h \\to 0$ this approaches $v(2) = - \\frac{98}{5}$ m/s (negative means downward)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-b2327b",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "The temperature of a liquid (in degrees) after $x$ minutes is $T(x) = - \\frac{x^{2}}{2} + 2 x + 18$. Find the rate at which the temperature is changing at $x = 4$ minutes.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "An instantaneous rate of change is a derivative value: the limit of average rates over shorter and shorter intervals.",
+    "Simplify the difference quotient, cancel $h$, and take the limit."
+   ],
+   "solution": [
+    "$\\dfrac{f(4+h) - f(4)}{h} = - \\frac{h}{2} - 2$.",
+    "The limit as $h \\to 0$ is $-2$ (units of output per unit of input)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-8bc5db",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "The temperature of a liquid (in degrees) after $x$ minutes is $T(x) = - \\frac{x^{2}}{2} + 6 x + 14$. Find the rate at which the temperature is changing at $x = 5$ minutes.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "An instantaneous rate of change is a derivative value: the limit of average rates over shorter and shorter intervals.",
+    "Simplify the difference quotient, cancel $h$, and take the limit."
+   ],
+   "solution": [
+    "$\\dfrac{f(5+h) - f(5)}{h} = 1 - \\frac{h}{2}$.",
+    "The limit as $h \\to 0$ is $1$ (units of output per unit of input)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-9d8a09",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "The temperature of a liquid (in degrees) after $x$ minutes is $T(x) = - \\frac{x^{2}}{2} + 4 x + 11$. Find the rate at which the temperature is changing at $x = 2$ minutes.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "An instantaneous rate of change is a derivative value: the limit of average rates over shorter and shorter intervals.",
+    "Simplify the difference quotient, cancel $h$, and take the limit."
+   ],
+   "solution": [
+    "$\\dfrac{f(2+h) - f(2)}{h} = 2 - \\frac{h}{2}$.",
+    "The limit as $h \\to 0$ is $2$ (units of output per unit of input)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-d2e0f0",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "The temperature of a liquid (in degrees) after $x$ minutes is $T(x) = - \\frac{x^{2}}{2} + 3 x + 19$. Find the rate at which the temperature is changing at $x = 5$ minutes.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "An instantaneous rate of change is a derivative value: the limit of average rates over shorter and shorter intervals.",
+    "Simplify the difference quotient, cancel $h$, and take the limit."
+   ],
+   "solution": [
+    "$\\dfrac{f(5+h) - f(5)}{h} = - \\frac{h}{2} - 2$.",
+    "The limit as $h \\to 0$ is $-2$ (units of output per unit of input)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-2c3cc1",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "The temperature of a liquid (in degrees) after $x$ minutes is $T(x) = - \\frac{x^{2}}{2} + 3 x + 11$. Find the rate at which the temperature is changing at $x = 4$ minutes.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "An instantaneous rate of change is a derivative value: the limit of average rates over shorter and shorter intervals.",
+    "Simplify the difference quotient, cancel $h$, and take the limit."
+   ],
+   "solution": [
+    "$\\dfrac{f(4+h) - f(4)}{h} = - \\frac{h}{2} - 1$.",
+    "The limit as $h \\to 0$ is $-1$ (units of output per unit of input)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-94b76d",
+   "skill": "derivatives-rates",
+   "difficulty": 2,
+   "statement": "The temperature of a liquid (in degrees) after $x$ minutes is $T(x) = - \\frac{x^{2}}{2} + 2 x + 16$. Find the rate at which the temperature is changing at $x = 2$ minutes.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "An instantaneous rate of change is a derivative value: the limit of average rates over shorter and shorter intervals.",
+    "Simplify the difference quotient, cancel $h$, and take the limit."
+   ],
+   "solution": [
+    "$\\dfrac{f(2+h) - f(2)}{h} = - \\frac{h}{2}$.",
+    "The limit as $h \\to 0$ is $0$ (units of output per unit of input)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-c40564",
+   "skill": "derivatives-rates",
+   "difficulty": 3,
+   "statement": "The limit $\\displaystyle \\lim_{h \\to 0} \\dfrac{e^{h} - 1}{h}$ represents the derivative of some function $f$ at a number $a$. Identify $f$ and $a$, and evaluate the limit.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Match the expression to $\\dfrac{f(a+h) - f(a)}{h}$ or $\\dfrac{f(x) - f(a)}{x - a}$.",
+    "Here $f(x) = e^{x}$ and $a = 0$; the limit equals $f'(0)$."
+   ],
+   "solution": [
+    "With $f(x) = e^{x}$ and $a = 0$ the expression is exactly the difference quotient for $f'(0)$.",
+    "Evaluating the derivative gives $f'(0) = 1$."
+   ],
+   "verified": true,
+   "variable": "h"
+  },
+  {
+   "id": "derivatives-rates-d1ad6d",
+   "skill": "derivatives-rates",
+   "difficulty": 3,
+   "statement": "The limit $\\displaystyle \\lim_{x \\to 1} \\dfrac{\\sqrt{x} - 1}{x - 1}$ represents the derivative of some function $f$ at a number $a$. Identify $f$ and $a$, and evaluate the limit.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "Match the expression to $\\dfrac{f(a+h) - f(a)}{h}$ or $\\dfrac{f(x) - f(a)}{x - a}$.",
+    "Here $f(x) = \\sqrt{x}$ and $a = 1$; the limit equals $f'(1)$."
+   ],
+   "solution": [
+    "With $f(x) = \\sqrt{x}$ and $a = 1$ the expression is exactly the difference quotient for $f'(1)$.",
+    "Evaluating the derivative gives $f'(1) = \\frac{1}{2}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "derivatives-rates-cb4a5c",
+   "skill": "derivatives-rates",
+   "difficulty": 3,
+   "statement": "The limit $\\displaystyle \\lim_{h \\to 0} \\dfrac{\\cos h - 1}{h}$ represents the derivative of some function $f$ at a number $a$. Identify $f$ and $a$, and evaluate the limit.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Match the expression to $\\dfrac{f(a+h) - f(a)}{h}$ or $\\dfrac{f(x) - f(a)}{x - a}$.",
+    "Here $f(x) = \\cos{\\left(x \\right)}$ and $a = 0$; the limit equals $f'(0)$."
+   ],
+   "solution": [
+    "With $f(x) = \\cos{\\left(x \\right)}$ and $a = 0$ the expression is exactly the difference quotient for $f'(0)$.",
+    "Evaluating the derivative gives $f'(0) = 0$."
+   ],
+   "verified": true,
+   "variable": "h"
+  },
+  {
+   "id": "derivatives-rates-fb53d3",
+   "skill": "derivatives-rates",
+   "difficulty": 3,
+   "statement": "The limit $\\displaystyle \\lim_{h \\to 0} \\dfrac{(4+h)^3 - 64}{h}$ represents the derivative of some function $f$ at a number $a$. Identify $f$ and $a$, and evaluate the limit.",
+   "checker": "numeric",
+   "answer": "48",
+   "hints": [
+    "Match the expression to $\\dfrac{f(a+h) - f(a)}{h}$ or $\\dfrac{f(x) - f(a)}{x - a}$.",
+    "Here $f(x) = x^{3}$ and $a = 4$; the limit equals $f'(4)$."
+   ],
+   "solution": [
+    "With $f(x) = x^{3}$ and $a = 4$ the expression is exactly the difference quotient for $f'(4)$.",
+    "Evaluating the derivative gives $f'(4) = 48$."
+   ],
+   "verified": true,
+   "variable": "h"
+  },
+  {
+   "id": "derivatives-rates-d27ee8",
+   "skill": "derivatives-rates",
+   "difficulty": 3,
+   "statement": "The limit $\\displaystyle \\lim_{x \\to 4} \\dfrac{\\sqrt{x} - 2}{x - 4}$ represents the derivative of some function $f$ at a number $a$. Identify $f$ and $a$, and evaluate the limit.",
+   "checker": "numeric",
+   "answer": "1/4",
+   "hints": [
+    "Match the expression to $\\dfrac{f(a+h) - f(a)}{h}$ or $\\dfrac{f(x) - f(a)}{x - a}$.",
+    "Here $f(x) = \\sqrt{x}$ and $a = 4$; the limit equals $f'(4)$."
+   ],
+   "solution": [
+    "With $f(x) = \\sqrt{x}$ and $a = 4$ the expression is exactly the difference quotient for $f'(4)$.",
+    "Evaluating the derivative gives $f'(4) = \\frac{1}{4}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "derivatives-rates-742a9f",
+   "skill": "derivatives-rates",
+   "difficulty": 3,
+   "statement": "The limit $\\displaystyle \\lim_{x \\to 9} \\dfrac{\\sqrt{x} - 3}{x - 9}$ represents the derivative of some function $f$ at a number $a$. Identify $f$ and $a$, and evaluate the limit.",
+   "checker": "numeric",
+   "answer": "1/6",
+   "hints": [
+    "Match the expression to $\\dfrac{f(a+h) - f(a)}{h}$ or $\\dfrac{f(x) - f(a)}{x - a}$.",
+    "Here $f(x) = \\sqrt{x}$ and $a = 9$; the limit equals $f'(9)$."
+   ],
+   "solution": [
+    "With $f(x) = \\sqrt{x}$ and $a = 9$ the expression is exactly the difference quotient for $f'(9)$.",
+    "Evaluating the derivative gives $f'(9) = \\frac{1}{6}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "derivatives-rates-a1a522",
+   "skill": "derivatives-rates",
+   "difficulty": 1,
+   "statement": "For $f(x) = x^{3} - 4 x$, find the average rate of change of $f$ over the interval $[0, 3]$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Average rate of change $= \\dfrac{f(b) - f(a)}{b - a}$.",
+    "Compute $f(3)$ and $f(0)$ first."
+   ],
+   "solution": [
+    "$f(3) = 15$ and $f(0) = 0$.",
+    "Average rate $= \\dfrac{15 - (0)}{3 - 0} = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-8f03a3",
+   "skill": "derivatives-rates",
+   "difficulty": 1,
+   "statement": "For $f(x) = 2 x^{2} - 5$, find the average rate of change of $f$ over the interval $[0, 1]$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Average rate of change $= \\dfrac{f(b) - f(a)}{b - a}$.",
+    "Compute $f(1)$ and $f(0)$ first."
+   ],
+   "solution": [
+    "$f(1) = -3$ and $f(0) = -5$.",
+    "Average rate $= \\dfrac{-3 - (-5)}{1 - 0} = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-d39334",
+   "skill": "derivatives-rates",
+   "difficulty": 1,
+   "statement": "For $f(x) = x^{3} - 2 x$, find the average rate of change of $f$ over the interval $[0, 2]$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Average rate of change $= \\dfrac{f(b) - f(a)}{b - a}$.",
+    "Compute $f(2)$ and $f(0)$ first."
+   ],
+   "solution": [
+    "$f(2) = 4$ and $f(0) = 0$.",
+    "Average rate $= \\dfrac{4 - (0)}{2 - 0} = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-6eecb2",
+   "skill": "derivatives-rates",
+   "difficulty": 1,
+   "statement": "For $f(x) = 3 x^{2} - 5$, find the average rate of change of $f$ over the interval $[2, 4]$.",
+   "checker": "numeric",
+   "answer": "18",
+   "hints": [
+    "Average rate of change $= \\dfrac{f(b) - f(a)}{b - a}$.",
+    "Compute $f(4)$ and $f(2)$ first."
+   ],
+   "solution": [
+    "$f(4) = 43$ and $f(2) = 7$.",
+    "Average rate $= \\dfrac{43 - (7)}{4 - 2} = 18$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-faec87",
+   "skill": "derivatives-rates",
+   "difficulty": 1,
+   "statement": "For $f(x) = 3 x^{2} - 3$, find the average rate of change of $f$ over the interval $[2, 3]$.",
+   "checker": "numeric",
+   "answer": "15",
+   "hints": [
+    "Average rate of change $= \\dfrac{f(b) - f(a)}{b - a}$.",
+    "Compute $f(3)$ and $f(2)$ first."
+   ],
+   "solution": [
+    "$f(3) = 24$ and $f(2) = 9$.",
+    "Average rate $= \\dfrac{24 - (9)}{3 - 2} = 15$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-3a3c85",
+   "skill": "derivatives-rates",
+   "difficulty": 1,
+   "statement": "The tangent line to $y = g(x)$ at the point where $x = 5$ is $y = 2 x + 4$. Find $g'(5)$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "The tangent line touches the curve at the point of tangency, and its slope equals the derivative there.",
+    "Read the slope of the line."
+   ],
+   "solution": [
+    "The line passes through $(5, g(5))$, so $g(5) = 2(5) + (4) = 14$; its slope is $g'(5) = 2$.",
+    "Therefore the requested value is $2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-4aec05",
+   "skill": "derivatives-rates",
+   "difficulty": 1,
+   "statement": "The tangent line to $y = g(x)$ at the point where $x = 4$ is $y = - 3 x$. Find $g'(4)$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "The tangent line touches the curve at the point of tangency, and its slope equals the derivative there.",
+    "Read the slope of the line."
+   ],
+   "solution": [
+    "The line passes through $(4, g(4))$, so $g(4) = -3(4) + (0) = -12$; its slope is $g'(4) = -3$.",
+    "Therefore the requested value is $-3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-e6fc78",
+   "skill": "derivatives-rates",
+   "difficulty": 1,
+   "statement": "The tangent line to $y = g(x)$ at the point where $x = 1$ is $y = 3 - 2 x$. Find $g'(1)$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "The tangent line touches the curve at the point of tangency, and its slope equals the derivative there.",
+    "Read the slope of the line."
+   ],
+   "solution": [
+    "The line passes through $(1, g(1))$, so $g(1) = -2(1) + (3) = 1$; its slope is $g'(1) = -2$.",
+    "Therefore the requested value is $-2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-6bede8",
+   "skill": "derivatives-rates",
+   "difficulty": 1,
+   "statement": "The tangent line to $y = g(x)$ at the point where $x = 1$ is $y = - 4 x - 3$. Find $g'(1)$.",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "The tangent line touches the curve at the point of tangency, and its slope equals the derivative there.",
+    "Read the slope of the line."
+   ],
+   "solution": [
+    "The line passes through $(1, g(1))$, so $g(1) = -4(1) + (-3) = -7$; its slope is $g'(1) = -4$.",
+    "Therefore the requested value is $-4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-1f4c01",
+   "skill": "derivatives-rates",
+   "difficulty": 1,
+   "statement": "The tangent line to $y = g(x)$ at the point where $x = 4$ is $y = 1 - 2 x$. Find $g(4)$.",
+   "checker": "numeric",
+   "answer": "-7",
+   "hints": [
+    "The tangent line touches the curve at the point of tangency, and its slope equals the derivative there.",
+    "Plug $x = 4$ into the line to get the point."
+   ],
+   "solution": [
+    "The line passes through $(4, g(4))$, so $g(4) = -2(4) + (1) = -7$; its slope is $g'(4) = -2$.",
+    "Therefore the requested value is $-7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "derivatives-rates-b3c3ed",
+   "skill": "derivatives-rates",
+   "difficulty": 1,
+   "statement": "$f'(a)$ can be interpreted as",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "The derivative is a limit of secant slopes.",
+    "Secant slopes approach the tangent slope."
+   ],
+   "solution": [
+    "$f'(a) = \\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h}$ is the limit of slopes of secant lines through $(a, f(a))$.",
+    "That limit is the slope of the tangent line, also the instantaneous rate of change."
+   ],
+   "verified": true,
+   "choices": [
+    "the $y$-coordinate of the point on the curve at $x = a$",
+    "the area under the curve up to $x = a$",
+    "the slope of the tangent line to $y = f(x)$ at $x = a$",
+    "the average rate of change of $f$ on $[0, a]$"
+   ]
+  },
+  {
+   "id": "derivatives-rates-be96f4",
+   "skill": "derivatives-rates",
+   "difficulty": 1,
+   "statement": "If $s(t)$ is the position of a particle, the sign of $s'(t_0) < 0$ tells us that at time $t_0$",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "$s'(t)$ is velocity, not position.",
+    "Velocity's sign gives the direction of motion."
+   ],
+   "solution": [
+    "$s'(t_0)$ is the instantaneous velocity at $t_0$.",
+    "Negative velocity means the position is decreasing, i.e. motion in the negative direction."
+   ],
+   "verified": true,
+   "choices": [
+    "the particle is at a negative position",
+    "the particle is slowing down",
+    "the particle is at rest",
+    "the particle is moving in the negative direction"
+   ]
+  },
+  {
+   "id": "derivatives-rates-14b3b8",
+   "skill": "derivatives-rates",
+   "difficulty": 1,
+   "statement": "Which expression equals $f'(a)$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Set $x = a + h$ in the definition; then $h \\to 0$ corresponds to $x \\to a$.",
+    "Both forms are difference quotients with a limit."
+   ],
+   "solution": [
+    "With $x = a + h$, $\\frac{f(a+h) - f(a)}{h}$ becomes $\\frac{f(x) - f(a)}{x - a}$.",
+    "So $f'(a) = \\lim_{x \\to a} \\frac{f(x) - f(a)}{x - a}$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\lim_{x \\to a} \\dfrac{f(x) - f(a)}{x - a}$",
+    "$\\dfrac{f(a)}{a}$",
+    "$\\dfrac{f(a+1) - f(a)}{1}$",
+    "$\\lim_{x \\to a} f(x)$"
+   ]
+  }
+ ]
+}

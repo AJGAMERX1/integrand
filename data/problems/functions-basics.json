@@ -1,0 +1,1087 @@
+{
+ "skill": "functions-basics",
+ "problems": [
+  {
+   "id": "functions-basics-84978d",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 3 x^{2} - 5 x - 6$. Find $f(-3)$.",
+   "checker": "numeric",
+   "answer": "36",
+   "hints": [
+    "Replace every $x$ in the formula with the given number, keeping the parentheses.",
+    "Square first: $(-3)^2 = 9$. Then multiply and add the remaining terms."
+   ],
+   "solution": [
+    "$f(-3) = 3(-3)^2 - 5(-3) - 6$.",
+    "$= 27 + 15 - 6 = 36$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-76175b",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 4 x^{2} - 5 x - 1$. Find $f(2)$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Replace every $x$ in the formula with the given number, keeping the parentheses.",
+    "Square first: $(2)^2 = 4$. Then multiply and add the remaining terms."
+   ],
+   "solution": [
+    "$f(2) = 4(2)^2 - 5(2) - 1$.",
+    "$= 16 - 10 - 1 = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-a74c6f",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Let $f(x) = x^{2} - 3 x - 1$. Find $f(1)$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Replace every $x$ in the formula with the given number, keeping the parentheses.",
+    "Square first: $(1)^2 = 1$. Then multiply and add the remaining terms."
+   ],
+   "solution": [
+    "$f(1) = 1(1)^2 - 3(1) - 1$.",
+    "$= 1 - 3 - 1 = -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-d92f74",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Let $f(x) = - x^{2} + 4 x - 3$. Find $f(-2)$.",
+   "checker": "numeric",
+   "answer": "-15",
+   "hints": [
+    "Replace every $x$ in the formula with the given number, keeping the parentheses.",
+    "Square first: $(-2)^2 = 4$. Then multiply and add the remaining terms."
+   ],
+   "solution": [
+    "$f(-2) = -1(-2)^2 + 4(-2) - 3$.",
+    "$= -4 - 8 - 3 = -15$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-0d7405",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Let $f(x) = - 2 x^{2} - 3 x - 5$. Find $f(-3)$.",
+   "checker": "numeric",
+   "answer": "-14",
+   "hints": [
+    "Replace every $x$ in the formula with the given number, keeping the parentheses.",
+    "Square first: $(-3)^2 = 9$. Then multiply and add the remaining terms."
+   ],
+   "solution": [
+    "$f(-3) = -2(-3)^2 - 3(-3) - 5$.",
+    "$= -18 + 9 - 5 = -14$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-c96bec",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 3 x^{2} + 4 x + 6$. Find $f(3)$.",
+   "checker": "numeric",
+   "answer": "45",
+   "hints": [
+    "Replace every $x$ in the formula with the given number, keeping the parentheses.",
+    "Square first: $(3)^2 = 9$. Then multiply and add the remaining terms."
+   ],
+   "solution": [
+    "$f(3) = 3(3)^2 + 4(3) + 6$.",
+    "$= 27 + 12 + 6 = 45$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-d299d4",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 3 x^{2} + 3 x + 2$. Find $f(-2)$.",
+   "checker": "numeric",
+   "answer": "8",
+   "hints": [
+    "Replace every $x$ in the formula with the given number, keeping the parentheses.",
+    "Square first: $(-2)^2 = 4$. Then multiply and add the remaining terms."
+   ],
+   "solution": [
+    "$f(-2) = 3(-2)^2 + 3(-2) + 2$.",
+    "$= 12 - 6 + 2 = 8$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-eb8c2b",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "If $g(x) = 3 x + \\sqrt{x + 4}$, evaluate $g(5)$. Give an exact value.",
+   "checker": "numeric",
+   "answer": "18",
+   "hints": [
+    "Substitute the number for $x$ everywhere it appears.",
+    "Simplify the numerator and denominator (or the square root) separately before combining."
+   ],
+   "solution": [
+    "Substitute $x = 5$: $g(5) = 3 (5) + \\sqrt{(5) + 4}$.",
+    "Simplify to get $g(5) = 18$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-640e59",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "If $g(x) = - x + \\sqrt{x + 2}$, evaluate $g(14)$. Give an exact value.",
+   "checker": "numeric",
+   "answer": "-10",
+   "hints": [
+    "Substitute the number for $x$ everywhere it appears.",
+    "Simplify the numerator and denominator (or the square root) separately before combining."
+   ],
+   "solution": [
+    "Substitute $x = 14$: $g(14) = - (14) + \\sqrt{(14) + 2}$.",
+    "Simplify to get $g(14) = -10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-01c344",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "If $g(x) = - x + \\sqrt{x + 2}$, evaluate $g(2)$. Give an exact value.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Substitute the number for $x$ everywhere it appears.",
+    "Simplify the numerator and denominator (or the square root) separately before combining."
+   ],
+   "solution": [
+    "Substitute $x = 2$: $g(2) = - (2) + \\sqrt{(2) + 2}$.",
+    "Simplify to get $g(2) = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-6fca5f",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "If $g(x) = 3 x + \\sqrt{x + 1}$, evaluate $g(15)$. Give an exact value.",
+   "checker": "numeric",
+   "answer": "49",
+   "hints": [
+    "Substitute the number for $x$ everywhere it appears.",
+    "Simplify the numerator and denominator (or the square root) separately before combining."
+   ],
+   "solution": [
+    "Substitute $x = 15$: $g(15) = 3 (15) + \\sqrt{(15) + 1}$.",
+    "Simplify to get $g(15) = 49$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-8a0261",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "If $g(x) = \\frac{3 x + 1}{x - 4}$, evaluate $g(1)$. Give an exact value.",
+   "checker": "numeric",
+   "answer": "-4/3",
+   "hints": [
+    "Substitute the number for $x$ everywhere it appears.",
+    "Simplify the numerator and denominator (or the square root) separately before combining."
+   ],
+   "solution": [
+    "Substitute $x = 1$: $g(1) = - \\frac{4}{3}$.",
+    "Simplify to get $g(1) = - \\frac{4}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-de0aaf",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "If $g(x) = 1$, evaluate $g(-3)$. Give an exact value.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Substitute the number for $x$ everywhere it appears.",
+    "Simplify the numerator and denominator (or the square root) separately before combining."
+   ],
+   "solution": [
+    "Substitute $x = -3$: $g(-3) = 1$.",
+    "Simplify to get $g(-3) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-b44d0f",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Find the domain of $f(x) = \\sqrt{7 - 2 x}$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,7/2]",
+   "hints": [
+    "An even root is only defined when the expression inside is not negative.",
+    "Solve the inequality for $x$; remember to flip the sign if you divide by a negative."
+   ],
+   "solution": [
+    "The square root needs a non-negative radicand: we need $7 - 2 x \\ge 0$, so $x \\le \\frac{7}{2}$.",
+    "Domain: $(-\\infty, \\frac{7}{2}]$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-5518b3",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Find the domain of $f(x) = \\frac{1}{\\sqrt{4 x - 8}}$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(2,inf)",
+   "hints": [
+    "An even root is only defined when the expression inside is not negative.",
+    "Also rule out any value that makes a denominator zero."
+   ],
+   "solution": [
+    "Because the root is in a denominator, the radicand must be positive (it is under a root and in a denominator): $4 x - 8 > 0$, so $x > 2$.",
+    "Domain: $(2, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-f8bea2",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Find the domain of $f(x) = \\frac{1}{\\sqrt{x - 5}}$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(5,inf)",
+   "hints": [
+    "An even root is only defined when the expression inside is not negative.",
+    "Also rule out any value that makes a denominator zero."
+   ],
+   "solution": [
+    "Because the root is in a denominator, the radicand must be positive (it is under a root and in a denominator): $x - 5 > 0$, so $x > 5$.",
+    "Domain: $(5, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-2e1ea2",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Find the domain of $f(x) = \\sqrt{8 - 3 x}$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,8/3]",
+   "hints": [
+    "An even root is only defined when the expression inside is not negative.",
+    "Solve the inequality for $x$; remember to flip the sign if you divide by a negative."
+   ],
+   "solution": [
+    "The square root needs a non-negative radicand: we need $8 - 3 x \\ge 0$, so $x \\le \\frac{8}{3}$.",
+    "Domain: $(-\\infty, \\frac{8}{3}]$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-b08a72",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Find the domain of $f(x) = \\sqrt{x + 8}$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "[-8,inf)",
+   "hints": [
+    "An even root is only defined when the expression inside is not negative.",
+    "Solve the inequality for $x$; remember to flip the sign if you divide by a negative."
+   ],
+   "solution": [
+    "The square root needs a non-negative radicand: we need $x + 8 \\ge 0$, so $x \\ge -8$.",
+    "Domain: $[-8, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-9bb469",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Find the domain of $f(x) = \\frac{1}{\\sqrt{- 4 x - 1}}$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,-1/4)",
+   "hints": [
+    "An even root is only defined when the expression inside is not negative.",
+    "Also rule out any value that makes a denominator zero."
+   ],
+   "solution": [
+    "Because the root is in a denominator, the radicand must be positive: $- 4 x - 1 > 0$, so $x < - \\frac{1}{4}$.",
+    "Domain: $(-\\infty, - \\frac{1}{4})$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-43a543",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Find the domain of $f(x) = \\sqrt{- x - 8}$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,-8]",
+   "hints": [
+    "An even root is only defined when the expression inside is not negative.",
+    "Solve the inequality for $x$; remember to flip the sign if you divide by a negative."
+   ],
+   "solution": [
+    "The square root needs a non-negative radicand: we need $- x - 8 \\ge 0$, so $x \\le -8$.",
+    "Domain: $(-\\infty, -8]$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-68a6d4",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Find the domain of $f(x) = \\frac{1}{\\sqrt{3 - 2 x}}$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,3/2)",
+   "hints": [
+    "An even root is only defined when the expression inside is not negative.",
+    "Also rule out any value that makes a denominator zero."
+   ],
+   "solution": [
+    "Because the root is in a denominator, the radicand must be positive: $3 - 2 x > 0$, so $x < \\frac{3}{2}$.",
+    "Domain: $(-\\infty, \\frac{3}{2})$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-aa1968",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Let $f(x) = - 3 x^{2} - 2 x + 3$. Simplify the difference quotient $\\dfrac{f(0+h) - f(0)}{h}$ for $h \\ne 0$.",
+   "checker": "equiv",
+   "answer": "-3*h-2",
+   "hints": [
+    "Start by expanding $f(0+h)$ completely; $(0+h)^2 = 0 + 0h + h^2$.",
+    "After subtracting $f(0) = 3$ every remaining term has a factor of $h$ that cancels."
+   ],
+   "solution": [
+    "$f(0+h) = - 3 h^{2} - 2 h + 3$ and $f(0) = 3$.",
+    "$f(0+h) - f(0) = - 3 h^{2} - 2 h$.",
+    "Divide by $h$: $\\dfrac{f(0+h)-f(0)}{h} = - 3 h - 2$."
+   ],
+   "verified": true,
+   "variable": "h",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "functions-basics-7d08aa",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Let $f(x) = - 3 x^{2} - 3 x + 2$. Simplify the difference quotient $\\dfrac{f(0+h) - f(0)}{h}$ for $h \\ne 0$.",
+   "checker": "equiv",
+   "answer": "-3*h-3",
+   "hints": [
+    "Start by expanding $f(0+h)$ completely; $(0+h)^2 = 0 + 0h + h^2$.",
+    "After subtracting $f(0) = 2$ every remaining term has a factor of $h$ that cancels."
+   ],
+   "solution": [
+    "$f(0+h) = - 3 h^{2} - 3 h + 2$ and $f(0) = 2$.",
+    "$f(0+h) - f(0) = - 3 h^{2} - 3 h$.",
+    "Divide by $h$: $\\dfrac{f(0+h)-f(0)}{h} = - 3 h - 3$."
+   ],
+   "verified": true,
+   "variable": "h",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "functions-basics-dac90e",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Let $f(x) = x^{2} - 4 x - 1$. Simplify the difference quotient $\\dfrac{f(0+h) - f(0)}{h}$ for $h \\ne 0$.",
+   "checker": "equiv",
+   "answer": "h-4",
+   "hints": [
+    "Start by expanding $f(0+h)$ completely; $(0+h)^2 = 0 + 0h + h^2$.",
+    "After subtracting $f(0) = -1$ every remaining term has a factor of $h$ that cancels."
+   ],
+   "solution": [
+    "$f(0+h) = h^{2} - 4 h - 1$ and $f(0) = -1$.",
+    "$f(0+h) - f(0) = h^{2} - 4 h$.",
+    "Divide by $h$: $\\dfrac{f(0+h)-f(0)}{h} = h - 4$."
+   ],
+   "verified": true,
+   "variable": "h",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "functions-basics-5d880e",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Let $f(x) = - 3 x^{2} + x - 2$. Simplify the difference quotient $\\dfrac{f(-2+h) - f(-2)}{h}$ for $h \\ne 0$.",
+   "checker": "equiv",
+   "answer": "13-3*h",
+   "hints": [
+    "Start by expanding $f(-2+h)$ completely; $(-2+h)^2 = 4 + -4h + h^2$.",
+    "After subtracting $f(-2) = -16$ every remaining term has a factor of $h$ that cancels."
+   ],
+   "solution": [
+    "$f(-2+h) = - 3 h^{2} + 13 h - 16$ and $f(-2) = -16$.",
+    "$f(-2+h) - f(-2) = - 3 h^{2} + 13 h$.",
+    "Divide by $h$: $\\dfrac{f(-2+h)-f(-2)}{h} = 13 - 3 h$."
+   ],
+   "verified": true,
+   "variable": "h",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "functions-basics-82d84d",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 2 x^{2} + x - 3$. Simplify the difference quotient $\\dfrac{f(1+h) - f(1)}{h}$ for $h \\ne 0$.",
+   "checker": "equiv",
+   "answer": "2*h+5",
+   "hints": [
+    "Start by expanding $f(1+h)$ completely; $(1+h)^2 = 1 + 2h + h^2$.",
+    "After subtracting $f(1) = 0$ every remaining term has a factor of $h$ that cancels."
+   ],
+   "solution": [
+    "$f(1+h) = 2 h^{2} + 5 h$ and $f(1) = 0$.",
+    "$f(1+h) - f(1) = 2 h^{2} + 5 h$.",
+    "Divide by $h$: $\\dfrac{f(1+h)-f(1)}{h} = 2 h + 5$."
+   ],
+   "verified": true,
+   "variable": "h",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "functions-basics-af1d6c",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Let $f(x) = - 3 x^{2} - x - 3$. Simplify the difference quotient $\\dfrac{f(3+h) - f(3)}{h}$ for $h \\ne 0$.",
+   "checker": "equiv",
+   "answer": "-3*h-19",
+   "hints": [
+    "Start by expanding $f(3+h)$ completely; $(3+h)^2 = 9 + 6h + h^2$.",
+    "After subtracting $f(3) = -33$ every remaining term has a factor of $h$ that cancels."
+   ],
+   "solution": [
+    "$f(3+h) = - 3 h^{2} - 19 h - 33$ and $f(3) = -33$.",
+    "$f(3+h) - f(3) = - 3 h^{2} - 19 h$.",
+    "Divide by $h$: $\\dfrac{f(3+h)-f(3)}{h} = - 3 h - 19$."
+   ],
+   "verified": true,
+   "variable": "h",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "functions-basics-74dbcf",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Let $f(x) = - 2 x^{2} - 4 x - 1$. Simplify the difference quotient $\\dfrac{f(3+h) - f(3)}{h}$ for $h \\ne 0$.",
+   "checker": "equiv",
+   "answer": "-2*h-16",
+   "hints": [
+    "Start by expanding $f(3+h)$ completely; $(3+h)^2 = 9 + 6h + h^2$.",
+    "After subtracting $f(3) = -31$ every remaining term has a factor of $h$ that cancels."
+   ],
+   "solution": [
+    "$f(3+h) = - 2 h^{2} - 16 h - 31$ and $f(3) = -31$.",
+    "$f(3+h) - f(3) = - 2 h^{2} - 16 h$.",
+    "Divide by $h$: $\\dfrac{f(3+h)-f(3)}{h} = - 2 h - 16$."
+   ],
+   "verified": true,
+   "variable": "h",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "functions-basics-747016",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} x - 2 & \\text{if } x < 1 \\\\ - x^{2} & \\text{if } x \\ge 1 \\end{cases}$. Find $f(3)$.",
+   "checker": "numeric",
+   "answer": "-9",
+   "hints": [
+    "First decide which condition $3$ satisfies: is $3 < 1$ or $3 \\ge 1$?",
+    "Use only the second formula, since the other one does not apply at $x=3$."
+   ],
+   "solution": [
+    "Since $3 \\ge 1$, the second rule applies.",
+    "$f(3) = - x^{2}$ at $x=3$, which equals $-9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-df4108",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} x - 1 & \\text{if } x < 2 \\\\ - x^{2} - 3 & \\text{if } x \\ge 2 \\end{cases}$. Find $f(0)$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "First decide which condition $0$ satisfies: is $0 < 2$ or $0 \\ge 2$?",
+    "Use only the first formula, since the other one does not apply at $x=0$."
+   ],
+   "solution": [
+    "Since $0 < 2$, the first rule applies.",
+    "$f(0) = x - 1$ at $x=0$, which equals $-1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-50bed0",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} x - 1 & \\text{if } x < 0 \\\\ 3 - x^{2} & \\text{if } x \\ge 0 \\end{cases}$. Find $f(-2)$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "First decide which condition $-2$ satisfies: is $-2 < 0$ or $-2 \\ge 0$?",
+    "Use only the first formula, since the other one does not apply at $x=-2$."
+   ],
+   "solution": [
+    "Since $-2 < 0$, the first rule applies.",
+    "$f(-2) = x - 1$ at $x=-2$, which equals $-3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-17580a",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\begin{cases} - 3 x - 1 & \\text{if } x < -1 \\\\ 2 x^{2} + 1 & \\text{if } x \\ge -1 \\end{cases}$. Find $f(-1)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "First decide which condition $-1$ satisfies: is $-1 < -1$ or $-1 \\ge -1$?",
+    "Use only the second formula, since the other one does not apply at $x=-1$."
+   ],
+   "solution": [
+    "Since $-1 \\ge -1$, the second rule applies.",
+    "$f(-1) = 2 x^{2} + 1$ at $x=-1$, which equals $3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-bb9264",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} 2 - 2 x & \\text{if } x < 0 \\\\ 2 - x^{2} & \\text{if } x \\ge 0 \\end{cases}$. Find $f(2)$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "First decide which condition $2$ satisfies: is $2 < 0$ or $2 \\ge 0$?",
+    "Use only the second formula, since the other one does not apply at $x=2$."
+   ],
+   "solution": [
+    "Since $2 \\ge 0$, the second rule applies.",
+    "$f(2) = 2 - x^{2}$ at $x=2$, which equals $-2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-45ddba",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} - x - 2 & \\text{if } x < 2 \\\\ 3 x^{2} + 3 & \\text{if } x \\ge 2 \\end{cases}$. Find $f(4)$.",
+   "checker": "numeric",
+   "answer": "51",
+   "hints": [
+    "First decide which condition $4$ satisfies: is $4 < 2$ or $4 \\ge 2$?",
+    "Use only the second formula, since the other one does not apply at $x=4$."
+   ],
+   "solution": [
+    "Since $4 \\ge 2$, the second rule applies.",
+    "$f(4) = 3 x^{2} + 3$ at $x=4$, which equals $51$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-cfe3c6",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} x + 1 & \\text{if } x < -1 \\\\ x^{2} - 1 & \\text{if } x \\ge -1 \\end{cases}$. Find $f(2)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "First decide which condition $2$ satisfies: is $2 < -1$ or $2 \\ge -1$?",
+    "Use only the second formula, since the other one does not apply at $x=2$."
+   ],
+   "solution": [
+    "Since $2 \\ge -1$, the second rule applies.",
+    "$f(2) = x^{2} - 1$ at $x=2$, which equals $3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-c8a41e",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Is $f(x) = - x^{2} - x$ even, odd, or neither?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compute $f(-x)$ by replacing $x$ with $-x$ and simplify; watch how each power of $x$ behaves.",
+    "Even means $f(-x)=f(x)$; odd means $f(-x)=-f(x)$. If neither identity holds for all $x$, the answer is neither."
+   ],
+   "solution": [
+    "$f(-x) = x \\left(1 - x\\right)$.",
+    "This is neither $f(x)$ nor $-f(x)$, so $f$ is neither even nor odd."
+   ],
+   "verified": true,
+   "choices": [
+    "odd",
+    "even",
+    "neither"
+   ]
+  },
+  {
+   "id": "functions-basics-718f63",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Is $f(x) = - 2 x^{5} + x^{3}$ even, odd, or neither?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Compute $f(-x)$ by replacing $x$ with $-x$ and simplify; watch how each power of $x$ behaves.",
+    "Even means $f(-x)=f(x)$; odd means $f(-x)=-f(x)$. If neither identity holds for all $x$, the answer is neither."
+   ],
+   "solution": [
+    "$f(-x) = 2 x^{5} - x^{3}$.",
+    "This equals $-f(x)$, so $f$ is odd (its graph is symmetric about the origin)."
+   ],
+   "verified": true,
+   "choices": [
+    "even",
+    "odd",
+    "neither"
+   ]
+  },
+  {
+   "id": "functions-basics-6e021c",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Is $f(x) = - 3 x^{2} + x - 1$ even, odd, or neither?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Compute $f(-x)$ by replacing $x$ with $-x$ and simplify; watch how each power of $x$ behaves.",
+    "Even means $f(-x)=f(x)$; odd means $f(-x)=-f(x)$. If neither identity holds for all $x$, the answer is neither."
+   ],
+   "solution": [
+    "$f(-x) = - 3 x^{2} - x - 1$.",
+    "This is neither $f(x)$ nor $-f(x)$, so $f$ is neither even nor odd."
+   ],
+   "verified": true,
+   "choices": [
+    "even",
+    "neither",
+    "odd"
+   ]
+  },
+  {
+   "id": "functions-basics-7a8312",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Is $f(x) = - x + \\sqrt{x + 4}$ even, odd, or neither?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compute $f(-x)$ by replacing $x$ with $-x$ and simplify; watch how each power of $x$ behaves.",
+    "Even means $f(-x)=f(x)$; odd means $f(-x)=-f(x)$. If neither identity holds for all $x$, the answer is neither."
+   ],
+   "solution": [
+    "$f(-x) = x + \\sqrt{4 - x}$.",
+    "This is neither $f(x)$ nor $-f(x)$, so $f$ is neither even nor odd."
+   ],
+   "verified": true,
+   "choices": [
+    "odd",
+    "even",
+    "neither"
+   ]
+  },
+  {
+   "id": "functions-basics-6cd31b",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Is $f(x) = - 2 x^{2} - 2 x - 4$ even, odd, or neither?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compute $f(-x)$ by replacing $x$ with $-x$ and simplify; watch how each power of $x$ behaves.",
+    "Even means $f(-x)=f(x)$; odd means $f(-x)=-f(x)$. If neither identity holds for all $x$, the answer is neither."
+   ],
+   "solution": [
+    "$f(-x) = - 2 x^{2} + 2 x - 4$.",
+    "This is neither $f(x)$ nor $-f(x)$, so $f$ is neither even nor odd."
+   ],
+   "verified": true,
+   "choices": [
+    "neither",
+    "even",
+    "odd"
+   ]
+  },
+  {
+   "id": "functions-basics-45edeb",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Is $f(x) = - \\frac{2 x}{x^{2} + 4}$ even, odd, or neither?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Compute $f(-x)$ by replacing $x$ with $-x$ and simplify; watch how each power of $x$ behaves.",
+    "Even means $f(-x)=f(x)$; odd means $f(-x)=-f(x)$. If neither identity holds for all $x$, the answer is neither."
+   ],
+   "solution": [
+    "$f(-x) = \\frac{2 x}{x^{2} + 4}$.",
+    "This equals $-f(x)$, so $f$ is odd (its graph is symmetric about the origin)."
+   ],
+   "verified": true,
+   "choices": [
+    "even",
+    "odd",
+    "neither"
+   ]
+  },
+  {
+   "id": "functions-basics-84133c",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Is $f(x) = 3 x + \\sqrt{x + 1}$ even, odd, or neither?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compute $f(-x)$ by replacing $x$ with $-x$ and simplify; watch how each power of $x$ behaves.",
+    "Even means $f(-x)=f(x)$; odd means $f(-x)=-f(x)$. If neither identity holds for all $x$, the answer is neither."
+   ],
+   "solution": [
+    "$f(-x) = - 3 x + \\sqrt{1 - x}$.",
+    "This is neither $f(x)$ nor $-f(x)$, so $f$ is neither even nor odd."
+   ],
+   "verified": true,
+   "choices": [
+    "neither",
+    "odd",
+    "even"
+   ]
+  },
+  {
+   "id": "functions-basics-d2c2e8",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "A function $f$ is given by the table $\\begin{array}{c|ccccc} x & 0 & 1 & 2 & 3 & 4 \\\\ \\hline f(x) & -3 & -1 & 5 & 4 & -4 \\end{array}$. Compute $f(4) + f(0)$.",
+   "checker": "numeric",
+   "answer": "-7",
+   "hints": [
+    "Read each function value from the row labelled $f(x)$ under the matching $x$.",
+    "$f(4) = -4$ and $f(0) = -3$."
+   ],
+   "solution": [
+    "From the table, $f(4) = -4$ and $f(0) = -3$.",
+    "So $f(4) + f(0) = -7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-6179e5",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "A function $f$ is given by the table $\\begin{array}{c|ccccc} x & 0 & 1 & 2 & 3 & 4 \\\\ \\hline f(x) & -5 & 5 & 6 & 3 & -5 \\end{array}$. Compute $f(3) \\cdot f(4)$.",
+   "checker": "numeric",
+   "answer": "-15",
+   "hints": [
+    "Read each function value from the row labelled $f(x)$ under the matching $x$.",
+    "$f(3) = 3$ and $f(4) = -5$."
+   ],
+   "solution": [
+    "From the table, $f(3) = 3$ and $f(4) = -5$.",
+    "So $f(3) \\cdot f(4) = -15$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-65a02e",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "A function $f$ is given by the table $\\begin{array}{c|ccccc} x & 0 & 1 & 2 & 3 & 4 \\\\ \\hline f(x) & 1 & 1 & 3 & -4 & -5 \\end{array}$. Compute $f(3) - f(0)$.",
+   "checker": "numeric",
+   "answer": "-5",
+   "hints": [
+    "Read each function value from the row labelled $f(x)$ under the matching $x$.",
+    "$f(3) = -4$ and $f(0) = 1$."
+   ],
+   "solution": [
+    "From the table, $f(3) = -4$ and $f(0) = 1$.",
+    "So $f(3) - f(0) = -5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-be76e0",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "A function $f$ is given by the table $\\begin{array}{c|ccccc} x & 0 & 1 & 2 & 3 & 4 \\\\ \\hline f(x) & -1 & -3 & 1 & 9 & 3 \\end{array}$. Compute $f(4) \\cdot f(0)$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Read each function value from the row labelled $f(x)$ under the matching $x$.",
+    "$f(4) = 3$ and $f(0) = -1$."
+   ],
+   "solution": [
+    "From the table, $f(4) = 3$ and $f(0) = -1$.",
+    "So $f(4) \\cdot f(0) = -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-746352",
+   "skill": "functions-basics",
+   "difficulty": 1,
+   "statement": "A function $f$ is given by the table $\\begin{array}{c|ccccc} x & 0 & 1 & 2 & 3 & 4 \\\\ \\hline f(x) & 3 & 8 & -2 & -3 & 4 \\end{array}$. Compute $f(2) + f(3)$.",
+   "checker": "numeric",
+   "answer": "-5",
+   "hints": [
+    "Read each function value from the row labelled $f(x)$ under the matching $x$.",
+    "$f(2) = -2$ and $f(3) = -3$."
+   ],
+   "solution": [
+    "From the table, $f(2) = -2$ and $f(3) = -3$.",
+    "So $f(2) + f(3) = -5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-bd4902",
+   "skill": "functions-basics",
+   "difficulty": 3,
+   "statement": "A rectangle has perimeter $36$ m. Express its area $A$ as a function of the width $w$.",
+   "checker": "equiv",
+   "answer": "w*(18-w)",
+   "hints": [
+    "Write the perimeter equation $2w + 2\\ell = 36$ and solve it for the length $\\ell$.",
+    "Area is width times length; substitute your expression for $\\ell$."
+   ],
+   "solution": [
+    "From $2w + 2\\ell = 36$ we get $\\ell = 18 - w$.",
+    "$A(w) = w\\ell = w(18 - w) = - w^{2} + 18 w$, for $0 < w < 18$."
+   ],
+   "verified": true,
+   "variable": "w",
+   "domain": [
+    1,
+    17.0
+   ]
+  },
+  {
+   "id": "functions-basics-e06582",
+   "skill": "functions-basics",
+   "difficulty": 3,
+   "statement": "A rectangle has perimeter $24$ m. Express its area $A$ as a function of the width $w$.",
+   "checker": "equiv",
+   "answer": "w*(12-w)",
+   "hints": [
+    "Write the perimeter equation $2w + 2\\ell = 24$ and solve it for the length $\\ell$.",
+    "Area is width times length; substitute your expression for $\\ell$."
+   ],
+   "solution": [
+    "From $2w + 2\\ell = 24$ we get $\\ell = 12 - w$.",
+    "$A(w) = w\\ell = w(12 - w) = - w^{2} + 12 w$, for $0 < w < 12$."
+   ],
+   "verified": true,
+   "variable": "w",
+   "domain": [
+    1,
+    11.0
+   ]
+  },
+  {
+   "id": "functions-basics-e727e0",
+   "skill": "functions-basics",
+   "difficulty": 3,
+   "statement": "A rectangle has perimeter $30$ m. Express its area $A$ as a function of the width $w$.",
+   "checker": "equiv",
+   "answer": "w*(15-w)",
+   "hints": [
+    "Write the perimeter equation $2w + 2\\ell = 30$ and solve it for the length $\\ell$.",
+    "Area is width times length; substitute your expression for $\\ell$."
+   ],
+   "solution": [
+    "From $2w + 2\\ell = 30$ we get $\\ell = 15 - w$.",
+    "$A(w) = w\\ell = w(15 - w) = - w^{2} + 15 w$, for $0 < w < 15$."
+   ],
+   "verified": true,
+   "variable": "w",
+   "domain": [
+    1,
+    14.0
+   ]
+  },
+  {
+   "id": "functions-basics-e2de4e",
+   "skill": "functions-basics",
+   "difficulty": 3,
+   "statement": "An open box has a square base of side $x$ and volume $64$ cubic units. Express the total surface area $S$ (base plus four sides) as a function of $x$.",
+   "checker": "equiv",
+   "answer": "x^2+256/x",
+   "hints": [
+    "Let the height be $h$; the volume gives $x^2 h = 64$.",
+    "Surface area is the base $x^2$ plus four sides of area $xh$ each; replace $h$ using the volume equation."
+   ],
+   "solution": [
+    "Volume: $x^2 h = 64$, so $h = 64/x^2$.",
+    "$S = x^2 + 4xh = x^2 + 4x \\cdot \\dfrac{64}{x^2} = x^2 + \\dfrac{256}{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    4
+   ]
+  },
+  {
+   "id": "functions-basics-dc2263",
+   "skill": "functions-basics",
+   "difficulty": 3,
+   "statement": "An open box has a square base of side $x$ and volume $16$ cubic units. Express the total surface area $S$ (base plus four sides) as a function of $x$.",
+   "checker": "equiv",
+   "answer": "x^2+64/x",
+   "hints": [
+    "Let the height be $h$; the volume gives $x^2 h = 16$.",
+    "Surface area is the base $x^2$ plus four sides of area $xh$ each; replace $h$ using the volume equation."
+   ],
+   "solution": [
+    "Volume: $x^2 h = 16$, so $h = 16/x^2$.",
+    "$S = x^2 + 4xh = x^2 + 4x \\cdot \\dfrac{16}{x^2} = x^2 + \\dfrac{64}{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    4
+   ]
+  },
+  {
+   "id": "functions-basics-fb96f7",
+   "skill": "functions-basics",
+   "difficulty": 3,
+   "statement": "An open box has a square base of side $x$ and volume $100$ cubic units. Express the total surface area $S$ (base plus four sides) as a function of $x$.",
+   "checker": "equiv",
+   "answer": "x^2+400/x",
+   "hints": [
+    "Let the height be $h$; the volume gives $x^2 h = 100$.",
+    "Surface area is the base $x^2$ plus four sides of area $xh$ each; replace $h$ using the volume equation."
+   ],
+   "solution": [
+    "Volume: $x^2 h = 100$, so $h = 100/x^2$.",
+    "$S = x^2 + 4xh = x^2 + 4x \\cdot \\dfrac{100}{x^2} = x^2 + \\dfrac{400}{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    4
+   ]
+  },
+  {
+   "id": "functions-basics-a49625",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Find the range of $f(x) = x^{2} + 4$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "[4,inf)",
+   "hints": [
+    "Ask what values the squared (or absolute-value) part can take, then see what the rest of the formula does to them.",
+    "The smallest (or largest) output happens where the squared or absolute part equals zero."
+   ],
+   "solution": [
+    "Since $x^2 \\ge 0$, so $x^{2} + 4 \\ge 4$, and the value $4$ is reached at $x = 0$, every output is at least $4$.",
+    "As $|x|$ grows the outputs grow without bound upward, so the range is $[4, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-1cfb8e",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Find the range of $f(x) = - 2 x^{2} - 3$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,-3]",
+   "hints": [
+    "Ask what values the squared (or absolute-value) part can take, then see what the rest of the formula does to them.",
+    "The smallest (or largest) output happens where the squared or absolute part equals zero."
+   ],
+   "solution": [
+    "Since $-2x^2 \\le 0$, so $- 2 x^{2} - 3 \\le -3$, with equality at $x = 0$, every output is at most $-3$.",
+    "As $|x|$ grows the outputs grow without bound downward, so the range is $(-\\infty, -3]$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-e6f669",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Find the range of $f(x) = x^{2} - 1$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "[-1,inf)",
+   "hints": [
+    "Ask what values the squared (or absolute-value) part can take, then see what the rest of the formula does to them.",
+    "The smallest (or largest) output happens where the squared or absolute part equals zero."
+   ],
+   "solution": [
+    "Since $x^2 \\ge 0$, so $x^{2} - 1 \\ge -1$, and the value $-1$ is reached at $x = 0$, every output is at least $-1$.",
+    "As $|x|$ grows the outputs grow without bound upward, so the range is $[-1, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "functions-basics-c39eea",
+   "skill": "functions-basics",
+   "difficulty": 2,
+   "statement": "Exactly one of these equations defines $y$ as a function of $x$. Which one?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "A function gives exactly one output $y$ for each input $x$: no vertical line may hit the graph twice.",
+    "Try solving each equation for $y$; a $\\pm$ square root or $|y|$ means two $y$-values for one $x$."
+   ],
+   "solution": [
+    "Solving $x = y^2 + c$, $x^2 + y^2 = r^2$, or $|y| = x + c$ for $y$ gives $y = \\pm(\\dots)$, two outputs for one input, so those fail the vertical line test.",
+    "The equation $y = \\sqrt{x + 3} - 3$ gives a single $y$ for each allowed $x$, so it defines a function."
+   ],
+   "verified": true,
+   "choices": [
+    "$x = y^2 - 3$",
+    "$|y| = x + 3$",
+    "$y = \\sqrt{x + 3} - 3$",
+    "$x^2 + y^2 = 18$"
+   ]
+  }
+ ]
+}

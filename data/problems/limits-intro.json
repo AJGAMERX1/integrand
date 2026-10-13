@@ -1,0 +1,1057 @@
+{
+ "skill": "limits-intro",
+ "problems": [
+  {
+   "id": "limits-intro-ffdbcb",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\begin{cases} - x - 2 & \\text{if } x < 1 \\\\ - x & \\text{if } x \\ge 1 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to 1} f(x)$.",
+   "checker": "choice",
+   "answer": "4",
+   "hints": [
+    "Compute the left-hand and right-hand limits separately from the two formulas.",
+    "A two-sided limit exists only when both one-sided limits exist and agree."
+   ],
+   "solution": [
+    "Left: $\\lim_{x \\to 1^-} f(x) = -3$. Right: $\\lim_{x \\to 1^+} f(x) = -1$.",
+    "They differ, so the two-sided limit does not exist."
+   ],
+   "verified": true,
+   "choices": [
+    "$-\\infty$",
+    "$-1$",
+    "$-3$",
+    "$\\infty$",
+    "does not exist"
+   ]
+  },
+  {
+   "id": "limits-intro-d687dd",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} - x & \\text{if } x < -1 \\\\ x^{2} & \\text{if } x \\ge -1 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to -1^+} f(x)$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "For $x \\to -1^+$ only values of $x$ greater than $-1$ matter.",
+    "Use the second formula and let $x$ approach $-1$."
+   ],
+   "solution": [
+    "Near $-1$ on the right, $f(x) = x^{2}$.",
+    "Substituting $x = -1$ gives $\\lim_{x \\to -1^+} f(x) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-2140c7",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} 2 - x & \\text{if } x < -1 \\\\ 2 x & \\text{if } x \\ge -1 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to -1^+} f(x)$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "For $x \\to -1^+$ only values of $x$ greater than $-1$ matter.",
+    "Use the second formula and let $x$ approach $-1$."
+   ],
+   "solution": [
+    "Near $-1$ on the right, $f(x) = 2 x$.",
+    "Substituting $x = -1$ gives $\\lim_{x \\to -1^+} f(x) = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-a9a274",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} 2 - x & \\text{if } x < 1 \\\\ 4 - 2 x & \\text{if } x \\ge 1 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to 1^-} f(x)$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "For $x \\to 1^-$ only values of $x$ less than $1$ matter.",
+    "Use the first formula and let $x$ approach $1$."
+   ],
+   "solution": [
+    "Near $1$ on the left, $f(x) = 2 - x$.",
+    "Substituting $x = 1$ gives $\\lim_{x \\to 1^-} f(x) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-8c740b",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} x^{2} - 1 & \\text{if } x < -2 \\\\ x^{2} - 4 & \\text{if } x \\ge -2 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to -2^-} f(x)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "For $x \\to -2^-$ only values of $x$ less than $-2$ matter.",
+    "Use the first formula and let $x$ approach $-2$."
+   ],
+   "solution": [
+    "Near $-2$ on the left, $f(x) = x^{2} - 1$.",
+    "Substituting $x = -2$ gives $\\lim_{x \\to -2^-} f(x) = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-b96ba9",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\begin{cases} 2 - x & \\text{if } x < 2 \\\\ 2 x + 1 & \\text{if } x \\ge 2 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to 2} f(x)$.",
+   "checker": "choice",
+   "answer": "4",
+   "hints": [
+    "Compute the left-hand and right-hand limits separately from the two formulas.",
+    "A two-sided limit exists only when both one-sided limits exist and agree."
+   ],
+   "solution": [
+    "Left: $\\lim_{x \\to 2^-} f(x) = 0$. Right: $\\lim_{x \\to 2^+} f(x) = 5$.",
+    "They differ, so the two-sided limit does not exist."
+   ],
+   "verified": true,
+   "choices": [
+    "$0$",
+    "$-\\infty$",
+    "$5$",
+    "$\\infty$",
+    "does not exist"
+   ]
+  },
+  {
+   "id": "limits-intro-967211",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\begin{cases} x^{2} & \\text{if } x < 0 \\\\ \\sqrt{x + 4} & \\text{if } x \\ge 0 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to 0} f(x)$.",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compute the left-hand and right-hand limits separately from the two formulas.",
+    "A two-sided limit exists only when both one-sided limits exist and agree."
+   ],
+   "solution": [
+    "Left: $\\lim_{x \\to 0^-} f(x) = 0$. Right: $\\lim_{x \\to 0^+} f(x) = 2$.",
+    "They differ, so the two-sided limit does not exist."
+   ],
+   "verified": true,
+   "choices": [
+    "$-\\infty$",
+    "$\\infty$",
+    "does not exist",
+    "$2$",
+    "$0$"
+   ]
+  },
+  {
+   "id": "limits-intro-4d3dce",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} 2 x + 2 & \\text{if } x < 3 \\\\ x - 3 & \\text{if } x \\ge 3 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to 3^+} f(x)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "For $x \\to 3^+$ only values of $x$ greater than $3$ matter.",
+    "Use the second formula and let $x$ approach $3$."
+   ],
+   "solution": [
+    "Near $3$ on the right, $f(x) = x - 3$.",
+    "Substituting $x = 3$ gives $\\lim_{x \\to 3^+} f(x) = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-74b976",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} x^{2} - 2 & \\text{if } x < 3 \\\\ x - 4 & \\text{if } x \\ge 3 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to 3^+} f(x)$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "For $x \\to 3^+$ only values of $x$ greater than $3$ matter.",
+    "Use the second formula and let $x$ approach $3$."
+   ],
+   "solution": [
+    "Near $3$ on the right, $f(x) = x - 4$.",
+    "Substituting $x = 3$ gives $\\lim_{x \\to 3^+} f(x) = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-ad4e4c",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\begin{cases} 4 - x & \\text{if } x < 2 \\\\ - 2 x - 2 & \\text{if } x \\ge 2 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to 2} f(x)$.",
+   "checker": "choice",
+   "answer": "4",
+   "hints": [
+    "Compute the left-hand and right-hand limits separately from the two formulas.",
+    "A two-sided limit exists only when both one-sided limits exist and agree."
+   ],
+   "solution": [
+    "Left: $\\lim_{x \\to 2^-} f(x) = 2$. Right: $\\lim_{x \\to 2^+} f(x) = -6$.",
+    "They differ, so the two-sided limit does not exist."
+   ],
+   "verified": true,
+   "choices": [
+    "$2$",
+    "$-6$",
+    "$-\\infty$",
+    "$\\infty$",
+    "does not exist"
+   ]
+  },
+  {
+   "id": "limits-intro-c8d27b",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} 4 - x & \\text{if } x < 3 \\\\ \\sqrt{x + 5} & \\text{if } x \\ge 3 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to 3^-} f(x)$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "For $x \\to 3^-$ only values of $x$ less than $3$ matter.",
+    "Use the first formula and let $x$ approach $3$."
+   ],
+   "solution": [
+    "Near $3$ on the left, $f(x) = 4 - x$.",
+    "Substituting $x = 3$ gives $\\lim_{x \\to 3^-} f(x) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-0e82fd",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\begin{cases} 2 x + 4 & \\text{if } x < 2 \\\\ - x - 4 & \\text{if } x \\ge 2 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to 2} f(x)$.",
+   "checker": "choice",
+   "answer": "4",
+   "hints": [
+    "Compute the left-hand and right-hand limits separately from the two formulas.",
+    "A two-sided limit exists only when both one-sided limits exist and agree."
+   ],
+   "solution": [
+    "Left: $\\lim_{x \\to 2^-} f(x) = 8$. Right: $\\lim_{x \\to 2^+} f(x) = -6$.",
+    "They differ, so the two-sided limit does not exist."
+   ],
+   "verified": true,
+   "choices": [
+    "$8$",
+    "$\\infty$",
+    "$-\\infty$",
+    "$-6$",
+    "does not exist"
+   ]
+  },
+  {
+   "id": "limits-intro-55290e",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} 4 - 3 x & \\text{if } x < 3 \\\\ \\sqrt{x + 4} & \\text{if } x \\ge 3 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to 3^-} f(x)$.",
+   "checker": "numeric",
+   "answer": "-5",
+   "hints": [
+    "For $x \\to 3^-$ only values of $x$ less than $3$ matter.",
+    "Use the first formula and let $x$ approach $3$."
+   ],
+   "solution": [
+    "Near $3$ on the left, $f(x) = 4 - 3 x$.",
+    "Substituting $x = 3$ gives $\\lim_{x \\to 3^-} f(x) = -5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-14e118",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} 3 - x & \\text{if } x < 0 \\\\ 3 x - 2 & \\text{if } x \\ge 0 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to 0^-} f(x)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "For $x \\to 0^-$ only values of $x$ less than $0$ matter.",
+    "Use the first formula and let $x$ approach $0$."
+   ],
+   "solution": [
+    "Near $0$ on the left, $f(x) = 3 - x$.",
+    "Substituting $x = 0$ gives $\\lim_{x \\to 0^-} f(x) = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-637b88",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\begin{cases} 4 - x & \\text{if } x < 3 \\\\ \\sqrt{x + 3} & \\text{if } x \\ge 3 \\end{cases}$. Find $\\displaystyle\\lim_{x \\to 3^-} f(x)$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "For $x \\to 3^-$ only values of $x$ less than $3$ matter.",
+    "Use the first formula and let $x$ approach $3$."
+   ],
+   "solution": [
+    "Near $3$ on the left, $f(x) = 4 - x$.",
+    "Substituting $x = 3$ gives $\\lim_{x \\to 3^-} f(x) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-8404da",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 2} -2 + \\frac{3}{\\left(x - 2\\right)^{2}}$.",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "As $x \\to 2$ the denominator approaches $0$ while the numerator does not, so the values blow up.",
+    "Decide the sign: is the denominator positive or negative for $x$ slightly on either side of $2$?"
+   ],
+   "solution": [
+    "Near $x = 2$, $\\left(x - 2\\right)^{2}$ is tiny and positive on both sides (it is a square).",
+    "Dividing $3$ by a tiny positive number gives huge positive values; the limit is $\\infty$."
+   ],
+   "verified": true,
+   "choices": [
+    "$0$",
+    "$\\infty$",
+    "does not exist",
+    "$1$",
+    "$-\\infty$"
+   ]
+  },
+  {
+   "id": "limits-intro-71b644",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 3} -1 - \\frac{3}{\\left(x - 3\\right)^{2}}$.",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "As $x \\to 3$ the denominator approaches $0$ while the numerator does not, so the values blow up.",
+    "Decide the sign: is the denominator positive or negative for $x$ slightly on either side of $3$?"
+   ],
+   "solution": [
+    "Near $x = 3$, $\\left(x - 3\\right)^{2}$ is tiny and positive on both sides (it is a square).",
+    "Dividing $-3$ by a tiny positive number gives huge negative values; the limit is $-\\infty$."
+   ],
+   "verified": true,
+   "choices": [
+    "does not exist",
+    "$\\infty$",
+    "$1$",
+    "$-\\infty$",
+    "$0$"
+   ]
+  },
+  {
+   "id": "limits-intro-af1528",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 2} -1 + \\frac{2}{\\left(x - 2\\right)^{2}}$.",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "As $x \\to 2$ the denominator approaches $0$ while the numerator does not, so the values blow up.",
+    "Decide the sign: is the denominator positive or negative for $x$ slightly on either side of $2$?"
+   ],
+   "solution": [
+    "Near $x = 2$, $\\left(x - 2\\right)^{2}$ is tiny and positive on both sides (it is a square).",
+    "Dividing $2$ by a tiny positive number gives huge positive values; the limit is $\\infty$."
+   ],
+   "verified": true,
+   "choices": [
+    "$1$",
+    "$0$",
+    "$-\\infty$",
+    "$\\infty$",
+    "does not exist"
+   ]
+  },
+  {
+   "id": "limits-intro-7ca565",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -3} - \\frac{4}{\\left(x + 3\\right)^{2}}$.",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "As $x \\to -3$ the denominator approaches $0$ while the numerator does not, so the values blow up.",
+    "Decide the sign: is the denominator positive or negative for $x$ slightly on either side of $-3$?"
+   ],
+   "solution": [
+    "Near $x = -3$, $\\left(x + 3\\right)^{2}$ is tiny and positive on both sides (it is a square).",
+    "Dividing $-4$ by a tiny positive number gives huge negative values; the limit is $-\\infty$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\infty$",
+    "$1$",
+    "$-\\infty$",
+    "$0$",
+    "does not exist"
+   ]
+  },
+  {
+   "id": "limits-intro-0a0d8e",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 1} -3 - \\frac{2}{\\left(x - 1\\right)^{2}}$.",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "As $x \\to 1$ the denominator approaches $0$ while the numerator does not, so the values blow up.",
+    "Decide the sign: is the denominator positive or negative for $x$ slightly on either side of $1$?"
+   ],
+   "solution": [
+    "Near $x = 1$, $\\left(x - 1\\right)^{2}$ is tiny and positive on both sides (it is a square).",
+    "Dividing $-2$ by a tiny positive number gives huge negative values; the limit is $-\\infty$."
+   ],
+   "verified": true,
+   "choices": [
+    "$-\\infty$",
+    "$1$",
+    "$\\infty$",
+    "does not exist",
+    "$0$"
+   ]
+  },
+  {
+   "id": "limits-intro-7302a4",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -1} - \\frac{1}{\\left(x + 1\\right)^{2}}$.",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "As $x \\to -1$ the denominator approaches $0$ while the numerator does not, so the values blow up.",
+    "Decide the sign: is the denominator positive or negative for $x$ slightly on either side of $-1$?"
+   ],
+   "solution": [
+    "Near $x = -1$, $\\left(x + 1\\right)^{2}$ is tiny and positive on both sides (it is a square).",
+    "Dividing $-1$ by a tiny positive number gives huge negative values; the limit is $-\\infty$."
+   ],
+   "verified": true,
+   "choices": [
+    "$1$",
+    "$\\infty$",
+    "$-\\infty$",
+    "does not exist",
+    "$0$"
+   ]
+  },
+  {
+   "id": "limits-intro-ac986d",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -1^-} - \\frac{4}{x + 1}$.",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "As $x \\to -1$ the denominator approaches $0$ while the numerator does not, so the values blow up.",
+    "Decide the sign: is the denominator positive or negative for $x$ slightly to the left of $-1$?"
+   ],
+   "solution": [
+    "Near $x = -1$, $x + 1$ is tiny and negative for $x$ < -1$.",
+    "Dividing $-4$ by a tiny negative number gives huge positive values; the limit is $\\infty$."
+   ],
+   "verified": true,
+   "choices": [
+    "does not exist",
+    "$\\infty$",
+    "$-\\infty$",
+    "$0$",
+    "$1$"
+   ]
+  },
+  {
+   "id": "limits-intro-8738a3",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 1^+} - \\frac{1}{x - 1}$.",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "As $x \\to 1$ the denominator approaches $0$ while the numerator does not, so the values blow up.",
+    "Decide the sign: is the denominator positive or negative for $x$ slightly to the right of $1$?"
+   ],
+   "solution": [
+    "Near $x = 1$, $x - 1$ is tiny and positive for $x$ > 1$.",
+    "Dividing $-1$ by a tiny positive number gives huge negative values; the limit is $-\\infty$."
+   ],
+   "verified": true,
+   "choices": [
+    "$0$",
+    "does not exist",
+    "$-\\infty$",
+    "$1$",
+    "$\\infty$"
+   ]
+  },
+  {
+   "id": "limits-intro-1f0d43",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 2} - \\frac{4}{\\left(x - 2\\right)^{2}}$.",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "As $x \\to 2$ the denominator approaches $0$ while the numerator does not, so the values blow up.",
+    "Decide the sign: is the denominator positive or negative for $x$ slightly on either side of $2$?"
+   ],
+   "solution": [
+    "Near $x = 2$, $\\left(x - 2\\right)^{2}$ is tiny and positive on both sides (it is a square).",
+    "Dividing $-4$ by a tiny positive number gives huge negative values; the limit is $-\\infty$."
+   ],
+   "verified": true,
+   "choices": [
+    "$1$",
+    "$0$",
+    "$\\infty$",
+    "$-\\infty$",
+    "does not exist"
+   ]
+  },
+  {
+   "id": "limits-intro-4262cc",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 3^-} \\frac{1}{x - 3}$.",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "As $x \\to 3$ the denominator approaches $0$ while the numerator does not, so the values blow up.",
+    "Decide the sign: is the denominator positive or negative for $x$ slightly to the left of $3$?"
+   ],
+   "solution": [
+    "Near $x = 3$, $x - 3$ is tiny and negative for $x$ < 3$.",
+    "Dividing $1$ by a tiny negative number gives huge negative values; the limit is $-\\infty$."
+   ],
+   "verified": true,
+   "choices": [
+    "does not exist",
+    "$-\\infty$",
+    "$1$",
+    "$0$",
+    "$\\infty$"
+   ]
+  },
+  {
+   "id": "limits-intro-44edf2",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "The curve $y = \\frac{x + 2}{x - 5}$ has exactly one vertical asymptote. Find its equation's value $x = a$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Vertical asymptotes occur where the denominator is $0$ but the numerator is not.",
+    "Set the denominator equal to zero and solve."
+   ],
+   "solution": [
+    "$x - 5 = 0$ gives $x = 5$, and the numerator there is $7 \\ne 0$.",
+    "So $|f(x)| \\to \\infty$ as $x \\to 5$: the vertical asymptote is $x = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-480841",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "The curve $y = \\frac{x + 3}{3 x + 6}$ has exactly one vertical asymptote. Find its equation's value $x = a$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "Vertical asymptotes occur where the denominator is $0$ but the numerator is not.",
+    "Set the denominator equal to zero and solve."
+   ],
+   "solution": [
+    "$3 x + 6 = 0$ gives $x = -2$, and the numerator there is $1 \\ne 0$.",
+    "So $|f(x)| \\to \\infty$ as $x \\to -2$: the vertical asymptote is $x = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-cadb50",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "The curve $y = \\frac{x + 3}{3 x + 12}$ has exactly one vertical asymptote. Find its equation's value $x = a$.",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "Vertical asymptotes occur where the denominator is $0$ but the numerator is not.",
+    "Set the denominator equal to zero and solve."
+   ],
+   "solution": [
+    "$3 x + 12 = 0$ gives $x = -4$, and the numerator there is $-1 \\ne 0$.",
+    "So $|f(x)| \\to \\infty$ as $x \\to -4$: the vertical asymptote is $x = -4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-2dd9c4",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "The curve $y = \\frac{x + 1}{3 x + 9}$ has exactly one vertical asymptote. Find its equation's value $x = a$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Vertical asymptotes occur where the denominator is $0$ but the numerator is not.",
+    "Set the denominator equal to zero and solve."
+   ],
+   "solution": [
+    "$3 x + 9 = 0$ gives $x = -3$, and the numerator there is $-2 \\ne 0$.",
+    "So $|f(x)| \\to \\infty$ as $x \\to -3$: the vertical asymptote is $x = -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-1327a0",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "The curve $y = \\frac{x + 3}{3 x - 9}$ has exactly one vertical asymptote. Find its equation's value $x = a$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Vertical asymptotes occur where the denominator is $0$ but the numerator is not.",
+    "Set the denominator equal to zero and solve."
+   ],
+   "solution": [
+    "$3 x - 9 = 0$ gives $x = 3$, and the numerator there is $6 \\ne 0$.",
+    "So $|f(x)| \\to \\infty$ as $x \\to 3$: the vertical asymptote is $x = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-3083c4",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{x^{2} - 4}{x - 2}$, which is undefined at $x = 2$. Its values near $2$ are $\\begin{array}{c|cccccc} x & 1.9 & 1.99 & 1.999 & 2.001 & 2.01 & 2.1 \\\\ \\hline f(x) & 3.9000 & 3.9900 & 3.9990 & 4.0010 & 4.0100 & 4.1000 \\end{array}$. Guess the value of $\\displaystyle\\lim_{x \\to 2} f(x)$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "A limit describes the value $f(x)$ gets close to, not the value at the point itself.",
+    "Read the table from both sides toward the middle and look for the common target."
+   ],
+   "solution": [
+    "From both sides the values approach $4$ (they get closer the nearer $x$ is to $2$).",
+    "So $\\lim_{x \\to 2} f(x) = 4$ even though $f(2)$ is undefined."
+   ],
+   "verified": true,
+   "tolerance": 0.0001
+  },
+  {
+   "id": "limits-intro-2407f4",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{\\sin{\\left(2 x \\right)}}{x}$, which is undefined at $x = 0$. Its values near $0$ are $\\begin{array}{c|cccccc} x & -0.1 & -0.01 & -0.001 & 0.001 & 0.01 & 0.1 \\\\ \\hline f(x) & 1.9867 & 1.9999 & 2.0000 & 2.0000 & 1.9999 & 1.9867 \\end{array}$. Guess the value of $\\displaystyle\\lim_{x \\to 0} f(x)$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "A limit describes the value $f(x)$ gets close to, not the value at the point itself.",
+    "Read the table from both sides toward the middle and look for the common target."
+   ],
+   "solution": [
+    "From both sides the values approach $2$ (they get closer the nearer $x$ is to $0$).",
+    "So $\\lim_{x \\to 0} f(x) = 2$ even though $f(0)$ is undefined."
+   ],
+   "verified": true,
+   "tolerance": 0.0001
+  },
+  {
+   "id": "limits-intro-31a7a5",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{\\sqrt{x + 5} - 2 \\sqrt{2}}{x - 3}$, which is undefined at $x = 3$. Its values near $3$ are $\\begin{array}{c|cccccc} x & 2.9 & 2.99 & 2.999 & 3.001 & 3.01 & 3.1 \\\\ \\hline f(x) & 0.1773 & 0.1768 & 0.1768 & 0.1768 & 0.1767 & 0.1762 \\end{array}$. Guess the value of $\\displaystyle\\lim_{x \\to 3} f(x)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/8",
+   "hints": [
+    "A limit describes the value $f(x)$ gets close to, not the value at the point itself.",
+    "Read the table from both sides toward the middle and look for the common target."
+   ],
+   "solution": [
+    "From both sides the values approach $\\frac{\\sqrt{2}}{8}$ (they get closer the nearer $x$ is to $3$).",
+    "So $\\lim_{x \\to 3} f(x) = \\frac{\\sqrt{2}}{8}$ even though $f(3)$ is undefined."
+   ],
+   "verified": true,
+   "tolerance": 0.0001
+  },
+  {
+   "id": "limits-intro-d56ba3",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{\\sqrt{x + 1} - \\sqrt{2}}{x - 1}$, which is undefined at $x = 1$. Its values near $1$ are $\\begin{array}{c|cccccc} x & 0.9 & 0.99 & 0.999 & 1.001 & 1.01 & 1.1 \\\\ \\hline f(x) & 0.3581 & 0.3540 & 0.3536 & 0.3535 & 0.3531 & 0.3492 \\end{array}$. Guess the value of $\\displaystyle\\lim_{x \\to 1} f(x)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/4",
+   "hints": [
+    "A limit describes the value $f(x)$ gets close to, not the value at the point itself.",
+    "Read the table from both sides toward the middle and look for the common target."
+   ],
+   "solution": [
+    "From both sides the values approach $\\frac{\\sqrt{2}}{4}$ (they get closer the nearer $x$ is to $1$).",
+    "So $\\lim_{x \\to 1} f(x) = \\frac{\\sqrt{2}}{4}$ even though $f(1)$ is undefined."
+   ],
+   "verified": true,
+   "tolerance": 0.0001
+  },
+  {
+   "id": "limits-intro-543367",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{\\sin{\\left(3 x \\right)}}{x}$, which is undefined at $x = 0$. Its values near $0$ are $\\begin{array}{c|cccccc} x & -0.1 & -0.01 & -0.001 & 0.001 & 0.01 & 0.1 \\\\ \\hline f(x) & 2.9552 & 2.9996 & 3.0000 & 3.0000 & 2.9996 & 2.9552 \\end{array}$. Guess the value of $\\displaystyle\\lim_{x \\to 0} f(x)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "A limit describes the value $f(x)$ gets close to, not the value at the point itself.",
+    "Read the table from both sides toward the middle and look for the common target."
+   ],
+   "solution": [
+    "From both sides the values approach $3$ (they get closer the nearer $x$ is to $0$).",
+    "So $\\lim_{x \\to 0} f(x) = 3$ even though $f(0)$ is undefined."
+   ],
+   "verified": true,
+   "tolerance": 0.0001
+  },
+  {
+   "id": "limits-intro-37821e",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{x^{2} - x - 2}{x + 1}$, which is undefined at $x = -1$. Its values near $-1$ are $\\begin{array}{c|cccccc} x & -1.1 & -1.01 & -1.001 & -0.999 & -0.99 & -0.9 \\\\ \\hline f(x) & -3.1000 & -3.0100 & -3.0010 & -2.9990 & -2.9900 & -2.9000 \\end{array}$. Guess the value of $\\displaystyle\\lim_{x \\to -1} f(x)$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "A limit describes the value $f(x)$ gets close to, not the value at the point itself.",
+    "Read the table from both sides toward the middle and look for the common target."
+   ],
+   "solution": [
+    "From both sides the values approach $-3$ (they get closer the nearer $x$ is to $-1$).",
+    "So $\\lim_{x \\to -1} f(x) = -3$ even though $f(-1)$ is undefined."
+   ],
+   "verified": true,
+   "tolerance": 0.0001
+  },
+  {
+   "id": "limits-intro-de0eb6",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{\\sqrt{x} - \\sqrt{3}}{x - 3}$, which is undefined at $x = 3$. Its values near $3$ are $\\begin{array}{c|cccccc} x & 2.9 & 2.99 & 2.999 & 3.001 & 3.01 & 3.1 \\\\ \\hline f(x) & 0.2911 & 0.2889 & 0.2887 & 0.2887 & 0.2884 & 0.2863 \\end{array}$. Guess the value of $\\displaystyle\\lim_{x \\to 3} f(x)$.",
+   "checker": "numeric",
+   "answer": "sqrt(3)/6",
+   "hints": [
+    "A limit describes the value $f(x)$ gets close to, not the value at the point itself.",
+    "Read the table from both sides toward the middle and look for the common target."
+   ],
+   "solution": [
+    "From both sides the values approach $\\frac{\\sqrt{3}}{6}$ (they get closer the nearer $x$ is to $3$).",
+    "So $\\lim_{x \\to 3} f(x) = \\frac{\\sqrt{3}}{6}$ even though $f(3)$ is undefined."
+   ],
+   "verified": true,
+   "tolerance": 0.0001
+  },
+  {
+   "id": "limits-intro-0a79fd",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -2} \\frac{3 \\left|{x + 2}\\right|}{x + 2}$.",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Rewrite $|x - a|$ as $x - a$ when $x > a$ and as $-(x - a)$ when $x < a$.",
+    "Compare the one-sided limits."
+   ],
+   "solution": [
+    "For $x > -2$: $f(x) = 3$. For $x < -2$: $f(x) = -3$.",
+    "The one-sided limits differ, so the two-sided limit does not exist."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\infty$",
+    "does not exist",
+    "$-\\infty$",
+    "$-3$",
+    "$3$"
+   ]
+  },
+  {
+   "id": "limits-intro-5fa2ba",
+   "skill": "limits-intro",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 0} \\frac{2 \\left|{x}\\right|}{x}$.",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Rewrite $|x - a|$ as $x - a$ when $x > a$ and as $-(x - a)$ when $x < a$.",
+    "Compare the one-sided limits."
+   ],
+   "solution": [
+    "For $x > 0$: $f(x) = 2$. For $x < 0$: $f(x) = -2$.",
+    "The one-sided limits differ, so the two-sided limit does not exist."
+   ],
+   "verified": true,
+   "choices": [
+    "does not exist",
+    "$2$",
+    "$\\infty$",
+    "$-2$",
+    "$-\\infty$"
+   ]
+  },
+  {
+   "id": "limits-intro-ed20b1",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -3^-} \\frac{3 \\left|{x + 3}\\right|}{x + 3}$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "For $x < -3$, the quantity $x - -3$ is negative.",
+    "Replace the absolute value with the appropriate signed expression and simplify."
+   ],
+   "solution": [
+    "For $x < -3$, $|x - -3| = -(x - -3)$, so $f(x) = -3$ there.",
+    "Hence the one-sided limit is $-3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-c62a93",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -3^+} \\frac{2 \\left|{x + 3}\\right|}{x + 3}$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "For $x > -3$, the quantity $x - -3$ is positive.",
+    "Replace the absolute value with the appropriate signed expression and simplify."
+   ],
+   "solution": [
+    "For $x > -3$, $|x - -3| = x - -3$, so $f(x) = 2$ there.",
+    "Hence the one-sided limit is $2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-a979e9",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -3^-} \\frac{\\left|{x + 3}\\right|}{x + 3}$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "For $x < -3$, the quantity $x - -3$ is negative.",
+    "Replace the absolute value with the appropriate signed expression and simplify."
+   ],
+   "solution": [
+    "For $x < -3$, $|x - -3| = -(x - -3)$, so $f(x) = -1$ there.",
+    "Hence the one-sided limit is $-1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-a77f7d",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -2^+} \\left(\\sqrt{x + 2} + 3\\right)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "From the right, $x - a$ is a small positive number, so the square root is defined.",
+    "The square root of a number approaching $0$ approaches $0$."
+   ],
+   "solution": [
+    "For $x$ slightly larger than $-2$, $\\sqrt{x - (-2)} \\to 0$.",
+    "So the limit is $0 + 3 = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-97e506",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -2^+} \\left(\\sqrt{x + 2} + 1\\right)$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "From the right, $x - a$ is a small positive number, so the square root is defined.",
+    "The square root of a number approaching $0$ approaches $0$."
+   ],
+   "solution": [
+    "For $x$ slightly larger than $-2$, $\\sqrt{x - (-2)} \\to 0$.",
+    "So the limit is $0 + 1 = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-e23d9e",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 0^+} \\left(\\sqrt{x} + 2\\right)$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "From the right, $x - a$ is a small positive number, so the square root is defined.",
+    "The square root of a number approaching $0$ approaches $0$."
+   ],
+   "solution": [
+    "For $x$ slightly larger than $0$, $\\sqrt{x - (0)} \\to 0$.",
+    "So the limit is $0 + 2 = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-05c079",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 1^+} \\left(\\sqrt{x - 1} + 2\\right)$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "From the right, $x - a$ is a small positive number, so the square root is defined.",
+    "The square root of a number approaching $0$ approaches $0$."
+   ],
+   "solution": [
+    "For $x$ slightly larger than $1$, $\\sqrt{x - (1)} \\to 0$.",
+    "So the limit is $0 + 2 = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-384159",
+   "skill": "limits-intro",
+   "difficulty": 3,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 0} x\\sin\\left(\\dfrac{1}{x}\\right)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "The sine factor stays between $-1$ and $1$ no matter how wildly it oscillates.",
+    "Multiplying a bounded quantity by something approaching $0$ gives something approaching $0$."
+   ],
+   "solution": [
+    "$-|x| \\le x\\sin(1/x) \\le |x|$ for all $x \\ne 0$.",
+    "Both $-|x|$ and $|x|$ approach $0$, so the squeezed function does too: the limit is $0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-2221e1",
+   "skill": "limits-intro",
+   "difficulty": 3,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 0} \\sin\\left(\\dfrac{5\\pi}{x}\\right)$.",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Try $x = 1, 1/2, 1/3, \\dots$ and then $x = 2/(4n+1)$-type values; what happens to the inside?",
+    "If you can find two sequences of $x$-values approaching $0$ along which $f$ approaches different numbers, the limit does not exist."
+   ],
+   "solution": [
+    "For $x = 5/n$ the function is $\\sin(n\\pi) = 0$, but for $x = 10/(4n+1)$ it is $\\sin((4n+1)\\pi/2) = 1$.",
+    "Values keep oscillating between $-1$ and $1$ no matter how close $x$ is to $0$, so the limit does not exist."
+   ],
+   "verified": true,
+   "choices": [
+    "$-\\infty$",
+    "$\\infty$",
+    "$1$",
+    "does not exist",
+    "$0$"
+   ]
+  },
+  {
+   "id": "limits-intro-335ccc",
+   "skill": "limits-intro",
+   "difficulty": 3,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 0} x\\sin\\left(\\dfrac{4}{x}\\right)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "The sine factor stays between $-1$ and $1$ no matter how wildly it oscillates.",
+    "Multiplying a bounded quantity by something approaching $0$ gives something approaching $0$."
+   ],
+   "solution": [
+    "$-|x| \\le x\\sin(4/x) \\le |x|$ for all $x \\ne 0$.",
+    "Both $-|x|$ and $|x|$ approach $0$, so the squeezed function does too: the limit is $0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-92730e",
+   "skill": "limits-intro",
+   "difficulty": 3,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 0} x\\sin\\left(\\dfrac{5}{x}\\right)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "The sine factor stays between $-1$ and $1$ no matter how wildly it oscillates.",
+    "Multiplying a bounded quantity by something approaching $0$ gives something approaching $0$."
+   ],
+   "solution": [
+    "$-|x| \\le x\\sin(5/x) \\le |x|$ for all $x \\ne 0$.",
+    "Both $-|x|$ and $|x|$ approach $0$, so the squeezed function does too: the limit is $0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limits-intro-0504d8",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Which statement is the meaning of $\\displaystyle\\lim_{x \\to 1} f(x) = 2$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "A limit is about the values of $f$ near the point, not at the point.",
+    "The function may even be undefined at $a$ and still have a limit there."
+   ],
+   "solution": [
+    "The limit statement says the outputs approach $L$ as the inputs approach $a$ from either side, with $x \\ne a$.",
+    "It says nothing about $f(a)$ itself, which may be different or undefined."
+   ],
+   "verified": true,
+   "choices": [
+    "$f$ is defined at $x = 1$",
+    "$f(1) = 2$",
+    "$f(x)$ can be made as close to $2$ as we like by taking $x$ close enough to $1$ (but not equal to $1$)",
+    "$f(x) = 2$ for all $x$ near $1$"
+   ]
+  },
+  {
+   "id": "limits-intro-853cb5",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Which statement is the meaning of $\\displaystyle\\lim_{x \\to 3} f(x) = 3$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "A limit is about the values of $f$ near the point, not at the point.",
+    "The function may even be undefined at $a$ and still have a limit there."
+   ],
+   "solution": [
+    "The limit statement says the outputs approach $L$ as the inputs approach $a$ from either side, with $x \\ne a$.",
+    "It says nothing about $f(a)$ itself, which may be different or undefined."
+   ],
+   "verified": true,
+   "choices": [
+    "$f(x)$ can be made as close to $3$ as we like by taking $x$ close enough to $3$ (but not equal to $3$)",
+    "$f(3) = 3$",
+    "$f$ is defined at $x = 3$",
+    "$f(x) = 3$ for all $x$ near $3$"
+   ]
+  },
+  {
+   "id": "limits-intro-608321",
+   "skill": "limits-intro",
+   "difficulty": 1,
+   "statement": "Which statement is the meaning of $\\displaystyle\\lim_{x \\to 4} f(x) = 8$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "A limit is about the values of $f$ near the point, not at the point.",
+    "The function may even be undefined at $a$ and still have a limit there."
+   ],
+   "solution": [
+    "The limit statement says the outputs approach $L$ as the inputs approach $a$ from either side, with $x \\ne a$.",
+    "It says nothing about $f(a)$ itself, which may be different or undefined."
+   ],
+   "verified": true,
+   "choices": [
+    "$f$ is defined at $x = 4$",
+    "$f(x)$ can be made as close to $8$ as we like by taking $x$ close enough to $4$ (but not equal to $4$)",
+    "$f(4) = 8$",
+    "$f(x) = 8$ for all $x$ near $4$"
+   ]
+  }
+ ]
+}

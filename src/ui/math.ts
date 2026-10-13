@@ -83,5 +83,7 @@ export function mathInput(placeholder = 'Your answer'): MathInput {
  */
 export function statement(s: string): HTMLElement {
   if (s.includes('$')) return richText(s);
-  return tex(s, true);
+  // Plain prose (several words, no TeX commands) is text; anything else is a bare LaTeX formula.
+  const looksLikeProse = /\b[a-zA-Z]{2,}\s+[a-zA-Z]{2,}\b/.test(s) && !/\\[a-zA-Z]+/.test(s);
+  return looksLikeProse ? richText(s) : tex(s, true);
 }

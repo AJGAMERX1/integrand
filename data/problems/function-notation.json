@@ -1,0 +1,1199 @@
+{
+ "skill": "function-notation",
+ "problems": [
+  {
+   "id": "function-notation-763134",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 2 x^{2} - 2 x + 5$. Find $f(4)$.",
+   "checker": "numeric",
+   "answer": "29",
+   "hints": [
+    "Replace every $x$ in the formula with $4$, keeping parentheses around negatives.",
+    "Work the operations in order: powers, then products and quotients, then sums."
+   ],
+   "solution": [
+    "$f(4) = 2 (4)^{2} - 2 (4) + 5$.",
+    "$= 29$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-f3bf7d",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "If $f(x) = 2 x^{2} + x$, find and expand $f(x + 3)$.",
+   "checker": "equiv",
+   "answer": "2*x^2+13*x+21",
+   "hints": [
+    "Every $x$ in the formula becomes $(x + 3)$.",
+    "Then expand the squared term and collect like terms."
+   ],
+   "solution": [
+    "$f(x + 3) = x + 2 \\left(x + 3\\right)^{2} + 3$.",
+    "Expand: $2 x^{2} + 13 x + 21$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "function-notation-f3de99",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 2 x + 4$ and $g(x) = x + 1$. Find $f(g(x))$ and expand.",
+   "checker": "equiv",
+   "answer": "2*x+6",
+   "hints": [
+    "$f(g(x))$ means: apply the inner function first, then feed its output into the outer one.",
+    "Replace $x$ in $f$ with $(x + 1)$."
+   ],
+   "solution": [
+    "$f(g(x)) = 2 x + 6$.",
+    "Expand: $2 x + 6$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "function-notation-b4cc06",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Find the domain of $f(x) = \\sqrt{x + 8}$ in interval notation.",
+   "checker": "interval",
+   "answer": "[-8,inf)",
+   "hints": [
+    "The expression under a square root must be $\\ge 0$.",
+    "Solve $x + 8 \\ge 0$."
+   ],
+   "solution": [
+    "Require $x + 8 \\ge 0$.",
+    "Solve: $x \\ge -8$.",
+    "Domain: $[-8, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-7d5709",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Find the domain of $g(x) = \\dfrac{1}{\\sqrt{- x - 3}}$ in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,-3)",
+   "hints": [
+    "The inside of the root must be positive here: zero would put a $0$ in the denominator.",
+    "Solve $- x - 3 > 0$."
+   ],
+   "solution": [
+    "Need $- x - 3 > 0$ (strict, because of the denominator).",
+    "So $x < -3$: domain $(-\\infty, -3)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-8179bb",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "For $f(x) = x^{3} - 2 x$, find the average rate of change of $f$ from $x = 3$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "35",
+   "hints": [
+    "Average rate of change is the slope between the two points on the graph.",
+    "Compute $\\dfrac{f(4) - f(3)}{4 - (3)}$."
+   ],
+   "solution": [
+    "$f(4) = 56$ and $f(3) = 21$.",
+    "Rate $= \\dfrac{56 - (21)}{1} = 35$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-15b649",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "If $f(x) = 3 - x^{2}$, which expression equals $-f(x)$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Decide whether the change happens to the input (inside the parentheses) or to the output (outside).",
+    "Inside: substitute for $x$. Outside: do the operation to the whole formula."
+   ],
+   "solution": [
+    "$-f(x)$ means operate on the output: $x^{2} - 3$.",
+    "Expanded: $x^{2} - 3$."
+   ],
+   "verified": true,
+   "choices": [
+    "5 - x^{2}",
+    "x^{2} - 3",
+    "3 - 4 x^{2}",
+    "6 - 2 x^{2}"
+   ]
+  },
+  {
+   "id": "function-notation-26adda",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 3 x - 7$. Find the value of $x$ for which $f(x) = -6$.",
+   "checker": "numeric",
+   "answer": "1/3",
+   "hints": [
+    "Set the formula equal to the given output and solve for $x$.",
+    "$3 x - 7 = -6$."
+   ],
+   "solution": [
+    "$3 x - 7 = -6$ gives $3x = 1$.",
+    "$x = \\frac{1}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-cd48a3",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "The temperature in a cooling room is $T(h) = 68 - 1.5h$ degrees after $h$ hours. Find $T(8)$.",
+   "checker": "numeric",
+   "answer": "56",
+   "hints": [
+    "The letter in parentheses is the input; replace it with the given number.",
+    "Then just do the arithmetic."
+   ],
+   "solution": [
+    "Substitute $8$ for the input: $68 - \\frac{3 (8)}{2}$.",
+    "$= 56$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-837681",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 5 - x$ and $g(x) = x - 1$. Compute $f(g(-1))$.",
+   "checker": "numeric",
+   "answer": "7",
+   "hints": [
+    "Work from the inside out: evaluate the inner function first.",
+    "The inner value is $g(-1) = -2$."
+   ],
+   "solution": [
+    "Inner: $g(-1) = -2$.",
+    "Outer: $f(-2) = 7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-77e0bf",
+   "skill": "function-notation",
+   "difficulty": 3,
+   "statement": "Let $f(x) = \\begin{cases} x + 4 & \\text{if } x < 2 \\\\ 3 & \\text{if } x \\ge 2 \\end{cases}$. Find $f(2)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "First decide which piece applies: is $2 < 2$ or $2 \\ge 2$?",
+    "Use the second formula."
+   ],
+   "solution": [
+    "Since $2 \\ge 2$, use $3$.",
+    "$f(2) = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-54b03c",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 3 x^{2} + x - 2$. Find $f(-1)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Replace every $x$ in the formula with $-1$, keeping parentheses around negatives.",
+    "Work the operations in order: powers, then products and quotients, then sums."
+   ],
+   "solution": [
+    "$f(-1) = 3 (-1)^{2} + (-1) - 2$.",
+    "$= 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-12ce53",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "If $f(x) = - x^{2} + x + 3$, find and expand $f(2 x)$.",
+   "checker": "equiv",
+   "answer": "-4*x^2+2*x+3",
+   "hints": [
+    "Every $x$ in the formula becomes $(2 x)$.",
+    "Then expand the squared term and collect like terms."
+   ],
+   "solution": [
+    "$f(2 x) = - 4 x^{2} + 2 x + 3$.",
+    "Expand: $- 4 x^{2} + 2 x + 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "function-notation-44640c",
+   "skill": "function-notation",
+   "difficulty": 3,
+   "statement": "Let $f(x) = x^{2}$ and $g(x) = 1 - x$. Find $g(f(x))$ and expand.",
+   "checker": "equiv",
+   "answer": "1-x^2",
+   "hints": [
+    "$g(f(x))$ means: apply the inner function first, then feed its output into the outer one.",
+    "Replace $x$ in $g$ with $(x^{2})$."
+   ],
+   "solution": [
+    "$g(f(x)) = 1 - x^{2}$.",
+    "Expand: $1 - x^{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "function-notation-7217f7",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Find the domain of $f(x) = \\sqrt{x + 1}$ in interval notation.",
+   "checker": "interval",
+   "answer": "[-1,inf)",
+   "hints": [
+    "The expression under a square root must be $\\ge 0$.",
+    "Solve $x + 1 \\ge 0$."
+   ],
+   "solution": [
+    "Require $x + 1 \\ge 0$.",
+    "Solve: $x \\ge -1$.",
+    "Domain: $[-1, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-deaf22",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Find the domain of $g(x) = \\dfrac{1}{\\sqrt{- x}}$ in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,0)",
+   "hints": [
+    "The inside of the root must be positive here: zero would put a $0$ in the denominator.",
+    "Solve $- x > 0$."
+   ],
+   "solution": [
+    "Need $- x > 0$ (strict, because of the denominator).",
+    "So $x < 0$: domain $(-\\infty, 0)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-e72cb6",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "For $f(x) = 2^{x}$, find the average rate of change of $f$ from $x = 1$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "14/3",
+   "hints": [
+    "Average rate of change is the slope between the two points on the graph.",
+    "Compute $\\dfrac{f(4) - f(1)}{4 - (1)}$."
+   ],
+   "solution": [
+    "$f(4) = 16$ and $f(1) = 2$.",
+    "Rate $= \\dfrac{16 - (2)}{3} = \\frac{14}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-413533",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "If $f(x) = 3 - x^{2}$, which expression equals $f(x)+2$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Decide whether the change happens to the input (inside the parentheses) or to the output (outside).",
+    "Inside: substitute for $x$. Outside: do the operation to the whole formula."
+   ],
+   "solution": [
+    "$f(x)+2$ means operate on the output: $5 - x^{2}$.",
+    "Expanded: $5 - x^{2}$."
+   ],
+   "verified": true,
+   "choices": [
+    "3 - 4 x^{2}",
+    "- x^{2} - 4 x - 1",
+    "5 - x^{2}",
+    "6 - 2 x^{2}"
+   ]
+  },
+  {
+   "id": "function-notation-ef516f",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 5 x + 1$. Find the value of $x$ for which $f(x) = 5$.",
+   "checker": "numeric",
+   "answer": "4/5",
+   "hints": [
+    "Set the formula equal to the given output and solve for $x$.",
+    "$5 x + 1 = 5$."
+   ],
+   "solution": [
+    "$5 x + 1 = 5$ gives $5x = 4$.",
+    "$x = \\frac{4}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-5b447e",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "The temperature in a cooling room is $T(h) = 68 - 1.5h$ degrees after $h$ hours. Find $T(6)$.",
+   "checker": "numeric",
+   "answer": "59",
+   "hints": [
+    "The letter in parentheses is the input; replace it with the given number.",
+    "Then just do the arithmetic."
+   ],
+   "solution": [
+    "Substitute $6$ for the input: $68 - \\frac{3 (6)}{2}$.",
+    "$= 59$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-9fcadf",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Let $f(x) = x^{2} - 1$ and $g(x) = 3 x$. Compute $g(f(-2))$.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "Work from the inside out: evaluate the inner function first.",
+    "The inner value is $f(-2) = 3$."
+   ],
+   "solution": [
+    "Inner: $f(-2) = 3$.",
+    "Outer: $g(3) = 9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-05d7a5",
+   "skill": "function-notation",
+   "difficulty": 3,
+   "statement": "Let $f(x) = \\begin{cases} x^{2} & \\text{if } x < 2 \\\\ 2 x + 1 & \\text{if } x \\ge 2 \\end{cases}$. Find $f(3)$.",
+   "checker": "numeric",
+   "answer": "7",
+   "hints": [
+    "First decide which piece applies: is $3 < 2$ or $3 \\ge 2$?",
+    "Use the second formula."
+   ],
+   "solution": [
+    "Since $3 \\ge 2$, use $2 x + 1$.",
+    "$f(3) = 7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-14aeb4",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\left|{2 x - 5}\\right| - 1$. Find $f(-1)$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Replace every $x$ in the formula with $-1$, keeping parentheses around negatives.",
+    "Work the operations in order: powers, then products and quotients, then sums."
+   ],
+   "solution": [
+    "$f(-1) = \\left|{2 (-1) - 5}\\right| - 1$.",
+    "$= 6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-03273c",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "If $f(x) = x^{2} + 3 x + 1$, find and expand $f(x + 3)$.",
+   "checker": "equiv",
+   "answer": "x^2+9*x+19",
+   "hints": [
+    "Every $x$ in the formula becomes $(x + 3)$.",
+    "Then expand the squared term and collect like terms."
+   ],
+   "solution": [
+    "$f(x + 3) = 3 x + \\left(x + 3\\right)^{2} + 10$.",
+    "Expand: $x^{2} + 9 x + 19$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "function-notation-8600b8",
+   "skill": "function-notation",
+   "difficulty": 3,
+   "statement": "Let $f(x) = x^{2} - x$ and $g(x) = 2 x$. Find $g(f(x))$ and expand.",
+   "checker": "equiv",
+   "answer": "2*x^2-2*x",
+   "hints": [
+    "$g(f(x))$ means: apply the inner function first, then feed its output into the outer one.",
+    "Replace $x$ in $g$ with $(x^{2} - x)$."
+   ],
+   "solution": [
+    "$g(f(x)) = 2 x^{2} - 2 x$.",
+    "Expand: $2 x^{2} - 2 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "function-notation-f5f0c9",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Find the domain of $f(x) = \\sqrt{2 x + 5}$ in interval notation.",
+   "checker": "interval",
+   "answer": "[-5/2,inf)",
+   "hints": [
+    "The expression under a square root must be $\\ge 0$.",
+    "Solve $2 x + 5 \\ge 0$."
+   ],
+   "solution": [
+    "Require $2 x + 5 \\ge 0$.",
+    "Solve: $x \\ge - \\frac{5}{2}$.",
+    "Domain: $[- \\frac{5}{2}, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-c14b20",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Find the domain of $g(x) = \\dfrac{1}{\\sqrt{- x - 4}}$ in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,-4)",
+   "hints": [
+    "The inside of the root must be positive here: zero would put a $0$ in the denominator.",
+    "Solve $- x - 4 > 0$."
+   ],
+   "solution": [
+    "Need $- x - 4 > 0$ (strict, because of the denominator).",
+    "So $x < -4$: domain $(-\\infty, -4)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-2093da",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "For $f(x) = 2^{x}$, find the average rate of change of $f$ from $x = -2$ to $x = 3$.",
+   "checker": "numeric",
+   "answer": "31/20",
+   "hints": [
+    "Average rate of change is the slope between the two points on the graph.",
+    "Compute $\\dfrac{f(3) - f(-2)}{3 - (-2)}$."
+   ],
+   "solution": [
+    "$f(3) = 8$ and $f(-2) = 1/4$.",
+    "Rate $= \\dfrac{8 - (1/4)}{5} = \\frac{31}{20}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-3d7fab",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "If $f(x) = x^{2} - 3 x$, which expression equals $-f(x)$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Decide whether the change happens to the input (inside the parentheses) or to the output (outside).",
+    "Inside: substitute for $x$. Outside: do the operation to the whole formula."
+   ],
+   "solution": [
+    "$-f(x)$ means operate on the output: $- x^{2} + 3 x$.",
+    "Expanded: $- x^{2} + 3 x$."
+   ],
+   "verified": true,
+   "choices": [
+    "4 x^{2} - 6 x",
+    "- x^{2} + 3 x",
+    "2 x^{2} - 6 x",
+    "x^{2} - 3 x + 2"
+   ]
+  },
+  {
+   "id": "function-notation-5de88d",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 4 x + 6$. Find the value of $x$ for which $f(x) = -4$.",
+   "checker": "numeric",
+   "answer": "-5/2",
+   "hints": [
+    "Set the formula equal to the given output and solve for $x$.",
+    "$4 x + 6 = -4$."
+   ],
+   "solution": [
+    "$4 x + 6 = -4$ gives $4x = -10$.",
+    "$x = - \\frac{5}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-8bac54",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "The temperature in a cooling room is $T(h) = 68 - 1.5h$ degrees after $h$ hours. Find $T(2)$.",
+   "checker": "numeric",
+   "answer": "65",
+   "hints": [
+    "The letter in parentheses is the input; replace it with the given number.",
+    "Then just do the arithmetic."
+   ],
+   "solution": [
+    "Substitute $2$ for the input: $68 - \\frac{3 (2)}{2}$.",
+    "$= 65$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-de9172",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 5 - x$ and $g(x) = 3 x$. Compute $g(f(-2))$.",
+   "checker": "numeric",
+   "answer": "21",
+   "hints": [
+    "Work from the inside out: evaluate the inner function first.",
+    "The inner value is $f(-2) = 7$."
+   ],
+   "solution": [
+    "Inner: $f(-2) = 7$.",
+    "Outer: $g(7) = 21$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-0a43fd",
+   "skill": "function-notation",
+   "difficulty": 3,
+   "statement": "Let $f(x) = \\begin{cases} 2 x & \\text{if } x < 3 \\\\ x^{2} - 1 & \\text{if } x \\ge 3 \\end{cases}$. Find $f(6)$.",
+   "checker": "numeric",
+   "answer": "35",
+   "hints": [
+    "First decide which piece applies: is $6 < 3$ or $6 \\ge 3$?",
+    "Use the second formula."
+   ],
+   "solution": [
+    "Since $6 \\ge 3$, use $x^{2} - 1$.",
+    "$f(6) = 35$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-a9d255",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 1$. Find $f(0)$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Replace every $x$ in the formula with $0$, keeping parentheses around negatives.",
+    "Work the operations in order: powers, then products and quotients, then sums."
+   ],
+   "solution": [
+    "$f(0) = 1$.",
+    "$= 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-aa2caa",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "If $f(x) = x^{2} + x - 3$, find and expand $f(- x)$.",
+   "checker": "equiv",
+   "answer": "x^2-x-3",
+   "hints": [
+    "Every $x$ in the formula becomes $(- x)$.",
+    "Then expand the squared term and collect like terms."
+   ],
+   "solution": [
+    "$f(- x) = x^{2} - x - 3$.",
+    "Expand: $x^{2} - x - 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "function-notation-7d736d",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 2 x + 3$ and $g(x) = x + 3$. Find $f(g(x))$ and expand.",
+   "checker": "equiv",
+   "answer": "2*x+9",
+   "hints": [
+    "$f(g(x))$ means: apply the inner function first, then feed its output into the outer one.",
+    "Replace $x$ in $f$ with $(x + 3)$."
+   ],
+   "solution": [
+    "$f(g(x)) = 2 x + 9$.",
+    "Expand: $2 x + 9$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "function-notation-ebd6dd",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Find the domain of $f(x) = \\sqrt{6 - 2 x}$ in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,3]",
+   "hints": [
+    "The expression under a square root must be $\\ge 0$.",
+    "Solve $6 - 2 x \\ge 0$. Dividing by a negative flips the inequality."
+   ],
+   "solution": [
+    "Require $6 - 2 x \\ge 0$.",
+    "Solve: $x \\le 3$.",
+    "Domain: $(-\\infty, 3]$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-b53169",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Find the domain of $g(x) = \\dfrac{1}{\\sqrt{- x - 1}}$ in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,-1)",
+   "hints": [
+    "The inside of the root must be positive here: zero would put a $0$ in the denominator.",
+    "Solve $- x - 1 > 0$."
+   ],
+   "solution": [
+    "Need $- x - 1 > 0$ (strict, because of the denominator).",
+    "So $x < -1$: domain $(-\\infty, -1)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-3533f3",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "For $f(x) = 2^{x}$, find the average rate of change of $f$ from $x = -2$ to $x = 0$.",
+   "checker": "numeric",
+   "answer": "3/8",
+   "hints": [
+    "Average rate of change is the slope between the two points on the graph.",
+    "Compute $\\dfrac{f(0) - f(-2)}{0 - (-2)}$."
+   ],
+   "solution": [
+    "$f(0) = 1$ and $f(-2) = 1/4$.",
+    "Rate $= \\dfrac{1 - (1/4)}{2} = \\frac{3}{8}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-cd2262",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "If $f(x) = 2 x + 1$, which expression equals $2f(x)$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Decide whether the change happens to the input (inside the parentheses) or to the output (outside).",
+    "Inside: substitute for $x$. Outside: do the operation to the whole formula."
+   ],
+   "solution": [
+    "$2f(x)$ means operate on the output: $4 x + 2$.",
+    "Expanded: $4 x + 2$."
+   ],
+   "verified": true,
+   "choices": [
+    "4 x + 1",
+    "2 x + 5",
+    "2 x + 3",
+    "4 x + 2"
+   ]
+  },
+  {
+   "id": "function-notation-00cb62",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 5 x - 2$. Find the value of $x$ for which $f(x) = 9$.",
+   "checker": "numeric",
+   "answer": "11/5",
+   "hints": [
+    "Set the formula equal to the given output and solve for $x$.",
+    "$5 x - 2 = 9$."
+   ],
+   "solution": [
+    "$5 x - 2 = 9$ gives $5x = 11$.",
+    "$x = \\frac{11}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-c8aff9",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 5 - x$ and $g(x) = x - 1$. Compute $g(f(3))$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Work from the inside out: evaluate the inner function first.",
+    "The inner value is $f(3) = 2$."
+   ],
+   "solution": [
+    "Inner: $f(3) = 2$.",
+    "Outer: $g(2) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-965c13",
+   "skill": "function-notation",
+   "difficulty": 3,
+   "statement": "Let $f(x) = \\begin{cases} 2 x & \\text{if } x < 2 \\\\ x^{2} - 1 & \\text{if } x \\ge 2 \\end{cases}$. Find $f(4)$.",
+   "checker": "numeric",
+   "answer": "15",
+   "hints": [
+    "First decide which piece applies: is $4 < 2$ or $4 \\ge 2$?",
+    "Use the second formula."
+   ],
+   "solution": [
+    "Since $4 \\ge 2$, use $x^{2} - 1$.",
+    "$f(4) = 15$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-fbdedc",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Let $f(x) = - x^{2} - 4 x + 1$. Find $f(-3)$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Replace every $x$ in the formula with $-3$, keeping parentheses around negatives.",
+    "Work the operations in order: powers, then products and quotients, then sums."
+   ],
+   "solution": [
+    "$f(-3) = - (-3)^{2} - 4 (-3) + 1$.",
+    "$= 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-737370",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "If $f(x) = 3 x^{2} + 2 x - 4$, find and expand $f(2 x)$.",
+   "checker": "equiv",
+   "answer": "12*x^2+4*x-4",
+   "hints": [
+    "Every $x$ in the formula becomes $(2 x)$.",
+    "Then expand the squared term and collect like terms."
+   ],
+   "solution": [
+    "$f(2 x) = 12 x^{2} + 4 x - 4$.",
+    "Expand: $12 x^{2} + 4 x - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "function-notation-4bce65",
+   "skill": "function-notation",
+   "difficulty": 3,
+   "statement": "Let $f(x) = x^{2} - x$ and $g(x) = x - 4$. Find $g(f(x))$ and expand.",
+   "checker": "equiv",
+   "answer": "x^2-x-4",
+   "hints": [
+    "$g(f(x))$ means: apply the inner function first, then feed its output into the outer one.",
+    "Replace $x$ in $g$ with $(x^{2} - x)$."
+   ],
+   "solution": [
+    "$g(f(x)) = x^{2} - x - 4$.",
+    "Expand: $x^{2} - x - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "function-notation-ae619c",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Find the domain of $f(x) = \\sqrt{3 x + 1}$ in interval notation.",
+   "checker": "interval",
+   "answer": "[-1/3,inf)",
+   "hints": [
+    "The expression under a square root must be $\\ge 0$.",
+    "Solve $3 x + 1 \\ge 0$."
+   ],
+   "solution": [
+    "Require $3 x + 1 \\ge 0$.",
+    "Solve: $x \\ge - \\frac{1}{3}$.",
+    "Domain: $[- \\frac{1}{3}, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-d2800e",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "For $f(x) = x^{3} - 2 x$, find the average rate of change of $f$ from $x = 1$ to $x = 4$.",
+   "checker": "numeric",
+   "answer": "19",
+   "hints": [
+    "Average rate of change is the slope between the two points on the graph.",
+    "Compute $\\dfrac{f(4) - f(1)}{4 - (1)}$."
+   ],
+   "solution": [
+    "$f(4) = 56$ and $f(1) = -1$.",
+    "Rate $= \\dfrac{56 - (-1)}{3} = 19$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-39276f",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Let $f(x) = - 2 x - 5$. Find the value of $x$ for which $f(x) = 6$.",
+   "checker": "numeric",
+   "answer": "-11/2",
+   "hints": [
+    "Set the formula equal to the given output and solve for $x$.",
+    "$- 2 x - 5 = 6$."
+   ],
+   "solution": [
+    "$- 2 x - 5 = 6$ gives $-2x = 11$.",
+    "$x = - \\frac{11}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-b33624",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "A dropped ball's height is $h(t) = 80 - 16t^2$ feet after $t$ seconds. Find $h(1)$.",
+   "checker": "numeric",
+   "answer": "64",
+   "hints": [
+    "The letter in parentheses is the input; replace it with the given number.",
+    "Then just do the arithmetic."
+   ],
+   "solution": [
+    "Substitute $1$ for the input: $80 - 16 (1)^{2}$.",
+    "$= 64$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-90c338",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Let $f(x) = x^{2} - 1$ and $g(x) = x - 1$. Compute $f(g(-1))$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Work from the inside out: evaluate the inner function first.",
+    "The inner value is $g(-1) = -2$."
+   ],
+   "solution": [
+    "Inner: $g(-1) = -2$.",
+    "Outer: $f(-2) = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-c26912",
+   "skill": "function-notation",
+   "difficulty": 3,
+   "statement": "Let $f(x) = \\begin{cases} 2 x & \\text{if } x < 0 \\\\ 3 & \\text{if } x \\ge 0 \\end{cases}$. Find $f(0)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "First decide which piece applies: is $0 < 0$ or $0 \\ge 0$?",
+    "Use the second formula."
+   ],
+   "solution": [
+    "Since $0 \\ge 0$, use $3$.",
+    "$f(0) = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-708239",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Let $f(x) = \\left|{3 x - 4}\\right| - 1$. Find $f(1)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Replace every $x$ in the formula with $1$, keeping parentheses around negatives.",
+    "Work the operations in order: powers, then products and quotients, then sums."
+   ],
+   "solution": [
+    "$f(1) = \\left|{3 (1) - 4}\\right| - 1$.",
+    "$= 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-2e5912",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "If $f(x) = 3 x^{2} + x - 2$, find and expand $f(x + 1)$.",
+   "checker": "equiv",
+   "answer": "3*x^2+7*x+2",
+   "hints": [
+    "Every $x$ in the formula becomes $(x + 1)$.",
+    "Then expand the squared term and collect like terms."
+   ],
+   "solution": [
+    "$f(x + 1) = x + 3 \\left(x + 1\\right)^{2} - 1$.",
+    "Expand: $3 x^{2} + 7 x + 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "function-notation-baf0e4",
+   "skill": "function-notation",
+   "difficulty": 3,
+   "statement": "Let $f(x) = x^{2}$ and $g(x) = 2 x$. Find $f(g(x))$ and expand.",
+   "checker": "equiv",
+   "answer": "4*x^2",
+   "hints": [
+    "$f(g(x))$ means: apply the inner function first, then feed its output into the outer one.",
+    "Replace $x$ in $f$ with $(2 x)$."
+   ],
+   "solution": [
+    "$f(g(x)) = 4 x^{2}$.",
+    "Expand: $4 x^{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "function-notation-9cf9fc",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Find the domain of $f(x) = \\sqrt{x + 6}$ in interval notation.",
+   "checker": "interval",
+   "answer": "[-6,inf)",
+   "hints": [
+    "The expression under a square root must be $\\ge 0$.",
+    "Solve $x + 6 \\ge 0$."
+   ],
+   "solution": [
+    "Require $x + 6 \\ge 0$.",
+    "Solve: $x \\ge -6$.",
+    "Domain: $[-6, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-db906e",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Find the domain of $g(x) = \\dfrac{1}{\\sqrt{6 - x}}$ in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,6)",
+   "hints": [
+    "The inside of the root must be positive here: zero would put a $0$ in the denominator.",
+    "Solve $6 - x > 0$."
+   ],
+   "solution": [
+    "Need $6 - x > 0$ (strict, because of the denominator).",
+    "So $x < 6$: domain $(-\\infty, 6)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-b858cf",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "If $f(x) = x^{2} - 3 x$, which expression equals $f(x+2)$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Decide whether the change happens to the input (inside the parentheses) or to the output (outside).",
+    "Inside: substitute for $x$. Outside: do the operation to the whole formula."
+   ],
+   "solution": [
+    "$f(x+2)$ means substitute into the input: $- 3 x + \\left(x + 2\\right)^{2} - 6$.",
+    "Expanded: $x^{2} + x - 2$."
+   ],
+   "verified": true,
+   "choices": [
+    "2 x^{2} - 6 x",
+    "x^{2} + x - 2",
+    "x^{2} - 3 x + 2",
+    "4 x^{2} - 6 x"
+   ]
+  },
+  {
+   "id": "function-notation-f077c0",
+   "skill": "function-notation",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 2 x + 3$. Find the value of $x$ for which $f(x) = 10$.",
+   "checker": "numeric",
+   "answer": "7/2",
+   "hints": [
+    "Set the formula equal to the given output and solve for $x$.",
+    "$2 x + 3 = 10$."
+   ],
+   "solution": [
+    "$2 x + 3 = 10$ gives $2x = 7$.",
+    "$x = \\frac{7}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-dca3a5",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 2 x + 3$ and $g(x) = x - 1$. Compute $f(g(1))$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Work from the inside out: evaluate the inner function first.",
+    "The inner value is $g(1) = 0$."
+   ],
+   "solution": [
+    "Inner: $g(1) = 0$.",
+    "Outer: $f(0) = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-a4cd1a",
+   "skill": "function-notation",
+   "difficulty": 3,
+   "statement": "Let $f(x) = \\begin{cases} x^{2} & \\text{if } x < 2 \\\\ x^{2} - 1 & \\text{if } x \\ge 2 \\end{cases}$. Find $f(3)$.",
+   "checker": "numeric",
+   "answer": "8",
+   "hints": [
+    "First decide which piece applies: is $3 < 2$ or $3 \\ge 2$?",
+    "Use the second formula."
+   ],
+   "solution": [
+    "Since $3 \\ge 2$, use $x^{2} - 1$.",
+    "$f(3) = 8$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-e4010a",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{x + 4}{x + 3}$. Find $f(0)$.",
+   "checker": "numeric",
+   "answer": "4/3",
+   "hints": [
+    "Replace every $x$ in the formula with $0$, keeping parentheses around negatives.",
+    "Work the operations in order: powers, then products and quotients, then sums."
+   ],
+   "solution": [
+    "$f(0) = \\frac{(0) + 4}{(0) + 3}$.",
+    "$= \\frac{4}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "function-notation-a7da40",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "If $f(x) = x^{2} + 4 x + 4$, find and expand $f(2 x)$.",
+   "checker": "equiv",
+   "answer": "4*x^2+8*x+4",
+   "hints": [
+    "Every $x$ in the formula becomes $(2 x)$.",
+    "Then expand the squared term and collect like terms."
+   ],
+   "solution": [
+    "$f(2 x) = 4 x^{2} + 8 x + 4$.",
+    "Expand: $4 x^{2} + 8 x + 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "function-notation-21cccb",
+   "skill": "function-notation",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 3 x - 1$ and $g(x) = x - 4$. Find $f(g(x))$ and expand.",
+   "checker": "equiv",
+   "answer": "3*x-13",
+   "hints": [
+    "$f(g(x))$ means: apply the inner function first, then feed its output into the outer one.",
+    "Replace $x$ in $f$ with $(x - 4)$."
+   ],
+   "solution": [
+    "$f(g(x)) = 3 x - 13$.",
+    "Expand: $3 x - 13$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  }
+ ]
+}

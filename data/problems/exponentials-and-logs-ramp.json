@@ -1,0 +1,1190 @@
+{
+ "skill": "exponentials-and-logs-ramp",
+ "problems": [
+  {
+   "id": "exponentials-and-logs-ramp-adfafb",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $7 \\cdot 10^{x} = 7000$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Write both sides as powers of the same base.",
+    "Divide both sides by $7$ first."
+   ],
+   "solution": [
+    "Divide by $7$: $10^x = 1000$.",
+    "$1000 = 10^{3}$, so $x = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-2ab4b2",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $\\log_{2}(x + 3) = 3$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "$\\log_b A = n$ means $b^n = A$.",
+    "So the inside equals $2^{3} = 8$."
+   ],
+   "solution": [
+    "Exponential form: $x + 3 = 2^{3} = 8$.",
+    "$x = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-e106ac",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $e^{x} = 10$. Give the exact answer.",
+   "checker": "numeric",
+   "answer": "ln(10)",
+   "hints": [
+    "Undo the exponential with the natural logarithm.",
+    "$\\ln(e^{u}) = u$, and $\\ln(b^{u}) = u \\ln b$."
+   ],
+   "solution": [
+    "Take the natural log of both sides: $\\ln e^x = \\ln 10$.",
+    "$x = \\ln 10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-096df7",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Write $\\ln\\sqrt{x}$ without a root ($x > 0$).",
+   "checker": "equiv",
+   "answer": "ln(x)/2",
+   "hints": [
+    "Rules: $\\ln(AB) = \\ln A + \\ln B$, $\\ln(A/B) = \\ln A - \\ln B$, $\\ln A^p = p\\ln A$.",
+    "Apply the product/quotient rule first, then the power rule (or the reverse when condensing)."
+   ],
+   "solution": [
+    "A root is a fractional power: $\\sqrt{x} = x^{1/2}$.",
+    "Power rule: $\\dfrac{1}{2}\\ln x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-b6c961",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Simplify $\\log_{3}\\left(9^{x}\\right)$.",
+   "checker": "equiv",
+   "answer": "2*x",
+   "hints": [
+    "A log and an exponential with the same base cancel each other.",
+    "Rewrite everything in terms of one base first."
+   ],
+   "solution": [
+    "$9 = 3^{2}$, so $9^x = 3^{2x}$.",
+    "$\\log_{3} 3^{2x} = 2x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-447a28",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 3,
+   "statement": "A colony starts at 100 cells and doubles every 5 hours. After how many hours will it reach 1600 cells?",
+   "checker": "numeric",
+   "answer": "20",
+   "hints": [
+    "Set $100\\cdot 2^{t/5} = 1600$ and divide by $100$.",
+    "$16 = 2^{4}$, so $t/5 = 4$."
+   ],
+   "solution": [
+    "$100\\cdot 2^{t/5} = 1600$ gives $2^{t/5} = 16 = 2^{4}$.",
+    "So $t/5 = 4$ and $t = 20$ hours."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-ae13a8",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Which expression equals $\\ln x + \\ln(x + 5)$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Product rule: $\\log(AB) = \\log A + \\log B$. There is no rule for $\\log A \\cdot \\log B$.",
+    "Try a number: let $x = 1$ and compare both sides."
+   ],
+   "solution": [
+    "The sum of two logs is the log of the product.",
+    "$\\ln x + \\ln(x + 5) = \\ln\\left(x(x + 5)\\right)$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\ln\\left(x(x + 5)\\right)",
+    "\\ln\\dfrac{x}{x + 5}",
+    "\\ln x \\cdot \\ln(x + 5)",
+    "\\ln(2 x + 5)"
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-f2e6dd",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "Evaluate $e^{\\ln 2}$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "$e^{(\\cdot)}$ and $\\ln$ are inverse functions.",
+    "$e^{\\ln u} = u$ for $u > 0$."
+   ],
+   "solution": [
+    "$e^{\\ln 2} = 2$.",
+    "The exponential undoes the natural log."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-916854",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Evaluate $\\log_{4} \\left(\\frac{1}{4}\\right)$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "$\\log_{4} N$ asks: $4$ to what power gives $N$?",
+    "Write $\\frac{1}{4}$ as a power of $4$ (a fraction means a negative exponent, a root means a fractional one)."
+   ],
+   "solution": [
+    "$\\frac{1}{4} = 4^{-1}$.",
+    "So $\\log_{4} \\frac{1}{4} = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-db3fb8",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $5 \\cdot 10^{x} = 50000$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Write both sides as powers of the same base.",
+    "Divide both sides by $5$ first."
+   ],
+   "solution": [
+    "Divide by $5$: $10^x = 10000$.",
+    "$10000 = 10^{4}$, so $x = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-151c29",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $\\log_{5}(x - 2) = 3$.",
+   "checker": "numeric",
+   "answer": "127",
+   "hints": [
+    "$\\log_b A = n$ means $b^n = A$.",
+    "So the inside equals $5^{3} = 125$."
+   ],
+   "solution": [
+    "Exponential form: $x - 2 = 5^{3} = 125$.",
+    "$x = 127$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-bccead",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Expand $\\ln\\dfrac{x^{5}}{x + 4}$ as far as possible using the log rules ($x > 0$).",
+   "checker": "equiv",
+   "answer": "5*ln(x)-ln(x+4)",
+   "hints": [
+    "Rules: $\\ln(AB) = \\ln A + \\ln B$, $\\ln(A/B) = \\ln A - \\ln B$, $\\ln A^p = p\\ln A$.",
+    "Apply the product/quotient rule first, then the power rule (or the reverse when condensing)."
+   ],
+   "solution": [
+    "Quotient rule: $\\ln x^{5} - \\ln(x + 4)$.",
+    "Power rule: $5\\ln x - \\ln(x + 4)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-0c71f5",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 3,
+   "statement": "Simplify $e^{\\ln x + \\ln 5}$ for $x > 0$.",
+   "checker": "equiv",
+   "answer": "5*x",
+   "hints": [
+    "A log and an exponential with the same base cancel each other.",
+    "Rewrite everything in terms of one base first."
+   ],
+   "solution": [
+    "Combine the logs: $\\ln x + \\ln 5 = \\ln(5x)$.",
+    "$e^{\\ln(5x)} = 5x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-dbed13",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 3,
+   "statement": "A colony starts at 250 cells and doubles every 3 hours. After how many hours will it reach 8000 cells?",
+   "checker": "numeric",
+   "answer": "15",
+   "hints": [
+    "Set $250\\cdot 2^{t/3} = 8000$ and divide by $250$.",
+    "$32 = 2^{5}$, so $t/3 = 5$."
+   ],
+   "solution": [
+    "$250\\cdot 2^{t/3} = 8000$ gives $2^{t/3} = 32 = 2^{5}$.",
+    "So $t/3 = 5$ and $t = 15$ hours."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-e29b05",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Which expression equals $\\log_{3}(9x)$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Product rule: $\\log(AB) = \\log A + \\log B$. There is no rule for $\\log A \\cdot \\log B$.",
+    "Try a number: let $x = 1$ and compare both sides."
+   ],
+   "solution": [
+    "Product rule: $\\log_{3}(9x) = \\log_{3} 9 + \\log_{3} x$.",
+    "$\\log_{3} 9 = 2$, so the result is $2 + \\log_{3} x$."
+   ],
+   "verified": true,
+   "choices": [
+    "2\\log_{3} x",
+    "9\\log_{3} x",
+    "2 + \\log_{3} x",
+    "\\log_{3} x + \\log_{3} 3"
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-86e7bf",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "Rewrite $3^{4} = 81$ as a logarithm statement $\\log_{3} 81 = ?$ and enter the missing value.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "$b^n = N$ is the same statement as $\\log_b N = n$.",
+    "The exponent becomes the value of the log."
+   ],
+   "solution": [
+    "$3^{4} = 81$ means $\\log_{3} 81 = 4$.",
+    "The base stays the base; the exponent is the answer."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-15e932",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "Evaluate $\\log_{9} 6561$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "$\\log_{9} N$ asks: $9$ to what power gives $N$?",
+    "Write $6561$ as a power of $9$."
+   ],
+   "solution": [
+    "$6561 = 9^{4}$.",
+    "So $\\log_{9} 6561 = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-807cb5",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "Solve $10^{x} = 10000$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Write both sides as powers of the same base.",
+    "$10000 = 10^{4}$."
+   ],
+   "solution": [
+    "$10000 = 10^{4}$.",
+    "Equal bases, so $x = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-11c23a",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $\\log_{2}(x + 1) = 3$.",
+   "checker": "numeric",
+   "answer": "7",
+   "hints": [
+    "$\\log_b A = n$ means $b^n = A$.",
+    "So the inside equals $2^{3} = 8$."
+   ],
+   "solution": [
+    "Exponential form: $x + 1 = 2^{3} = 8$.",
+    "$x = 7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-c046db",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $e^{4x} = 5$. Give the exact answer.",
+   "checker": "numeric",
+   "answer": "ln(5)/4",
+   "hints": [
+    "Undo the exponential with the natural logarithm.",
+    "$\\ln(e^{u}) = u$, and $\\ln(b^{u}) = u \\ln b$."
+   ],
+   "solution": [
+    "Take $\\ln$: $4x = \\ln 5$.",
+    "$x = \\dfrac{\\ln 5}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-c4db40",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Expand $\\ln\\dfrac{x^{5}}{x + 3}$ as far as possible using the log rules ($x > 0$).",
+   "checker": "equiv",
+   "answer": "5*ln(x)-ln(x+3)",
+   "hints": [
+    "Rules: $\\ln(AB) = \\ln A + \\ln B$, $\\ln(A/B) = \\ln A - \\ln B$, $\\ln A^p = p\\ln A$.",
+    "Apply the product/quotient rule first, then the power rule (or the reverse when condensing)."
+   ],
+   "solution": [
+    "Quotient rule: $\\ln x^{5} - \\ln(x + 3)$.",
+    "Power rule: $5\\ln x - \\ln(x + 3)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-8ccbef",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 3,
+   "statement": "Simplify $e^{\\ln x + \\ln 3}$ for $x > 0$.",
+   "checker": "equiv",
+   "answer": "3*x",
+   "hints": [
+    "A log and an exponential with the same base cancel each other.",
+    "Rewrite everything in terms of one base first."
+   ],
+   "solution": [
+    "Combine the logs: $\\ln x + \\ln 3 = \\ln(3x)$.",
+    "$e^{\\ln(3x)} = 3x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-c2e841",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 3,
+   "statement": "A colony starts at 500 cells and doubles every 6 hours. After how many hours will it reach 16000 cells?",
+   "checker": "numeric",
+   "answer": "30",
+   "hints": [
+    "Set $500\\cdot 2^{t/6} = 16000$ and divide by $500$.",
+    "$32 = 2^{5}$, so $t/6 = 5$."
+   ],
+   "solution": [
+    "$500\\cdot 2^{t/6} = 16000$ gives $2^{t/6} = 32 = 2^{5}$.",
+    "So $t/6 = 5$ and $t = 30$ hours."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-7f9bc8",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Evaluate $\\log_{10} \\left(\\frac{1}{100}\\right)$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "Ask: 10 to what power gives this number?",
+    "$\\frac{1}{100} = 10^{-2}$."
+   ],
+   "solution": [
+    "$\\frac{1}{100} = 10^{-2}$, so the log is $-2$.",
+    "Count the zeros (negative for a fraction)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-5af73c",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $5 \\cdot 5^{x} = 3125$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Write both sides as powers of the same base.",
+    "Divide both sides by $5$ first."
+   ],
+   "solution": [
+    "Divide by $5$: $5^x = 625$.",
+    "$625 = 5^{4}$, so $x = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-a7b4d8",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "Solve $\\log_{2} x = 2$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "$\\log_b A = n$ means $b^n = A$.",
+    "So the inside equals $2^{2} = 4$."
+   ],
+   "solution": [
+    "Rewrite in exponential form: $x = 2^{2}$.",
+    "$x = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-332689",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $e^{2x} = 5$. Give the exact answer.",
+   "checker": "numeric",
+   "answer": "ln(5)/2",
+   "hints": [
+    "Undo the exponential with the natural logarithm.",
+    "$\\ln(e^{u}) = u$, and $\\ln(b^{u}) = u \\ln b$."
+   ],
+   "solution": [
+    "Take $\\ln$: $2x = \\ln 5$.",
+    "$x = \\dfrac{\\ln 5}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-a62448",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "Simplify $\\ln\\left(e^{- 2 x}\\right)$.",
+   "checker": "equiv",
+   "answer": "-2*x",
+   "hints": [
+    "A log and an exponential with the same base cancel each other.",
+    "Rewrite everything in terms of one base first."
+   ],
+   "solution": [
+    "$\\ln$ and $e^{(\\cdot)}$ undo each other.",
+    "$\\ln(e^{- 2 x}) = - 2 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-57c96d",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "A bacteria population starts at 800 and doubles every 2 hours. How many bacteria are there after 4 hours?",
+   "checker": "numeric",
+   "answer": "3200",
+   "hints": [
+    "The population is $P(t) = 800\\cdot 2^{t/2}$.",
+    "In 4 hours there are $2$ doublings."
+   ],
+   "solution": [
+    "$P(4) = 800\\cdot 2^{4/2} = 800\\cdot 2^{2}$.",
+    "$= 800\\cdot4 = 3200$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-2863fc",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Which expression equals $\\ln x + \\ln(x + 3)$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Product rule: $\\log(AB) = \\log A + \\log B$. There is no rule for $\\log A \\cdot \\log B$.",
+    "Try a number: let $x = 1$ and compare both sides."
+   ],
+   "solution": [
+    "The sum of two logs is the log of the product.",
+    "$\\ln x + \\ln(x + 3) = \\ln\\left(x(x + 3)\\right)$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\ln(2 x + 3)",
+    "\\ln x \\cdot \\ln(x + 3)",
+    "\\ln\\dfrac{x}{x + 3}",
+    "\\ln\\left(x(x + 3)\\right)"
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-3166ae",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "Evaluate $\\ln\\left(e^{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "$\\ln$ is the logarithm with base $e$.",
+    "$\\ln(e^u) = u$ for any $u$."
+   ],
+   "solution": [
+    "$\\ln(e^{3}) = 3$ because $\\ln$ undoes $e^{(\\cdot)}$.",
+    "No calculator needed."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-1f3c68",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "Solve $3^{x} = 243$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Write both sides as powers of the same base.",
+    "$243 = 3^{5}$."
+   ],
+   "solution": [
+    "$243 = 3^{5}$.",
+    "Equal bases, so $x = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-3bc134",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "Solve $\\log_{5} x = 1$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "$\\log_b A = n$ means $b^n = A$.",
+    "So the inside equals $5^{1} = 5$."
+   ],
+   "solution": [
+    "Rewrite in exponential form: $x = 5^{1}$.",
+    "$x = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-1b3923",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 3,
+   "statement": "Solve $2^{x} = 7$. Give the exact answer using natural logs.",
+   "checker": "numeric",
+   "answer": "ln(7)/ln(2)",
+   "hints": [
+    "Undo the exponential with the natural logarithm.",
+    "$\\ln(e^{u}) = u$, and $\\ln(b^{u}) = u \\ln b$."
+   ],
+   "solution": [
+    "Take $\\ln$ of both sides: $x \\ln 2 = \\ln 7$.",
+    "$x = \\dfrac{\\ln 7}{\\ln 2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-9864e2",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Expand $\\ln\\dfrac{x^{5}}{x + 1}$ as far as possible using the log rules ($x > 0$).",
+   "checker": "equiv",
+   "answer": "5*ln(x)-ln(x+1)",
+   "hints": [
+    "Rules: $\\ln(AB) = \\ln A + \\ln B$, $\\ln(A/B) = \\ln A - \\ln B$, $\\ln A^p = p\\ln A$.",
+    "Apply the product/quotient rule first, then the power rule (or the reverse when condensing)."
+   ],
+   "solution": [
+    "Quotient rule: $\\ln x^{5} - \\ln(x + 1)$.",
+    "Power rule: $5\\ln x - \\ln(x + 1)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-bef845",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 3,
+   "statement": "A colony starts at 100 cells and doubles every 2 hours. After how many hours will it reach 800 cells?",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Set $100\\cdot 2^{t/2} = 800$ and divide by $100$.",
+    "$8 = 2^{3}$, so $t/2 = 3$."
+   ],
+   "solution": [
+    "$100\\cdot 2^{t/2} = 800$ gives $2^{t/2} = 8 = 2^{3}$.",
+    "So $t/2 = 3$ and $t = 6$ hours."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-473f23",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Which expression equals $\\log_{2}(4x)$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Product rule: $\\log(AB) = \\log A + \\log B$. There is no rule for $\\log A \\cdot \\log B$.",
+    "Try a number: let $x = 1$ and compare both sides."
+   ],
+   "solution": [
+    "Product rule: $\\log_{2}(4x) = \\log_{2} 4 + \\log_{2} x$.",
+    "$\\log_{2} 4 = 2$, so the result is $2 + \\log_{2} x$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\log_{2} x + \\log_{2} 2",
+    "4\\log_{2} x",
+    "2 + \\log_{2} x",
+    "2\\log_{2} x"
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-2db95a",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "Evaluate $\\ln\\left(e^{-1}\\right)$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "$\\ln$ is the logarithm with base $e$.",
+    "$\\ln(e^u) = u$ for any $u$."
+   ],
+   "solution": [
+    "$\\ln(e^{-1}) = -1$ because $\\ln$ undoes $e^{(\\cdot)}$.",
+    "No calculator needed."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-68cb6c",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $2^{x + 1} = 32$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Write both sides as powers of the same base.",
+    "$32 = 2^{5}$, so the exponents must match: $x + 1 = 5$."
+   ],
+   "solution": [
+    "$32 = 2^{5}$.",
+    "$x + 1 = 5$, so $x = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-d777cb",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $\\log_{2}(x - 2) = 3$.",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "$\\log_b A = n$ means $b^n = A$.",
+    "So the inside equals $2^{3} = 8$."
+   ],
+   "solution": [
+    "Exponential form: $x - 2 = 2^{3} = 8$.",
+    "$x = 10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-422f2d",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $e^{x} = 20$. Give the exact answer.",
+   "checker": "numeric",
+   "answer": "ln(20)",
+   "hints": [
+    "Undo the exponential with the natural logarithm.",
+    "$\\ln(e^{u}) = u$, and $\\ln(b^{u}) = u \\ln b$."
+   ],
+   "solution": [
+    "Take the natural log of both sides: $\\ln e^x = \\ln 20$.",
+    "$x = \\ln 20$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-ded5e3",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Write $\\ln\\sqrt[3]{x}$ without a root ($x > 0$).",
+   "checker": "equiv",
+   "answer": "ln(x)/3",
+   "hints": [
+    "Rules: $\\ln(AB) = \\ln A + \\ln B$, $\\ln(A/B) = \\ln A - \\ln B$, $\\ln A^p = p\\ln A$.",
+    "Apply the product/quotient rule first, then the power rule (or the reverse when condensing)."
+   ],
+   "solution": [
+    "A root is a fractional power: $\\sqrt[3]{x} = x^{1/3}$.",
+    "Power rule: $\\dfrac{1}{3}\\ln x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-711227",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "A 120 g sample of a substance has a half-life of 8 days. How many grams remain after 24 days?",
+   "checker": "numeric",
+   "answer": "15",
+   "hints": [
+    "Remaining amount $= 120\\cdot\\left(\\tfrac12\\right)^{t/8}$.",
+    "$24$ days is $3$ half-lives."
+   ],
+   "solution": [
+    "$24/8 = 3$ half-lives.",
+    "$120\\cdot\\left(\\tfrac12\\right)^{3} = 15$ g."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-4fc2bb",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "Evaluate $\\log_{10} 100000$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Ask: 10 to what power gives this number?",
+    "$100000 = 10^{5}$."
+   ],
+   "solution": [
+    "$100000 = 10^{5}$, so the log is $5$.",
+    "Count the zeros (negative for a fraction)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-be57d7",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Evaluate $\\log_{3} \\left(\\frac{1}{9}\\right)$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "$\\log_{3} N$ asks: $3$ to what power gives $N$?",
+    "Write $\\frac{1}{9}$ as a power of $3$ (a fraction means a negative exponent, a root means a fractional one)."
+   ],
+   "solution": [
+    "$\\frac{1}{9} = 3^{-2}$.",
+    "So $\\log_{3} \\frac{1}{9} = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-587783",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $5^{x - 2} = 25$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Write both sides as powers of the same base.",
+    "$25 = 5^{2}$, so the exponents must match: $x - 2 = 2$."
+   ],
+   "solution": [
+    "$25 = 5^{2}$.",
+    "$x - 2 = 2$, so $x = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-a38cc9",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $\\log_{4}(x + 3) = 2$.",
+   "checker": "numeric",
+   "answer": "13",
+   "hints": [
+    "$\\log_b A = n$ means $b^n = A$.",
+    "So the inside equals $4^{2} = 16$."
+   ],
+   "solution": [
+    "Exponential form: $x + 3 = 4^{2} = 16$.",
+    "$x = 13$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-1db2fc",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Write $4\\ln x + \\ln 2$ as a single logarithm ($x > 0$).",
+   "checker": "equiv",
+   "answer": "ln(2*x^4)",
+   "hints": [
+    "Rules: $\\ln(AB) = \\ln A + \\ln B$, $\\ln(A/B) = \\ln A - \\ln B$, $\\ln A^p = p\\ln A$.",
+    "Apply the product/quotient rule first, then the power rule (or the reverse when condensing)."
+   ],
+   "solution": [
+    "Power rule: $4\\ln x = \\ln x^{4}$.",
+    "Product rule: $\\ln x^{4} + \\ln 2 = \\ln(2x^{4})$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-f1c8fc",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "A 120 g sample of a substance has a half-life of 3 days. How many grams remain after 6 days?",
+   "checker": "numeric",
+   "answer": "30",
+   "hints": [
+    "Remaining amount $= 120\\cdot\\left(\\tfrac12\\right)^{t/3}$.",
+    "$6$ days is $2$ half-lives."
+   ],
+   "solution": [
+    "$6/3 = 2$ half-lives.",
+    "$120\\cdot\\left(\\tfrac12\\right)^{2} = 30$ g."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-57144e",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Which expression equals $\\ln x + \\ln(x + 4)$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Product rule: $\\log(AB) = \\log A + \\log B$. There is no rule for $\\log A \\cdot \\log B$.",
+    "Try a number: let $x = 1$ and compare both sides."
+   ],
+   "solution": [
+    "The sum of two logs is the log of the product.",
+    "$\\ln x + \\ln(x + 4) = \\ln\\left(x(x + 4)\\right)$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\ln\\left(x(x + 4)\\right)",
+    "\\ln(2 x + 4)",
+    "\\ln\\dfrac{x}{x + 4}",
+    "\\ln x \\cdot \\ln(x + 4)"
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-59042d",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "Evaluate $\\log_{10} 10000$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Ask: 10 to what power gives this number?",
+    "$10000 = 10^{4}$."
+   ],
+   "solution": [
+    "$10000 = 10^{4}$, so the log is $4$.",
+    "Count the zeros (negative for a fraction)."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-1cdef8",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 3,
+   "statement": "Evaluate $\\log_{16} 4$.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "$\\log_{16} N$ asks: $16$ to what power gives $N$?",
+    "Write $4$ as a power of $16$ (a fraction means a negative exponent, a root means a fractional one)."
+   ],
+   "solution": [
+    "$4 = 16^{\\frac{1}{2}}$.",
+    "So $\\log_{16} 4 = \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-d5523c",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $2 \\cdot 3^{x} = 54$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Write both sides as powers of the same base.",
+    "Divide both sides by $2$ first."
+   ],
+   "solution": [
+    "Divide by $2$: $3^x = 27$.",
+    "$27 = 3^{3}$, so $x = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-b9cc63",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $\\log_{5}(x - 1) = 2$.",
+   "checker": "numeric",
+   "answer": "26",
+   "hints": [
+    "$\\log_b A = n$ means $b^n = A$.",
+    "So the inside equals $5^{2} = 25$."
+   ],
+   "solution": [
+    "Exponential form: $x - 1 = 5^{2} = 25$.",
+    "$x = 26$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-5f1a3f",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $e^{x} = 7$. Give the exact answer.",
+   "checker": "numeric",
+   "answer": "ln(7)",
+   "hints": [
+    "Undo the exponential with the natural logarithm.",
+    "$\\ln(e^{u}) = u$, and $\\ln(b^{u}) = u \\ln b$."
+   ],
+   "solution": [
+    "Take the natural log of both sides: $\\ln e^x = \\ln 7$.",
+    "$x = \\ln 7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-79d717",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Expand $\\ln\\left(x^{5}(x + 3)\\right)$ using the log rules ($x > 0$).",
+   "checker": "equiv",
+   "answer": "5*ln(x)+ln(x+3)",
+   "hints": [
+    "Rules: $\\ln(AB) = \\ln A + \\ln B$, $\\ln(A/B) = \\ln A - \\ln B$, $\\ln A^p = p\\ln A$.",
+    "Apply the product/quotient rule first, then the power rule (or the reverse when condensing)."
+   ],
+   "solution": [
+    "Product rule: $\\ln x^{5} + \\ln(x + 3)$.",
+    "Power rule: $5\\ln x + \\ln(x + 3)$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-bf3998",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "A bacteria population starts at 200 and doubles every 5 hours. How many bacteria are there after 10 hours?",
+   "checker": "numeric",
+   "answer": "800",
+   "hints": [
+    "The population is $P(t) = 200\\cdot 2^{t/5}$.",
+    "In 10 hours there are $2$ doublings."
+   ],
+   "solution": [
+    "$P(10) = 200\\cdot 2^{10/5} = 200\\cdot 2^{2}$.",
+    "$= 200\\cdot4 = 800$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-e6180b",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Which expression equals $\\log_{5}(25x)$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Product rule: $\\log(AB) = \\log A + \\log B$. There is no rule for $\\log A \\cdot \\log B$.",
+    "Try a number: let $x = 1$ and compare both sides."
+   ],
+   "solution": [
+    "Product rule: $\\log_{5}(25x) = \\log_{5} 25 + \\log_{5} x$.",
+    "$\\log_{5} 25 = 2$, so the result is $2 + \\log_{5} x$."
+   ],
+   "verified": true,
+   "choices": [
+    "\\log_{5} x + \\log_{5} 5",
+    "25\\log_{5} x",
+    "2 + \\log_{5} x",
+    "2\\log_{5} x"
+   ]
+  },
+  {
+   "id": "exponentials-and-logs-ramp-d21bf1",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "Evaluate $e^{\\ln 10}$.",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "$e^{(\\cdot)}$ and $\\ln$ are inverse functions.",
+    "$e^{\\ln u} = u$ for $u > 0$."
+   ],
+   "solution": [
+    "$e^{\\ln 10} = 10$.",
+    "The exponential undoes the natural log."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-d3a1e3",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $3 \\cdot 4^{x} = 768$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Write both sides as powers of the same base.",
+    "Divide both sides by $3$ first."
+   ],
+   "solution": [
+    "Divide by $3$: $4^x = 256$.",
+    "$256 = 4^{4}$, so $x = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-17146b",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $\\log_{5}(x + 1) = 1$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "$\\log_b A = n$ means $b^n = A$.",
+    "So the inside equals $5^{1} = 5$."
+   ],
+   "solution": [
+    "Exponential form: $x + 1 = 5^{1} = 5$.",
+    "$x = 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-4bd5e9",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Solve $e^{3x} = 3$. Give the exact answer.",
+   "checker": "numeric",
+   "answer": "ln(3)/3",
+   "hints": [
+    "Undo the exponential with the natural logarithm.",
+    "$\\ln(e^{u}) = u$, and $\\ln(b^{u}) = u \\ln b$."
+   ],
+   "solution": [
+    "Take $\\ln$: $3x = \\ln 3$.",
+    "$x = \\dfrac{\\ln 3}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-f07c46",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 1,
+   "statement": "A bacteria population starts at 500 and doubles every 2 hours. How many bacteria are there after 4 hours?",
+   "checker": "numeric",
+   "answer": "2000",
+   "hints": [
+    "The population is $P(t) = 500\\cdot 2^{t/2}$.",
+    "In 4 hours there are $2$ doublings."
+   ],
+   "solution": [
+    "$P(4) = 500\\cdot 2^{4/2} = 500\\cdot 2^{2}$.",
+    "$= 500\\cdot4 = 2000$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "exponentials-and-logs-ramp-7c81b4",
+   "skill": "exponentials-and-logs-ramp",
+   "difficulty": 2,
+   "statement": "Which expression equals $\\log_{2}(8x)$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Product rule: $\\log(AB) = \\log A + \\log B$. There is no rule for $\\log A \\cdot \\log B$.",
+    "Try a number: let $x = 1$ and compare both sides."
+   ],
+   "solution": [
+    "Product rule: $\\log_{2}(8x) = \\log_{2} 8 + \\log_{2} x$.",
+    "$\\log_{2} 8 = 3$, so the result is $3 + \\log_{2} x$."
+   ],
+   "verified": true,
+   "choices": [
+    "8\\log_{2} x",
+    "\\log_{2} x + \\log_{2} 2",
+    "3\\log_{2} x",
+    "3 + \\log_{2} x"
+   ]
+  }
+ ]
+}

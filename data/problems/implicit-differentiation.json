@@ -1,0 +1,1047 @@
+{
+ "skill": "implicit-differentiation",
+ "problems": [
+  {
+   "id": "implicit-differentiation-542513",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(3, 4)$ on the curve $x^{2} + y^{2} = 25$.",
+   "checker": "numeric",
+   "answer": "-3/4",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $2 x + \\left(2 y\\right)y' = 0$, so $y' = - \\frac{x}{y}$.",
+    "At $(3, 4)$: $y' = - \\frac{3}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-c8061b",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(3, 1)$ on the curve $x^{2} + x y + y^{2} = 13$.",
+   "checker": "numeric",
+   "answer": "-7/5",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $2 x + y + \\left(x + 2 y\\right)y' = 0$, so $y' = \\frac{- 2 x - y}{x + 2 y}$.",
+    "At $(3, 1)$: $y' = - \\frac{7}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-b34717",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(-2, 1)$ on the curve $x y + x = -4$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $y + 1 + \\left(x\\right)y' = 0$, so $y' = \\frac{- y - 1}{x}$.",
+    "At $(-2, 1)$: $y' = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-e785ba",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(3, 1)$ on the curve $x y + x = 6$.",
+   "checker": "numeric",
+   "answer": "-2/3",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $y + 1 + \\left(x\\right)y' = 0$, so $y' = \\frac{- y - 1}{x}$.",
+    "At $(3, 1)$: $y' = - \\frac{2}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-f114ea",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(3, -4)$ on the curve $x^{2} + y^{2} = 25$.",
+   "checker": "numeric",
+   "answer": "3/4",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $2 x + \\left(2 y\\right)y' = 0$, so $y' = - \\frac{x}{y}$.",
+    "At $(3, -4)$: $y' = \\frac{3}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-70c6ed",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(-2, -3)$ on the curve $x^{2} + x y^{2} = -14$.",
+   "checker": "numeric",
+   "answer": "-5/12",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $2 x + y^{2} + \\left(2 x y\\right)y' = 0$, so $y' = - \\frac{1}{y} - \\frac{y}{2 x}$.",
+    "At $(-2, -3)$: $y' = - \\frac{5}{12}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-dd3a3b",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(3, 1)$ on the curve $x^{2} + x y^{2} = 12$.",
+   "checker": "numeric",
+   "answer": "-7/6",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $2 x + y^{2} + \\left(2 x y\\right)y' = 0$, so $y' = - \\frac{1}{y} - \\frac{y}{2 x}$.",
+    "At $(3, 1)$: $y' = - \\frac{7}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-9437da",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(-2, -1)$ on the curve $x^{2} + x y^{2} = 2$.",
+   "checker": "numeric",
+   "answer": "3/4",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $2 x + y^{2} + \\left(2 x y\\right)y' = 0$, so $y' = - \\frac{1}{y} - \\frac{y}{2 x}$.",
+    "At $(-2, -1)$: $y' = \\frac{3}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-99e0a0",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(-1, 2)$ on the curve $x^{3} - x y + y^{2} = 5$.",
+   "checker": "numeric",
+   "answer": "-1/5",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $3 x^{2} - y + \\left(- x + 2 y\\right)y' = 0$, so $y' = \\frac{3 x^{2} - y}{x - 2 y}$.",
+    "At $(-1, 2)$: $y' = - \\frac{1}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-796dd2",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(-2, 2)$ on the curve $x^{2} + x y + y^{2} = 4$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $2 x + y + \\left(x + 2 y\\right)y' = 0$, so $y' = \\frac{- 2 x - y}{x + 2 y}$.",
+    "At $(-2, 2)$: $y' = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-08832f",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(2, -2)$ on the curve $x^{3} + y^{3} = 0$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $3 x^{2} + \\left(3 y^{2}\\right)y' = 0$, so $y' = - \\frac{x^{2}}{y^{2}}$.",
+    "At $(2, -2)$: $y' = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-5b41df",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(2, 3)$ on the curve $x y + 3 x = 12$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $y + 3 + \\left(x\\right)y' = 0$, so $y' = \\frac{- y - 3}{x}$.",
+    "At $(2, 3)$: $y' = -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-1c463f",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(-1, 1)$ on the curve $x^{3} + y^{3} = 0$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $3 x^{2} + \\left(3 y^{2}\\right)y' = 0$, so $y' = - \\frac{x^{2}}{y^{2}}$.",
+    "At $(-1, 1)$: $y' = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-bd9a79",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(1, -2)$ on the curve $x^{2} + x y + y^{2} = 3$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $2 x + y + \\left(x + 2 y\\right)y' = 0$, so $y' = \\frac{- 2 x - y}{x + 2 y}$.",
+    "At $(1, -2)$: $y' = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-a17014",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(1, -1)$ on the curve $x^{3} - x y + y^{2} = 3$.",
+   "checker": "numeric",
+   "answer": "4/3",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $3 x^{2} - y + \\left(- x + 2 y\\right)y' = 0$, so $y' = \\frac{3 x^{2} - y}{x - 2 y}$.",
+    "At $(1, -1)$: $y' = \\frac{4}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-54e415",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(2, 3)$ on the curve $x^{2} + x y^{2} = 22$.",
+   "checker": "numeric",
+   "answer": "-13/12",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $2 x + y^{2} + \\left(2 x y\\right)y' = 0$, so $y' = - \\frac{1}{y} - \\frac{y}{2 x}$.",
+    "At $(2, 3)$: $y' = - \\frac{13}{12}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-e5cb31",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(1, -2)$ on the curve $x^{3} - x y + y^{2} = 7$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $3 x^{2} - y + \\left(- x + 2 y\\right)y' = 0$, so $y' = \\frac{3 x^{2} - y}{x - 2 y}$.",
+    "At $(1, -2)$: $y' = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-304729",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(-8, 6)$ on the curve $x^{2} + y^{2} = 100$.",
+   "checker": "numeric",
+   "answer": "4/3",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $2 x + \\left(2 y\\right)y' = 0$, so $y' = - \\frac{x}{y}$.",
+    "At $(-8, 6)$: $y' = \\frac{4}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-e52488",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(-1, -1)$ on the curve $x^{3} + y^{3} = -2$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $3 x^{2} + \\left(3 y^{2}\\right)y' = 0$, so $y' = - \\frac{x^{2}}{y^{2}}$.",
+    "At $(-1, -1)$: $y' = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-e68c0e",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Use implicit differentiation to find $\\dfrac{dy}{dx}$ at the point $(-1, 2)$ on the curve $x^{2} + y^{2} = 5$.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so $y^n$ gives $ny^{n-1}y'$ and $xy$ needs the product rule).",
+    "Solve for $y'$, then substitute the coordinates of the point."
+   ],
+   "solution": [
+    "Differentiating: $2 x + \\left(2 y\\right)y' = 0$, so $y' = - \\frac{x}{y}$.",
+    "At $(-1, 2)$: $y' = \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-eeacb7",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to the curve $x y + y^{2} = 15$ at the point $(-2, -3)$.",
+   "checker": "equiv",
+   "answer": "-3*x/8-15/4",
+   "hints": [
+    "Find $y'$ by implicit differentiation and evaluate it at the point to get the slope.",
+    "Then use point-slope form."
+   ],
+   "solution": [
+    "$y' = - \\frac{y}{x + 2 y}$, which at $(-2, -3)$ equals $- \\frac{3}{8}$.",
+    "Tangent: $y - (-3) = - \\frac{3}{8}(x - (-2))$, i.e. $y = - \\frac{3 x}{8} - \\frac{15}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "implicit-differentiation-85dac8",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to the curve $x^{2} + y^{2} = 25$ at the point $(-4, 3)$.",
+   "checker": "equiv",
+   "answer": "4*x/3+25/3",
+   "hints": [
+    "Find $y'$ by implicit differentiation and evaluate it at the point to get the slope.",
+    "Then use point-slope form."
+   ],
+   "solution": [
+    "$y' = - \\frac{x}{y}$, which at $(-4, 3)$ equals $\\frac{4}{3}$.",
+    "Tangent: $y - (3) = \\frac{4}{3}(x - (-4))$, i.e. $y = \\frac{4 x}{3} + \\frac{25}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "implicit-differentiation-5ffb1e",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to the curve $x^{3} - x y + y^{3} = 4$ at the point $(2, -2)$.",
+   "checker": "equiv",
+   "answer": "4/5-7*x/5",
+   "hints": [
+    "Find $y'$ by implicit differentiation and evaluate it at the point to get the slope.",
+    "Then use point-slope form."
+   ],
+   "solution": [
+    "$y' = \\frac{3 x^{2} - y}{x - 3 y^{2}}$, which at $(2, -2)$ equals $- \\frac{7}{5}$.",
+    "Tangent: $y - (-2) = - \\frac{7}{5}(x - (2))$, i.e. $y = \\frac{4}{5} - \\frac{7 x}{5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "implicit-differentiation-8f4b15",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to the curve $x^{2} - x y + y^{2} = 7$ at the point $(1, -2)$.",
+   "checker": "equiv",
+   "answer": "4*x/5-14/5",
+   "hints": [
+    "Find $y'$ by implicit differentiation and evaluate it at the point to get the slope.",
+    "Then use point-slope form."
+   ],
+   "solution": [
+    "$y' = \\frac{2 x - y}{x - 2 y}$, which at $(1, -2)$ equals $\\frac{4}{5}$.",
+    "Tangent: $y - (-2) = \\frac{4}{5}(x - (1))$, i.e. $y = \\frac{4 x}{5} - \\frac{14}{5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "implicit-differentiation-3c711f",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to the curve $x^{2} + y^{2} = 100$ at the point $(6, 8)$.",
+   "checker": "equiv",
+   "answer": "25/2-3*x/4",
+   "hints": [
+    "Find $y'$ by implicit differentiation and evaluate it at the point to get the slope.",
+    "Then use point-slope form."
+   ],
+   "solution": [
+    "$y' = - \\frac{x}{y}$, which at $(6, 8)$ equals $- \\frac{3}{4}$.",
+    "Tangent: $y - (8) = - \\frac{3}{4}(x - (6))$, i.e. $y = \\frac{25}{2} - \\frac{3 x}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "implicit-differentiation-3c3bd4",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to the curve $x^{2} - x y + y^{2} = 13$ at the point $(1, -3)$.",
+   "checker": "equiv",
+   "answer": "5*x/7-26/7",
+   "hints": [
+    "Find $y'$ by implicit differentiation and evaluate it at the point to get the slope.",
+    "Then use point-slope form."
+   ],
+   "solution": [
+    "$y' = \\frac{2 x - y}{x - 2 y}$, which at $(1, -3)$ equals $\\frac{5}{7}$.",
+    "Tangent: $y - (-3) = \\frac{5}{7}(x - (1))$, i.e. $y = \\frac{5 x}{7} - \\frac{26}{7}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "implicit-differentiation-7afe8b",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to the curve $x^{2} - x y + y^{2} = 13$ at the point $(3, -1)$.",
+   "checker": "equiv",
+   "answer": "7*x/5-26/5",
+   "hints": [
+    "Find $y'$ by implicit differentiation and evaluate it at the point to get the slope.",
+    "Then use point-slope form."
+   ],
+   "solution": [
+    "$y' = \\frac{2 x - y}{x - 2 y}$, which at $(3, -1)$ equals $\\frac{7}{5}$.",
+    "Tangent: $y - (-1) = \\frac{7}{5}(x - (3))$, i.e. $y = \\frac{7 x}{5} - \\frac{26}{5}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "implicit-differentiation-074bdf",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to the curve $x^{2} - x y + y^{2} = 27$ at the point $(-3, 3)$.",
+   "checker": "equiv",
+   "answer": "x+6",
+   "hints": [
+    "Find $y'$ by implicit differentiation and evaluate it at the point to get the slope.",
+    "Then use point-slope form."
+   ],
+   "solution": [
+    "$y' = \\frac{2 x - y}{x - 2 y}$, which at $(-3, 3)$ equals $1$.",
+    "Tangent: $y - (3) = 1(x - (-3))$, i.e. $y = x + 6$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "implicit-differentiation-a8bb17",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find an equation of the tangent line to the curve $x y + y^{2} = -2$ at the point $(3, -2)$.",
+   "checker": "equiv",
+   "answer": "4-2*x",
+   "hints": [
+    "Find $y'$ by implicit differentiation and evaluate it at the point to get the slope.",
+    "Then use point-slope form."
+   ],
+   "solution": [
+    "$y' = - \\frac{y}{x + 2 y}$, which at $(3, -2)$ equals $-2$.",
+    "Tangent: $y - (-2) = -2(x - (3))$, i.e. $y = 4 - 2 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "implicit-differentiation-16c8b8",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Find the derivative of $f(x) = \\arccos{\\left(\\frac{x}{2} \\right)}$.",
+   "checker": "equiv",
+   "answer": "-1/(2*sqrt(1-x^2/4))",
+   "hints": [
+    "Recall $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arccos u)' = -\\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arctan u)' = \\dfrac{u'}{1+u^2}$.",
+    "Apply the chain rule (and product or quotient rule if there is another factor)."
+   ],
+   "solution": [
+    "Use the inverse trig derivative formula with the chain rule on the inner function.",
+    "$f'(x) = - \\frac{1}{2 \\sqrt{1 - \\frac{x^{2}}{4}}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ]
+  },
+  {
+   "id": "implicit-differentiation-5f8c11",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find the derivative of $f(x) = \\frac{\\arcsin{\\left(x \\right)}}{x}$.",
+   "checker": "equiv",
+   "answer": "1/(x*sqrt(1-x^2))-asin(x)/x^2",
+   "hints": [
+    "Recall $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arccos u)' = -\\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arctan u)' = \\dfrac{u'}{1+u^2}$.",
+    "Apply the chain rule (and product or quotient rule if there is another factor)."
+   ],
+   "solution": [
+    "Use the inverse trig derivative formula with the chain rule on the inner function.",
+    "$f'(x) = \\frac{1}{x \\sqrt{1 - x^{2}}} - \\frac{\\arcsin{\\left(x \\right)}}{x^{2}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    0.9
+   ]
+  },
+  {
+   "id": "implicit-differentiation-be95dc",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Find the derivative of $f(x) = \\arccos{\\left(\\frac{x}{3} \\right)}$.",
+   "checker": "equiv",
+   "answer": "-1/(3*sqrt(1-x^2/9))",
+   "hints": [
+    "Recall $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arccos u)' = -\\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arctan u)' = \\dfrac{u'}{1+u^2}$.",
+    "Apply the chain rule (and product or quotient rule if there is another factor)."
+   ],
+   "solution": [
+    "Use the inverse trig derivative formula with the chain rule on the inner function.",
+    "$f'(x) = - \\frac{1}{3 \\sqrt{1 - \\frac{x^{2}}{9}}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ]
+  },
+  {
+   "id": "implicit-differentiation-b58fb4",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find the derivative of $f(x) = \\arctan{\\left(x^{2} + 2 \\right)}$.",
+   "checker": "equiv",
+   "answer": "2*x/((x^2+2)^2+1)",
+   "hints": [
+    "Recall $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arccos u)' = -\\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arctan u)' = \\dfrac{u'}{1+u^2}$.",
+    "Apply the chain rule (and product or quotient rule if there is another factor)."
+   ],
+   "solution": [
+    "Use the inverse trig derivative formula with the chain rule on the inner function.",
+    "$f'(x) = \\frac{2 x}{\\left(x^{2} + 2\\right)^{2} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "implicit-differentiation-bcbe14",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find the derivative of $f(x) = e^{x} \\arctan{\\left(x \\right)}$.",
+   "checker": "equiv",
+   "answer": "exp(x)*atan(x)+exp(x)/(x^2+1)",
+   "hints": [
+    "Recall $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arccos u)' = -\\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arctan u)' = \\dfrac{u'}{1+u^2}$.",
+    "Apply the chain rule (and product or quotient rule if there is another factor)."
+   ],
+   "solution": [
+    "Use the inverse trig derivative formula with the chain rule on the inner function.",
+    "$f'(x) = e^{x} \\arctan{\\left(x \\right)} + \\frac{e^{x}}{x^{2} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    0.9
+   ]
+  },
+  {
+   "id": "implicit-differentiation-22d64e",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find the derivative of $f(x) = \\arctan{\\left(\\sqrt{x} \\right)}$.",
+   "checker": "equiv",
+   "answer": "1/(2*sqrt(x)*(x+1))",
+   "hints": [
+    "Recall $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arccos u)' = -\\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arctan u)' = \\dfrac{u'}{1+u^2}$.",
+    "Apply the chain rule (and product or quotient rule if there is another factor)."
+   ],
+   "solution": [
+    "Use the inverse trig derivative formula with the chain rule on the inner function.",
+    "$f'(x) = \\frac{1}{2 \\sqrt{x} \\left(x + 1\\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "implicit-differentiation-a99ccd",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Find the derivative of $f(x) = \\arccos{\\left(\\frac{x}{4} \\right)}$.",
+   "checker": "equiv",
+   "answer": "-1/(4*sqrt(1-x^2/16))",
+   "hints": [
+    "Recall $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arccos u)' = -\\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arctan u)' = \\dfrac{u'}{1+u^2}$.",
+    "Apply the chain rule (and product or quotient rule if there is another factor)."
+   ],
+   "solution": [
+    "Use the inverse trig derivative formula with the chain rule on the inner function.",
+    "$f'(x) = - \\frac{1}{4 \\sqrt{1 - \\frac{x^{2}}{16}}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.5,
+    1.5
+   ]
+  },
+  {
+   "id": "implicit-differentiation-1adac0",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Find the derivative of $f(x) = 2 \\arctan{\\left(2 x \\right)}$.",
+   "checker": "equiv",
+   "answer": "4/(4*x^2+1)",
+   "hints": [
+    "Recall $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arccos u)' = -\\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arctan u)' = \\dfrac{u'}{1+u^2}$.",
+    "Apply the chain rule (and product or quotient rule if there is another factor)."
+   ],
+   "solution": [
+    "Use the inverse trig derivative formula with the chain rule on the inner function.",
+    "$f'(x) = \\frac{4}{4 x^{2} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "implicit-differentiation-de1873",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Find the derivative of $f(x) = 3 \\arctan{\\left(4 x \\right)}$.",
+   "checker": "equiv",
+   "answer": "12/(16*x^2+1)",
+   "hints": [
+    "Recall $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arccos u)' = -\\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arctan u)' = \\dfrac{u'}{1+u^2}$.",
+    "Apply the chain rule (and product or quotient rule if there is another factor)."
+   ],
+   "solution": [
+    "Use the inverse trig derivative formula with the chain rule on the inner function.",
+    "$f'(x) = \\frac{12}{16 x^{2} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "implicit-differentiation-18d65c",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Find the derivative of $f(x) = 3 \\arctan{\\left(2 x \\right)}$.",
+   "checker": "equiv",
+   "answer": "6/(4*x^2+1)",
+   "hints": [
+    "Recall $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arccos u)' = -\\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arctan u)' = \\dfrac{u'}{1+u^2}$.",
+    "Apply the chain rule (and product or quotient rule if there is another factor)."
+   ],
+   "solution": [
+    "Use the inverse trig derivative formula with the chain rule on the inner function.",
+    "$f'(x) = \\frac{6}{4 x^{2} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "implicit-differentiation-619f1e",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find the derivative of $f(x) = \\arctan{\\left(x^{2} \\right)}$.",
+   "checker": "equiv",
+   "answer": "2*x/(x^4+1)",
+   "hints": [
+    "Recall $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arccos u)' = -\\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arctan u)' = \\dfrac{u'}{1+u^2}$.",
+    "Apply the chain rule (and product or quotient rule if there is another factor)."
+   ],
+   "solution": [
+    "Use the inverse trig derivative formula with the chain rule on the inner function.",
+    "$f'(x) = \\frac{2 x}{x^{4} + 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "implicit-differentiation-30a07e",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "Find the derivative of $f(x) = \\arcsin{\\left(x^{2} \\right)}$.",
+   "checker": "equiv",
+   "answer": "2*x/sqrt(1-x^4)",
+   "hints": [
+    "Recall $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arccos u)' = -\\dfrac{u'}{\\sqrt{1-u^2}}$, $(\\arctan u)' = \\dfrac{u'}{1+u^2}$.",
+    "Apply the chain rule (and product or quotient rule if there is another factor)."
+   ],
+   "solution": [
+    "Use the inverse trig derivative formula with the chain rule on the inner function.",
+    "$f'(x) = \\frac{2 x}{\\sqrt{1 - x^{4}}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.9,
+    0.9
+   ]
+  },
+  {
+   "id": "implicit-differentiation-54b9e7",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Find the exact value of $f'\\left(1\\right)$ for $f(x) = \\arctan{\\left(x \\right)}$.",
+   "checker": "numeric",
+   "answer": "1/2",
+   "hints": [
+    "Differentiate using the inverse trig formulas first.",
+    "$f'(x) = \\frac{1}{x^{2} + 1}$."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{1}{x^{2} + 1}$.",
+    "$f'(1) = \\frac{1}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-98f5bb",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Find the exact value of $f'\\left(\\frac{1}{2}\\right)$ for $f(x) = x \\arctan{\\left(x \\right)}$.",
+   "checker": "numeric",
+   "answer": "2/5+atan(1/2)",
+   "hints": [
+    "Differentiate using the inverse trig formulas first.",
+    "$f'(x) = \\frac{x}{x^{2} + 1} + \\arctan{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{x}{x^{2} + 1} + \\arctan{\\left(x \\right)}$.",
+    "$f'(\\frac{1}{2}) = \\frac{2}{5} + \\arctan{\\left(\\frac{1}{2} \\right)}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-538c12",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Find the exact value of $f'\\left(\\frac{1}{2}\\right)$ for $f(x) = \\arctan{\\left(2 x \\right)}$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Differentiate using the inverse trig formulas first.",
+    "$f'(x) = \\frac{2}{4 x^{2} + 1}$."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{2}{4 x^{2} + 1}$.",
+    "$f'(\\frac{1}{2}) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-4cf055",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Find the exact value of $f'\\left(0\\right)$ for $f(x) = \\arcsin{\\left(x \\right)}$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Differentiate using the inverse trig formulas first.",
+    "$f'(x) = \\frac{1}{\\sqrt{1 - x^{2}}}$."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{1}{\\sqrt{1 - x^{2}}}$.",
+    "$f'(0) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-54b98b",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Find the exact value of $f'\\left(\\frac{1}{2}\\right)$ for $f(x) = \\arccos{\\left(x \\right)}$.",
+   "checker": "numeric",
+   "answer": "-2*sqrt(3)/3",
+   "hints": [
+    "Differentiate using the inverse trig formulas first.",
+    "$f'(x) = - \\frac{1}{\\sqrt{1 - x^{2}}}$."
+   ],
+   "solution": [
+    "$f'(x) = - \\frac{1}{\\sqrt{1 - x^{2}}}$.",
+    "$f'(\\frac{1}{2}) = - \\frac{2 \\sqrt{3}}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-caeec7",
+   "skill": "implicit-differentiation",
+   "difficulty": 2,
+   "statement": "Find the exact value of $f'\\left(\\frac{1}{2}\\right)$ for $f(x) = \\arcsin{\\left(x \\right)}$.",
+   "checker": "numeric",
+   "answer": "2*sqrt(3)/3",
+   "hints": [
+    "Differentiate using the inverse trig formulas first.",
+    "$f'(x) = \\frac{1}{\\sqrt{1 - x^{2}}}$."
+   ],
+   "solution": [
+    "$f'(x) = \\frac{1}{\\sqrt{1 - x^{2}}}$.",
+    "$f'(\\frac{1}{2}) = \\frac{2 \\sqrt{3}}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "implicit-differentiation-8cfbe0",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "At which points does the curve $x^2 + xy + y^2 = 12$ have a horizontal tangent?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Differentiate implicitly: $2x + y + xy' + 2yy' = 0$, so $y' = -\\dfrac{2x + y}{x + 2y}$.",
+    "Horizontal tangent means $y' = 0$: set $2x + y = 0$ and substitute $y = -2x$ into the curve."
+   ],
+   "solution": [
+    "$y' = 0$ requires $y = -2x$. Substituting: $x^2 - 2x^2 + 4x^2 = 3x^2 = 12$, so $x = \\pm2$.",
+    "The points are $(-2, 4)$ and $(2, -4)$."
+   ],
+   "verified": true,
+   "choices": [
+    "$(4, -2)$ and $(-4, 2)$",
+    "$(-2, 4)$ and $(2, -4)$",
+    "there are none",
+    "$(0, \\pm\\sqrt{12})$"
+   ]
+  },
+  {
+   "id": "implicit-differentiation-88e375",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "At which points does the curve $x^2 + xy + y^2 = 3$ have a horizontal tangent?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Differentiate implicitly: $2x + y + xy' + 2yy' = 0$, so $y' = -\\dfrac{2x + y}{x + 2y}$.",
+    "Horizontal tangent means $y' = 0$: set $2x + y = 0$ and substitute $y = -2x$ into the curve."
+   ],
+   "solution": [
+    "$y' = 0$ requires $y = -2x$. Substituting: $x^2 - 2x^2 + 4x^2 = 3x^2 = 3$, so $x = \\pm1$.",
+    "The points are $(-1, 2)$ and $(1, -2)$."
+   ],
+   "verified": true,
+   "choices": [
+    "$(0, \\pm\\sqrt{3})$",
+    "$(-1, 2)$ and $(1, -2)$",
+    "there are none",
+    "$(2, -1)$ and $(-2, 1)$"
+   ]
+  },
+  {
+   "id": "implicit-differentiation-0c484b",
+   "skill": "implicit-differentiation",
+   "difficulty": 3,
+   "statement": "At which points does the curve $x^2 + xy + y^2 = 27$ have a horizontal tangent?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Differentiate implicitly: $2x + y + xy' + 2yy' = 0$, so $y' = -\\dfrac{2x + y}{x + 2y}$.",
+    "Horizontal tangent means $y' = 0$: set $2x + y = 0$ and substitute $y = -2x$ into the curve."
+   ],
+   "solution": [
+    "$y' = 0$ requires $y = -2x$. Substituting: $x^2 - 2x^2 + 4x^2 = 3x^2 = 27$, so $x = \\pm3$.",
+    "The points are $(-3, 6)$ and $(3, -6)$."
+   ],
+   "verified": true,
+   "choices": [
+    "$(-3, 6)$ and $(3, -6)$",
+    "$(6, -3)$ and $(-6, 3)$",
+    "there are none",
+    "$(0, \\pm\\sqrt{27})$"
+   ]
+  },
+  {
+   "id": "implicit-differentiation-b3d663",
+   "skill": "implicit-differentiation",
+   "difficulty": 1,
+   "statement": "When differentiating $y^4$ with respect to $x$ (where $y$ depends on $x$), the result is",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "$y$ is a function of $x$, so $y^4$ is a composite function.",
+    "Chain rule: power rule on the outside, then multiply by $y'$."
+   ],
+   "solution": [
+    "$\\frac{d}{dx}[y^4] = 4y^3 \\cdot \\frac{dy}{dx}$ by the chain rule.",
+    "Forgetting the factor $dy/dx$ is the most common implicit differentiation error."
+   ],
+   "verified": true,
+   "choices": [
+    "$y^4\\,\\dfrac{dy}{dx}$",
+    "$4x^3$",
+    "$4y^3$",
+    "$4y^3\\,\\dfrac{dy}{dx}$"
+   ]
+  },
+  {
+   "id": "implicit-differentiation-2c498f",
+   "skill": "implicit-differentiation",
+   "difficulty": 1,
+   "statement": "To find $\\dfrac{d}{dx}(xy)$ implicitly you need",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "$x$ and $y$ are both changing, so $xy$ is a product of two functions of $x$.",
+    "$(uv)' = u'v + uv'$ with $u = x$ and $v = y$."
+   ],
+   "solution": [
+    "$\\frac{d}{dx}(xy) = 1\\cdot y + x\\cdot y'$.",
+    "Both terms are needed."
+   ],
+   "verified": true,
+   "choices": [
+    "just $y$",
+    "$\\dfrac{dy}{dx}$ alone",
+    "just $x\\,\\dfrac{dy}{dx}$",
+    "the product rule: $y + x\\,\\dfrac{dy}{dx}$"
+   ]
+  },
+  {
+   "id": "implicit-differentiation-dd7e79",
+   "skill": "implicit-differentiation",
+   "difficulty": 1,
+   "statement": "The derivative of $\\arctan x$ is",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Differentiate $\\tan y = x$ implicitly: $\\sec^2 y \\cdot y' = 1$.",
+    "Use $\\sec^2 y = 1 + \\tan^2 y = 1 + x^2$."
+   ],
+   "solution": [
+    "From $\\tan y = x$: $y' = \\frac{1}{\\sec^2 y} = \\frac{1}{1 + \\tan^2 y}$.",
+    "Since $\\tan y = x$, $y' = \\frac{1}{1 + x^2}$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\sec^2 x$",
+    "$\\dfrac{1}{1 + x^2}$",
+    "$-\\dfrac{1}{1 + x^2}$",
+    "$\\dfrac{1}{\\sqrt{1 - x^2}}$"
+   ]
+  }
+ ]
+}

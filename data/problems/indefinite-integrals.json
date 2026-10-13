@@ -1,0 +1,945 @@
+{
+ "skill": "indefinite-integrals",
+ "problems": [
+  {
+   "id": "indefinite-integrals-dce0cc",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(- 2 x - \\frac{1}{x^{2} + 1}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-x^2-atan(x)",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use $\\int \\frac{dx}{1 + x^2} = \\arctan x$ and $\\int \\frac{dx}{\\sqrt{1 - x^2}} = \\arcsin x$ (plus $C$)."
+   ],
+   "solution": [
+    "Apply $\\int \\frac{dx}{1 + x^2} = \\arctan x$ and $\\int \\frac{dx}{\\sqrt{1 - x^2}} = \\arcsin x$ to each term.",
+    "$\\int \\left(- 2 x - \\frac{1}{x^{2} + 1}\\right)\\,dx = - x^{2} - \\arctan{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.8,
+    0.8
+   ]
+  },
+  {
+   "id": "indefinite-integrals-eb5c5b",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(- \\frac{3}{x^{2} + 1} + \\frac{3}{\\sqrt{1 - x^{2}}}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "3*asin(x)-3*atan(x)",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use $\\int \\frac{dx}{1 + x^2} = \\arctan x$ and $\\int \\frac{dx}{\\sqrt{1 - x^2}} = \\arcsin x$ (plus $C$)."
+   ],
+   "solution": [
+    "Apply $\\int \\frac{dx}{1 + x^2} = \\arctan x$ and $\\int \\frac{dx}{\\sqrt{1 - x^2}} = \\arcsin x$ to each term.",
+    "$\\int \\left(- \\frac{3}{x^{2} + 1} + \\frac{3}{\\sqrt{1 - x^{2}}}\\right)\\,dx = 3 \\arcsin{\\left(x \\right)} - 3 \\arctan{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.8,
+    0.8
+   ]
+  },
+  {
+   "id": "indefinite-integrals-be1f07",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(- \\tan{\\left(x \\right)} \\sec{\\left(x \\right)} + 5 \\sec^{2}{\\left(x \\right)}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "5*sin(x)/cos(x)-1/cos(x)",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use $\\int \\sec^2 x = \\tan x$ and $\\int \\sec x\\tan x = \\sec x$ (plus $C$)."
+   ],
+   "solution": [
+    "Apply $\\int \\sec^2 x = \\tan x$ and $\\int \\sec x\\tan x = \\sec x$ to each term.",
+    "$\\int \\left(- \\tan{\\left(x \\right)} \\sec{\\left(x \\right)} + 5 \\sec^{2}{\\left(x \\right)}\\right)\\,dx = \\frac{5 \\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}} - \\frac{1}{\\cos{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "indefinite-integrals-065090",
+   "skill": "indefinite-integrals",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\left(2 x^{4} + 3\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*x^5/5+3*x",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use the power rule for integrals (plus $C$)."
+   ],
+   "solution": [
+    "Apply the power rule for integrals to each term.",
+    "$\\int \\left(2 x^{4} + 3\\right)\\,dx = \\frac{2 x^{5}}{5} + 3 x + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "indefinite-integrals-efe95c",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(\\frac{4}{x^{2} + 1} + \\frac{4}{\\sqrt{1 - x^{2}}}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "4*asin(x)+4*atan(x)",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use $\\int \\frac{dx}{1 + x^2} = \\arctan x$ and $\\int \\frac{dx}{\\sqrt{1 - x^2}} = \\arcsin x$ (plus $C$)."
+   ],
+   "solution": [
+    "Apply $\\int \\frac{dx}{1 + x^2} = \\arctan x$ and $\\int \\frac{dx}{\\sqrt{1 - x^2}} = \\arcsin x$ to each term.",
+    "$\\int \\left(\\frac{4}{x^{2} + 1} + \\frac{4}{\\sqrt{1 - x^{2}}}\\right)\\,dx = 4 \\arcsin{\\left(x \\right)} + 4 \\arctan{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.8,
+    0.8
+   ]
+  },
+  {
+   "id": "indefinite-integrals-fcaf0e",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(x + \\frac{2}{x^{2} + 1}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2/2+2*atan(x)",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use $\\int \\frac{dx}{1 + x^2} = \\arctan x$ and $\\int \\frac{dx}{\\sqrt{1 - x^2}} = \\arcsin x$ (plus $C$)."
+   ],
+   "solution": [
+    "Apply $\\int \\frac{dx}{1 + x^2} = \\arctan x$ and $\\int \\frac{dx}{\\sqrt{1 - x^2}} = \\arcsin x$ to each term.",
+    "$\\int \\left(x + \\frac{2}{x^{2} + 1}\\right)\\,dx = \\frac{x^{2}}{2} + 2 \\arctan{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.8,
+    0.8
+   ]
+  },
+  {
+   "id": "indefinite-integrals-628c55",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(- 3 x - \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-3*x^2/2-1/cos(x)",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use $\\int \\sec^2 x = \\tan x$ and $\\int \\sec x\\tan x = \\sec x$ (plus $C$)."
+   ],
+   "solution": [
+    "Apply $\\int \\sec^2 x = \\tan x$ and $\\int \\sec x\\tan x = \\sec x$ to each term.",
+    "$\\int \\left(- 3 x - \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}\\right)\\,dx = - \\frac{3 x^{2}}{2} - \\frac{1}{\\cos{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "indefinite-integrals-91cac5",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(5 \\sqrt{x} + 1\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "10*x^(3/2)/3+x",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ with a fractional or negative $n$ (plus $C$)."
+   ],
+   "solution": [
+    "Apply $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$ with a fractional or negative $n$ to each term.",
+    "$\\int \\left(5 \\sqrt{x} + 1\\right)\\,dx = \\frac{10 x^{\\frac{3}{2}}}{3} + x + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "indefinite-integrals-4ad473",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(e^{x} + 2 \\sin{\\left(x \\right)}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "exp(x)-2*cos(x)",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use $\\int e^x = e^x$, $\\int \\sin x = -\\cos x$, $\\int \\cos x = \\sin x$ (plus $C$)."
+   ],
+   "solution": [
+    "Apply $\\int e^x = e^x$, $\\int \\sin x = -\\cos x$, $\\int \\cos x = \\sin x$ to each term.",
+    "$\\int \\left(e^{x} + 2 \\sin{\\left(x \\right)}\\right)\\,dx = e^{x} - 2 \\cos{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "indefinite-integrals-7eabfe",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(- 3 x^{2} - \\frac{4}{x}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-x^3-4*ln(x)",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$ (plus $C$)."
+   ],
+   "solution": [
+    "Apply $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$ to each term.",
+    "$\\int \\left(- 3 x^{2} - \\frac{4}{x}\\right)\\,dx = - x^{3} - 4 \\ln{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "indefinite-integrals-fcaef1",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(- 2 \\cot{\\left(x \\right)} \\csc{\\left(x \\right)} + 2 \\csc^{2}{\\left(x \\right)}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-2*cos(x)/sin(x)+2/sin(x)",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use $\\int \\csc^2 x = -\\cot x$ and $\\int \\csc x\\cot x = -\\csc x$ (plus $C$)."
+   ],
+   "solution": [
+    "Apply $\\int \\csc^2 x = -\\cot x$ and $\\int \\csc x\\cot x = -\\csc x$ to each term.",
+    "$\\int \\left(- 2 \\cot{\\left(x \\right)} \\csc{\\left(x \\right)} + 2 \\csc^{2}{\\left(x \\right)}\\right)\\,dx = - \\frac{2 \\cos{\\left(x \\right)}}{\\sin{\\left(x \\right)}} + \\frac{2}{\\sin{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2.5
+   ]
+  },
+  {
+   "id": "indefinite-integrals-87945d",
+   "skill": "indefinite-integrals",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\left(- 3 x^{3} + 3 x - 2\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-3*x^4/4+3*x^2/2-2*x",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use the power rule for integrals (plus $C$)."
+   ],
+   "solution": [
+    "Apply the power rule for integrals to each term.",
+    "$\\int \\left(- 3 x^{3} + 3 x - 2\\right)\\,dx = - \\frac{3 x^{4}}{4} + \\frac{3 x^{2}}{2} - 2 x + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "indefinite-integrals-28ce50",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(3 \\tan{\\left(x \\right)} \\sec{\\left(x \\right)} + 3 \\sec^{2}{\\left(x \\right)}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "3*sin(x)/cos(x)+3/cos(x)",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use $\\int \\sec^2 x = \\tan x$ and $\\int \\sec x\\tan x = \\sec x$ (plus $C$)."
+   ],
+   "solution": [
+    "Apply $\\int \\sec^2 x = \\tan x$ and $\\int \\sec x\\tan x = \\sec x$ to each term.",
+    "$\\int \\left(3 \\tan{\\left(x \\right)} \\sec{\\left(x \\right)} + 3 \\sec^{2}{\\left(x \\right)}\\right)\\,dx = \\frac{3 \\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}} + \\frac{3}{\\cos{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "indefinite-integrals-9ae7b0",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(4 x^{2} - \\frac{4}{x}\\right)\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "4*x^3/3-4*ln(x)",
+   "hints": [
+    "Integrate term by term using the table of indefinite integrals.",
+    "Use $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$ (plus $C$)."
+   ],
+   "solution": [
+    "Apply $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$ to each term.",
+    "$\\int \\left(4 x^{2} - \\frac{4}{x}\\right)\\,dx = \\frac{4 x^{3}}{3} - 4 \\ln{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "indefinite-integrals-ee17ce",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x^{2} + 4}{\\sqrt{x}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*x^(5/2)/5+8*sqrt(x)",
+   "hints": [
+    "There is no product or quotient rule for integrals; first divide each term by $\\sqrt{x} = x^{1/2}$.",
+    "Then integrate term by term."
+   ],
+   "solution": [
+    "Rewrite: $\\frac{x^{2} + 4}{\\sqrt{x}} = x^{\\frac{3}{2}} + 4x^{- \\frac{1}{2}}$.",
+    "Integrate: $\\frac{2 x^{\\frac{5}{2}}}{5} + 8 \\sqrt{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "indefinite-integrals-8e827b",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{\\cos^{2}{\\left(x \\right)} + 1}{\\cos^{2}{\\left(x \\right)}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x+tan(x)",
+   "hints": [
+    "There is no product or quotient rule for integrals; first rewrite in terms of $\\sec x$ and $\\tan x$: $\\frac{\\sin x}{\\cos^2 x} = \\sec x\\tan x$, $\\frac{1}{\\cos^2 x} = \\sec^2 x$.",
+    "Then integrate term by term."
+   ],
+   "solution": [
+    "Rewrite: $\\frac{\\cos^{2}{\\left(x \\right)} + 1}{\\cos^{2}{\\left(x \\right)}} = \\sec^{2}{\\left(x \\right)} + 1$.",
+    "Integrate: $x + \\tan{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "indefinite-integrals-7584ca",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{\\sin{\\left(x \\right)}}{\\cos^{2}{\\left(x \\right)}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sec(x)",
+   "hints": [
+    "There is no product or quotient rule for integrals; first rewrite in terms of $\\sec x$ and $\\tan x$: $\\frac{\\sin x}{\\cos^2 x} = \\sec x\\tan x$, $\\frac{1}{\\cos^2 x} = \\sec^2 x$.",
+    "Then integrate term by term."
+   ],
+   "solution": [
+    "Rewrite: $\\frac{\\sin{\\left(x \\right)}}{\\cos^{2}{\\left(x \\right)}} = \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}$.",
+    "Integrate: $\\sec{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "indefinite-integrals-2d9ee8",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x^{2} + 3}{\\sqrt{x}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*x^(5/2)/5+6*sqrt(x)",
+   "hints": [
+    "There is no product or quotient rule for integrals; first divide each term by $\\sqrt{x} = x^{1/2}$.",
+    "Then integrate term by term."
+   ],
+   "solution": [
+    "Rewrite: $\\frac{x^{2} + 3}{\\sqrt{x}} = x^{\\frac{3}{2}} + 3x^{- \\frac{1}{2}}$.",
+    "Integrate: $\\frac{2 x^{\\frac{5}{2}}}{5} + 6 \\sqrt{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "indefinite-integrals-a31dd2",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x^{2} + 2}{\\sqrt{x}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*x^(5/2)/5+4*sqrt(x)",
+   "hints": [
+    "There is no product or quotient rule for integrals; first divide each term by $\\sqrt{x} = x^{1/2}$.",
+    "Then integrate term by term."
+   ],
+   "solution": [
+    "Rewrite: $\\frac{x^{2} + 2}{\\sqrt{x}} = x^{\\frac{3}{2}} + 2x^{- \\frac{1}{2}}$.",
+    "Integrate: $\\frac{2 x^{\\frac{5}{2}}}{5} + 4 \\sqrt{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "indefinite-integrals-5a0698",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x^{3} + 2 x + 2}{x^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2/2+2*ln(x)-2/x",
+   "hints": [
+    "There is no product or quotient rule for integrals; first divide each term by $x^2$.",
+    "Then integrate term by term."
+   ],
+   "solution": [
+    "Rewrite: $\\frac{x^{3} + 2 x + 2}{x^{2}} = x + 2x^{-1} + 2x^{-2}$.",
+    "Integrate: $\\frac{x^{2}}{2} + 2 \\ln{\\left(x \\right)} - \\frac{2}{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "indefinite-integrals-d9e7db",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x^{3} + x + 1}{x^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2/2+ln(x)-1/x",
+   "hints": [
+    "There is no product or quotient rule for integrals; first divide each term by $x^2$.",
+    "Then integrate term by term."
+   ],
+   "solution": [
+    "Rewrite: $\\frac{x^{3} + x + 1}{x^{2}} = x + x^{-1} + x^{-2}$.",
+    "Integrate: $\\frac{x^{2}}{2} + \\ln{\\left(x \\right)} - \\frac{1}{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "indefinite-integrals-756cff",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{\\pi} \\left(\\sin{\\left(x \\right)} + 1\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "2+pi",
+   "hints": [
+    "Find an antiderivative, then subtract its values at the endpoints.",
+    "$F(x) = x - \\cos{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "$\\left[x - \\cos{\\left(x \\right)}\\right]_{0}^{\\pi}$.",
+    "$= 1 + \\pi - \\left(-1\\right) = 2 + \\pi$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "indefinite-integrals-32e738",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{1}^{3} \\left(2 + \\frac{1}{x}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(3)+4",
+   "hints": [
+    "Find an antiderivative, then subtract its values at the endpoints.",
+    "$F(x) = 2 x + \\ln{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "$\\left[2 x + \\ln{\\left(x \\right)}\\right]_{1}^{3}$.",
+    "$= \\ln{\\left(3 \\right)} + 6 - \\left(2\\right) = \\ln{\\left(3 \\right)} + 4$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "indefinite-integrals-c67735",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{1}^{4} \\left(3 \\sqrt{x} - x\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "13/2",
+   "hints": [
+    "Find an antiderivative, then subtract its values at the endpoints.",
+    "$F(x) = 2 x^{\\frac{3}{2}} - \\frac{x^{2}}{2}$."
+   ],
+   "solution": [
+    "$\\left[2 x^{\\frac{3}{2}} - \\frac{x^{2}}{2}\\right]_{1}^{4}$.",
+    "$= 8 - \\left(\\frac{3}{2}\\right) = \\frac{13}{2}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "indefinite-integrals-f3464b",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{\\frac{\\pi}{2}}^{\\pi} 3 \\sin{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Find an antiderivative, then subtract its values at the endpoints.",
+    "$F(x) = - 3 \\cos{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "$\\left[- 3 \\cos{\\left(x \\right)}\\right]_{\\frac{\\pi}{2}}^{\\pi}$.",
+    "$= 3 - \\left(0\\right) = 3$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "indefinite-integrals-22a974",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{\\frac{\\pi}{2}}^{\\pi} \\sin{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Find an antiderivative, then subtract its values at the endpoints.",
+    "$F(x) = - \\cos{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "$\\left[- \\cos{\\left(x \\right)}\\right]_{\\frac{\\pi}{2}}^{\\pi}$.",
+    "$= 1 - \\left(0\\right) = 1$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "indefinite-integrals-e27fcc",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{1}^{e} \\left(2 + \\frac{3}{x}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "1+2*e",
+   "hints": [
+    "Find an antiderivative, then subtract its values at the endpoints.",
+    "$F(x) = 2 x + 3 \\ln{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "$\\left[2 x + 3 \\ln{\\left(x \\right)}\\right]_{1}^{e}$.",
+    "$= 3 + 2 e - \\left(2\\right) = 1 + 2 e$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "indefinite-integrals-7f3b54",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{-1}^{0} \\left(2 x^{2} + e^{x}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "5/3-exp(-1)",
+   "hints": [
+    "Find an antiderivative, then subtract its values at the endpoints.",
+    "$F(x) = \\frac{2 x^{3}}{3} + e^{x}$."
+   ],
+   "solution": [
+    "$\\left[\\frac{2 x^{3}}{3} + e^{x}\\right]_{-1}^{0}$.",
+    "$= 1 - \\left(- \\frac{2}{3} + e^{-1}\\right) = \\frac{5}{3} - e^{-1}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "indefinite-integrals-0dca0e",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{1} \\left(2 x^{2} + e^{x}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-1/3+e",
+   "hints": [
+    "Find an antiderivative, then subtract its values at the endpoints.",
+    "$F(x) = \\frac{2 x^{3}}{3} + e^{x}$."
+   ],
+   "solution": [
+    "$\\left[\\frac{2 x^{3}}{3} + e^{x}\\right]_{0}^{1}$.",
+    "$= \\frac{2}{3} + e - \\left(1\\right) = - \\frac{1}{3} + e$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "indefinite-integrals-0f8fe9",
+   "skill": "indefinite-integrals",
+   "difficulty": 3,
+   "statement": "A particle moves along a line with velocity $v(t) = 2 t^{2} - 10 t + 8$ (m/s). Find the total distance traveled during $[0, 4]$.",
+   "checker": "numeric",
+   "answer": "38/3",
+   "hints": [
+    "Distance is $\\int_a^b |v(t)|\\,dt$; find where $v$ changes sign and split the integral there.",
+    "$v(t) = 0$ at $t = 1$ and $t = 4$; $v$ is negative between them."
+   ],
+   "solution": [
+    "Split at the sign changes: the integrals over $[0, 1], [1, 4]$ equal $\\frac{11}{3}, -9$.",
+    "Distance $= \\frac{11}{3} + 9 = \\frac{38}{3}$ m."
+   ],
+   "verified": true
+  },
+  {
+   "id": "indefinite-integrals-a01d3d",
+   "skill": "indefinite-integrals",
+   "difficulty": 3,
+   "statement": "A particle moves along a line with velocity $v(t) = t^{2} - 5 t + 4$ (m/s). Find the total distance traveled during $[0, 5]$.",
+   "checker": "numeric",
+   "answer": "49/6",
+   "hints": [
+    "Distance is $\\int_a^b |v(t)|\\,dt$; find where $v$ changes sign and split the integral there.",
+    "$v(t) = 0$ at $t = 1$ and $t = 4$; $v$ is negative between them."
+   ],
+   "solution": [
+    "Split at the sign changes: the integrals over $[0, 1], [1, 4], [4, 5]$ equal $\\frac{11}{6}, - \\frac{9}{2}, \\frac{11}{6}$.",
+    "Distance $= \\frac{11}{6} + \\frac{9}{2} + \\frac{11}{6} = \\frac{49}{6}$ m."
+   ],
+   "verified": true
+  },
+  {
+   "id": "indefinite-integrals-f3435c",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "A particle moves along a line with velocity $v(t) = t^{2} - 3 t + 2$ (m/s). Find the displacement over the time interval $[0, 3]$.",
+   "checker": "numeric",
+   "answer": "3/2",
+   "hints": [
+    "Displacement is the net change in position: $\\int_a^b v(t)\\,dt$.",
+    "Negative velocity counts negatively; no need to split the integral."
+   ],
+   "solution": [
+    "Displacement $= \\int_{0}^{3} (t^{2} - 3 t + 2)\\,dt = \\left[\\frac{t^{3}}{3} - \\frac{3 t^{2}}{2} + 2 t\\right]_{0}^{3}$.",
+    "$= \\frac{3}{2}$ m."
+   ],
+   "verified": true,
+   "variable": "t"
+  },
+  {
+   "id": "indefinite-integrals-59e8c4",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "A particle moves along a line with velocity $v(t) = t^{2} - 3 t + 2$ (m/s). Find the displacement over the time interval $[0, 2]$.",
+   "checker": "numeric",
+   "answer": "2/3",
+   "hints": [
+    "Displacement is the net change in position: $\\int_a^b v(t)\\,dt$.",
+    "Negative velocity counts negatively; no need to split the integral."
+   ],
+   "solution": [
+    "Displacement $= \\int_{0}^{2} (t^{2} - 3 t + 2)\\,dt = \\left[\\frac{t^{3}}{3} - \\frac{3 t^{2}}{2} + 2 t\\right]_{0}^{2}$.",
+    "$= \\frac{2}{3}$ m."
+   ],
+   "verified": true,
+   "variable": "t"
+  },
+  {
+   "id": "indefinite-integrals-91e0d3",
+   "skill": "indefinite-integrals",
+   "difficulty": 3,
+   "statement": "A particle moves along a line with velocity $v(t) = 2 t^{2} - 10 t + 12$ (m/s). Find the total distance traveled during $[0, 4]$.",
+   "checker": "numeric",
+   "answer": "34/3",
+   "hints": [
+    "Distance is $\\int_a^b |v(t)|\\,dt$; find where $v$ changes sign and split the integral there.",
+    "$v(t) = 0$ at $t = 2$ and $t = 3$; $v$ is negative between them."
+   ],
+   "solution": [
+    "Split at the sign changes: the integrals over $[0, 2], [2, 3], [3, 4]$ equal $\\frac{28}{3}, - \\frac{1}{3}, \\frac{5}{3}$.",
+    "Distance $= \\frac{28}{3} + \\frac{1}{3} + \\frac{5}{3} = \\frac{34}{3}$ m."
+   ],
+   "verified": true
+  },
+  {
+   "id": "indefinite-integrals-b68dd2",
+   "skill": "indefinite-integrals",
+   "difficulty": 3,
+   "statement": "A particle moves along a line with velocity $v(t) = t^{2} - 5 t + 6$ (m/s). Find the total distance traveled during $[0, 4]$.",
+   "checker": "numeric",
+   "answer": "17/3",
+   "hints": [
+    "Distance is $\\int_a^b |v(t)|\\,dt$; find where $v$ changes sign and split the integral there.",
+    "$v(t) = 0$ at $t = 2$ and $t = 3$; $v$ is negative between them."
+   ],
+   "solution": [
+    "Split at the sign changes: the integrals over $[0, 2], [2, 3], [3, 4]$ equal $\\frac{14}{3}, - \\frac{1}{6}, \\frac{5}{6}$.",
+    "Distance $= \\frac{14}{3} + \\frac{1}{6} + \\frac{5}{6} = \\frac{17}{3}$ m."
+   ],
+   "verified": true
+  },
+  {
+   "id": "indefinite-integrals-19b3de",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "A particle moves along a line with velocity $v(t) = t^{2} - 4 t + 3$ (m/s). Find the displacement over the time interval $[0, 3]$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Displacement is the net change in position: $\\int_a^b v(t)\\,dt$.",
+    "Negative velocity counts negatively; no need to split the integral."
+   ],
+   "solution": [
+    "Displacement $= \\int_{0}^{3} (t^{2} - 4 t + 3)\\,dt = \\left[\\frac{t^{3}}{3} - 2 t^{2} + 3 t\\right]_{0}^{3}$.",
+    "$= 0$ m."
+   ],
+   "verified": true,
+   "variable": "t"
+  },
+  {
+   "id": "indefinite-integrals-b2c4ac",
+   "skill": "indefinite-integrals",
+   "difficulty": 3,
+   "statement": "A particle moves along a line with velocity $v(t) = t^{2} - 5 t + 6$ (m/s). Find the total distance traveled during $[0, 3]$.",
+   "checker": "numeric",
+   "answer": "29/6",
+   "hints": [
+    "Distance is $\\int_a^b |v(t)|\\,dt$; find where $v$ changes sign and split the integral there.",
+    "$v(t) = 0$ at $t = 2$ and $t = 3$; $v$ is negative between them."
+   ],
+   "solution": [
+    "Split at the sign changes: the integrals over $[0, 2], [2, 3]$ equal $\\frac{14}{3}, - \\frac{1}{6}$.",
+    "Distance $= \\frac{14}{3} + \\frac{1}{6} = \\frac{29}{6}$ m."
+   ],
+   "verified": true
+  },
+  {
+   "id": "indefinite-integrals-6e71c2",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "Oil leaks from a tank at a rate of $r(t) = 95 - 6 t$ liters per hour. How much oil leaks out between $t = 0$ and $t = 4$ hours?",
+   "checker": "numeric",
+   "answer": "332",
+   "hints": [
+    "The Net Change Theorem: the integral of a rate of change over $[a, b]$ is the net change over that interval.",
+    "Compute $\\int_{0}^{4} (95 - 6 t)\\,dt$."
+   ],
+   "solution": [
+    "Net change $= \\int_{0}^{4} (95 - 6 t)\\,dt = \\left[- 3 t^{2} + 95 t\\right]_{0}^{4}$.",
+    "$= 332$ liters."
+   ],
+   "verified": true,
+   "variable": "t"
+  },
+  {
+   "id": "indefinite-integrals-7fa6fc",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "The marginal cost of producing $t$ units is $C'(t) = \\frac{t^{2}}{20} + 6$ dollars per unit. Find the cost of increasing production from $0$ to $10$ units.",
+   "checker": "numeric",
+   "answer": "230/3",
+   "hints": [
+    "The Net Change Theorem: the integral of a rate of change over $[a, b]$ is the net change over that interval.",
+    "Compute $\\int_{0}^{10} (\\frac{t^{2}}{20} + 6)\\,dt$."
+   ],
+   "solution": [
+    "Net change $= \\int_{0}^{10} (\\frac{t^{2}}{20} + 6)\\,dt = \\left[\\frac{t^{3}}{60} + 6 t\\right]_{0}^{10}$.",
+    "$= \\frac{230}{3}$ dollars."
+   ],
+   "verified": true,
+   "variable": "t"
+  },
+  {
+   "id": "indefinite-integrals-cde38d",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "The marginal cost of producing $t$ units is $C'(t) = \\frac{t^{2}}{10} + 6$ dollars per unit. Find the cost of increasing production from $10$ to $20$ units.",
+   "checker": "numeric",
+   "answer": "880/3",
+   "hints": [
+    "The Net Change Theorem: the integral of a rate of change over $[a, b]$ is the net change over that interval.",
+    "Compute $\\int_{10}^{20} (\\frac{t^{2}}{10} + 6)\\,dt$."
+   ],
+   "solution": [
+    "Net change $= \\int_{10}^{20} (\\frac{t^{2}}{10} + 6)\\,dt = \\left[\\frac{t^{3}}{30} + 6 t\\right]_{10}^{20}$.",
+    "$= \\frac{880}{3}$ dollars."
+   ],
+   "verified": true,
+   "variable": "t"
+  },
+  {
+   "id": "indefinite-integrals-b47985",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "A population grows at a rate of $P'(t) = 2 t + 10$ individuals per year. By how much does the population increase between $t = 2$ and $t = 6$ years?",
+   "checker": "numeric",
+   "answer": "72",
+   "hints": [
+    "The Net Change Theorem: the integral of a rate of change over $[a, b]$ is the net change over that interval.",
+    "Compute $\\int_{2}^{6} (2 t + 10)\\,dt$."
+   ],
+   "solution": [
+    "Net change $= \\int_{2}^{6} (2 t + 10)\\,dt = \\left[t^{2} + 10 t\\right]_{2}^{6}$.",
+    "$= 72$ individuals."
+   ],
+   "verified": true,
+   "variable": "t"
+  },
+  {
+   "id": "indefinite-integrals-241bdb",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "A population grows at a rate of $P'(t) = 6 t + 35$ individuals per year. By how much does the population increase between $t = 2$ and $t = 6$ years?",
+   "checker": "numeric",
+   "answer": "236",
+   "hints": [
+    "The Net Change Theorem: the integral of a rate of change over $[a, b]$ is the net change over that interval.",
+    "Compute $\\int_{2}^{6} (6 t + 35)\\,dt$."
+   ],
+   "solution": [
+    "Net change $= \\int_{2}^{6} (6 t + 35)\\,dt = \\left[3 t^{2} + 35 t\\right]_{2}^{6}$.",
+    "$= 236$ individuals."
+   ],
+   "verified": true,
+   "variable": "t"
+  },
+  {
+   "id": "indefinite-integrals-c0ee8a",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "A population grows at a rate of $P'(t) = 5 t + 25$ individuals per year. By how much does the population increase between $t = 0$ and $t = 10$ years?",
+   "checker": "numeric",
+   "answer": "500",
+   "hints": [
+    "The Net Change Theorem: the integral of a rate of change over $[a, b]$ is the net change over that interval.",
+    "Compute $\\int_{0}^{10} (5 t + 25)\\,dt$."
+   ],
+   "solution": [
+    "Net change $= \\int_{0}^{10} (5 t + 25)\\,dt = \\left[\\frac{5 t^{2}}{2} + 25 t\\right]_{0}^{10}$.",
+    "$= 500$ individuals."
+   ],
+   "verified": true,
+   "variable": "t"
+  },
+  {
+   "id": "indefinite-integrals-5770ba",
+   "skill": "indefinite-integrals",
+   "difficulty": 2,
+   "statement": "A population grows at a rate of $P'(t) = 3 t + 49$ individuals per year. By how much does the population increase between $t = 0$ and $t = 10$ years?",
+   "checker": "numeric",
+   "answer": "640",
+   "hints": [
+    "The Net Change Theorem: the integral of a rate of change over $[a, b]$ is the net change over that interval.",
+    "Compute $\\int_{0}^{10} (3 t + 49)\\,dt$."
+   ],
+   "solution": [
+    "Net change $= \\int_{0}^{10} (3 t + 49)\\,dt = \\left[\\frac{3 t^{2}}{2} + 49 t\\right]_{0}^{10}$.",
+    "$= 640$ individuals."
+   ],
+   "verified": true,
+   "variable": "t"
+  },
+  {
+   "id": "indefinite-integrals-7843b2",
+   "skill": "indefinite-integrals",
+   "difficulty": 1,
+   "statement": "What is the difference between $\\displaystyle\\int f(x)\\,dx$ and $\\displaystyle\\int_a^b f(x)\\,dx$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "An indefinite integral has a $+C$; a definite integral has limits.",
+    "Think about what kind of object each one is."
+   ],
+   "solution": [
+    "$\\int f(x)\\,dx = F(x) + C$ is the general antiderivative, a family of functions.",
+    "$\\int_a^b f(x)\\,dx = F(b) - F(a)$ is a specific number (a net area)."
+   ],
+   "verified": true,
+   "choices": [
+    "the first is a family of functions (antiderivatives); the second is a number",
+    "the first only exists when $f$ is a polynomial",
+    "they are the same thing",
+    "the first is a number; the second is a function"
+   ]
+  },
+  {
+   "id": "indefinite-integrals-31dd1b",
+   "skill": "indefinite-integrals",
+   "difficulty": 1,
+   "statement": "The Net Change Theorem states that $\\displaystyle\\int_a^b F'(x)\\,dx$ equals",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "It is FTC2 applied to a rate of change.",
+    "Integrating a rate gives the accumulated change."
+   ],
+   "solution": [
+    "Since $F$ is an antiderivative of $F'$, FTC2 gives $\\int_a^b F'(x)\\,dx = F(b) - F(a)$.",
+    "Interpreting $F'$ as a rate, this is the net change in the quantity $F$."
+   ],
+   "verified": true,
+   "choices": [
+    "$F(b) + F(a)$",
+    "$F'(b) - F'(a)$",
+    "the total distance traveled",
+    "$F(b) - F(a)$, the net change in $F$ over $[a, b]$"
+   ]
+  },
+  {
+   "id": "indefinite-integrals-388e33",
+   "skill": "indefinite-integrals",
+   "difficulty": 1,
+   "statement": "If $v(t)$ is the velocity of a particle, the total distance traveled over $[a, b]$ is",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Displacement can be smaller than distance when the particle turns around.",
+    "Speed is $|v|$."
+   ],
+   "solution": [
+    "Distance accumulates speed $|v(t)|$, so distance $= \\int_a^b |v(t)|\\,dt$.",
+    "$\\int_a^b v(t)\\,dt$ is the displacement, which can cancel out back-and-forth motion."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\displaystyle\\left|\\int_a^b v(t)\\,dt\\right|$",
+    "$\\displaystyle\\int_a^b v(t)\\,dt$",
+    "$\\displaystyle\\int_a^b |v(t)|\\,dt$",
+    "$v(b) - v(a)$"
+   ]
+  }
+ ]
+}

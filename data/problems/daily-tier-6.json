@@ -1,0 +1,2662 @@
+{
+ "skill": "integration-by-parts",
+ "problems": [
+  {
+   "id": "daily-tier-6-83eda6",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{5 x - 1}{x^{2} - x - 2}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "3*ln(x-2)+2*ln(x+1)",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $\\frac{2}{x + 1} + \\frac{3}{x - 2}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{5 x - 1}{x^{2} - x - 2} = \\frac{2}{x + 1} + \\frac{3}{x - 2}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= 3 \\ln{\\left(x - 2 \\right)} + 2 \\ln{\\left(x + 1 \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    2.5,
+    5
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-e9a641",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\sin^{2}{\\left(x \\right)} \\cos^{3}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-sin(x)^5/5+sin(x)^3/3",
+   "hints": [
+    "The cosine power is odd: keep one $\\cos x$ and write $\\cos^2 x = 1 - \\sin^2 x$.",
+    "Substitute $u = \\sin x$."
+   ],
+   "solution": [
+    "$\\sin^2 x\\cos^3 x = \\sin^2 x(1 - \\sin^2 x)\\cos x$; with $u = \\sin x$ this is $\\int (u^2 - u^4)\\,du$.",
+    "$= \\frac{u^3}{3} - \\frac{u^5}{5}$.",
+    "Result: $- \\frac{\\sin^{5}{\\left(x \\right)}}{5} + \\frac{\\sin^{3}{\\left(x \\right)}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-9c6b33",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{x^{2} \\sqrt{x^{2} + 4}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-sqrt(x^2+4)/(4*x)",
+   "hints": [
+    "Use the trigonometric substitution $x = 2\\tan\\theta$ and simplify the root with a Pythagorean identity.",
+    "After integrating in $\\theta$, draw the reference triangle to convert back to $x$."
+   ],
+   "solution": [
+    "With $x = 2\\tan\\theta$, the integral becomes $\\frac{1}{4}\\int \\frac{\\cos\\theta}{\\sin^2\\theta}\\,d\\theta = -\\frac{1}{4\\sin\\theta}$.",
+    "Returning to $x$ via the triangle: $- \\frac{\\sqrt{x^{2} + 4}}{4 x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-2fcba9",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\sin^{2}{\\left(x \\right)} \\cos^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x/8-sin(4*x)/32",
+   "hints": [
+    "Use $\\sin x\\cos x = \\frac{1}{2}\\sin 2x$, then a half-angle identity.",
+    "$\\sin^2 2x = \\frac{1 - \\cos 4x}{2}$."
+   ],
+   "solution": [
+    "$\\sin^2 x\\cos^2 x = \\frac{1}{4}\\sin^2 2x = \\frac{1}{8}(1 - \\cos 4x)$.",
+    "$\\int = \\frac{x}{8} - \\frac{\\sin 4x}{32}$.",
+    "Result: $\\frac{x}{8} - \\frac{\\sin{\\left(4 x \\right)}}{32} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-a469f2",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\sec{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(tan(x)+sec(x))",
+   "hints": [
+    "Multiply numerator and denominator by $\\sec x + \\tan x$.",
+    "The numerator then equals the derivative of the denominator."
+   ],
+   "solution": [
+    "$\\sec x = \\frac{\\sec x(\\sec x + \\tan x)}{\\sec x + \\tan x}$; let $u = \\sec x + \\tan x$, $du = (\\sec x\\tan x + \\sec^2 x)\\,dx$.",
+    "$\\int \\frac{du}{u} = \\ln|\\sec x + \\tan x|$.",
+    "Result: $\\ln{\\left(\\tan{\\left(x \\right)} + \\sec{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-7e5aff",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\sqrt{4 - x^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x*sqrt(4-x^2)/2+2*asin(x/2)",
+   "hints": [
+    "Use the trigonometric substitution $x = 2\\sin\\theta$ and simplify the root with a Pythagorean identity.",
+    "After integrating in $\\theta$, draw the reference triangle to convert back to $x$."
+   ],
+   "solution": [
+    "With $x = 2\\sin\\theta$, the integral becomes $\\int 4\\cos^2\\theta\\,d\\theta = \\frac{4}{2}(\\theta + \\sin\\theta\\cos\\theta)$.",
+    "Returning to $x$ via the triangle: $\\frac{x \\sqrt{4 - x^{2}}}{2} + 2 \\arcsin{\\left(\\frac{x}{2} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.8,
+    1.8
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-9115d9",
+   "skill": "integration-by-parts",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int x e^{4 x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(4*x-1)*exp(4*x)/16",
+   "hints": [
+    "Integrate by parts with $u = x$ and $dv = e^{4 x}\\,dx$.",
+    "Then $du = dx$ and $v = \\frac{e^{4 x}}{4}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = x$, $dv = e^{4 x}\\,dx$, so $du = dx$ and $v = \\frac{e^{4 x}}{4}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = \\frac{x e^{4 x}}{4} - \\int \\frac{e^{4 x}}{4}\\,dx$.",
+    "$= \\frac{\\left(4 x - 1\\right) e^{4 x}}{16} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-0e6b8c",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{x^{2} \\left(x + 1\\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-ln(x)+ln(x+1)-1/x",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $\\frac{1}{x + 1} - \\frac{1}{x} + \\frac{1}{x^{2}}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{1}{x^{2} \\left(x + 1\\right)} = \\frac{1}{x + 1} - \\frac{1}{x} + \\frac{1}{x^{2}}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= - \\ln{\\left(x \\right)} + \\ln{\\left(x + 1 \\right)} - \\frac{1}{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-3be732",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\cos^{2}{\\left(2 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x/2+sin(4*x)/8",
+   "hints": [
+    "Use $\\cos^2\\theta = \\frac{1 + \\cos 2\\theta}{2}$ with $\\theta = 2x$.",
+    "Then $\\int \\cos(4x)\\,dx = \\frac{\\sin 4x}{4}$."
+   ],
+   "solution": [
+    "$\\cos^2(2x) = \\frac{1}{2} + \\frac{1}{2}\\cos(4x)$.",
+    "Integrating: $\\frac{x}{2} + \\frac{\\sin 4x}{8}$.",
+    "Result: $\\frac{x}{2} + \\frac{\\sin{\\left(4 x \\right)}}{8} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-9164f1",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\arcsin{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x*asin(x)+sqrt(1-x^2)",
+   "hints": [
+    "Integrate by parts with $u = \\arcsin{\\left(x \\right)}$ and $dv = 1\\,dx$.",
+    "Then $du = \\frac{1}{\\sqrt{1 - x^{2}}}\\,dx$ and $v = x$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\arcsin{\\left(x \\right)}$, $dv = 1\\,dx$, so $du = \\frac{1}{\\sqrt{1 - x^{2}}}\\,dx$ and $v = x$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = x \\arcsin{\\left(x \\right)} - \\int \\frac{x}{\\sqrt{1 - x^{2}}}\\,dx$.",
+    "$= x \\arcsin{\\left(x \\right)} + \\sqrt{1 - x^{2}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.9,
+    0.9
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-c82a88",
+   "skill": "integration-by-parts",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\ln{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x*(ln(x)-1)",
+   "hints": [
+    "Integrate by parts with $u = \\ln{\\left(x \\right)}$ and $dv = 1\\,dx$.",
+    "Then $du = \\frac{1}{x}\\,dx$ and $v = x$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, $dv = 1\\,dx$, so $du = \\frac{1}{x}\\,dx$ and $v = x$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = x \\ln{\\left(x \\right)} - \\int 1\\,dx$.",
+    "$= x \\left(\\ln{\\left(x \\right)} - 1\\right) + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-45148e",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\arctan{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x*atan(x)-ln(x^2+1)/2",
+   "hints": [
+    "Integrate by parts with $u = \\arctan{\\left(x \\right)}$ and $dv = 1\\,dx$.",
+    "Then $du = \\frac{1}{x^{2} + 1}\\,dx$ and $v = x$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\arctan{\\left(x \\right)}$, $dv = 1\\,dx$, so $du = \\frac{1}{x^{2} + 1}\\,dx$ and $v = x$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = x \\arctan{\\left(x \\right)} - \\int \\frac{x}{x^{2} + 1}\\,dx$.",
+    "$= x \\arctan{\\left(x \\right)} - \\frac{\\ln{\\left(x^{2} + 1 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-a5680f",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\tan^{3}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(cos(x))+tan(x)^2/2",
+   "hints": [
+    "Write $\\tan^3 x = \\tan x(\\sec^2 x - 1)$.",
+    "The first piece uses $u = \\tan x$; the second is $\\int \\tan x\\,dx = -\\ln|\\cos x|$."
+   ],
+   "solution": [
+    "$\\int \\tan x\\sec^2 x\\,dx - \\int \\tan x\\,dx$.",
+    "$= \\frac{\\tan^2 x}{2} + \\ln|\\cos x|$.",
+    "Result: $\\ln{\\left(\\cos{\\left(x \\right)} \\right)} + \\frac{\\tan^{2}{\\left(x \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-f17d7c",
+   "skill": "integration-by-parts",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int x \\cos{\\left(2 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x*sin(2*x)/2+cos(2*x)/4",
+   "hints": [
+    "Integrate by parts with $u = x$ and $dv = \\cos{\\left(2 x \\right)}\\,dx$.",
+    "Then $du = dx$ and $v = \\frac{\\sin{\\left(2 x \\right)}}{2}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = x$, $dv = \\cos{\\left(2 x \\right)}\\,dx$, so $du = dx$ and $v = \\frac{\\sin{\\left(2 x \\right)}}{2}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = \\frac{x \\sin{\\left(2 x \\right)}}{2} - \\int \\frac{\\sin{\\left(2 x \\right)}}{2}\\,dx$.",
+    "$= \\frac{x \\sin{\\left(2 x \\right)}}{2} + \\frac{\\cos{\\left(2 x \\right)}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-b1fd7a",
+   "skill": "integration-by-parts",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int x \\cos{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x*sin(x)+cos(x)",
+   "hints": [
+    "Integrate by parts with $u = x$ and $dv = \\cos{\\left(x \\right)}\\,dx$.",
+    "Then $du = dx$ and $v = \\sin{\\left(x \\right)}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = x$, $dv = \\cos{\\left(x \\right)}\\,dx$, so $du = dx$ and $v = \\sin{\\left(x \\right)}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = x \\sin{\\left(x \\right)} - \\int \\sin{\\left(x \\right)}\\,dx$.",
+    "$= x \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-25b1c8",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int x^{2} \\cos{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2*sin(x)+2*x*cos(x)-2*sin(x)",
+   "hints": [
+    "Integrate by parts with $u = x^{2}$ and $dv = \\cos{\\left(x \\right)}\\,dx$.",
+    "Then $du = 2 x\\,dx$ and $v = \\sin{\\left(x \\right)}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2}$, $dv = \\cos{\\left(x \\right)}\\,dx$, so $du = 2 x\\,dx$ and $v = \\sin{\\left(x \\right)}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = x^{2} \\sin{\\left(x \\right)} - \\int 2 x \\sin{\\left(x \\right)}\\,dx$.",
+    "Integrate $\\int 2x\\sin x\\,dx$ by parts again: $-2x\\cos x + 2\\sin x$.",
+    "$= x^{2} \\sin{\\left(x \\right)} + 2 x \\cos{\\left(x \\right)} - 2 \\sin{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-261b2c",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{x^{2} + 1}{x \\left(x - 1\\right)^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x)-2/(x-1)",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $\\frac{2}{\\left(x - 1\\right)^{2}} + \\frac{1}{x}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{x^{2} + 1}{x \\left(x - 1\\right)^{2}} = \\frac{2}{\\left(x - 1\\right)^{2}} + \\frac{1}{x}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= \\ln{\\left(x \\right)} - \\frac{2}{x - 1} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1.5,
+    4
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-9c9267",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\sin^{4}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "3*x/8-sin(2*x)/4+sin(4*x)/32",
+   "hints": [
+    "Apply the half-angle identity twice: $\\sin^4 x = \\left(\\frac{1 - \\cos 2x}{2}\\right)^2$.",
+    "Expand and use $\\cos^2 2x = \\frac{1 + \\cos 4x}{2}$."
+   ],
+   "solution": [
+    "$\\sin^4 x = \\frac{1}{4}(1 - 2\\cos 2x + \\cos^2 2x) = \\frac{3}{8} - \\frac{\\cos 2x}{2} + \\frac{\\cos 4x}{8}$.",
+    "Integrate: $\\frac{3x}{8} - \\frac{\\sin 2x}{4} + \\frac{\\sin 4x}{32}$.",
+    "Result: $\\frac{3 x}{8} - \\frac{\\sin{\\left(2 x \\right)}}{4} + \\frac{\\sin{\\left(4 x \\right)}}{32} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-8b46d8",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\sin^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x/2-sin(2*x)/4",
+   "hints": [
+    "Use the half-angle identity $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$.",
+    "Then integrate term by term."
+   ],
+   "solution": [
+    "$\\sin^2 x = \\frac{1}{2} - \\frac{1}{2}\\cos 2x$.",
+    "$\\int \\frac{1}{2}\\,dx - \\int \\frac{\\cos 2x}{2}\\,dx = \\frac{x}{2} - \\frac{\\sin 2x}{4}$.",
+    "Result: $\\frac{x}{2} - \\frac{\\sin{\\left(2 x \\right)}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-b2835b",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\cos^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x/2+sin(2*x)/4",
+   "hints": [
+    "Use the half-angle identity $\\cos^2 x = \\frac{1 + \\cos 2x}{2}$.",
+    "Then integrate term by term."
+   ],
+   "solution": [
+    "$\\cos^2 x = \\frac{1}{2} + \\frac{1}{2}\\cos 2x$.",
+    "$\\int \\frac{1}{2}\\,dx + \\int \\frac{\\cos 2x}{2}\\,dx = \\frac{x}{2} + \\frac{\\sin 2x}{4}$.",
+    "Result: $\\frac{x}{2} + \\frac{\\sin{\\left(2 x \\right)}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-bbda6b",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\ln{\\left(x + 2 \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x*ln(x+2)-x+2*ln(x+2)",
+   "hints": [
+    "Integrate by parts with $u = \\ln{\\left(x + 2 \\right)}$ and $dv = 1\\,dx$.",
+    "Then $du = \\frac{1}{x + 2}\\,dx$ and $v = x$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x + 2 \\right)}$, $dv = 1\\,dx$, so $du = \\frac{1}{x + 2}\\,dx$ and $v = x$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = x \\ln{\\left(x + 2 \\right)} - \\int \\frac{x}{x + 2}\\,dx$.",
+    "$= x \\ln{\\left(x + 2 \\right)} - x + 2 \\ln{\\left(x + 2 \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-89c466",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x \\sec^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x*tan(x)+ln(cos(x))",
+   "hints": [
+    "Integrate by parts with $u = x$ and $dv = \\sec^{2}{\\left(x \\right)}\\,dx$.",
+    "Then $du = dx$ and $v = \\frac{\\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = x$, $dv = \\sec^{2}{\\left(x \\right)}\\,dx$, so $du = dx$ and $v = \\frac{\\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = \\frac{x \\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}} - \\int \\tan{\\left(x \\right)}\\,dx$.",
+    "$= x \\tan{\\left(x \\right)} + \\ln{\\left(\\cos{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-7e9fbb",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{\\left(x^{2} + 4\\right)^{\\frac{3}{2}}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x/(4*sqrt(x^2+4))",
+   "hints": [
+    "Use the trigonometric substitution $x = 2\\tan\\theta$ and simplify the root with a Pythagorean identity.",
+    "After integrating in $\\theta$, draw the reference triangle to convert back to $x$."
+   ],
+   "solution": [
+    "With $x = 2\\tan\\theta$, $(4 + x^2)^{3/2} = 8\\sec^3\\theta$ and $dx = 2\\sec^2\\theta\\,d\\theta$, so the integral becomes $\\frac{1}{4}\\int \\cos\\theta\\,d\\theta = \\frac{\\sin\\theta}{4}$.",
+    "Returning to $x$ via the triangle: $\\frac{x}{4 \\sqrt{x^{2} + 4}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-e8f6b0",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{\\sqrt{x^{2} + 4}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x+sqrt(x^2+4))",
+   "hints": [
+    "Use the trigonometric substitution $x = 2\\tan\\theta$ and simplify the root with a Pythagorean identity.",
+    "After integrating in $\\theta$, draw the reference triangle to convert back to $x$."
+   ],
+   "solution": [
+    "With $x = 2\\tan\\theta$, the integral becomes $\\int \\sec\\theta\\,d\\theta = \\ln|\\sec\\theta + \\tan\\theta|$.",
+    "Returning to $x$ via the triangle: $\\ln{\\left(x + \\sqrt{x^{2} + 4} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-d2d913",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int e^{x} \\sin{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(sin(x)-cos(x))*exp(x)/2",
+   "hints": [
+    "This needs integration by parts twice; keep $u$ as the exponential each time.",
+    "After the second round the original integral reappears on the right; move it to the left and solve."
+   ],
+   "solution": [
+    "Apply parts twice (with $u = e^x$ both times); the original integral reappears. Solve the resulting equation $I = e^x\\sin x - e^x\\cos x - I$.",
+    "$= \\frac{\\left(\\sin{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{x}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-9bc47a",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{\\sqrt{x^{2} - 4}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x+sqrt(x^2-4))",
+   "hints": [
+    "Use the trigonometric substitution $x = 2\\sec\\theta$ and simplify the root with a Pythagorean identity.",
+    "After integrating in $\\theta$, draw the reference triangle to convert back to $x$."
+   ],
+   "solution": [
+    "With $x = 2\\sec\\theta$, the integral becomes $\\int \\sec\\theta\\,d\\theta = \\ln|\\sec\\theta + \\tan\\theta|$.",
+    "Returning to $x$ via the triangle: $\\ln{\\left(x + \\sqrt{x^{2} - 4} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    2.5,
+    5
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-25df79",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x^{2} \\ln{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^3*(3*ln(x)-1)/9",
+   "hints": [
+    "Integrate by parts with $u = \\ln{\\left(x \\right)}$ and $dv = x^{2}\\,dx$.",
+    "Then $du = \\frac{1}{x}\\,dx$ and $v = \\frac{x^{3}}{3}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, $dv = x^{2}\\,dx$, so $du = \\frac{1}{x}\\,dx$ and $v = \\frac{x^{3}}{3}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = \\frac{x^{3} \\ln{\\left(x \\right)}}{3} - \\int \\frac{x^{2}}{3}\\,dx$.",
+    "$= \\frac{x^{3} \\left(3 \\ln{\\left(x \\right)} - 1\\right)}{9} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-e56998",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x + 2}{x^{2} + 4 x + 3}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x^2+4*x+3)/2",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $\\frac{1}{2 \\left(x + 3\\right)} + \\frac{1}{2 \\left(x + 1\\right)}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{x + 2}{x^{2} + 4 x + 3} = \\frac{1}{2 \\left(x + 3\\right)} + \\frac{1}{2 \\left(x + 1\\right)}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= \\frac{\\ln{\\left(x^{2} + 4 x + 3 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-5cbb71",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{3 x + 1}{\\left(x - 1\\right) \\left(x + 2\\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "4*ln(x-1)/3+5*ln(x+2)/3",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $\\frac{5}{3 \\left(x + 2\\right)} + \\frac{4}{3 \\left(x - 1\\right)}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{3 x + 1}{\\left(x - 1\\right) \\left(x + 2\\right)} = \\frac{5}{3 \\left(x + 2\\right)} + \\frac{4}{3 \\left(x - 1\\right)}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= \\frac{4 \\ln{\\left(x - 1 \\right)}}{3} + \\frac{5 \\ln{\\left(x + 2 \\right)}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1.5,
+    4
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-3d05f1",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x \\ln{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2*(2*ln(x)-1)/4",
+   "hints": [
+    "Integrate by parts with $u = \\ln{\\left(x \\right)}$ and $dv = x\\,dx$.",
+    "Then $du = \\frac{1}{x}\\,dx$ and $v = \\frac{x^{2}}{2}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, $dv = x\\,dx$, so $du = \\frac{1}{x}\\,dx$ and $v = \\frac{x^{2}}{2}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = \\frac{x^{2} \\ln{\\left(x \\right)}}{2} - \\int \\frac{x}{2}\\,dx$.",
+    "$= \\frac{x^{2} \\left(2 \\ln{\\left(x \\right)} - 1\\right)}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-eedf4b",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\cos^{3}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-sin(x)^3/3+sin(x)",
+   "hints": [
+    "Odd power of cosine: save one $\\cos x$ and convert the rest with $\\cos^2 x = 1 - \\sin^2 x$.",
+    "Substitute $u = \\sin x$."
+   ],
+   "solution": [
+    "$\\cos^3 x = (1 - \\sin^2 x)\\cos x$; let $u = \\sin x$.",
+    "$\\int (1 - u^2)\\,du = u - \\frac{u^3}{3}$.",
+    "Result: $- \\frac{\\sin^{3}{\\left(x \\right)}}{3} + \\sin{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-118e99",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int x^{2} e^{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(x^2-2*x+2)*exp(x)",
+   "hints": [
+    "Integrate by parts with $u = x^{2}$ and $dv = e^{x}\\,dx$.",
+    "Then $du = 2 x\\,dx$ and $v = e^{x}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2}$, $dv = e^{x}\\,dx$, so $du = 2 x\\,dx$ and $v = e^{x}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = x^{2} e^{x} - \\int 2 x e^{x}\\,dx$.",
+    "The remaining integral $\\int 2xe^x\\,dx$ needs a second integration by parts, giving $2xe^x - 2e^x$.",
+    "$= \\left(x^{2} - 2 x + 2\\right) e^{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-fd3fa6",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\sin^{3}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "cos(x)^3/3-cos(x)",
+   "hints": [
+    "Odd power of sine: save one $\\sin x$ and convert the rest with $\\sin^2 x = 1 - \\cos^2 x$.",
+    "Then substitute $u = \\cos x$."
+   ],
+   "solution": [
+    "$\\sin^3 x = (1 - \\cos^2 x)\\sin x$; let $u = \\cos x$, $du = -\\sin x\\,dx$.",
+    "$\\int (1 - u^2)(-du) = -u + \\frac{u^3}{3}$.",
+    "Result: $\\frac{\\cos^{3}{\\left(x \\right)}}{3} - \\cos{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-dbc6b0",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{x + 3}{x^{3} + x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "3*ln(x)-3*ln(x^2+1)/2+atan(x)",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $- \\frac{3 x - 1}{x^{2} + 1} + \\frac{3}{x}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{x + 3}{x^{3} + x} = - \\frac{3 x - 1}{x^{2} + 1} + \\frac{3}{x}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= 3 \\ln{\\left(x \\right)} - \\frac{3 \\ln{\\left(x^{2} + 1 \\right)}}{2} + \\arctan{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-4829bd",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{\\ln{\\left(x \\right)}}{x^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(-ln(x)-1)/x",
+   "hints": [
+    "Integrate by parts with $u = \\ln{\\left(x \\right)}$ and $dv = \\frac{1}{x^{2}}\\,dx$.",
+    "Then $du = \\frac{1}{x}\\,dx$ and $v = - \\frac{1}{x}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, $dv = \\frac{1}{x^{2}}\\,dx$, so $du = \\frac{1}{x}\\,dx$ and $v = - \\frac{1}{x}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = - \\frac{\\ln{\\left(x \\right)}}{x} - \\int - \\frac{1}{x^{2}}\\,dx$.",
+    "$= \\frac{- \\ln{\\left(x \\right)} - 1}{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-fecad4",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x^{4} \\ln{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^5*(5*ln(x)-1)/25",
+   "hints": [
+    "Integrate by parts with $u = \\ln{\\left(x \\right)}$ and $dv = x^{4}\\,dx$.",
+    "Then $du = \\frac{1}{x}\\,dx$ and $v = \\frac{x^{5}}{5}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, $dv = x^{4}\\,dx$, so $du = \\frac{1}{x}\\,dx$ and $v = \\frac{x^{5}}{5}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = \\frac{x^{5} \\ln{\\left(x \\right)}}{5} - \\int \\frac{x^{4}}{5}\\,dx$.",
+    "$= \\frac{x^{5} \\left(5 \\ln{\\left(x \\right)} - 1\\right)}{25} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-1643d5",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{x^{2}}{\\sqrt{4 - x^{2}}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-x*sqrt(4-x^2)/2+2*asin(x/2)",
+   "hints": [
+    "Use the trigonometric substitution $x = 2\\sin\\theta$ and simplify the root with a Pythagorean identity.",
+    "After integrating in $\\theta$, draw the reference triangle to convert back to $x$."
+   ],
+   "solution": [
+    "With $x = 2\\sin\\theta$, the integral becomes $\\int 4\\sin^2\\theta\\,d\\theta = \\frac{4}{2}(\\theta - \\sin\\theta\\cos\\theta)$.",
+    "Returning to $x$ via the triangle: $- \\frac{x \\sqrt{4 - x^{2}}}{2} + 2 \\arcsin{\\left(\\frac{x}{2} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1.8,
+    1.8
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-6a312b",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{x^{2}}{x^{2} - 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x+ln(x-1)/2-ln(x+1)/2",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $1 - \\frac{1}{2 \\left(x + 1\\right)} + \\frac{1}{2 \\left(x - 1\\right)}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{x^{2}}{x^{2} - 1} = 1 - \\frac{1}{2 \\left(x + 1\\right)} + \\frac{1}{2 \\left(x - 1\\right)}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= x + \\frac{\\ln{\\left(x - 1 \\right)}}{2} - \\frac{\\ln{\\left(x + 1 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1.5,
+    4
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-5b5d14",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{x^{3} + 1}{x^{2} - 4}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2/2+9*ln(x-2)/4+7*ln(x+2)/4",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $x + \\frac{7}{4 \\left(x + 2\\right)} + \\frac{9}{4 \\left(x - 2\\right)}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{x^{3} + 1}{x^{2} - 4} = x + \\frac{7}{4 \\left(x + 2\\right)} + \\frac{9}{4 \\left(x - 2\\right)}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= \\frac{x^{2}}{2} + \\frac{9 \\ln{\\left(x - 2 \\right)}}{4} + \\frac{7 \\ln{\\left(x + 2 \\right)}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    2.5,
+    5
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-adb42a",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\sqrt{x} \\ln{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*x^(3/2)*(3*ln(x)-2)/9",
+   "hints": [
+    "Integrate by parts with $u = \\ln{\\left(x \\right)}$ and $dv = \\sqrt{x}\\,dx$.",
+    "Then $du = \\frac{1}{x}\\,dx$ and $v = \\frac{2 x^{\\frac{3}{2}}}{3}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, $dv = \\sqrt{x}\\,dx$, so $du = \\frac{1}{x}\\,dx$ and $v = \\frac{2 x^{\\frac{3}{2}}}{3}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = \\frac{2 x^{\\frac{3}{2}} \\ln{\\left(x \\right)}}{3} - \\int \\frac{2 \\sqrt{x}}{3}\\,dx$.",
+    "$= \\frac{2 x^{\\frac{3}{2}} \\left(3 \\ln{\\left(x \\right)} - 2\\right)}{9} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-5c42b3",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\sin{\\left(2 x \\right)} \\cos{\\left(3 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "cos(x)/2-cos(5*x)/10",
+   "hints": [
+    "Use the product-to-sum identity $\\sin A\\cos B = \\frac{1}{2}[\\sin(A - B) + \\sin(A + B)]$.",
+    "Then integrate the two sines."
+   ],
+   "solution": [
+    "$\\sin 2x\\cos 3x = \\frac{1}{2}[\\sin(-x) + \\sin 5x] = \\frac{1}{2}[\\sin 5x - \\sin x]$.",
+    "$\\int = \\frac{1}{2}\\left[-\\frac{\\cos 5x}{5} + \\cos x\\right]$.",
+    "Result: $\\frac{\\cos{\\left(x \\right)}}{2} - \\frac{\\cos{\\left(5 x \\right)}}{10} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-822117",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\sin^{3}{\\left(2 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "cos(2*x)^3/6-cos(2*x)/2",
+   "hints": [
+    "Odd power of sine: keep one sine factor and convert the rest to cosines.",
+    "Substitute $u = \\cos(\\cdot)$ and remember the inner constant."
+   ],
+   "solution": [
+    "Write $\\sin^3\\theta = (1 - \\cos^2\\theta)\\sin\\theta$ with $\\theta$ the inner multiple of $x$.",
+    "With $u = \\cos\\theta$, $du = -\\sin\\theta\\,d\\theta$, the integral is $\\frac{1}{(\\text{inner constant})}\\left(\\frac{u^3}{3} - u\\right)$.",
+    "Result: $\\frac{\\cos^{3}{\\left(2 x \\right)}}{6} - \\frac{\\cos{\\left(2 x \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-65c674",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\cos^{5}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sin(x)^5/5-2*sin(x)^3/3+sin(x)",
+   "hints": [
+    "Odd power: $\\cos^5 x = (1 - \\sin^2 x)^2\\cos x$.",
+    "Substitute $u = \\sin x$ and expand."
+   ],
+   "solution": [
+    "$\\int (1 - u^2)^2\\,du = \\int (1 - 2u^2 + u^4)\\,du$.",
+    "$= u - \\frac{2u^3}{3} + \\frac{u^5}{5}$.",
+    "Result: $\\frac{\\sin^{5}{\\left(x \\right)}}{5} - \\frac{2 \\sin^{3}{\\left(x \\right)}}{3} + \\sin{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-856fb4",
+   "skill": "integration-by-parts",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int x e^{2 x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(2*x-1)*exp(2*x)/4",
+   "hints": [
+    "Integrate by parts with $u = x$ and $dv = e^{2 x}\\,dx$.",
+    "Then $du = dx$ and $v = \\frac{e^{2 x}}{2}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = x$, $dv = e^{2 x}\\,dx$, so $du = dx$ and $v = \\frac{e^{2 x}}{2}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = \\frac{x e^{2 x}}{2} - \\int \\frac{e^{2 x}}{2}\\,dx$.",
+    "$= \\frac{\\left(2 x - 1\\right) e^{2 x}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-b53507",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int 2 x \\ln{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2*(ln(x)-1/2)",
+   "hints": [
+    "Integrate by parts with $u = 2 \\ln{\\left(x \\right)}$ and $dv = x\\,dx$.",
+    "Then $du = \\frac{2}{x}\\,dx$ and $v = \\frac{x^{2}}{2}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 \\ln{\\left(x \\right)}$, $dv = x\\,dx$, so $du = \\frac{2}{x}\\,dx$ and $v = \\frac{x^{2}}{2}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = x^{2} \\ln{\\left(x \\right)} - \\int x\\,dx$.",
+    "$= x^{2} \\left(\\ln{\\left(x \\right)} - \\frac{1}{2}\\right) + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-d51bf6",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\tan^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-x+tan(x)",
+   "hints": [
+    "Use $\\tan^2 x = \\sec^2 x - 1$.",
+    "Both pieces are basic antiderivatives."
+   ],
+   "solution": [
+    "$\\int (\\sec^2 x - 1)\\,dx$.",
+    "$= \\tan x - x$.",
+    "Result: $- x + \\tan{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-a4031a",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{2 x + 2}{x \\left(x + 2\\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x^2+2*x)",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $\\frac{1}{x + 2} + \\frac{1}{x}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{2 x + 2}{x \\left(x + 2\\right)} = \\frac{1}{x + 2} + \\frac{1}{x}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= \\ln{\\left(x^{2} + 2 x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-274689",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\tan^{2}{\\left(x \\right)} \\sec^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "tan(x)^3/3",
+   "hints": [
+    "$\\sec^2 x\\,dx$ is the differential of $\\tan x$.",
+    "Substitute $u = \\tan x$."
+   ],
+   "solution": [
+    "With $u = \\tan x$, $du = \\sec^2 x\\,dx$: $\\int u^2\\,du$.",
+    "$= \\frac{u^3}{3}$.",
+    "Result: $\\frac{\\tan^{3}{\\left(x \\right)}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-4052c8",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int e^{x} \\cos{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(sin(x)+cos(x))*exp(x)/2",
+   "hints": [
+    "This needs integration by parts twice; keep $u$ as the exponential each time.",
+    "After the second round the original integral reappears on the right; move it to the left and solve."
+   ],
+   "solution": [
+    "Apply parts twice; the original integral $I$ reappears: $I = e^x\\sin x + e^x\\cos x - I$, so $I = \\frac{e^x(\\sin x + \\cos x)}{2}$.",
+    "$= \\frac{\\left(\\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}\\right) e^{x}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-5cdaee",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{x^{2} - 4}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x-2)/4-ln(x+2)/4",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $- \\frac{1}{4 \\left(x + 2\\right)} + \\frac{1}{4 \\left(x - 2\\right)}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{1}{x^{2} - 4} = - \\frac{1}{4 \\left(x + 2\\right)} + \\frac{1}{4 \\left(x - 2\\right)}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= \\frac{\\ln{\\left(x - 2 \\right)}}{4} - \\frac{\\ln{\\left(x + 2 \\right)}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    2.5,
+    5
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-54acc8",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{x^{2} \\sqrt{4 - x^{2}}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-sqrt(4-x^2)/(4*x)",
+   "hints": [
+    "Use the trigonometric substitution $x = 2\\sin\\theta$ and simplify the root with a Pythagorean identity.",
+    "After integrating in $\\theta$, draw the reference triangle to convert back to $x$."
+   ],
+   "solution": [
+    "With $x = 2\\sin\\theta$, the integral becomes $\\frac{1}{4}\\int \\csc^2\\theta\\,d\\theta = -\\frac{\\cot\\theta}{4}$.",
+    "Returning to $x$ via the triangle: $- \\frac{\\sqrt{4 - x^{2}}}{4 x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.6,
+    1.8
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-0592ff",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\sin^{3}{\\left(x \\right)} \\cos^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "cos(x)^5/5-cos(x)^3/3",
+   "hints": [
+    "The sine power is odd: keep one $\\sin x$ and write $\\sin^2 x = 1 - \\cos^2 x$.",
+    "Substitute $u = \\cos x$, $du = -\\sin x\\,dx$."
+   ],
+   "solution": [
+    "$\\int (1 - \\cos^2 x)\\cos^2 x\\sin x\\,dx = -\\int (u^2 - u^4)\\,du$ with $u = \\cos x$.",
+    "$= -\\frac{u^3}{3} + \\frac{u^5}{5}$.",
+    "Result: $\\frac{\\cos^{5}{\\left(x \\right)}}{5} - \\frac{\\cos^{3}{\\left(x \\right)}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-818c32",
+   "skill": "integration-by-parts",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int x \\sin{\\left(4 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-x*cos(4*x)/4+sin(4*x)/16",
+   "hints": [
+    "Integrate by parts with $u = x$ and $dv = \\sin{\\left(4 x \\right)}\\,dx$.",
+    "Then $du = dx$ and $v = - \\frac{\\cos{\\left(4 x \\right)}}{4}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = x$, $dv = \\sin{\\left(4 x \\right)}\\,dx$, so $du = dx$ and $v = - \\frac{\\cos{\\left(4 x \\right)}}{4}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = - \\frac{x \\cos{\\left(4 x \\right)}}{4} - \\int - \\frac{\\cos{\\left(4 x \\right)}}{4}\\,dx$.",
+    "$= - \\frac{x \\cos{\\left(4 x \\right)}}{4} + \\frac{\\sin{\\left(4 x \\right)}}{16} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-e2e9ae",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x + 2}{\\left(x - 2\\right) \\left(x + 1\\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "4*ln(x-2)/3-ln(x+1)/3",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $- \\frac{1}{3 \\left(x + 1\\right)} + \\frac{4}{3 \\left(x - 2\\right)}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{x + 2}{\\left(x - 2\\right) \\left(x + 1\\right)} = - \\frac{1}{3 \\left(x + 1\\right)} + \\frac{4}{3 \\left(x - 2\\right)}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= \\frac{4 \\ln{\\left(x - 2 \\right)}}{3} - \\frac{\\ln{\\left(x + 1 \\right)}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    2.5,
+    5
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-d550d6",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int x^{2} \\sin{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-x^2*cos(x)+2*x*sin(x)+2*cos(x)",
+   "hints": [
+    "Integrate by parts with $u = x^{2}$ and $dv = \\sin{\\left(x \\right)}\\,dx$.",
+    "Then $du = 2 x\\,dx$ and $v = - \\cos{\\left(x \\right)}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2}$, $dv = \\sin{\\left(x \\right)}\\,dx$, so $du = 2 x\\,dx$ and $v = - \\cos{\\left(x \\right)}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = - x^{2} \\cos{\\left(x \\right)} - \\int - 2 x \\cos{\\left(x \\right)}\\,dx$.",
+    "Integrate $\\int 2x\\cos x\\,dx$ by parts again: $2x\\sin x + 2\\cos x$.",
+    "$= - x^{2} \\cos{\\left(x \\right)} + 2 x \\sin{\\left(x \\right)} + 2 \\cos{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-ff226d",
+   "skill": "integration-by-parts",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int x e^{- x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(-x-1)*exp(-x)",
+   "hints": [
+    "Integrate by parts with $u = x$ and $dv = e^{- x}\\,dx$.",
+    "Then $du = dx$ and $v = - e^{- x}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = x$, $dv = e^{- x}\\,dx$, so $du = dx$ and $v = - e^{- x}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = - x e^{- x} - \\int - e^{- x}\\,dx$.",
+    "$= \\left(- x - 1\\right) e^{- x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-d0187c",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{x^{2}}{\\sqrt{x^{2} + 4}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x*sqrt(x^2+4)/2-2*ln(x+sqrt(x^2+4))",
+   "hints": [
+    "Use the trigonometric substitution $x = 2\\tan\\theta$ and simplify the root with a Pythagorean identity.",
+    "After integrating in $\\theta$, draw the reference triangle to convert back to $x$."
+   ],
+   "solution": [
+    "With $x = 2\\tan\\theta$, the integral becomes $4\\int \\tan^2\\theta\\sec\\theta\\,d\\theta = 4\\int(\\sec^3\\theta - \\sec\\theta)\\,d\\theta$.",
+    "Returning to $x$ via the triangle: $\\frac{x \\sqrt{x^{2} + 4}}{2} - 2 \\ln{\\left(x + \\sqrt{x^{2} + 4} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-bdb224",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\tan{\\left(x \\right)} \\sec^{3}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sec(x)^3/3",
+   "hints": [
+    "Save a factor $\\sec x\\tan x$ (the derivative of $\\sec x$).",
+    "Substitute $u = \\sec x$."
+   ],
+   "solution": [
+    "$\\tan x\\sec^3 x = \\sec^2 x\\cdot(\\sec x\\tan x)$; with $u = \\sec x$ this is $\\int u^2\\,du$.",
+    "$= \\frac{u^3}{3}$.",
+    "Result: $\\frac{\\sec^{3}{\\left(x \\right)}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-b3b3be",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\ln{\\left(x \\right)}^{2}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x*(ln(x)^2-2*ln(x)+2)",
+   "hints": [
+    "Integrate by parts with $u = \\ln{\\left(x \\right)}^{2}$ and $dv = 1\\,dx$.",
+    "Then $du = \\frac{2 \\ln{\\left(x \\right)}}{x}\\,dx$ and $v = x$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}^{2}$, $dv = 1\\,dx$, so $du = \\frac{2 \\ln{\\left(x \\right)}}{x}\\,dx$ and $v = x$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = x \\ln{\\left(x \\right)}^{2} - \\int 2 \\ln{\\left(x \\right)}\\,dx$.",
+    "The remaining integral $\\int 2\\ln x\\,dx$ needs a second integration by parts: $2(x\\ln x - x)$.",
+    "$= x \\left(\\ln{\\left(x \\right)}^{2} - 2 \\ln{\\left(x \\right)} + 2\\right) + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-f2b927",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{\\sqrt{16 - x^{2}}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "asin(x/4)",
+   "hints": [
+    "Use the trigonometric substitution $x = 4\\sin\\theta$ and simplify the root with a Pythagorean identity.",
+    "After integrating in $\\theta$, draw the reference triangle to convert back to $x$."
+   ],
+   "solution": [
+    "With $x = 4\\sin\\theta$, the integral becomes $\\int d\\theta = \\theta$.",
+    "Returning to $x$ via the triangle: $\\arcsin{\\left(\\frac{x}{4} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3.0,
+    3.0
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-480f0a",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\sec^{4}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "tan(x)^3/3+tan(x)",
+   "hints": [
+    "Even power of secant: save $\\sec^2 x$ and write the rest as $1 + \\tan^2 x$.",
+    "Substitute $u = \\tan x$, $du = \\sec^2 x\\,dx$."
+   ],
+   "solution": [
+    "$\\sec^4 x = (1 + \\tan^2 x)\\sec^2 x$; with $u = \\tan x$ this is $\\int (1 + u^2)\\,du$.",
+    "$= u + \\frac{u^3}{3}$.",
+    "Result: $\\frac{\\tan^{3}{\\left(x \\right)}}{3} + \\tan{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-e48e31",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{\\sqrt{4 - x^{2}}}{x^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-asin(x/2)-sqrt(4-x^2)/x",
+   "hints": [
+    "Use the trigonometric substitution $x = 2\\sin\\theta$ and simplify the root with a Pythagorean identity.",
+    "After integrating in $\\theta$, draw the reference triangle to convert back to $x$."
+   ],
+   "solution": [
+    "With $x = 2\\sin\\theta$, the integral becomes $\\int \\cot^2\\theta\\,d\\theta = \\int(\\csc^2\\theta - 1)\\,d\\theta = -\\cot\\theta - \\theta$.",
+    "Returning to $x$ via the triangle: $- \\arcsin{\\left(\\frac{x}{2} \\right)} - \\frac{\\sqrt{4 - x^{2}}}{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.6,
+    1.8
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-77b323",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{x \\left(x^{2} + 1\\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x)-ln(x^2+1)/2",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $- \\frac{x}{x^{2} + 1} + \\frac{1}{x}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{1}{x \\left(x^{2} + 1\\right)} = - \\frac{x}{x^{2} + 1} + \\frac{1}{x}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= \\ln{\\left(x \\right)} - \\frac{\\ln{\\left(x^{2} + 1 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-5e8497",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{\\left(x - 2\\right) \\left(x + 1\\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x-2)/3-ln(x+1)/3",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $- \\frac{1}{3 \\left(x + 1\\right)} + \\frac{1}{3 \\left(x - 2\\right)}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{1}{\\left(x - 2\\right) \\left(x + 1\\right)} = - \\frac{1}{3 \\left(x + 1\\right)} + \\frac{1}{3 \\left(x - 2\\right)}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= \\frac{\\ln{\\left(x - 2 \\right)}}{3} - \\frac{\\ln{\\left(x + 1 \\right)}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    2.5,
+    5
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-2e0f07",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{2 x + 1}{x \\left(x + 4\\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x)/4+7*ln(x+4)/4",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $\\frac{7}{4 \\left(x + 4\\right)} + \\frac{1}{4 x}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{2 x + 1}{x \\left(x + 4\\right)} = \\frac{7}{4 \\left(x + 4\\right)} + \\frac{1}{4 x}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= \\frac{\\ln{\\left(x \\right)}}{4} + \\frac{7 \\ln{\\left(x + 4 \\right)}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-7e4ca8",
+   "skill": "integration-by-parts",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int x e^{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(x-1)*exp(x)",
+   "hints": [
+    "Integrate by parts with $u = x$ and $dv = e^{x}\\,dx$.",
+    "Then $du = dx$ and $v = e^{x}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = x$, $dv = e^{x}\\,dx$, so $du = dx$ and $v = e^{x}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = x e^{x} - \\int e^{x}\\,dx$.",
+    "$= \\left(x - 1\\right) e^{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-0f2585",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\ln{\\left(x + 1 \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x*ln(x+1)-x+ln(x+1)",
+   "hints": [
+    "Integrate by parts with $u = \\ln{\\left(x + 1 \\right)}$ and $dv = 1\\,dx$.",
+    "Then $du = \\frac{1}{x + 1}\\,dx$ and $v = x$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x + 1 \\right)}$, $dv = 1\\,dx$, so $du = \\frac{1}{x + 1}\\,dx$ and $v = x$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = x \\ln{\\left(x + 1 \\right)} - \\int \\frac{x}{x + 1}\\,dx$.",
+    "$= x \\ln{\\left(x + 1 \\right)} - x + \\ln{\\left(x + 1 \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-86e599",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{x^{3}}{\\sqrt{x^{2} + 4}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(x^2-8)*sqrt(x^2+4)/3",
+   "hints": [
+    "Use the trigonometric substitution $u = x^2 + 4$ and simplify the root with a Pythagorean identity.",
+    "After integrating in $\\theta$, draw the reference triangle to convert back to $x$."
+   ],
+   "solution": [
+    "With $u = x^2 + 4$, (a plain substitution also works here) the integral becomes $\\frac{1}{2}\\int \\frac{u - a^2}{\\sqrt{u}}\\,du$.",
+    "Returning to $x$ via the triangle: $\\frac{\\left(x^{2} - 8\\right) \\sqrt{x^{2} + 4}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-6b3703",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x + 1}{\\left(x - 2\\right) \\left(x + 2\\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "3*ln(x-2)/4+ln(x+2)/4",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $\\frac{1}{4 \\left(x + 2\\right)} + \\frac{3}{4 \\left(x - 2\\right)}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{x + 1}{\\left(x - 2\\right) \\left(x + 2\\right)} = \\frac{1}{4 \\left(x + 2\\right)} + \\frac{3}{4 \\left(x - 2\\right)}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= \\frac{3 \\ln{\\left(x - 2 \\right)}}{4} + \\frac{\\ln{\\left(x + 2 \\right)}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    2.5,
+    5
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-2c770b",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\cos^{2}{\\left(4 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x/2+sin(8*x)/16",
+   "hints": [
+    "Use $\\cos^2\\theta = \\frac{1 + \\cos 2\\theta}{2}$ with $\\theta = 4x$.",
+    "Then $\\int \\cos(8x)\\,dx = \\frac{\\sin 8x}{8}$."
+   ],
+   "solution": [
+    "$\\cos^2(4x) = \\frac{1}{2} + \\frac{1}{2}\\cos(8x)$.",
+    "Integrating: $\\frac{x}{2} + \\frac{\\sin 8x}{16}$.",
+    "Result: $\\frac{x}{2} + \\frac{\\sin{\\left(8 x \\right)}}{16} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-2143c8",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int x \\arctan{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x^2*atan(x)/2-x/2+atan(x)/2",
+   "hints": [
+    "Integrate by parts with $u = \\arctan{\\left(x \\right)}$ and $dv = x\\,dx$.",
+    "Then $du = \\frac{1}{x^{2} + 1}\\,dx$ and $v = \\frac{x^{2}}{2}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\arctan{\\left(x \\right)}$, $dv = x\\,dx$, so $du = \\frac{1}{x^{2} + 1}\\,dx$ and $v = \\frac{x^{2}}{2}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = \\frac{x^{2} \\arctan{\\left(x \\right)}}{2} - \\int \\frac{x^{2}}{2 \\left(x^{2} + 1\\right)}\\,dx$.",
+    "Simplify $\\int \\frac{x^2}{2(1 + x^2)}\\,dx = \\frac{1}{2}\\int \\left(1 - \\frac{1}{1 + x^2}\\right)dx = \\frac{x}{2} - \\frac{\\arctan x}{2}$.",
+    "$= \\frac{x^{2} \\arctan{\\left(x \\right)}}{2} - \\frac{x}{2} + \\frac{\\arctan{\\left(x \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-14033a",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int e^{4 x} \\sin{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(4*sin(x)-cos(x))*exp(4*x)/17",
+   "hints": [
+    "This needs integration by parts twice; keep $u$ as the exponential each time.",
+    "After the second round the original integral reappears on the right; move it to the left and solve."
+   ],
+   "solution": [
+    "Apply parts twice with $u = e^{4x}$; the original integral $I$ reappears and $I = \\dfrac{e^{4x}(4\\sin x - \\cos x)}{17}$.",
+    "$= \\frac{\\left(4 \\sin{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{4 x}}{17} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-130c5b",
+   "skill": "integration-by-parts",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int x \\sin{\\left(2 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-x*cos(2*x)/2+sin(2*x)/4",
+   "hints": [
+    "Integrate by parts with $u = x$ and $dv = \\sin{\\left(2 x \\right)}\\,dx$.",
+    "Then $du = dx$ and $v = - \\frac{\\cos{\\left(2 x \\right)}}{2}$; use $\\int u\\,dv = uv - \\int v\\,du$."
+   ],
+   "solution": [
+    "Let $u = x$, $dv = \\sin{\\left(2 x \\right)}\\,dx$, so $du = dx$ and $v = - \\frac{\\cos{\\left(2 x \\right)}}{2}$.",
+    "$\\displaystyle\\int u\\,dv = uv - \\int v\\,du = - \\frac{x \\cos{\\left(2 x \\right)}}{2} - \\int - \\frac{\\cos{\\left(2 x \\right)}}{2}\\,dx$.",
+    "$= - \\frac{x \\cos{\\left(2 x \\right)}}{2} + \\frac{\\sin{\\left(2 x \\right)}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-4c40d3",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\sqrt{x^{2} + 4}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "x*sqrt(x^2+4)/2+2*ln(x+sqrt(x^2+4))",
+   "hints": [
+    "Use the trigonometric substitution $x = 2\\tan\\theta$ and simplify the root with a Pythagorean identity.",
+    "After integrating in $\\theta$, draw the reference triangle to convert back to $x$."
+   ],
+   "solution": [
+    "With $x = 2\\tan\\theta$, the integral becomes $4\\int \\sec^3\\theta\\,d\\theta = \\frac{4}{2}(\\sec\\theta\\tan\\theta + \\ln|\\sec\\theta + \\tan\\theta|)$.",
+    "Returning to $x$ via the triangle: $\\frac{x \\sqrt{x^{2} + 4}}{2} + 2 \\ln{\\left(x + \\sqrt{x^{2} + 4} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-6e6a9e",
+   "skill": "integration-by-parts",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x - 1}{x^{2} + 2 x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-ln(x)/2+3*ln(x+2)/2",
+   "hints": [
+    "Factor the denominator and write the integrand as a sum of partial fractions.",
+    "The decomposition is $\\frac{3}{2 \\left(x + 2\\right)} - \\frac{1}{2 x}$."
+   ],
+   "solution": [
+    "Partial fractions: $\\frac{x - 1}{x^{2} + 2 x} = \\frac{3}{2 \\left(x + 2\\right)} - \\frac{1}{2 x}$.",
+    "Integrate each term (each gives a logarithm, a power, or an arctangent).",
+    "$= - \\frac{\\ln{\\left(x \\right)}}{2} + \\frac{3 \\ln{\\left(x + 2 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-813353",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int e^{2 x} \\sin{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(2*sin(x)-cos(x))*exp(2*x)/5",
+   "hints": [
+    "This needs integration by parts twice; keep $u$ as the exponential each time.",
+    "After the second round the original integral reappears on the right; move it to the left and solve."
+   ],
+   "solution": [
+    "Apply parts twice with $u = e^{2x}$; the original integral $I$ reappears and $I = \\dfrac{e^{2x}(2\\sin x - \\cos x)}{5}$.",
+    "$= \\frac{\\left(2 \\sin{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{2 x}}{5} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ],
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-5e5bfc",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} x e^{x}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Find an antiderivative using integration by parts, then apply FTC2.",
+    "An antiderivative is $F(x) = \\left(x - 1\\right) e^{x}$."
+   ],
+   "solution": [
+    "Using integration by parts, $F(x) = \\left(x - 1\\right) e^{x}$.",
+    "$F(1) - F(0) = 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-36c1d7",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{1}^{e} \\ln{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Find an antiderivative using integration by parts, then apply FTC2.",
+    "An antiderivative is $F(x) = x \\ln{\\left(x \\right)} - x$."
+   ],
+   "solution": [
+    "Using integration by parts, $F(x) = x \\ln{\\left(x \\right)} - x$.",
+    "$F(e) - F(1) = 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-e091cd",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\pi} x \\sin{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "pi",
+   "hints": [
+    "Find an antiderivative using integration by parts, then apply FTC2.",
+    "An antiderivative is $F(x) = - x \\cos{\\left(x \\right)} + \\sin{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "Using integration by parts, $F(x) = - x \\cos{\\left(x \\right)} + \\sin{\\left(x \\right)}$.",
+    "$F(\\pi) - F(0) = \\pi$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-c13412",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} \\arctan{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-ln(2)/2+pi/4",
+   "hints": [
+    "Find an antiderivative using integration by parts, then apply FTC2.",
+    "An antiderivative is $F(x) = x \\arctan{\\left(x \\right)} - \\frac{\\ln{\\left(x^{2} + 1 \\right)}}{2}$."
+   ],
+   "solution": [
+    "Using integration by parts, $F(x) = x \\arctan{\\left(x \\right)} - \\frac{\\ln{\\left(x^{2} + 1 \\right)}}{2}$.",
+    "$F(1) - F(0) = - \\frac{\\ln{\\left(2 \\right)}}{2} + \\frac{\\pi}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-6342bd",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{2}} x \\cos{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-1+pi/2",
+   "hints": [
+    "Find an antiderivative using integration by parts, then apply FTC2.",
+    "An antiderivative is $F(x) = x \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "Using integration by parts, $F(x) = x \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}$.",
+    "$F(\\frac{\\pi}{2}) - F(0) = -1 + \\frac{\\pi}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-f936de",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} x e^{- x}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1-2*exp(-1)",
+   "hints": [
+    "Find an antiderivative using integration by parts, then apply FTC2.",
+    "An antiderivative is $F(x) = \\left(- x - 1\\right) e^{- x}$."
+   ],
+   "solution": [
+    "Using integration by parts, $F(x) = \\left(- x - 1\\right) e^{- x}$.",
+    "$F(1) - F(0) = 1 - \\frac{2}{e}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-ced193",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{1}^{e} x \\ln{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1/4+exp(2)/4",
+   "hints": [
+    "Find an antiderivative using integration by parts, then apply FTC2.",
+    "An antiderivative is $F(x) = \\frac{x^{2} \\ln{\\left(x \\right)}}{2} - \\frac{x^{2}}{4}$."
+   ],
+   "solution": [
+    "Using integration by parts, $F(x) = \\frac{x^{2} \\ln{\\left(x \\right)}}{2} - \\frac{x^{2}}{4}$.",
+    "$F(e) - F(1) = \\frac{1}{4} + \\frac{e^{2}}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-400f72",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} x^{2} e^{x}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-2+e",
+   "hints": [
+    "Find an antiderivative using integration by parts, then apply FTC2.",
+    "An antiderivative is $F(x) = \\left(x^{2} - 2 x + 2\\right) e^{x}$."
+   ],
+   "solution": [
+    "Using integration by parts, $F(x) = \\left(x^{2} - 2 x + 2\\right) e^{x}$.",
+    "$F(1) - F(0) = -2 + e$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-7283ae",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{1}^{e} \\frac{\\ln{\\left(x \\right)}}{x^{2}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1-2*exp(-1)",
+   "hints": [
+    "Find an antiderivative using integration by parts, then apply FTC2.",
+    "An antiderivative is $F(x) = - \\frac{\\ln{\\left(x \\right)}}{x} - \\frac{1}{x}$."
+   ],
+   "solution": [
+    "Using integration by parts, $F(x) = - \\frac{\\ln{\\left(x \\right)}}{x} - \\frac{1}{x}$.",
+    "$F(e) - F(1) = 1 - \\frac{2}{e}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-f461c6",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{2}} \\sin^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "pi/4",
+   "hints": [
+    "Find an antiderivative using a trigonometric identity (or saving one factor and substituting), then apply FTC2.",
+    "An antiderivative is $F(x) = \\frac{x}{2} - \\frac{\\sin{\\left(x \\right)} \\cos{\\left(x \\right)}}{2}$."
+   ],
+   "solution": [
+    "Using a trigonometric identity (or saving one factor and substituting), $F(x) = \\frac{x}{2} - \\frac{\\sin{\\left(x \\right)} \\cos{\\left(x \\right)}}{2}$.",
+    "$F(\\frac{\\pi}{2}) - F(0) = \\frac{\\pi}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-a3afc4",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{2}} \\cos^{3}{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "2/3",
+   "hints": [
+    "Find an antiderivative using a trigonometric identity (or saving one factor and substituting), then apply FTC2.",
+    "An antiderivative is $F(x) = - \\frac{\\sin^{3}{\\left(x \\right)}}{3} + \\sin{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "Using a trigonometric identity (or saving one factor and substituting), $F(x) = - \\frac{\\sin^{3}{\\left(x \\right)}}{3} + \\sin{\\left(x \\right)}$.",
+    "$F(\\frac{\\pi}{2}) - F(0) = \\frac{2}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-1585ea",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\pi} \\sin^{3}{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "4/3",
+   "hints": [
+    "Find an antiderivative using a trigonometric identity (or saving one factor and substituting), then apply FTC2.",
+    "An antiderivative is $F(x) = \\frac{\\cos^{3}{\\left(x \\right)}}{3} - \\cos{\\left(x \\right)}$."
+   ],
+   "solution": [
+    "Using a trigonometric identity (or saving one factor and substituting), $F(x) = \\frac{\\cos^{3}{\\left(x \\right)}}{3} - \\cos{\\left(x \\right)}$.",
+    "$F(\\pi) - F(0) = \\frac{4}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-77de1d",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{4}} \\tan^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1-pi/4",
+   "hints": [
+    "Find an antiderivative using a trigonometric identity (or saving one factor and substituting), then apply FTC2.",
+    "An antiderivative is $F(x) = - x + \\frac{\\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}}$."
+   ],
+   "solution": [
+    "Using a trigonometric identity (or saving one factor and substituting), $F(x) = - x + \\frac{\\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}}$.",
+    "$F(\\frac{\\pi}{4}) - F(0) = 1 - \\frac{\\pi}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-b9f8e7",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{4}} \\sec^{4}{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "4/3",
+   "hints": [
+    "Find an antiderivative using a trigonometric identity (or saving one factor and substituting), then apply FTC2.",
+    "An antiderivative is $F(x) = \\frac{2 \\sin{\\left(x \\right)}}{3 \\cos{\\left(x \\right)}} + \\frac{\\sin{\\left(x \\right)}}{3 \\cos^{3}{\\left(x \\right)}}$."
+   ],
+   "solution": [
+    "Using a trigonometric identity (or saving one factor and substituting), $F(x) = \\frac{2 \\sin{\\left(x \\right)}}{3 \\cos{\\left(x \\right)}} + \\frac{\\sin{\\left(x \\right)}}{3 \\cos^{3}{\\left(x \\right)}}$.",
+    "$F(\\frac{\\pi}{4}) - F(0) = \\frac{4}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-c227f0",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\pi} \\cos^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "pi/2",
+   "hints": [
+    "Find an antiderivative using a trigonometric identity (or saving one factor and substituting), then apply FTC2.",
+    "An antiderivative is $F(x) = \\frac{x}{2} + \\frac{\\sin{\\left(x \\right)} \\cos{\\left(x \\right)}}{2}$."
+   ],
+   "solution": [
+    "Using a trigonometric identity (or saving one factor and substituting), $F(x) = \\frac{x}{2} + \\frac{\\sin{\\left(x \\right)} \\cos{\\left(x \\right)}}{2}$.",
+    "$F(\\pi) - F(0) = \\frac{\\pi}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-faf3b0",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{2}} \\sin^{2}{\\left(x \\right)} \\cos^{3}{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "2/15",
+   "hints": [
+    "Find an antiderivative using a trigonometric identity (or saving one factor and substituting), then apply FTC2.",
+    "An antiderivative is $F(x) = - \\frac{\\sin^{5}{\\left(x \\right)}}{5} + \\frac{\\sin^{3}{\\left(x \\right)}}{3}$."
+   ],
+   "solution": [
+    "Using a trigonometric identity (or saving one factor and substituting), $F(x) = - \\frac{\\sin^{5}{\\left(x \\right)}}{5} + \\frac{\\sin^{3}{\\left(x \\right)}}{3}$.",
+    "$F(\\frac{\\pi}{2}) - F(0) = \\frac{2}{15}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-8ae2b4",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{2} \\sqrt{4 - x^{2}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "pi",
+   "hints": [
+    "Find an antiderivative using a trigonometric substitution, then apply FTC2.",
+    "An antiderivative is $F(x) = \\frac{x \\sqrt{4 - x^{2}}}{2} + 2 \\arcsin{\\left(\\frac{x}{2} \\right)}$."
+   ],
+   "solution": [
+    "Using a trigonometric substitution, $F(x) = \\frac{x \\sqrt{4 - x^{2}}}{2} + 2 \\arcsin{\\left(\\frac{x}{2} \\right)}$.",
+    "$F(2) - F(0) = \\pi$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-a20cc1",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{3} \\sqrt{9 - x^{2}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "9*pi/4",
+   "hints": [
+    "Find an antiderivative using a trigonometric substitution, then apply FTC2.",
+    "An antiderivative is $F(x) = \\frac{x \\sqrt{9 - x^{2}}}{2} + \\frac{9 \\arcsin{\\left(\\frac{x}{3} \\right)}}{2}$."
+   ],
+   "solution": [
+    "Using a trigonometric substitution, $F(x) = \\frac{x \\sqrt{9 - x^{2}}}{2} + \\frac{9 \\arcsin{\\left(\\frac{x}{3} \\right)}}{2}$.",
+    "$F(3) - F(0) = \\frac{9 \\pi}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-939612",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} \\frac{1}{\\left(x^{2} + 1\\right)^{\\frac{3}{2}}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/2",
+   "hints": [
+    "Find an antiderivative using a trigonometric substitution, then apply FTC2.",
+    "An antiderivative is $F(x) = \\frac{x}{\\sqrt{x^{2} + 1}}$."
+   ],
+   "solution": [
+    "Using a trigonometric substitution, $F(x) = \\frac{x}{\\sqrt{x^{2} + 1}}$.",
+    "$F(1) - F(0) = \\frac{\\sqrt{2}}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-d35574",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{1}{2}} \\frac{x^{2}}{\\sqrt{1 - x^{2}}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-sqrt(3)/8+pi/12",
+   "hints": [
+    "Find an antiderivative using a trigonometric substitution, then apply FTC2.",
+    "An antiderivative is $F(x) = - \\frac{x \\sqrt{1 - x^{2}}}{2} + \\frac{\\arcsin{\\left(x \\right)}}{2}$."
+   ],
+   "solution": [
+    "Using a trigonometric substitution, $F(x) = - \\frac{x \\sqrt{1 - x^{2}}}{2} + \\frac{\\arcsin{\\left(x \\right)}}{2}$.",
+    "$F(\\frac{1}{2}) - F(0) = - \\frac{\\sqrt{3}}{8} + \\frac{\\pi}{12}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-5789e9",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} \\frac{1}{\\sqrt{x^{2} + 1}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(1+sqrt(2))",
+   "hints": [
+    "Find an antiderivative using a trigonometric substitution, then apply FTC2.",
+    "An antiderivative is $F(x) = \\ln{\\left(x + \\sqrt{x^{2} + 1} \\right)}$."
+   ],
+   "solution": [
+    "Using a trigonometric substitution, $F(x) = \\ln{\\left(x + \\sqrt{x^{2} + 1} \\right)}$.",
+    "$F(1) - F(0) = \\ln{\\left(1 + \\sqrt{2} \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-bece26",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} \\sqrt{1 - x^{2}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "pi/4",
+   "hints": [
+    "Find an antiderivative using a trigonometric substitution, then apply FTC2.",
+    "An antiderivative is $F(x) = \\frac{x \\sqrt{1 - x^{2}}}{2} + \\frac{\\arcsin{\\left(x \\right)}}{2}$."
+   ],
+   "solution": [
+    "Using a trigonometric substitution, $F(x) = \\frac{x \\sqrt{1 - x^{2}}}{2} + \\frac{\\arcsin{\\left(x \\right)}}{2}$.",
+    "$F(1) - F(0) = \\frac{\\pi}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-e9a4b0",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} \\frac{1}{\\left(x + 1\\right) \\left(x + 2\\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(4/3)",
+   "hints": [
+    "Find an antiderivative using partial fractions, then apply FTC2.",
+    "An antiderivative is $F(x) = \\ln{\\left(x + 1 \\right)} - \\ln{\\left(x + 2 \\right)}$."
+   ],
+   "solution": [
+    "Using partial fractions, $F(x) = \\ln{\\left(x + 1 \\right)} - \\ln{\\left(x + 2 \\right)}$.",
+    "$F(1) - F(0) = \\ln{\\left(\\frac{4}{3} \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-f5f145",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{2}^{3} \\frac{1}{x^{2} - 1}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(sqrt(6)/2)",
+   "hints": [
+    "Find an antiderivative using partial fractions, then apply FTC2.",
+    "An antiderivative is $F(x) = \\frac{\\ln{\\left(x - 1 \\right)}}{2} - \\frac{\\ln{\\left(x + 1 \\right)}}{2}$."
+   ],
+   "solution": [
+    "Using partial fractions, $F(x) = \\frac{\\ln{\\left(x - 1 \\right)}}{2} - \\frac{\\ln{\\left(x + 1 \\right)}}{2}$.",
+    "$F(3) - F(2) = - \\frac{\\ln{\\left(2 \\right)}}{2} + \\frac{\\ln{\\left(3 \\right)}}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-8ab3f9",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{1}^{2} \\frac{x + 1}{x \\left(x + 3\\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-ln(2)+2*ln(5)/3",
+   "hints": [
+    "Find an antiderivative using partial fractions, then apply FTC2.",
+    "An antiderivative is $F(x) = \\frac{\\ln{\\left(x \\right)}}{3} + \\frac{2 \\ln{\\left(x + 3 \\right)}}{3}$."
+   ],
+   "solution": [
+    "Using partial fractions, $F(x) = \\frac{\\ln{\\left(x \\right)}}{3} + \\frac{2 \\ln{\\left(x + 3 \\right)}}{3}$.",
+    "$F(2) - F(1) = \\ln{\\left(\\frac{5^{\\frac{2}{3}}}{2} \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-cab166",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{2}^{3} \\frac{x^{2}}{x^{2} - 1}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-ln(2)+ln(6)/2+1",
+   "hints": [
+    "Find an antiderivative using partial fractions, then apply FTC2.",
+    "An antiderivative is $F(x) = x + \\frac{\\ln{\\left(x - 1 \\right)}}{2} - \\frac{\\ln{\\left(x + 1 \\right)}}{2}$."
+   ],
+   "solution": [
+    "Using partial fractions, $F(x) = x + \\frac{\\ln{\\left(x - 1 \\right)}}{2} - \\frac{\\ln{\\left(x + 1 \\right)}}{2}$.",
+    "$F(3) - F(2) = \\ln{\\left(\\frac{\\sqrt{6}}{2} \\right)} + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-e440c3",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{1}^{2} \\frac{1}{x \\left(x^{2} + 1\\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(2*sqrt(10)/5)",
+   "hints": [
+    "Find an antiderivative using partial fractions, then apply FTC2.",
+    "An antiderivative is $F(x) = \\ln{\\left(x \\right)} - \\frac{\\ln{\\left(x^{2} + 1 \\right)}}{2}$."
+   ],
+   "solution": [
+    "Using partial fractions, $F(x) = \\ln{\\left(x \\right)} - \\frac{\\ln{\\left(x^{2} + 1 \\right)}}{2}$.",
+    "$F(2) - F(1) = - \\frac{\\ln{\\left(5 \\right)}}{2} + \\frac{3 \\ln{\\left(2 \\right)}}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  },
+  {
+   "id": "daily-tier-6-f791ac",
+   "skill": "integration-by-parts",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} \\frac{2 x + 1}{x^{2} + 3 x + 2}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(27/16)",
+   "hints": [
+    "Find an antiderivative using partial fractions, then apply FTC2.",
+    "An antiderivative is $F(x) = - \\ln{\\left(x + 1 \\right)} + 3 \\ln{\\left(x + 2 \\right)}$."
+   ],
+   "solution": [
+    "Using partial fractions, $F(x) = - \\ln{\\left(x + 1 \\right)} + 3 \\ln{\\left(x + 2 \\right)}$.",
+    "$F(1) - F(0) = \\ln{\\left(\\frac{27}{16} \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "tier": 6,
+   "tags": [
+    "daily"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,914 @@
+{
+ "skill": "definite-integral",
+ "problems": [
+  {
+   "id": "definite-integral-02278f",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{-1}^{5} \\left|{x - 2}\\right|\\,dx$ by interpreting it in terms of areas.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "Sketch the graph on the interval and identify the geometric shape (rectangle, triangle, trapezoid, part of a circle).",
+    "Area above the axis counts positive, area below counts negative."
+   ],
+   "solution": [
+    "The graph of $|x - (2)|$ is a V with vertex at $x = 2$; the region is two triangles with bases $3$ and $3$ and heights $3$ and $3$.",
+    "Its (signed) area is $9$, so the integral equals $9$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-d6c970",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{0}^{2} \\left(x + 1\\right)\\,dx$ by interpreting it in terms of areas.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Sketch the graph on the interval and identify the geometric shape (rectangle, triangle, trapezoid, part of a circle).",
+    "Area above the axis counts positive, area below counts negative."
+   ],
+   "solution": [
+    "The region under the line is a trapezoid with parallel sides $f(0) = 1$ and $f(2) = 3$ and width $2$.",
+    "Its (signed) area is $4$, so the integral equals $4$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-1091ba",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{-4}^{4} \\sqrt{16 - x^{2}}\\,dx$ by interpreting it in terms of areas.",
+   "checker": "numeric",
+   "answer": "8*pi",
+   "hints": [
+    "Sketch the graph on the interval and identify the geometric shape (rectangle, triangle, trapezoid, part of a circle).",
+    "Area above the axis counts positive, area below counts negative."
+   ],
+   "solution": [
+    "$y = \\sqrt{16 - x^2}$ is the upper half of the circle $x^2 + y^2 = 16$, so the region is a semicircle of radius $4$.",
+    "Its (signed) area is $8 \\pi$, so the integral equals $8 \\pi$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-3aab11",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{-1}^{4} 5\\,dx$ by interpreting it in terms of areas.",
+   "checker": "numeric",
+   "answer": "25",
+   "hints": [
+    "Sketch the graph on the interval and identify the geometric shape (rectangle, triangle, trapezoid, part of a circle).",
+    "Area above the axis counts positive, area below counts negative."
+   ],
+   "solution": [
+    "The region is a rectangle of width $5$ and height $|5|$.",
+    "Its (signed) area is $25$, so the integral equals $25$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-520960",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{0}^{4} \\left(x + 2\\right)\\,dx$ by interpreting it in terms of areas.",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "Sketch the graph on the interval and identify the geometric shape (rectangle, triangle, trapezoid, part of a circle).",
+    "Area above the axis counts positive, area below counts negative."
+   ],
+   "solution": [
+    "The region under the line is a trapezoid with parallel sides $f(0) = 2$ and $f(4) = 6$ and width $4$.",
+    "Its (signed) area is $16$, so the integral equals $16$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-c455c0",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{0}^{3} -3\\,dx$ by interpreting it in terms of areas.",
+   "checker": "numeric",
+   "answer": "-9",
+   "hints": [
+    "Sketch the graph on the interval and identify the geometric shape (rectangle, triangle, trapezoid, part of a circle).",
+    "Area above the axis counts positive, area below counts negative."
+   ],
+   "solution": [
+    "The region is a rectangle of width $3$ and height $|-3|$ below the axis, so the integral is negative.",
+    "Its (signed) area is $-9$, so the integral equals $-9$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-192a74",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{1}^{5} -2\\,dx$ by interpreting it in terms of areas.",
+   "checker": "numeric",
+   "answer": "-8",
+   "hints": [
+    "Sketch the graph on the interval and identify the geometric shape (rectangle, triangle, trapezoid, part of a circle).",
+    "Area above the axis counts positive, area below counts negative."
+   ],
+   "solution": [
+    "The region is a rectangle of width $4$ and height $|-2|$ below the axis, so the integral is negative.",
+    "Its (signed) area is $-8$, so the integral equals $-8$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-e80cda",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{2} \\sqrt{4 - x^{2}}\\,dx$ by interpreting it in terms of areas.",
+   "checker": "numeric",
+   "answer": "pi",
+   "hints": [
+    "Sketch the graph on the interval and identify the geometric shape (rectangle, triangle, trapezoid, part of a circle).",
+    "Area above the axis counts positive, area below counts negative."
+   ],
+   "solution": [
+    "The region is a quarter of the disk $x^2 + y^2 \\le 4$.",
+    "Its (signed) area is $\\pi$, so the integral equals $\\pi$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-cb8c2f",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{-2}^{2} \\sqrt{4 - x^{2}}\\,dx$ by interpreting it in terms of areas.",
+   "checker": "numeric",
+   "answer": "2*pi",
+   "hints": [
+    "Sketch the graph on the interval and identify the geometric shape (rectangle, triangle, trapezoid, part of a circle).",
+    "Area above the axis counts positive, area below counts negative."
+   ],
+   "solution": [
+    "$y = \\sqrt{4 - x^2}$ is the upper half of the circle $x^2 + y^2 = 4$, so the region is a semicircle of radius $2$.",
+    "Its (signed) area is $2 \\pi$, so the integral equals $2 \\pi$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-c33679",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{0}^{2} x\\,dx$ by interpreting it in terms of areas.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Sketch the graph on the interval and identify the geometric shape (rectangle, triangle, trapezoid, part of a circle).",
+    "Area above the axis counts positive, area below counts negative."
+   ],
+   "solution": [
+    "The region under the line is a trapezoid with parallel sides $f(0) = 0$ and $f(2) = 2$ and width $2$.",
+    "Its (signed) area is $2$, so the integral equals $2$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-edc77e",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{0}^{3} 6\\,dx$ by interpreting it in terms of areas.",
+   "checker": "numeric",
+   "answer": "18",
+   "hints": [
+    "Sketch the graph on the interval and identify the geometric shape (rectangle, triangle, trapezoid, part of a circle).",
+    "Area above the axis counts positive, area below counts negative."
+   ],
+   "solution": [
+    "The region is a rectangle of width $3$ and height $|6|$.",
+    "Its (signed) area is $18$, so the integral equals $18$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-b0bf27",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int_{1}^{5} 6\\,dx$ by interpreting it in terms of areas.",
+   "checker": "numeric",
+   "answer": "24",
+   "hints": [
+    "Sketch the graph on the interval and identify the geometric shape (rectangle, triangle, trapezoid, part of a circle).",
+    "Area above the axis counts positive, area below counts negative."
+   ],
+   "solution": [
+    "The region is a rectangle of width $4$ and height $|6|$.",
+    "Its (signed) area is $24$, so the integral equals $24$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-ac7435",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "If $\\displaystyle\\int_{0}^{4} f(x)\\,dx = -1$ and $\\displaystyle\\int_{0}^{1} f(x)\\,dx = 2$, find $\\displaystyle\\int_{1}^{4} f(x)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Use the properties of definite integrals rather than trying to find $f$.",
+    "Here: $\\int_{0}^{4} = \\int_{0}^{1} + \\int_{1}^{4}$."
+   ],
+   "solution": [
+    "By the property that $\\int_{0}^{4} = \\int_{0}^{1} + \\int_{1}^{4}$, the integral equals $(-1) - (2)$.",
+    "$= -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-1375aa",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "If $\\displaystyle\\int_{0}^{1} f(x)\\,dx = -1$, find $\\displaystyle\\int_{1}^{0} f(x)\\,dx$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Use the properties of definite integrals rather than trying to find $f$.",
+    "Here: swapping the limits of integration changes the sign."
+   ],
+   "solution": [
+    "By the property that swapping the limits of integration changes the sign, the integral equals $-(-1)$.",
+    "$= 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-cec71e",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "If $\\displaystyle\\int_{1}^{2} f(x)\\,dx = 6$, find $\\displaystyle\\int_{2}^{1} f(x)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-6",
+   "hints": [
+    "Use the properties of definite integrals rather than trying to find $f$.",
+    "Here: swapping the limits of integration changes the sign."
+   ],
+   "solution": [
+    "By the property that swapping the limits of integration changes the sign, the integral equals $-(6)$.",
+    "$= -6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-ee7a90",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "If $\\displaystyle\\int_{2}^{5} f(x)\\,dx = 4$, find $\\displaystyle\\int_{5}^{2} f(x)\\,dx$.",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "Use the properties of definite integrals rather than trying to find $f$.",
+    "Here: swapping the limits of integration changes the sign."
+   ],
+   "solution": [
+    "By the property that swapping the limits of integration changes the sign, the integral equals $-(4)$.",
+    "$= -4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-dcce6d",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "If $\\displaystyle\\int_{1}^{4} f(x)\\,dx = -3$ and $\\displaystyle\\int_{1}^{4} g(x)\\,dx = 4$, find $\\displaystyle\\int_{1}^{4} \\left[-f(x) - 3g(x)\\right]dx$.",
+   "checker": "numeric",
+   "answer": "-9",
+   "hints": [
+    "Use the properties of definite integrals rather than trying to find $f$.",
+    "Here: the integral of a sum is the sum of the integrals, and constants factor out."
+   ],
+   "solution": [
+    "By the property that the integral of a sum is the sum of the integrals, and constants factor out, the integral equals $-1 \\cdot (-3) + (-3) \\cdot (4)$.",
+    "$= -9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-c7e0c7",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "If $\\displaystyle\\int_{3}^{6} f(x)\\,dx = 6$, find $\\displaystyle\\int_{3}^{6} f(x)\\,dx - \\int_{3}^{3} f(x)\\,dx + \\int_{6}^{3} f(x)\\,dx$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Use the properties of definite integrals rather than trying to find $f$.",
+    "Here: $\\int_a^a f = 0$ and $\\int_b^a f = -\\int_a^b f$."
+   ],
+   "solution": [
+    "By the property that $\\int_a^a f = 0$ and $\\int_b^a f = -\\int_a^b f$, the integral equals $0$.",
+    "$= 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-b6254e",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "If $\\displaystyle\\int_{0}^{7} f(x)\\,dx = 5$ and $\\displaystyle\\int_{0}^{5} f(x)\\,dx = 1$, find $\\displaystyle\\int_{5}^{7} f(x)\\,dx$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Use the properties of definite integrals rather than trying to find $f$.",
+    "Here: $\\int_{0}^{7} = \\int_{0}^{5} + \\int_{5}^{7}$."
+   ],
+   "solution": [
+    "By the property that $\\int_{0}^{7} = \\int_{0}^{5} + \\int_{5}^{7}$, the integral equals $(5) - (1)$.",
+    "$= 4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-b28a25",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "If $\\displaystyle\\int_{0}^{5} f(x)\\,dx = 5$ and $\\displaystyle\\int_{0}^{3} f(x)\\,dx = 4$, find $\\displaystyle\\int_{3}^{5} f(x)\\,dx$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Use the properties of definite integrals rather than trying to find $f$.",
+    "Here: $\\int_{0}^{5} = \\int_{0}^{3} + \\int_{3}^{5}$."
+   ],
+   "solution": [
+    "By the property that $\\int_{0}^{5} = \\int_{0}^{3} + \\int_{3}^{5}$, the integral equals $(5) - (4)$.",
+    "$= 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-671df2",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "If $\\displaystyle\\int_{0}^{6} f(x)\\,dx = 5$ and $\\displaystyle\\int_{6}^{7} f(x)\\,dx = -2$, find $\\displaystyle\\int_{0}^{7} f(x)\\,dx$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Use the properties of definite integrals rather than trying to find $f$.",
+    "Here: adjacent intervals add."
+   ],
+   "solution": [
+    "By the property that adjacent intervals add, the integral equals $(5) + (-2)$.",
+    "$= 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-31207c",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "If $\\displaystyle\\int_{1}^{3} f(x)\\,dx = 2$, find $\\displaystyle\\int_{1}^{3} f(x)\\,dx - \\int_{1}^{1} f(x)\\,dx + \\int_{3}^{1} f(x)\\,dx$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Use the properties of definite integrals rather than trying to find $f$.",
+    "Here: $\\int_a^a f = 0$ and $\\int_b^a f = -\\int_a^b f$."
+   ],
+   "solution": [
+    "By the property that $\\int_a^a f = 0$ and $\\int_b^a f = -\\int_a^b f$, the integral equals $0$.",
+    "$= 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-a9d909",
+   "skill": "definite-integral",
+   "difficulty": 3,
+   "statement": "Use the Midpoint Rule with $n = 4$ to approximate $\\int_{1}^{3} \\frac{1}{x}\\,dx$. Give the exact value of the approximation $M_{4}$.",
+   "checker": "numeric",
+   "answer": "3776/3465",
+   "hints": [
+    "$\\Delta x = \\frac{1}{2}$; the midpoints are $\\frac{5}{4}, \\frac{7}{4}, \\frac{9}{4}, \\frac{11}{4}$.",
+    "$M_n = \\Delta x\\,[f(\\bar x_1) + \\dots + f(\\bar x_n)]$."
+   ],
+   "solution": [
+    "Heights at the midpoints: $\\frac{4}{5} + \\frac{4}{7} + \\frac{4}{9} + \\frac{4}{11} = \\frac{7552}{3465}$.",
+    "$M_{4} = \\frac{1}{2} \\cdot \\frac{7552}{3465} = \\frac{3776}{3465}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-fdb0cb",
+   "skill": "definite-integral",
+   "difficulty": 3,
+   "statement": "Use the Midpoint Rule with $n = 4$ to approximate $\\int_{2}^{4} \\frac{1}{x}\\,dx$. Give the exact value of the approximation $M_{4}$.",
+   "checker": "numeric",
+   "answer": "4448/6435",
+   "hints": [
+    "$\\Delta x = \\frac{1}{2}$; the midpoints are $\\frac{9}{4}, \\frac{11}{4}, \\frac{13}{4}, \\frac{15}{4}$.",
+    "$M_n = \\Delta x\\,[f(\\bar x_1) + \\dots + f(\\bar x_n)]$."
+   ],
+   "solution": [
+    "Heights at the midpoints: $\\frac{4}{9} + \\frac{4}{11} + \\frac{4}{13} + \\frac{4}{15} = \\frac{8896}{6435}$.",
+    "$M_{4} = \\frac{1}{2} \\cdot \\frac{8896}{6435} = \\frac{4448}{6435}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-e1289c",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Use the Midpoint Rule with $n = 4$ to approximate $\\int_{1}^{5} \\left(4 - x^{2}\\right)\\,dx$. Give the exact value of the approximation $M_{4}$.",
+   "checker": "numeric",
+   "answer": "-25",
+   "hints": [
+    "$\\Delta x = 1$; the midpoints are $\\frac{3}{2}, \\frac{5}{2}, \\frac{7}{2}, \\frac{9}{2}$.",
+    "$M_n = \\Delta x\\,[f(\\bar x_1) + \\dots + f(\\bar x_n)]$."
+   ],
+   "solution": [
+    "Heights at the midpoints: $\\frac{7}{4} + - \\frac{9}{4} + - \\frac{33}{4} + - \\frac{65}{4} = -25$.",
+    "$M_{4} = 1 \\cdot -25 = -25$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-25686e",
+   "skill": "definite-integral",
+   "difficulty": 3,
+   "statement": "Use the Midpoint Rule with $n = 5$ to approximate $\\int_{0}^{1} x^{3}\\,dx$. Give the exact value of the approximation $M_{5}$.",
+   "checker": "numeric",
+   "answer": "49/200",
+   "hints": [
+    "$\\Delta x = \\frac{1}{5}$; the midpoints are $\\frac{1}{10}, \\frac{3}{10}, \\frac{1}{2}, \\frac{7}{10}, \\frac{9}{10}$.",
+    "$M_n = \\Delta x\\,[f(\\bar x_1) + \\dots + f(\\bar x_n)]$."
+   ],
+   "solution": [
+    "Heights at the midpoints: $\\frac{1}{1000} + \\frac{27}{1000} + \\frac{1}{8} + \\frac{343}{1000} + \\frac{729}{1000} = \\frac{49}{40}$.",
+    "$M_{5} = \\frac{1}{5} \\cdot \\frac{49}{40} = \\frac{49}{200}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-eec409",
+   "skill": "definite-integral",
+   "difficulty": 3,
+   "statement": "Use the Midpoint Rule with $n = 4$ to approximate $\\int_{1}^{5} \\frac{1}{x}\\,dx$. Give the exact value of the approximation $M_{4}$.",
+   "checker": "numeric",
+   "answer": "496/315",
+   "hints": [
+    "$\\Delta x = 1$; the midpoints are $\\frac{3}{2}, \\frac{5}{2}, \\frac{7}{2}, \\frac{9}{2}$.",
+    "$M_n = \\Delta x\\,[f(\\bar x_1) + \\dots + f(\\bar x_n)]$."
+   ],
+   "solution": [
+    "Heights at the midpoints: $\\frac{2}{3} + \\frac{2}{5} + \\frac{2}{7} + \\frac{2}{9} = \\frac{496}{315}$.",
+    "$M_{4} = 1 \\cdot \\frac{496}{315} = \\frac{496}{315}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-e7a4f0",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Use the Midpoint Rule with $n = 4$ to approximate $\\int_{2}^{4} \\left(4 - x^{2}\\right)\\,dx$. Give the exact value of the approximation $M_{4}$.",
+   "checker": "numeric",
+   "answer": "-85/8",
+   "hints": [
+    "$\\Delta x = \\frac{1}{2}$; the midpoints are $\\frac{9}{4}, \\frac{11}{4}, \\frac{13}{4}, \\frac{15}{4}$.",
+    "$M_n = \\Delta x\\,[f(\\bar x_1) + \\dots + f(\\bar x_n)]$."
+   ],
+   "solution": [
+    "Heights at the midpoints: $- \\frac{17}{16} + - \\frac{57}{16} + - \\frac{105}{16} + - \\frac{161}{16} = - \\frac{85}{4}$.",
+    "$M_{4} = \\frac{1}{2} \\cdot - \\frac{85}{4} = - \\frac{85}{8}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-b3fcc6",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Compute the Riemann sum $R_{6}$ for $\\int_{0}^{3} \\left(2 x + 1\\right)\\,dx$ using $6$ equal subintervals and right endpoints.",
+   "checker": "numeric",
+   "answer": "27/2",
+   "hints": [
+    "$\\Delta x = \\frac{1}{2}$ and $x_i = 0 + i\\,\\Delta x$.",
+    "Add $f(x_i)\\Delta x$ for $i = 1, \\dots, n$; negative values of $f$ contribute negatively."
+   ],
+   "solution": [
+    "$R_{6} = \\frac{1}{2}\\left[(2) + (3) + (4) + (5) + (6) + (7)\\right]$.",
+    "$= \\frac{27}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-8a720d",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Compute the Riemann sum $R_{8}$ for $\\int_{0}^{4} \\left(2 x + 1\\right)\\,dx$ using $8$ equal subintervals and right endpoints.",
+   "checker": "numeric",
+   "answer": "22",
+   "hints": [
+    "$\\Delta x = \\frac{1}{2}$ and $x_i = 0 + i\\,\\Delta x$.",
+    "Add $f(x_i)\\Delta x$ for $i = 1, \\dots, n$; negative values of $f$ contribute negatively."
+   ],
+   "solution": [
+    "$R_{8} = \\frac{1}{2}\\left[(2) + (3) + (4) + (5) + (6) + (7) + (8) + (9)\\right]$.",
+    "$= 22$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-512cda",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Compute the Riemann sum $R_{8}$ for $\\int_{0}^{4} \\left(x^{2} - x\\right)\\,dx$ using $8$ equal subintervals and right endpoints.",
+   "checker": "numeric",
+   "answer": "33/2",
+   "hints": [
+    "$\\Delta x = \\frac{1}{2}$ and $x_i = 0 + i\\,\\Delta x$.",
+    "Add $f(x_i)\\Delta x$ for $i = 1, \\dots, n$; negative values of $f$ contribute negatively."
+   ],
+   "solution": [
+    "$R_{8} = \\frac{1}{2}\\left[(- \\frac{1}{4}) + (0) + (\\frac{3}{4}) + (2) + (\\frac{15}{4}) + (6) + (\\frac{35}{4}) + (12)\\right]$.",
+    "$= \\frac{33}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-e584bb",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Compute the Riemann sum $R_{8}$ for $\\int_{0}^{4} x^{3}\\,dx$ using $8$ equal subintervals and right endpoints.",
+   "checker": "numeric",
+   "answer": "81",
+   "hints": [
+    "$\\Delta x = \\frac{1}{2}$ and $x_i = 0 + i\\,\\Delta x$.",
+    "Add $f(x_i)\\Delta x$ for $i = 1, \\dots, n$; negative values of $f$ contribute negatively."
+   ],
+   "solution": [
+    "$R_{8} = \\frac{1}{2}\\left[(\\frac{1}{8}) + (1) + (\\frac{27}{8}) + (8) + (\\frac{125}{8}) + (27) + (\\frac{343}{8}) + (64)\\right]$.",
+    "$= 81$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-f2a390",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Compute the Riemann sum $R_{6}$ for $\\int_{0}^{3} \\left(6 - x\\right)\\,dx$ using $6$ equal subintervals and right endpoints.",
+   "checker": "numeric",
+   "answer": "51/4",
+   "hints": [
+    "$\\Delta x = \\frac{1}{2}$ and $x_i = 0 + i\\,\\Delta x$.",
+    "Add $f(x_i)\\Delta x$ for $i = 1, \\dots, n$; negative values of $f$ contribute negatively."
+   ],
+   "solution": [
+    "$R_{6} = \\frac{1}{2}\\left[(\\frac{11}{2}) + (5) + (\\frac{9}{2}) + (4) + (\\frac{7}{2}) + (3)\\right]$.",
+    "$= \\frac{51}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-ceb7b0",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Suppose $1 \\le f(x) \\le 4$ for all $x$ in $[0, 5]$. Using the comparison properties of integrals, what interval must $\\displaystyle\\int_{0}^{5} f(x)\\,dx$ lie in? Answer as a closed interval $[\\text{lower}, \\text{upper}]$.",
+   "checker": "interval",
+   "answer": "[5,20]",
+   "hints": [
+    "If $m \\le f(x) \\le M$ on $[a, b]$ then $m(b - a) \\le \\int_a^b f \\le M(b - a)$.",
+    "The length of the interval is $5$."
+   ],
+   "solution": [
+    "Lower bound: $1(5 - (0)) = 5$; upper bound: $4(5 - (0)) = 20$.",
+    "So the integral lies in $[5, 20]$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-d10564",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Suppose $2 \\le f(x) \\le 5$ for all $x$ in $[0, 5]$. Using the comparison properties of integrals, what interval must $\\displaystyle\\int_{0}^{5} f(x)\\,dx$ lie in? Answer as a closed interval $[\\text{lower}, \\text{upper}]$.",
+   "checker": "interval",
+   "answer": "[10,25]",
+   "hints": [
+    "If $m \\le f(x) \\le M$ on $[a, b]$ then $m(b - a) \\le \\int_a^b f \\le M(b - a)$.",
+    "The length of the interval is $5$."
+   ],
+   "solution": [
+    "Lower bound: $2(5 - (0)) = 10$; upper bound: $5(5 - (0)) = 25$.",
+    "So the integral lies in $[10, 25]$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-cbccbb",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Suppose $6 \\le f(x) \\le 7$ for all $x$ in $[1, 3]$. Using the comparison properties of integrals, what interval must $\\displaystyle\\int_{1}^{3} f(x)\\,dx$ lie in? Answer as a closed interval $[\\text{lower}, \\text{upper}]$.",
+   "checker": "interval",
+   "answer": "[12,14]",
+   "hints": [
+    "If $m \\le f(x) \\le M$ on $[a, b]$ then $m(b - a) \\le \\int_a^b f \\le M(b - a)$.",
+    "The length of the interval is $2$."
+   ],
+   "solution": [
+    "Lower bound: $6(3 - (1)) = 12$; upper bound: $7(3 - (1)) = 14$.",
+    "So the integral lies in $[12, 14]$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-4964ca",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Suppose $0 \\le f(x) \\le 6$ for all $x$ in $[-2, 2]$. Using the comparison properties of integrals, what interval must $\\displaystyle\\int_{-2}^{2} f(x)\\,dx$ lie in? Answer as a closed interval $[\\text{lower}, \\text{upper}]$.",
+   "checker": "interval",
+   "answer": "[0,24]",
+   "hints": [
+    "If $m \\le f(x) \\le M$ on $[a, b]$ then $m(b - a) \\le \\int_a^b f \\le M(b - a)$.",
+    "The length of the interval is $4$."
+   ],
+   "solution": [
+    "Lower bound: $0(2 - (-2)) = 0$; upper bound: $6(2 - (-2)) = 24$.",
+    "So the integral lies in $[0, 24]$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-23b944",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Suppose $-3 \\le f(x) \\le -2$ for all $x$ in $[-2, 2]$. Using the comparison properties of integrals, what interval must $\\displaystyle\\int_{-2}^{2} f(x)\\,dx$ lie in? Answer as a closed interval $[\\text{lower}, \\text{upper}]$.",
+   "checker": "interval",
+   "answer": "[-12,-8]",
+   "hints": [
+    "If $m \\le f(x) \\le M$ on $[a, b]$ then $m(b - a) \\le \\int_a^b f \\le M(b - a)$.",
+    "The length of the interval is $4$."
+   ],
+   "solution": [
+    "Lower bound: $-3(2 - (-2)) = -12$; upper bound: $-2(2 - (-2)) = -8$.",
+    "So the integral lies in $[-12, -8]$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "definite-integral-350b6c",
+   "skill": "definite-integral",
+   "difficulty": 3,
+   "statement": "Express $\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\sqrt{{x_i}}\\,\\Delta x$, where $\\Delta x = \\frac{2}{n}$ and $x_i = 1 + i\\,\\Delta x$, as a definite integral.",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Read off $a$ from the formula for $x_i$ and $b$ from $a + n\\Delta x$.",
+    "The summand $f(x_i)\\Delta x$ tells you the integrand."
+   ],
+   "solution": [
+    "$x_i = 1 + i\\Delta x$ runs from $1$ to $1 + n\\Delta x = 3$, and the summand is $f(x_i)\\Delta x$ with $f(x) = \\sqrt{x}$.",
+    "By definition, the limit is $\\int_{1}^{3} \\sqrt{x}\\,dx$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\displaystyle\\int_{0}^{2} \\sqrt{x}\\,dx$",
+    "$\\displaystyle\\int_{1}^{n} \\sqrt{x}\\,dx$",
+    "$\\displaystyle\\int_{1}^{3} \\sqrt{x}\\,dx$",
+    "$\\displaystyle\\int_{1}^{3} \\sqrt{x + 1}\\,dx$"
+   ]
+  },
+  {
+   "id": "definite-integral-61d879",
+   "skill": "definite-integral",
+   "difficulty": 3,
+   "statement": "Express $\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\sqrt{{x_i}}\\,\\Delta x$, where $\\Delta x = \\frac{3}{n}$ and $x_i = 1 + i\\,\\Delta x$, as a definite integral.",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Read off $a$ from the formula for $x_i$ and $b$ from $a + n\\Delta x$.",
+    "The summand $f(x_i)\\Delta x$ tells you the integrand."
+   ],
+   "solution": [
+    "$x_i = 1 + i\\Delta x$ runs from $1$ to $1 + n\\Delta x = 4$, and the summand is $f(x_i)\\Delta x$ with $f(x) = \\sqrt{x}$.",
+    "By definition, the limit is $\\int_{1}^{4} \\sqrt{x}\\,dx$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\displaystyle\\int_{1}^{4} \\sqrt{x + 1}\\,dx$",
+    "$\\displaystyle\\int_{1}^{n} \\sqrt{x}\\,dx$",
+    "$\\displaystyle\\int_{0}^{3} \\sqrt{x}\\,dx$",
+    "$\\displaystyle\\int_{1}^{4} \\sqrt{x}\\,dx$"
+   ]
+  },
+  {
+   "id": "definite-integral-0bae5e",
+   "skill": "definite-integral",
+   "difficulty": 3,
+   "statement": "Express $\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\sin{\\left({x_i} \\right)}\\,\\Delta x$, where $\\Delta x = \\frac{3}{n}$ and $x_i = 1 + i\\,\\Delta x$, as a definite integral.",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Read off $a$ from the formula for $x_i$ and $b$ from $a + n\\Delta x$.",
+    "The summand $f(x_i)\\Delta x$ tells you the integrand."
+   ],
+   "solution": [
+    "$x_i = 1 + i\\Delta x$ runs from $1$ to $1 + n\\Delta x = 4$, and the summand is $f(x_i)\\Delta x$ with $f(x) = \\sin{\\left(x \\right)}$.",
+    "By definition, the limit is $\\int_{1}^{4} \\sin{\\left(x \\right)}\\,dx$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\displaystyle\\int_{0}^{3} \\sin{\\left(x \\right)}\\,dx$",
+    "$\\displaystyle\\int_{1}^{4} \\sin{\\left(x \\right)}\\,dx$",
+    "$\\displaystyle\\int_{1}^{4} \\sin{\\left(x + 1 \\right)}\\,dx$",
+    "$\\displaystyle\\int_{1}^{n} \\sin{\\left(x \\right)}\\,dx$"
+   ]
+  },
+  {
+   "id": "definite-integral-7f8948",
+   "skill": "definite-integral",
+   "difficulty": 3,
+   "statement": "Express $\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\frac{1}{{x_i}}\\,\\Delta x$, where $\\Delta x = \\frac{2}{n}$ and $x_i = 1 + i\\,\\Delta x$, as a definite integral.",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Read off $a$ from the formula for $x_i$ and $b$ from $a + n\\Delta x$.",
+    "The summand $f(x_i)\\Delta x$ tells you the integrand."
+   ],
+   "solution": [
+    "$x_i = 1 + i\\Delta x$ runs from $1$ to $1 + n\\Delta x = 3$, and the summand is $f(x_i)\\Delta x$ with $f(x) = \\frac{1}{x}$.",
+    "By definition, the limit is $\\int_{1}^{3} \\frac{1}{x}\\,dx$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\displaystyle\\int_{1}^{n} \\frac{1}{x}\\,dx$",
+    "$\\displaystyle\\int_{0}^{2} \\frac{1}{x}\\,dx$",
+    "$\\displaystyle\\int_{1}^{3} \\frac{1}{x}\\,dx$",
+    "$\\displaystyle\\int_{1}^{3} \\frac{1}{x + 1}\\,dx$"
+   ]
+  },
+  {
+   "id": "definite-integral-f180fb",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{1} x^{2}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1/3",
+   "hints": [
+    "Think about the graph: where is it above and below the axis?",
+    "A definite integral is a net (signed) area."
+   ],
+   "solution": [
+    "Here using the formula $\\int_0^b x^2\\,dx = b^3/3$ from the limit of Riemann sums.",
+    "So $\\int_{0}^{1} x^{2}\\,dx = \\frac{1}{3}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-f3b460",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{4} x^{2}\\,dx$.",
+   "checker": "numeric",
+   "answer": "64/3",
+   "hints": [
+    "Think about the graph: where is it above and below the axis?",
+    "A definite integral is a net (signed) area."
+   ],
+   "solution": [
+    "Here using the formula $\\int_0^b x^2\\,dx = b^3/3$ from the limit of Riemann sums.",
+    "So $\\int_{0}^{4} x^{2}\\,dx = \\frac{64}{3}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-99b022",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{2 \\pi} \\sin{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Think about the graph: where is it above and below the axis?",
+    "A definite integral is a net (signed) area."
+   ],
+   "solution": [
+    "Here the area above the axis on $[0, \\pi]$ exactly cancels the area below on $[\\pi, 2\\pi]$.",
+    "So $\\int_{0}^{2 \\pi} \\sin{\\left(x \\right)}\\,dx = 0$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-139b67",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{-3}^{3} x^{3}\\,dx$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Think about the graph: where is it above and below the axis?",
+    "A definite integral is a net (signed) area."
+   ],
+   "solution": [
+    "Here the function is odd, so the negative area on $[-c, 0]$ cancels the positive area on $[0, c]$.",
+    "So $\\int_{-3}^{3} x^{3}\\,dx = 0$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-2ddce1",
+   "skill": "definite-integral",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{2} x^{2}\\,dx$.",
+   "checker": "numeric",
+   "answer": "8/3",
+   "hints": [
+    "Think about the graph: where is it above and below the axis?",
+    "A definite integral is a net (signed) area."
+   ],
+   "solution": [
+    "Here using the formula $\\int_0^b x^2\\,dx = b^3/3$ from the limit of Riemann sums.",
+    "So $\\int_{0}^{2} x^{2}\\,dx = \\frac{8}{3}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "definite-integral-7d7451",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "The definite integral $\\displaystyle\\int_a^b f(x)\\,dx$ is defined as",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Riemann sums approximate; the integral is their limit.",
+    "Any sample points $x_i^*$ in the subintervals may be used."
+   ],
+   "solution": [
+    "$\\int_a^b f(x)\\,dx = \\lim_{n\\to\\infty}\\sum f(x_i^*)\\Delta x$ with $\\Delta x = (b-a)/n$.",
+    "The value $f(b) - f(a)$ is not the integral (though $F(b) - F(a)$ for an antiderivative $F$ will be, by the FTC)."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x$, a limit of Riemann sums",
+    "the average of $f(a)$ and $f(b)$ times $b - a$",
+    "$f(b) - f(a)$",
+    "$\\sum_{i=1}^{n} f(x_i)$ for a fixed $n$"
+   ]
+  },
+  {
+   "id": "definite-integral-a4250a",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "If $f(x) \\le 0$ for all $x$ in $[a, b]$, then $\\displaystyle\\int_a^b f(x)\\,dx$ is",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Each term $f(x_i^*)\\Delta x$ in the Riemann sum is negative or zero.",
+    "Integrals measure signed area."
+   ],
+   "solution": [
+    "All Riemann sums are $\\le 0$, so the integral is $\\le 0$.",
+    "Its absolute value is the area of the region below the axis."
+   ],
+   "verified": true,
+   "choices": [
+    "always zero",
+    "undefined",
+    "the area between the graph and the $x$-axis",
+    "the negative of the area between the graph and the $x$-axis"
+   ]
+  },
+  {
+   "id": "definite-integral-264e9f",
+   "skill": "definite-integral",
+   "difficulty": 1,
+   "statement": "Which property of definite integrals is correct?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Integration is linear: it respects sums and constant multiples.",
+    "Test the others with $f = g = 1$ on $[0, 2]$."
+   ],
+   "solution": [
+    "Sums pass through the integral because they pass through each Riemann sum.",
+    "Products, quotients and powers do not: e.g. $\\int_0^2 1\\cdot 1\\,dx = 2$ but $\\int_0^2 1\\,dx \\cdot \\int_0^2 1\\,dx = 4$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\displaystyle\\int_a^b [f(x) + g(x)]\\,dx = \\int_a^b f(x)\\,dx + \\int_a^b g(x)\\,dx$",
+    "$\\displaystyle\\int_a^b \\frac{f(x)}{g(x)}\\,dx = \\frac{\\int_a^b f(x)\\,dx}{\\int_a^b g(x)\\,dx}$",
+    "$\\displaystyle\\int_a^b [f(x)]^2\\,dx = \\left[\\int_a^b f(x)\\,dx\\right]^2$",
+    "$\\displaystyle\\int_a^b f(x)g(x)\\,dx = \\int_a^b f(x)\\,dx \\cdot \\int_a^b g(x)\\,dx$"
+   ]
+  }
+ ]
+}

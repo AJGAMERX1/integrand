@@ -1,0 +1,890 @@
+{
+ "skill": "limit-laws",
+ "problems": [
+  {
+   "id": "limit-laws-a1371f",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Suppose $\\displaystyle\\lim_{x \\to 1} f(x) = 5$ and $\\displaystyle\\lim_{x \\to 1} g(x) = -4$. Find $\\displaystyle\\lim_{x \\to 1} \\dfrac{f(x)}{g(x)}$.",
+   "checker": "numeric",
+   "answer": "-5/4",
+   "hints": [
+    "Limit laws let you push the limit inside sums, products, quotients and powers.",
+    "Apply the quotient law (allowed since the limit of $g$ is not $0$), then substitute the given limit values."
+   ],
+   "solution": [
+    "By the quotient law (allowed since the limit of $g$ is not $0$), the limit equals the same combination of $5$ and $-4$.",
+    "$= - \\frac{5}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-2ea1a9",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Suppose $\\displaystyle\\lim_{x \\to 1} f(x) = 5$ and $\\displaystyle\\lim_{x \\to 1} g(x) = 5$. Find $\\displaystyle\\lim_{x \\to 1} \\dfrac{f(x)}{g(x)}$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Limit laws let you push the limit inside sums, products, quotients and powers.",
+    "Apply the quotient law (allowed since the limit of $g$ is not $0$), then substitute the given limit values."
+   ],
+   "solution": [
+    "By the quotient law (allowed since the limit of $g$ is not $0$), the limit equals the same combination of $5$ and $5$.",
+    "$= 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-e3e7ed",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Suppose $\\displaystyle\\lim_{x \\to 1} f(x) = -4$ and $\\displaystyle\\lim_{x \\to 1} g(x) = 4$. Find $\\displaystyle\\lim_{x \\to 1} [f(x)]^2 - g(x)$.",
+   "checker": "numeric",
+   "answer": "12",
+   "hints": [
+    "Limit laws let you push the limit inside sums, products, quotients and powers.",
+    "Apply the power and difference laws, then substitute the given limit values."
+   ],
+   "solution": [
+    "By the power and difference laws, the limit equals the same combination of $-4$ and $4$.",
+    "$= 12$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-5835ea",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Suppose $\\displaystyle\\lim_{x \\to -2} f(x) = 3$ and $\\displaystyle\\lim_{x \\to -2} g(x) = -1$. Find $\\displaystyle\\lim_{x \\to -2} [f(x)]^2 - g(x)$.",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "Limit laws let you push the limit inside sums, products, quotients and powers.",
+    "Apply the power and difference laws, then substitute the given limit values."
+   ],
+   "solution": [
+    "By the power and difference laws, the limit equals the same combination of $3$ and $-1$.",
+    "$= 10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-51368b",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Suppose $\\displaystyle\\lim_{x \\to 2} f(x) = -2$ and $\\displaystyle\\lim_{x \\to 2} g(x) = -3$. Find $\\displaystyle\\lim_{x \\to 2} \\dfrac{f(x)}{g(x)}$.",
+   "checker": "numeric",
+   "answer": "2/3",
+   "hints": [
+    "Limit laws let you push the limit inside sums, products, quotients and powers.",
+    "Apply the quotient law (allowed since the limit of $g$ is not $0$), then substitute the given limit values."
+   ],
+   "solution": [
+    "By the quotient law (allowed since the limit of $g$ is not $0$), the limit equals the same combination of $-2$ and $-3$.",
+    "$= \\frac{2}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-a631dd",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Suppose $\\displaystyle\\lim_{x \\to 3} f(x) = 6$ and $\\displaystyle\\lim_{x \\to 3} g(x) = -4$. Find $\\displaystyle\\lim_{x \\to 3} [-3f(x) - 2g(x)]$.",
+   "checker": "numeric",
+   "answer": "-10",
+   "hints": [
+    "Limit laws let you push the limit inside sums, products, quotients and powers.",
+    "Apply the sum and constant-multiple laws, then substitute the given limit values."
+   ],
+   "solution": [
+    "By the sum and constant-multiple laws, the limit equals the same combination of $6$ and $-4$.",
+    "$= -10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-673080",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Suppose $\\displaystyle\\lim_{x \\to 2} f(x) = 1$ and $\\displaystyle\\lim_{x \\to 2} g(x) = 2$. Find $\\displaystyle\\lim_{x \\to 2} \\sqrt{f(x)} + g(x)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Limit laws let you push the limit inside sums, products, quotients and powers.",
+    "Apply the root and sum laws, then substitute the given limit values."
+   ],
+   "solution": [
+    "By the root and sum laws, the limit equals the same combination of $1$ and $2$.",
+    "$= 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-30cd0d",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Suppose $\\displaystyle\\lim_{x \\to 2} f(x) = -4$ and $\\displaystyle\\lim_{x \\to 2} g(x) = 4$. Find $\\displaystyle\\lim_{x \\to 2} [f(x)\\,g(x)]$.",
+   "checker": "numeric",
+   "answer": "-16",
+   "hints": [
+    "Limit laws let you push the limit inside sums, products, quotients and powers.",
+    "Apply the product law, then substitute the given limit values."
+   ],
+   "solution": [
+    "By the product law, the limit equals the same combination of $-4$ and $4$.",
+    "$= -16$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-196cfb",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -3} \\left(\\sqrt{x^{2} + 9}\\right)$.",
+   "checker": "numeric",
+   "answer": "3*sqrt(2)",
+   "hints": [
+    "Polynomials and rational functions are continuous wherever they are defined, so limits can be found by direct substitution.",
+    "Check that substituting $x = -3$ does not make a denominator zero, then substitute."
+   ],
+   "solution": [
+    "Direct substitution is valid here because the function is defined at $x = -3$.",
+    "$\\lim_{x \\to -3} \\sqrt{x^{2} + 9} = 3 \\sqrt{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-9abca5",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -2} \\left(x^{2} + 3 x\\right)$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "Polynomials and rational functions are continuous wherever they are defined, so limits can be found by direct substitution.",
+    "Check that substituting $x = -2$ does not make a denominator zero, then substitute."
+   ],
+   "solution": [
+    "Direct substitution is valid here because the function is defined at $x = -2$.",
+    "$\\lim_{x \\to -2} x^{2} + 3 x = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-19e244",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 1} \\left(\\frac{x^{2} + 4}{x - 4}\\right)$.",
+   "checker": "numeric",
+   "answer": "-5/3",
+   "hints": [
+    "Polynomials and rational functions are continuous wherever they are defined, so limits can be found by direct substitution.",
+    "Check that substituting $x = 1$ does not make a denominator zero, then substitute."
+   ],
+   "solution": [
+    "Direct substitution is valid here because the function is defined at $x = 1$.",
+    "$\\lim_{x \\to 1} \\frac{x^{2} + 4}{x - 4} = - \\frac{5}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-3eadf6",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -3} \\left(x^{2} + 4 x + 1\\right)$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "Polynomials and rational functions are continuous wherever they are defined, so limits can be found by direct substitution.",
+    "Check that substituting $x = -3$ does not make a denominator zero, then substitute."
+   ],
+   "solution": [
+    "Direct substitution is valid here because the function is defined at $x = -3$.",
+    "$\\lim_{x \\to -3} x^{2} + 4 x + 1 = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-664d46",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -2} \\left(2 x^{2} + x + 3\\right)$.",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "Polynomials and rational functions are continuous wherever they are defined, so limits can be found by direct substitution.",
+    "Check that substituting $x = -2$ does not make a denominator zero, then substitute."
+   ],
+   "solution": [
+    "Direct substitution is valid here because the function is defined at $x = -2$.",
+    "$\\lim_{x \\to -2} 2 x^{2} + x + 3 = 9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-b9f146",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 3} \\left(3 x^{2} + 2 x\\right)$.",
+   "checker": "numeric",
+   "answer": "33",
+   "hints": [
+    "Polynomials and rational functions are continuous wherever they are defined, so limits can be found by direct substitution.",
+    "Check that substituting $x = 3$ does not make a denominator zero, then substitute."
+   ],
+   "solution": [
+    "Direct substitution is valid here because the function is defined at $x = 3$.",
+    "$\\lim_{x \\to 3} 3 x^{2} + 2 x = 33$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-d1c406",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -3} \\left(\\frac{x^{2} + 5}{x + 4}\\right)$.",
+   "checker": "numeric",
+   "answer": "14",
+   "hints": [
+    "Polynomials and rational functions are continuous wherever they are defined, so limits can be found by direct substitution.",
+    "Check that substituting $x = -3$ does not make a denominator zero, then substitute."
+   ],
+   "solution": [
+    "Direct substitution is valid here because the function is defined at $x = -3$.",
+    "$\\lim_{x \\to -3} \\frac{x^{2} + 5}{x + 4} = 14$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-d25ff7",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -3} \\frac{x^{2} - 9}{x + 3}$.",
+   "checker": "numeric",
+   "answer": "-6",
+   "hints": [
+    "Substituting $x = -3$ gives $0/0$, so simplify first.",
+    "Factor the numerator; $(x + 3)$ is a common factor."
+   ],
+   "solution": [
+    "The numerator factors as $(x + 3)(x - 3)$, so for $x \\ne -3$ the fraction equals $x - 3$.",
+    "Now substitute: $\\lim_{x \\to -3} x - 3 = -6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-3f6317",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 3} \\frac{x^{2} - x - 6}{x^{2} - 4 x + 3}$.",
+   "checker": "numeric",
+   "answer": "5/2",
+   "hints": [
+    "Substituting $x = 3$ gives $0/0$, so simplify first.",
+    "Factor the numerator and denominator; $(x - 3)$ is a common factor."
+   ],
+   "solution": [
+    "The numerator factors as $(x - 3)(x + 2)$, so for $x \\ne 3$ the fraction equals $\\frac{x + 2}{x - 1}$.",
+    "Now substitute: $\\lim_{x \\to 3} \\frac{x + 2}{x - 1} = \\frac{5}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-267fc9",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -3} \\frac{x^{2} + 8 x + 15}{x + 3}$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Substituting $x = -3$ gives $0/0$, so simplify first.",
+    "Factor the numerator; $(x + 3)$ is a common factor."
+   ],
+   "solution": [
+    "The numerator factors as $(x + 3)(x + 5)$, so for $x \\ne -3$ the fraction equals $x + 5$.",
+    "Now substitute: $\\lim_{x \\to -3} x + 5 = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-7aa534",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 2} \\frac{x^{3} - 8}{x - 2}$.",
+   "checker": "numeric",
+   "answer": "12",
+   "hints": [
+    "Substituting $x = 2$ gives $0/0$, so simplify first.",
+    "Factor the numerator; $(x - 2)$ is a common factor."
+   ],
+   "solution": [
+    "The numerator factors as $(x - 2)(x^2 + 2x + 4)$, so for $x \\ne 2$ the fraction equals $x^{2} + 2 x + 4$.",
+    "Now substitute: $\\lim_{x \\to 2} x^{2} + 2 x + 4 = 12$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-707cb7",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -1} \\frac{x^{2} - 1}{x^{2} + 4 x + 3}$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "Substituting $x = -1$ gives $0/0$, so simplify first.",
+    "Factor the numerator and denominator; $(x + 1)$ is a common factor."
+   ],
+   "solution": [
+    "The numerator factors as $(x + 1)(x - 1)$, so for $x \\ne -1$ the fraction equals $\\frac{x - 1}{x + 3}$.",
+    "Now substitute: $\\lim_{x \\to -1} \\frac{x - 1}{x + 3} = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-12b010",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 4} \\frac{2 x^{2} - 32}{x - 4}$.",
+   "checker": "numeric",
+   "answer": "16",
+   "hints": [
+    "Substituting $x = 4$ gives $0/0$, so simplify first.",
+    "Factor the numerator; $(x - 4)$ is a common factor."
+   ],
+   "solution": [
+    "The numerator factors as $2(x - 4)(x + 4)$, so for $x \\ne 4$ the fraction equals $2 x + 8$.",
+    "Now substitute: $\\lim_{x \\to 4} 2 x + 8 = 16$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-551404",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -2} \\frac{x^{3} + 8}{x + 2}$.",
+   "checker": "numeric",
+   "answer": "12",
+   "hints": [
+    "Substituting $x = -2$ gives $0/0$, so simplify first.",
+    "Factor the numerator; $(x + 2)$ is a common factor."
+   ],
+   "solution": [
+    "The numerator factors as $(x + 2)(x^2 - 2x + 4)$, so for $x \\ne -2$ the fraction equals $x^{2} - 2 x + 4$.",
+    "Now substitute: $\\lim_{x \\to -2} x^{2} - 2 x + 4 = 12$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-0f9d64",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -3} \\frac{3 x^{2} - 27}{x + 3}$.",
+   "checker": "numeric",
+   "answer": "-18",
+   "hints": [
+    "Substituting $x = -3$ gives $0/0$, so simplify first.",
+    "Factor the numerator; $(x + 3)$ is a common factor."
+   ],
+   "solution": [
+    "The numerator factors as $3(x + 3)(x - 3)$, so for $x \\ne -3$ the fraction equals $3 x - 9$.",
+    "Now substitute: $\\lim_{x \\to -3} 3 x - 9 = -18$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-0197e0",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -2} \\frac{x^{2} - 3 x - 10}{x^{2} + 7 x + 10}$.",
+   "checker": "numeric",
+   "answer": "-7/3",
+   "hints": [
+    "Substituting $x = -2$ gives $0/0$, so simplify first.",
+    "Factor the numerator and denominator; $(x + 2)$ is a common factor."
+   ],
+   "solution": [
+    "The numerator factors as $(x + 2)(x - 5)$, so for $x \\ne -2$ the fraction equals $\\frac{x - 5}{x + 5}$.",
+    "Now substitute: $\\lim_{x \\to -2} \\frac{x - 5}{x + 5} = - \\frac{7}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-813726",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 14} \\frac{x - 14}{\\sqrt{x + 2} - 4}$.",
+   "checker": "numeric",
+   "answer": "8",
+   "hints": [
+    "Direct substitution gives $0/0$; multiply numerator and denominator by the conjugate of the root expression.",
+    "The conjugate is $\\sqrt{x + 2} + 4$; the product $(\\sqrt{u} - r)(\\sqrt{u} + r) = u - r^2$ removes the root."
+   ],
+   "solution": [
+    "Multiply top and bottom by $\\sqrt{x + 2} + 4$: the denominator becomes $(x + 2) - 16 = x - 14$, which cancels with the other factor.",
+    "What remains is $\\frac{x - 14}{\\sqrt{x + 2} - 4}$ for $x \\ne 14$; substituting $x = 14$ gives $8$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-0b8c02",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 3} \\frac{\\sqrt{x + 1} - 2}{x - 3}$.",
+   "checker": "numeric",
+   "answer": "1/4",
+   "hints": [
+    "Direct substitution gives $0/0$; multiply numerator and denominator by the conjugate of the root expression.",
+    "The conjugate is $\\sqrt{x + 1} + 2$; the product $(\\sqrt{u} - r)(\\sqrt{u} + r) = u - r^2$ removes the root."
+   ],
+   "solution": [
+    "Multiply top and bottom by $\\sqrt{x + 1} + 2$: the numerator becomes $(x + 1) - 4 = x - 3$, which cancels with the other factor.",
+    "What remains is $\\frac{\\sqrt{x + 1} - 2}{x - 3}$ for $x \\ne 3$; substituting $x = 3$ gives $\\frac{1}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-114762",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 4} \\frac{\\sqrt{x} - 2}{x - 4}$.",
+   "checker": "numeric",
+   "answer": "1/4",
+   "hints": [
+    "Direct substitution gives $0/0$; multiply numerator and denominator by the conjugate of the root expression.",
+    "The conjugate is $\\sqrt{x} + 2$; the product $(\\sqrt{u} - r)(\\sqrt{u} + r) = u - r^2$ removes the root."
+   ],
+   "solution": [
+    "Multiply top and bottom by $\\sqrt{x} + 2$: the numerator becomes $(x + 0) - 4 = x - 4$, which cancels with the other factor.",
+    "What remains is $\\frac{\\sqrt{x} - 2}{x - 4}$ for $x \\ne 4$; substituting $x = 4$ gives $\\frac{1}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-4d8c41",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 1} \\frac{\\sqrt{x + 3} - 2}{x - 1}$.",
+   "checker": "numeric",
+   "answer": "1/4",
+   "hints": [
+    "Direct substitution gives $0/0$; multiply numerator and denominator by the conjugate of the root expression.",
+    "The conjugate is $\\sqrt{x + 3} + 2$; the product $(\\sqrt{u} - r)(\\sqrt{u} + r) = u - r^2$ removes the root."
+   ],
+   "solution": [
+    "Multiply top and bottom by $\\sqrt{x + 3} + 2$: the numerator becomes $(x + 3) - 4 = x - 1$, which cancels with the other factor.",
+    "What remains is $\\frac{\\sqrt{x + 3} - 2}{x - 1}$ for $x \\ne 1$; substituting $x = 1$ gives $\\frac{1}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-53f63a",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 4} \\frac{x - 4}{\\sqrt{x + 5} - 3}$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Direct substitution gives $0/0$; multiply numerator and denominator by the conjugate of the root expression.",
+    "The conjugate is $\\sqrt{x + 5} + 3$; the product $(\\sqrt{u} - r)(\\sqrt{u} + r) = u - r^2$ removes the root."
+   ],
+   "solution": [
+    "Multiply top and bottom by $\\sqrt{x + 5} + 3$: the denominator becomes $(x + 5) - 9 = x - 4$, which cancels with the other factor.",
+    "What remains is $\\frac{x - 4}{\\sqrt{x + 5} - 3}$ for $x \\ne 4$; substituting $x = 4$ gives $6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-c5963a",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 2} \\frac{x - 2}{\\sqrt{x + 2} - 2}$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Direct substitution gives $0/0$; multiply numerator and denominator by the conjugate of the root expression.",
+    "The conjugate is $\\sqrt{x + 2} + 2$; the product $(\\sqrt{u} - r)(\\sqrt{u} + r) = u - r^2$ removes the root."
+   ],
+   "solution": [
+    "Multiply top and bottom by $\\sqrt{x + 2} + 2$: the denominator becomes $(x + 2) - 4 = x - 2$, which cancels with the other factor.",
+    "What remains is $\\frac{x - 2}{\\sqrt{x + 2} - 2}$ for $x \\ne 2$; substituting $x = 2$ gives $4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-7c344e",
+   "skill": "limit-laws",
+   "difficulty": 3,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -2} \\frac{\\frac{1}{2} + \\frac{1}{x}}{x + 2}$.",
+   "checker": "numeric",
+   "answer": "-1/4",
+   "hints": [
+    "Combine the two fractions in the numerator over a common denominator first.",
+    "You should get $\\dfrac{-2 - x}{-2x}$ on top; then the factor $x - -2$ cancels."
+   ],
+   "solution": [
+    "$\\dfrac{1}{x} - \\dfrac{1}{-2} = \\dfrac{-2 - x}{-2x}$, so the expression equals $\\dfrac{-2 - x}{-2x(x - -2)} = -\\dfrac{1}{-2x}$.",
+    "Substituting $x = -2$: $-\\dfrac{1}{4} = - \\frac{1}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-9f685e",
+   "skill": "limit-laws",
+   "difficulty": 3,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -4} \\frac{\\frac{1}{4} + \\frac{1}{x}}{x + 4}$.",
+   "checker": "numeric",
+   "answer": "-1/16",
+   "hints": [
+    "Combine the two fractions in the numerator over a common denominator first.",
+    "You should get $\\dfrac{-4 - x}{-4x}$ on top; then the factor $x - -4$ cancels."
+   ],
+   "solution": [
+    "$\\dfrac{1}{x} - \\dfrac{1}{-4} = \\dfrac{-4 - x}{-4x}$, so the expression equals $\\dfrac{-4 - x}{-4x(x - -4)} = -\\dfrac{1}{-4x}$.",
+    "Substituting $x = -4$: $-\\dfrac{1}{16} = - \\frac{1}{16}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-a27331",
+   "skill": "limit-laws",
+   "difficulty": 3,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 4} \\frac{- \\frac{1}{4} + \\frac{1}{x}}{x - 4}$.",
+   "checker": "numeric",
+   "answer": "-1/16",
+   "hints": [
+    "Combine the two fractions in the numerator over a common denominator first.",
+    "You should get $\\dfrac{4 - x}{4x}$ on top; then the factor $x - 4$ cancels."
+   ],
+   "solution": [
+    "$\\dfrac{1}{x} - \\dfrac{1}{4} = \\dfrac{4 - x}{4x}$, so the expression equals $\\dfrac{4 - x}{4x(x - 4)} = -\\dfrac{1}{4x}$.",
+    "Substituting $x = 4$: $-\\dfrac{1}{16} = - \\frac{1}{16}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-1c954d",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{h \\to 0} \\dfrac{(-1+h)^3 - -1}{h}$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Expand $(-1+h)^3$; the constant term cancels with $-1$.",
+    "Every remaining term has a factor $h$ that cancels with the denominator."
+   ],
+   "solution": [
+    "$(-1+h)^3 - -1 = h^{3} - 3 h^{2} + 3 h$.",
+    "Dividing by $h$ leaves $h^{2} - 3 h + 3$, which approaches $3$ as $h \\to 0$."
+   ],
+   "verified": true,
+   "variable": "h"
+  },
+  {
+   "id": "limit-laws-7f66b8",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{h \\to 0} \\dfrac{(2+h)^2 - 4}{h}$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "Expand $(2+h)^2$; the constant term cancels with $4$.",
+    "Every remaining term has a factor $h$ that cancels with the denominator."
+   ],
+   "solution": [
+    "$(2+h)^2 - 4 = h^{2} + 4 h$.",
+    "Dividing by $h$ leaves $h + 4$, which approaches $4$ as $h \\to 0$."
+   ],
+   "verified": true,
+   "variable": "h"
+  },
+  {
+   "id": "limit-laws-b4eb1e",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{h \\to 0} \\dfrac{(3+h)^2 - 9}{h}$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Expand $(3+h)^2$; the constant term cancels with $9$.",
+    "Every remaining term has a factor $h$ that cancels with the denominator."
+   ],
+   "solution": [
+    "$(3+h)^2 - 9 = h^{2} + 6 h$.",
+    "Dividing by $h$ leaves $h + 6$, which approaches $6$ as $h \\to 0$."
+   ],
+   "verified": true,
+   "variable": "h"
+  },
+  {
+   "id": "limit-laws-ac63d4",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{h \\to 0} \\dfrac{(3+h)^3 - 27}{h}$.",
+   "checker": "numeric",
+   "answer": "27",
+   "hints": [
+    "Expand $(3+h)^3$; the constant term cancels with $27$.",
+    "Every remaining term has a factor $h$ that cancels with the denominator."
+   ],
+   "solution": [
+    "$(3+h)^3 - 27 = h^{3} + 9 h^{2} + 27 h$.",
+    "Dividing by $h$ leaves $h^{2} + 9 h + 27$, which approaches $27$ as $h \\to 0$."
+   ],
+   "verified": true,
+   "variable": "h"
+  },
+  {
+   "id": "limit-laws-168a4b",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{h \\to 0} \\dfrac{(0+h)^3 - 0}{h}$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Expand $(0+h)^3$; the constant term cancels with $0$.",
+    "Every remaining term has a factor $h$ that cancels with the denominator."
+   ],
+   "solution": [
+    "$(0+h)^3 - 0 = h^{3}$.",
+    "Dividing by $h$ leaves $h^{2}$, which approaches $0$ as $h \\to 0$."
+   ],
+   "verified": true,
+   "variable": "h"
+  },
+  {
+   "id": "limit-laws-29b41d",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Evaluate $\\displaystyle\\lim_{h \\to 0} \\dfrac{(0+h)^2 - 0}{h}$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Expand $(0+h)^2$; the constant term cancels with $0$.",
+    "Every remaining term has a factor $h$ that cancels with the denominator."
+   ],
+   "solution": [
+    "$(0+h)^2 - 0 = h^{2}$.",
+    "Dividing by $h$ leaves $h$, which approaches $0$ as $h \\to 0$."
+   ],
+   "verified": true,
+   "variable": "h"
+  },
+  {
+   "id": "limit-laws-ef3621",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Suppose $2 x - 2 \\le f(x) \\le 2 x^{2} - 8 x + 10$ for all $x$ near $2$. Find $\\displaystyle\\lim_{x \\to 2} f(x)$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Use the Squeeze Theorem: find the limits of the two bounding functions.",
+    "If both bounds approach the same number, $f$ is forced to approach it too."
+   ],
+   "solution": [
+    "$\\lim_{x \\to 2} (2 x - 2) = 2$ and $\\lim_{x \\to 2} (2 x^{2} - 8 x + 10) = 2$.",
+    "By the Squeeze Theorem, $\\lim_{x \\to 2} f(x) = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-962659",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Suppose $x + 1 \\le f(x) \\le 3 x^{2} - 12 x + 15$ for all $x$ near $2$. Find $\\displaystyle\\lim_{x \\to 2} f(x)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Use the Squeeze Theorem: find the limits of the two bounding functions.",
+    "If both bounds approach the same number, $f$ is forced to approach it too."
+   ],
+   "solution": [
+    "$\\lim_{x \\to 2} (x + 1) = 3$ and $\\lim_{x \\to 2} (3 x^{2} - 12 x + 15) = 3$.",
+    "By the Squeeze Theorem, $\\lim_{x \\to 2} f(x) = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-0f28e5",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Suppose $2 x - 9 \\le f(x) \\le 3 x^{2} - 18 x + 24$ for all $x$ near $3$. Find $\\displaystyle\\lim_{x \\to 3} f(x)$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Use the Squeeze Theorem: find the limits of the two bounding functions.",
+    "If both bounds approach the same number, $f$ is forced to approach it too."
+   ],
+   "solution": [
+    "$\\lim_{x \\to 3} (2 x - 9) = -3$ and $\\lim_{x \\to 3} (3 x^{2} - 18 x + 24) = -3$.",
+    "By the Squeeze Theorem, $\\lim_{x \\to 3} f(x) = -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-e1a455",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Suppose $x - 5 \\le f(x) \\le 2 x^{2} - 12 x + 16$ for all $x$ near $3$. Find $\\displaystyle\\lim_{x \\to 3} f(x)$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "Use the Squeeze Theorem: find the limits of the two bounding functions.",
+    "If both bounds approach the same number, $f$ is forced to approach it too."
+   ],
+   "solution": [
+    "$\\lim_{x \\to 3} (x - 5) = -2$ and $\\lim_{x \\to 3} (2 x^{2} - 12 x + 16) = -2$.",
+    "By the Squeeze Theorem, $\\lim_{x \\to 3} f(x) = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-9c7f3f",
+   "skill": "limit-laws",
+   "difficulty": 2,
+   "statement": "Suppose $2 x - 9 \\le f(x) \\le x^{2} - 6 x + 6$ for all $x$ near $3$. Find $\\displaystyle\\lim_{x \\to 3} f(x)$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Use the Squeeze Theorem: find the limits of the two bounding functions.",
+    "If both bounds approach the same number, $f$ is forced to approach it too."
+   ],
+   "solution": [
+    "$\\lim_{x \\to 3} (2 x - 9) = -3$ and $\\lim_{x \\to 3} (x^{2} - 6 x + 6) = -3$.",
+    "By the Squeeze Theorem, $\\lim_{x \\to 3} f(x) = -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-e5f7d7",
+   "skill": "limit-laws",
+   "difficulty": 3,
+   "statement": "Use the Squeeze Theorem to evaluate $\\displaystyle\\lim_{x \\to 0} x^4\\cos\\left(\\dfrac{1}{x}\\right)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "$-1 \\le \\cos(\\text{anything}) \\le 1$.",
+    "Multiply the inequality by $x^4 \\ge 0$ to trap the function between $-x^4$ and $x^4$."
+   ],
+   "solution": [
+    "$-x^4 \\le x^4\\cos(1/x) \\le x^4$ for $x \\ne 0$.",
+    "Both $-x^4$ and $x^4$ approach $0$ as $x \\to 0$, so the limit is $0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-f82355",
+   "skill": "limit-laws",
+   "difficulty": 3,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -3^+} \\dfrac{x^2 - 9}{|x - (-3)|}$.",
+   "checker": "numeric",
+   "answer": "-6",
+   "hints": [
+    "For $x > -3$, $|x - (-3)| = x - (-3)$.",
+    "Factor $x^2 - 9 = (x - (-3))(x + (-3))$ and cancel."
+   ],
+   "solution": [
+    "On this side the expression equals $(x + (-3))$ after canceling $x - (-3)$.",
+    "Substituting $x = -3$ gives $-6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-eadd82",
+   "skill": "limit-laws",
+   "difficulty": 3,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to -2^-} \\dfrac{x^2 - 4}{|x - (-2)|}$.",
+   "checker": "numeric",
+   "answer": "4",
+   "hints": [
+    "For $x < -2$, $|x - (-2)| = -(x - (-2))$.",
+    "Factor $x^2 - 4 = (x - (-2))(x + (-2))$ and cancel."
+   ],
+   "solution": [
+    "On this side the expression equals $-(x + (-2))$ after canceling $x - (-2)$.",
+    "Substituting $x = -2$ gives $4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-2f54bc",
+   "skill": "limit-laws",
+   "difficulty": 3,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 3^+} \\dfrac{x^2 - 9}{|x - (3)|}$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "For $x > 3$, $|x - (3)| = x - (3)$.",
+    "Factor $x^2 - 9 = (x - (3))(x + (3))$ and cancel."
+   ],
+   "solution": [
+    "On this side the expression equals $(x + (3))$ after canceling $x - (3)$.",
+    "Substituting $x = 3$ gives $6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-2c007c",
+   "skill": "limit-laws",
+   "difficulty": 3,
+   "statement": "Evaluate $\\displaystyle\\lim_{x \\to 1^-} \\dfrac{x^2 - 1}{|x - (1)|}$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "For $x < 1$, $|x - (1)| = -(x - (1))$.",
+    "Factor $x^2 - 1 = (x - (1))(x + (1))$ and cancel."
+   ],
+   "solution": [
+    "On this side the expression equals $-(x + (1))$ after canceling $x - (1)$.",
+    "Substituting $x = 1$ gives $-2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "limit-laws-e8aaad",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "When evaluating $\\displaystyle\\lim_{x \\to 4} \\dfrac{f(x)}{g(x)}$ you find that $f(4) = 0$ and $g(4) = 0$. What can you conclude?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "$0/0$ is called an indeterminate form; it carries no information by itself.",
+    "Compare $\\frac{x - 4}{x - 4}$ and $\\frac{(x-4)^2}{x - 4}$ near $4$."
+   ],
+   "solution": [
+    "The quotient law needs the denominator's limit to be nonzero, so it does not apply; but $0/0$ does not decide the answer.",
+    "Algebra (factoring, rationalizing, combining fractions) often produces an equivalent expression whose limit can be found."
+   ],
+   "verified": true,
+   "choices": [
+    "the limit might still exist; simplify the expression first (for example, factor and cancel)",
+    "the limit equals $1$",
+    "the limit is $0$",
+    "the limit does not exist"
+   ]
+  },
+  {
+   "id": "limit-laws-4162da",
+   "skill": "limit-laws",
+   "difficulty": 1,
+   "statement": "When evaluating $\\displaystyle\\lim_{x \\to 2} \\dfrac{f(x)}{g(x)}$ you find that $f(2) = 0$ and $g(2) = 0$. What can you conclude?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "$0/0$ is called an indeterminate form; it carries no information by itself.",
+    "Compare $\\frac{x - 2}{x - 2}$ and $\\frac{(x-2)^2}{x - 2}$ near $2$."
+   ],
+   "solution": [
+    "The quotient law needs the denominator's limit to be nonzero, so it does not apply; but $0/0$ does not decide the answer.",
+    "Algebra (factoring, rationalizing, combining fractions) often produces an equivalent expression whose limit can be found."
+   ],
+   "verified": true,
+   "choices": [
+    "the limit is $0$",
+    "the limit equals $1$",
+    "the limit might still exist; simplify the expression first (for example, factor and cancel)",
+    "the limit does not exist"
+   ]
+  }
+ ]
+}

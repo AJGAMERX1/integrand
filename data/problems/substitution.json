@@ -1,0 +1,1335 @@
+{
+ "skill": "substitution",
+ "problems": [
+  {
+   "id": "substitution-9d701e",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{\\sin{\\left(\\sqrt{x} \\right)}}{\\sqrt{x}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-2*cos(sqrt(x))",
+   "hints": [
+    "Try the substitution $u = \\sqrt{x}$; then $du = \\frac{1}{2 \\sqrt{x}}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int 2 \\sin{\\left(u \\right)}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\sqrt{x}$, so $du = \\frac{1}{2 \\sqrt{x}}\\,dx$; hence $\\frac{\\sin{\\left(\\sqrt{x} \\right)}}{\\sqrt{x}}\\,dx = 2 \\sin{\\left(u \\right)}\\,du$.",
+    "$\\displaystyle\\int \\frac{\\sin{\\left(\\sqrt{x} \\right)}}{\\sqrt{x}}\\,dx = \\int 2 \\sin{\\left(u \\right)}\\,du = - 2 \\cos{\\left(u \\right)} + C$.",
+    "Substitute $u = \\sqrt{x}$ back: $- 2 \\cos{\\left(\\sqrt{x} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    4
+   ]
+  },
+  {
+   "id": "substitution-5146a3",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x^{2} \\sqrt{x^{3} + 5}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*(x^3+5)^(3/2)/9",
+   "hints": [
+    "Try the substitution $u = x^{3} + 5$; then $du = 3 x^{2}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sqrt{u}}{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{3} + 5$, so $du = 3 x^{2}\\,dx$; hence $x^{2} \\sqrt{x^{3} + 5}\\,dx = \\frac{\\sqrt{u}}{3}\\,du$.",
+    "$\\displaystyle\\int x^{2} \\sqrt{x^{3} + 5}\\,dx = \\int \\frac{\\sqrt{u}}{3}\\,du = \\frac{2 u^{\\frac{3}{2}}}{9} + C$.",
+    "Substitute $u = x^{3} + 5$ back: $\\frac{2 \\left(x^{3} + 5\\right)^{\\frac{3}{2}}}{9} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0,
+    2
+   ]
+  },
+  {
+   "id": "substitution-ce7ea0",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\tan{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-ln(cos(x))",
+   "hints": [
+    "Try the substitution $u = \\cos{\\left(x \\right)}$; then $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\cos{\\left(x \\right)}$, so $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$; hence $\\tan{\\left(x \\right)}\\,dx = - \\frac{1}{u}\\,du$.",
+    "$\\displaystyle\\int \\tan{\\left(x \\right)}\\,dx = \\int - \\frac{1}{u}\\,du = - \\ln{\\left(u \\right)} + C$.",
+    "Substitute $u = \\cos{\\left(x \\right)}$ back: $- \\ln{\\left(\\cos{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "substitution-51dcbf",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\sin{\\left(2 x + 1 \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-cos(2*x+1)/2",
+   "hints": [
+    "Try the substitution $u = 2 x + 1$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sin{\\left(u \\right)}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x + 1$, so $du = 2\\,dx$; hence $\\sin{\\left(2 x + 1 \\right)}\\,dx = \\frac{\\sin{\\left(u \\right)}}{2}\\,du$.",
+    "$\\displaystyle\\int \\sin{\\left(2 x + 1 \\right)}\\,dx = \\int \\frac{\\sin{\\left(u \\right)}}{2}\\,du = - \\frac{\\cos{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = 2 x + 1$ back: $- \\frac{\\cos{\\left(2 x + 1 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "substitution-74354b",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-1/sin(x)",
+   "hints": [
+    "Try the substitution $u = \\sin{\\left(x \\right)}$; then $du = \\cos{\\left(x \\right)}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u^{2}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\sin{\\left(x \\right)}$, so $du = \\cos{\\left(x \\right)}\\,dx$; hence $\\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)}}\\,dx = \\frac{1}{u^{2}}\\,du$.",
+    "$\\displaystyle\\int \\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)}}\\,dx = \\int \\frac{1}{u^{2}}\\,du = - \\frac{1}{u} + C$.",
+    "Substitute $u = \\sin{\\left(x \\right)}$ back: $- \\frac{1}{\\sin{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.8
+   ]
+  },
+  {
+   "id": "substitution-73578c",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int e^{\\cos{\\left(x \\right)}} \\sin{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-exp(cos(x))",
+   "hints": [
+    "Try the substitution $u = \\cos{\\left(x \\right)}$; then $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - e^{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\cos{\\left(x \\right)}$, so $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$; hence $e^{\\cos{\\left(x \\right)}} \\sin{\\left(x \\right)}\\,dx = - e^{u}\\,du$.",
+    "$\\displaystyle\\int e^{\\cos{\\left(x \\right)}} \\sin{\\left(x \\right)}\\,dx = \\int - e^{u}\\,du = - e^{u} + C$.",
+    "Substitute $u = \\cos{\\left(x \\right)}$ back: $- e^{\\cos{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "substitution-91a379",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x \\sqrt{x^{2} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(x^2+1)^(3/2)/3",
+   "hints": [
+    "Try the substitution $u = x^{2} + 1$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sqrt{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 1$, so $du = 2 x\\,dx$; hence $x \\sqrt{x^{2} + 1}\\,dx = \\frac{\\sqrt{u}}{2}\\,du$.",
+    "$\\displaystyle\\int x \\sqrt{x^{2} + 1}\\,dx = \\int \\frac{\\sqrt{u}}{2}\\,du = \\frac{u^{\\frac{3}{2}}}{3} + C$.",
+    "Substitute $u = x^{2} + 1$ back: $\\frac{\\left(x^{2} + 1\\right)^{\\frac{3}{2}}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "substitution-2e864e",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x}{\\sqrt{x^{2} + 5}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sqrt(x^2+5)",
+   "hints": [
+    "Try the substitution $u = x^{2} + 5$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 \\sqrt{u}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 5$, so $du = 2 x\\,dx$; hence $\\frac{x}{\\sqrt{x^{2} + 5}}\\,dx = \\frac{1}{2 \\sqrt{u}}\\,du$.",
+    "$\\displaystyle\\int \\frac{x}{\\sqrt{x^{2} + 5}}\\,dx = \\int \\frac{1}{2 \\sqrt{u}}\\,du = \\sqrt{u} + C$.",
+    "Substitute $u = x^{2} + 5$ back: $\\sqrt{x^{2} + 5} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "substitution-c68ab6",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int e^{\\sin{\\left(x \\right)}} \\cos{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "exp(sin(x))",
+   "hints": [
+    "Try the substitution $u = \\sin{\\left(x \\right)}$; then $du = \\cos{\\left(x \\right)}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int e^{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\sin{\\left(x \\right)}$, so $du = \\cos{\\left(x \\right)}\\,dx$; hence $e^{\\sin{\\left(x \\right)}} \\cos{\\left(x \\right)}\\,dx = e^{u}\\,du$.",
+    "$\\displaystyle\\int e^{\\sin{\\left(x \\right)}} \\cos{\\left(x \\right)}\\,dx = \\int e^{u}\\,du = e^{u} + C$.",
+    "Substitute $u = \\sin{\\left(x \\right)}$ back: $e^{\\sin{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "substitution-3596db",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\sin{\\left(4 x + 2 \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-cos(4*x+2)/4",
+   "hints": [
+    "Try the substitution $u = 4 x + 2$; then $du = 4\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sin{\\left(u \\right)}}{4}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 4 x + 2$, so $du = 4\\,dx$; hence $\\sin{\\left(4 x + 2 \\right)}\\,dx = \\frac{\\sin{\\left(u \\right)}}{4}\\,du$.",
+    "$\\displaystyle\\int \\sin{\\left(4 x + 2 \\right)}\\,dx = \\int \\frac{\\sin{\\left(u \\right)}}{4}\\,du = - \\frac{\\cos{\\left(u \\right)}}{4} + C$.",
+    "Substitute $u = 4 x + 2$ back: $- \\frac{\\cos{\\left(4 x + 2 \\right)}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "substitution-f2bb1b",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{\\left(4 x + 1\\right)^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-1/(4*(4*x+1))",
+   "hints": [
+    "Try the substitution $u = 4 x + 1$; then $du = 4\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{4 u^{2}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 4 x + 1$, so $du = 4\\,dx$; hence $\\frac{1}{\\left(4 x + 1\\right)^{2}}\\,dx = \\frac{1}{4 u^{2}}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{\\left(4 x + 1\\right)^{2}}\\,dx = \\int \\frac{1}{4 u^{2}}\\,du = - \\frac{1}{4 u} + C$.",
+    "Substitute $u = 4 x + 1$ back: $- \\frac{1}{4 \\left(4 x + 1\\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.25,
+    2.75
+   ]
+  },
+  {
+   "id": "substitution-0983e4",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\sin{\\left(x \\right)} \\cos^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-cos(x)^3/3",
+   "hints": [
+    "Try the substitution $u = \\cos{\\left(x \\right)}$; then $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - u^{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\cos{\\left(x \\right)}$, so $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$; hence $\\sin{\\left(x \\right)} \\cos^{2}{\\left(x \\right)}\\,dx = - u^{2}\\,du$.",
+    "$\\displaystyle\\int \\sin{\\left(x \\right)} \\cos^{2}{\\left(x \\right)}\\,dx = \\int - u^{2}\\,du = - \\frac{u^{3}}{3} + C$.",
+    "Substitute $u = \\cos{\\left(x \\right)}$ back: $- \\frac{\\cos^{3}{\\left(x \\right)}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "substitution-de44a9",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{2 x + 4}{x^{2} + 4 x + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x^2+4*x+1)",
+   "hints": [
+    "Try the substitution $u = x^{2} + 4 x + 1$; then $du = \\left(2 x + 4\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 4 x + 1$, so $du = \\left(2 x + 4\\right)\\,dx$; hence $\\frac{2 x + 4}{x^{2} + 4 x + 1}\\,dx = \\frac{1}{u}\\,du$.",
+    "$\\displaystyle\\int \\frac{2 x + 4}{x^{2} + 4 x + 1}\\,dx = \\int \\frac{1}{u}\\,du = \\ln{\\left(u \\right)} + C$.",
+    "Substitute $u = x^{2} + 4 x + 1$ back: $\\ln{\\left(x^{2} + 4 x + 1 \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "substitution-8749e0",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{\\ln{\\left(x \\right)}^{3}}{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x)^4/4",
+   "hints": [
+    "Try the substitution $u = \\ln{\\left(x \\right)}$; then $du = \\frac{1}{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int u^{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, so $du = \\frac{1}{x}\\,dx$; hence $\\frac{\\ln{\\left(x \\right)}^{3}}{x}\\,dx = u^{3}\\,du$.",
+    "$\\displaystyle\\int \\frac{\\ln{\\left(x \\right)}^{3}}{x}\\,dx = \\int u^{3}\\,du = \\frac{u^{4}}{4} + C$.",
+    "Substitute $u = \\ln{\\left(x \\right)}$ back: $\\frac{\\ln{\\left(x \\right)}^{4}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1,
+    4
+   ]
+  },
+  {
+   "id": "substitution-24ee90",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x \\cos{\\left(x^{2} \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sin(x^2)/2",
+   "hints": [
+    "Try the substitution $u = x^{2}$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\cos{\\left(u \\right)}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2}$, so $du = 2 x\\,dx$; hence $x \\cos{\\left(x^{2} \\right)}\\,dx = \\frac{\\cos{\\left(u \\right)}}{2}\\,du$.",
+    "$\\displaystyle\\int x \\cos{\\left(x^{2} \\right)}\\,dx = \\int \\frac{\\cos{\\left(u \\right)}}{2}\\,du = \\frac{\\sin{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = x^{2}$ back: $\\frac{\\sin{\\left(x^{2} \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "substitution-f4991b",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\left(2 - 4 x\\right)^{3}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-(2-4*x)^4/16",
+   "hints": [
+    "Try the substitution $u = 2 - 4 x$; then $du = -4\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - \\frac{u^{3}}{4}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 - 4 x$, so $du = -4\\,dx$; hence $\\left(2 - 4 x\\right)^{3}\\,dx = - \\frac{u^{3}}{4}\\,du$.",
+    "$\\displaystyle\\int \\left(2 - 4 x\\right)^{3}\\,dx = \\int - \\frac{u^{3}}{4}\\,du = - \\frac{u^{4}}{16} + C$.",
+    "Substitute $u = 2 - 4 x$ back: $- \\frac{\\left(2 - 4 x\\right)^{4}}{16} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "substitution-bd3a60",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{\\ln{\\left(x \\right)}}{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x)^2/2",
+   "hints": [
+    "Try the substitution $u = \\ln{\\left(x \\right)}$; then $du = \\frac{1}{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int u\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, so $du = \\frac{1}{x}\\,dx$; hence $\\frac{\\ln{\\left(x \\right)}}{x}\\,dx = u\\,du$.",
+    "$\\displaystyle\\int \\frac{\\ln{\\left(x \\right)}}{x}\\,dx = \\int u\\,du = \\frac{u^{2}}{2} + C$.",
+    "Substitute $u = \\ln{\\left(x \\right)}$ back: $\\frac{\\ln{\\left(x \\right)}^{2}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1,
+    4
+   ]
+  },
+  {
+   "id": "substitution-6a7ddf",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x^{2} \\sqrt{x^{3} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*(x^3+1)^(3/2)/9",
+   "hints": [
+    "Try the substitution $u = x^{3} + 1$; then $du = 3 x^{2}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sqrt{u}}{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{3} + 1$, so $du = 3 x^{2}\\,dx$; hence $x^{2} \\sqrt{x^{3} + 1}\\,dx = \\frac{\\sqrt{u}}{3}\\,du$.",
+    "$\\displaystyle\\int x^{2} \\sqrt{x^{3} + 1}\\,dx = \\int \\frac{\\sqrt{u}}{3}\\,du = \\frac{2 u^{\\frac{3}{2}}}{9} + C$.",
+    "Substitute $u = x^{3} + 1$ back: $\\frac{2 \\left(x^{3} + 1\\right)^{\\frac{3}{2}}}{9} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0,
+    2
+   ]
+  },
+  {
+   "id": "substitution-2f5bd0",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{x \\ln{\\left(x \\right)}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(ln(x))",
+   "hints": [
+    "Try the substitution $u = \\ln{\\left(x \\right)}$; then $du = \\frac{1}{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, so $du = \\frac{1}{x}\\,dx$; hence $\\frac{1}{x \\ln{\\left(x \\right)}}\\,dx = \\frac{1}{u}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{x \\ln{\\left(x \\right)}}\\,dx = \\int \\frac{1}{u}\\,du = \\ln{\\left(u \\right)} + C$.",
+    "Substitute $u = \\ln{\\left(x \\right)}$ back: $\\ln{\\left(\\ln{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1.5,
+    4
+   ]
+  },
+  {
+   "id": "substitution-645263",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x}{\\left(x^{2} + 1\\right)^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-1/(2*(x^2+1))",
+   "hints": [
+    "Try the substitution $u = x^{2} + 1$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 u^{2}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 1$, so $du = 2 x\\,dx$; hence $\\frac{x}{\\left(x^{2} + 1\\right)^{2}}\\,dx = \\frac{1}{2 u^{2}}\\,du$.",
+    "$\\displaystyle\\int \\frac{x}{\\left(x^{2} + 1\\right)^{2}}\\,dx = \\int \\frac{1}{2 u^{2}}\\,du = - \\frac{1}{2 u} + C$.",
+    "Substitute $u = x^{2} + 1$ back: $- \\frac{1}{2 \\left(x^{2} + 1\\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "substitution-fd79cd",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x \\sqrt{x^{2} + 5}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "(x^2+5)^(3/2)/3",
+   "hints": [
+    "Try the substitution $u = x^{2} + 5$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sqrt{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 5$, so $du = 2 x\\,dx$; hence $x \\sqrt{x^{2} + 5}\\,dx = \\frac{\\sqrt{u}}{2}\\,du$.",
+    "$\\displaystyle\\int x \\sqrt{x^{2} + 5}\\,dx = \\int \\frac{\\sqrt{u}}{2}\\,du = \\frac{u^{\\frac{3}{2}}}{3} + C$.",
+    "Substitute $u = x^{2} + 5$ back: $\\frac{\\left(x^{2} + 5\\right)^{\\frac{3}{2}}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "substitution-e1ac60",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\sec^{2}{\\left(3 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sin(3*x)/(3*cos(3*x))",
+   "hints": [
+    "Try the substitution $u = 3 x$; then $du = 3\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sec^{2}{\\left(u \\right)}}{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 3 x$, so $du = 3\\,dx$; hence $\\sec^{2}{\\left(3 x \\right)}\\,dx = \\frac{\\sec^{2}{\\left(u \\right)}}{3}\\,du$.",
+    "$\\displaystyle\\int \\sec^{2}{\\left(3 x \\right)}\\,dx = \\int \\frac{\\sec^{2}{\\left(u \\right)}}{3}\\,du = \\frac{\\sin{\\left(u \\right)}}{3 \\cos{\\left(u \\right)}} + C$.",
+    "Substitute $u = 3 x$ back: $\\frac{\\sin{\\left(3 x \\right)}}{3 \\cos{\\left(3 x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.25,
+    0.25
+   ]
+  },
+  {
+   "id": "substitution-7e8528",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int e^{3 x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "exp(3*x)/3",
+   "hints": [
+    "Try the substitution $u = 3 x$; then $du = 3\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{e^{u}}{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 3 x$, so $du = 3\\,dx$; hence $e^{3 x}\\,dx = \\frac{e^{u}}{3}\\,du$.",
+    "$\\displaystyle\\int e^{3 x}\\,dx = \\int \\frac{e^{u}}{3}\\,du = \\frac{e^{u}}{3} + C$.",
+    "Substitute $u = 3 x$ back: $\\frac{e^{3 x}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "substitution-3d0529",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x e^{x^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "exp(x^2)/2",
+   "hints": [
+    "Try the substitution $u = x^{2}$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{e^{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2}$, so $du = 2 x\\,dx$; hence $x e^{x^{2}}\\,dx = \\frac{e^{u}}{2}\\,du$.",
+    "$\\displaystyle\\int x e^{x^{2}}\\,dx = \\int \\frac{e^{u}}{2}\\,du = \\frac{e^{u}}{2} + C$.",
+    "Substitute $u = x^{2}$ back: $\\frac{e^{x^{2}}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "substitution-810d61",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x}{\\sqrt{x^{2} + 1}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sqrt(x^2+1)",
+   "hints": [
+    "Try the substitution $u = x^{2} + 1$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 \\sqrt{u}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 1$, so $du = 2 x\\,dx$; hence $\\frac{x}{\\sqrt{x^{2} + 1}}\\,dx = \\frac{1}{2 \\sqrt{u}}\\,du$.",
+    "$\\displaystyle\\int \\frac{x}{\\sqrt{x^{2} + 1}}\\,dx = \\int \\frac{1}{2 \\sqrt{u}}\\,du = \\sqrt{u} + C$.",
+    "Substitute $u = x^{2} + 1$ back: $\\sqrt{x^{2} + 1} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "substitution-d3f7d7",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "atan(sin(x))",
+   "hints": [
+    "Try the substitution $u = \\sin{\\left(x \\right)}$; then $du = \\cos{\\left(x \\right)}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u^{2} + 1}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\sin{\\left(x \\right)}$, so $du = \\cos{\\left(x \\right)}\\,dx$; hence $\\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)} + 1}\\,dx = \\frac{1}{u^{2} + 1}\\,du$.",
+    "$\\displaystyle\\int \\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)} + 1}\\,dx = \\int \\frac{1}{u^{2} + 1}\\,du = \\arctan{\\left(u \\right)} + C$.",
+    "Substitute $u = \\sin{\\left(x \\right)}$ back: $\\arctan{\\left(\\sin{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "substitution-aa22d2",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\cos{\\left(2 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sin(2*x)/2",
+   "hints": [
+    "Try the substitution $u = 2 x$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\cos{\\left(u \\right)}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x$, so $du = 2\\,dx$; hence $\\cos{\\left(2 x \\right)}\\,dx = \\frac{\\cos{\\left(u \\right)}}{2}\\,du$.",
+    "$\\displaystyle\\int \\cos{\\left(2 x \\right)}\\,dx = \\int \\frac{\\cos{\\left(u \\right)}}{2}\\,du = \\frac{\\sin{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = 2 x$ back: $\\frac{\\sin{\\left(2 x \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "substitution-9a9f2d",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{\\left(2 x + 5\\right)^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-1/(2*(2*x+5))",
+   "hints": [
+    "Try the substitution $u = 2 x + 5$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 u^{2}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x + 5$, so $du = 2\\,dx$; hence $\\frac{1}{\\left(2 x + 5\\right)^{2}}\\,dx = \\frac{1}{2 u^{2}}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{\\left(2 x + 5\\right)^{2}}\\,dx = \\int \\frac{1}{2 u^{2}}\\,du = - \\frac{1}{2 u} + C$.",
+    "Substitute $u = 2 x + 5$ back: $- \\frac{1}{2 \\left(2 x + 5\\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2.0,
+    0.5
+   ]
+  },
+  {
+   "id": "substitution-640be4",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int e^{x} \\sin{\\left(e^{x} \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-cos(exp(x))",
+   "hints": [
+    "Try the substitution $u = e^{x}$; then $du = e^{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\sin{\\left(u \\right)}\\,du$."
+   ],
+   "solution": [
+    "Let $u = e^{x}$, so $du = e^{x}\\,dx$; hence $e^{x} \\sin{\\left(e^{x} \\right)}\\,dx = \\sin{\\left(u \\right)}\\,du$.",
+    "$\\displaystyle\\int e^{x} \\sin{\\left(e^{x} \\right)}\\,dx = \\int \\sin{\\left(u \\right)}\\,du = - \\cos{\\left(u \\right)} + C$.",
+    "Substitute $u = e^{x}$ back: $- \\cos{\\left(e^{x} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "substitution-701983",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x}{x^{2} + 5}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x^2+5)/2",
+   "hints": [
+    "Try the substitution $u = x^{2} + 5$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 5$, so $du = 2 x\\,dx$; hence $\\frac{x}{x^{2} + 5}\\,dx = \\frac{1}{2 u}\\,du$.",
+    "$\\displaystyle\\int \\frac{x}{x^{2} + 5}\\,dx = \\int \\frac{1}{2 u}\\,du = \\frac{\\ln{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = x^{2} + 5$ back: $\\frac{\\ln{\\left(x^{2} + 5 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "substitution-630058",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\tan^{3}{\\left(x \\right)} \\sec^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "tan(x)^4/4",
+   "hints": [
+    "Try the substitution $u = \\tan{\\left(x \\right)}$; then $du = \\sec^{2}{\\left(x \\right)}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int u^{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\tan{\\left(x \\right)}$, so $du = \\sec^{2}{\\left(x \\right)}\\,dx$; hence $\\tan^{3}{\\left(x \\right)} \\sec^{2}{\\left(x \\right)}\\,dx = u^{3}\\,du$.",
+    "$\\displaystyle\\int \\tan^{3}{\\left(x \\right)} \\sec^{2}{\\left(x \\right)}\\,dx = \\int u^{3}\\,du = \\frac{u^{4}}{4} + C$.",
+    "Substitute $u = \\tan{\\left(x \\right)}$ back: $\\frac{\\tan^{4}{\\left(x \\right)}}{4} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "substitution-ceae82",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{\\sqrt{2 x + 5}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sqrt(2*x+5)",
+   "hints": [
+    "Try the substitution $u = 2 x + 5$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 \\sqrt{u}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x + 5$, so $du = 2\\,dx$; hence $\\frac{1}{\\sqrt{2 x + 5}}\\,dx = \\frac{1}{2 \\sqrt{u}}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{\\sqrt{2 x + 5}}\\,dx = \\int \\frac{1}{2 \\sqrt{u}}\\,du = \\sqrt{u} + C$.",
+    "Substitute $u = 2 x + 5$ back: $\\sqrt{2 x + 5} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2.0,
+    0.5
+   ]
+  },
+  {
+   "id": "substitution-bb1142",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{x^{2} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "atan(x)",
+   "hints": [
+    "Try the substitution $u = x$; then $du = 1\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u^{2} + 1}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x$, so $du = 1\\,dx$; hence $\\frac{1}{x^{2} + 1}\\,dx = \\frac{1}{u^{2} + 1}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{x^{2} + 1}\\,dx = \\int \\frac{1}{u^{2} + 1}\\,du = \\arctan{\\left(u \\right)} + C$.",
+    "Substitute $u = x$ back: $\\arctan{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "substitution-30cbee",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{\\ln{\\left(x \\right)}^{2}}{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x)^3/3",
+   "hints": [
+    "Try the substitution $u = \\ln{\\left(x \\right)}$; then $du = \\frac{1}{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int u^{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, so $du = \\frac{1}{x}\\,dx$; hence $\\frac{\\ln{\\left(x \\right)}^{2}}{x}\\,dx = u^{2}\\,du$.",
+    "$\\displaystyle\\int \\frac{\\ln{\\left(x \\right)}^{2}}{x}\\,dx = \\int u^{2}\\,du = \\frac{u^{3}}{3} + C$.",
+    "Substitute $u = \\ln{\\left(x \\right)}$ back: $\\frac{\\ln{\\left(x \\right)}^{3}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1,
+    4
+   ]
+  },
+  {
+   "id": "substitution-270b9a",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} \\frac{x}{\\sqrt{x^{2} + 1}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-1+sqrt(2)",
+   "hints": [
+    "Substitute $u = x^{2} + 1$, $du = 2 x\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 1$, $x = 1 \\Rightarrow u = 2$.",
+    "The integral becomes $\\displaystyle\\int_{1}^{2} \\frac{1}{2 \\sqrt{u}}\\,du$."
+   ],
+   "solution": [
+    "With $u = x^{2} + 1$ the limits become $u = 1$ and $u = 2$.",
+    "$\\displaystyle\\int_{1}^{2} \\frac{1}{2 \\sqrt{u}}\\,du = \\left[\\sqrt{u}\\right]_{1}^{2} = -1 + \\sqrt{2}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-e53102",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{0}^{1} \\sqrt{3 x + 1}\\,dx$.",
+   "checker": "numeric",
+   "answer": "14/9",
+   "hints": [
+    "Substitute $u = 3 x + 1$, $du = 3\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 1$, $x = 1 \\Rightarrow u = 4$.",
+    "The integral becomes $\\displaystyle\\int_{1}^{4} \\frac{\\sqrt{u}}{3}\\,du$."
+   ],
+   "solution": [
+    "With $u = 3 x + 1$ the limits become $u = 1$ and $u = 4$.",
+    "$\\displaystyle\\int_{1}^{4} \\frac{\\sqrt{u}}{3}\\,du = \\left[\\frac{2 u^{\\frac{3}{2}}}{9}\\right]_{1}^{4} = \\frac{14}{9}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-0b0a39",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{2}^{4} \\frac{1}{x \\ln{\\left(x \\right)}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(2)",
+   "hints": [
+    "Substitute $u = \\ln{\\left(x \\right)}$, $du = \\frac{1}{x}\\,dx$, and change the limits: $x = 2 \\Rightarrow u = \\ln{\\left(2 \\right)}$, $x = 4 \\Rightarrow u = \\ln{\\left(4 \\right)}$.",
+    "The integral becomes $\\displaystyle\\int_{\\ln{\\left(2 \\right)}}^{\\ln{\\left(4 \\right)}} \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\ln{\\left(x \\right)}$ the limits become $u = \\ln{\\left(2 \\right)}$ and $u = \\ln{\\left(4 \\right)}$.",
+    "$\\displaystyle\\int_{\\ln{\\left(2 \\right)}}^{\\ln{\\left(4 \\right)}} \\frac{1}{u}\\,du = \\left[\\ln{\\left(u \\right)}\\right]_{\\ln{\\left(2 \\right)}}^{\\ln{\\left(4 \\right)}} = \\ln{\\left(2 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-40b5a8",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{1}^{3} \\frac{1}{x^{2} + 1}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-pi/4+atan(3)",
+   "hints": [
+    "Substitute $u = x$, $du = 1\\,dx$, and change the limits: $x = 1 \\Rightarrow u = 1$, $x = 3 \\Rightarrow u = 3$.",
+    "The integral becomes $\\displaystyle\\int_{1}^{3} \\frac{1}{u^{2} + 1}\\,du$."
+   ],
+   "solution": [
+    "With $u = x$ the limits become $u = 1$ and $u = 3$.",
+    "$\\displaystyle\\int_{1}^{3} \\frac{1}{u^{2} + 1}\\,du = \\left[\\arctan{\\left(u \\right)}\\right]_{1}^{3} = - \\frac{\\pi}{4} + \\arctan{\\left(3 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-f13d4c",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} x^{3} \\sqrt{x^{4} + 1}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-1/6+sqrt(2)/3",
+   "hints": [
+    "Substitute $u = x^{4} + 1$, $du = 4 x^{3}\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 1$, $x = 1 \\Rightarrow u = 2$.",
+    "The integral becomes $\\displaystyle\\int_{1}^{2} \\frac{\\sqrt{u}}{4}\\,du$."
+   ],
+   "solution": [
+    "With $u = x^{4} + 1$ the limits become $u = 1$ and $u = 2$.",
+    "$\\displaystyle\\int_{1}^{2} \\frac{\\sqrt{u}}{4}\\,du = \\left[\\frac{u^{\\frac{3}{2}}}{6}\\right]_{1}^{2} = - \\frac{1}{6} + \\frac{\\sqrt{2}}{3}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-93f32a",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{6}} \\sec^{2}{\\left(2 x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "sqrt(3)/2",
+   "hints": [
+    "Substitute $u = 2 x$, $du = 2\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 0$, $x = \\frac{\\pi}{6} \\Rightarrow u = \\frac{\\pi}{3}$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{\\frac{\\pi}{3}} \\frac{\\sec^{2}{\\left(u \\right)}}{2}\\,du$."
+   ],
+   "solution": [
+    "With $u = 2 x$ the limits become $u = 0$ and $u = \\frac{\\pi}{3}$.",
+    "$\\displaystyle\\int_{0}^{\\frac{\\pi}{3}} \\frac{\\sec^{2}{\\left(u \\right)}}{2}\\,du = \\left[\\frac{\\sin{\\left(u \\right)}}{2 \\cos{\\left(u \\right)}}\\right]_{0}^{\\frac{\\pi}{3}} = \\frac{\\sqrt{3}}{2}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-67569c",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{6}} e^{\\sin{\\left(x \\right)}} \\cos{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-1+exp(1/2)",
+   "hints": [
+    "Substitute $u = \\sin{\\left(x \\right)}$, $du = \\cos{\\left(x \\right)}\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 0$, $x = \\frac{\\pi}{6} \\Rightarrow u = \\frac{1}{2}$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{\\frac{1}{2}} e^{u}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\sin{\\left(x \\right)}$ the limits become $u = 0$ and $u = \\frac{1}{2}$.",
+    "$\\displaystyle\\int_{0}^{\\frac{1}{2}} e^{u}\\,du = \\left[e^{u}\\right]_{0}^{\\frac{1}{2}} = -1 + e^{\\frac{1}{2}}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-74e589",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} \\frac{1}{\\sqrt{3 x + 1}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "2/3",
+   "hints": [
+    "Substitute $u = 3 x + 1$, $du = 3\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 1$, $x = 1 \\Rightarrow u = 4$.",
+    "The integral becomes $\\displaystyle\\int_{1}^{4} \\frac{1}{3 \\sqrt{u}}\\,du$."
+   ],
+   "solution": [
+    "With $u = 3 x + 1$ the limits become $u = 1$ and $u = 4$.",
+    "$\\displaystyle\\int_{1}^{4} \\frac{1}{3 \\sqrt{u}}\\,du = \\left[\\frac{2 \\sqrt{u}}{3}\\right]_{1}^{4} = \\frac{2}{3}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-1f2eb8",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{2}} \\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)} + 1}\\,dx$.",
+   "checker": "numeric",
+   "answer": "pi/4",
+   "hints": [
+    "Substitute $u = \\sin{\\left(x \\right)}$, $du = \\cos{\\left(x \\right)}\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 0$, $x = \\frac{\\pi}{2} \\Rightarrow u = 1$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{1} \\frac{1}{u^{2} + 1}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\sin{\\left(x \\right)}$ the limits become $u = 0$ and $u = 1$.",
+    "$\\displaystyle\\int_{0}^{1} \\frac{1}{u^{2} + 1}\\,du = \\left[\\arctan{\\left(u \\right)}\\right]_{0}^{1} = \\frac{\\pi}{4}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-72b9cb",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{-1}^{0} x e^{- x^{2}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "(1-e)*exp(-1)/2",
+   "hints": [
+    "Substitute $u = - x^{2}$, $du = \\left(- 2 x\\right)\\,dx$, and change the limits: $x = -1 \\Rightarrow u = -1$, $x = 0 \\Rightarrow u = 0$.",
+    "The integral becomes $\\displaystyle\\int_{-1}^{0} - \\frac{e^{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "With $u = - x^{2}$ the limits become $u = -1$ and $u = 0$.",
+    "$\\displaystyle\\int_{-1}^{0} - \\frac{e^{u}}{2}\\,du = \\left[- \\frac{e^{u}}{2}\\right]_{-1}^{0} = \\frac{1 - e}{2 e}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-a6ed51",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{2}^{5} \\frac{1}{\\left(3 x + 1\\right)^{2}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "3/112",
+   "hints": [
+    "Substitute $u = 3 x + 1$, $du = 3\\,dx$, and change the limits: $x = 2 \\Rightarrow u = 7$, $x = 5 \\Rightarrow u = 16$.",
+    "The integral becomes $\\displaystyle\\int_{7}^{16} \\frac{1}{3 u^{2}}\\,du$."
+   ],
+   "solution": [
+    "With $u = 3 x + 1$ the limits become $u = 7$ and $u = 16$.",
+    "$\\displaystyle\\int_{7}^{16} \\frac{1}{3 u^{2}}\\,du = \\left[- \\frac{1}{3 u}\\right]_{7}^{16} = \\frac{3}{112}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-e27e2e",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{-1}^{1} \\left(- 3 x - 2\\right)^{5}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-868",
+   "hints": [
+    "Substitute $u = - 3 x - 2$, $du = -3\\,dx$, and change the limits: $x = -1 \\Rightarrow u = 1$, $x = 1 \\Rightarrow u = -5$.",
+    "The integral becomes $\\displaystyle\\int_{1}^{-5} - \\frac{u^{5}}{3}\\,du$."
+   ],
+   "solution": [
+    "With $u = - 3 x - 2$ the limits become $u = 1$ and $u = -5$.",
+    "$\\displaystyle\\int_{1}^{-5} - \\frac{u^{5}}{3}\\,du = \\left[- \\frac{u^{6}}{18}\\right]_{1}^{-5} = -868$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-616160",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{2} \\frac{2 x + 3}{x^{2} + 3 x + 1}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(11)",
+   "hints": [
+    "Substitute $u = x^{2} + 3 x + 1$, $du = \\left(2 x + 3\\right)\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 1$, $x = 2 \\Rightarrow u = 11$.",
+    "The integral becomes $\\displaystyle\\int_{1}^{11} \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "With $u = x^{2} + 3 x + 1$ the limits become $u = 1$ and $u = 11$.",
+    "$\\displaystyle\\int_{1}^{11} \\frac{1}{u}\\,du = \\left[\\ln{\\left(u \\right)}\\right]_{1}^{11} = \\ln{\\left(11 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-616ffa",
+   "skill": "substitution",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{6}} \\tan^{5}{\\left(x \\right)} \\sec^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1/162",
+   "hints": [
+    "Substitute $u = \\tan{\\left(x \\right)}$, $du = \\sec^{2}{\\left(x \\right)}\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 0$, $x = \\frac{\\pi}{6} \\Rightarrow u = \\frac{\\sqrt{3}}{3}$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{\\frac{\\sqrt{3}}{3}} u^{5}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\tan{\\left(x \\right)}$ the limits become $u = 0$ and $u = \\frac{\\sqrt{3}}{3}$.",
+    "$\\displaystyle\\int_{0}^{\\frac{\\sqrt{3}}{3}} u^{5}\\,du = \\left[\\frac{u^{6}}{6}\\right]_{0}^{\\frac{\\sqrt{3}}{3}} = \\frac{1}{162}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-f745de",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "In a definite integral $\\displaystyle\\int_{1}^{e} f(x)\\,dx$ you substitute $u = \\ln{\\left(x \\right)}$. What is the new lower limit of integration (in terms of $u$)?",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "When you substitute, the limits must be converted to $u$-values: evaluate $u = g(x)$ at the old limits.",
+    "The lower limit is $u = g(1)$."
+   ],
+   "solution": [
+    "$u = \\ln{\\left(x \\right)}$; at $x = 1$, $u = 0$; at $x = e$, $u = 1$.",
+    "So the new lower limit is $0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "substitution-571f48",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "In a definite integral $\\displaystyle\\int_{0}^{\\frac{\\pi}{2}} f(x)\\,dx$ you substitute $u = \\sin{\\left(x \\right)}$. What is the new upper limit of integration (in terms of $u$)?",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "When you substitute, the limits must be converted to $u$-values: evaluate $u = g(x)$ at the old limits.",
+    "The upper limit is $u = g(\\frac{\\pi}{2})$."
+   ],
+   "solution": [
+    "$u = \\sin{\\left(x \\right)}$; at $x = 0$, $u = 0$; at $x = \\frac{\\pi}{2}$, $u = 1$.",
+    "So the new upper limit is $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "substitution-45f4d1",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "In a definite integral $\\displaystyle\\int_{0}^{2} f(x)\\,dx$ you substitute $u = e^{x}$. What is the new lower limit of integration (in terms of $u$)?",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "When you substitute, the limits must be converted to $u$-values: evaluate $u = g(x)$ at the old limits.",
+    "The lower limit is $u = g(0)$."
+   ],
+   "solution": [
+    "$u = e^{x}$; at $x = 0$, $u = 1$; at $x = 2$, $u = e^{2}$.",
+    "So the new lower limit is $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "substitution-6ac0db",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "In a definite integral $\\displaystyle\\int_{1}^{2} f(x)\\,dx$ you substitute $u = x^{2} + 4$. What is the new lower limit of integration (in terms of $u$)?",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "When you substitute, the limits must be converted to $u$-values: evaluate $u = g(x)$ at the old limits.",
+    "The lower limit is $u = g(1)$."
+   ],
+   "solution": [
+    "$u = x^{2} + 4$; at $x = 1$, $u = 5$; at $x = 2$, $u = 8$.",
+    "So the new lower limit is $5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "substitution-571aa3",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Use symmetry to evaluate $\\int_{-1}^{1} \\left|{x}\\right|\\,dx$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Check whether the integrand is even or odd by replacing $x$ with $-x$.",
+    "Odd on $[-a, a]$ gives $0$; even gives twice the integral over $[0, a]$."
+   ],
+   "solution": [
+    "Here the integrand is even, so $\\int_{-a}^{a} f = 2\\int_0^a f$.",
+    "$\\int_{-1}^{1} \\left|{x}\\right|\\,dx = 1$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-d9cbab",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Use symmetry to evaluate $\\int_{-3}^{3} \\left(x^{2} + 1\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "24",
+   "hints": [
+    "Check whether the integrand is even or odd by replacing $x$ with $-x$.",
+    "Odd on $[-a, a]$ gives $0$; even gives twice the integral over $[0, a]$."
+   ],
+   "solution": [
+    "Here the integrand is even, so $\\int_{-a}^{a} f = 2\\int_0^a f$.",
+    "$\\int_{-3}^{3} \\left(x^{2} + 1\\right)\\,dx = 24$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-d0177b",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Use symmetry to evaluate $\\int_{-1}^{1} x^{2} \\sin{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Check whether the integrand is even or odd by replacing $x$ with $-x$.",
+    "Odd on $[-a, a]$ gives $0$; even gives twice the integral over $[0, a]$."
+   ],
+   "solution": [
+    "Here the integrand is odd ($f(-x) = -f(x)$), so the integral over a symmetric interval is $0$.",
+    "$\\int_{-1}^{1} x^{2} \\sin{\\left(x \\right)}\\,dx = 0$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-776d0e",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Use symmetry to evaluate $\\int_{-3}^{3} x \\cos{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Check whether the integrand is even or odd by replacing $x$ with $-x$.",
+    "Odd on $[-a, a]$ gives $0$; even gives twice the integral over $[0, a]$."
+   ],
+   "solution": [
+    "Here the integrand is odd ($f(-x) = -f(x)$), so the integral over a symmetric interval is $0$.",
+    "$\\int_{-3}^{3} x \\cos{\\left(x \\right)}\\,dx = 0$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-0f846d",
+   "skill": "substitution",
+   "difficulty": 2,
+   "statement": "Use symmetry to evaluate $\\int_{-3}^{3} 3 x^{4}\\,dx$.",
+   "checker": "numeric",
+   "answer": "1458/5",
+   "hints": [
+    "Check whether the integrand is even or odd by replacing $x$ with $-x$.",
+    "Odd on $[-a, a]$ gives $0$; even gives twice the integral over $[0, a]$."
+   ],
+   "solution": [
+    "Here the integrand is even, so $\\int_{-a}^{a} f = 2\\int_0^a f$.",
+    "$\\int_{-3}^{3} 3 x^{4}\\,dx = \\frac{1458}{5}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "substitution-9c003d",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Which substitution is the most useful first step for $\\int \\frac{x^{2}}{x^{3} + 5}\\,dx$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Look for an inner function whose derivative (up to a constant) also appears as a factor.",
+    "The derivative of $x^{3} + 5$ is $3 x^{2}$; is that factor present?"
+   ],
+   "solution": [
+    "With $u = x^{3} + 5$, $du = 3 x^{2}\\,dx$ absorbs the remaining factor of the integrand.",
+    "The other choices leave an $x$ that cannot be expressed in terms of $u$."
+   ],
+   "verified": true,
+   "choices": [
+    "$u = x^{3}$",
+    "$u = \\frac{1}{x^{3} + 5}$",
+    "$u = x^{2}$",
+    "$u = x^{3} + 5$"
+   ]
+  },
+  {
+   "id": "substitution-7e9d1d",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Which substitution is the most useful first step for $\\int x \\sqrt{x^{2} + 3}\\,dx$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Look for an inner function whose derivative (up to a constant) also appears as a factor.",
+    "The derivative of $x^{2} + 3$ is $2 x$; is that factor present?"
+   ],
+   "solution": [
+    "With $u = x^{2} + 3$, $du = 2 x\\,dx$ absorbs the remaining factor of the integrand.",
+    "The other choices leave an $x$ that cannot be expressed in terms of $u$."
+   ],
+   "verified": true,
+   "choices": [
+    "$u = x^{2}$",
+    "$u = \\sqrt{x^{2} + 3}$",
+    "$u = x^{2} + 3$",
+    "$u = x$"
+   ]
+  },
+  {
+   "id": "substitution-e205fb",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Which substitution is the most useful first step for $\\int \\frac{\\ln{\\left(x \\right)}^{2}}{x}\\,dx$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Look for an inner function whose derivative (up to a constant) also appears as a factor.",
+    "The derivative of $\\ln{\\left(x \\right)}$ is $\\frac{1}{x}$; is that factor present?"
+   ],
+   "solution": [
+    "With $u = \\ln{\\left(x \\right)}$, $du = \\frac{1}{x}\\,dx$ absorbs the remaining factor of the integrand.",
+    "The other choices leave an $x$ that cannot be expressed in terms of $u$."
+   ],
+   "verified": true,
+   "choices": [
+    "$u = \\ln{\\left(x \\right)}^{2}$",
+    "$u = \\ln{\\left(x \\right)}$",
+    "$u = x$",
+    "$u = \\frac{1}{x}$"
+   ]
+  },
+  {
+   "id": "substitution-bd50fa",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "Which substitution is the most useful first step for $\\int e^{\\sin{\\left(3 x \\right)}} \\cos{\\left(3 x \\right)}\\,dx$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Look for an inner function whose derivative (up to a constant) also appears as a factor.",
+    "The derivative of $\\sin{\\left(3 x \\right)}$ is $3 \\cos{\\left(3 x \\right)}$; is that factor present?"
+   ],
+   "solution": [
+    "With $u = \\sin{\\left(3 x \\right)}$, $du = 3 \\cos{\\left(3 x \\right)}\\,dx$ absorbs the remaining factor of the integrand.",
+    "The other choices leave an $x$ that cannot be expressed in terms of $u$."
+   ],
+   "verified": true,
+   "choices": [
+    "$u = \\cos{\\left(3 x \\right)}$",
+    "$u = \\sin{\\left(3 x \\right)}$",
+    "$u = 3 x$",
+    "$u = e^{\\sin{\\left(3 x \\right)}}$"
+   ]
+  },
+  {
+   "id": "substitution-64b369",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "The Substitution Rule $\\displaystyle\\int f(g(x))g'(x)\\,dx = \\int f(u)\\,du$ (with $u = g(x)$) is the integration counterpart of",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Differentiate $F(g(x))$ and see which rule appears.",
+    "$\\frac{d}{dx}F(g(x)) = F'(g(x))g'(x)$."
+   ],
+   "solution": [
+    "By the Chain Rule, $\\frac{d}{dx}F(g(x)) = f(g(x))g'(x)$ when $F' = f$.",
+    "Reading this backwards is exactly the Substitution Rule."
+   ],
+   "verified": true,
+   "choices": [
+    "the Chain Rule",
+    "the Product Rule",
+    "the Power Rule",
+    "the Quotient Rule"
+   ]
+  },
+  {
+   "id": "substitution-ad5b50",
+   "skill": "substitution",
+   "difficulty": 1,
+   "statement": "When using $u = g(x)$ in a definite integral $\\displaystyle\\int_a^b f(g(x))g'(x)\\,dx$, the limits become",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "The limits refer to the integration variable; once that is $u$, they must be $u$-values.",
+    "Alternatively, substitute back to $x$ before using the original limits."
+   ],
+   "solution": [
+    "$\\int_a^b f(g(x))g'(x)\\,dx = \\int_{g(a)}^{g(b)} f(u)\\,du$.",
+    "Forgetting to change limits (or to substitute back) is a common error."
+   ],
+   "verified": true,
+   "choices": [
+    "$f(a)$ and $f(b)$",
+    "$g'(a)$ and $g'(b)$",
+    "$a$ and $b$ unchanged",
+    "$g(a)$ and $g(b)$"
+   ]
+  }
+ ]
+}

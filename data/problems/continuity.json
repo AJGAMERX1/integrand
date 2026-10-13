@@ -1,0 +1,1061 @@
+{
+ "skill": "continuity",
+ "problems": [
+  {
+   "id": "continuity-383fa3",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Find the value of the constant $c$ that makes $f(x) = \\begin{cases} cx - 2 & \\text{if } x < 2 \\\\ x^{3} - 1 & \\text{if } x \\ge 2 \\end{cases}$ continuous on $(-\\infty, \\infty)$.",
+   "checker": "numeric",
+   "answer": "9/2",
+   "hints": [
+    "Both pieces are continuous on their own, so only $x = 2$ needs checking.",
+    "Set the two one-sided limits at $x = 2$ equal to each other and solve for $c$."
+   ],
+   "solution": [
+    "At $x = 2$ the piece $x^{3} - 1$ gives $7$, and the piece with $c$ gives $c(2) + (-2)$.",
+    "Setting them equal: $c = \\frac{9}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-6c9a92",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Find the value of the constant $c$ that makes $f(x) = \\begin{cases} cx - 4 & \\text{if } x < 2 \\\\ x^{2} + 1 & \\text{if } x \\ge 2 \\end{cases}$ continuous on $(-\\infty, \\infty)$.",
+   "checker": "numeric",
+   "answer": "9/2",
+   "hints": [
+    "Both pieces are continuous on their own, so only $x = 2$ needs checking.",
+    "Set the two one-sided limits at $x = 2$ equal to each other and solve for $c$."
+   ],
+   "solution": [
+    "At $x = 2$ the piece $x^{2} + 1$ gives $5$, and the piece with $c$ gives $c(2) + (-4)$.",
+    "Setting them equal: $c = \\frac{9}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-9d16df",
+   "skill": "continuity",
+   "difficulty": 3,
+   "statement": "Find the value of the constant $c$ that makes $f(x) = \\begin{cases} \\sqrt{x + 6} & \\text{if } x < 3 \\\\ c(x + 1) & \\text{if } x \\ge 3 \\end{cases}$ continuous on $(-\\infty, \\infty)$.",
+   "checker": "numeric",
+   "answer": "3/4",
+   "hints": [
+    "Both pieces are continuous on their own, so only $x = 3$ needs checking.",
+    "Set the two one-sided limits at $x = 3$ equal to each other and solve for $c$."
+   ],
+   "solution": [
+    "At $x = 3$ the piece $\\sqrt{x + 6}$ gives $3$, and the piece with $c$ gives $c(4)$.",
+    "Setting them equal: $c = \\frac{3}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-7d2b48",
+   "skill": "continuity",
+   "difficulty": 3,
+   "statement": "Find the value of the constant $c$ that makes $f(x) = \\begin{cases} cx^2 + 0 & \\text{if } x < 2 \\\\ x^{3} - 1 & \\text{if } x \\ge 2 \\end{cases}$ continuous on $(-\\infty, \\infty)$.",
+   "checker": "numeric",
+   "answer": "7/4",
+   "hints": [
+    "Both pieces are continuous on their own, so only $x = 2$ needs checking.",
+    "Set the two one-sided limits at $x = 2$ equal to each other and solve for $c$."
+   ],
+   "solution": [
+    "At $x = 2$ the piece $x^{3} - 1$ gives $7$, and the piece with $c$ gives $c(4) + (0)$.",
+    "Setting them equal: $c = \\frac{7}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-9aa2db",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Find the value of the constant $c$ that makes $f(x) = \\begin{cases} x^{3} - 1 & \\text{if } x < 2 \\\\ x^{2} + c & \\text{if } x \\ge 2 \\end{cases}$ continuous on $(-\\infty, \\infty)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Both pieces are continuous on their own, so only $x = 2$ needs checking.",
+    "Set the two one-sided limits at $x = 2$ equal to each other and solve for $c$."
+   ],
+   "solution": [
+    "At $x = 2$ the piece $x^{3} - 1$ gives $7$, and the piece with $c$ gives $4 + c$.",
+    "Setting them equal: $c = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-aef435",
+   "skill": "continuity",
+   "difficulty": 3,
+   "statement": "Find the value of the constant $c$ that makes $f(x) = \\begin{cases} x^{2} + 2 & \\text{if } x < 3 \\\\ c(x + 2) & \\text{if } x \\ge 3 \\end{cases}$ continuous on $(-\\infty, \\infty)$.",
+   "checker": "numeric",
+   "answer": "11/5",
+   "hints": [
+    "Both pieces are continuous on their own, so only $x = 3$ needs checking.",
+    "Set the two one-sided limits at $x = 3$ equal to each other and solve for $c$."
+   ],
+   "solution": [
+    "At $x = 3$ the piece $x^{2} + 2$ gives $11$, and the piece with $c$ gives $c(5)$.",
+    "Setting them equal: $c = \\frac{11}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-ab6acb",
+   "skill": "continuity",
+   "difficulty": 3,
+   "statement": "Find the value of the constant $c$ that makes $f(x) = \\begin{cases} x^{3} - 1 & \\text{if } x < 1 \\\\ c(x + 4) & \\text{if } x \\ge 1 \\end{cases}$ continuous on $(-\\infty, \\infty)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Both pieces are continuous on their own, so only $x = 1$ needs checking.",
+    "Set the two one-sided limits at $x = 1$ equal to each other and solve for $c$."
+   ],
+   "solution": [
+    "At $x = 1$ the piece $x^{3} - 1$ gives $0$, and the piece with $c$ gives $c(5)$.",
+    "Setting them equal: $c = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-e8dfd2",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Find the value of the constant $c$ that makes $f(x) = \\begin{cases} 3 x^{2} + c & \\text{if } x < 0 \\\\ x^{2} & \\text{if } x \\ge 0 \\end{cases}$ continuous on $(-\\infty, \\infty)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Both pieces are continuous on their own, so only $x = 0$ needs checking.",
+    "Set the two one-sided limits at $x = 0$ equal to each other and solve for $c$."
+   ],
+   "solution": [
+    "At $x = 0$ the piece $x^{2}$ gives $0$, and the piece with $c$ gives $0 + c$.",
+    "Setting them equal: $c = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-5ee9eb",
+   "skill": "continuity",
+   "difficulty": 3,
+   "statement": "Find the value of the constant $c$ that makes $f(x) = \\begin{cases} c(x + 2) & \\text{if } x < 1 \\\\ x^{2} + 1 & \\text{if } x \\ge 1 \\end{cases}$ continuous on $(-\\infty, \\infty)$.",
+   "checker": "numeric",
+   "answer": "2/3",
+   "hints": [
+    "Both pieces are continuous on their own, so only $x = 1$ needs checking.",
+    "Set the two one-sided limits at $x = 1$ equal to each other and solve for $c$."
+   ],
+   "solution": [
+    "At $x = 1$ the piece $x^{2} + 1$ gives $2$, and the piece with $c$ gives $c(3)$.",
+    "Setting them equal: $c = \\frac{2}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-7575ad",
+   "skill": "continuity",
+   "difficulty": 3,
+   "statement": "Find the value of the constant $c$ that makes $f(x) = \\begin{cases} cx^2 + 2 & \\text{if } x < -1 \\\\ x^{2} + 1 & \\text{if } x \\ge -1 \\end{cases}$ continuous on $(-\\infty, \\infty)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Both pieces are continuous on their own, so only $x = -1$ needs checking.",
+    "Set the two one-sided limits at $x = -1$ equal to each other and solve for $c$."
+   ],
+   "solution": [
+    "At $x = -1$ the piece $x^{2} + 1$ gives $2$, and the piece with $c$ gives $c(1) + (2)$.",
+    "Setting them equal: $c = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-6a3786",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\begin{cases} x + 2 & \\text{if } x < -2 \\\\ x^{2} + 3 & \\text{if } x \\ge -2 \\end{cases}$. At $x = -2$, is $f$ continuous, or what type of discontinuity does it have?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compute the left and right limits at the point and compare them with the function value there (if defined).",
+    "Equal finite one-sided limits that disagree with the value (or no value) mean removable; different finite one-sided limits mean jump; an unbounded limit means infinite."
+   ],
+   "solution": [
+    "The left limit is $0$ while the right limit is $7$; they differ.",
+    "So $f$ has a jump discontinuity."
+   ],
+   "verified": true,
+   "choices": [
+    "continuous at that point",
+    "infinite discontinuity",
+    "jump discontinuity",
+    "removable discontinuity"
+   ]
+  },
+  {
+   "id": "continuity-a70e02",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\begin{cases} x - 1 & \\text{if } x < 0 \\\\ x^{2} + 1 & \\text{if } x \\ge 0 \\end{cases}$. At $x = 0$, is $f$ continuous, or what type of discontinuity does it have?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Compute the left and right limits at the point and compare them with the function value there (if defined).",
+    "Equal finite one-sided limits that disagree with the value (or no value) mean removable; different finite one-sided limits mean jump; an unbounded limit means infinite."
+   ],
+   "solution": [
+    "The left limit is $-1$ while the right limit is $1$; they differ.",
+    "So $f$ has a jump discontinuity."
+   ],
+   "verified": true,
+   "choices": [
+    "removable discontinuity",
+    "jump discontinuity",
+    "continuous at that point",
+    "infinite discontinuity"
+   ]
+  },
+  {
+   "id": "continuity-75a64a",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\begin{cases} x - 1 & \\text{if } x < -1 \\\\ x^{2} & \\text{if } x \\ge -1 \\end{cases}$. At $x = -1$, is $f$ continuous, or what type of discontinuity does it have?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Compute the left and right limits at the point and compare them with the function value there (if defined).",
+    "Equal finite one-sided limits that disagree with the value (or no value) mean removable; different finite one-sided limits mean jump; an unbounded limit means infinite."
+   ],
+   "solution": [
+    "The left limit is $-2$ while the right limit is $1$; they differ.",
+    "So $f$ has a jump discontinuity."
+   ],
+   "verified": true,
+   "choices": [
+    "continuous at that point",
+    "jump discontinuity",
+    "infinite discontinuity",
+    "removable discontinuity"
+   ]
+  },
+  {
+   "id": "continuity-f90df2",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{x^{2} - 5 x + 6}{x - 2}$. At $x = 2$, is $f$ continuous, or what type of discontinuity does it have?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compute the left and right limits at the point and compare them with the function value there (if defined).",
+    "Equal finite one-sided limits that disagree with the value (or no value) mean removable; different finite one-sided limits mean jump; an unbounded limit means infinite."
+   ],
+   "solution": [
+    "The limit as $x \\to 2$ exists (the troublesome factor cancels or the formula nearby is continuous), but $f(2)$ is undefined or has a different value.",
+    "So the discontinuity is removable: redefining the single value would make $f$ continuous."
+   ],
+   "verified": true,
+   "choices": [
+    "infinite discontinuity",
+    "jump discontinuity",
+    "removable discontinuity",
+    "continuous at that point"
+   ]
+  },
+  {
+   "id": "continuity-7c0e9d",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{x + 4}{x - 3}$. At $x = 3$, is $f$ continuous, or what type of discontinuity does it have?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compute the left and right limits at the point and compare them with the function value there (if defined).",
+    "Equal finite one-sided limits that disagree with the value (or no value) mean removable; different finite one-sided limits mean jump; an unbounded limit means infinite."
+   ],
+   "solution": [
+    "As $x \\to 3$ the denominator approaches $0$ while the numerator does not, so $|f(x)| \\to \\infty$.",
+    "So $f$ has an infinite discontinuity (a vertical asymptote)."
+   ],
+   "verified": true,
+   "choices": [
+    "infinite discontinuity",
+    "jump discontinuity",
+    "removable discontinuity",
+    "continuous at that point"
+   ]
+  },
+  {
+   "id": "continuity-2335bd",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{x^{2} + 5 x + 6}{x + 2}$. At $x = -2$, is $f$ continuous, or what type of discontinuity does it have?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Compute the left and right limits at the point and compare them with the function value there (if defined).",
+    "Equal finite one-sided limits that disagree with the value (or no value) mean removable; different finite one-sided limits mean jump; an unbounded limit means infinite."
+   ],
+   "solution": [
+    "The limit as $x \\to -2$ exists (the troublesome factor cancels or the formula nearby is continuous), but $f(-2)$ is undefined or has a different value.",
+    "So the discontinuity is removable: redefining the single value would make $f$ continuous."
+   ],
+   "verified": true,
+   "choices": [
+    "jump discontinuity",
+    "infinite discontinuity",
+    "continuous at that point",
+    "removable discontinuity"
+   ]
+  },
+  {
+   "id": "continuity-c759ff",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 1 + \\frac{1}{x^{2}}$. At $x = 0$, is $f$ continuous, or what type of discontinuity does it have?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compute the left and right limits at the point and compare them with the function value there (if defined).",
+    "Equal finite one-sided limits that disagree with the value (or no value) mean removable; different finite one-sided limits mean jump; an unbounded limit means infinite."
+   ],
+   "solution": [
+    "As $x \\to 0$ the denominator approaches $0$ while the numerator does not, so $|f(x)| \\to \\infty$.",
+    "So $f$ has an infinite discontinuity (a vertical asymptote)."
+   ],
+   "verified": true,
+   "choices": [
+    "infinite discontinuity",
+    "jump discontinuity",
+    "removable discontinuity",
+    "continuous at that point"
+   ]
+  },
+  {
+   "id": "continuity-3b8dd8",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\begin{cases} x + 1 & \\text{if } x < 0 \\\\ x^{2} & \\text{if } x \\ge 0 \\end{cases}$. At $x = 0$, is $f$ continuous, or what type of discontinuity does it have?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Compute the left and right limits at the point and compare them with the function value there (if defined).",
+    "Equal finite one-sided limits that disagree with the value (or no value) mean removable; different finite one-sided limits mean jump; an unbounded limit means infinite."
+   ],
+   "solution": [
+    "The left limit is $1$ while the right limit is $0$; they differ.",
+    "So $f$ has a jump discontinuity."
+   ],
+   "verified": true,
+   "choices": [
+    "removable discontinuity",
+    "jump discontinuity",
+    "continuous at that point",
+    "infinite discontinuity"
+   ]
+  },
+  {
+   "id": "continuity-fa040d",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\begin{cases} x^{2} + 1 & \\text{if } x < 2 \\\\ 3 x - 1 & \\text{if } x \\ge 2 \\end{cases}$. At $x = 2$, is $f$ continuous, or what type of discontinuity does it have?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Compute the left and right limits at the point and compare them with the function value there (if defined).",
+    "Equal finite one-sided limits that disagree with the value (or no value) mean removable; different finite one-sided limits mean jump; an unbounded limit means infinite."
+   ],
+   "solution": [
+    "Both pieces give $5$ at $x = 2$ and the value $f(2)$ matches.",
+    "So $f$ is continuous there."
+   ],
+   "verified": true,
+   "choices": [
+    "jump discontinuity",
+    "infinite discontinuity",
+    "removable discontinuity",
+    "continuous at that point"
+   ]
+  },
+  {
+   "id": "continuity-e2b491",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\begin{cases} x^{2} - 1 & \\text{if } x < 2 \\\\ 3 x - 3 & \\text{if } x \\ge 2 \\end{cases}$. At $x = 2$, is $f$ continuous, or what type of discontinuity does it have?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Compute the left and right limits at the point and compare them with the function value there (if defined).",
+    "Equal finite one-sided limits that disagree with the value (or no value) mean removable; different finite one-sided limits mean jump; an unbounded limit means infinite."
+   ],
+   "solution": [
+    "Both pieces give $3$ at $x = 2$ and the value $f(2)$ matches.",
+    "So $f$ is continuous there."
+   ],
+   "verified": true,
+   "choices": [
+    "removable discontinuity",
+    "continuous at that point",
+    "jump discontinuity",
+    "infinite discontinuity"
+   ]
+  },
+  {
+   "id": "continuity-b7eb5f",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\begin{cases} x^{2} & \\text{if } x < 1 \\\\ 3 x - 2 & \\text{if } x \\ge 1 \\end{cases}$. At $x = 1$, is $f$ continuous, or what type of discontinuity does it have?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compute the left and right limits at the point and compare them with the function value there (if defined).",
+    "Equal finite one-sided limits that disagree with the value (or no value) mean removable; different finite one-sided limits mean jump; an unbounded limit means infinite."
+   ],
+   "solution": [
+    "Both pieces give $1$ at $x = 1$ and the value $f(1)$ matches.",
+    "So $f$ is continuous there."
+   ],
+   "verified": true,
+   "choices": [
+    "continuous at that point",
+    "removable discontinuity",
+    "jump discontinuity",
+    "infinite discontinuity"
+   ]
+  },
+  {
+   "id": "continuity-dc391c",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{x^{2} - x - 6}{x - 3}$. At $x = 3$, is $f$ continuous, or what type of discontinuity does it have?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compute the left and right limits at the point and compare them with the function value there (if defined).",
+    "Equal finite one-sided limits that disagree with the value (or no value) mean removable; different finite one-sided limits mean jump; an unbounded limit means infinite."
+   ],
+   "solution": [
+    "The limit as $x \\to 3$ exists (the troublesome factor cancels or the formula nearby is continuous), but $f(3)$ is undefined or has a different value.",
+    "So the discontinuity is removable: redefining the single value would make $f$ continuous."
+   ],
+   "verified": true,
+   "choices": [
+    "removable discontinuity",
+    "continuous at that point",
+    "infinite discontinuity",
+    "jump discontinuity"
+   ]
+  },
+  {
+   "id": "continuity-e7ef60",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "On what interval is $f(x) = \\sqrt{- x - 2}$ continuous? Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,-2]",
+   "hints": [
+    "Roots, logs and rational functions are continuous at every point of their domains.",
+    "So find the domain and report it as an interval."
+   ],
+   "solution": [
+    "The domain: the square root needs $-2 - x \\ge 0$.",
+    "The function is continuous on its whole domain, $(-\\infty, -2]$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-478338",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "On what interval is $f(x) = 3 x + \\sqrt{x - 4}$ continuous? Answer in interval notation.",
+   "checker": "interval",
+   "answer": "[4,inf)",
+   "hints": [
+    "Roots, logs and rational functions are continuous at every point of their domains.",
+    "So find the domain and report it as an interval."
+   ],
+   "solution": [
+    "The domain: the square root needs $x - (4) \\ge 0$.",
+    "The function is continuous on its whole domain, $[4, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-831727",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "On what interval is $f(x) = \\ln{\\left(x + 3 \\right)}$ continuous? Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-3,inf)",
+   "hints": [
+    "Roots, logs and rational functions are continuous at every point of their domains.",
+    "So find the domain and report it as an interval."
+   ],
+   "solution": [
+    "The domain: $\\ln u$ needs $u > 0$, so $x > -3$.",
+    "The function is continuous on its whole domain, $(-3, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-6aed5b",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "On what interval is $f(x) = \\sqrt{4 - x}$ continuous? Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,4]",
+   "hints": [
+    "Roots, logs and rational functions are continuous at every point of their domains.",
+    "So find the domain and report it as an interval."
+   ],
+   "solution": [
+    "The domain: the square root needs $4 - x \\ge 0$.",
+    "The function is continuous on its whole domain, $(-\\infty, 4]$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-e1197b",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "On what interval is $f(x) = \\sqrt{3 - x}$ continuous? Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-inf,3]",
+   "hints": [
+    "Roots, logs and rational functions are continuous at every point of their domains.",
+    "So find the domain and report it as an interval."
+   ],
+   "solution": [
+    "The domain: the square root needs $3 - x \\ge 0$.",
+    "The function is continuous on its whole domain, $(-\\infty, 3]$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-7e3e20",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "On what interval is $f(x) = x + \\sqrt{x - 2}$ continuous? Answer in interval notation.",
+   "checker": "interval",
+   "answer": "[2,inf)",
+   "hints": [
+    "Roots, logs and rational functions are continuous at every point of their domains.",
+    "So find the domain and report it as an interval."
+   ],
+   "solution": [
+    "The domain: the square root needs $x - (2) \\ge 0$.",
+    "The function is continuous on its whole domain, $[2, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-d7b4b0",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "Use continuity to evaluate $\\displaystyle\\lim_{x \\to 0} \\left(\\sqrt{x^{2} + 1}\\right)$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Compositions, sums and products of continuous functions are continuous, so the limit is just the function value.",
+    "Substitute $x = 0$ and simplify."
+   ],
+   "solution": [
+    "The function is continuous at $x = 0$ (it is built from continuous functions and is defined there).",
+    "So the limit equals $f(0) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-4ed484",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "Use continuity to evaluate $\\displaystyle\\lim_{x \\to -2} \\left(\\sqrt{x^{2} + 21}\\right)$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Compositions, sums and products of continuous functions are continuous, so the limit is just the function value.",
+    "Substitute $x = -2$ and simplify."
+   ],
+   "solution": [
+    "The function is continuous at $x = -2$ (it is built from continuous functions and is defined there).",
+    "So the limit equals $f(-2) = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-829556",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "Use continuity to evaluate $\\displaystyle\\lim_{x \\to 0} \\left(\\sqrt{x^{2} + 9}\\right)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Compositions, sums and products of continuous functions are continuous, so the limit is just the function value.",
+    "Substitute $x = 0$ and simplify."
+   ],
+   "solution": [
+    "The function is continuous at $x = 0$ (it is built from continuous functions and is defined there).",
+    "So the limit equals $f(0) = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-a50a23",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "Use continuity to evaluate $\\displaystyle\\lim_{x \\to 1} \\left(\\sqrt{x^{2} + 3}\\right)$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "Compositions, sums and products of continuous functions are continuous, so the limit is just the function value.",
+    "Substitute $x = 1$ and simplify."
+   ],
+   "solution": [
+    "The function is continuous at $x = 1$ (it is built from continuous functions and is defined there).",
+    "So the limit equals $f(1) = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-32ed72",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "Use continuity to evaluate $\\displaystyle\\lim_{x \\to -1} \\left(\\left(x + 1\\right) e^{x + 1}\\right)$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Compositions, sums and products of continuous functions are continuous, so the limit is just the function value.",
+    "Substitute $x = -1$ and simplify."
+   ],
+   "solution": [
+    "The function is continuous at $x = -1$ (it is built from continuous functions and is defined there).",
+    "So the limit equals $f(-1) = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-d6522e",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "Use continuity to evaluate $\\displaystyle\\lim_{x \\to 1} \\left(2 x + \\cos{\\left(\\pi x \\right)}\\right)$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Compositions, sums and products of continuous functions are continuous, so the limit is just the function value.",
+    "Substitute $x = 1$ and simplify."
+   ],
+   "solution": [
+    "The function is continuous at $x = 1$ (it is built from continuous functions and is defined there).",
+    "So the limit equals $f(1) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-e694e0",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "Use continuity to evaluate $\\displaystyle\\lim_{x \\to -2} \\left(3 x + \\cos{\\left(\\pi x \\right)}\\right)$.",
+   "checker": "numeric",
+   "answer": "-5",
+   "hints": [
+    "Compositions, sums and products of continuous functions are continuous, so the limit is just the function value.",
+    "Substitute $x = -2$ and simplify."
+   ],
+   "solution": [
+    "The function is continuous at $x = -2$ (it is built from continuous functions and is defined there).",
+    "So the limit equals $f(-2) = -5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-e55ed0",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "The function $f(x) = \\frac{x^{2} + x - 12}{x + 4}$ is undefined at $x = -4$. What value should be assigned to $f(-4)$ so that the extended function is continuous there?",
+   "checker": "numeric",
+   "answer": "-7",
+   "hints": [
+    "For continuity at $-4$ you need $f(-4) = \\lim_{x \\to -4} f(x)$.",
+    "Factor the numerator and cancel the common factor to find that limit."
+   ],
+   "solution": [
+    "For $x \\ne -4$, $f(x) = x - 3$.",
+    "The limit at $-4$ is $-7$, so define $f(-4) = -7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-878634",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "The function $f(x) = \\frac{x^{2} - x - 12}{x + 3}$ is undefined at $x = -3$. What value should be assigned to $f(-3)$ so that the extended function is continuous there?",
+   "checker": "numeric",
+   "answer": "-7",
+   "hints": [
+    "For continuity at $-3$ you need $f(-3) = \\lim_{x \\to -3} f(x)$.",
+    "Factor the numerator and cancel the common factor to find that limit."
+   ],
+   "solution": [
+    "For $x \\ne -3$, $f(x) = x - 4$.",
+    "The limit at $-3$ is $-7$, so define $f(-3) = -7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-22df73",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "The function $f(x) = \\frac{x^{2} - 2 x - 3}{x + 1}$ is undefined at $x = -1$. What value should be assigned to $f(-1)$ so that the extended function is continuous there?",
+   "checker": "numeric",
+   "answer": "-4",
+   "hints": [
+    "For continuity at $-1$ you need $f(-1) = \\lim_{x \\to -1} f(x)$.",
+    "Factor the numerator and cancel the common factor to find that limit."
+   ],
+   "solution": [
+    "For $x \\ne -1$, $f(x) = x - 3$.",
+    "The limit at $-1$ is $-4$, so define $f(-1) = -4$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-b13bef",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "The function $f(x) = \\frac{x^{2} + 3 x - 4}{x - 1}$ is undefined at $x = 1$. What value should be assigned to $f(1)$ so that the extended function is continuous there?",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "For continuity at $1$ you need $f(1) = \\lim_{x \\to 1} f(x)$.",
+    "Factor the numerator and cancel the common factor to find that limit."
+   ],
+   "solution": [
+    "For $x \\ne 1$, $f(x) = x + 4$.",
+    "The limit at $1$ is $5$, so define $f(1) = 5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-a8ccb9",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "The function $f(x) = \\frac{x^{2} + 4 x + 3}{x + 1}$ is undefined at $x = -1$. What value should be assigned to $f(-1)$ so that the extended function is continuous there?",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "For continuity at $-1$ you need $f(-1) = \\lim_{x \\to -1} f(x)$.",
+    "Factor the numerator and cancel the common factor to find that limit."
+   ],
+   "solution": [
+    "For $x \\ne -1$, $f(x) = x + 3$.",
+    "The limit at $-1$ is $2$, so define $f(-1) = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-084e85",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "The function $f(x) = \\frac{x^{2} - 3 x + 2}{x - 2}$ is undefined at $x = 2$. What value should be assigned to $f(2)$ so that the extended function is continuous there?",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "For continuity at $2$ you need $f(2) = \\lim_{x \\to 2} f(x)$.",
+    "Factor the numerator and cancel the common factor to find that limit."
+   ],
+   "solution": [
+    "For $x \\ne 2$, $f(x) = x - 1$.",
+    "The limit at $2$ is $1$, so define $f(2) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-dc1b7d",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "The function $f(x) = \\frac{x^{2} - 1}{x + 1}$ is undefined at $x = -1$. What value should be assigned to $f(-1)$ so that the extended function is continuous there?",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "For continuity at $-1$ you need $f(-1) = \\lim_{x \\to -1} f(x)$.",
+    "Factor the numerator and cancel the common factor to find that limit."
+   ],
+   "solution": [
+    "For $x \\ne -1$, $f(x) = x - 1$.",
+    "The limit at $-1$ is $-2$, so define $f(-1) = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-a95e76",
+   "skill": "continuity",
+   "difficulty": 2,
+   "statement": "The function $f(x) = \\frac{x^{2} + 5 x + 4}{x + 4}$ is undefined at $x = -4$. What value should be assigned to $f(-4)$ so that the extended function is continuous there?",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "For continuity at $-4$ you need $f(-4) = \\lim_{x \\to -4} f(x)$.",
+    "Factor the numerator and cancel the common factor to find that limit."
+   ],
+   "solution": [
+    "For $x \\ne -4$, $f(x) = x + 1$.",
+    "The limit at $-4$ is $-3$, so define $f(-4) = -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "continuity-958e88",
+   "skill": "continuity",
+   "difficulty": 3,
+   "statement": "Let $f(x) = x^{3} - 3 x + 1$. On which of these intervals does the Intermediate Value Theorem guarantee a solution of $f(x) = 0$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "The IVT applies when $f$ is continuous and takes values of opposite sign at the two endpoints.",
+    "Evaluate $f$ at each endpoint (a decimal approximation is enough) and look for a sign change."
+   ],
+   "solution": [
+    "$f(0) \\approx 1.000$ and $f(1) \\approx -1.000$ have opposite signs, and $f$ is continuous.",
+    "By the IVT there is a number $c$ in $(0, 1)$ with $f(c) = 0$. On the other listed intervals the endpoint values have the same sign, so the theorem gives no guarantee."
+   ],
+   "verified": true,
+   "choices": [
+    "$[3, 4]$",
+    "$[0, 1]$",
+    "$[2, 3]$",
+    "$[-1, 0]$"
+   ]
+  },
+  {
+   "id": "continuity-e610e9",
+   "skill": "continuity",
+   "difficulty": 3,
+   "statement": "Let $f(x) = - x + \\cos{\\left(x \\right)}$. On which of these intervals does the Intermediate Value Theorem guarantee a solution of $f(x) = 0$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "The IVT applies when $f$ is continuous and takes values of opposite sign at the two endpoints.",
+    "Evaluate $f$ at each endpoint (a decimal approximation is enough) and look for a sign change."
+   ],
+   "solution": [
+    "$f(0) \\approx 1.000$ and $f(1) \\approx -0.460$ have opposite signs, and $f$ is continuous.",
+    "By the IVT there is a number $c$ in $(0, 1)$ with $f(c) = 0$. On the other listed intervals the endpoint values have the same sign, so the theorem gives no guarantee."
+   ],
+   "verified": true,
+   "choices": [
+    "$[-2, -1]$",
+    "$[0, 1]$",
+    "$[2, 3]$",
+    "$[1, 2]$"
+   ]
+  },
+  {
+   "id": "continuity-1365dc",
+   "skill": "continuity",
+   "difficulty": 3,
+   "statement": "Let $f(x) = x^{3} + x - 13$. On which of these intervals does the Intermediate Value Theorem guarantee a solution of $f(x) = 0$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "The IVT applies when $f$ is continuous and takes values of opposite sign at the two endpoints.",
+    "Evaluate $f$ at each endpoint (a decimal approximation is enough) and look for a sign change."
+   ],
+   "solution": [
+    "$f(2) \\approx -3.000$ and $f(3) \\approx 17.000$ have opposite signs, and $f$ is continuous.",
+    "By the IVT there is a number $c$ in $(2, 3)$ with $f(c) = 0$. On the other listed intervals the endpoint values have the same sign, so the theorem gives no guarantee."
+   ],
+   "verified": true,
+   "choices": [
+    "$[-2, -1]$",
+    "$[-1, 0]$",
+    "$[2, 3]$",
+    "$[3, 4]$"
+   ]
+  },
+  {
+   "id": "continuity-e7f04f",
+   "skill": "continuity",
+   "difficulty": 3,
+   "statement": "Let $f(x) = - 4 x + e^{x} - 1$. On which of these intervals does the Intermediate Value Theorem guarantee a solution of $f(x) = 0$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "The IVT applies when $f$ is continuous and takes values of opposite sign at the two endpoints.",
+    "Evaluate $f$ at each endpoint (a decimal approximation is enough) and look for a sign change."
+   ],
+   "solution": [
+    "$f(2) \\approx -1.611$ and $f(3) \\approx 7.086$ have opposite signs, and $f$ is continuous.",
+    "By the IVT there is a number $c$ in $(2, 3)$ with $f(c) = 0$. On the other listed intervals the endpoint values have the same sign, so the theorem gives no guarantee."
+   ],
+   "verified": true,
+   "choices": [
+    "$[1, 2]$",
+    "$[3, 4]$",
+    "$[-2, -1]$",
+    "$[2, 3]$"
+   ]
+  },
+  {
+   "id": "continuity-499969",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "At which values of $x$ is $f(x) = \\frac{x + 2}{x^{2} - 3 x}$ discontinuous?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "A rational function is continuous everywhere except where its denominator is zero.",
+    "Factor the denominator."
+   ],
+   "solution": [
+    "$x^{2} - 3 x = (x - (0))(x - (3))$ is zero at $x = 0$ and $x = 3$.",
+    "The numerator is nonzero at both, so $f$ has infinite discontinuities at exactly those two points."
+   ],
+   "verified": true,
+   "choices": [
+    "$x = 0, 3$",
+    "$x = 0, -3$",
+    "$x = 0$ only",
+    "$x = 3$ only"
+   ]
+  },
+  {
+   "id": "continuity-4517db",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "At which values of $x$ is $f(x) = \\frac{x + 1}{x^{2} + x - 12}$ discontinuous?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "A rational function is continuous everywhere except where its denominator is zero.",
+    "Factor the denominator."
+   ],
+   "solution": [
+    "$x^{2} + x - 12 = (x - (-4))(x - (3))$ is zero at $x = -4$ and $x = 3$.",
+    "The numerator is nonzero at both, so $f$ has infinite discontinuities at exactly those two points."
+   ],
+   "verified": true,
+   "choices": [
+    "$x = -4$ only",
+    "$x = 3$ only",
+    "$x = 4, -3$",
+    "$x = -4, 3$"
+   ]
+  },
+  {
+   "id": "continuity-a2a4e5",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "At which values of $x$ is $f(x) = \\frac{x + 3}{x^{2} - 16}$ discontinuous?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "A rational function is continuous everywhere except where its denominator is zero.",
+    "Factor the denominator."
+   ],
+   "solution": [
+    "$x^{2} - 16 = (x - (-4))(x - (4))$ is zero at $x = -4$ and $x = 4$.",
+    "The numerator is nonzero at both, so $f$ has infinite discontinuities at exactly those two points."
+   ],
+   "verified": true,
+   "choices": [
+    "$x = 4$ only",
+    "$x = -4, 4$",
+    "$x = -4$ only",
+    "$x = 4, -4$"
+   ]
+  },
+  {
+   "id": "continuity-bdaf07",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "At which values of $x$ is $f(x) = \\frac{x + 3}{x^{2} + 4 x + 3}$ discontinuous?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "A rational function is continuous everywhere except where its denominator is zero.",
+    "Factor the denominator."
+   ],
+   "solution": [
+    "$x^{2} + 4 x + 3 = (x - (-3))(x - (-1))$ is zero at $x = -3$ and $x = -1$.",
+    "The numerator is nonzero at both, so $f$ has infinite discontinuities at exactly those two points."
+   ],
+   "verified": true,
+   "choices": [
+    "$x = 3, 1$",
+    "$x = -1$ only",
+    "$x = -3, -1$",
+    "$x = -3$ only"
+   ]
+  },
+  {
+   "id": "continuity-ca27a2",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "Which three conditions must all hold for $f$ to be continuous at $x = a$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Continuity means the limit and the function value agree.",
+    "That requires both of them to exist in the first place."
+   ],
+   "solution": [
+    "Continuity at $a$: $\\lim_{x \\to a} f(x) = f(a)$, which needs both sides to exist.",
+    "Differentiability implies continuity but is not required for it."
+   ],
+   "verified": true,
+   "choices": [
+    "$f(a)$ is defined, $\\lim_{x \\to a} f(x)$ exists, and $\\lim_{x \\to a} f(x) = f(a)$",
+    "$f$ is differentiable at $a$",
+    "$f(a)$ is defined and $f$ is increasing near $a$",
+    "$\\lim_{x \\to a} f(x)$ exists and $f(a) > 0$"
+   ]
+  },
+  {
+   "id": "continuity-a7d723",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "A function is continuous from the right at $x = a$ when",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "'From the right' refers to the one-sided limit with $x > a$.",
+    "The limit must equal the function value."
+   ],
+   "solution": [
+    "Right-continuity compares the right-hand limit with $f(a)$.",
+    "For example $\\sqrt{x}$ is continuous from the right at $0$."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\lim_{x \\to a^+} f(x) = f(a)$",
+    "$\\lim_{x \\to a^+} f(x)$ exists",
+    "$\\lim_{x \\to a^-} f(x) = f(a)$",
+    "$f(a) > 0$"
+   ]
+  },
+  {
+   "id": "continuity-db4637",
+   "skill": "continuity",
+   "difficulty": 1,
+   "statement": "If $f$ is continuous on $[1, 3]$ with $f(1) = -2$ and $f(3) = 5$, what does the Intermediate Value Theorem guarantee?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "The IVT says every value between $f(1)$ and $f(3)$ is attained somewhere in between.",
+    "It guarantees existence, not uniqueness or location."
+   ],
+   "solution": [
+    "$0$ lies between $-2$ and $5$, so some $c \\in (1,3)$ has $f(c) = 0$.",
+    "The theorem does not say where, nor that there is only one."
+   ],
+   "verified": true,
+   "choices": [
+    "$f$ is increasing on $[1, 3]$",
+    "there is some $c$ in $(1, 3)$ with $f(c) = 0$",
+    "$f(2) = 0$",
+    "$f$ has exactly one zero in $(1, 3)$"
+   ]
+  }
+ ]
+}

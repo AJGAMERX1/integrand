@@ -1,0 +1,1161 @@
+{
+ "skill": "inverse-functions-and-logs",
+ "problems": [
+  {
+   "id": "inverse-functions-and-logs-ab67a8",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Find a formula for the inverse function of $f(x) = - 2 x - 5$.",
+   "checker": "equiv",
+   "answer": "-x/2-5/2",
+   "hints": [
+    "Write $y = f(x)$, then solve the equation for $x$ in terms of $y$.",
+    "Finally swap $x$ and $y$ to express $f^{-1}(x)$."
+   ],
+   "solution": [
+    "Write $y = - 2 x - 5$ and solve for $x$: $x = \\dfrac{y + 5}{-2}$.",
+    "Swap the letters: $f^{-1}(x) = - \\frac{x}{2} - \\frac{5}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-6a13f1",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Find a formula for the inverse function of $f(x) = \\frac{3 x}{2} - 4$.",
+   "checker": "equiv",
+   "answer": "2*x/3+8/3",
+   "hints": [
+    "Write $y = f(x)$, then solve the equation for $x$ in terms of $y$.",
+    "Finally swap $x$ and $y$ to express $f^{-1}(x)$."
+   ],
+   "solution": [
+    "Write $y = \\frac{3 x}{2} - 4$ and solve for $x$: $x = \\dfrac{y + 4}{\\frac{3}{2}}$.",
+    "Swap the letters: $f^{-1}(x) = \\frac{2 x}{3} + \\frac{8}{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-9cbcbf",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 3,
+   "statement": "Find a formula for the inverse function of $f(x) = \\frac{4 x + 1}{x - 3}$.",
+   "checker": "equiv",
+   "answer": "(3*x+1)/(x-4)",
+   "hints": [
+    "Write $y = f(x)$, then solve the equation for $x$ in terms of $y$.",
+    "Finally swap $x$ and $y$ to express $f^{-1}(x)$."
+   ],
+   "solution": [
+    "Write $y = \\frac{4 x + 1}{x - 3}$ and clear the fraction: $y(x - (3)) = 4x + 1$.",
+    "Collect the $x$ terms: $x(y - 4) = 3y + 1$, so $x = \\dfrac{3y + 1}{y - 4}$.",
+    "Swap letters: $f^{-1}(x) = \\frac{3 x + 1}{x - 4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    4.5,
+    7
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-a5d2f0",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Find a formula for the inverse function of $f(x) = 5 - 3 x^{3}$.",
+   "checker": "equiv",
+   "answer": "(5/3-x/3)^(1/3)",
+   "hints": [
+    "Write $y = f(x)$, then solve the equation for $x$ in terms of $y$.",
+    "Finally swap $x$ and $y$ to express $f^{-1}(x)$."
+   ],
+   "solution": [
+    "Write $y = 5 - 3 x^{3}$; subtract $5$ and divide by $-3$: $x^3 = \\dfrac{y - 5}{-3}$.",
+    "Take the cube root and swap letters: $f^{-1}(x) = \\sqrt[3]{\\frac{5}{3} - \\frac{x}{3}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    2,
+    4.5
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-8f77a3",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Find a formula for the inverse function of $f(x) = \\sqrt{x + 1} + 1$.",
+   "checker": "equiv",
+   "answer": "(x-1)^2-1",
+   "hints": [
+    "Write $y = f(x)$, then solve the equation for $x$ in terms of $y$.",
+    "Finally swap $x$ and $y$ to express $f^{-1}(x)$."
+   ],
+   "solution": [
+    "Write $y = \\sqrt{x + 1} + 1$, isolate the root: $\\sqrt{x + 1} = y - 1$ (so $y \\ge 1$).",
+    "Square and solve: $x = (y - 1)^2 - 1$; swap letters: $f^{-1}(x) = \\left(x - 1\\right)^{2} - 1$ for $x \\ge 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1,
+    4
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-67aace",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Find a formula for the inverse function of $f(x) = \\sqrt{x + 5} + 3$.",
+   "checker": "equiv",
+   "answer": "(x-3)^2-5",
+   "hints": [
+    "Write $y = f(x)$, then solve the equation for $x$ in terms of $y$.",
+    "Finally swap $x$ and $y$ to express $f^{-1}(x)$."
+   ],
+   "solution": [
+    "Write $y = \\sqrt{x + 5} + 3$, isolate the root: $\\sqrt{x + 5} = y - 3$ (so $y \\ge 3$).",
+    "Square and solve: $x = (y - 3)^2 - 5$; swap letters: $f^{-1}(x) = \\left(x - 3\\right)^{2} - 5$ for $x \\ge 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    3,
+    6
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-aeabcf",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Find a formula for the inverse function of $f(x) = - x^{3} - 3$.",
+   "checker": "equiv",
+   "answer": "(-x-3)^(1/3)",
+   "hints": [
+    "Write $y = f(x)$, then solve the equation for $x$ in terms of $y$.",
+    "Finally swap $x$ and $y$ to express $f^{-1}(x)$."
+   ],
+   "solution": [
+    "Write $y = - x^{3} - 3$; subtract $-3$ and divide by $-1$: $x^3 = \\dfrac{y + 3}{-1}$.",
+    "Take the cube root and swap letters: $f^{-1}(x) = \\sqrt[3]{- x - 3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -6,
+    -3.5
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-385c32",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 3,
+   "statement": "Find a formula for the inverse function of $f(x) = \\frac{4 x + 1}{x + 3}$.",
+   "checker": "equiv",
+   "answer": "(1-3*x)/(x-4)",
+   "hints": [
+    "Write $y = f(x)$, then solve the equation for $x$ in terms of $y$.",
+    "Finally swap $x$ and $y$ to express $f^{-1}(x)$."
+   ],
+   "solution": [
+    "Write $y = \\frac{4 x + 1}{x + 3}$ and clear the fraction: $y(x - (-3)) = 4x + 1$.",
+    "Collect the $x$ terms: $x(y - 4) = -3y + 1$, so $x = \\dfrac{-3y + 1}{y - 4}$.",
+    "Swap letters: $f^{-1}(x) = \\frac{1 - 3 x}{x - 4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    4.5,
+    7
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-09e1d2",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 3,
+   "statement": "Find a formula for the inverse function of $f(x) = \\frac{x + 1}{x - 1}$.",
+   "checker": "equiv",
+   "answer": "(x+1)/(x-1)",
+   "hints": [
+    "Write $y = f(x)$, then solve the equation for $x$ in terms of $y$.",
+    "Finally swap $x$ and $y$ to express $f^{-1}(x)$."
+   ],
+   "solution": [
+    "Write $y = \\frac{x + 1}{x - 1}$ and clear the fraction: $y(x - (1)) = 1x + 1$.",
+    "Collect the $x$ terms: $x(y - 1) = 1y + 1$, so $x = \\dfrac{1y + 1}{y - 1}$.",
+    "Swap letters: $f^{-1}(x) = \\frac{x + 1}{x - 1}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1.5,
+    4
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-3166ae",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Evaluate $\\ln\\left(e^{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "$\\log_b N$ asks: to what power must $e$ be raised to get the argument?",
+    "Use the cancellation equation $\\ln(e^u) = u$."
+   ],
+   "solution": [
+    "$e^{3} = e^{3}$.",
+    "Therefore the logarithm equals $3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-c9bdc5",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Evaluate $\\log_{10} \\frac{1}{100}$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "$\\log_b N$ asks: to what power must $10$ be raised to get the argument?",
+    "Write the argument as a power of $10$: $\\frac{1}{100} = 10^{-2}$."
+   ],
+   "solution": [
+    "$\\frac{1}{100} = 10^{-2}$.",
+    "Therefore the logarithm equals $-2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-24681a",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Evaluate $\\ln\\left(e^{2}\\right)$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "$\\log_b N$ asks: to what power must $e$ be raised to get the argument?",
+    "Use the cancellation equation $\\ln(e^u) = u$."
+   ],
+   "solution": [
+    "$e^{2} = e^{2}$.",
+    "Therefore the logarithm equals $2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-c6d720",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Evaluate $\\log_{3} 1$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "$\\log_b N$ asks: to what power must $3$ be raised to get the argument?",
+    "Write the argument as a power of $3$: $1 = 3^{0}$."
+   ],
+   "solution": [
+    "$1 = 3^{0}$.",
+    "Therefore the logarithm equals $0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-f0e1af",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Evaluate $\\log_{4} 4$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "$\\log_b N$ asks: to what power must $4$ be raised to get the argument?",
+    "Write the argument as a power of $4$: $4 = 4^{1}$."
+   ],
+   "solution": [
+    "$4 = 4^{1}$.",
+    "Therefore the logarithm equals $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-7bc3b7",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Evaluate $\\log_{2} 2$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "$\\log_b N$ asks: to what power must $2$ be raised to get the argument?",
+    "Write the argument as a power of $2$: $2 = 2^{1}$."
+   ],
+   "solution": [
+    "$2 = 2^{1}$.",
+    "Therefore the logarithm equals $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-118792",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Evaluate $\\log_{5} 125$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "$\\log_b N$ asks: to what power must $5$ be raised to get the argument?",
+    "Write the argument as a power of $5$: $125 = 5^{3}$."
+   ],
+   "solution": [
+    "$125 = 5^{3}$.",
+    "Therefore the logarithm equals $3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-5e87ac",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $e^{3 x} = 12$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "ln(12)/3",
+   "hints": [
+    "Take the natural logarithm of both sides; $\\ln e^{u} = u$.",
+    "That gives $3 x = \\ln 12$; now solve the linear equation."
+   ],
+   "solution": [
+    "$\\ln\\left(e^{3 x}\\right) = \\ln 12$, so $3 x = \\ln 12$.",
+    "$x = \\frac{\\ln{\\left(12 \\right)}}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-862697",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 3,
+   "statement": "Solve for $x$: $e^{3 - 2 x} = 20$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "3/2-ln(20)/2",
+   "hints": [
+    "Take the natural logarithm of both sides; $\\ln e^{u} = u$.",
+    "That gives $3 - 2 x = \\ln 20$; now solve the linear equation."
+   ],
+   "solution": [
+    "$\\ln\\left(e^{3 - 2 x}\\right) = \\ln 20$, so $3 - 2 x = \\ln 20$.",
+    "$x = \\frac{3}{2} - \\frac{\\ln{\\left(20 \\right)}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-bef432",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 3,
+   "statement": "Solve for $x$: $e^{- 3 x - 1} = 7$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "-ln(7)/3-1/3",
+   "hints": [
+    "Take the natural logarithm of both sides; $\\ln e^{u} = u$.",
+    "That gives $- 3 x - 1 = \\ln 7$; now solve the linear equation."
+   ],
+   "solution": [
+    "$\\ln\\left(e^{- 3 x - 1}\\right) = \\ln 7$, so $- 3 x - 1 = \\ln 7$.",
+    "$x = - \\frac{\\ln{\\left(7 \\right)}}{3} - \\frac{1}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-f50b2a",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 3,
+   "statement": "Solve for $x$: $e^{3 x + 3} = 5$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "-1+ln(5)/3",
+   "hints": [
+    "Take the natural logarithm of both sides; $\\ln e^{u} = u$.",
+    "That gives $3 x + 3 = \\ln 5$; now solve the linear equation."
+   ],
+   "solution": [
+    "$\\ln\\left(e^{3 x + 3}\\right) = \\ln 5$, so $3 x + 3 = \\ln 5$.",
+    "$x = -1 + \\frac{\\ln{\\left(5 \\right)}}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-3274f9",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 3,
+   "statement": "Solve for $x$: $e^{2 x + 3} = 20$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "-3/2+ln(20)/2",
+   "hints": [
+    "Take the natural logarithm of both sides; $\\ln e^{u} = u$.",
+    "That gives $2 x + 3 = \\ln 20$; now solve the linear equation."
+   ],
+   "solution": [
+    "$\\ln\\left(e^{2 x + 3}\\right) = \\ln 20$, so $2 x + 3 = \\ln 20$.",
+    "$x = - \\frac{3}{2} + \\frac{\\ln{\\left(20 \\right)}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-746553",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 3,
+   "statement": "Solve for $x$: $e^{4 x - 1} = 11$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "1/4+ln(11)/4",
+   "hints": [
+    "Take the natural logarithm of both sides; $\\ln e^{u} = u$.",
+    "That gives $4 x - 1 = \\ln 11$; now solve the linear equation."
+   ],
+   "solution": [
+    "$\\ln\\left(e^{4 x - 1}\\right) = \\ln 11$, so $4 x - 1 = \\ln 11$.",
+    "$x = \\frac{1}{4} + \\frac{\\ln{\\left(11 \\right)}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-da8829",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $e^{3 x} = 9$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "ln(9)/3",
+   "hints": [
+    "Take the natural logarithm of both sides; $\\ln e^{u} = u$.",
+    "That gives $3 x = \\ln 9$; now solve the linear equation."
+   ],
+   "solution": [
+    "$\\ln\\left(e^{3 x}\\right) = \\ln 9$, so $3 x = \\ln 9$.",
+    "$x = \\frac{\\ln{\\left(9 \\right)}}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-27865e",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $\\log_{3}(x + 4) = 1$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "Rewrite the logarithmic equation in exponential form: $\\log_b u = c$ means $u = b^c$.",
+    "So $x + 4 = 3^{1} = 3$; solve for $x$."
+   ],
+   "solution": [
+    "Exponential form: $x + 4 = 3^{1} = 3$.",
+    "$x = -1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-2dadd0",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $\\ln(x + 2) = 1$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "-2+e",
+   "hints": [
+    "Rewrite the logarithmic equation in exponential form: $\\log_b u = c$ means $u = b^c$.",
+    "So $x + 2 = e^{1}$; solve for $x$."
+   ],
+   "solution": [
+    "Exponential form: $x + 2 = e^{1}$.",
+    "$x = -2 + e$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-f4d4a3",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $\\log_{2}(x + 5) = 1$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "Rewrite the logarithmic equation in exponential form: $\\log_b u = c$ means $u = b^c$.",
+    "So $x + 5 = 2^{1} = 2$; solve for $x$."
+   ],
+   "solution": [
+    "Exponential form: $x + 5 = 2^{1} = 2$.",
+    "$x = -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-bc1678",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $\\ln(4 x - 3) = 2$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "3/4+exp(2)/4",
+   "hints": [
+    "Rewrite the logarithmic equation in exponential form: $\\log_b u = c$ means $u = b^c$.",
+    "So $4 x - 3 = e^{2}$; solve for $x$."
+   ],
+   "solution": [
+    "Exponential form: $4 x - 3 = e^{2}$.",
+    "$x = \\frac{3}{4} + \\frac{e^{2}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-91be2b",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $\\log_{10}(3 x - 2) = 3$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "334",
+   "hints": [
+    "Rewrite the logarithmic equation in exponential form: $\\log_b u = c$ means $u = b^c$.",
+    "So $3 x - 2 = 10^{3} = 1000$; solve for $x$."
+   ],
+   "solution": [
+    "Exponential form: $3 x - 2 = 10^{3} = 1000$.",
+    "$x = 334$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-a96f79",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $\\ln(3 x + 3) = 2$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "-1+exp(2)/3",
+   "hints": [
+    "Rewrite the logarithmic equation in exponential form: $\\log_b u = c$ means $u = b^c$.",
+    "So $3 x + 3 = e^{2}$; solve for $x$."
+   ],
+   "solution": [
+    "Exponential form: $3 x + 3 = e^{2}$.",
+    "$x = -1 + \\frac{e^{2}}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-f9e1e0",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Solve for $x$: $\\ln(4 x + 1) = -1$. Give an exact answer.",
+   "checker": "numeric",
+   "answer": "(1-e)*exp(-1)/4",
+   "hints": [
+    "Rewrite the logarithmic equation in exponential form: $\\log_b u = c$ means $u = b^c$.",
+    "So $4 x + 1 = e^{-1}$; solve for $x$."
+   ],
+   "solution": [
+    "Exponential form: $4 x + 1 = e^{-1}$.",
+    "$x = \\frac{1 - e}{4 e}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-48b511",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Use the laws of logarithms to expand $\\ln\\left(\\frac{x^{5}}{x + 3}\\right)$ into a sum or difference of logarithms with no powers inside.",
+   "checker": "equiv",
+   "answer": "5*ln(x)-ln(x+3)",
+   "hints": [
+    "Products become sums, quotients become differences, exponents become coefficients.",
+    "Here use $\\ln(A/B) = \\ln A - \\ln B$ and $\\ln(x^p) = p\\ln x$."
+   ],
+   "solution": [
+    "$\\ln\\left(\\frac{x^{5}}{x + 3}\\right)$: apply $\\ln(A/B) = \\ln A - \\ln B$ and $\\ln(x^p) = p\\ln x$.",
+    "$= 5 \\ln{\\left(x \\right)} - \\ln{\\left(x + 3 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-ad64e1",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Use the laws of logarithms to expand $\\ln\\left(\\frac{x + 4}{x^{5}}\\right)$ into a sum or difference of logarithms with no powers inside.",
+   "checker": "equiv",
+   "answer": "-5*ln(x)+ln(x+4)",
+   "hints": [
+    "Products become sums, quotients become differences, exponents become coefficients.",
+    "Here use $\\ln(A/B) = \\ln A - \\ln B$, then bring each exponent down as a factor."
+   ],
+   "solution": [
+    "$\\ln\\left(\\frac{x + 4}{x^{5}}\\right)$: apply $\\ln(A/B) = \\ln A - \\ln B$, then bring each exponent down as a factor.",
+    "$= - 5 \\ln{\\left(x \\right)} + \\ln{\\left(x + 4 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-bbd691",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Use the laws of logarithms to expand $\\ln\\left(\\frac{x + 2}{x^{3}}\\right)$ into a sum or difference of logarithms with no powers inside.",
+   "checker": "equiv",
+   "answer": "-3*ln(x)+ln(x+2)",
+   "hints": [
+    "Products become sums, quotients become differences, exponents become coefficients.",
+    "Here use $\\ln(A/B) = \\ln A - \\ln B$, then bring each exponent down as a factor."
+   ],
+   "solution": [
+    "$\\ln\\left(\\frac{x + 2}{x^{3}}\\right)$: apply $\\ln(A/B) = \\ln A - \\ln B$, then bring each exponent down as a factor.",
+    "$= - 3 \\ln{\\left(x \\right)} + \\ln{\\left(x + 2 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-ce255e",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Use the laws of logarithms to expand $\\ln\\left(\\frac{\\left(x + 2\\right)^{2}}{x^{5}}\\right)$ into a sum or difference of logarithms with no powers inside.",
+   "checker": "equiv",
+   "answer": "-5*ln(x)+2*ln(x+2)",
+   "hints": [
+    "Products become sums, quotients become differences, exponents become coefficients.",
+    "Here use $\\ln(A/B) = \\ln A - \\ln B$, then bring each exponent down as a factor."
+   ],
+   "solution": [
+    "$\\ln\\left(\\frac{\\left(x + 2\\right)^{2}}{x^{5}}\\right)$: apply $\\ln(A/B) = \\ln A - \\ln B$, then bring each exponent down as a factor.",
+    "$= - 5 \\ln{\\left(x \\right)} + 2 \\ln{\\left(x + 2 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-c809fd",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Use the laws of logarithms to expand $\\ln\\left(\\frac{\\left(x + 5\\right)^{3}}{x^{5}}\\right)$ into a sum or difference of logarithms with no powers inside.",
+   "checker": "equiv",
+   "answer": "-5*ln(x)+3*ln(x+5)",
+   "hints": [
+    "Products become sums, quotients become differences, exponents become coefficients.",
+    "Here use $\\ln(A/B) = \\ln A - \\ln B$, then bring each exponent down as a factor."
+   ],
+   "solution": [
+    "$\\ln\\left(\\frac{\\left(x + 5\\right)^{3}}{x^{5}}\\right)$: apply $\\ln(A/B) = \\ln A - \\ln B$, then bring each exponent down as a factor.",
+    "$= - 5 \\ln{\\left(x \\right)} + 3 \\ln{\\left(x + 5 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-8ea830",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Use the laws of logarithms to expand $\\ln\\left(x^{2} \\sqrt{x + 2}\\right)$ into a sum or difference of logarithms with no powers inside.",
+   "checker": "equiv",
+   "answer": "2*ln(x)+ln(x+2)/2",
+   "hints": [
+    "Products become sums, quotients become differences, exponents become coefficients.",
+    "Here use $\\ln(AB) = \\ln A + \\ln B$ and $\\ln\\sqrt{u} = \\tfrac12 \\ln u$."
+   ],
+   "solution": [
+    "$\\ln\\left(x^{2} \\sqrt{x + 2}\\right)$: apply $\\ln(AB) = \\ln A + \\ln B$ and $\\ln\\sqrt{u} = \\tfrac12 \\ln u$.",
+    "$= 2 \\ln{\\left(x \\right)} + \\frac{\\ln{\\left(x + 2 \\right)}}{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-3650d3",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Write $3\\ln x + \\ln 2$ as a single logarithm.",
+   "checker": "equiv",
+   "answer": "ln(2*x^3)",
+   "hints": [
+    "Move each coefficient back inside as an exponent first.",
+    "Then a sum of logs is the log of a product and a difference is the log of a quotient."
+   ],
+   "solution": [
+    "Turn the coefficient into an exponent: $3\\ln x + \\ln 2 = \\ln x^{3} + \\ln 2$.",
+    "Combine: $\\ln{\\left(2 x^{3} \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-19c238",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Write $\\ln(x + 3) - 2\\ln x$ as a single logarithm.",
+   "checker": "equiv",
+   "answer": "ln((x+3)/x^2)",
+   "hints": [
+    "Move each coefficient back inside as an exponent first.",
+    "Then a sum of logs is the log of a product and a difference is the log of a quotient."
+   ],
+   "solution": [
+    "Turn the coefficient into an exponent: $\\ln(x + 3) - 2\\ln x = \\ln(x + 3) - \\ln x^{2}$.",
+    "Combine: $\\ln{\\left(\\frac{x + 3}{x^{2}} \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-142246",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Write $\\ln(x + 4) - 4\\ln x$ as a single logarithm.",
+   "checker": "equiv",
+   "answer": "ln((x+4)/x^4)",
+   "hints": [
+    "Move each coefficient back inside as an exponent first.",
+    "Then a sum of logs is the log of a product and a difference is the log of a quotient."
+   ],
+   "solution": [
+    "Turn the coefficient into an exponent: $\\ln(x + 4) - 4\\ln x = \\ln(x + 4) - \\ln x^{4}$.",
+    "Combine: $\\ln{\\left(\\frac{x + 4}{x^{4}} \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-c99202",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Write $\\ln(x + 2) - 3\\ln x$ as a single logarithm.",
+   "checker": "equiv",
+   "answer": "ln((x+2)/x^3)",
+   "hints": [
+    "Move each coefficient back inside as an exponent first.",
+    "Then a sum of logs is the log of a product and a difference is the log of a quotient."
+   ],
+   "solution": [
+    "Turn the coefficient into an exponent: $\\ln(x + 2) - 3\\ln x = \\ln(x + 2) - \\ln x^{3}$.",
+    "Combine: $\\ln{\\left(\\frac{x + 2}{x^{3}} \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-df67f3",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Let $f(x) = x^{3} - 2$. Find $f^{-1}(-1)$ without finding a formula for $f^{-1}$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "$f^{-1}(a)$ is the input $x$ with $f(x) = a$.",
+    "Solve $x^{3} - 2 = -1$."
+   ],
+   "solution": [
+    "We need $x$ with $x^{3} - 2 = -1$.",
+    "Solving gives $x = 1$, so $f^{-1}(-1) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-cb7549",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Let $f(x) = x^{3} + 1$. Find $f^{-1}(2)$ without finding a formula for $f^{-1}$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "$f^{-1}(a)$ is the input $x$ with $f(x) = a$.",
+    "Solve $x^{3} + 1 = 2$."
+   ],
+   "solution": [
+    "We need $x$ with $x^{3} + 1 = 2$.",
+    "Solving gives $x = 1$, so $f^{-1}(2) = 1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-97a306",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 2 x + 4$. Find $f^{-1}(-2)$ without finding a formula for $f^{-1}$.",
+   "checker": "numeric",
+   "answer": "-3",
+   "hints": [
+    "$f^{-1}(a)$ is the input $x$ with $f(x) = a$.",
+    "Solve $2 x + 4 = -2$."
+   ],
+   "solution": [
+    "We need $x$ with $2 x + 4 = -2$.",
+    "Solving gives $x = -3$, so $f^{-1}(-2) = -3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-69590f",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 2^{x} + 3$. Find $f^{-1}(4)$ without finding a formula for $f^{-1}$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "$f^{-1}(a)$ is the input $x$ with $f(x) = a$.",
+    "Solve $2^{x} + 3 = 4$."
+   ],
+   "solution": [
+    "We need $x$ with $2^{x} + 3 = 4$.",
+    "Solving gives $x = 0$, so $f^{-1}(4) = 0$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-bdc137",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Let $f(x) = x - 5$. Find $f^{-1}(-7)$ without finding a formula for $f^{-1}$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "$f^{-1}(a)$ is the input $x$ with $f(x) = a$.",
+    "Solve $x - 5 = -7$."
+   ],
+   "solution": [
+    "We need $x$ with $x - 5 = -7$.",
+    "Solving gives $x = -2$, so $f^{-1}(-7) = -2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-737076",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 4 x + 4$. Find $f^{-1}(12)$ without finding a formula for $f^{-1}$.",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "$f^{-1}(a)$ is the input $x$ with $f(x) = a$.",
+    "Solve $4 x + 4 = 12$."
+   ],
+   "solution": [
+    "We need $x$ with $4 x + 4 = 12$.",
+    "Solving gives $x = 2$, so $f^{-1}(12) = 2$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-efa78e",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\arcsin\\left(\\frac{\\sqrt{3}}{2}\\right)$.",
+   "checker": "numeric",
+   "answer": "pi/3",
+   "hints": [
+    "$\\arcsin u$ is the angle in the principal range whose arcsine is $u$.",
+    "The range of $\\arcsin$ is $[-\\pi/2, \\pi/2]$; recall the special angles $\\pi/6, \\pi/4, \\pi/3$."
+   ],
+   "solution": [
+    "We need the angle $\\theta$ in the principal range with $\\sin \\theta = \\frac{\\sqrt{3}}{2}$.",
+    "That angle is $\\theta = \\frac{\\pi}{3}$, so $\\arcsin\\left(\\frac{\\sqrt{3}}{2}\\right) = \\frac{\\pi}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-3874aa",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\arcsin\\left(-1\\right)$.",
+   "checker": "numeric",
+   "answer": "-pi/2",
+   "hints": [
+    "$\\arcsin u$ is the angle in the principal range whose arcsine is $u$.",
+    "The range of $\\arcsin$ is $[-\\pi/2, \\pi/2]$; recall the special angles $\\pi/6, \\pi/4, \\pi/3$."
+   ],
+   "solution": [
+    "We need the angle $\\theta$ in the principal range with $\\sin \\theta = -1$.",
+    "That angle is $\\theta = - \\frac{\\pi}{2}$, so $\\arcsin\\left(-1\\right) = - \\frac{\\pi}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-70f415",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\arctan\\left(\\sqrt{3}\\right)$.",
+   "checker": "numeric",
+   "answer": "pi/3",
+   "hints": [
+    "$\\arctan u$ is the angle in $(-\\pi/2, \\pi/2)$ whose tangent is $u$.",
+    "Use the special angles whose tangent is $1$, $\\sqrt3$ or $1/\\sqrt3$."
+   ],
+   "solution": [
+    "We need the angle $\\theta$ in the principal range with $\\tan \\theta = \\sqrt{3}$.",
+    "That angle is $\\theta = \\frac{\\pi}{3}$, so $\\arctan\\left(\\sqrt{3}\\right) = \\frac{\\pi}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-e458b6",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\arccos\\left(\\frac{1}{2}\\right)$.",
+   "checker": "numeric",
+   "answer": "pi/3",
+   "hints": [
+    "$\\arccos u$ is the angle in the principal range whose arccose is $u$.",
+    "The range of $\\arccos$ is $[0, \\pi]$; negative inputs give angles bigger than $\\pi/2$."
+   ],
+   "solution": [
+    "We need the angle $\\theta$ in the principal range with $\\cos \\theta = \\frac{1}{2}$.",
+    "That angle is $\\theta = \\frac{\\pi}{3}$, so $\\arccos\\left(\\frac{1}{2}\\right) = \\frac{\\pi}{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-3d4d52",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Find the exact value of $\\arccos\\left(-1\\right)$.",
+   "checker": "numeric",
+   "answer": "pi",
+   "hints": [
+    "$\\arccos u$ is the angle in the principal range whose arccose is $u$.",
+    "The range of $\\arccos$ is $[0, \\pi]$; negative inputs give angles bigger than $\\pi/2$."
+   ],
+   "solution": [
+    "We need the angle $\\theta$ in the principal range with $\\cos \\theta = -1$.",
+    "That angle is $\\theta = \\pi$, so $\\arccos\\left(-1\\right) = \\pi$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-37c42d",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Find the domain of $f(x) = \\ln{\\left(4 x + 3 \\right)}$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-3/4,inf)",
+   "hints": [
+    "A logarithm is defined only for positive inputs.",
+    "Solve $4 x + 3 > 0$."
+   ],
+   "solution": [
+    "Need $4 x + 3 > 0$, i.e. $x > - \\frac{3}{4}$.",
+    "Domain: $(- \\frac{3}{4}, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-e73982",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Find the domain of $f(x) = \\ln{\\left(4 x + 6 \\right)}$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-3/2,inf)",
+   "hints": [
+    "A logarithm is defined only for positive inputs.",
+    "Solve $4 x + 6 > 0$."
+   ],
+   "solution": [
+    "Need $4 x + 6 > 0$, i.e. $x > - \\frac{3}{2}$.",
+    "Domain: $(- \\frac{3}{2}, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-db7d3a",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Find the domain of $f(x) = \\ln{\\left(x + 3 \\right)}$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(-3,inf)",
+   "hints": [
+    "A logarithm is defined only for positive inputs.",
+    "Solve $x + 3 > 0$."
+   ],
+   "solution": [
+    "Need $x + 3 > 0$, i.e. $x > -3$.",
+    "Domain: $(-3, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-e9309c",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Find the domain of $f(x) = \\ln{\\left(4 x - 6 \\right)}$. Answer in interval notation.",
+   "checker": "interval",
+   "answer": "(3/2,inf)",
+   "hints": [
+    "A logarithm is defined only for positive inputs.",
+    "Solve $4 x - 6 > 0$."
+   ],
+   "solution": [
+    "Need $4 x - 6 > 0$, i.e. $x > \\frac{3}{2}$.",
+    "Domain: $(\\frac{3}{2}, \\infty)$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-556588",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Simplify $e^{\\ln 7}$.",
+   "checker": "numeric",
+   "answer": "7",
+   "hints": [
+    "Exponential and logarithmic functions with the same base are inverses.",
+    "Apply the cancellation equation $b^{\\log_b u} = u$ or $e^{\\ln u} = u$."
+   ],
+   "solution": [
+    "$e^{\\ln u} = u$ for $u > 0$ because $\\ln$ and the exponential undo each other.",
+    "So $e^{\\ln 7} = 7$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-2849b4",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Simplify $\\ln\\left(e^{x + 3}\\right)$.",
+   "checker": "equiv",
+   "answer": "x+3",
+   "hints": [
+    "$\\ln$ and $e^{(\\cdot)}$ are inverse functions.",
+    "$\\ln(e^u) = u$ for every real $u$."
+   ],
+   "solution": [
+    "$\\ln(e^u) = u$ for all real $u$.",
+    "So $\\ln\\left(e^{x + 3}\\right) = x + 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-c13ab3",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Simplify $2^{\\log_{2} 3}$.",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "Exponential and logarithmic functions with the same base are inverses.",
+    "Apply the cancellation equation $b^{\\log_b u} = u$ or $e^{\\ln u} = u$."
+   ],
+   "solution": [
+    "$b^{\\log_b u} = u$ because the exponential with base $b$ undoes $\\log_b$.",
+    "So $2^{\\log_{2} 3} = 3$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "inverse-functions-and-logs-2311b9",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Simplify $\\ln\\left(e^{x^{2}}\\right)$.",
+   "checker": "equiv",
+   "answer": "x^2",
+   "hints": [
+    "$\\ln$ and $e^{(\\cdot)}$ are inverse functions.",
+    "$\\ln(e^u) = u$ for every real $u$."
+   ],
+   "solution": [
+    "$\\ln(e^u) = u$ for all real $u$.",
+    "So $\\ln\\left(e^{x^{2}}\\right) = x^{2}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-e38bf9",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 1,
+   "statement": "Simplify $\\ln\\left(e^{3 x}\\right)$.",
+   "checker": "equiv",
+   "answer": "3*x",
+   "hints": [
+    "$\\ln$ and $e^{(\\cdot)}$ are inverse functions.",
+    "$\\ln(e^u) = u$ for every real $u$."
+   ],
+   "solution": [
+    "$\\ln(e^u) = u$ for all real $u$.",
+    "So $\\ln\\left(e^{3 x}\\right) = 3 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "inverse-functions-and-logs-cb07ff",
+   "skill": "inverse-functions-and-logs",
+   "difficulty": 2,
+   "statement": "Which of these functions is one-to-one on its whole domain (and therefore has an inverse)?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "One-to-one means different inputs always give different outputs: no horizontal line crosses the graph twice.",
+    "Functions that are symmetric about the $y$-axis or periodic repeat output values."
+   ],
+   "solution": [
+    "$x^2 - a$, $|x| + a$ and $\\cos x$ all take the same value at two different inputs (for example at $x$ and $-x$), so they fail the horizontal line test.",
+    "$x^3 + 4$ is strictly increasing, so it is one-to-one and has the inverse $\\sqrt[3]{x - 4}$."
+   ],
+   "verified": true,
+   "choices": [
+    "$f(x) = \\cos x$",
+    "$f(x) = |x| + 4$",
+    "$f(x) = x^2 - 4$",
+    "$f(x) = x^3 + 4$"
+   ]
+  }
+ ]
+}

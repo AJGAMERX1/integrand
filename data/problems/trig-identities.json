@@ -1,0 +1,1213 @@
+{
+ "skill": "trig-identities",
+ "problems": [
+  {
+   "id": "trig-identities-041731",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{\\sec^2 x - 1}{\\tan^2 x}$ as far as possible.",
+   "checker": "equiv",
+   "answer": "1",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: Pythagorean: $\\sec^2 x - 1 = \\tan^2 x$."
+   ],
+   "solution": [
+    "Apply: Pythagorean: $\\sec^2 x - 1 = \\tan^2 x$.",
+    "The expression simplifies to $1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-e06153",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\sin\\theta = \\frac{4}{5}$ and $\\theta$ is in quadrant I. Find $\\tan 2\\theta$.",
+   "checker": "numeric",
+   "answer": "-24/7",
+   "hints": [
+    "First find the other ratio with $\\sin^2\\theta + \\cos^2\\theta = 1$; in quadrant I, cosine is positive.",
+    "$\\tan 2\\theta = \\dfrac{\\sin 2\\theta}{\\cos 2\\theta}$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\frac{4}{5}$, $\\cos\\theta = \\frac{3}{5}$.",
+    "$\\tan 2\\theta = - \\frac{24}{7}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-361f4e",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Use a sum or difference formula to find the exact value of $\\tan\\left(15^\\circ\\right)$.",
+   "checker": "numeric",
+   "answer": "2-sqrt(3)",
+   "hints": [
+    "Write $15^\\circ = 45^\\circ - 30^\\circ$.",
+    "$\\tan(A \\pm B) = \\dfrac{\\tan A \\pm \\tan B}{1 \\mp \\tan A\\tan B}$."
+   ],
+   "solution": [
+    "$\\tan(15^\\circ) = \\tan(45^\\circ - 30^\\circ)$; expand with the formula and substitute the special values.",
+    "$= 2 - \\sqrt{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-036833",
+   "skill": "trig-identities",
+   "difficulty": 1,
+   "statement": "Which expression equals $\\sin 2x$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Test with a specific angle such as $x = \\pi/6$ (or $a = \\pi/2$, $b = 0$) to rule out wrong options.",
+    "The double-angle formula is the one you need."
+   ],
+   "solution": [
+    "The double-angle formula: $\\sin 2x = 2\\sin x\\cos x$. Note $\\sin 2x \\ne 2\\sin x$.",
+    "The other options fail a numerical test."
+   ],
+   "verified": true,
+   "choices": [
+    "2\\sin x\\cos x",
+    "\\sin x + \\cos x",
+    "\\sin^2 x",
+    "2\\sin x"
+   ]
+  },
+  {
+   "id": "trig-identities-c2ee3c",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Use a half-angle formula to find the exact value of $\\sin\\left(\\frac{\\pi}{12}\\right)$.",
+   "checker": "numeric",
+   "answer": "-sqrt(2)/4+sqrt(6)/4",
+   "hints": [
+    "$\\frac{\\pi}{12}$ is half of $\\frac{\\pi}{6}$, whose cosine you know.",
+    "$\\sin^2\\tfrac{u}{2} = \\dfrac{1 - \\cos u}{2}$ and $\\cos^2\\tfrac{u}{2} = \\dfrac{1 + \\cos u}{2}$; take the positive root in quadrant I."
+   ],
+   "solution": [
+    "$\\cos\\left(\\frac{\\pi}{6}\\right) = \\frac{\\sqrt{3}}{2}$.",
+    "$\\sin\\left(\\frac{\\pi}{12}\\right) = \\sqrt{\\dfrac{1 - \\frac{\\sqrt{3}}{2}}{2}} = - \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-a2cdf2",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Write $\\cos 2x$ in terms of $\\sin x$ only.",
+   "checker": "equiv",
+   "answer": "1-2*sin(x)^2",
+   "hints": [
+    "Start from a form of the identity that contains both sine and cosine, then eliminate the one you do not want using $\\sin^2 x + \\cos^2 x = 1$ or a reciprocal identity.",
+    "$\\cos 2x = \\cos^2 x - \\sin^2 x$ and $\\cos^2 x = 1 - \\sin^2 x$."
+   ],
+   "solution": [
+    "$\\cos 2x = \\cos^2 x - \\sin^2 x$ and $\\cos^2 x = 1 - \\sin^2 x$.",
+    "So $\\cos 2x = 1 - 2\\sin^2 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-b0fc9a",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Suppose $\\tan\\theta = \\frac{5}{12}$ and $\\theta$ is in quadrant III. Find $\\sec\\theta$ exactly.",
+   "checker": "numeric",
+   "answer": "-13/12",
+   "hints": [
+    "Use $1 + \\tan^2\\theta = \\sec^2\\theta$ to get $\\sec\\theta$ up to sign.",
+    "In quadrant III, cosine (and secant) is negative."
+   ],
+   "solution": [
+    "$\\sec^2\\theta = 1 + (\\frac{5}{12})^2 = \\frac{169}{144}$, so $\\sec\\theta = -\\frac{13}{12}$.",
+    "Then $\\cos\\theta = 1/\\sec\\theta$ and $\\sin\\theta = \\tan\\theta\\cos\\theta$. The requested value is $- \\frac{13}{12}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-692327",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Simplify $\\cos 2x + \\sin^2 x$ as far as possible.",
+   "checker": "equiv",
+   "answer": "cos(x)^2",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: double angle: $\\cos 2x = \\cos^2 x - \\sin^2 x$."
+   ],
+   "solution": [
+    "Apply: double angle: $\\cos 2x = \\cos^2 x - \\sin^2 x$.",
+    "The expression simplifies to $\\cos^{2}{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-97b45c",
+   "skill": "trig-identities",
+   "difficulty": 1,
+   "statement": "Simplify $(1 + \\cos x)(1 - \\cos x)$ as far as possible.",
+   "checker": "equiv",
+   "answer": "sin(x)^2",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: difference of squares, then Pythagorean."
+   ],
+   "solution": [
+    "Apply: difference of squares, then Pythagorean.",
+    "The expression simplifies to $\\sin^{2}{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-a22da9",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Which expression equals $\\sin(a + b)$?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Test with a specific angle such as $x = \\pi/6$ (or $a = \\pi/2$, $b = 0$) to rule out wrong options.",
+    "Addition formula is the one you need."
+   ],
+   "solution": [
+    "Addition formula: $\\sin(a+b) = \\sin a\\cos b + \\cos a\\sin b$.",
+    "The other options fail a numerical test."
+   ],
+   "verified": true,
+   "choices": [
+    "\\cos a\\cos b - \\sin a\\sin b",
+    "\\sin a + \\sin b",
+    "\\sin a\\cos b + \\cos a\\sin b",
+    "\\sin a\\cos b - \\cos a\\sin b"
+   ]
+  },
+  {
+   "id": "trig-identities-99ad0b",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\sin\\theta = \\frac{5}{13}$ and $\\theta$ is in quadrant II. Find $\\tan 2\\theta$.",
+   "checker": "numeric",
+   "answer": "-120/119",
+   "hints": [
+    "First find the other ratio with $\\sin^2\\theta + \\cos^2\\theta = 1$; in quadrant II, cosine is negative.",
+    "$\\tan 2\\theta = \\dfrac{\\sin 2\\theta}{\\cos 2\\theta}$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\frac{5}{13}$, $\\cos\\theta = - \\frac{12}{13}$.",
+    "$\\tan 2\\theta = - \\frac{120}{119}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-074249",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Use a sum or difference formula to find the exact value of $\\cos\\left(\\frac{11 \\pi}{12}\\right)$.",
+   "checker": "numeric",
+   "answer": "-sqrt(6)/4-sqrt(2)/4",
+   "hints": [
+    "Write $165^\\circ = 120^\\circ + 45^\\circ$.",
+    "$\\cos(A \\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B$."
+   ],
+   "solution": [
+    "$\\cos(165^\\circ) = \\cos(120^\\circ + 45^\\circ)$; expand with the formula and substitute the special values.",
+    "$= - \\frac{\\sqrt{6}}{4} - \\frac{\\sqrt{2}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-2b69e9",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Use a half-angle formula to find the exact value of $\\sin\\left(\\frac{5\\pi}{12}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/4+sqrt(6)/4",
+   "hints": [
+    "$\\frac{5\\pi}{12}$ is half of $\\frac{5 \\pi}{6}$, whose cosine you know.",
+    "$\\sin^2\\tfrac{u}{2} = \\dfrac{1 - \\cos u}{2}$ and $\\cos^2\\tfrac{u}{2} = \\dfrac{1 + \\cos u}{2}$; take the positive root in quadrant I."
+   ],
+   "solution": [
+    "$\\cos\\left(\\frac{5 \\pi}{6}\\right) = - \\frac{\\sqrt{3}}{2}$.",
+    "$\\sin\\left(\\frac{5\\pi}{12}\\right) = \\sqrt{\\dfrac{1 - - \\frac{\\sqrt{3}}{2}}{2}} = \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-238b50",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Write $\\tan x \\cdot \\cos x$ in terms of $\\sin x$ only.",
+   "checker": "equiv",
+   "answer": "sin(x)",
+   "hints": [
+    "Start from a form of the identity that contains both sine and cosine, then eliminate the one you do not want using $\\sin^2 x + \\cos^2 x = 1$ or a reciprocal identity.",
+    "$\\tan x = \\sin x/\\cos x$."
+   ],
+   "solution": [
+    "$\\tan x = \\sin x/\\cos x$.",
+    "Multiplying by $\\cos x$ leaves $\\sin x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-29a262",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\tan\\theta = \\frac{4}{3}$ and $\\theta$ is in quadrant I. Find $\\sin\\theta$ exactly.",
+   "checker": "numeric",
+   "answer": "4/5",
+   "hints": [
+    "Use $1 + \\tan^2\\theta = \\sec^2\\theta$ to get $\\sec\\theta$ up to sign.",
+    "In quadrant I, cosine (and secant) is positive."
+   ],
+   "solution": [
+    "$\\sec^2\\theta = 1 + (\\frac{4}{3})^2 = \\frac{25}{9}$, so $\\sec\\theta = \\frac{5}{3}$.",
+    "Then $\\cos\\theta = 1/\\sec\\theta$ and $\\sin\\theta = \\tan\\theta\\cos\\theta$. The requested value is $\\frac{4}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-d5215b",
+   "skill": "trig-identities",
+   "difficulty": 1,
+   "statement": "Simplify $\\sin x \\cot x$ as far as possible.",
+   "checker": "equiv",
+   "answer": "cos(x)",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: reciprocal: $\\cot x = \\cos x/\\sin x$."
+   ],
+   "solution": [
+    "Apply: reciprocal: $\\cot x = \\cos x/\\sin x$.",
+    "The expression simplifies to $\\cos{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-0f1a9c",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\cos\\theta = - \\frac{3}{5}$ and $\\theta$ is in quadrant II. Find $\\tan 2\\theta$.",
+   "checker": "numeric",
+   "answer": "24/7",
+   "hints": [
+    "First find the other ratio with $\\sin^2\\theta + \\cos^2\\theta = 1$; in quadrant II, cosine is negative.",
+    "$\\tan 2\\theta = \\dfrac{\\sin 2\\theta}{\\cos 2\\theta}$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\frac{4}{5}$, $\\cos\\theta = - \\frac{3}{5}$.",
+    "$\\tan 2\\theta = \\frac{24}{7}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-d9be23",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Use a sum or difference formula to find the exact value of $\\sin\\left(105^\\circ\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/4+sqrt(6)/4",
+   "hints": [
+    "Write $105^\\circ = 60^\\circ + 45^\\circ$.",
+    "$\\sin(A \\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B$."
+   ],
+   "solution": [
+    "$\\sin(105^\\circ) = \\sin(60^\\circ + 45^\\circ)$; expand with the formula and substitute the special values.",
+    "$= \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-6e6e77",
+   "skill": "trig-identities",
+   "difficulty": 1,
+   "statement": "Which expression equals $\\sec^2 x$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Test with a specific angle such as $x = \\pi/6$ (or $a = \\pi/2$, $b = 0$) to rule out wrong options.",
+    "Divide $\\sin^2 x + \\cos^2 x = 1$ by $\\cos^2 x$ to get $\\tan^2 x + 1 = \\sec^2 x$. is the one you need."
+   ],
+   "solution": [
+    "Divide $\\sin^2 x + \\cos^2 x = 1$ by $\\cos^2 x$ to get $\\tan^2 x + 1 = \\sec^2 x$.",
+    "The other options fail a numerical test."
+   ],
+   "verified": true,
+   "choices": [
+    "1 + \\tan^2 x",
+    "1 + \\cot^2 x",
+    "\\tan^2 x - 1",
+    "1 - \\tan^2 x"
+   ]
+  },
+  {
+   "id": "trig-identities-5be52a",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Use a half-angle formula to find the exact value of $\\cos\\left(\\frac{3\\pi}{8}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2-sqrt(2))/2",
+   "hints": [
+    "$\\frac{3\\pi}{8}$ is half of $\\frac{3 \\pi}{4}$, whose cosine you know.",
+    "$\\sin^2\\tfrac{u}{2} = \\dfrac{1 - \\cos u}{2}$ and $\\cos^2\\tfrac{u}{2} = \\dfrac{1 + \\cos u}{2}$; take the positive root in quadrant I."
+   ],
+   "solution": [
+    "$\\cos\\left(\\frac{3 \\pi}{4}\\right) = - \\frac{\\sqrt{2}}{2}$.",
+    "$\\cos\\left(\\frac{3\\pi}{8}\\right) = \\sqrt{\\dfrac{1 + - \\frac{\\sqrt{2}}{2}}{2}} = \\frac{\\sqrt{2 - \\sqrt{2}}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-64219f",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\tan\\theta = \\frac{5}{12}$ and $\\theta$ is in quadrant I. Find $\\sin\\theta$ exactly.",
+   "checker": "numeric",
+   "answer": "5/13",
+   "hints": [
+    "Use $1 + \\tan^2\\theta = \\sec^2\\theta$ to get $\\sec\\theta$ up to sign.",
+    "In quadrant I, cosine (and secant) is positive."
+   ],
+   "solution": [
+    "$\\sec^2\\theta = 1 + (\\frac{5}{12})^2 = \\frac{169}{144}$, so $\\sec\\theta = \\frac{13}{12}$.",
+    "Then $\\cos\\theta = 1/\\sec\\theta$ and $\\sin\\theta = \\tan\\theta\\cos\\theta$. The requested value is $\\frac{5}{13}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-65d269",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{\\sin 2x}{\\cos x}$ as far as possible.",
+   "checker": "equiv",
+   "answer": "2*sin(x)",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: double angle: $\\sin 2x = 2\\sin x\\cos x$."
+   ],
+   "solution": [
+    "Apply: double angle: $\\sin 2x = 2\\sin x\\cos x$.",
+    "The expression simplifies to $2 \\sin{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-f2719e",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Suppose $\\sin\\theta = \\frac{4}{5}$ and $\\theta$ is in quadrant I. Find $\\cos 2\\theta$.",
+   "checker": "numeric",
+   "answer": "-7/25",
+   "hints": [
+    "First find the other ratio with $\\sin^2\\theta + \\cos^2\\theta = 1$; in quadrant I, cosine is positive.",
+    "$\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\frac{4}{5}$, $\\cos\\theta = \\frac{3}{5}$.",
+    "$\\cos 2\\theta = - \\frac{7}{25}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-dbebfa",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Use a sum or difference formula to find the exact value of $\\sin\\left(345^\\circ\\right)$.",
+   "checker": "numeric",
+   "answer": "-sqrt(6)/4+sqrt(2)/4",
+   "hints": [
+    "Write $345^\\circ = 300^\\circ + 45^\\circ$.",
+    "$\\sin(A \\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B$."
+   ],
+   "solution": [
+    "$\\sin(345^\\circ) = \\sin(300^\\circ + 45^\\circ)$; expand with the formula and substitute the special values.",
+    "$= - \\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-5fc5ca",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Use a half-angle formula to find the exact value of $\\cos\\left(\\frac{\\pi}{12}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/4+sqrt(6)/4",
+   "hints": [
+    "$\\frac{\\pi}{12}$ is half of $\\frac{\\pi}{6}$, whose cosine you know.",
+    "$\\sin^2\\tfrac{u}{2} = \\dfrac{1 - \\cos u}{2}$ and $\\cos^2\\tfrac{u}{2} = \\dfrac{1 + \\cos u}{2}$; take the positive root in quadrant I."
+   ],
+   "solution": [
+    "$\\cos\\left(\\frac{\\pi}{6}\\right) = \\frac{\\sqrt{3}}{2}$.",
+    "$\\cos\\left(\\frac{\\pi}{12}\\right) = \\sqrt{\\dfrac{1 + \\frac{\\sqrt{3}}{2}}{2}} = \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-bd52ba",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\tan\\theta = 1$ and $\\theta$ is in quadrant I. Find $\\cos\\theta$ exactly.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/2",
+   "hints": [
+    "Use $1 + \\tan^2\\theta = \\sec^2\\theta$ to get $\\sec\\theta$ up to sign.",
+    "In quadrant I, cosine (and secant) is positive."
+   ],
+   "solution": [
+    "$\\sec^2\\theta = 1 + (1)^2 = 2$, so $\\sec\\theta = \\sqrt{2}$.",
+    "Then $\\cos\\theta = 1/\\sec\\theta$ and $\\sin\\theta = \\tan\\theta\\cos\\theta$. The requested value is $\\frac{\\sqrt{2}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-21a3b9",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\sin\\theta = \\frac{3}{5}$ and $\\theta$ is in quadrant I. Find $\\tan 2\\theta$.",
+   "checker": "numeric",
+   "answer": "24/7",
+   "hints": [
+    "First find the other ratio with $\\sin^2\\theta + \\cos^2\\theta = 1$; in quadrant I, cosine is positive.",
+    "$\\tan 2\\theta = \\dfrac{\\sin 2\\theta}{\\cos 2\\theta}$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\frac{3}{5}$, $\\cos\\theta = \\frac{4}{5}$.",
+    "$\\tan 2\\theta = \\frac{24}{7}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-3e4399",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Use a sum or difference formula to find the exact value of $\\cos\\left(345^\\circ\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/4+sqrt(6)/4",
+   "hints": [
+    "Write $345^\\circ = 300^\\circ + 45^\\circ$.",
+    "$\\cos(A \\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B$."
+   ],
+   "solution": [
+    "$\\cos(345^\\circ) = \\cos(300^\\circ + 45^\\circ)$; expand with the formula and substitute the special values.",
+    "$= \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-318b98",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Which expression equals $\\cos(a - b)$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Test with a specific angle such as $x = \\pi/6$ (or $a = \\pi/2$, $b = 0$) to rule out wrong options.",
+    "Subtraction formula is the one you need."
+   ],
+   "solution": [
+    "Subtraction formula: $\\cos(a-b) = \\cos a\\cos b + \\sin a\\sin b$ (plus sign for a difference).",
+    "The other options fail a numerical test."
+   ],
+   "verified": true,
+   "choices": [
+    "\\cos a\\cos b + \\sin a\\sin b",
+    "\\cos a - \\cos b",
+    "\\sin a\\cos b - \\cos a\\sin b",
+    "\\cos a\\cos b - \\sin a\\sin b"
+   ]
+  },
+  {
+   "id": "trig-identities-6cbeff",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Use a half-angle formula to find the exact value of $\\cos\\left(\\frac{\\pi}{8}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(sqrt(2)+2)/2",
+   "hints": [
+    "$\\frac{\\pi}{8}$ is half of $\\frac{\\pi}{4}$, whose cosine you know.",
+    "$\\sin^2\\tfrac{u}{2} = \\dfrac{1 - \\cos u}{2}$ and $\\cos^2\\tfrac{u}{2} = \\dfrac{1 + \\cos u}{2}$; take the positive root in quadrant I."
+   ],
+   "solution": [
+    "$\\cos\\left(\\frac{\\pi}{4}\\right) = \\frac{\\sqrt{2}}{2}$.",
+    "$\\cos\\left(\\frac{\\pi}{8}\\right) = \\sqrt{\\dfrac{1 + \\frac{\\sqrt{2}}{2}}{2}} = \\frac{\\sqrt{\\sqrt{2} + 2}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-018b1d",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\tan\\theta = 3$ and $\\theta$ is in quadrant I. Find $\\cos\\theta$ exactly.",
+   "checker": "numeric",
+   "answer": "sqrt(10)/10",
+   "hints": [
+    "Use $1 + \\tan^2\\theta = \\sec^2\\theta$ to get $\\sec\\theta$ up to sign.",
+    "In quadrant I, cosine (and secant) is positive."
+   ],
+   "solution": [
+    "$\\sec^2\\theta = 1 + (3)^2 = 10$, so $\\sec\\theta = \\sqrt{10}$.",
+    "Then $\\cos\\theta = 1/\\sec\\theta$ and $\\sin\\theta = \\tan\\theta\\cos\\theta$. The requested value is $\\frac{\\sqrt{10}}{10}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-b65f05",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Simplify $1 - \\cos 2x$ as far as possible.",
+   "checker": "equiv",
+   "answer": "2*sin(x)^2",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: double angle: $\\cos 2x = 1 - 2\\sin^2 x$."
+   ],
+   "solution": [
+    "Apply: double angle: $\\cos 2x = 1 - 2\\sin^2 x$.",
+    "The expression simplifies to $2 \\sin^{2}{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-eb0920",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Suppose $\\sin\\theta = \\frac{3}{5}$ and $\\theta$ is in quadrant I. Find $\\sin 2\\theta$.",
+   "checker": "numeric",
+   "answer": "24/25",
+   "hints": [
+    "First find the other ratio with $\\sin^2\\theta + \\cos^2\\theta = 1$; in quadrant I, cosine is positive.",
+    "$\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\frac{3}{5}$, $\\cos\\theta = \\frac{4}{5}$.",
+    "$\\sin 2\\theta = \\frac{24}{25}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-b34fa4",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Use a sum or difference formula to find the exact value of $\\sin\\left(285^\\circ\\right)$.",
+   "checker": "numeric",
+   "answer": "-sqrt(6)/4-sqrt(2)/4",
+   "hints": [
+    "Write $285^\\circ = 240^\\circ + 45^\\circ$.",
+    "$\\sin(A \\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B$."
+   ],
+   "solution": [
+    "$\\sin(285^\\circ) = \\sin(240^\\circ + 45^\\circ)$; expand with the formula and substitute the special values.",
+    "$= - \\frac{\\sqrt{6}}{4} - \\frac{\\sqrt{2}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-6efaad",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Simplify $(\\sec x - 1)(\\sec x + 1)$ as far as possible.",
+   "checker": "equiv",
+   "answer": "tan(x)^2",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: difference of squares, then $\\sec^2 x - 1 = \\tan^2 x$."
+   ],
+   "solution": [
+    "Apply: difference of squares, then $\\sec^2 x - 1 = \\tan^2 x$.",
+    "The expression simplifies to $\\tan^{2}{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-2ed057",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\sin\\theta = \\frac{15}{17}$ and $\\theta$ is in quadrant I. Find $\\tan 2\\theta$.",
+   "checker": "numeric",
+   "answer": "-240/161",
+   "hints": [
+    "First find the other ratio with $\\sin^2\\theta + \\cos^2\\theta = 1$; in quadrant I, cosine is positive.",
+    "$\\tan 2\\theta = \\dfrac{\\sin 2\\theta}{\\cos 2\\theta}$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\frac{15}{17}$, $\\cos\\theta = \\frac{8}{17}$.",
+    "$\\tan 2\\theta = - \\frac{240}{161}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-587486",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Use a sum or difference formula to find the exact value of $\\cos\\left(\\frac{23 \\pi}{12}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/4+sqrt(6)/4",
+   "hints": [
+    "Write $345^\\circ = 300^\\circ + 45^\\circ$.",
+    "$\\cos(A \\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B$."
+   ],
+   "solution": [
+    "$\\cos(345^\\circ) = \\cos(300^\\circ + 45^\\circ)$; expand with the formula and substitute the special values.",
+    "$= \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-6b2f83",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\tan\\theta = \\frac{4}{3}$ and $\\theta$ is in quadrant III. Find $\\cos\\theta$ exactly.",
+   "checker": "numeric",
+   "answer": "-3/5",
+   "hints": [
+    "Use $1 + \\tan^2\\theta = \\sec^2\\theta$ to get $\\sec\\theta$ up to sign.",
+    "In quadrant III, cosine (and secant) is negative."
+   ],
+   "solution": [
+    "$\\sec^2\\theta = 1 + (\\frac{4}{3})^2 = \\frac{25}{9}$, so $\\sec\\theta = -\\frac{5}{3}$.",
+    "Then $\\cos\\theta = 1/\\sec\\theta$ and $\\sin\\theta = \\tan\\theta\\cos\\theta$. The requested value is $- \\frac{3}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-1076e7",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\cos\\theta = - \\frac{15}{17}$ and $\\theta$ is in quadrant II. Find $\\tan 2\\theta$.",
+   "checker": "numeric",
+   "answer": "-240/161",
+   "hints": [
+    "First find the other ratio with $\\sin^2\\theta + \\cos^2\\theta = 1$; in quadrant II, cosine is negative.",
+    "$\\tan 2\\theta = \\dfrac{\\sin 2\\theta}{\\cos 2\\theta}$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\frac{8}{17}$, $\\cos\\theta = - \\frac{15}{17}$.",
+    "$\\tan 2\\theta = - \\frac{240}{161}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-a7b6f8",
+   "skill": "trig-identities",
+   "difficulty": 1,
+   "statement": "Simplify $\\cos x \\cdot \\csc x$ as far as possible.",
+   "checker": "equiv",
+   "answer": "cot(x)",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: reciprocal: $\\csc x = 1/\\sin x$."
+   ],
+   "solution": [
+    "Apply: reciprocal: $\\csc x = 1/\\sin x$.",
+    "The expression simplifies to $\\cot{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-daa670",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Simplify $\\tan x + \\cot x$ as far as possible.",
+   "checker": "equiv",
+   "answer": "1/(sin(x)*cos(x))",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: write both in terms of sine and cosine and add."
+   ],
+   "solution": [
+    "Apply: write both in terms of sine and cosine and add.",
+    "The expression simplifies to $\\frac{1}{\\sin{\\left(x \\right)} \\cos{\\left(x \\right)}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-a5154d",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Suppose $\\sin\\theta = \\frac{8}{17}$ and $\\theta$ is in quadrant II. Find $\\cos 2\\theta$.",
+   "checker": "numeric",
+   "answer": "161/289",
+   "hints": [
+    "First find the other ratio with $\\sin^2\\theta + \\cos^2\\theta = 1$; in quadrant II, cosine is negative.",
+    "$\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\frac{8}{17}$, $\\cos\\theta = - \\frac{15}{17}$.",
+    "$\\cos 2\\theta = \\frac{161}{289}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-e946f1",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Use a sum or difference formula to find the exact value of $\\cos\\left(\\frac{\\pi}{12}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/4+sqrt(6)/4",
+   "hints": [
+    "Write $15^\\circ = 45^\\circ - 30^\\circ$.",
+    "$\\cos(A \\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B$."
+   ],
+   "solution": [
+    "$\\cos(15^\\circ) = \\cos(45^\\circ - 30^\\circ)$; expand with the formula and substitute the special values.",
+    "$= \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-70c386",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Simplify $\\dfrac{\\sin^2 x}{1 - \\cos x}$ as far as possible.",
+   "checker": "equiv",
+   "answer": "1+cos(x)",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: write $\\sin^2 x = (1-\\cos x)(1+\\cos x)$."
+   ],
+   "solution": [
+    "Apply: write $\\sin^2 x = (1-\\cos x)(1+\\cos x)$.",
+    "The expression simplifies to $\\cos{\\left(x \\right)} + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-611e22",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Use a sum or difference formula to find the exact value of $\\tan\\left(\\frac{7 \\pi}{12}\\right)$.",
+   "checker": "numeric",
+   "answer": "-2-sqrt(3)",
+   "hints": [
+    "Write $105^\\circ = 60^\\circ + 45^\\circ$.",
+    "$\\tan(A \\pm B) = \\dfrac{\\tan A \\pm \\tan B}{1 \\mp \\tan A\\tan B}$."
+   ],
+   "solution": [
+    "$\\tan(105^\\circ) = \\tan(60^\\circ + 45^\\circ)$; expand with the formula and substitute the special values.",
+    "$= -2 - \\sqrt{3}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-15b812",
+   "skill": "trig-identities",
+   "difficulty": 1,
+   "statement": "Which expression equals $\\cos 2x$?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Test with a specific angle such as $x = \\pi/6$ (or $a = \\pi/2$, $b = 0$) to rule out wrong options.",
+    "The double-angle formula is the one you need."
+   ],
+   "solution": [
+    "The double-angle formula: $\\cos 2x = \\cos^2 x - \\sin^2 x$ (also $2\\cos^2 x - 1$ or $1 - 2\\sin^2 x$).",
+    "The other options fail a numerical test."
+   ],
+   "verified": true,
+   "choices": [
+    "1 - \\cos^2 x",
+    "2\\cos^2 x + 1",
+    "2\\sin x\\cos x",
+    "\\cos^2 x - \\sin^2 x"
+   ]
+  },
+  {
+   "id": "trig-identities-e0fc88",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Use a half-angle formula to find the exact value of $\\sin\\left(\\frac{3\\pi}{8}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(sqrt(2)+2)/2",
+   "hints": [
+    "$\\frac{3\\pi}{8}$ is half of $\\frac{3 \\pi}{4}$, whose cosine you know.",
+    "$\\sin^2\\tfrac{u}{2} = \\dfrac{1 - \\cos u}{2}$ and $\\cos^2\\tfrac{u}{2} = \\dfrac{1 + \\cos u}{2}$; take the positive root in quadrant I."
+   ],
+   "solution": [
+    "$\\cos\\left(\\frac{3 \\pi}{4}\\right) = - \\frac{\\sqrt{2}}{2}$.",
+    "$\\sin\\left(\\frac{3\\pi}{8}\\right) = \\sqrt{\\dfrac{1 - - \\frac{\\sqrt{2}}{2}}{2}} = \\frac{\\sqrt{\\sqrt{2} + 2}}{2}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-5827c3",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Write $\\cos 2x$ in terms of $\\cos x$ only.",
+   "checker": "equiv",
+   "answer": "2*cos(x)^2-1",
+   "hints": [
+    "Start from a form of the identity that contains both sine and cosine, then eliminate the one you do not want using $\\sin^2 x + \\cos^2 x = 1$ or a reciprocal identity.",
+    "$\\cos 2x = \\cos^2 x - \\sin^2 x$ and $\\sin^2 x = 1 - \\cos^2 x$."
+   ],
+   "solution": [
+    "$\\cos 2x = \\cos^2 x - \\sin^2 x$ and $\\sin^2 x = 1 - \\cos^2 x$.",
+    "So $\\cos 2x = 2\\cos^2 x - 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-8fc0b2",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is in quadrant III. Find $\\sin\\theta$ exactly.",
+   "checker": "numeric",
+   "answer": "-3/5",
+   "hints": [
+    "Use $1 + \\tan^2\\theta = \\sec^2\\theta$ to get $\\sec\\theta$ up to sign.",
+    "In quadrant III, cosine (and secant) is negative."
+   ],
+   "solution": [
+    "$\\sec^2\\theta = 1 + (\\frac{3}{4})^2 = \\frac{25}{16}$, so $\\sec\\theta = -\\frac{5}{4}$.",
+    "Then $\\cos\\theta = 1/\\sec\\theta$ and $\\sin\\theta = \\tan\\theta\\cos\\theta$. The requested value is $- \\frac{3}{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-d47461",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Simplify $\\dfrac{\\cos x}{1 - \\sin x} - \\tan x$ as far as possible.",
+   "checker": "equiv",
+   "answer": "1/cos(x)",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: multiply the first fraction by $\\frac{1+\\sin x}{1+\\sin x}$."
+   ],
+   "solution": [
+    "Apply: multiply the first fraction by $\\frac{1+\\sin x}{1+\\sin x}$.",
+    "The expression simplifies to $\\frac{1}{\\cos{\\left(x \\right)}}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-b98490",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Simplify $(\\sin x + \\cos x)^2 - 1$ as far as possible.",
+   "checker": "equiv",
+   "answer": "2*sin(x)*cos(x)",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: expand, use $\\sin^2 x + \\cos^2 x = 1$."
+   ],
+   "solution": [
+    "Apply: expand, use $\\sin^2 x + \\cos^2 x = 1$.",
+    "The expression simplifies to $2 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-50e6d6",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\sin\\theta = \\frac{5}{13}$ and $\\theta$ is in quadrant I. Find $\\tan 2\\theta$.",
+   "checker": "numeric",
+   "answer": "120/119",
+   "hints": [
+    "First find the other ratio with $\\sin^2\\theta + \\cos^2\\theta = 1$; in quadrant I, cosine is positive.",
+    "$\\tan 2\\theta = \\dfrac{\\sin 2\\theta}{\\cos 2\\theta}$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\frac{5}{13}$, $\\cos\\theta = \\frac{12}{13}$.",
+    "$\\tan 2\\theta = \\frac{120}{119}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-bbec49",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Use a sum or difference formula to find the exact value of $\\sin\\left(\\frac{\\pi}{12}\\right)$.",
+   "checker": "numeric",
+   "answer": "-sqrt(2)/4+sqrt(6)/4",
+   "hints": [
+    "Write $15^\\circ = 45^\\circ - 30^\\circ$.",
+    "$\\sin(A \\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B$."
+   ],
+   "solution": [
+    "$\\sin(15^\\circ) = \\sin(45^\\circ - 30^\\circ)$; expand with the formula and substitute the special values.",
+    "$= - \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-59245e",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Suppose $\\tan\\theta = \\frac{5}{12}$ and $\\theta$ is in quadrant I. Find $\\sec\\theta$ exactly.",
+   "checker": "numeric",
+   "answer": "13/12",
+   "hints": [
+    "Use $1 + \\tan^2\\theta = \\sec^2\\theta$ to get $\\sec\\theta$ up to sign.",
+    "In quadrant I, cosine (and secant) is positive."
+   ],
+   "solution": [
+    "$\\sec^2\\theta = 1 + (\\frac{5}{12})^2 = \\frac{169}{144}$, so $\\sec\\theta = \\frac{13}{12}$.",
+    "Then $\\cos\\theta = 1/\\sec\\theta$ and $\\sin\\theta = \\tan\\theta\\cos\\theta$. The requested value is $\\frac{13}{12}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-548be0",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Simplify $\\sec^2 x - \\tan^2 x + \\cos^2 x$ as far as possible.",
+   "checker": "equiv",
+   "answer": "1+cos(x)^2",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: Pythagorean: $\\sec^2 x - \\tan^2 x = 1$."
+   ],
+   "solution": [
+    "Apply: Pythagorean: $\\sec^2 x - \\tan^2 x = 1$.",
+    "The expression simplifies to $\\cos^{2}{\\left(x \\right)} + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-79af8f",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Suppose $\\sin\\theta = \\frac{12}{13}$ and $\\theta$ is in quadrant II. Find $\\sin 2\\theta$.",
+   "checker": "numeric",
+   "answer": "-120/169",
+   "hints": [
+    "First find the other ratio with $\\sin^2\\theta + \\cos^2\\theta = 1$; in quadrant II, cosine is negative.",
+    "$\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\frac{12}{13}$, $\\cos\\theta = - \\frac{5}{13}$.",
+    "$\\sin 2\\theta = - \\frac{120}{169}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-2378ed",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Use a sum or difference formula to find the exact value of $\\sin\\left(165^\\circ\\right)$.",
+   "checker": "numeric",
+   "answer": "-sqrt(2)/4+sqrt(6)/4",
+   "hints": [
+    "Write $165^\\circ = 120^\\circ + 45^\\circ$.",
+    "$\\sin(A \\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B$."
+   ],
+   "solution": [
+    "$\\sin(165^\\circ) = \\sin(120^\\circ + 45^\\circ)$; expand with the formula and substitute the special values.",
+    "$= - \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-7b6c92",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\sin\\theta = \\frac{24}{25}$ and $\\theta$ is in quadrant I. Find $\\tan 2\\theta$.",
+   "checker": "numeric",
+   "answer": "-336/527",
+   "hints": [
+    "First find the other ratio with $\\sin^2\\theta + \\cos^2\\theta = 1$; in quadrant I, cosine is positive.",
+    "$\\tan 2\\theta = \\dfrac{\\sin 2\\theta}{\\cos 2\\theta}$."
+   ],
+   "solution": [
+    "$\\sin\\theta = \\frac{24}{25}$, $\\cos\\theta = \\frac{7}{25}$.",
+    "$\\tan 2\\theta = - \\frac{336}{527}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-73c26c",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Use a sum or difference formula to find the exact value of $\\sin\\left(\\frac{7 \\pi}{12}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/4+sqrt(6)/4",
+   "hints": [
+    "Write $105^\\circ = 60^\\circ + 45^\\circ$.",
+    "$\\sin(A \\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B$."
+   ],
+   "solution": [
+    "$\\sin(105^\\circ) = \\sin(60^\\circ + 45^\\circ)$; expand with the formula and substitute the special values.",
+    "$= \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-b161fd",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Suppose $\\tan\\theta = 3$ and $\\theta$ is in quadrant III. Find $\\cos\\theta$ exactly.",
+   "checker": "numeric",
+   "answer": "-sqrt(10)/10",
+   "hints": [
+    "Use $1 + \\tan^2\\theta = \\sec^2\\theta$ to get $\\sec\\theta$ up to sign.",
+    "In quadrant III, cosine (and secant) is negative."
+   ],
+   "solution": [
+    "$\\sec^2\\theta = 1 + (3)^2 = 10$, so $\\sec\\theta = -\\sqrt{10}$.",
+    "Then $\\cos\\theta = 1/\\sec\\theta$ and $\\sin\\theta = \\tan\\theta\\cos\\theta$. The requested value is $- \\frac{\\sqrt{10}}{10}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-c0dfc1",
+   "skill": "trig-identities",
+   "difficulty": 3,
+   "statement": "Simplify $\\cos^4 x - \\sin^4 x$ as far as possible.",
+   "checker": "equiv",
+   "answer": "cos(2*x)",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: difference of squares, then Pythagorean and double angle."
+   ],
+   "solution": [
+    "Apply: difference of squares, then Pythagorean and double angle.",
+    "The expression simplifies to $\\cos{\\left(2 x \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-7e1ea4",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Simplify $\\csc^2 x - \\cot^2 x + \\sin^2 x$ as far as possible.",
+   "checker": "equiv",
+   "answer": "1+sin(x)^2",
+   "hints": [
+    "Rewrite everything in terms of sine and cosine if you get stuck.",
+    "Useful identity here: Pythagorean: $\\csc^2 x - \\cot^2 x = 1$."
+   ],
+   "solution": [
+    "Apply: Pythagorean: $\\csc^2 x - \\cot^2 x = 1$.",
+    "The expression simplifies to $\\sin^{2}{\\left(x \\right)} + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "trig-identities-056b0f",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Suppose $\\tan\\theta = 2$ and $\\theta$ is in quadrant I. Find $\\sec\\theta$ exactly.",
+   "checker": "numeric",
+   "answer": "sqrt(5)",
+   "hints": [
+    "Use $1 + \\tan^2\\theta = \\sec^2\\theta$ to get $\\sec\\theta$ up to sign.",
+    "In quadrant I, cosine (and secant) is positive."
+   ],
+   "solution": [
+    "$\\sec^2\\theta = 1 + (2)^2 = 5$, so $\\sec\\theta = \\sqrt{5}$.",
+    "Then $\\cos\\theta = 1/\\sec\\theta$ and $\\sin\\theta = \\tan\\theta\\cos\\theta$. The requested value is $\\sqrt{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "trig-identities-700f6c",
+   "skill": "trig-identities",
+   "difficulty": 2,
+   "statement": "Use a sum or difference formula to find the exact value of $\\sin\\left(\\frac{5 \\pi}{12}\\right)$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/4+sqrt(6)/4",
+   "hints": [
+    "Write $75^\\circ = 45^\\circ + 30^\\circ$.",
+    "$\\sin(A \\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B$."
+   ],
+   "solution": [
+    "$\\sin(75^\\circ) = \\sin(45^\\circ + 30^\\circ)$; expand with the formula and substitute the special values.",
+    "$= \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}$."
+   ],
+   "verified": true
+  }
+ ]
+}

@@ -1,0 +1,1363 @@
+{
+ "skill": "transformations",
+ "problems": [
+  {
+   "id": "transformations-fdc018",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Start with $y = \\frac{1}{x}$. Shift the graph 3 units left and 2 units down. Write the equation of the new graph (enter the right-hand side).",
+   "checker": "equiv",
+   "answer": "-2+1/(x+3)",
+   "hints": [
+    "Horizontal shifts go inside with the opposite sign: right by $h$ means replace $x$ with $x - h$.",
+    "Vertical shifts go outside with the same sign: up by $k$ means add $k$."
+   ],
+   "solution": [
+    "Shift left 3: replace $x$ by $(x + 3)$, giving $y = \\frac{1}{x + 3}$.",
+    "Shift down 2: add $(-2)$: $y = -2 + \\frac{1}{x + 3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2.5,
+    0
+   ]
+  },
+  {
+   "id": "transformations-4505a0",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Which equation gives the graph of $y = x^3$ shifted 2 units to the right?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Horizontal changes happen inside the function (next to $x$) and feel backwards; vertical changes happen outside.",
+    "Test a point: where does the vertex or corner of the original graph end up?"
+   ],
+   "solution": [
+    "A graph shifted 2 units to the right has equation $y = \\left(x - 2\\right)^{3}$.",
+    "Check: the key point of the original graph moves exactly that way."
+   ],
+   "verified": true,
+   "choices": [
+    "y = \\left(x + 2\\right)^{3}",
+    "y = \\left(x - 2\\right)^{3}",
+    "y = x^{3} + 2",
+    "y = x^{3} - 2"
+   ]
+  },
+  {
+   "id": "transformations-e145fa",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Reflect the graph of $y = x^{2} - 4$ across the $y$-axis. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "x^2-4",
+   "hints": [
+    "Reflecting across the $x$-axis flips the sign of every output; across the $y$-axis replaces $x$ by $-x$.",
+    "Substitute -x for x and simplify."
+   ],
+   "solution": [
+    "Across the y-axis: y = f(-x).",
+    "$y = x^{2} - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-9a688a",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Start with $y = x^3$. The graph is stretched vertically by a factor of 2, then shifted 4 units down. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "2*x^3-4",
+   "hints": [
+    "Vertical stretches multiply the output; vertical shifts add to the output.",
+    "Apply the stretch first, then the shift, in the order described."
+   ],
+   "solution": [
+    "Stretch: $y = 2 x^{3}$.",
+    "Shift: $y = 2 x^{3} - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-573329",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "The point $(-1, -1)$ lies on the graph of $y = f(x)$. Find the $x$-coordinate of the corresponding point on $y = 2f(x)+1$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "Inside changes move the point horizontally; outside changes act on the $y$-value.",
+    "The x-value shifts by 0."
+   ],
+   "solution": [
+    "The input $x - (0)$ equals $-1$ when $x = -1$.",
+    "So the $x$-coordinate is $-1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "transformations-2727a5",
+   "skill": "transformations",
+   "difficulty": 3,
+   "statement": "The graph of $y = \\sqrt{x}$ is shifted 3 right and 3 down. Write the resulting equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "sqrt(x-3)-3",
+   "hints": [
+    "Apply the reflection (a minus sign in front) before the shifts.",
+    "Horizontal shift inside the root with opposite sign; vertical shift added outside."
+   ],
+   "solution": [
+    "Horizontal shift: replace $x$ with $(x - 3)$.",
+    "Vertical shift: add $(-3)$. Result: $y = \\sqrt{x - 3} - 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    3.2,
+    7
+   ]
+  },
+  {
+   "id": "transformations-67463d",
+   "skill": "transformations",
+   "difficulty": 3,
+   "statement": "The graph of $y = 4 - x^{2}$ is stretched horizontally by a factor of 2. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "4-x^2/4",
+   "hints": [
+    "Horizontal scaling happens inside: $y = f(cx)$ compresses by $c$ when $c > 1$ and stretches when $0 < c < 1$.",
+    "Replace $x$ with $\\frac{1}{2}x$."
+   ],
+   "solution": [
+    "Replace $x$ by $\\frac{1}{2}x$: $y = 4 - \\frac{x^{2}}{4}$.",
+    "Simplified: $y = 4 - \\frac{x^{2}}{4}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-430f2b",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Compared with $y = x^3$, the graph of $y = \\left(x + 1\\right)^{3} + 3$ is shifted how?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Inside the function: $x - h$ means right by $h$ (and $x + h$ means left).",
+    "Outside: $+k$ means up, $-k$ means down."
+   ],
+   "solution": [
+    "$x - (-1)$ inside means 1 unit left.",
+    "$+(3)$ outside means 3 units up."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{1 left, 3 down}",
+    "\\text{1 left, 3 up}",
+    "\\text{1 right, 3 up}",
+    "\\text{1 right, 3 down}"
+   ]
+  },
+  {
+   "id": "transformations-395e32",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Which equation is the reflection of $y = 2^x$ across the $x$-axis?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Across the $x$-axis: $y$ becomes $-y$, so $y = -f(x)$. Across the $y$-axis: $x$ becomes $-x$, so $y = f(-x)$.",
+    "Picture one point of the graph and where it lands."
+   ],
+   "solution": [
+    "Across the x-axis: negate the output.",
+    "$y = - 2^{x}$."
+   ],
+   "verified": true,
+   "choices": [
+    "y = - 2^{- x}",
+    "y = - 2^{x}",
+    "y = 2^{x} + 1",
+    "y = 2^{- x}"
+   ]
+  },
+  {
+   "id": "transformations-a6d7f6",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "The graph of $y = x^{2} + 2$ is the graph of $y = x^2$ shifted vertically. By how many units up?",
+   "checker": "numeric",
+   "answer": "2",
+   "hints": [
+    "A constant added outside the function moves the whole graph vertically.",
+    "Compare the outputs at the same $x$, for example $x = 0$."
+   ],
+   "solution": [
+    "At $x = 0$: the original gives $0$, the new one gives $2$.",
+    "The difference is $2$ units up."
+   ],
+   "verified": true
+  },
+  {
+   "id": "transformations-22937f",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Start with $y = \\frac{1}{x}$. Shift the graph 3 units right and 4 units up. Write the equation of the new graph (enter the right-hand side).",
+   "checker": "equiv",
+   "answer": "4+1/(x-3)",
+   "hints": [
+    "Horizontal shifts go inside with the opposite sign: right by $h$ means replace $x$ with $x - h$.",
+    "Vertical shifts go outside with the same sign: up by $k$ means add $k$."
+   ],
+   "solution": [
+    "Shift right 3: replace $x$ by $(x - 3)$, giving $y = \\frac{1}{x - 3}$.",
+    "Shift up 4: add $(4)$: $y = 4 + \\frac{1}{x - 3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    3.5,
+    6
+   ]
+  },
+  {
+   "id": "transformations-6c92bc",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Which equation gives the graph of $y = \\sqrt{x}$ shifted 5 units to the left?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Horizontal changes happen inside the function (next to $x$) and feel backwards; vertical changes happen outside.",
+    "Test a point: where does the vertex or corner of the original graph end up?"
+   ],
+   "solution": [
+    "A graph shifted 5 units to the left has equation $y = \\sqrt{x + 5}$.",
+    "Check: the key point of the original graph moves exactly that way."
+   ],
+   "verified": true,
+   "choices": [
+    "y = \\sqrt{x + 5}",
+    "y = \\sqrt{x} - 5",
+    "y = \\sqrt{x} + 5",
+    "y = \\sqrt{x - 5}"
+   ]
+  },
+  {
+   "id": "transformations-6867ae",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Reflect the graph of $y = x^{2} + 3 x$ across the $x$-axis. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "-x^2-3*x",
+   "hints": [
+    "Reflecting across the $x$-axis flips the sign of every output; across the $y$-axis replaces $x$ by $-x$.",
+    "Multiply the whole expression by -1."
+   ],
+   "solution": [
+    "Across the x-axis: y = -f(x).",
+    "$y = - x^{2} - 3 x$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-9c3da2",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Start with $y = x^2$. The graph is stretched vertically by a factor of 4, then shifted 5 units down. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "4*x^2-5",
+   "hints": [
+    "Vertical stretches multiply the output; vertical shifts add to the output.",
+    "Apply the stretch first, then the shift, in the order described."
+   ],
+   "solution": [
+    "Stretch: $y = 4 x^{2}$.",
+    "Shift: $y = 4 x^{2} - 5$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "transformations-f8c92d",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "The point $(5, -2)$ lies on the graph of $y = f(x)$. Find the $x$-coordinate of the corresponding point on $y = -f(x)+4$.",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "Inside changes move the point horizontally; outside changes act on the $y$-value.",
+    "The x-value shifts by 0."
+   ],
+   "solution": [
+    "The input $x - (0)$ equals $5$ when $x = 5$.",
+    "So the $x$-coordinate is $5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "transformations-1e1e37",
+   "skill": "transformations",
+   "difficulty": 3,
+   "statement": "The graph of $y = \\left|{x}\\right| - 2$ is compressed horizontally by a factor of 2. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "2*abs(x)-2",
+   "hints": [
+    "Horizontal scaling happens inside: $y = f(cx)$ compresses by $c$ when $c > 1$ and stretches when $0 < c < 1$.",
+    "Replace $x$ with $2x$."
+   ],
+   "solution": [
+    "Replace $x$ by $2x$: $y = 2 \\left|{x}\\right| - 2$.",
+    "Simplified: $y = 2 \\left|{x}\\right| - 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-aade2f",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Compared with $y = x^2$, the graph of $y = \\left(x - 1\\right)^{2} - 4$ is shifted how?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Inside the function: $x - h$ means right by $h$ (and $x + h$ means left).",
+    "Outside: $+k$ means up, $-k$ means down."
+   ],
+   "solution": [
+    "$x - (1)$ inside means 1 unit right.",
+    "$+(-4)$ outside means 4 units down."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{1 right, 4 down}",
+    "\\text{1 right, 4 up}",
+    "\\text{1 left, 4 down}",
+    "\\text{1 left, 4 up}"
+   ]
+  },
+  {
+   "id": "transformations-9cadb9",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Which equation is the reflection of $y = x^3$ across the $x$-axis?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Across the $x$-axis: $y$ becomes $-y$, so $y = -f(x)$. Across the $y$-axis: $x$ becomes $-x$, so $y = f(-x)$.",
+    "Picture one point of the graph and where it lands."
+   ],
+   "solution": [
+    "Across the x-axis: negate the output.",
+    "$y = - x^{3}$."
+   ],
+   "verified": true,
+   "choices": [
+    "y = \\frac{1}{x^{3}}",
+    "y = - x^{3}",
+    "y = x^{3} + 1",
+    "y = x^{3}"
+   ]
+  },
+  {
+   "id": "transformations-55d6ea",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "The graph of $y = \\left|{x}\\right| + 1$ is the graph of $y = |x|$ shifted vertically. By how many units up?",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "A constant added outside the function moves the whole graph vertically.",
+    "Compare the outputs at the same $x$, for example $x = 0$."
+   ],
+   "solution": [
+    "At $x = 0$: the original gives $0$, the new one gives $1$.",
+    "The difference is $1$ units up."
+   ],
+   "verified": true
+  },
+  {
+   "id": "transformations-40fc39",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Start with $y = |x|$. Shift the graph 4 units left and 4 units up. Write the equation of the new graph (enter the right-hand side).",
+   "checker": "equiv",
+   "answer": "abs(x+4)+4",
+   "hints": [
+    "Horizontal shifts go inside with the opposite sign: right by $h$ means replace $x$ with $x - h$.",
+    "Vertical shifts go outside with the same sign: up by $k$ means add $k$."
+   ],
+   "solution": [
+    "Shift left 4: replace $x$ by $(x + 4)$, giving $y = \\left|{x + 4}\\right|$.",
+    "Shift up 4: add $(4)$: $y = \\left|{x + 4}\\right| + 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -7,
+    -1
+   ]
+  },
+  {
+   "id": "transformations-34259e",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Which equation gives the graph of $y = |x|$ shifted 3 units to the right?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Horizontal changes happen inside the function (next to $x$) and feel backwards; vertical changes happen outside.",
+    "Test a point: where does the vertex or corner of the original graph end up?"
+   ],
+   "solution": [
+    "A graph shifted 3 units to the right has equation $y = \\left|{x - 3}\\right|$.",
+    "Check: the key point of the original graph moves exactly that way."
+   ],
+   "verified": true,
+   "choices": [
+    "y = \\left|{x}\\right| - 3",
+    "y = \\left|{x + 3}\\right|",
+    "y = \\left|{x}\\right| + 3",
+    "y = \\left|{x - 3}\\right|"
+   ]
+  },
+  {
+   "id": "transformations-52838d",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Reflect the graph of $y = 2^{x}$ across the $x$-axis. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "-2^x",
+   "hints": [
+    "Reflecting across the $x$-axis flips the sign of every output; across the $y$-axis replaces $x$ by $-x$.",
+    "Multiply the whole expression by -1."
+   ],
+   "solution": [
+    "Across the x-axis: y = -f(x).",
+    "$y = - 2^{x}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-7dd39c",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Start with $y = x^2$. The graph is stretched vertically by a factor of 3, then shifted 1 units up. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "3*x^2+1",
+   "hints": [
+    "Vertical stretches multiply the output; vertical shifts add to the output.",
+    "Apply the stretch first, then the shift, in the order described."
+   ],
+   "solution": [
+    "Stretch: $y = 3 x^{2}$.",
+    "Shift: $y = 3 x^{2} + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "transformations-2776a6",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "The point $(-5, 0)$ lies on the graph of $y = f(x)$. Find the $x$-coordinate of the corresponding point on $y = -2f(x + 4)+2$.",
+   "checker": "numeric",
+   "answer": "-9",
+   "hints": [
+    "Inside changes move the point horizontally; outside changes act on the $y$-value.",
+    "The x-value shifts by -4."
+   ],
+   "solution": [
+    "The input $x - (-4)$ equals $-5$ when $x = -9$.",
+    "So the $x$-coordinate is $-9$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "transformations-7008b4",
+   "skill": "transformations",
+   "difficulty": 3,
+   "statement": "The graph of $y = x^{3}$ is compressed horizontally by a factor of 3. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "27*x^3",
+   "hints": [
+    "Horizontal scaling happens inside: $y = f(cx)$ compresses by $c$ when $c > 1$ and stretches when $0 < c < 1$.",
+    "Replace $x$ with $3x$."
+   ],
+   "solution": [
+    "Replace $x$ by $3x$: $y = 27 x^{3}$.",
+    "Simplified: $y = 27 x^{3}$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-ed50a9",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Compared with $y = x^3$, the graph of $y = \\left(x - 2\\right)^{3} - 4$ is shifted how?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Inside the function: $x - h$ means right by $h$ (and $x + h$ means left).",
+    "Outside: $+k$ means up, $-k$ means down."
+   ],
+   "solution": [
+    "$x - (2)$ inside means 2 units right.",
+    "$+(-4)$ outside means 4 units down."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{2 left, 4 down}",
+    "\\text{2 right, 4 down}",
+    "\\text{2 left, 4 up}",
+    "\\text{2 right, 4 up}"
+   ]
+  },
+  {
+   "id": "transformations-85a2bd",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Which equation is the reflection of $y = x^2 - 2x$ across the $y$-axis?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Across the $x$-axis: $y$ becomes $-y$, so $y = -f(x)$. Across the $y$-axis: $x$ becomes $-x$, so $y = f(-x)$.",
+    "Picture one point of the graph and where it lands."
+   ],
+   "solution": [
+    "Across the y-axis: substitute -x.",
+    "$y = x^{2} + 2 x$."
+   ],
+   "verified": true,
+   "choices": [
+    "y = x^{2} + 2 x",
+    "y = - x^{2} - 2 x",
+    "y = - x^{2} + 2 x",
+    "y = x^{2} - 2 x + 1"
+   ]
+  },
+  {
+   "id": "transformations-07ce95",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "The graph of $y = x^{3} + 3$ is the graph of $y = x^3$ shifted vertically. By how many units up?",
+   "checker": "numeric",
+   "answer": "3",
+   "hints": [
+    "A constant added outside the function moves the whole graph vertically.",
+    "Compare the outputs at the same $x$, for example $x = 0$."
+   ],
+   "solution": [
+    "At $x = 0$: the original gives $0$, the new one gives $3$.",
+    "The difference is $3$ units up."
+   ],
+   "verified": true
+  },
+  {
+   "id": "transformations-7054a2",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Start with $y = |x|$. Shift the graph 5 units right and 4 units down. Write the equation of the new graph (enter the right-hand side).",
+   "checker": "equiv",
+   "answer": "abs(x-5)-4",
+   "hints": [
+    "Horizontal shifts go inside with the opposite sign: right by $h$ means replace $x$ with $x - h$.",
+    "Vertical shifts go outside with the same sign: up by $k$ means add $k$."
+   ],
+   "solution": [
+    "Shift right 5: replace $x$ by $(x - 5)$, giving $y = \\left|{x - 5}\\right|$.",
+    "Shift down 4: add $(-4)$: $y = \\left|{x - 5}\\right| - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    2,
+    8
+   ]
+  },
+  {
+   "id": "transformations-e294b8",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Which equation gives the graph of $y = \\sqrt{x}$ shifted 1 units up?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Horizontal changes happen inside the function (next to $x$) and feel backwards; vertical changes happen outside.",
+    "Test a point: where does the vertex or corner of the original graph end up?"
+   ],
+   "solution": [
+    "A graph shifted 1 units up has equation $y = \\sqrt{x} + 1$.",
+    "Check: the key point of the original graph moves exactly that way."
+   ],
+   "verified": true,
+   "choices": [
+    "y = \\sqrt{x} + 1",
+    "y = \\sqrt{x + 1}",
+    "y = \\sqrt{x - 1}",
+    "y = \\sqrt{x} - 1"
+   ]
+  },
+  {
+   "id": "transformations-550189",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Reflect the graph of $y = \\left|{x}\\right| + 1$ across the $y$-axis. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "abs(x)+1",
+   "hints": [
+    "Reflecting across the $x$-axis flips the sign of every output; across the $y$-axis replaces $x$ by $-x$.",
+    "Substitute -x for x and simplify."
+   ],
+   "solution": [
+    "Across the y-axis: y = f(-x).",
+    "$y = \\left|{x}\\right| + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-609297",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Start with $y = x^3$. The graph is stretched vertically by a factor of 3, then shifted 4 units up. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "3*x^3+4",
+   "hints": [
+    "Vertical stretches multiply the output; vertical shifts add to the output.",
+    "Apply the stretch first, then the shift, in the order described."
+   ],
+   "solution": [
+    "Stretch: $y = 3 x^{3}$.",
+    "Shift: $y = 3 x^{3} + 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-50dced",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "The point $(4, 1)$ lies on the graph of $y = f(x)$. Find the $x$-coordinate of the corresponding point on $y = -f(x + 3)-2$.",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Inside changes move the point horizontally; outside changes act on the $y$-value.",
+    "The x-value shifts by -3."
+   ],
+   "solution": [
+    "The input $x - (-3)$ equals $4$ when $x = 1$.",
+    "So the $x$-coordinate is $1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "transformations-a068c0",
+   "skill": "transformations",
+   "difficulty": 3,
+   "statement": "The graph of $y = \\left|{x}\\right| - 2$ is compressed horizontally by a factor of 3. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "3*abs(x)-2",
+   "hints": [
+    "Horizontal scaling happens inside: $y = f(cx)$ compresses by $c$ when $c > 1$ and stretches when $0 < c < 1$.",
+    "Replace $x$ with $3x$."
+   ],
+   "solution": [
+    "Replace $x$ by $3x$: $y = 3 \\left|{x}\\right| - 2$.",
+    "Simplified: $y = 3 \\left|{x}\\right| - 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-ee2c6d",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Compared with $y = x^2$, the graph of $y = \\left(x + 1\\right)^{2} + 2$ is shifted how?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Inside the function: $x - h$ means right by $h$ (and $x + h$ means left).",
+    "Outside: $+k$ means up, $-k$ means down."
+   ],
+   "solution": [
+    "$x - (-1)$ inside means 1 unit left.",
+    "$+(2)$ outside means 2 units up."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{1 right, 2 up}",
+    "\\text{1 left, 2 down}",
+    "\\text{1 right, 2 down}",
+    "\\text{1 left, 2 up}"
+   ]
+  },
+  {
+   "id": "transformations-e52a2a",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "The graph of $y = x^{3} + 9$ is the graph of $y = x^3$ shifted vertically. By how many units up?",
+   "checker": "numeric",
+   "answer": "9",
+   "hints": [
+    "A constant added outside the function moves the whole graph vertically.",
+    "Compare the outputs at the same $x$, for example $x = 0$."
+   ],
+   "solution": [
+    "At $x = 0$: the original gives $0$, the new one gives $9$.",
+    "The difference is $9$ units up."
+   ],
+   "verified": true
+  },
+  {
+   "id": "transformations-f355d8",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Start with $y = \\sqrt{x}$. Shift the graph 5 units right and 3 units down. Write the equation of the new graph (enter the right-hand side).",
+   "checker": "equiv",
+   "answer": "sqrt(x-5)-3",
+   "hints": [
+    "Horizontal shifts go inside with the opposite sign: right by $h$ means replace $x$ with $x - h$.",
+    "Vertical shifts go outside with the same sign: up by $k$ means add $k$."
+   ],
+   "solution": [
+    "Shift right 5: replace $x$ by $(x - 5)$, giving $y = \\sqrt{x - 5}$.",
+    "Shift down 3: add $(-3)$: $y = \\sqrt{x - 5} - 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    5.1,
+    9
+   ]
+  },
+  {
+   "id": "transformations-c4ff51",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Which equation gives the graph of $y = x^2$ shifted 3 units to the right?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Horizontal changes happen inside the function (next to $x$) and feel backwards; vertical changes happen outside.",
+    "Test a point: where does the vertex or corner of the original graph end up?"
+   ],
+   "solution": [
+    "A graph shifted 3 units to the right has equation $y = \\left(x - 3\\right)^{2}$.",
+    "Check: the key point of the original graph moves exactly that way."
+   ],
+   "verified": true,
+   "choices": [
+    "y = x^{2} - 3",
+    "y = \\left(x + 3\\right)^{2}",
+    "y = x^{2} + 3",
+    "y = \\left(x - 3\\right)^{2}"
+   ]
+  },
+  {
+   "id": "transformations-93e452",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Start with $y = x^2$. The graph is stretched vertically by a factor of 4, then shifted 3 units up. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "4*x^2+3",
+   "hints": [
+    "Vertical stretches multiply the output; vertical shifts add to the output.",
+    "Apply the stretch first, then the shift, in the order described."
+   ],
+   "solution": [
+    "Stretch: $y = 4 x^{2}$.",
+    "Shift: $y = 4 x^{2} + 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "transformations-3e6324",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "The point $(-3, 2)$ lies on the graph of $y = f(x)$. Find the $x$-coordinate of the corresponding point on $y = -2f(x - 2)-3$.",
+   "checker": "numeric",
+   "answer": "-1",
+   "hints": [
+    "Inside changes move the point horizontally; outside changes act on the $y$-value.",
+    "The x-value shifts by 2."
+   ],
+   "solution": [
+    "The input $x - (2)$ equals $-3$ when $x = -1$.",
+    "So the $x$-coordinate is $-1$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "transformations-0f60d0",
+   "skill": "transformations",
+   "difficulty": 3,
+   "statement": "The graph of $y = \\sqrt{x}$ is reflected across the $x$-axis, shifted 4 left and 2 down. Write the resulting equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "-sqrt(x+4)-2",
+   "hints": [
+    "Apply the reflection (a minus sign in front) before the shifts.",
+    "Horizontal shift inside the root with opposite sign; vertical shift added outside."
+   ],
+   "solution": [
+    "Reflection: y = -sqrt(x). Horizontal shift: replace $x$ with $(x + 4)$.",
+    "Vertical shift: add $(-2)$. Result: $y = - \\sqrt{x + 4} - 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3.8,
+    0
+   ]
+  },
+  {
+   "id": "transformations-650456",
+   "skill": "transformations",
+   "difficulty": 3,
+   "statement": "The graph of $y = x^{2} + 1$ is compressed horizontally by a factor of 2. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "4*x^2+1",
+   "hints": [
+    "Horizontal scaling happens inside: $y = f(cx)$ compresses by $c$ when $c > 1$ and stretches when $0 < c < 1$.",
+    "Replace $x$ with $2x$."
+   ],
+   "solution": [
+    "Replace $x$ by $2x$: $y = 4 x^{2} + 1$.",
+    "Simplified: $y = 4 x^{2} + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-265182",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Compared with $y = x^3$, the graph of $y = \\left(x - 3\\right)^{3} - 3$ is shifted how?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Inside the function: $x - h$ means right by $h$ (and $x + h$ means left).",
+    "Outside: $+k$ means up, $-k$ means down."
+   ],
+   "solution": [
+    "$x - (3)$ inside means 3 units right.",
+    "$+(-3)$ outside means 3 units down."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{3 right, 3 up}",
+    "\\text{3 left, 3 up}",
+    "\\text{3 left, 3 down}",
+    "\\text{3 right, 3 down}"
+   ]
+  },
+  {
+   "id": "transformations-f28cff",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Which equation is the reflection of $y = x^3$ across the $y$-axis?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Across the $x$-axis: $y$ becomes $-y$, so $y = -f(x)$. Across the $y$-axis: $x$ becomes $-x$, so $y = f(-x)$.",
+    "Picture one point of the graph and where it lands."
+   ],
+   "solution": [
+    "Across the y-axis: substitute -x.",
+    "$y = - x^{3}$."
+   ],
+   "verified": true,
+   "choices": [
+    "y = - x^{3}",
+    "y = x^{3} + 1",
+    "y = \\frac{1}{x^{3}}",
+    "y = x^{3}"
+   ]
+  },
+  {
+   "id": "transformations-8ee1ac",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "The graph of $y = \\left|{x}\\right| + 5$ is the graph of $y = |x|$ shifted vertically. By how many units up?",
+   "checker": "numeric",
+   "answer": "5",
+   "hints": [
+    "A constant added outside the function moves the whole graph vertically.",
+    "Compare the outputs at the same $x$, for example $x = 0$."
+   ],
+   "solution": [
+    "At $x = 0$: the original gives $0$, the new one gives $5$.",
+    "The difference is $5$ units up."
+   ],
+   "verified": true
+  },
+  {
+   "id": "transformations-02f343",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Start with $y = x^3$. Shift the graph 4 units left and 4 units down. Write the equation of the new graph (enter the right-hand side).",
+   "checker": "equiv",
+   "answer": "(x+4)^3-4",
+   "hints": [
+    "Horizontal shifts go inside with the opposite sign: right by $h$ means replace $x$ with $x - h$.",
+    "Vertical shifts go outside with the same sign: up by $k$ means add $k$."
+   ],
+   "solution": [
+    "Shift left 4: replace $x$ by $(x + 4)$, giving $y = \\left(x + 4\\right)^{3}$.",
+    "Shift down 4: add $(-4)$: $y = \\left(x + 4\\right)^{3} - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -6,
+    -2
+   ]
+  },
+  {
+   "id": "transformations-7f49d9",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Which equation gives the graph of $y = x^2$ shifted 1 units to the right?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Horizontal changes happen inside the function (next to $x$) and feel backwards; vertical changes happen outside.",
+    "Test a point: where does the vertex or corner of the original graph end up?"
+   ],
+   "solution": [
+    "A graph shifted 1 units to the right has equation $y = \\left(x - 1\\right)^{2}$.",
+    "Check: the key point of the original graph moves exactly that way."
+   ],
+   "verified": true,
+   "choices": [
+    "y = x^{2} + 1",
+    "y = \\left(x + 1\\right)^{2}",
+    "y = x^{2} - 1",
+    "y = \\left(x - 1\\right)^{2}"
+   ]
+  },
+  {
+   "id": "transformations-fa9fd5",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Start with $y = x^2$. The graph is stretched vertically by a factor of 2, then shifted 3 units down. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "2*x^2-3",
+   "hints": [
+    "Vertical stretches multiply the output; vertical shifts add to the output.",
+    "Apply the stretch first, then the shift, in the order described."
+   ],
+   "solution": [
+    "Stretch: $y = 2 x^{2}$.",
+    "Shift: $y = 2 x^{2} - 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "transformations-36b3ec",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "The point $(-4, -4)$ lies on the graph of $y = f(x)$. Find the $x$-coordinate of the corresponding point on $y = -f(x + 1)+1$.",
+   "checker": "numeric",
+   "answer": "-5",
+   "hints": [
+    "Inside changes move the point horizontally; outside changes act on the $y$-value.",
+    "The x-value shifts by -1."
+   ],
+   "solution": [
+    "The input $x - (-1)$ equals $-4$ when $x = -5$.",
+    "So the $x$-coordinate is $-5$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "transformations-fa0ca3",
+   "skill": "transformations",
+   "difficulty": 3,
+   "statement": "The graph of $y = x^{2} + 1$ is compressed horizontally by a factor of 3. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "9*x^2+1",
+   "hints": [
+    "Horizontal scaling happens inside: $y = f(cx)$ compresses by $c$ when $c > 1$ and stretches when $0 < c < 1$.",
+    "Replace $x$ with $3x$."
+   ],
+   "solution": [
+    "Replace $x$ by $3x$: $y = 9 x^{2} + 1$.",
+    "Simplified: $y = 9 x^{2} + 1$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-3ccfea",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Compared with $y = x^2$, the graph of $y = \\left(x - 2\\right)^{2} + 3$ is shifted how?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Inside the function: $x - h$ means right by $h$ (and $x + h$ means left).",
+    "Outside: $+k$ means up, $-k$ means down."
+   ],
+   "solution": [
+    "$x - (2)$ inside means 2 units right.",
+    "$+(3)$ outside means 3 units up."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{2 right, 3 up}",
+    "\\text{2 left, 3 up}",
+    "\\text{2 left, 3 down}",
+    "\\text{2 right, 3 down}"
+   ]
+  },
+  {
+   "id": "transformations-8caeff",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Which equation is the reflection of $y = 2^x$ across the $y$-axis?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Across the $x$-axis: $y$ becomes $-y$, so $y = -f(x)$. Across the $y$-axis: $x$ becomes $-x$, so $y = f(-x)$.",
+    "Picture one point of the graph and where it lands."
+   ],
+   "solution": [
+    "Across the y-axis: substitute -x.",
+    "$y = 2^{- x}$."
+   ],
+   "verified": true,
+   "choices": [
+    "y = 2^{x} + 1",
+    "y = 2^{- x}",
+    "y = - 2^{x}",
+    "y = - 2^{- x}"
+   ]
+  },
+  {
+   "id": "transformations-9b03c2",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "The graph of $y = x^{3} + 8$ is the graph of $y = x^3$ shifted vertically. By how many units up?",
+   "checker": "numeric",
+   "answer": "8",
+   "hints": [
+    "A constant added outside the function moves the whole graph vertically.",
+    "Compare the outputs at the same $x$, for example $x = 0$."
+   ],
+   "solution": [
+    "At $x = 0$: the original gives $0$, the new one gives $8$.",
+    "The difference is $8$ units up."
+   ],
+   "verified": true
+  },
+  {
+   "id": "transformations-81029f",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Start with $y = \\sqrt{x}$. Shift the graph 4 units left and 3 units up. Write the equation of the new graph (enter the right-hand side).",
+   "checker": "equiv",
+   "answer": "sqrt(x+4)+3",
+   "hints": [
+    "Horizontal shifts go inside with the opposite sign: right by $h$ means replace $x$ with $x - h$.",
+    "Vertical shifts go outside with the same sign: up by $k$ means add $k$."
+   ],
+   "solution": [
+    "Shift left 4: replace $x$ by $(x + 4)$, giving $y = \\sqrt{x + 4}$.",
+    "Shift up 3: add $(3)$: $y = \\sqrt{x + 4} + 3$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3.9,
+    0
+   ]
+  },
+  {
+   "id": "transformations-dae593",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Which equation gives the graph of $y = |x|$ shifted 5 units down?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Horizontal changes happen inside the function (next to $x$) and feel backwards; vertical changes happen outside.",
+    "Test a point: where does the vertex or corner of the original graph end up?"
+   ],
+   "solution": [
+    "A graph shifted 5 units down has equation $y = \\left|{x}\\right| - 5$.",
+    "Check: the key point of the original graph moves exactly that way."
+   ],
+   "verified": true,
+   "choices": [
+    "y = \\left|{x - 5}\\right|",
+    "y = \\left|{x}\\right| - 5",
+    "y = \\left|{x + 5}\\right|",
+    "y = \\left|{x}\\right| + 5"
+   ]
+  },
+  {
+   "id": "transformations-a03cae",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Start with $y = x^3$. The graph is stretched vertically by a factor of 2 and reflected across the $x$-axis, then shifted 2 units down. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "-2*x^3-2",
+   "hints": [
+    "Vertical stretches multiply the output; vertical shifts add to the output.",
+    "Apply the stretch first, then the shift, in the order described."
+   ],
+   "solution": [
+    "Stretch: $y = - 2 x^{3}$.",
+    "Shift: $y = - 2 x^{3} - 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-2fcb45",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "The point $(-5, 2)$ lies on the graph of $y = f(x)$. Find the $y$-coordinate of the corresponding point on $y = f(x + 4)+4$.",
+   "checker": "numeric",
+   "answer": "6",
+   "hints": [
+    "Inside changes move the point horizontally; outside changes act on the $y$-value.",
+    "New y = 1 times old y, plus 4."
+   ],
+   "solution": [
+    "New $y = 1\\cdot(2) + (4) = 6$.",
+    "So the $y$-coordinate is $6$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "transformations-49dba7",
+   "skill": "transformations",
+   "difficulty": 3,
+   "statement": "The graph of $y = \\sqrt{x}$ is reflected across the $x$-axis, shifted 2 right and 4 down. Write the resulting equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "-sqrt(x-2)-4",
+   "hints": [
+    "Apply the reflection (a minus sign in front) before the shifts.",
+    "Horizontal shift inside the root with opposite sign; vertical shift added outside."
+   ],
+   "solution": [
+    "Reflection: y = -sqrt(x). Horizontal shift: replace $x$ with $(x - 2)$.",
+    "Vertical shift: add $(-4)$. Result: $y = - \\sqrt{x - 2} - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    2.2,
+    6
+   ]
+  },
+  {
+   "id": "transformations-650a24",
+   "skill": "transformations",
+   "difficulty": 3,
+   "statement": "The graph of $y = \\left|{x}\\right| - 2$ is stretched horizontally by a factor of 2. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "abs(x)/2-2",
+   "hints": [
+    "Horizontal scaling happens inside: $y = f(cx)$ compresses by $c$ when $c > 1$ and stretches when $0 < c < 1$.",
+    "Replace $x$ with $\\frac{1}{2}x$."
+   ],
+   "solution": [
+    "Replace $x$ by $\\frac{1}{2}x$: $y = \\frac{\\left|{x}\\right|}{2} - 2$.",
+    "Simplified: $y = \\frac{\\left|{x}\\right|}{2} - 2$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transformations-44c192",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Compared with $y = |x|$, the graph of $y = \\left|{x + 1}\\right| - 3$ is shifted how?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Inside the function: $x - h$ means right by $h$ (and $x + h$ means left).",
+    "Outside: $+k$ means up, $-k$ means down."
+   ],
+   "solution": [
+    "$x - (-1)$ inside means 1 unit left.",
+    "$+(-3)$ outside means 3 units down."
+   ],
+   "verified": true,
+   "choices": [
+    "\\text{1 right, 3 up}",
+    "\\text{1 left, 3 down}",
+    "\\text{1 right, 3 down}",
+    "\\text{1 left, 3 up}"
+   ]
+  },
+  {
+   "id": "transformations-77b24e",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Start with $y = x^2$. Shift the graph 1 units right and 4 units down. Write the equation of the new graph (enter the right-hand side).",
+   "checker": "equiv",
+   "answer": "(x-1)^2-4",
+   "hints": [
+    "Horizontal shifts go inside with the opposite sign: right by $h$ means replace $x$ with $x - h$.",
+    "Vertical shifts go outside with the same sign: up by $k$ means add $k$."
+   ],
+   "solution": [
+    "Shift right 1: replace $x$ by $(x - 1)$, giving $y = \\left(x - 1\\right)^{2}$.",
+    "Shift down 4: add $(-4)$: $y = \\left(x - 1\\right)^{2} - 4$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    4
+   ]
+  },
+  {
+   "id": "transformations-760f4e",
+   "skill": "transformations",
+   "difficulty": 1,
+   "statement": "Which equation gives the graph of $y = x^2$ shifted 3 units to the left?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Horizontal changes happen inside the function (next to $x$) and feel backwards; vertical changes happen outside.",
+    "Test a point: where does the vertex or corner of the original graph end up?"
+   ],
+   "solution": [
+    "A graph shifted 3 units to the left has equation $y = \\left(x + 3\\right)^{2}$.",
+    "Check: the key point of the original graph moves exactly that way."
+   ],
+   "verified": true,
+   "choices": [
+    "y = x^{2} + 3",
+    "y = x^{2} - 3",
+    "y = \\left(x - 3\\right)^{2}",
+    "y = \\left(x + 3\\right)^{2}"
+   ]
+  },
+  {
+   "id": "transformations-3b3a1d",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "Start with $y = \\sqrt{x}$. The graph is stretched vertically by a factor of 2, then shifted 5 units up. Write the new equation (right-hand side only).",
+   "checker": "equiv",
+   "answer": "2*sqrt(x)+5",
+   "hints": [
+    "Vertical stretches multiply the output; vertical shifts add to the output.",
+    "Apply the stretch first, then the shift, in the order described."
+   ],
+   "solution": [
+    "Stretch: $y = 2 \\sqrt{x}$.",
+    "Shift: $y = 2 \\sqrt{x} + 5$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.1,
+    4
+   ]
+  },
+  {
+   "id": "transformations-a099e2",
+   "skill": "transformations",
+   "difficulty": 2,
+   "statement": "The point $(0, 0)$ lies on the graph of $y = f(x)$. Find the $y$-coordinate of the corresponding point on $y = 3f(x - 2)-2$.",
+   "checker": "numeric",
+   "answer": "-2",
+   "hints": [
+    "Inside changes move the point horizontally; outside changes act on the $y$-value.",
+    "New y = 3 times old y, plus -2."
+   ],
+   "solution": [
+    "New $y = 3\\cdot(0) + (-2) = -2$.",
+    "So the $y$-coordinate is $-2$."
+   ],
+   "verified": true
+  }
+ ]
+}

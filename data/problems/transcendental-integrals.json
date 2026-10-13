@@ -1,0 +1,1198 @@
+{
+ "skill": "transcendental-integrals",
+ "problems": [
+  {
+   "id": "transcendental-integrals-2f5bd0",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{x \\ln{\\left(x \\right)}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(ln(x))",
+   "hints": [
+    "Try the substitution $u = \\ln{\\left(x \\right)}$; then $du = \\frac{1}{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, so $du = \\frac{1}{x}\\,dx$; hence $\\frac{1}{x \\ln{\\left(x \\right)}}\\,dx = \\frac{1}{u}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{x \\ln{\\left(x \\right)}}\\,dx = \\int \\frac{1}{u}\\,du = \\ln{\\left(u \\right)} + C$.",
+    "Substitute $u = \\ln{\\left(x \\right)}$ back: $\\ln{\\left(\\ln{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1.5,
+    4
+   ]
+  },
+  {
+   "id": "transcendental-integrals-701983",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x}{x^{2} + 5}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x^2+5)/2",
+   "hints": [
+    "Try the substitution $u = x^{2} + 5$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 5$, so $du = 2 x\\,dx$; hence $\\frac{x}{x^{2} + 5}\\,dx = \\frac{1}{2 u}\\,du$.",
+    "$\\displaystyle\\int \\frac{x}{x^{2} + 5}\\,dx = \\int \\frac{1}{2 u}\\,du = \\frac{\\ln{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = x^{2} + 5$ back: $\\frac{\\ln{\\left(x^{2} + 5 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transcendental-integrals-e1ac60",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\sec^{2}{\\left(3 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sin(3*x)/(3*cos(3*x))",
+   "hints": [
+    "Try the substitution $u = 3 x$; then $du = 3\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sec^{2}{\\left(u \\right)}}{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 3 x$, so $du = 3\\,dx$; hence $\\sec^{2}{\\left(3 x \\right)}\\,dx = \\frac{\\sec^{2}{\\left(u \\right)}}{3}\\,du$.",
+    "$\\displaystyle\\int \\sec^{2}{\\left(3 x \\right)}\\,dx = \\int \\frac{\\sec^{2}{\\left(u \\right)}}{3}\\,du = \\frac{\\sin{\\left(u \\right)}}{3 \\cos{\\left(u \\right)}} + C$.",
+    "Substitute $u = 3 x$ back: $\\frac{\\sin{\\left(3 x \\right)}}{3 \\cos{\\left(3 x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.25,
+    0.25
+   ]
+  },
+  {
+   "id": "transcendental-integrals-4c5632",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{x}{x^{2} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x^2+1)/2",
+   "hints": [
+    "Try the substitution $u = x^{2} + 1$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + 1$, so $du = 2 x\\,dx$; hence $\\frac{x}{x^{2} + 1}\\,dx = \\frac{1}{2 u}\\,du$.",
+    "$\\displaystyle\\int \\frac{x}{x^{2} + 1}\\,dx = \\int \\frac{1}{2 u}\\,du = \\frac{\\ln{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = x^{2} + 1$ back: $\\frac{\\ln{\\left(x^{2} + 1 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transcendental-integrals-a3877c",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{2 x + 1}{x^{2} + x + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x^2+x+1)",
+   "hints": [
+    "Try the substitution $u = x^{2} + x + 1$; then $du = \\left(2 x + 1\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2} + x + 1$, so $du = \\left(2 x + 1\\right)\\,dx$; hence $\\frac{2 x + 1}{x^{2} + x + 1}\\,dx = \\frac{1}{u}\\,du$.",
+    "$\\displaystyle\\int \\frac{2 x + 1}{x^{2} + x + 1}\\,dx = \\int \\frac{1}{u}\\,du = \\ln{\\left(u \\right)} + C$.",
+    "Substitute $u = x^{2} + x + 1$ back: $\\ln{\\left(x^{2} + x + 1 \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "transcendental-integrals-73578c",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int e^{\\cos{\\left(x \\right)}} \\sin{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-exp(cos(x))",
+   "hints": [
+    "Try the substitution $u = \\cos{\\left(x \\right)}$; then $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - e^{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\cos{\\left(x \\right)}$, so $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$; hence $e^{\\cos{\\left(x \\right)}} \\sin{\\left(x \\right)}\\,dx = - e^{u}\\,du$.",
+    "$\\displaystyle\\int e^{\\cos{\\left(x \\right)}} \\sin{\\left(x \\right)}\\,dx = \\int - e^{u}\\,du = - e^{u} + C$.",
+    "Substitute $u = \\cos{\\left(x \\right)}$ back: $- e^{\\cos{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "transcendental-integrals-62361e",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\tan{\\left(2 x \\right)} \\sec{\\left(2 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "1/(2*cos(2*x))",
+   "hints": [
+    "Try the substitution $u = 2 x$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\tan{\\left(u \\right)} \\sec{\\left(u \\right)}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x$, so $du = 2\\,dx$; hence $\\tan{\\left(2 x \\right)} \\sec{\\left(2 x \\right)}\\,dx = \\frac{\\tan{\\left(u \\right)} \\sec{\\left(u \\right)}}{2}\\,du$.",
+    "$\\displaystyle\\int \\tan{\\left(2 x \\right)} \\sec{\\left(2 x \\right)}\\,dx = \\int \\frac{\\tan{\\left(u \\right)} \\sec{\\left(u \\right)}}{2}\\,du = \\frac{1}{2 \\cos{\\left(u \\right)}} + C$.",
+    "Substitute $u = 2 x$ back: $\\frac{1}{2 \\cos{\\left(2 x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.3,
+    0.3
+   ]
+  },
+  {
+   "id": "transcendental-integrals-f5175a",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{x \\sqrt{1 - \\ln{\\left(x \\right)}^{2}}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "asin(ln(x))",
+   "hints": [
+    "Try the substitution $u = \\ln{\\left(x \\right)}$; then $du = \\frac{1}{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{\\sqrt{1 - u^{2}}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, so $du = \\frac{1}{x}\\,dx$; hence $\\frac{1}{x \\sqrt{1 - \\ln{\\left(x \\right)}^{2}}}\\,dx = \\frac{1}{\\sqrt{1 - u^{2}}}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{x \\sqrt{1 - \\ln{\\left(x \\right)}^{2}}}\\,dx = \\int \\frac{1}{\\sqrt{1 - u^{2}}}\\,du = \\arcsin{\\left(u \\right)} + C$.",
+    "Substitute $u = \\ln{\\left(x \\right)}$ back: $\\arcsin{\\left(\\ln{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1.1,
+    2.5
+   ]
+  },
+  {
+   "id": "transcendental-integrals-b03b96",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{\\sin{\\left(x \\right)}}{\\cos^{2}{\\left(x \\right)}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "1/cos(x)",
+   "hints": [
+    "Try the substitution $u = \\cos{\\left(x \\right)}$; then $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - \\frac{1}{u^{2}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\cos{\\left(x \\right)}$, so $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$; hence $\\frac{\\sin{\\left(x \\right)}}{\\cos^{2}{\\left(x \\right)}}\\,dx = - \\frac{1}{u^{2}}\\,du$.",
+    "$\\displaystyle\\int \\frac{\\sin{\\left(x \\right)}}{\\cos^{2}{\\left(x \\right)}}\\,dx = \\int - \\frac{1}{u^{2}}\\,du = \\frac{1}{u} + C$.",
+    "Substitute $u = \\cos{\\left(x \\right)}$ back: $\\frac{1}{\\cos{\\left(x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "transcendental-integrals-dd4ca9",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{x}{x^{4} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "atan(x^2)/2",
+   "hints": [
+    "Try the substitution $u = x^{2}$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 \\left(u^{2} + 1\\right)}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2}$, so $du = 2 x\\,dx$; hence $\\frac{x}{x^{4} + 1}\\,dx = \\frac{1}{2 \\left(u^{2} + 1\\right)}\\,du$.",
+    "$\\displaystyle\\int \\frac{x}{x^{4} + 1}\\,dx = \\int \\frac{1}{2 \\left(u^{2} + 1\\right)}\\,du = \\frac{\\arctan{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = x^{2}$ back: $\\frac{\\arctan{\\left(x^{2} \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transcendental-integrals-d3f7d7",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "atan(sin(x))",
+   "hints": [
+    "Try the substitution $u = \\sin{\\left(x \\right)}$; then $du = \\cos{\\left(x \\right)}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u^{2} + 1}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\sin{\\left(x \\right)}$, so $du = \\cos{\\left(x \\right)}\\,dx$; hence $\\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)} + 1}\\,dx = \\frac{1}{u^{2} + 1}\\,du$.",
+    "$\\displaystyle\\int \\frac{\\cos{\\left(x \\right)}}{\\sin^{2}{\\left(x \\right)} + 1}\\,dx = \\int \\frac{1}{u^{2} + 1}\\,du = \\arctan{\\left(u \\right)} + C$.",
+    "Substitute $u = \\sin{\\left(x \\right)}$ back: $\\arctan{\\left(\\sin{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "transcendental-integrals-264bba",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{x^{2} + 25}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "atan(x/5)/5",
+   "hints": [
+    "Try the substitution $u = \\frac{x}{5}$; then $du = \\frac{1}{5}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{5 \\left(u^{2} + 1\\right)}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\frac{x}{5}$, so $du = \\frac{1}{5}\\,dx$; hence $\\frac{1}{x^{2} + 25}\\,dx = \\frac{1}{5 \\left(u^{2} + 1\\right)}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{x^{2} + 25}\\,dx = \\int \\frac{1}{5 \\left(u^{2} + 1\\right)}\\,du = \\frac{\\arctan{\\left(u \\right)}}{5} + C$.",
+    "Substitute $u = \\frac{x}{5}$ back: $\\frac{\\arctan{\\left(\\frac{x}{5} \\right)}}{5} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transcendental-integrals-5426ca",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{1}{\\sqrt{1 - x^{2}}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "asin(x)",
+   "hints": [
+    "Try the substitution $u = x$; then $du = 1\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{\\sqrt{1 - u^{2}}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x$, so $du = 1\\,dx$; hence $\\frac{1}{\\sqrt{1 - x^{2}}}\\,dx = \\frac{1}{\\sqrt{1 - u^{2}}}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{\\sqrt{1 - x^{2}}}\\,dx = \\int \\frac{1}{\\sqrt{1 - u^{2}}}\\,du = \\arcsin{\\left(u \\right)} + C$.",
+    "Substitute $u = x$ back: $\\arcsin{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.9,
+    0.9
+   ]
+  },
+  {
+   "id": "transcendental-integrals-41be50",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{e^{x}}{e^{2 x} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "atan(exp(x))",
+   "hints": [
+    "Try the substitution $u = e^{x}$; then $du = e^{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u^{2} + 1}\\,du$."
+   ],
+   "solution": [
+    "Let $u = e^{x}$, so $du = e^{x}\\,dx$; hence $\\frac{e^{x}}{e^{2 x} + 1}\\,dx = \\frac{1}{u^{2} + 1}\\,du$.",
+    "$\\displaystyle\\int \\frac{e^{x}}{e^{2 x} + 1}\\,dx = \\int \\frac{1}{u^{2} + 1}\\,du = \\arctan{\\left(u \\right)} + C$.",
+    "Substitute $u = e^{x}$ back: $\\arctan{\\left(e^{x} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transcendental-integrals-3c209b",
+   "skill": "transcendental-integrals",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int e^{- 3 x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-exp(-3*x)/3",
+   "hints": [
+    "Try the substitution $u = - 3 x$; then $du = -3\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - \\frac{e^{u}}{3}\\,du$."
+   ],
+   "solution": [
+    "Let $u = - 3 x$, so $du = -3\\,dx$; hence $e^{- 3 x}\\,dx = - \\frac{e^{u}}{3}\\,du$.",
+    "$\\displaystyle\\int e^{- 3 x}\\,dx = \\int - \\frac{e^{u}}{3}\\,du = - \\frac{e^{u}}{3} + C$.",
+    "Substitute $u = - 3 x$ back: $- \\frac{e^{- 3 x}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "transcendental-integrals-821151",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{e^{2 x}}{e^{2 x} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(exp(2*x)+1)/2",
+   "hints": [
+    "Try the substitution $u = e^{2 x} + 1$; then $du = 2 e^{2 x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = e^{2 x} + 1$, so $du = 2 e^{2 x}\\,dx$; hence $\\frac{e^{2 x}}{e^{2 x} + 1}\\,dx = \\frac{1}{2 u}\\,du$.",
+    "$\\displaystyle\\int \\frac{e^{2 x}}{e^{2 x} + 1}\\,dx = \\int \\frac{1}{2 u}\\,du = \\frac{\\ln{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = e^{2 x} + 1$ back: $\\frac{\\ln{\\left(e^{2 x} + 1 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "transcendental-integrals-bd3a60",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{\\ln{\\left(x \\right)}}{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x)^2/2",
+   "hints": [
+    "Try the substitution $u = \\ln{\\left(x \\right)}$; then $du = \\frac{1}{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int u\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, so $du = \\frac{1}{x}\\,dx$; hence $\\frac{\\ln{\\left(x \\right)}}{x}\\,dx = u\\,du$.",
+    "$\\displaystyle\\int \\frac{\\ln{\\left(x \\right)}}{x}\\,dx = \\int u\\,du = \\frac{u^{2}}{2} + C$.",
+    "Substitute $u = \\ln{\\left(x \\right)}$ back: $\\frac{\\ln{\\left(x \\right)}^{2}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1,
+    4
+   ]
+  },
+  {
+   "id": "transcendental-integrals-05c672",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\tan{\\left(x \\right)} \\sec^{2}{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "tan(x)^2/2",
+   "hints": [
+    "Try the substitution $u = \\tan{\\left(x \\right)}$; then $du = \\sec^{2}{\\left(x \\right)}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int u\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\tan{\\left(x \\right)}$, so $du = \\sec^{2}{\\left(x \\right)}\\,dx$; hence $\\tan{\\left(x \\right)} \\sec^{2}{\\left(x \\right)}\\,dx = u\\,du$.",
+    "$\\displaystyle\\int \\tan{\\left(x \\right)} \\sec^{2}{\\left(x \\right)}\\,dx = \\int u\\,du = \\frac{u^{2}}{2} + C$.",
+    "Substitute $u = \\tan{\\left(x \\right)}$ back: $\\frac{\\tan^{2}{\\left(x \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "transcendental-integrals-7f6148",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\left(e^{x} + 5\\right)^{2}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "25*x+exp(2*x)/2+10*exp(x)",
+   "hints": [
+    "Match each piece to an entry of the table of basic integrals (no substitution needed).",
+    "Check by differentiating your answer."
+   ],
+   "solution": [
+    "Use the basic integral formulas term by term.",
+    "$\\int \\left(e^{x} + 5\\right)^{2}\\,dx = 25 x + \\frac{e^{2 x}}{2} + 10 e^{x} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "transcendental-integrals-243fca",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{e^{x}}{\\sqrt{e^{x} + 1}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*sqrt(exp(x)+1)",
+   "hints": [
+    "Try the substitution $u = e^{x} + 1$; then $du = e^{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{\\sqrt{u}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = e^{x} + 1$, so $du = e^{x}\\,dx$; hence $\\frac{e^{x}}{\\sqrt{e^{x} + 1}}\\,dx = \\frac{1}{\\sqrt{u}}\\,du$.",
+    "$\\displaystyle\\int \\frac{e^{x}}{\\sqrt{e^{x} + 1}}\\,dx = \\int \\frac{1}{\\sqrt{u}}\\,du = 2 \\sqrt{u} + C$.",
+    "Substitute $u = e^{x} + 1$ back: $2 \\sqrt{e^{x} + 1} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "transcendental-integrals-ce7ea0",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\tan{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-ln(cos(x))",
+   "hints": [
+    "Try the substitution $u = \\cos{\\left(x \\right)}$; then $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\cos{\\left(x \\right)}$, so $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$; hence $\\tan{\\left(x \\right)}\\,dx = - \\frac{1}{u}\\,du$.",
+    "$\\displaystyle\\int \\tan{\\left(x \\right)}\\,dx = \\int - \\frac{1}{u}\\,du = - \\ln{\\left(u \\right)} + C$.",
+    "Substitute $u = \\cos{\\left(x \\right)}$ back: $- \\ln{\\left(\\cos{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "transcendental-integrals-da56ef",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\sec^{2}{\\left(5 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sin(5*x)/(5*cos(5*x))",
+   "hints": [
+    "Try the substitution $u = 5 x$; then $du = 5\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sec^{2}{\\left(u \\right)}}{5}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 5 x$, so $du = 5\\,dx$; hence $\\sec^{2}{\\left(5 x \\right)}\\,dx = \\frac{\\sec^{2}{\\left(u \\right)}}{5}\\,du$.",
+    "$\\displaystyle\\int \\sec^{2}{\\left(5 x \\right)}\\,dx = \\int \\frac{\\sec^{2}{\\left(u \\right)}}{5}\\,du = \\frac{\\sin{\\left(u \\right)}}{5 \\cos{\\left(u \\right)}} + C$.",
+    "Substitute $u = 5 x$ back: $\\frac{\\sin{\\left(5 x \\right)}}{5 \\cos{\\left(5 x \\right)}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.25,
+    0.25
+   ]
+  },
+  {
+   "id": "transcendental-integrals-f91dee",
+   "skill": "transcendental-integrals",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\frac{1}{2 x + 5}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(2*x+5)/2",
+   "hints": [
+    "Try the substitution $u = 2 x + 5$; then $du = 2\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{2 u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 2 x + 5$, so $du = 2\\,dx$; hence $\\frac{1}{2 x + 5}\\,dx = \\frac{1}{2 u}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{2 x + 5}\\,dx = \\int \\frac{1}{2 u}\\,du = \\frac{\\ln{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = 2 x + 5$ back: $\\frac{\\ln{\\left(2 x + 5 \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2.0,
+    0.5
+   ]
+  },
+  {
+   "id": "transcendental-integrals-31e13f",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{e^{\\sqrt{x}}}{\\sqrt{x}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "2*exp(sqrt(x))",
+   "hints": [
+    "Try the substitution $u = \\sqrt{x}$; then $du = \\frac{1}{2 \\sqrt{x}}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int 2 e^{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\sqrt{x}$, so $du = \\frac{1}{2 \\sqrt{x}}\\,dx$; hence $\\frac{e^{\\sqrt{x}}}{\\sqrt{x}}\\,dx = 2 e^{u}\\,du$.",
+    "$\\displaystyle\\int \\frac{e^{\\sqrt{x}}}{\\sqrt{x}}\\,dx = \\int 2 e^{u}\\,du = 2 e^{u} + C$.",
+    "Substitute $u = \\sqrt{x}$ back: $2 e^{\\sqrt{x}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    3
+   ]
+  },
+  {
+   "id": "transcendental-integrals-ec537f",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\cot{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(sin(x))",
+   "hints": [
+    "Try the substitution $u = \\sin{\\left(x \\right)}$; then $du = \\cos{\\left(x \\right)}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\sin{\\left(x \\right)}$, so $du = \\cos{\\left(x \\right)}\\,dx$; hence $\\cot{\\left(x \\right)}\\,dx = \\frac{1}{u}\\,du$.",
+    "$\\displaystyle\\int \\cot{\\left(x \\right)}\\,dx = \\int \\frac{1}{u}\\,du = \\ln{\\left(u \\right)} + C$.",
+    "Substitute $u = \\sin{\\left(x \\right)}$ back: $\\ln{\\left(\\sin{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.3,
+    2.8
+   ]
+  },
+  {
+   "id": "transcendental-integrals-91e009",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{1}{\\sqrt{1 - 9 x^{2}}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "asin(3*x)/3",
+   "hints": [
+    "Try the substitution $u = 3 x$; then $du = 3\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{1}{3 \\sqrt{1 - u^{2}}}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 3 x$, so $du = 3\\,dx$; hence $\\frac{1}{\\sqrt{1 - 9 x^{2}}}\\,dx = \\frac{1}{3 \\sqrt{1 - u^{2}}}\\,du$.",
+    "$\\displaystyle\\int \\frac{1}{\\sqrt{1 - 9 x^{2}}}\\,dx = \\int \\frac{1}{3 \\sqrt{1 - u^{2}}}\\,du = \\frac{\\arcsin{\\left(u \\right)}}{3} + C$.",
+    "Substitute $u = 3 x$ back: $\\frac{\\arcsin{\\left(3 x \\right)}}{3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -0.3,
+    0.3
+   ]
+  },
+  {
+   "id": "transcendental-integrals-765906",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\sin^{4}{\\left(x \\right)} \\cos{\\left(x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sin(x)^5/5",
+   "hints": [
+    "Try the substitution $u = \\sin{\\left(x \\right)}$; then $du = \\cos{\\left(x \\right)}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int u^{4}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\sin{\\left(x \\right)}$, so $du = \\cos{\\left(x \\right)}\\,dx$; hence $\\sin^{4}{\\left(x \\right)} \\cos{\\left(x \\right)}\\,dx = u^{4}\\,du$.",
+    "$\\displaystyle\\int \\sin^{4}{\\left(x \\right)} \\cos{\\left(x \\right)}\\,dx = \\int u^{4}\\,du = \\frac{u^{5}}{5} + C$.",
+    "Substitute $u = \\sin{\\left(x \\right)}$ back: $\\frac{\\sin^{5}{\\left(x \\right)}}{5} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -3,
+    3
+   ]
+  },
+  {
+   "id": "transcendental-integrals-f13f60",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int \\frac{\\ln{\\left(x \\right)}^{4}}{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "ln(x)^5/5",
+   "hints": [
+    "Try the substitution $u = \\ln{\\left(x \\right)}$; then $du = \\frac{1}{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int u^{4}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, so $du = \\frac{1}{x}\\,dx$; hence $\\frac{\\ln{\\left(x \\right)}^{4}}{x}\\,dx = u^{4}\\,du$.",
+    "$\\displaystyle\\int \\frac{\\ln{\\left(x \\right)}^{4}}{x}\\,dx = \\int u^{4}\\,du = \\frac{u^{5}}{5} + C$.",
+    "Substitute $u = \\ln{\\left(x \\right)}$ back: $\\frac{\\ln{\\left(x \\right)}^{5}}{5} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1,
+    4
+   ]
+  },
+  {
+   "id": "transcendental-integrals-1decaf",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{e^{\\frac{1}{x}}}{x^{2}}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-exp(1/x)",
+   "hints": [
+    "Try the substitution $u = \\frac{1}{x}$; then $du = \\left(- \\frac{1}{x^{2}}\\right)\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int - e^{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\frac{1}{x}$, so $du = \\left(- \\frac{1}{x^{2}}\\right)\\,dx$; hence $\\frac{e^{\\frac{1}{x}}}{x^{2}}\\,dx = - e^{u}\\,du$.",
+    "$\\displaystyle\\int \\frac{e^{\\frac{1}{x}}}{x^{2}}\\,dx = \\int - e^{u}\\,du = - e^{u} + C$.",
+    "Substitute $u = \\frac{1}{x}$ back: $- e^{\\frac{1}{x}} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    0.5,
+    2
+   ]
+  },
+  {
+   "id": "transcendental-integrals-0af994",
+   "skill": "transcendental-integrals",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\cos{\\left(x - 3 \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sin(x-3)",
+   "hints": [
+    "Try the substitution $u = x - 3$; then $du = 1\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\cos{\\left(u \\right)}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x - 3$, so $du = 1\\,dx$; hence $\\cos{\\left(x - 3 \\right)}\\,dx = \\cos{\\left(u \\right)}\\,du$.",
+    "$\\displaystyle\\int \\cos{\\left(x - 3 \\right)}\\,dx = \\int \\cos{\\left(u \\right)}\\,du = \\sin{\\left(u \\right)} + C$.",
+    "Substitute $u = x - 3$ back: $\\sin{\\left(x - 3 \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transcendental-integrals-17ea86",
+   "skill": "transcendental-integrals",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\sin{\\left(5 x \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-cos(5*x)/5",
+   "hints": [
+    "Try the substitution $u = 5 x$; then $du = 5\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sin{\\left(u \\right)}}{5}\\,du$."
+   ],
+   "solution": [
+    "Let $u = 5 x$, so $du = 5\\,dx$; hence $\\sin{\\left(5 x \\right)}\\,dx = \\frac{\\sin{\\left(u \\right)}}{5}\\,du$.",
+    "$\\displaystyle\\int \\sin{\\left(5 x \\right)}\\,dx = \\int \\frac{\\sin{\\left(u \\right)}}{5}\\,du = - \\frac{\\cos{\\left(u \\right)}}{5} + C$.",
+    "Substitute $u = 5 x$ back: $- \\frac{\\cos{\\left(5 x \\right)}}{5} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transcendental-integrals-fe6ae8",
+   "skill": "transcendental-integrals",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int e^{x - 3}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "exp(x-3)",
+   "hints": [
+    "Try the substitution $u = x - 3$; then $du = 1\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int e^{u}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x - 3$, so $du = 1\\,dx$; hence $e^{x - 3}\\,dx = e^{u}\\,du$.",
+    "$\\displaystyle\\int e^{x - 3}\\,dx = \\int e^{u}\\,du = e^{u} + C$.",
+    "Substitute $u = x - 3$ back: $e^{x - 3} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -1,
+    1
+   ]
+  },
+  {
+   "id": "transcendental-integrals-bb1142",
+   "skill": "transcendental-integrals",
+   "difficulty": 1,
+   "statement": "Evaluate $\\int \\frac{1}{x^{2} + 1}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "atan(x)",
+   "hints": [
+    "Match each piece to an entry of the table of basic integrals (no substitution needed).",
+    "Check by differentiating your answer."
+   ],
+   "solution": [
+    "Use the basic integral formulas term by term.",
+    "$\\int \\frac{1}{x^{2} + 1}\\,dx = \\arctan{\\left(x \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transcendental-integrals-afe5ea",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int x \\sin{\\left(x^{2} \\right)}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "-cos(x^2)/2",
+   "hints": [
+    "Try the substitution $u = x^{2}$; then $du = 2 x\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\frac{\\sin{\\left(u \\right)}}{2}\\,du$."
+   ],
+   "solution": [
+    "Let $u = x^{2}$, so $du = 2 x\\,dx$; hence $x \\sin{\\left(x^{2} \\right)}\\,dx = \\frac{\\sin{\\left(u \\right)}}{2}\\,du$.",
+    "$\\displaystyle\\int x \\sin{\\left(x^{2} \\right)}\\,dx = \\int \\frac{\\sin{\\left(u \\right)}}{2}\\,du = - \\frac{\\cos{\\left(u \\right)}}{2} + C$.",
+    "Substitute $u = x^{2}$ back: $- \\frac{\\cos{\\left(x^{2} \\right)}}{2} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    -2,
+    2
+   ]
+  },
+  {
+   "id": "transcendental-integrals-ca7c85",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int \\frac{\\cos{\\left(\\ln{\\left(x \\right)} \\right)}}{x}\\,dx$.",
+   "checker": "equiv_plus_c",
+   "answer": "sin(ln(x))",
+   "hints": [
+    "Try the substitution $u = \\ln{\\left(x \\right)}$; then $du = \\frac{1}{x}\\,dx$.",
+    "Rewrite everything in terms of $u$: the integral becomes $\\displaystyle\\int \\cos{\\left(u \\right)}\\,du$."
+   ],
+   "solution": [
+    "Let $u = \\ln{\\left(x \\right)}$, so $du = \\frac{1}{x}\\,dx$; hence $\\frac{\\cos{\\left(\\ln{\\left(x \\right)} \\right)}}{x}\\,dx = \\cos{\\left(u \\right)}\\,du$.",
+    "$\\displaystyle\\int \\frac{\\cos{\\left(\\ln{\\left(x \\right)} \\right)}}{x}\\,dx = \\int \\cos{\\left(u \\right)}\\,du = \\sin{\\left(u \\right)} + C$.",
+    "Substitute $u = \\ln{\\left(x \\right)}$ back: $\\sin{\\left(\\ln{\\left(x \\right)} \\right)} + C$."
+   ],
+   "verified": true,
+   "variable": "x",
+   "domain": [
+    1,
+    4
+   ]
+  },
+  {
+   "id": "transcendental-integrals-066567",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\pi} \\sin{\\left(x \\right)} \\cos^{3}{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "0",
+   "hints": [
+    "Substitute $u = \\cos{\\left(x \\right)}$, $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 1$, $x = \\pi \\Rightarrow u = -1$.",
+    "The integral becomes $\\displaystyle\\int_{1}^{-1} - u^{3}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\cos{\\left(x \\right)}$ the limits become $u = 1$ and $u = -1$.",
+    "$\\displaystyle\\int_{1}^{-1} - u^{3}\\,du = \\left[- \\frac{u^{4}}{4}\\right]_{1}^{-1} = 0$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-aa56fe",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{2} 5^{x}\\,dx$.",
+   "checker": "numeric",
+   "answer": "24/ln(5)",
+   "hints": [
+    "Find an antiderivative from the basic formulas, then apply FTC2.",
+    "$F(x) = \\frac{5^{x}}{\\ln{\\left(5 \\right)}}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = \\frac{5^{x}}{\\ln{\\left(5 \\right)}}$.",
+    "$F(2) - F(0) = \\frac{24}{\\ln{\\left(5 \\right)}}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-16b289",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{-1}^{1} \\frac{1}{4 x + 5}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(sqrt(3))",
+   "hints": [
+    "Substitute $u = 4 x + 5$, $du = 4\\,dx$, and change the limits: $x = -1 \\Rightarrow u = 1$, $x = 1 \\Rightarrow u = 9$.",
+    "The integral becomes $\\displaystyle\\int_{1}^{9} \\frac{1}{4 u}\\,du$."
+   ],
+   "solution": [
+    "With $u = 4 x + 5$ the limits become $u = 1$ and $u = 9$.",
+    "$\\displaystyle\\int_{1}^{9} \\frac{1}{4 u}\\,du = \\left[\\frac{\\ln{\\left(u \\right)}}{4}\\right]_{1}^{9} = \\frac{\\ln{\\left(3 \\right)}}{2}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-3dc735",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{6}} \\tan{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(2*sqrt(3)/3)",
+   "hints": [
+    "Substitute $u = \\cos{\\left(x \\right)}$, $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 1$, $x = \\frac{\\pi}{6} \\Rightarrow u = \\frac{\\sqrt{3}}{2}$.",
+    "The integral becomes $\\displaystyle\\int_{1}^{\\frac{\\sqrt{3}}{2}} - \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\cos{\\left(x \\right)}$ the limits become $u = 1$ and $u = \\frac{\\sqrt{3}}{2}$.",
+    "$\\displaystyle\\int_{1}^{\\frac{\\sqrt{3}}{2}} - \\frac{1}{u}\\,du = \\left[- \\ln{\\left(u \\right)}\\right]_{1}^{\\frac{\\sqrt{3}}{2}} = - \\frac{\\ln{\\left(3 \\right)}}{2} + \\ln{\\left(2 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-0653da",
+   "skill": "transcendental-integrals",
+   "difficulty": 2,
+   "statement": "Evaluate $\\int_{1}^{2} \\left(\\frac{5}{x} + \\frac{4}{x^{2}}\\right)\\,dx$.",
+   "checker": "numeric",
+   "answer": "2+5*ln(2)",
+   "hints": [
+    "Find an antiderivative from the basic formulas, then apply FTC2.",
+    "$F(x) = 5 \\ln{\\left(x \\right)} - \\frac{4}{x}$."
+   ],
+   "solution": [
+    "An antiderivative is $F(x) = 5 \\ln{\\left(x \\right)} - \\frac{4}{x}$.",
+    "$F(2) - F(1) = 2 + \\ln{\\left(32 \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-cb060a",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{4} \\frac{x + 1}{x^{2} + 2 x + 6}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(sqrt(5))",
+   "hints": [
+    "Substitute $u = x^{2} + 2 x + 6$, $du = \\left(2 x + 2\\right)\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 6$, $x = 4 \\Rightarrow u = 30$.",
+    "The integral becomes $\\displaystyle\\int_{6}^{30} \\frac{1}{2 u}\\,du$."
+   ],
+   "solution": [
+    "With $u = x^{2} + 2 x + 6$ the limits become $u = 6$ and $u = 30$.",
+    "$\\displaystyle\\int_{6}^{30} \\frac{1}{2 u}\\,du = \\left[\\frac{\\ln{\\left(u \\right)}}{2}\\right]_{6}^{30} = \\frac{\\ln{\\left(5 \\right)}}{2}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-e17b74",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{2}^{4} \\frac{\\ln{\\left(x \\right)}^{3}}{x}\\,dx$.",
+   "checker": "numeric",
+   "answer": "15*ln(2)^4/4",
+   "hints": [
+    "Substitute $u = \\ln{\\left(x \\right)}$, $du = \\frac{1}{x}\\,dx$, and change the limits: $x = 2 \\Rightarrow u = \\ln{\\left(2 \\right)}$, $x = 4 \\Rightarrow u = \\ln{\\left(4 \\right)}$.",
+    "The integral becomes $\\displaystyle\\int_{\\ln{\\left(2 \\right)}}^{\\ln{\\left(4 \\right)}} u^{3}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\ln{\\left(x \\right)}$ the limits become $u = \\ln{\\left(2 \\right)}$ and $u = \\ln{\\left(4 \\right)}$.",
+    "$\\displaystyle\\int_{\\ln{\\left(2 \\right)}}^{\\ln{\\left(4 \\right)}} u^{3}\\,du = \\left[\\frac{u^{4}}{4}\\right]_{\\ln{\\left(2 \\right)}}^{\\ln{\\left(4 \\right)}} = \\frac{15 \\ln{\\left(2 \\right)}^{4}}{4}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-74db77",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\ln{\\left(3 \\right)}} \\frac{e^{x}}{\\sqrt{e^{x} + 1}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "4-2*sqrt(2)",
+   "hints": [
+    "Substitute $u = e^{x} + 1$, $du = e^{x}\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 2$, $x = \\ln{\\left(3 \\right)} \\Rightarrow u = 4$.",
+    "The integral becomes $\\displaystyle\\int_{2}^{4} \\frac{1}{\\sqrt{u}}\\,du$."
+   ],
+   "solution": [
+    "With $u = e^{x} + 1$ the limits become $u = 2$ and $u = 4$.",
+    "$\\displaystyle\\int_{2}^{4} \\frac{1}{\\sqrt{u}}\\,du = \\left[2 \\sqrt{u}\\right]_{2}^{4} = 4 - 2 \\sqrt{2}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-9ac61f",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\ln{\\left(3 \\right)}} \\frac{e^{x}}{e^{x} + 5}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(4/3)",
+   "hints": [
+    "Substitute $u = e^{x} + 5$, $du = e^{x}\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 6$, $x = \\ln{\\left(3 \\right)} \\Rightarrow u = 8$.",
+    "The integral becomes $\\displaystyle\\int_{6}^{8} \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "With $u = e^{x} + 5$ the limits become $u = 6$ and $u = 8$.",
+    "$\\displaystyle\\int_{6}^{8} \\frac{1}{u}\\,du = \\left[\\ln{\\left(u \\right)}\\right]_{6}^{8} = \\ln{\\left(\\frac{4}{3} \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-451926",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{1}^{3} \\cot{\\left(x \\right)}\\,dx$.",
+   "checker": "numeric",
+   "answer": "ln(sin(3))-ln(sin(1))",
+   "hints": [
+    "Substitute $u = \\sin{\\left(x \\right)}$, $du = \\cos{\\left(x \\right)}\\,dx$, and change the limits: $x = 1 \\Rightarrow u = \\sin{\\left(1 \\right)}$, $x = 3 \\Rightarrow u = \\sin{\\left(3 \\right)}$.",
+    "The integral becomes $\\displaystyle\\int_{\\sin{\\left(1 \\right)}}^{\\sin{\\left(3 \\right)}} \\frac{1}{u}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\sin{\\left(x \\right)}$ the limits become $u = \\sin{\\left(1 \\right)}$ and $u = \\sin{\\left(3 \\right)}$.",
+    "$\\displaystyle\\int_{\\sin{\\left(1 \\right)}}^{\\sin{\\left(3 \\right)}} \\frac{1}{u}\\,du = \\left[\\ln{\\left(u \\right)}\\right]_{\\sin{\\left(1 \\right)}}^{\\sin{\\left(3 \\right)}} = \\ln{\\left(\\frac{\\sin{\\left(3 \\right)}}{\\sin{\\left(1 \\right)}} \\right)}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-875f6a",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{-1}^{0} x e^{x^{2} - 1}\\,dx$.",
+   "checker": "numeric",
+   "answer": "(1-e)*exp(-1)/2",
+   "hints": [
+    "Substitute $u = x^{2} - 1$, $du = 2 x\\,dx$, and change the limits: $x = -1 \\Rightarrow u = 0$, $x = 0 \\Rightarrow u = -1$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{-1} \\frac{e^{u}}{2}\\,du$."
+   ],
+   "solution": [
+    "With $u = x^{2} - 1$ the limits become $u = 0$ and $u = -1$.",
+    "$\\displaystyle\\int_{0}^{-1} \\frac{e^{u}}{2}\\,du = \\left[\\frac{e^{u}}{2}\\right]_{0}^{-1} = \\frac{1 - e}{2 e}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-eec83d",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{1} \\frac{1}{x^{2} + 25}\\,dx$.",
+   "checker": "numeric",
+   "answer": "atan(1/5)/5",
+   "hints": [
+    "Substitute $u = \\frac{x}{5}$, $du = \\frac{1}{5}\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 0$, $x = 1 \\Rightarrow u = \\frac{1}{5}$.",
+    "The integral becomes $\\displaystyle\\int_{0}^{\\frac{1}{5}} \\frac{1}{5 \\left(u^{2} + 1\\right)}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\frac{x}{5}$ the limits become $u = 0$ and $u = \\frac{1}{5}$.",
+    "$\\displaystyle\\int_{0}^{\\frac{1}{5}} \\frac{1}{5 \\left(u^{2} + 1\\right)}\\,du = \\left[\\frac{\\arctan{\\left(u \\right)}}{5}\\right]_{0}^{\\frac{1}{5}} = \\frac{\\arctan{\\left(\\frac{1}{5} \\right)}}{5}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-8d7b1e",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{2}^{5} \\frac{x}{x^{4} + 1}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-atan(4)/2+atan(25)/2",
+   "hints": [
+    "Substitute $u = x^{2}$, $du = 2 x\\,dx$, and change the limits: $x = 2 \\Rightarrow u = 4$, $x = 5 \\Rightarrow u = 25$.",
+    "The integral becomes $\\displaystyle\\int_{4}^{25} \\frac{1}{2 \\left(u^{2} + 1\\right)}\\,du$."
+   ],
+   "solution": [
+    "With $u = x^{2}$ the limits become $u = 4$ and $u = 25$.",
+    "$\\displaystyle\\int_{4}^{25} \\frac{1}{2 \\left(u^{2} + 1\\right)}\\,du = \\left[\\frac{\\arctan{\\left(u \\right)}}{2}\\right]_{4}^{25} = - \\frac{\\arctan{\\left(4 \\right)}}{2} + \\frac{\\arctan{\\left(25 \\right)}}{2}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-c73595",
+   "skill": "transcendental-integrals",
+   "difficulty": 3,
+   "statement": "Evaluate $\\int_{0}^{\\frac{\\pi}{4}} \\frac{\\sin{\\left(x \\right)}}{\\cos^{2}{\\left(x \\right)}}\\,dx$.",
+   "checker": "numeric",
+   "answer": "-1+sqrt(2)",
+   "hints": [
+    "Substitute $u = \\cos{\\left(x \\right)}$, $du = \\left(- \\sin{\\left(x \\right)}\\right)\\,dx$, and change the limits: $x = 0 \\Rightarrow u = 1$, $x = \\frac{\\pi}{4} \\Rightarrow u = \\frac{\\sqrt{2}}{2}$.",
+    "The integral becomes $\\displaystyle\\int_{1}^{\\frac{\\sqrt{2}}{2}} - \\frac{1}{u^{2}}\\,du$."
+   ],
+   "solution": [
+    "With $u = \\cos{\\left(x \\right)}$ the limits become $u = 1$ and $u = \\frac{\\sqrt{2}}{2}$.",
+    "$\\displaystyle\\int_{1}^{\\frac{\\sqrt{2}}{2}} - \\frac{1}{u^{2}}\\,du = \\left[\\frac{1}{u}\\right]_{1}^{\\frac{\\sqrt{2}}{2}} = -1 + \\sqrt{2}$."
+   ],
+   "verified": true,
+   "variable": "x"
+  },
+  {
+   "id": "transcendental-integrals-9f9381",
+   "skill": "transcendental-integrals",
+   "difficulty": 1,
+   "statement": "Which is the correct antiderivative: $\\int e^{2 x}\\,dx = \\;?$",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Integration undoes differentiation: differentiate each candidate and compare with the integrand.",
+    "Differentiate each option; only one gives $e^{2x}$."
+   ],
+   "solution": [
+    "$\\frac{d}{dx}\\left[\\frac{e^{2 x}}{2}\\right] = e^{2 x}$, so this is the antiderivative.",
+    "The other options differentiate to something else."
+   ],
+   "verified": true,
+   "choices": [
+    "$e^{2 x} + C$",
+    "$2 e^{2 x} + C$",
+    "$\\frac{e^{2 x}}{2} + C$",
+    "$e^{x^{2}} + C$"
+   ]
+  },
+  {
+   "id": "transcendental-integrals-584a45",
+   "skill": "transcendental-integrals",
+   "difficulty": 1,
+   "statement": "Which is the correct antiderivative: $\\int \\frac{1}{x}\\,dx = \\;?$",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Integration undoes differentiation: differentiate each candidate and compare with the integrand.",
+    "Which function has derivative $1/x$? The power rule fails for $n = -1$."
+   ],
+   "solution": [
+    "$\\frac{d}{dx}\\left[\\ln{\\left(x \\right)}\\right] = \\frac{1}{x}$, so this is the antiderivative.",
+    "The other options differentiate to something else."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\ln{\\left(x^{2} \\right)} + C$",
+    "$- \\frac{1}{x^{2}} + C$",
+    "$\\ln{\\left(x \\right)} + C$",
+    "$x \\ln{\\left(x \\right)} + C$"
+   ]
+  },
+  {
+   "id": "transcendental-integrals-afe617",
+   "skill": "transcendental-integrals",
+   "difficulty": 1,
+   "statement": "Which is the correct antiderivative: $\\int \\sec^{2}{\\left(x \\right)}\\,dx = \\;?$",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Integration undoes differentiation: differentiate each candidate and compare with the integrand.",
+    "Recall the derivative of $\\tan x$."
+   ],
+   "solution": [
+    "$\\frac{d}{dx}\\left[\\frac{\\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}}\\right] = \\sec^{2}{\\left(x \\right)}$, so this is the antiderivative.",
+    "The other options differentiate to something else."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\tan{\\left(x \\right)} \\sec{\\left(x \\right)} + C$",
+    "$\\frac{\\sec^{3}{\\left(x \\right)}}{3} + C$",
+    "$- \\cot{\\left(x \\right)} + C$",
+    "$\\frac{\\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}} + C$"
+   ]
+  },
+  {
+   "id": "transcendental-integrals-f8b1ee",
+   "skill": "transcendental-integrals",
+   "difficulty": 1,
+   "statement": "Which is the correct antiderivative: $\\int \\frac{1}{x^{2} + 1}\\,dx = \\;?$",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Integration undoes differentiation: differentiate each candidate and compare with the integrand.",
+    "Which function has derivative $\\dfrac{1}{1 + x^2}$?"
+   ],
+   "solution": [
+    "$\\frac{d}{dx}\\left[\\arctan{\\left(x \\right)}\\right] = \\frac{1}{x^{2} + 1}$, so this is the antiderivative.",
+    "The other options differentiate to something else."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\frac{1}{\\frac{x^{3}}{3} + x} + C$",
+    "$\\ln{\\left(x^{2} + 1 \\right)} + C$",
+    "$- \\frac{1}{2 x} + C$",
+    "$\\arctan{\\left(x \\right)} + C$"
+   ]
+  },
+  {
+   "id": "transcendental-integrals-2efb4a",
+   "skill": "transcendental-integrals",
+   "difficulty": 1,
+   "statement": "Which is the correct antiderivative: $\\int \\sin{\\left(x \\right)}\\,dx = \\;?$",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Integration undoes differentiation: differentiate each candidate and compare with the integrand.",
+    "Which function has derivative $\\sin x$? Watch the sign."
+   ],
+   "solution": [
+    "$\\frac{d}{dx}\\left[- \\cos{\\left(x \\right)}\\right] = \\sin{\\left(x \\right)}$, so this is the antiderivative.",
+    "The other options differentiate to something else."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\frac{\\sin^{2}{\\left(x \\right)}}{2} + C$",
+    "$- \\sin{\\left(x \\right)} + C$",
+    "$\\cos{\\left(x \\right)} + C$",
+    "$- \\cos{\\left(x \\right)} + C$"
+   ]
+  },
+  {
+   "id": "transcendental-integrals-09d1d5",
+   "skill": "transcendental-integrals",
+   "difficulty": 1,
+   "statement": "Why is $\\displaystyle\\int \\frac{1}{x}\\,dx$ written as $\\ln|x| + C$ rather than $\\ln x + C$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "$1/x$ is defined for negative $x$ too; its antiderivative should be as well.",
+    "Check $\\frac{d}{dx}\\ln(-x)$ for $x < 0$."
+   ],
+   "solution": [
+    "For $x < 0$, $\\frac{d}{dx}\\ln(-x) = \\frac{-1}{-x} = \\frac{1}{x}$.",
+    "So $\\ln|x|$ works on both $(-\\infty, 0)$ and $(0, \\infty)$, while $\\ln x$ only exists for $x > 0$."
+   ],
+   "verified": true,
+   "choices": [
+    "because $1/x$ is always positive",
+    "$\\ln x$ is undefined for $x < 0$, but $\\ln|x|$ has derivative $1/x$ on both sides of $0$",
+    "because $\\ln|x| = |\\ln x|$",
+    "the absolute value is a typo"
+   ]
+  }
+ ]
+}

@@ -38,6 +38,10 @@ def rat(a, b=1):
 def fmt_num(v) -> str:
     """Number (int, Rational, float) -> answer string like '3', '-1/3', '2.5'."""
     v = sp.nsimplify(v) if not isinstance(v, (int, float)) else v
+    if isinstance(v, bool):
+        raise ValueError('boolean is not a numeric answer')
+    if isinstance(v, int):  # plain Python int -> SymPy Integer so the is_Integer branch below works
+        v = sp.Integer(v)
     if isinstance(v, float):
         return repr(round(v, 10)).rstrip('0').rstrip('.') if '.' in repr(v) else repr(v)
     if v == sp.zoo or v == oo or v == -oo or v is sp.nan:
@@ -148,7 +152,7 @@ def verify(p: dict) -> tuple[bool, str]:
             val = sp.integrate(sp.sympify(v['integrand']), (var, sp.sympify(v['a']), sp.sympify(v['b'])))
             return (_num_match(p['answer'], val, p.get('tolerance')), f"definite integral = {val}")
         if kind == 'limit':
-            val = sp.limit(sp.sympify(v['expr']), var, sp.sympify(v['to']), v.get('dir', '+'))
+            val = _limit_value(sp.sympify(v['expr']), var, sp.sympify(v['to']), v.get('dir'))
             if p['checker'] == 'numeric':
                 return (_num_match(p['answer'], val, p.get('tolerance')), f"limit = {val}")
             return (_choice_match(p, val), f"limit = {val}")
@@ -159,6 +163,7 @@ def verify(p: dict) -> tuple[bool, str]:
             return (_num_match(p['answer'], sp.sympify(v['value']), p.get('tolerance')), f"value {v['value']}")
         if kind == 'solve':               # numeric answer is the unique solution of eq (lhs=rhs) in var
             sols = sp.solve(sp.Eq(sp.sympify(v['lhs']), sp.sympify(v['rhs'])), var)
+            sols = [s_ for s_ in sols if s_.is_real is not False]   # drop non-real roots (e.g. complex branches of exp/cube root)
             if v.get('pick') is not None:
                 sols = [sp.sympify(v['pick'])] if sp.sympify(v['pick']) in sols else []
             if len(sols) != 1:
@@ -171,9 +176,133 @@ def verify(p: dict) -> tuple[bool, str]:
         if kind == 'evaluate':            # numeric: expr at var=at
             val = sp.sympify(v['expr']).subs(var, sp.sympify(v['at']))
             return (_num_match(p['answer'], val, p.get('tolerance')), f"value {val}")
+        # ---- additive kinds (stewart/daily templates) ----
+        if kind == 'limit_class':         # choice: classify a limit as a finite value, 'inf', '-inf' or 'dne'
+            label = _limit_label(sp.sympify(v['expr']), var, sp.sympify(v['to']), v.get('dir'))
+            return (_label_choice_match(p, label), f"limit class {label}")
+        if kind == 'discontinuity':       # choice: 'continuous' | 'removable' | 'jump' | 'infinite' at var=at
+            label = _discontinuity_label(sp.sympify(v['expr']), var, sp.sympify(v['at']))
+            return (_label_choice_match(p, label), f"discontinuity class {label}")
+        if kind == 'label':               # choice: the option's plain label equals v['expected'] (conceptual items)
+            return (_label_choice_match(p, str(v['expected'])), f"expected label {v['expected']}")
+        if kind == 'sum':                 # numeric: sum of term over k from lo to hi
+            kk = Symbol(v.get('var', 'k'))
+            val = sp.summation(sp.sympify(v['term']), (kk, sp.sympify(v['lo']), sp.sympify(v['hi'])))
+            return (_num_match(p['answer'], val, p.get('tolerance')), f"sum = {val}")
+        if kind == 'riemann':             # numeric: left/right/midpoint Riemann sum of f on [a,b] with n rectangles
+            val = _riemann(sp.sympify(v['expr']), var, sp.sympify(v['a']), sp.sympify(v['b']), int(v['n']), v.get('method', 'left'))
+            return (_num_match(p['answer'], val, p.get('tolerance')), f"riemann sum = {val}")
+        if kind == 'tangent':             # equiv: answer is the tangent line to expr at var=at
+            f = sp.sympify(v['expr']); a = sp.sympify(v['at'])
+            expected = f.subs(var, a) + sp.diff(f, var).subs(var, a) * (var - a)
+            return (_same(key, expected, var, dom), f"tangent line {expected}")
+        if kind == 'implicit':            # numeric: dy/dx at (x0, y0) for lhs = rhs, y = Symbol(v.get('dep','y'))
+            yy = Symbol(v.get('dep', 'y'))
+            F = sp.sympify(v['lhs']) - sp.sympify(v['rhs'])
+            x0, y0 = sp.sympify(v['x0']), sp.sympify(v['y0'])
+            if sp.simplify(F.subs({var: x0, yy: y0})) != 0:
+                return (False, 'point not on curve')
+            val = (-sp.diff(F, var) / sp.diff(F, yy)).subs({var: x0, yy: y0})
+            return (_num_match(p['answer'], val, p.get('tolerance')), f"dy/dx = {val}")
+        if kind == 'inverse':             # equiv: f(answer(var)) == var on the domain (answer is f^-1)
+            f = sp.sympify(v['expr'])
+            comp = f.subs(var, key)
+            return (_same(comp, var, var, dom), f"f(f^-1(x)) check for {v['expr']}")
+        if kind == 'ivp':                 # equiv: d^n(answer)/dvar^n == deriv and the answer meets each condition [at, value, order]
+            order = int(v.get('order', 1))
+            if not _same(sp.diff(key, var, order), sp.sympify(v['deriv']), var, dom):
+                return (False, f"derivative of order {order} does not match {v['deriv']}")
+            for at, value, k_ in v.get('conditions', []):
+                got = sp.diff(key, var, int(k_)).subs(var, sp.sympify(at))
+                if not _num_match(fmt_num(sp.nsimplify(value)), got):
+                    return (False, f"condition failed: derivative {k_} at {at} is {got}, expected {value}")
+            return (True, 'ivp')
         return (False, f"unknown verify kind {kind}")
     except Exception as ex:  # any exception = reject
         return (False, f"exception: {ex!r}")
+
+def _limit_value(expr, var, a, direction=None):
+    """Limit value; one-sided limits at finite points are taken via a +/- h (h > 0) so Piecewise branches are honoured.
+    A two-sided limit whose one-sided limits differ falls back to sympy's two-sided result (typically not a number)."""
+    if a in (oo, -oo):
+        return sp.limit(expr, var, a)
+    h = Symbol('h', positive=True)
+    def one_sided(d):
+        return sp.limit(expr.subs(var, a + h if d == '+' else a - h), h, 0, '+')
+    if direction in ('+', '-'):
+        return one_sided(direction)
+    left, right = one_sided('-'), one_sided('+')
+    if left == right:
+        return left
+    return sp.limit(expr, var, a)
+
+def _limit_label(expr, var, a, direction=None):
+    """Classify a limit: returns a finite sympy number, 'inf', '-inf' or 'dne'."""
+    def cls(val):
+        if val == oo:
+            return 'inf'
+        if val == -oo:
+            return '-inf'
+        if getattr(val, 'is_number', False) and val.is_finite:
+            return val
+        return 'dne'
+    h = Symbol('h', positive=True)   # approach via a +/- h so Piecewise branches with Eq(var, a) are not picked up
+    def one_sided(d):
+        return cls(sp.limit(expr.subs(var, a + h if d == '+' else a - h), h, 0, '+'))
+    if direction in ('+', '-'):
+        return one_sided(direction)
+    if a in (oo, -oo):
+        return cls(sp.limit(expr, var, a))
+    left, right = one_sided('-'), one_sided('+')
+    if isinstance(left, str) or isinstance(right, str):
+        return left if left == right else 'dne'
+    return left if sp.simplify(left - right) == 0 else 'dne'
+
+def _discontinuity_label(expr, var, a):
+    left, right = _limit_label(expr, var, a, '-'), _limit_label(expr, var, a, '+')
+    if left in ('inf', '-inf') or right in ('inf', '-inf'):
+        return 'infinite'
+    if left == 'dne' or right == 'dne':
+        return 'dne'
+    if sp.simplify(left - right) != 0:
+        return 'jump'
+    try:
+        val = expr.subs(var, a)
+        defined = val.is_number and val.is_finite
+    except Exception:
+        defined = False
+    if defined and sp.simplify(val - left) == 0:
+        return 'continuous'
+    return 'removable'
+
+def _label_choice_match(p: dict, label) -> bool:
+    idx = int(p['answer'])
+    plains = p['_verify'].get('choices_plain')
+    if not plains or len(plains) != len(p['choices']) or not (0 <= idx < len(plains)):
+        return False
+    def matches(s):
+        s = s.strip().lower()
+        if isinstance(label, str):
+            return s == label.lower()
+        try:
+            return _num_match(s, label)
+        except Exception:
+            return False
+    if not matches(plains[idx]):
+        return False
+    return not any(matches(s) for i, s in enumerate(plains) if i != idx)
+
+def _riemann(f, var, a, b, n, method='left'):
+    dx = (b - a) / n
+    if method == 'left':
+        pts = [a + i * dx for i in range(n)]
+    elif method == 'right':
+        pts = [a + (i + 1) * dx for i in range(n)]
+    elif method == 'mid':
+        pts = [a + (i + Rational(1, 2)) * dx for i in range(n)]
+    else:
+        raise ValueError(method)
+    return sp.nsimplify(sum(f.subs(var, c) for c in pts) * dx)
 
 def _num_match(answer: str, val, tol=None) -> bool:
     a = parse_plain(answer)
@@ -224,7 +353,12 @@ def _interval_match(answer: str, v: dict) -> bool:
             es = sp.sympify(exp_, locals=_LOCALS)
             if isinstance(es, sp.Set):
                 return es == got
-            return sp.solveset(es, x, sp.S.Reals) == got
+            try:
+                return sp.solveset(es, x, sp.S.Reals) == got
+            except (ValueError, NotImplementedError, TypeError):
+                # compound conditions such as "(x>1)&(x<=3)" are not accepted by solveset; use the
+                # relational's own set conversion instead
+                return es.as_set() == got
         except Exception:
             return False
     return False

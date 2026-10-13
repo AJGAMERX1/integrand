@@ -1,0 +1,880 @@
+{
+ "skill": "precise-limit",
+ "problems": [
+  {
+   "id": "precise-limit-c983d2",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = - 3 x - 4$, so that $\\displaystyle\\lim_{x \\to -3} f(x) = 5$. Given $\\varepsilon = \\frac{3}{10}$, find the largest $\\delta > 0$ such that $|f(x) - 5| < \\varepsilon$ whenever $0 < |x - (-3)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/10",
+   "hints": [
+    "Simplify $|f(x) - 5|$; it should become a constant times $|x - (-3)|$.",
+    "You need $|-3| \\cdot |x - (-3)| < \\frac{3}{10}$; solve for $|x - (-3)|$."
+   ],
+   "solution": [
+    "$|f(x) - 5| = |- 3 x - 4 - (5)| = |- 3 x - 9| = 3\\,|x - (-3)|$.",
+    "This is less than $\\frac{3}{10}$ exactly when $|x - (-3)| < \\frac{3}{10}/3 = \\frac{1}{10}$, so $\\delta = \\frac{1}{10}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-707ee6",
+   "skill": "precise-limit",
+   "difficulty": 1,
+   "statement": "Let $f(x) = - 2 x$, so that $\\displaystyle\\lim_{x \\to 0} f(x) = 0$. Given $\\varepsilon = \\frac{1}{1000}$, find the largest $\\delta > 0$ such that $|f(x) - 0| < \\varepsilon$ whenever $0 < |x - (0)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/2000",
+   "hints": [
+    "Simplify $|f(x) - 0|$; it should become a constant times $|x - (0)|$.",
+    "You need $|-2| \\cdot |x - (0)| < \\frac{1}{1000}$; solve for $|x - (0)|$."
+   ],
+   "solution": [
+    "$|f(x) - 0| = |- 2 x - (0)| = |- 2 x| = 2\\,|x - (0)|$.",
+    "This is less than $\\frac{1}{1000}$ exactly when $|x - (0)| < \\frac{1}{1000}/2 = \\frac{1}{2000}$, so $\\delta = \\frac{1}{2000}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-84e15f",
+   "skill": "precise-limit",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 5 - x$, so that $\\displaystyle\\lim_{x \\to -2} f(x) = 7$. Given $\\varepsilon = \\frac{1}{20}$, find the largest $\\delta > 0$ such that $|f(x) - 7| < \\varepsilon$ whenever $0 < |x - (-2)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/20",
+   "hints": [
+    "Simplify $|f(x) - 7|$; it should become a constant times $|x - (-2)|$.",
+    "You need $|-1| \\cdot |x - (-2)| < \\frac{1}{20}$; solve for $|x - (-2)|$."
+   ],
+   "solution": [
+    "$|f(x) - 7| = |5 - x - (7)| = |- x - 2| = 1\\,|x - (-2)|$.",
+    "This is less than $\\frac{1}{20}$ exactly when $|x - (-2)| < \\frac{1}{20}/1 = \\frac{1}{20}$, so $\\delta = \\frac{1}{20}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-66ae55",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 6 x + 2$, so that $\\displaystyle\\lim_{x \\to -1} f(x) = -4$. Given $\\varepsilon = \\frac{1}{20}$, find the largest $\\delta > 0$ such that $|f(x) - -4| < \\varepsilon$ whenever $0 < |x - (-1)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/120",
+   "hints": [
+    "Simplify $|f(x) - -4|$; it should become a constant times $|x - (-1)|$.",
+    "You need $|6| \\cdot |x - (-1)| < \\frac{1}{20}$; solve for $|x - (-1)|$."
+   ],
+   "solution": [
+    "$|f(x) - -4| = |6 x + 2 - (-4)| = |6 x + 6| = 6\\,|x - (-1)|$.",
+    "This is less than $\\frac{1}{20}$ exactly when $|x - (-1)| < \\frac{1}{20}/6 = \\frac{1}{120}$, so $\\delta = \\frac{1}{120}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-f852fe",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 3 - 3 x$, so that $\\displaystyle\\lim_{x \\to -3} f(x) = 12$. Given $\\varepsilon = \\frac{1}{2}$, find the largest $\\delta > 0$ such that $|f(x) - 12| < \\varepsilon$ whenever $0 < |x - (-3)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/6",
+   "hints": [
+    "Simplify $|f(x) - 12|$; it should become a constant times $|x - (-3)|$.",
+    "You need $|-3| \\cdot |x - (-3)| < \\frac{1}{2}$; solve for $|x - (-3)|$."
+   ],
+   "solution": [
+    "$|f(x) - 12| = |3 - 3 x - (12)| = |- 3 x - 9| = 3\\,|x - (-3)|$.",
+    "This is less than $\\frac{1}{2}$ exactly when $|x - (-3)| < \\frac{1}{2}/3 = \\frac{1}{6}$, so $\\delta = \\frac{1}{6}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-63b40c",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 3 - 6 x$, so that $\\displaystyle\\lim_{x \\to 0} f(x) = 3$. Given $\\varepsilon = \\frac{1}{100}$, find the largest $\\delta > 0$ such that $|f(x) - 3| < \\varepsilon$ whenever $0 < |x - (0)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/600",
+   "hints": [
+    "Simplify $|f(x) - 3|$; it should become a constant times $|x - (0)|$.",
+    "You need $|-6| \\cdot |x - (0)| < \\frac{1}{100}$; solve for $|x - (0)|$."
+   ],
+   "solution": [
+    "$|f(x) - 3| = |3 - 6 x - (3)| = |- 6 x| = 6\\,|x - (0)|$.",
+    "This is less than $\\frac{1}{100}$ exactly when $|x - (0)| < \\frac{1}{100}/6 = \\frac{1}{600}$, so $\\delta = \\frac{1}{600}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-fce3a1",
+   "skill": "precise-limit",
+   "difficulty": 1,
+   "statement": "Let $f(x) = x + 2$, so that $\\displaystyle\\lim_{x \\to -1} f(x) = 1$. Given $\\varepsilon = \\frac{1}{10}$, find the largest $\\delta > 0$ such that $|f(x) - 1| < \\varepsilon$ whenever $0 < |x - (-1)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/10",
+   "hints": [
+    "Simplify $|f(x) - 1|$; it should become a constant times $|x - (-1)|$.",
+    "You need $|1| \\cdot |x - (-1)| < \\frac{1}{10}$; solve for $|x - (-1)|$."
+   ],
+   "solution": [
+    "$|f(x) - 1| = |x + 2 - (1)| = |x + 1| = 1\\,|x - (-1)|$.",
+    "This is less than $\\frac{1}{10}$ exactly when $|x - (-1)| < \\frac{1}{10}/1 = \\frac{1}{10}$, so $\\delta = \\frac{1}{10}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-204eb2",
+   "skill": "precise-limit",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 5 - 2 x$, so that $\\displaystyle\\lim_{x \\to 1} f(x) = 3$. Given $\\varepsilon = \\frac{1}{5}$, find the largest $\\delta > 0$ such that $|f(x) - 3| < \\varepsilon$ whenever $0 < |x - (1)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/10",
+   "hints": [
+    "Simplify $|f(x) - 3|$; it should become a constant times $|x - (1)|$.",
+    "You need $|-2| \\cdot |x - (1)| < \\frac{1}{5}$; solve for $|x - (1)|$."
+   ],
+   "solution": [
+    "$|f(x) - 3| = |5 - 2 x - (3)| = |2 - 2 x| = 2\\,|x - (1)|$.",
+    "This is less than $\\frac{1}{5}$ exactly when $|x - (1)| < \\frac{1}{5}/2 = \\frac{1}{10}$, so $\\delta = \\frac{1}{10}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-2da5d3",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 6 x + 1$, so that $\\displaystyle\\lim_{x \\to -3} f(x) = -17$. Given $\\varepsilon = \\frac{1}{4}$, find the largest $\\delta > 0$ such that $|f(x) - -17| < \\varepsilon$ whenever $0 < |x - (-3)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/24",
+   "hints": [
+    "Simplify $|f(x) - -17|$; it should become a constant times $|x - (-3)|$.",
+    "You need $|6| \\cdot |x - (-3)| < \\frac{1}{4}$; solve for $|x - (-3)|$."
+   ],
+   "solution": [
+    "$|f(x) - -17| = |6 x + 1 - (-17)| = |6 x + 18| = 6\\,|x - (-3)|$.",
+    "This is less than $\\frac{1}{4}$ exactly when $|x - (-3)| < \\frac{1}{4}/6 = \\frac{1}{24}$, so $\\delta = \\frac{1}{24}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-f3eeaa",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 2 - 3 x$, so that $\\displaystyle\\lim_{x \\to 3} f(x) = -7$. Given $\\varepsilon = \\frac{3}{10}$, find the largest $\\delta > 0$ such that $|f(x) - -7| < \\varepsilon$ whenever $0 < |x - (3)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/10",
+   "hints": [
+    "Simplify $|f(x) - -7|$; it should become a constant times $|x - (3)|$.",
+    "You need $|-3| \\cdot |x - (3)| < \\frac{3}{10}$; solve for $|x - (3)|$."
+   ],
+   "solution": [
+    "$|f(x) - -7| = |2 - 3 x - (-7)| = |9 - 3 x| = 3\\,|x - (3)|$.",
+    "This is less than $\\frac{3}{10}$ exactly when $|x - (3)| < \\frac{3}{10}/3 = \\frac{1}{10}$, so $\\delta = \\frac{1}{10}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-485998",
+   "skill": "precise-limit",
+   "difficulty": 1,
+   "statement": "Let $f(x) = - 2 x - 1$, so that $\\displaystyle\\lim_{x \\to -1} f(x) = 1$. Given $\\varepsilon = \\frac{1}{5}$, find the largest $\\delta > 0$ such that $|f(x) - 1| < \\varepsilon$ whenever $0 < |x - (-1)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/10",
+   "hints": [
+    "Simplify $|f(x) - 1|$; it should become a constant times $|x - (-1)|$.",
+    "You need $|-2| \\cdot |x - (-1)| < \\frac{1}{5}$; solve for $|x - (-1)|$."
+   ],
+   "solution": [
+    "$|f(x) - 1| = |- 2 x - 1 - (1)| = |- 2 x - 2| = 2\\,|x - (-1)|$.",
+    "This is less than $\\frac{1}{5}$ exactly when $|x - (-1)| < \\frac{1}{5}/2 = \\frac{1}{10}$, so $\\delta = \\frac{1}{10}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-a85abe",
+   "skill": "precise-limit",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 5 - 2 x$, so that $\\displaystyle\\lim_{x \\to 0} f(x) = 5$. Given $\\varepsilon = \\frac{1}{2}$, find the largest $\\delta > 0$ such that $|f(x) - 5| < \\varepsilon$ whenever $0 < |x - (0)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/4",
+   "hints": [
+    "Simplify $|f(x) - 5|$; it should become a constant times $|x - (0)|$.",
+    "You need $|-2| \\cdot |x - (0)| < \\frac{1}{2}$; solve for $|x - (0)|$."
+   ],
+   "solution": [
+    "$|f(x) - 5| = |5 - 2 x - (5)| = |- 2 x| = 2\\,|x - (0)|$.",
+    "This is less than $\\frac{1}{2}$ exactly when $|x - (0)| < \\frac{1}{2}/2 = \\frac{1}{4}$, so $\\delta = \\frac{1}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-bdddba",
+   "skill": "precise-limit",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 2 - x$, so that $\\displaystyle\\lim_{x \\to 0} f(x) = 2$. Given $\\varepsilon = \\frac{3}{10}$, find the largest $\\delta > 0$ such that $|f(x) - 2| < \\varepsilon$ whenever $0 < |x - (0)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "3/10",
+   "hints": [
+    "Simplify $|f(x) - 2|$; it should become a constant times $|x - (0)|$.",
+    "You need $|-1| \\cdot |x - (0)| < \\frac{3}{10}$; solve for $|x - (0)|$."
+   ],
+   "solution": [
+    "$|f(x) - 2| = |2 - x - (2)| = |- x| = 1\\,|x - (0)|$.",
+    "This is less than $\\frac{3}{10}$ exactly when $|x - (0)| < \\frac{3}{10}/1 = \\frac{3}{10}$, so $\\delta = \\frac{3}{10}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-46c131",
+   "skill": "precise-limit",
+   "difficulty": 1,
+   "statement": "Let $f(x) = 5 x + 3$, so that $\\displaystyle\\lim_{x \\to 3} f(x) = 18$. Given $\\varepsilon = \\frac{1}{10}$, find the largest $\\delta > 0$ such that $|f(x) - 18| < \\varepsilon$ whenever $0 < |x - (3)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/50",
+   "hints": [
+    "Simplify $|f(x) - 18|$; it should become a constant times $|x - (3)|$.",
+    "You need $|5| \\cdot |x - (3)| < \\frac{1}{10}$; solve for $|x - (3)|$."
+   ],
+   "solution": [
+    "$|f(x) - 18| = |5 x + 3 - (18)| = |5 x - 15| = 5\\,|x - (3)|$.",
+    "This is less than $\\frac{1}{10}$ exactly when $|x - (3)| < \\frac{1}{10}/5 = \\frac{1}{50}$, so $\\delta = \\frac{1}{50}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-d5f721",
+   "skill": "precise-limit",
+   "difficulty": 1,
+   "statement": "Let $f(x) = - 2 x - 1$, so that $\\displaystyle\\lim_{x \\to -1} f(x) = 1$. Given $\\varepsilon = \\frac{1}{1000}$, find the largest $\\delta > 0$ such that $|f(x) - 1| < \\varepsilon$ whenever $0 < |x - (-1)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/2000",
+   "hints": [
+    "Simplify $|f(x) - 1|$; it should become a constant times $|x - (-1)|$.",
+    "You need $|-2| \\cdot |x - (-1)| < \\frac{1}{1000}$; solve for $|x - (-1)|$."
+   ],
+   "solution": [
+    "$|f(x) - 1| = |- 2 x - 1 - (1)| = |- 2 x - 2| = 2\\,|x - (-1)|$.",
+    "This is less than $\\frac{1}{1000}$ exactly when $|x - (-1)| < \\frac{1}{1000}/2 = \\frac{1}{2000}$, so $\\delta = \\frac{1}{2000}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-81b3d5",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 3 - 4 x$. If $0 < |x - (-3)| < \\frac{1}{1000}$, what is the smallest $\\varepsilon$ for which you can guarantee $|f(x) - 15| < \\varepsilon$?",
+   "checker": "numeric",
+   "answer": "1/250",
+   "hints": [
+    "Express $|f(x) - 15|$ in terms of $|x - (-3)|$.",
+    "Multiply the bound on $|x - a|$ by the slope's absolute value."
+   ],
+   "solution": [
+    "$|f(x) - 15| = 4|x - (-3)| < 4 \\cdot \\frac{1}{1000}$.",
+    "So $\\varepsilon = \\frac{1}{250}$ works, and no smaller value does."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-aed6a3",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 3 x + 3$. If $0 < |x - (1)| < \\frac{3}{10}$, what is the smallest $\\varepsilon$ for which you can guarantee $|f(x) - 6| < \\varepsilon$?",
+   "checker": "numeric",
+   "answer": "9/10",
+   "hints": [
+    "Express $|f(x) - 6|$ in terms of $|x - (1)|$.",
+    "Multiply the bound on $|x - a|$ by the slope's absolute value."
+   ],
+   "solution": [
+    "$|f(x) - 6| = 3|x - (1)| < 3 \\cdot \\frac{3}{10}$.",
+    "So $\\varepsilon = \\frac{9}{10}$ works, and no smaller value does."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-14aa0e",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 2 - x$. If $0 < |x - (-1)| < \\frac{1}{10}$, what is the smallest $\\varepsilon$ for which you can guarantee $|f(x) - 3| < \\varepsilon$?",
+   "checker": "numeric",
+   "answer": "1/10",
+   "hints": [
+    "Express $|f(x) - 3|$ in terms of $|x - (-1)|$.",
+    "Multiply the bound on $|x - a|$ by the slope's absolute value."
+   ],
+   "solution": [
+    "$|f(x) - 3| = 1|x - (-1)| < 1 \\cdot \\frac{1}{10}$.",
+    "So $\\varepsilon = \\frac{1}{10}$ works, and no smaller value does."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-de3eb1",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = x + 5$. If $0 < |x - (-3)| < \\frac{1}{1000}$, what is the smallest $\\varepsilon$ for which you can guarantee $|f(x) - 2| < \\varepsilon$?",
+   "checker": "numeric",
+   "answer": "1/1000",
+   "hints": [
+    "Express $|f(x) - 2|$ in terms of $|x - (-3)|$.",
+    "Multiply the bound on $|x - a|$ by the slope's absolute value."
+   ],
+   "solution": [
+    "$|f(x) - 2| = 1|x - (-3)| < 1 \\cdot \\frac{1}{1000}$.",
+    "So $\\varepsilon = \\frac{1}{1000}$ works, and no smaller value does."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-80a3f0",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 5 x + 3$. If $0 < |x - (3)| < \\frac{1}{20}$, what is the smallest $\\varepsilon$ for which you can guarantee $|f(x) - 18| < \\varepsilon$?",
+   "checker": "numeric",
+   "answer": "1/4",
+   "hints": [
+    "Express $|f(x) - 18|$ in terms of $|x - (3)|$.",
+    "Multiply the bound on $|x - a|$ by the slope's absolute value."
+   ],
+   "solution": [
+    "$|f(x) - 18| = 5|x - (3)| < 5 \\cdot \\frac{1}{20}$.",
+    "So $\\varepsilon = \\frac{1}{4}$ works, and no smaller value does."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-c21c00",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = - 3 x$. If $0 < |x - (-1)| < \\frac{1}{100}$, what is the smallest $\\varepsilon$ for which you can guarantee $|f(x) - 3| < \\varepsilon$?",
+   "checker": "numeric",
+   "answer": "3/100",
+   "hints": [
+    "Express $|f(x) - 3|$ in terms of $|x - (-1)|$.",
+    "Multiply the bound on $|x - a|$ by the slope's absolute value."
+   ],
+   "solution": [
+    "$|f(x) - 3| = 3|x - (-1)| < 3 \\cdot \\frac{1}{100}$.",
+    "So $\\varepsilon = \\frac{3}{100}$ works, and no smaller value does."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-318724",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 2 x - 1$. If $0 < |x - (1)| < \\frac{3}{10}$, what is the smallest $\\varepsilon$ for which you can guarantee $|f(x) - 1| < \\varepsilon$?",
+   "checker": "numeric",
+   "answer": "3/5",
+   "hints": [
+    "Express $|f(x) - 1|$ in terms of $|x - (1)|$.",
+    "Multiply the bound on $|x - a|$ by the slope's absolute value."
+   ],
+   "solution": [
+    "$|f(x) - 1| = 2|x - (1)| < 2 \\cdot \\frac{3}{10}$.",
+    "So $\\varepsilon = \\frac{3}{5}$ works, and no smaller value does."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-d60ddc",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = 5 x - 1$. If $0 < |x - (-2)| < \\frac{1}{5}$, what is the smallest $\\varepsilon$ for which you can guarantee $|f(x) - -11| < \\varepsilon$?",
+   "checker": "numeric",
+   "answer": "1",
+   "hints": [
+    "Express $|f(x) - -11|$ in terms of $|x - (-2)|$.",
+    "Multiply the bound on $|x - a|$ by the slope's absolute value."
+   ],
+   "solution": [
+    "$|f(x) - -11| = 5|x - (-2)| < 5 \\cdot \\frac{1}{5}$.",
+    "So $\\varepsilon = 1$ works, and no smaller value does."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-052512",
+   "skill": "precise-limit",
+   "difficulty": 3,
+   "statement": "For $f(x) = x^2$ and $\\displaystyle\\lim_{x \\to 2} x^2 = 4$, find the largest $\\delta$ such that $|x^2 - 4| < \\frac{1}{5}$ whenever $0 < |x - 2| < \\delta$. Give three decimal places.",
+   "checker": "numeric",
+   "answer": "0.049",
+   "hints": [
+    "$|x^2 - 4| < \\frac{1}{5}$ means $\\frac{19}{5} < x^2 < \\frac{21}{5}$; take square roots (for $x > 0$).",
+    "Measure how far each endpoint $\\sqrt{\\frac{19}{5}}$ and $\\sqrt{\\frac{21}{5}}$ is from $2$ and take the smaller distance."
+   ],
+   "solution": [
+    "The condition holds for $\\sqrt{\\frac{19}{5}} < x < \\sqrt{\\frac{21}{5}}$, i.e. $1.9494 < x < 2.0494$.",
+    "Distances from $2$: $0.0506$ (left) and $0.0494$ (right). The largest $\\delta$ is the smaller one, $\\delta \\approx 0.049$."
+   ],
+   "verified": true,
+   "tolerance": 0.0015
+  },
+  {
+   "id": "precise-limit-da4936",
+   "skill": "precise-limit",
+   "difficulty": 3,
+   "statement": "For $f(x) = x^2$ and $\\displaystyle\\lim_{x \\to 1} x^2 = 1$, find the largest $\\delta$ such that $|x^2 - 1| < 1$ whenever $0 < |x - 1| < \\delta$. Give three decimal places.",
+   "checker": "numeric",
+   "answer": "0.414",
+   "hints": [
+    "$|x^2 - 1| < 1$ means $0 < x^2 < 2$; take square roots (for $x > 0$).",
+    "Measure how far each endpoint $\\sqrt{0}$ and $\\sqrt{2}$ is from $1$ and take the smaller distance."
+   ],
+   "solution": [
+    "The condition holds for $\\sqrt{0} < x < \\sqrt{2}$, i.e. $0.0000 < x < 1.4142$.",
+    "Distances from $1$: $1.0000$ (left) and $0.4142$ (right). The largest $\\delta$ is the smaller one, $\\delta \\approx 0.414$."
+   ],
+   "verified": true,
+   "tolerance": 0.0015
+  },
+  {
+   "id": "precise-limit-3684b8",
+   "skill": "precise-limit",
+   "difficulty": 3,
+   "statement": "For $f(x) = x^2$ and $\\displaystyle\\lim_{x \\to 4} x^2 = 16$, find the largest $\\delta$ such that $|x^2 - 16| < \\frac{1}{10}$ whenever $0 < |x - 4| < \\delta$. Give three decimal places.",
+   "checker": "numeric",
+   "answer": "0.012",
+   "hints": [
+    "$|x^2 - 16| < \\frac{1}{10}$ means $\\frac{159}{10} < x^2 < \\frac{161}{10}$; take square roots (for $x > 0$).",
+    "Measure how far each endpoint $\\sqrt{\\frac{159}{10}}$ and $\\sqrt{\\frac{161}{10}}$ is from $4$ and take the smaller distance."
+   ],
+   "solution": [
+    "The condition holds for $\\sqrt{\\frac{159}{10}} < x < \\sqrt{\\frac{161}{10}}$, i.e. $3.9875 < x < 4.0125$.",
+    "Distances from $4$: $0.0125$ (left) and $0.0125$ (right). The largest $\\delta$ is the smaller one, $\\delta \\approx 0.012$."
+   ],
+   "verified": true,
+   "tolerance": 0.0015
+  },
+  {
+   "id": "precise-limit-426309",
+   "skill": "precise-limit",
+   "difficulty": 3,
+   "statement": "For $f(x) = x^2$ and $\\displaystyle\\lim_{x \\to 4} x^2 = 16$, find the largest $\\delta$ such that $|x^2 - 16| < 1$ whenever $0 < |x - 4| < \\delta$. Give three decimal places.",
+   "checker": "numeric",
+   "answer": "0.123",
+   "hints": [
+    "$|x^2 - 16| < 1$ means $15 < x^2 < 17$; take square roots (for $x > 0$).",
+    "Measure how far each endpoint $\\sqrt{15}$ and $\\sqrt{17}$ is from $4$ and take the smaller distance."
+   ],
+   "solution": [
+    "The condition holds for $\\sqrt{15} < x < \\sqrt{17}$, i.e. $3.8730 < x < 4.1231$.",
+    "Distances from $4$: $0.1270$ (left) and $0.1231$ (right). The largest $\\delta$ is the smaller one, $\\delta \\approx 0.123$."
+   ],
+   "verified": true,
+   "tolerance": 0.0015
+  },
+  {
+   "id": "precise-limit-8fa90f",
+   "skill": "precise-limit",
+   "difficulty": 3,
+   "statement": "For $f(x) = x^2$ and $\\displaystyle\\lim_{x \\to 3} x^2 = 9$, find the largest $\\delta$ such that $|x^2 - 9| < \\frac{1}{2}$ whenever $0 < |x - 3| < \\delta$. Give three decimal places.",
+   "checker": "numeric",
+   "answer": "0.082",
+   "hints": [
+    "$|x^2 - 9| < \\frac{1}{2}$ means $\\frac{17}{2} < x^2 < \\frac{19}{2}$; take square roots (for $x > 0$).",
+    "Measure how far each endpoint $\\sqrt{\\frac{17}{2}}$ and $\\sqrt{\\frac{19}{2}}$ is from $3$ and take the smaller distance."
+   ],
+   "solution": [
+    "The condition holds for $\\sqrt{\\frac{17}{2}} < x < \\sqrt{\\frac{19}{2}}$, i.e. $2.9155 < x < 3.0822$.",
+    "Distances from $3$: $0.0845$ (left) and $0.0822$ (right). The largest $\\delta$ is the smaller one, $\\delta \\approx 0.082$."
+   ],
+   "verified": true,
+   "tolerance": 0.0015
+  },
+  {
+   "id": "precise-limit-dd20fc",
+   "skill": "precise-limit",
+   "difficulty": 3,
+   "statement": "For $f(x) = x^2$ and $\\displaystyle\\lim_{x \\to 1} x^2 = 1$, find the largest $\\delta$ such that $|x^2 - 1| < \\frac{1}{4}$ whenever $0 < |x - 1| < \\delta$. Give three decimal places.",
+   "checker": "numeric",
+   "answer": "0.118",
+   "hints": [
+    "$|x^2 - 1| < \\frac{1}{4}$ means $\\frac{3}{4} < x^2 < \\frac{5}{4}$; take square roots (for $x > 0$).",
+    "Measure how far each endpoint $\\sqrt{\\frac{3}{4}}$ and $\\sqrt{\\frac{5}{4}}$ is from $1$ and take the smaller distance."
+   ],
+   "solution": [
+    "The condition holds for $\\sqrt{\\frac{3}{4}} < x < \\sqrt{\\frac{5}{4}}$, i.e. $0.8660 < x < 1.1180$.",
+    "Distances from $1$: $0.1340$ (left) and $0.1180$ (right). The largest $\\delta$ is the smaller one, $\\delta \\approx 0.118$."
+   ],
+   "verified": true,
+   "tolerance": 0.0015
+  },
+  {
+   "id": "precise-limit-cc764d",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{2}{x^{2}}$. Find the largest $\\delta > 0$ such that $f(x) > 400$ whenever $0 < |x - (0)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/20",
+   "hints": [
+    "Solve the inequality $\\dfrac{2}{(x - (0))^2} > 400$ for $|x - (0)|$.",
+    "Flip both sides (all quantities are positive) and take a square root."
+   ],
+   "solution": [
+    "$\\dfrac{2}{(x-(0))^2} > 400 \\iff (x - (0))^2 < \\dfrac{2}{400} \\iff |x - (0)| < \\sqrt{\\frac{1}{200}}$.",
+    "So $\\delta = \\frac{\\sqrt{2}}{20}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-4e3d01",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{2}{\\left(x + 2\\right)^{2}}$. Find the largest $\\delta > 0$ such that $f(x) > 10000$ whenever $0 < |x - (-2)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/100",
+   "hints": [
+    "Solve the inequality $\\dfrac{2}{(x - (-2))^2} > 10000$ for $|x - (-2)|$.",
+    "Flip both sides (all quantities are positive) and take a square root."
+   ],
+   "solution": [
+    "$\\dfrac{2}{(x-(-2))^2} > 10000 \\iff (x - (-2))^2 < \\dfrac{2}{10000} \\iff |x - (-2)| < \\sqrt{\\frac{1}{5000}}$.",
+    "So $\\delta = \\frac{\\sqrt{2}}{100}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-ed0028",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{1}{\\left(x + 2\\right)^{2}}$. Find the largest $\\delta > 0$ such that $f(x) > 400$ whenever $0 < |x - (-2)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/20",
+   "hints": [
+    "Solve the inequality $\\dfrac{1}{(x - (-2))^2} > 400$ for $|x - (-2)|$.",
+    "Flip both sides (all quantities are positive) and take a square root."
+   ],
+   "solution": [
+    "$\\dfrac{1}{(x-(-2))^2} > 400 \\iff (x - (-2))^2 < \\dfrac{1}{400} \\iff |x - (-2)| < \\sqrt{\\frac{1}{400}}$.",
+    "So $\\delta = \\frac{1}{20}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-d8f873",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{2}{\\left(x + 2\\right)^{2}}$. Find the largest $\\delta > 0$ such that $f(x) > 1000$ whenever $0 < |x - (-2)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "sqrt(5)/50",
+   "hints": [
+    "Solve the inequality $\\dfrac{2}{(x - (-2))^2} > 1000$ for $|x - (-2)|$.",
+    "Flip both sides (all quantities are positive) and take a square root."
+   ],
+   "solution": [
+    "$\\dfrac{2}{(x-(-2))^2} > 1000 \\iff (x - (-2))^2 < \\dfrac{2}{1000} \\iff |x - (-2)| < \\sqrt{\\frac{1}{500}}$.",
+    "So $\\delta = \\frac{\\sqrt{5}}{50}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-20c1e9",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{2}{\\left(x + 2\\right)^{2}}$. Find the largest $\\delta > 0$ such that $f(x) > 400$ whenever $0 < |x - (-2)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/20",
+   "hints": [
+    "Solve the inequality $\\dfrac{2}{(x - (-2))^2} > 400$ for $|x - (-2)|$.",
+    "Flip both sides (all quantities are positive) and take a square root."
+   ],
+   "solution": [
+    "$\\dfrac{2}{(x-(-2))^2} > 400 \\iff (x - (-2))^2 < \\dfrac{2}{400} \\iff |x - (-2)| < \\sqrt{\\frac{1}{200}}$.",
+    "So $\\delta = \\frac{\\sqrt{2}}{20}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-697684",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{1}{x^{2}}$. Find the largest $\\delta > 0$ such that $f(x) > 400$ whenever $0 < |x - (0)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "1/20",
+   "hints": [
+    "Solve the inequality $\\dfrac{1}{(x - (0))^2} > 400$ for $|x - (0)|$.",
+    "Flip both sides (all quantities are positive) and take a square root."
+   ],
+   "solution": [
+    "$\\dfrac{1}{(x-(0))^2} > 400 \\iff (x - (0))^2 < \\dfrac{1}{400} \\iff |x - (0)| < \\sqrt{\\frac{1}{400}}$.",
+    "So $\\delta = \\frac{1}{20}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-e4751b",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Let $f(x) = \\frac{2}{\\left(x - 2\\right)^{2}}$. Find the largest $\\delta > 0$ such that $f(x) > 400$ whenever $0 < |x - (2)| < \\delta$.",
+   "checker": "numeric",
+   "answer": "sqrt(2)/20",
+   "hints": [
+    "Solve the inequality $\\dfrac{2}{(x - (2))^2} > 400$ for $|x - (2)|$.",
+    "Flip both sides (all quantities are positive) and take a square root."
+   ],
+   "solution": [
+    "$\\dfrac{2}{(x-(2))^2} > 400 \\iff (x - (2))^2 < \\dfrac{2}{400} \\iff |x - (2)| < \\sqrt{\\frac{1}{200}}$.",
+    "So $\\delta = \\frac{\\sqrt{2}}{20}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-08e5e7",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Find the smallest $N$ such that $\\left|\\frac{3}{x^{2}} - 0\\right| < \\frac{1}{1000}$ for all $x > N$.",
+   "checker": "numeric",
+   "answer": "10*sqrt(30)",
+   "hints": [
+    "For $x > 0$ the inequality is $\\dfrac{3}{x^2} < \\frac{1}{1000}$.",
+    "Solve it: $x^2 > 3/\\frac{1}{1000}$."
+   ],
+   "solution": [
+    "$\\dfrac{3}{x^2} < \\frac{1}{1000} \\iff x^2 > 3000$.",
+    "So $x > 10 \\sqrt{30}$; the smallest such $N$ is $10 \\sqrt{30}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-f1bd8f",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Find the smallest $N$ such that $\\left|\\frac{1}{x^{2}} - 0\\right| < \\frac{1}{100}$ for all $x > N$.",
+   "checker": "numeric",
+   "answer": "10",
+   "hints": [
+    "For $x > 0$ the inequality is $\\dfrac{1}{x^2} < \\frac{1}{100}$.",
+    "Solve it: $x^2 > 1/\\frac{1}{100}$."
+   ],
+   "solution": [
+    "$\\dfrac{1}{x^2} < \\frac{1}{100} \\iff x^2 > 100$.",
+    "So $x > 10$; the smallest such $N$ is $10$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-9964a3",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Find the smallest $N$ such that $\\left|\\frac{2}{x^{2}} - 0\\right| < \\frac{1}{1000}$ for all $x > N$.",
+   "checker": "numeric",
+   "answer": "20*sqrt(5)",
+   "hints": [
+    "For $x > 0$ the inequality is $\\dfrac{2}{x^2} < \\frac{1}{1000}$.",
+    "Solve it: $x^2 > 2/\\frac{1}{1000}$."
+   ],
+   "solution": [
+    "$\\dfrac{2}{x^2} < \\frac{1}{1000} \\iff x^2 > 2000$.",
+    "So $x > 20 \\sqrt{5}$; the smallest such $N$ is $20 \\sqrt{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-ff84fa",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Find the smallest $N$ such that $\\left|\\frac{2}{x^{2}} - 0\\right| < \\frac{1}{10}$ for all $x > N$.",
+   "checker": "numeric",
+   "answer": "2*sqrt(5)",
+   "hints": [
+    "For $x > 0$ the inequality is $\\dfrac{2}{x^2} < \\frac{1}{10}$.",
+    "Solve it: $x^2 > 2/\\frac{1}{10}$."
+   ],
+   "solution": [
+    "$\\dfrac{2}{x^2} < \\frac{1}{10} \\iff x^2 > 20$.",
+    "So $x > 2 \\sqrt{5}$; the smallest such $N$ is $2 \\sqrt{5}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-387ee7",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Find the smallest $N$ such that $\\left|\\frac{2}{x} - 0\\right| < \\frac{1}{100}$ for all $x > N$.",
+   "checker": "numeric",
+   "answer": "200",
+   "hints": [
+    "For $x > 0$ the inequality is $\\dfrac{2}{x^1} < \\frac{1}{100}$.",
+    "Solve it: $x^1 > 2/\\frac{1}{100}$."
+   ],
+   "solution": [
+    "$\\dfrac{2}{x^1} < \\frac{1}{100} \\iff x^1 > 200$.",
+    "So $x > 200$; the smallest such $N$ is $200$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-dd5536",
+   "skill": "precise-limit",
+   "difficulty": 3,
+   "statement": "For $\\displaystyle\\lim_{x \\to 4} \\sqrt{x} = 2$ and $\\varepsilon = \\frac{1}{10}$, find the largest $\\delta$ such that $|\\sqrt{x} - 2| < \\varepsilon$ whenever $0 < |x - 4| < \\delta$.",
+   "checker": "numeric",
+   "answer": "39/100",
+   "hints": [
+    "$|\\sqrt{x} - 2| < \\frac{1}{10}$ means $\\frac{19}{10} < \\sqrt{x} < \\frac{21}{10}$; square each part.",
+    "Compare the distances from $4$ to the two endpoints and take the smaller."
+   ],
+   "solution": [
+    "Squaring: $\\frac{361}{100} < x < \\frac{441}{100}$.",
+    "Distances to $4$: $\\frac{39}{100}$ on the left and $\\frac{41}{100}$ on the right; $\\delta = \\frac{39}{100}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-8864d4",
+   "skill": "precise-limit",
+   "difficulty": 3,
+   "statement": "For $\\displaystyle\\lim_{x \\to 4} \\sqrt{x} = 2$ and $\\varepsilon = \\frac{1}{2}$, find the largest $\\delta$ such that $|\\sqrt{x} - 2| < \\varepsilon$ whenever $0 < |x - 4| < \\delta$.",
+   "checker": "numeric",
+   "answer": "7/4",
+   "hints": [
+    "$|\\sqrt{x} - 2| < \\frac{1}{2}$ means $\\frac{3}{2} < \\sqrt{x} < \\frac{5}{2}$; square each part.",
+    "Compare the distances from $4$ to the two endpoints and take the smaller."
+   ],
+   "solution": [
+    "Squaring: $\\frac{9}{4} < x < \\frac{25}{4}$.",
+    "Distances to $4$: $\\frac{7}{4}$ on the left and $\\frac{9}{4}$ on the right; $\\delta = \\frac{7}{4}$."
+   ],
+   "verified": true
+  },
+  {
+   "id": "precise-limit-8ecab9",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Which statement is the precise definition of $\\displaystyle\\lim_{x \\to a} f(x) = L$?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "The challenge ($\\varepsilon$, how close the outputs must be) comes first; the response ($\\delta$) is chosen afterwards.",
+    "The condition $0 < |x - a|$ excludes $x = a$ itself."
+   ],
+   "solution": [
+    "The definition: for every $\\varepsilon > 0$ we must be able to find a $\\delta > 0$ so that all $x$ within $\\delta$ of $a$ (except $a$) have $f(x)$ within $\\varepsilon$ of $L$.",
+    "Swapping the order of the quantifiers changes the meaning entirely."
+   ],
+   "verified": true,
+   "choices": [
+    "for every $\\varepsilon > 0$ there is $\\delta > 0$ such that $0 < |x - a| < \\delta$ implies $|f(x) - L| < \\varepsilon$",
+    "for every $\\delta > 0$ there is $\\varepsilon > 0$ such that $|x - a| < \\delta$ implies $|f(x) - L| < \\varepsilon$",
+    "$f(a) = L$ and $f$ is defined near $a$",
+    "there is $\\varepsilon > 0$ such that for every $\\delta > 0$, $|x - a| < \\delta$ implies $|f(x) - L| < \\varepsilon$"
+   ]
+  },
+  {
+   "id": "precise-limit-0afd41",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "In the $\\varepsilon$-$\\delta$ definition of a limit, the number $\\delta$ controls",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "$\\varepsilon$ measures output closeness; the other letter measures input closeness.",
+    "$0 < |x - a| < \\delta$ is a condition on the inputs."
+   ],
+   "solution": [
+    "$\\delta$ bounds the distance $|x - a|$ between the input and $a$.",
+    "$\\varepsilon$ bounds the distance $|f(x) - L|$ between the output and the limit."
+   ],
+   "verified": true,
+   "choices": [
+    "how close $f(x)$ must be to $L$",
+    "how close $x$ must be to $a$",
+    "the slope of $f$ near $a$",
+    "the value of $f(a)$"
+   ]
+  },
+  {
+   "id": "precise-limit-2ad6aa",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "Which is the precise meaning of $\\displaystyle\\lim_{x \\to a} f(x) = \\infty$?",
+   "checker": "choice",
+   "answer": "1",
+   "hints": [
+    "Infinity is not a number, so 'within $\\varepsilon$ of $\\infty$' makes no sense.",
+    "Replace 'close to $L$' with 'larger than any prescribed $M$'."
+   ],
+   "solution": [
+    "An infinite limit means the outputs eventually exceed any bound $M$ when $x$ is close enough to $a$.",
+    "So the definition quantifies over all $M > 0$ with a matching $\\delta$."
+   ],
+   "verified": true,
+   "choices": [
+    "$f(a) = \\infty$",
+    "for every $M > 0$ there is $\\delta > 0$ such that $0 < |x - a| < \\delta$ implies $f(x) > M$",
+    "$f(x)$ is increasing near $a$",
+    "for every $\\varepsilon > 0$ there is $\\delta > 0$ such that $0 < |x - a| < \\delta$ implies $|f(x) - \\infty| < \\varepsilon$"
+   ]
+  },
+  {
+   "id": "precise-limit-1be851",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "If a valid $\\delta$ has been found for a given $\\varepsilon$ in a limit proof, which other values of $\\delta$ also work?",
+   "checker": "choice",
+   "answer": "3",
+   "hints": [
+    "Shrinking the allowed $x$-window only removes points, never adds any.",
+    "The remaining points still satisfy the output condition."
+   ],
+   "solution": [
+    "If $0 < |x - a| < \\delta'$ with $\\delta' < \\delta$ then also $0 < |x - a| < \\delta$, so $|f(x) - L| < \\varepsilon$ still holds.",
+    "A larger window might include points where the output condition fails."
+   ],
+   "verified": true,
+   "choices": [
+    "only that exact $\\delta$",
+    "any $\\delta$ at all",
+    "any larger $\\delta$",
+    "any smaller positive $\\delta$"
+   ]
+  },
+  {
+   "id": "precise-limit-fc0c09",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "To prove $\\displaystyle\\lim_{x \\to 2} (3x + 2) = 8$ using the definition, which choice of $\\delta$ (in terms of $\\varepsilon$) works?",
+   "checker": "choice",
+   "answer": "0",
+   "hints": [
+    "Compute $|f(x) - 8|$ and factor out $|x - 2|$.",
+    "Choose $\\delta$ so that the resulting bound is exactly $\\varepsilon$."
+   ],
+   "solution": [
+    "$|3x + 2 - 8| = 3|x - 2|$.",
+    "If $|x - 2| < \\delta = \\varepsilon/3$ then $|f(x) - 8| < \\varepsilon$, as required."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\delta = \\varepsilon/3$",
+    "$\\delta = \\varepsilon$",
+    "$\\delta = \\varepsilon/9$ only",
+    "$\\delta = 3\\varepsilon$"
+   ]
+  },
+  {
+   "id": "precise-limit-2b36f3",
+   "skill": "precise-limit",
+   "difficulty": 2,
+   "statement": "To prove $\\displaystyle\\lim_{x \\to 1} (4x - 3) = 1$ using the definition, which choice of $\\delta$ (in terms of $\\varepsilon$) works?",
+   "checker": "choice",
+   "answer": "2",
+   "hints": [
+    "Compute $|f(x) - 1|$ and factor out $|x - 1|$.",
+    "Choose $\\delta$ so that the resulting bound is exactly $\\varepsilon$."
+   ],
+   "solution": [
+    "$|4x - 3 - 1| = 4|x - 1|$.",
+    "If $|x - 1| < \\delta = \\varepsilon/4$ then $|f(x) - 1| < \\varepsilon$, as required."
+   ],
+   "verified": true,
+   "choices": [
+    "$\\delta = 4\\varepsilon$",
+    "$\\delta = \\varepsilon$",
+    "$\\delta = \\varepsilon/4$",
+    "$\\delta = \\varepsilon/16$ only"
+   ]
+  }
+ ]
+}

@@ -77,13 +77,16 @@ function compareExpressions(user: string, answer: string, opts: EquivOptions = {
     return { ok: false, reason: `The answer key for this problem could not be read (${describe(err)})` };
   }
 
+  // Every free variable of the key is sampled (multi-variable keys like 3*y^3/x work).
   // Extra constants of integration are allowed for +C checks and bound to zero.
-  const allowed = new Set([variable]);
+  const sampled = [variable, ...freeVariables(answerExpr).filter((v) => v !== variable && !(plusC && (v === 'C' || v === 'c')))];
+  const allowed = new Set(sampled);
   if (plusC) { allowed.add('C'); allowed.add('c'); }
   const unknown = freeVariables(userExpr).filter((v) => !allowed.has(v));
   if (unknown.length > 0) {
     const list = unknown.map((v) => `"${v}"`).join(', ');
-    return { ok: false, reason: `Your answer uses ${list}, but the only variable here is "${variable}"` };
+    const vars = sampled.map((v) => `"${v}"`).join(', ');
+    return { ok: false, reason: sampled.length === 1 ? `Your answer uses ${list}, but the only variable here is ${vars}` : `Your answer uses ${list}, but the variables here are ${vars}` };
   }
 
   const [lo, hi] = domain[0] <= domain[1] ? domain : [domain[1], domain[0]];
@@ -96,6 +99,7 @@ function compareExpressions(user: string, answer: string, opts: EquivOptions = {
   for (let draw = 0; draw < maxDraws && us.length < samples; draw++) {
     const t = lo + (hi - lo) * rng();
     const vars: Record<string, number> = { [variable]: t };
+    for (let k = 1; k < sampled.length; k++) vars[sampled[k]] = lo + (hi - lo) * rng();
     if (plusC) { vars.C = 0; vars.c = 0; }
     const u = evaluate(userExpr, vars);
     const a = evaluate(answerExpr, vars);
